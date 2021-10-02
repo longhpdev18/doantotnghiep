@@ -17,6 +17,8 @@ body {
     width: 100%;
     height: 10rem;
     background-color: var(--whiteColor);
+    position: fixed;
+    z-index: 999;
 }
 
 .header__container {
@@ -106,7 +108,7 @@ body {
 
 .hero {
     width: 100%;
-    margin-top: var(--spaceS);
+    margin-top: calc(var(--spaceS) + 10rem);
     display: flex;
 }
 
