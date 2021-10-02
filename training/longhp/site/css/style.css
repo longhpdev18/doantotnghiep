@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+body {
+    background-color: var(--lightColor);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.header {
+    width: 100%;
+    height: 10rem;
+    background-color: var(--whiteColor);
+}
+
+.header__container {
+    max-width: 120rem;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.header__brand {
+    width: 25rem;
+    height: 10rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
+
+.header__brand--logo {
+    width: 100%;
+    height: 10rem;
+}
+
+.header__brand--image {
+    width: auto;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.header__searchbox {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbox {
+    width: 60%;
+    min-width: 39rem;
+    height: 4.5rem;
+    flex-shrink: 0;
+    background-color: var(--lightColor);
+    border-radius: var(--spaceS);
+    display: flex;
+    align-items: center;
+}
+
+.header__searchbox--input {
+    background-color: transparent;
+    padding: var(--spaceS);
+    flex: 1;
+    min-width: 32rem;
+}
+
+.header__searchbox--button {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    width: 7rem;
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 0px var(--spaceS) var(--spaceS) 0px;
+}
+
+.header__right {
+    width: 25rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header__right--login {
+    background-color: var(--primaryColor);
+    font-size: 1.4rem;
+    white-space: nowrap;
+    color: var(--whiteColor);
+}
+
+.header__right--cart {
+    background-color: var(--primaryColor);
+    font-size: 1.3rem;
+    white-space: nowrap;
+    color: var(--whiteColor);
+    margin-left: 1rem;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    width: 100%;
+    margin-top: var(--spaceS);
+    display: flex;
+}
+
+.hero__container {
+    width: 120rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.cat__title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: var(--primaryColor);
+    border-radius: inherit;
+    color: var(--whiteColor);
+}
+
+.hero__top {
+    width: 100%;
+    display: flex;
+}
+
+.hero__bottom {
+    height: 60rem;
+    flex: 1;
+    display: flex;
+    margin-top: var(--spaceS);
+    position: relative;
+}
+
+.hero__left {
+    width: 20rem;
+    min-height: 100%;
+    display: flex;
+    background-color: white;
+    border-radius: var(--spaceS);
+    padding: var(--spaceS);
+}
+
+.menu__left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.menu-item {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    font-size: 1.4rem;
+    border-radius: var(--space8);
+    position: relative;
+}
+
+.cta-menu {
+    width: 100%;
+    height: 3.5rem;
+    align-items: center;
+    display: flex;
+    color: var(--darkColor);
+}
+
+.menu-item:hover {
+    color: var(--whiteColor);
+}
+
+.cta-menu i {
+    width: 3.5rem;
+    margin-right: .5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hero__right {
+    height: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--spaceS);
+    border-radius: var(--spaceS);
+    margin-bottom: calc(-1 * var(--spaceS));
+}
+
+.hero--right__top {
+    width: 100%;
+    height: calc(40rem - var(--spaceS));
+    background-color: white;
+    border-radius: var(--spaceS);
+    display: flex;
+    font-size: 1.8rem;
+    margin-bottom: var(--spaceS);
+}
+
+.hero--right__bottom {
+    flex: 1;
+    height: calc(20rem - var(--spaceS));
+    border-radius: var(--spaceS);
+}
+
+.hero__ads {
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__ads-item {
+    width: calc((100% / 3) - var(--space8));
+    height: calc(20rem - var(--spaceS));
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: var(--spaceS);
+}
+
+.cta-ads {
+    width: 100%;
+    height: 100%;
+    color: var(--darkColor);
+    border-radius: var(--spaceS);
+}
+
+.ads--image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.hero__slide {
+    width: 100%;
+    height: calc(40rem);
+}
+
+.hero__slide-item {
+    width: 100%;
+    height: calc(40rem - var(--spaceS));
+    font-size: 1.8rem;
+    background-color: white;
+    border-radius: var(--spaceS);
+}
+
+.cta-slide {
+    width: 100%;
+    height: 100%;
+    color: var(--darkColor);
+    border-radius: var(--spaceS);
+}
+
+.slide--image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.hero__top--left {
+    width: 20rem;
+    height: 4rem;
+    margin-right: var(--spaceS);
+    background-color: white;
+}
+
+.hero__top--right {
+    flex: 1;
+    height: 4rem;
+    display: flex;
+}
+
+.stkbn__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stkbn-item {
+    width: calc((100% / 5) - var(--space8));
+    display: flex;
+    min-width: 13rem;
+    font-size: 1.3rem;
+    padding: .6rem 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    border-radius: var(--spaceS);
+    background-color: var(--whiteColor);
+}
+
+.cta-stk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: var(--darkColor);
+    font-weight: 500;
+}
+
+.cta-stk:hover {
+    color: var(--primaryColor);
+    transition: color .3s linear;
+}
+
+.cta-stk i {
+    margin-right: .8rem;
+    font-size: 1.3rem;
+}
+
+.submenu {
+    width: calc(100rem + 1.2rem);
+    height: calc(60rem + 1.2rem);
+    top: -2.4rem;
+    left: 100%;
+    z-index: 100;
+    border-radius: var(--spaceS);
+    display: none;
+    padding: var(--spaceS);
+    position: absolute;
+}
+
+.submenu__container {
+    --col: 3;
+    width: 100%;
+    height: 100%;
+    margin-left: calc(1 * var(--spaceS));
+    background-color: var(--whiteColor);
+    padding: var(--spaceS);
+    border-radius: var(--spaceS);
+    display: grid;
+    grid-template-columns: repeat(var(--col), 1fr);
+    grid-gap: var(--spaceS);
+    color: var(--primaryColor);
+    font-weight: 600;
+}
+
+.menu-item:hover>.submenu-laptop {
+    display: block;
+    color: var(--whiteColor);
+}
+
+.menu-item:hover>.submenu-pcbest {
+    display: block;
+    top: -5.9rem;
+}
+
+.menu-item:hover>.submenu-apple {
+    display: block;
+    top: -9.4rem;
+}
+
+.menu-item:hover>.submenu-pc {
+    display: block;
+    top: -12.9rem;
+}
+
+.menu-item:hover>.submenu-pcaccessory {
+    display: block;
+    top: -16.4rem;
+}
+
+.menu-item:hover>.submenu-monitor {
+
+    display: block;
+    top: -19.9rem;
+}
+
+.menu-item:hover>.submenu-keyboard {
+    display: block;
+    top: -23.4rem;
+}
+
+.menu-item:hover>.submenu-mouse {
+    display: block;
+    top: -26.9rem;
+}
+
+.menu-item:hover>.submenu-headgame {
+    display: block;
+    top: -30.4rem;
+}
+
+.menu-item:hover>.submenu-chair {
+    display: block;
+    top: -33.9rem;
+}
+
+.menu-item:hover>.submenu-speaker {
+    display: block;
+    top: -37.4rem;
+}
+
+.menu-item:hover>.submenu-offaccessory {
+    display: block;
+    top: -40.9rem;
+}
+
+.menu-item:hover>.submenu-network {
+    display: block;
+    top: -44.4rem;
+}
+
+.menu-item:hover>.submenu-accessory {
+    display: block;
+    top: -47.9rem;
+}
+
+.submenu-item {
+    --col: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu-title {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space8);
+}
+
+.cta-brand__item {
+    height: 2.5rem;
+    color: var(--darkColor);
+}
