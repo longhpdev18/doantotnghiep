@@ -561,8 +561,9 @@ body {
 .products__list {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: calc(-1 * var(--spaceS));
 }
 
 .product__item {
@@ -572,7 +573,10 @@ body {
     border-radius: var(--spaceS);
     width: calc((100% / var(--col)) - var(--spaceM));
     margin-top: var(--spaceM);
+    margin-left: var(--spaceM);
     overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .cta-product {
@@ -632,6 +636,14 @@ body {
     color: var(--whiteColor);
 }
 
+.btn-buy {
+    font-weight: 600;
+    color: var(--whiteColor);
+}
+
 .btn-addToCart {
     font-weight: 600;
+    padding: 1.4rem 2rem;
+    color: var(--darkColor);
+    background-color: var(--lightColor);
 }
