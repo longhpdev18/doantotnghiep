@@ -26,7 +26,7 @@ import javax.persistence.UniqueConstraint;
 public class SanPham {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long masp;
+	private double masp;
 	
 	@Column(name = "tensp",nullable = false)
 	private String tensp;
@@ -51,24 +51,24 @@ public class SanPham {
 	
 	@Column(name ="hinh",nullable = false)
 	private String hinh;
-	@Column(name ="deal",nullable = true)
-	private String deal;
-	private Double newPrice ;
+//	@Column(name ="deal",nullable = true)
+//	private String deal;
+//	private Double newPrice ;
 
-	public int getNewPrice() {
-		Double s = (100-Integer.parseInt(deal))*gia/100;
-		return s.intValue();
-	}
+//	public int getNewPrice() {
+//		Double s = (100-Integer.parseInt(deal))*gia/100;
+//		return s.intValue();
+//	}
+//
+//	public String getDeal() {
+//		return deal;
+//	}
+//
+//	public void setDeal(String deal) {
+//		this.deal = deal;
+//	}
 
-	public String getDeal() {
-		return deal;
-	}
-
-	public void setDeal(String deal) {
-		this.deal = deal;
-	}
-
-	public long getMasp() {
+	public double getMasp() {
 		return masp;
 	}
 
