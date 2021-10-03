@@ -108,7 +108,7 @@ body {
 
 .hero {
     width: 100%;
-    margin-top: calc(var(--spaceS) + 10rem);
+    margin-top: calc(var(--spaceS) + 13.6rem);
     display: flex;
 }
 
@@ -127,14 +127,40 @@ body {
     align-items: center;
     font-size: 1.4rem;
     font-weight: 600;
-    background-color: var(--primaryColor);
     border-radius: inherit;
     color: var(--whiteColor);
+    position: relative;
+    z-index: 1;
+}
+
+.cat__title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background-color: var(--primaryColor);
+    opacity: .7;
+    color: var(--whiteColor);
+    z-index: -1;
 }
 
 .hero__top {
     width: 100%;
     display: flex;
+    position: fixed;
+    z-index: 998;
+    margin-top: 10rem;
+    background-color: var(--whiteColor);
+    padding-bottom: var(--space8);
+}
+
+.hero__top--container {
+    display: flex;
+    width: 120rem;
+    margin: auto;
 }
 
 .hero__bottom {
@@ -533,16 +559,80 @@ body {
 }
 
 .products__list {
-    --col: 4;
-    margin-top: var(--spaceS);
-    display: grid;
-    grid-template-columns: repeat(var(--col), 1fr);
-    justify-content: space-around;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .product__item {
-    margin-left: var(--spaceM);
+    --col: 4;
     font-size: 2rem;
     background-color: var(--whiteColor);
     border-radius: var(--spaceS);
+    width: calc((100% / var(--col)) - var(--spaceM));
+    margin-top: var(--spaceM);
+    overflow: hidden;
+}
+
+.cta-product {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: var(--darkColor);
+}
+
+.product__top {
+    height: 25rem;
+    border-radius: inherit;
+}
+
+.product__bottom {
+    flex: 1;
+}
+
+.product-image {
+    width: auto;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: var(--spaceS) var(--spaceS) 0 0;
+}
+
+.product__bottom {
+    padding: var(--spaceS);
+}
+
+.product-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    font-size: 1.4rem;
+    margin-bottom: var(--space8);
+}
+
+.product-priceOld {
+    text-decoration: line-through;
+}
+
+.product-priceNew {
+    color: var(--primaryColor);
+}
+
+.product__content {
+    margin-bottom: var(--spaceS);
+}
+
+.product__btnGroups {
+    display: flex;
+    justify-content: space-between;
+    color: var(--whiteColor);
+}
+
+.btn-addToCart {
+    font-weight: 600;
+    color: var(--whiteColor);
 }

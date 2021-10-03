@@ -46,6 +46,7 @@ button {
     border: none;
     background-color: transparent;
     padding: 1.2rem 2.5rem;
+    cursor: pointer;
 }
 
 .btn-primary {
