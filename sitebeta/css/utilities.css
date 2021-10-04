@@ -28,14 +28,16 @@ button {
     --primaryColor: #0B71E8;
     --primaryHover: #0e4482;
     --redColor: #F03C3D;
-    --redHoverr: #f14c4c;
+    --redHover: #f14c4c;
     --orangeColor: #FF5E02;
     --orangeHover: #fa6b19;
     --greenColor: #19C796;
-    --greenColor: #2ddaa9;
+    --greenHover: #2ddaa9;
     --whiteColor: #fff;
     --lightColor: #EFF2F9;
+    --lightHover: #d8d9da;
     --darkColor: #111;
+    --darkHover: #444;
     --space8: .8rem;
     --spaceS: 1.2rem;
     --spaceM: 2.4rem;
@@ -49,7 +51,76 @@ button {
     cursor: pointer;
 }
 
+.text-primary {
+    color: var(--primaryColor);
+}
+
+.text-dark {
+    color: var(--darkColor);
+}
+
+.text-red {
+    color: var(--redColor);
+}
+
+.text-green {
+    color: var(--greenColor);
+}
+
+.text-orange {
+    color: var(--orangeColor);
+}
+
+.text-white {
+    color: var(--whiteColor);
+}
+
+.text-primary-hover:hover {
+    color: var(--primaryHover);
+    transition: color .3s linear;
+}
+
+.text-red-hover:hover {
+    color: var(--redHover);
+    transition: color .3s linear;
+}
+
+.text-green-hover:hover {
+    color: var(--greenHover);
+    transition: color .3s linear;
+}
+
+.text-orange-hover:hover {
+    color: var(--orangeHover);
+    transition: color .3s linear;
+}
+
+.bg-primary-hover:hover {
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
+    transition: all .3s linear;
+}
+
+.bg-red-hover:hover {
+    background-color: var(--redHover);
+    transition: all .3s linear;
+    color: var(--whiteColor);
+}
+
+.bg-green-hover:hover {
+    background-color: var(--greenColor);
+    transition: all .3s linear;
+    color: var(--whiteColor);
+}
+
+.bg-orange-hover:hover {
+    background-color: var(--orangeColor);
+    transition: all .3s linear;
+    color: var(--whiteColor);
+}
+
 .btn-primary {
+    color: var(--whiteColor);
     background-color: var(--primaryColor);
     cursor: pointer;
 }
@@ -57,6 +128,39 @@ button {
 .btn-primary:hover {
     background-color: var(--primaryHover);
     transition: background-color .3s linear;
+}
+
+.btn-light {
+    background-color: var(--lightColor);
+    cursor: pointer;
+}
+
+.btn-light:hover {
+    background-color: var(--lightHover);
+    transition: all .3s linear;
+}
+
+.btn-red {
+    background-color: var(--redColor);
+    cursor: pointer;
+}
+
+.btn-red:hover {
+    background-color: var(--redHover);
+    transition: all .3s linear;
+    color: var(--whiteColor);
+}
+
+.btn-dark {
+    color: var(--whiteColor);
+    background-color: var(--darkColor);
+    cursor: pointer;
+}
+
+.btn-dark:hover {
+    background-color: var(--darkHover);
+    transition: all .3s linear;
+    color: var(--whiteColor);
 }
 
 .menu-item {
