@@ -12,25 +12,25 @@ import javax.persistence.Table;
 public class HoaDonChiTiet {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long mahdct;
+	private int mahdct;
 	
 	@Column(name = "mahd", nullable = false)
-	private long mahd;
+	private int mahd;
 	
 	@Column(name = "masp", nullable = false)
-	private long masp;
+	private int masp;
 	
 	@Column(name = "soluong", nullable = false)
-	private long soluong;
+	private int soluong;
 	
 	@Column(name = "dongia", nullable = false)
-	private double dongia;
+	private int dongia;
 
 	public long getMahdct() {
 		return mahdct;
 	}
 
-	public void setMahdct(long mahdct) {
+	public void setMahdct(int mahdct) {
 		this.mahdct = mahdct;
 	}
 
@@ -38,7 +38,7 @@ public class HoaDonChiTiet {
 		return mahd;
 	}
 
-	public void setMahd(long mahd) {
+	public void setMahd(int mahd) {
 		this.mahd = mahd;
 	}
 
@@ -46,15 +46,15 @@ public class HoaDonChiTiet {
 		return masp;
 	}
 
-	public void setMasp(long masp) {
+	public void setMasp(int masp) {
 		this.masp = masp;
 	}
 
-	public long getSoluong() {
+	public int getSoluong() {
 		return soluong;
 	}
 
-	public void setSoluong(long soluong) {
+	public void setSoluong(int soluong) {
 		this.soluong = soluong;
 	}
 
@@ -62,7 +62,7 @@ public class HoaDonChiTiet {
 		return dongia;
 	}
 
-	public void setDongia(double dongia) {
+	public void setDongia(int dongia) {
 		this.dongia = dongia;
 	}
 	

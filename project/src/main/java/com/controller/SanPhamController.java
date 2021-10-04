@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.exception.ResourceNotFoundException;
 import com.model.Detail;
+import com.model.KhachHang;
 import com.model.LapTop;
 import com.model.LoaiHang;
 import com.model.ManHinh;
@@ -38,83 +40,98 @@ public class SanPhamController {
 	SanPhamDAO dao;
 	@Autowired
 	LoaiHangDAO daolh;
-	@Autowired
-	LapTopDAO daoLT;
-	@Autowired
-	ManHinhDAO daoMH;
+//	@Autowired
+//	LapTopDAO daoLT;
+//	@Autowired
+//	ManHinhDAO daoMH;
 	@Autowired
 	NhanHieuDAO daoNH;
+
 	@GetMapping("SanPham/list")
-	public List<SP_LH> getAllSanPham() {
-		List<SP_LH> list = new ArrayList<SP_LH>();
-		for(LoaiHang lh :daolh.findAll()) {
-			List<SanPham> listsp = new ArrayList<SanPham>();
-			for(SanPham sp :dao.findAll()) {
-				if(sp.getMaloai()==lh.getMaloai()) {
-					listsp.add(sp);
-				}
-//				
-			}
-			list.add(new SP_LH(listsp,lh));
-		}
-		
-		return list;
+	public List<SanPham> getAllSanPham() {
+		return dao.findAll();
+//		List<SP_LH> list = new ArrayList<SP_LH>();
+//		for(LoaiHang lh :daolh.findAll()) {
+//			List<SanPham> listsp = new ArrayList<SanPham>();
+//			for(SanPham sp :dao.findAll()) {
+//				if(sp.getMaloai()==lh.getMaloai()) {
+//					listsp.add(sp);
+//				}
+////				
+//			}
+//			list.add(new SP_LH(listsp,lh));
+//		}
 	}
+
+	@GetMapping("sanpham/index")
+	public String index(Model model) {
+		SanPham item = new SanPham();
+		model.addAttribute("item", item);
+		List<SanPham> items = dao.findAll();
+		model.addAttribute("items", items);
+		return "index";
+	}
+
 	@GetMapping("SanPham/{masp}")
-	public Detail getSanPhamId(@PathVariable(value = "masp") Long masp)
-			 {
-		Detail detail = new Detail();
-		SanPham sp = null;
-		LapTop lt = null;
-		ManHinh mh = null;
-		NhanHieu nh = null;
-		System.out.println(masp);
-		for(SanPham spTest :dao.findAll()) {
-			
-			if(spTest.getMasp()==masp) {
-				sp=spTest;
-				for(NhanHieu nhTest:daoNH.findAll() ) {
-					if(nhTest.getManh()==spTest.getManh()) {
-						nh=nhTest;
-					}
-				}
-				for(LapTop ltTest: daoLT.findAll()) {
-					if(ltTest.getMasp()==spTest.getMasp()) {
-						lt= ltTest;
-						
-					}
-				}
-				for(ManHinh mhTest:daoMH.findAll()) {
-					if(mhTest.getMasp()==spTest.getMasp()) {
-						mh= mhTest;
-					}
-				}
-			}
-		}
-		detail.setSp(sp);
-		detail.setLt(lt);
-		detail.setMh(mh);
-		detail.setNh(nh);
-		return detail;
+	public ResponseEntity<SanPham> getSanPhamId(@PathVariable(value = "masp") Long masp)
+			throws ResourceNotFoundException {
+		SanPham SanPham = dao.findById(masp)
+				.orElseThrow(() -> new ResourceNotFoundException("Nhân viên này không tồn tại: " + masp));
+		return ResponseEntity.ok().body(SanPham);
+//		Detail detail = new Detail();
+//		SanPham sp = null;
+//		LapTop lt = null;
+//		ManHinh mh = null;
+//		NhanHieu nh = null;
+//		System.out.println(masp);
+//		for(SanPham spTest :dao.findAll()) {
+//			
+//			if(spTest.getMasp()==masp) {
+//				sp=spTest;
+//				for(NhanHieu nhTest:daoNH.findAll() ) {
+//					if(nhTest.getManh()==spTest.getManh()) {
+//						nh=nhTest;
+//					}
+//				}
+//				for(LapTop ltTest: daoLT.findAll()) {
+//					if(ltTest.getMasp()==spTest.getMasp()) {
+//						lt= ltTest;
+//						
+//					}
+//				}
+//				for(ManHinh mhTest:daoMH.findAll()) {
+//					if(mhTest.getMasp()==spTest.getMasp()) {
+//						mh= mhTest;
+//					}
+//				}
+//			}
+//		}
+//		detail.setSp(sp);
+//		detail.setLt(lt);
+//		detail.setMh(mh);
+//		detail.setNh(nh);
+//		return detail;
 	}
+
 	@GetMapping("SanPham/LoaiHang/{malh}")
-	public List<SP_LH> getSPByLH(@PathVariable(value = "malh") Long malh){
+	public List<SP_LH> getSPByLH(@PathVariable(value = "malh") Long malh) {
 		List<SP_LH> list = new ArrayList<SP_LH>();
-		for(LoaiHang lh :daolh.findAll()) {
+		for (LoaiHang lh : daolh.findAll()) {
 			List<SanPham> listsp = new ArrayList<SanPham>();
-			if(lh.getMaloai()==malh) {
-				for(SanPham sp :dao.findAll()) {
-					if(sp.getMaloai()==lh.getMaloai()) {
+			if (lh.getMaloai() == malh) {
+				for (SanPham sp : dao.findAll()) {
+					if (sp.getMaloai() == lh.getMaloai()) {
 						listsp.add(sp);
 					}
 //					
 				}
-				list.add(new SP_LH(listsp,lh));
+				list.add(new SP_LH(listsp, lh));
 			}
 		}
-		
+
 		return list;
 	}
+
 	@PutMapping("SanPham/edit/{masp}")
 	public ResponseEntity<SanPham> edit(@PathVariable(value = "masp") Long masp,
 			@Validated @RequestBody SanPham SanPhamDetails) throws ResourceNotFoundException {
@@ -132,26 +149,24 @@ public class SanPhamController {
 
 		return ResponseEntity.ok(edit);
 	}
-	
+
 	@PostMapping("SanPham/create")
 	public SanPham createSanPham(@Validated @RequestBody SanPham SanPham) {
 		return dao.save(SanPham);
 	}
-	
+
 	@DeleteMapping("SanPham/delete/{masp}")
 	public Map<String, Boolean> deleteSanPham(@PathVariable(value = "manv") Long masp)
 			throws ResourceNotFoundException {
-		
+
 		SanPham SanPham = dao.findById(masp)
 				.orElseThrow(() -> new ResourceNotFoundException("san pham này không tồn tại: " + masp));
 
 		dao.delete(SanPham);
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
-		
+
 		return response;
 	}
-
-
 
 }
