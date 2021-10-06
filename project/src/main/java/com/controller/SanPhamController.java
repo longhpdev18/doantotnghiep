@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,22 +20,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.exception.ResourceNotFoundException;
-import com.model.Detail;
 import com.model.KhachHang;
-import com.model.LapTop;
 import com.model.LoaiHang;
-import com.model.ManHinh;
 import com.model.NhanHieu;
 import com.model.SP_LH;
 import com.model.SanPham;
-import com.repository.LapTopDAO;
 import com.repository.LoaiHangDAO;
-import com.repository.ManHinhDAO;
 import com.repository.NhanHieuDAO;
 import com.repository.SanPhamDAO;
 
-@RestController
-@RequestMapping("")
+@Controller
 public class SanPhamController {
 	@Autowired
 	SanPhamDAO dao;
@@ -57,19 +52,17 @@ public class SanPhamController {
 //				if(sp.getMaloai()==lh.getMaloai()) {
 //					listsp.add(sp);
 //				}
-////				
+//				
 //			}
 //			list.add(new SP_LH(listsp,lh));
 //		}
 	}
 
-	@GetMapping("sanpham/index")
+	@GetMapping("sanpham/list")
 	public String index(Model model) {
-		SanPham item = new SanPham();
-		model.addAttribute("item", item);
 		List<SanPham> items = dao.findAll();
 		model.addAttribute("items", items);
-		return "index";
+		return "home";
 	}
 
 	@GetMapping("SanPham/{masp}")
