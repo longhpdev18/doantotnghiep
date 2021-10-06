@@ -34,7 +34,8 @@ button {
     --greenColor: #19C796;
     --greenHover: #2ddaa9;
     --whiteColor: #fff;
-    --lightColor: #EFF2F9;
+    --whiteHover: #d8d9da;
+    --lightColor: #f1f2f6;
     --lightHover: #d8d9da;
     --darkColor: #111;
     --darkHover: #444;
@@ -117,6 +118,17 @@ button {
     background-color: var(--orangeColor);
     transition: all .3s linear;
     color: var(--whiteColor);
+}
+
+.bg-white-hover:hover {
+    background-color: var(--whiteHover);
+    transition: all .3s linear;
+    color: var(--darkColor);
+}
+
+.btn-white {
+    background-color: var(--whiteColor);
+    cursor: pointer;
 }
 
 .btn-primary {
