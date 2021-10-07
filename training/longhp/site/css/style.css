@@ -55,9 +55,10 @@ body {
 }
 
 .cta-cart {
-    width: 100%;
     height: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .searchbox {
@@ -95,20 +96,15 @@ body {
     justify-content: end;
 }
 
-.header__right--login {
-    background-color: var(--primaryColor);
-    font-size: 1.4rem;
-    white-space: nowrap;
-    color: var(--whiteColor);
+.header__right--container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+
 }
 
-.header__right--cart {
-    background-color: var(--primaryColor);
-    font-size: 1.3rem;
-    white-space: nowrap;
-    color: var(--whiteColor);
-    margin-left: 1rem;
-}
+
 
 /* ===== HERO ===== */
 
@@ -865,7 +861,7 @@ body {
     min-height: 40rem;
     display: flex;
     justify-content: center;
-    margin-top: 11.2rem;
+    margin-top: 16.6rem;
     margin-bottom: var(--spaceM);
 }
 
@@ -984,7 +980,7 @@ body {
 }
 
 .group-button {
-    width: 26rem;
+    width: 100%;
     height: 7rem;
     display: flex;
     justify-content: space-between;
@@ -997,6 +993,7 @@ body {
 .btn-order {
     height: 100%;
     font-size: 1.6rem;
+    margin-right: var(--spaceS);
 }
 
 .btn-update {
@@ -1058,7 +1055,7 @@ body {
 }
 
 .group-button {
-    width: 25rem;
+    width: auto;
     flex-direction: row;
     justify-content: space-around;
     padding: var(--spaceS);
@@ -1135,6 +1132,8 @@ body {
 }
 
 .btn-showLogin {
-    padding: .2rem .5rem;
+    height: 100%;
+    padding: .2rem 2.5rem;
     display: block;
+    margin-right: var(--spaceS);
 }
