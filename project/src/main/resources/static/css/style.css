@@ -599,6 +599,7 @@ body {
 }
 
 .product__top {
+	width: 100%;
     height: 25rem;
     border-radius: inherit;
     padding: var(--spaceS);
@@ -610,7 +611,7 @@ body {
 
 .product-image {
     width: 100%;
-    height: 25rem;
+    height: 100%;
     object-fit: cover;
     border-radius: var(--spaceS) var(--spaceS) 0 0;
 }
