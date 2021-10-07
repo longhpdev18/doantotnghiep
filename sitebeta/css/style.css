@@ -1011,7 +1011,6 @@ body {
 
 .formLogin__container {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1092,6 +1091,11 @@ body {
 
 .formLogin__container.active {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
 }
 
 .toRegister {
@@ -1129,6 +1133,10 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 2.2rem;
+}
+
+.btn-cancel {
+    margin-left: var(--spaceS);
 }
 
 .btn-showLogin {
