@@ -42,27 +42,18 @@ public class SanPhamController {
 	@Autowired
 	NhanHieuDAO daoNH;
 
-	@GetMapping("SanPham/list")
-	public List<SanPham> getAllSanPham() {
-		return dao.findAll();
-//		List<SP_LH> list = new ArrayList<SP_LH>();
-//		for(LoaiHang lh :daolh.findAll()) {
-//			List<SanPham> listsp = new ArrayList<SanPham>();
-//			for(SanPham sp :dao.findAll()) {
-//				if(sp.getMaloai()==lh.getMaloai()) {
-//					listsp.add(sp);
-//				}
-//				
-//			}
-//			list.add(new SP_LH(listsp,lh));
-//		}
-	}
-
 	@GetMapping("sanpham/list")
-	public String index(Model model) {
+	public String getAllSanPham(Model model) {
 		List<SanPham> items = dao.findAll();
 		model.addAttribute("items", items);
 		return "home";
+	}
+
+	@GetMapping("index")
+	public String index(Model model) {
+		List<SanPham> items = dao.findAll();
+		model.addAttribute("items", items);
+		return "phongTest";
 	}
 
 	@GetMapping("SanPham/{masp}")

@@ -21,7 +21,7 @@ insert into sanpham values
 ,điều khiển trực quan,đồng bộ Aura không dây,thiết kế Ergonomic,Bảo hành: 24 tháng',1,'BanPhimAsusROGClaymoreII.jpg')
 insert into sanpham values (N'Bàn phím cơ iKBC W210 WIRELESS - BLACK EDITION',1,3,'2300000',N'Thông tin sản phẩm: Phím sử dụng công nghệ không dây 2.4 Ghz.
 ,bàn phím cơ sử dụng công tắc cơ khí Cherry MX,độ bên trên 50 triệu lần bấm,keycap làm bằng PBT cao cấp, chống mài mòn, độ bền siêu hạng.
-Kết cấu vững chắc, cảm giác bấm tuyệt vời,bảo hành : 24 tháng',1,'BanphimcơiKBCW210WIRELESS-BLACKEDITION.png')
+Kết cấu vững chắc, cảm giác bấm tuyệt vời,bảo hành : 24 tháng',1,'BanphimcoiKBCW210WIRELESS-BLACKEDITION.png')
 insert into sanpham values  (N'Bàn phím cơ Mistel X8 Bumblebee',1,2,'2490000',N'Alphas: White Double Shot PBT với Black huyền thoại bộ điều chỉnh: PBT Double Shot màu đen 
 với huyền thoại màu vàng khác: PBT bắn đôi màu vàng với huyền thoại màu đen',0,'BanphimcơMistelX8Bumblebee.png')
 insert into sanpham values  (N'Bàn phím cơ Razer Huntsman Mini Mercury',1,8,'3190000',N'Razer Huntsman Mini Mecury là một trong những bàn phím cơ phiên bản màu trắng thu nhỏ 
@@ -46,51 +46,48 @@ insert into sanpham values  (N'Bàn phím Razer Blackwidow Green Switch - 2019',
 --
 
 insert into sanpham values (N'Chuột Akko AG325',6,1,'499000',N'Thông số sản phẩm: Chuột chơi game AKKO AG325 Pink,thiết kế đối xứng,mắt đọc PWM3325,giao tiếp USB, dây cáp dài 1,8m
-,vỏ nhựa ABS,con lăn kim loại CNC,switch Omron (50 triệu lần nhấn),số nút: 6 (có nút riêng set DPI 200 cho game FPS),hỗ trợ macro',0,' Chuột Akko AG325.jpg')
+,vỏ nhựa ABS,con lăn kim loại CNC,switch Omron (50 triệu lần nhấn),số nút: 6 (có nút riêng set DPI 200 cho game FPS),hỗ trợ macro',0,N'Chuột Akko AG325.jpg')
 insert into sanpham values (N'Chuột Asus Cerberus',6,2,'499000',N'Chuột chơi game Asus Cerberus quang hai tay với công tắc DPI bốn nấc và chỉ báo LED tiện lợi
 Điều khiển DPI linh hoạt - Bốn nấc DPI tùy chỉnh được với một đèn LED chỉ báo màu sắc
-Thiết kế hai tay thời trang - Được thiết kế cho cả các game thủ thuận tay trái và thuận tay phải',1,'ChuôtAsusCerberus.png')
+Thiết kế hai tay thời trang - Được thiết kế cho cả các game thủ thuận tay trái và thuận tay phải',1,N'Chuột AsusCerberus.png')
 insert into sanpham values (N'Chuột Logitech G102 Lightsync RGB Black',6,3,'699.000',N'Thông số sản phẩm,mouse Logitech G102 Lightsync RGB Black,phiên bản nâng cấp của chuột chơi game "quốc dân" G102 Prodigy
-,độ phân giải : 8000 DPI,led RGB 16.8 triệu màu với tính năng Lightsync đồng bộ led của Logitech',0,'ChuôtLogitechG102LightsyncRGBBlack.jpg')
+,độ phân giải : 8000 DPI,led RGB 16.8 triệu màu với tính năng Lightsync đồng bộ led của Logitech',0,N'Chuột LogitechG102LightsyncRGBBlack.jpg')
 insert into sanpham values (N'Chuột Logitech G102 Lightsync RGB White',6,4,'599.000',N'Chuột Logitech G102 Gen2 LightSync White,Bộ xử lý ARM 32 bit bên trong,DPI từ 200 - 8000,Thiết kế đối xứng cơ bản
-,LED RGB 16.8 triệu màu đồng bộ LightSync,Bảo hành: 24 Tháng',1,'ChuôtLogitechG102LightsyncRGBWhite.jpg')
+,LED RGB 16.8 triệu màu đồng bộ LightSync,Bảo hành: 24 Tháng',1,N'Chuột LogitechG102LightsyncRGBWhite.jpg')
 insert into sanpham values (N'Chuột Razer Deathadder Essential',6,7,'1249000',N'Chuột Razer DeathAdder Essential tHÔNG SỐ KỸ THUẬT:
 là phiên bản đổi tên từ Razer DeathAdder 2013,thiết kế hình thái học dành cho người thuận tay phải với các rãnh bên hông được trang bị lớp cao su dạng lưới,cảm biến quang học 6400dpi
-,đèn LED 1 màu Green,hỗ trợ Razer Synapse',0,'ChuôtRazerDeathadderEssential.jpg')
+,đèn LED 1 màu Green,hỗ trợ Razer Synapse',0,N'Chuột RazerDeathadderEssential.jpg')
 insert into sanpham values (N'Chuột Razer Viper Mini',6,8,'1299000',N'Chuột Razer Viper Mini siêu nhẹ, chỉ 61 Gram cảm biến quang 8500 DPI nút bấm Quang độc quyền của Razer
-dây cáp Speedflex siêu bền,có bộ nhờ profile trên chuột',1,'ChuôtRazerViperMini.jpg')
+dây cáp Speedflex siêu bền,có bộ nhờ profile trên chuột',1,N'Chuột RazerViperMini.jpg')
 insert into sanpham values (N'Chuột Steelseries Rival 3',6,9,'999.000',N'Thông số sản phẩm: chuột chơi game SteelSeries Rival 3,được thiết kế với vật liệu siêu bền,đảm bảo 60 triệu lần bấm
-,thiết kế đối xứng cho sự cầm nắm thoải mái,ánh sáng Prism rực rỡ với 3 vùng 16,8 triệu màu,cảm biến chơi game quang TrueMove Core với tính năng theo dõi 1-1 thời gian thực',0,'ChuôtSteelseriesRival3.jpg')
+,thiết kế đối xứng cho sự cầm nắm thoải mái,ánh sáng Prism rực rỡ với 3 vùng 16,8 triệu màu,cảm biến chơi game quang TrueMove Core với tính năng theo dõi 1-1 thời gian thực',0,N'Chuột SteelseriesRival3.jpg')
 insert into sanpham values (N'Chuột SteelSeries Sensei Ten',6,10,'1639000',N'Thông số sản phẩm: chuột SteelSeries Sensei Ten,phiên bản đặc biệt kỉ niệm 10 năm ra mắt dòng chuột huyền thoại Sensei
-,form chuột đối xứng quen thuộc đã trở lại,mắt cảm biến TrueMove Pro thế hệ mới cho hiệu năng cao cấp và ổn định với mọi loại bàn di chuột',1,'ChuotSteelSeriesSenseiTen.png')
+,form chuột đối xứng quen thuộc đã trở lại,mắt cảm biến TrueMove Pro thế hệ mới cho hiệu năng cao cấp và ổn định với mọi loại bàn di chuột',1,N'Chuột SteelSeriesSenseiTen.png')
 insert into sanpham values (N'Chuột Zowie BenQ S1',6,10,'1999000',N'Thông số sản phẩm: Chuột Zowie S1 Optical E-Sport Gaming,nằm trong series S mới của Zowie,thiết kế đối xứng với chiều dài ngắn hơn dòng FK và ZA
-,mắt cảm biến PMW3360 cho độ chính xác cao và ổn định,thiết kế phần cứng plug and play không cần dùng driver',1,'ChuôtZowieBenQS1.png')
+,mắt cảm biến PMW3360 cho độ chính xác cao và ổn định,thiết kế phần cứng plug and play không cần dùng driver',1,N'Chuột ZowieBenQS1.png')
 insert into sanpham values (N'thumbchuot',6,5,'350.000',N'hàng trung qu?c',1,'thumbchuot_912ca2abc60042e1b7c9a02b8a823a23.png')
 ---
 
-insert into sanpham values (N'Ghế chơi game Cooler Master Caliber R1S Pink Grey',7,3,'4390000',N'Caliber R1S Pink & Gray,chất liệu: Da,khung chân: Kim loại,trọng lượng tối đa: 150Kg.Bảo hành: 12 tháng',1,'GhechơigameCoolerMasterCaliberR1SPinkGrey.jpeg')
-insert into sanpham values (N'Ghế chơi game Cooler Master Caliber R1S Pink White',7,4,'4250000',N'- Caliber R1S Pink & White,chất liệu: Da,khung chân: Kim loại,trọng lượng tối đa: 150Kg',1,'GhechơigameCoolerMasterCaliberR1SPinkWhite.jpeg')
-
-insert into sanpham values (N'Ghế chơi game Cooler Master Caliber R1S Purple Camo',7,5,'4560000',N'Ghế gaming Cooler Master R1S Purple Camo da PU cao cấp,thiết kế công thái học giúp thư giãn giảm thiểu mệt mỏi',1,'Ghế chơi game Cooler Master Caliber R1S Purple Camo.jpeg')
-
+insert into sanpham values (N'Ghế chơi game Cooler Master Caliber R1S Pink Grey',7,3,'4390000',N'Caliber R1S Pink & Gray,chất liệu: Da,khung chân: Kim loại,trọng lượng tối đa: 150Kg.Bảo hành: 12 tháng',1,N'Ghế chơi game Cooler Master Caliber R1S Pink Grey.jpeg')
+insert into sanpham values (N'Ghế chơi game Cooler Master Caliber R1S Pink White',7,4,'4250000',N'- Caliber R1S Pink & White,chất liệu: Da,khung chân: Kim loại,trọng lượng tối đa: 150Kg',1,N'Ghế chơi game Cooler Master Caliber R1S Pink White.jpeg')
+insert into sanpham values (N'Ghế chơi game Cooler Master Caliber R1S Purple Camo',7,5,'4560000',N'Ghế gaming Cooler Master R1S Purple Camo da PU cao cấp,thiết kế công thái học giúp thư giãn giảm thiểu mệt mỏi',1,N'Ghế chơi game Cooler Master Caliber R1S Purple Camo.jpeg')
 insert into sanpham values (N'Ghế chơi game Cooler Master Caliber R2 Purple',7,6,'4599000',N'Thông số sản phẩm,ghế Gamer CoolerMaster Caliber R2,thiết kế mang đậm phong cách của Cooler Master
-,chất liệu : Da PU,khung và chân được làm bằng kim loại cực kỳ chắc chắn,đệm ngồi được làm bằng khuôn xốp đúc lạnh',1,'GhechơigameCoolerMasterCaliberR2Purple.jpeg')
+,chất liệu : Da PU,khung và chân được làm bằng kim loại cực kỳ chắc chắn,đệm ngồi được làm bằng khuôn xốp đúc lạnh',1,N'Ghế chơi game Cooler Master Caliber R2 Purple.jpeg')
 insert into sanpham values (N'Ghế chơi game Cooler Master Caliber R2 Red',7,7,'4599000',N'Thông số sản phẩm,ghế Gamer CoolerMaster Caliber R2,thiết kế mang đậm phong cách của Cooler Master
-,chất liệu : Da PU,khung và chân được làm bằng kim loại cực kỳ chắc chắn,đệm ngồi được làm bằng khuôn xốp đúc lạnh, mềm và có độ đàn hồi tốt',1,'GhechơigameCoolerMasterCaliberR2Red.jpeg')
+,chất liệu : Da PU,khung và chân được làm bằng kim loại cực kỳ chắc chắn,đệm ngồi được làm bằng khuôn xốp đúc lạnh, mềm và có độ đàn hồi tốt',1,N'Ghế chơi game Cooler Master Caliber R2 Red.jpeg')
 insert into sanpham values (N'Ghế chơi game E-Dra Hercules EGC203 Pro White',7,8,'3989000',N'Ghế game E-Dra Hercules EGC203 Pro White PHIÊN BẢN NÂNG CẤP CHÂN THÉP VÀ TAY 4D,thiết kế Egonomic như NobleChairs
-,chất liệu da PU và Foam cao cấp,trụ thủ lực Class 4 chịu trọng tải 150kg',0,'GhechơigameE-DraHerculesEGC203ProWhite.jpeg')
+,chất liệu da PU và Foam cao cấp,trụ thủ lực Class 4 chịu trọng tải 150kg',0,N'Ghế chơi game E-Dra Hercules EGC203 Pro White.jpeg')
 insert into sanpham values (N'Ghế chơi game E-Dra Hercules EGC203 V2 Black',7,9,'3789000',N'Ghế game E-Dra Hercules EGC203 V2 Black (chân thép),phiên bản mới CHÂN THÉP,ghế game tốt nhất tầm giá
-,thiết kế Egonomic như NobleChairs,chất liệu da PU và Foam cao cấp,trụ thủ lực Class 4 chịu trọng tải 150kg,tay xoay 4 chiều',0,'GhechơigameE-DraHerculesEGC203V2Black.jpg')
+,thiết kế Egonomic như NobleChairs,chất liệu da PU và Foam cao cấp,trụ thủ lực Class 4 chịu trọng tải 150kg,tay xoay 4 chiều',0,N'Ghế chơi game E-Dra Hercules EGC203 V2 Black.jpg')
 insert into sanpham values (N'Ghế chơi game E-Dra Mars EGC202 Black',7,10,'2989000',N'Ghế game E-Dra Mars EGC202 V2 Black (chân thép),PHIÊN BẢN MỚI CHÂN BẰNG THÉP SIÊU BỀN,Ghế cao cấp dành cho Game
-,Chất liệu: Da cao cấp PU dễ dàng lau chùi sạch sẽ, tựa lưng dạng lưới chịu lực cao cấp.,Góc đứng: 92° ± 2°,góc nằm max: 180°,điều chỉnh độ cao: 90 ± 5mm',0,'GhechơigameE-DraMarsEGC202Black.jpeg')
-insert into sanpham values (N'Ghế Cougar Fusion Black',7,10,'3290000',N'Ghế chuyên dụng giá tốt cho game thủĐầy đủ chức năng ngả lưng, nâng hạ độ caoNgả lưng 180 độMàu đen cam',0,'GheCougarFusionBlack.jpeg')
-insert into sanpham values (N'Ghế Cougar Fusion Orange',7,1,'3590000',N'Tải trọng: 120kg.Chân 5 cánh sao.Bánh xe cao su êm ái.Trụ thủy lực Class 4.Kê tay dài êm ái.Đệm ghế được lót xốp lạnh mềm mại, không lún khi ngồi lâu',0,'GheCougarFusionOrange.png')
----
+,Chất liệu: Da cao cấp PU dễ dàng lau chùi sạch sẽ, tựa lưng dạng lưới chịu lực cao cấp.,Góc đứng: 92° ± 2°,góc nằm max: 180°,điều chỉnh độ cao: 90 ± 5mm',0,N'Ghế chơi game E-Dra Mars EGC202 Black.jpeg')
+insert into sanpham values (N'Ghế Cougar Fusion Black',7,10,'3290000',N'Ghế chuyên dụng giá tốt cho game thủĐầy đủ chức năng ngả lưng, nâng hạ độ caoNgả lưng 180 độMàu đen cam',0,N'Ghế Cougar Fusion Black.jpeg')
+insert into sanpham values (N'Ghế Cougar Fusion Orange',7,1,'3590000',N'Tải trọng: 120kg.Chân 5 cánh sao.Bánh xe cao su êm ái.Trụ thủy lực Class 4.Kê tay dài êm ái.Đệm ghế được lót xốp lạnh mềm mại, không lún khi ngồi lâu',0,N'Ghế Cougar Fusion Orange.png')
+----
+
 insert into sanpham values (N'acer-aspire-7-a715-41g-r150-r7-nhq8ssv004-600x600',3,10,'21490000',N'được thiết kế gọn gàng với cấu hình mạnh mẽ nhờ CPU AMD Ryzen 7 và card đồ hoạ NVIDIA GeForce GTX 1650Ti giúp tối ưu trải nghiệm chơi game
 , đáp ứng đa dạng nhu cầu sử dụng.Hiệu năng mạnh mẽ với chip AMD Ryzen 7',1,'acer-aspire-7-a715-41g-r150-r7-nhq8ssv004-600x600.jpg')
-
-insert into sanpham values (N'acer-aspire-7-a715-42g-r4st-r5-nhqaysv004-16-600x600',3,10,'19990000',N'có thiết kế đơn giản, trang nhã nhưng trang bị cấu hình mạnh mẽ đáp ứng nhu cầu đồ hoạ, kỹ thuật chuyên nghiệp và chiến game mượt mà',0,'acer-aspire-7-a715-42g-r4st-r5-nhqaysv004-16-600x600.jpg')
-
+insert into sanpham values (N'acer-aspire-7-a715-42g-r4st-r5-nhqaysv004-16-600x600',3,10,'19990000',N'có thiết kế đơn giản, trang nhã nhưng trang bị cấu hình mạnh mẽ đáp ứng nhu cầu đồ hoạ, kỹ thuật chuyên nghiệp và chiến game mượt mà',0,N'acer-aspire-7-a715-42g-r4st-r5-nhqaysv004-16-600x600.jpg')
 insert into sanpham values (N'acer-nitro-5-an515-45-r3sm-r5-nhqbmsv005-600x600',3,10,'23490000',N'Laptop Acer Nitro 5 AN515 45 R3SM R5 (NH.QBMSV.005) có vẻ ngoài hình hầm hố đặc trưng của dòng laptop gaming
 , cấu hình mạnh mẽ chạy mượt các tựa game được các game thủ ưa thích với con chip AMD Ryzen 5 và card đồ họa NVIDIA GeForce GTX 1650 4GB.Bộ xử lí mạnh mẽ, dành riêng để chiến game',1,'acer-nitro-5-an515-45-r3sm-r5-nhqbmsv005-600x600.jpg')
 insert into sanpham values (N'hp-340s-g7-i3-224l1pa-302720-092751-600x600',3,9,'13590000',N'mẫu laptop học tập - văn phòng thuộc phân khúc giá thấp, với điểm mạnh là cấu hình đủ dùng, thiết kế thanh lịch và mỏng gọn
@@ -99,63 +96,54 @@ insert into sanpham values (N'lenovo-ideapad-3-15itl6-i3-82h8004hvn-600x600',3,8
 Đa nhiệm mượt mà tác vụ văn phòng với bộ vi xử lý Intel Gen 11',1,'lenovo-ideapad-3-15itl6-i3-82h8004hvn-600x600.jpg')
 insert into sanpham values (N'lenovo-ideapad-3-15itl6-i5-82h80042vn-600x600',3,4,'17990000',N'Laptop Lenovo IdeaPad 3 15ITL6 i5 (82H800042VN) với thiết kế mỏng nhẹ đẹp mắt cùng hiệu năng ổn định giúp bạn hoàn thành công việc một cách nhanh chóng, hiệu quả.
 Thiết kế gọn nhẹ, phong cách trẻ trung.Laptop Lenovo với sắc xám thanh lịch, lớp vỏ nhựa ít trầy xước',0,'lenovo-ideapad-3-15itl6-i5-82h80042vn-600x600.jpg')
-
-
 insert into sanpham values (N'lenovo-ideapad-gaming-3-15imh05-i7-81y4013uvn-600x600',3,2,'20990000',N'Nếu bạn đang muốn mua máy tính xách tay chơi game, bạn sẽ tìm kiếm một thông số kỹ thuật tốt như bộ xử lý core i7 thế hệ thứ 10 mạnh mẽ của Intel
 , SSD dựa trên PCIe cho truy xuất nhanh và màn hình tốc độ làm mới 120Hz với chi phí cao, hầu hết các mô hình hiend hiện đều sẵn có',1,'lenovo-ideapad-gaming-3-15imh05-i7-81y4013uvn-600x600.jpg')
-
-
-
 insert into sanpham values (N'lenovo-ideapad-slim-3-15iil05-i3-81we0132vn-600x600',3,1,'12990000',N'Laptop Lenovo IdeaPad Slim 3 15IIL05 i3 (81WE0132VN) là một chiếc laptop học tập văn phòng có thiết kế đẹp mắt
 , phong cách năng động',0,'lenovo-ideapad-slim-3-15iil05-i3-81we0132vn-600x600.jpg')
-
-
-
 insert into sanpham values (N'lenovo-legion-5-15imh05-i7-82au0051vn-210520-040515-600x600',3,6,'28990000',N'là thế hệ laptop gaming được thiết kế theo xu hướng hiện đại. Với vi xử lí đa nhân gen 10, card đồ họa rời mạnh mẽ
 , Lenovo Legion 5 cho trải nghiệm chiến các tựa game bom tấn cực đã.Thiết kế mạnh mẽ',1,'lenovo-legion-5-15imh05-i7-82au0051vn-210520-040515-600x600.jpg')
-
-
 insert into sanpham values (N'thumb-600x600',3,1,'350.000',N'Đặc điểm nổi bật,Thiết kế hiện đại, gọn nhẹ.Công nghệ Bluetooth 5.0 tương thích nhiều thiết bị.Có khả năng chống nước đạt chuẩn IPX6.
 Có khả năng kết nối 2 loa để phát âm thanh.Dung lượng pin 1800 mAh, nghe nhạc khoảng 4 - 8 giờ, sạc khoảng 4 giờ.Tổng công suất của loa 5W cho âm thanh to rõ.',0,'thumb-600x600.jpg')
 ----
+
 insert into sanpham values (N'Cặp Loa kiểm âm JBL 305P MkII',8,5,'10600000',N'Studio Monitor cung cấp chính xác những công cụ bạn cần để đưa bản mix của bạn lên một tầm cao mới.
- Phiên bản 305P MKII được thừa hưởng tất cả các đặc điểm của dòng loa JBL series 3 gốc',0,'CapLoakiêmâmJBL305PMkII.jpg')
+ Phiên bản 305P MKII được thừa hưởng tất cả các đặc điểm của dòng loa JBL series 3 gốc',0,N'Ghế Cougar Fusion Orange.jpg')
 insert into sanpham values (N'Loa Creative Sound BlasterX Katana',8,6,'6999000',N'Thông số sản phẩm,Công suất thực 75W, công suất cao nhất 150W,Tần số phản hồi 20Hz - 20000Hz, tần số phản hồi của subwoofer là 20Hz - 150Hz
-,Có remote điều khiển từ xa,Kết nối Bluetooth 4.2 (tối đa 2 thiết bị cùng lúc), AUXin 3.5mm, Opticalin, USB FlashDrive',1,'LoaCreativeSoundBlasterXKatana.jpg')
+,Có remote điều khiển từ xa,Kết nối Bluetooth 4.2 (tối đa 2 thiết bị cùng lúc), AUXin 3.5mm, Opticalin, USB FlashDrive',1,N'Loa Creative Sound BlasterX Katana.jpg')
 insert into sanpham values (N'Loa Harman Kardon Soundsticks 4',8,7,'7990000',N'TRẢI NGHIỆM ‘SIÊU PHẨM’ LOA HARMAN KARDON SOUNDSTICKS 4 PHIÊN BẢN NÂNG CẤP XỊN XÒ,Là phiên bản nâng cấp, loa bluetooth Harman Karden SoundSticks 4 được đánh giá rất cao cả về thiết kế
-, tính năng cùng chất lượng âm thanh siêu chân thực và sống động',0,'LoaHarmanKardonSoundsticks4.png')
+, tính năng cùng chất lượng âm thanh siêu chân thực và sống động',0,'Loa Harman Kardon Soundsticks 4.png')
 insert into sanpham values (N'Loa JBL Quantum DUO',8,8,'4999000',N'Thông số sản phẩm,Loa JBL Quantum Duo 2.0,Công nghệ âm thanh JBL QuantumSOUND Signature,Âm bass chắc chắn, mạnh mẽ
-Led RGB tuỳ chỉnh,Có thể kết nối qua giao thức Bluetooth',1,'LoaJBLQuantumDUO.jpg')
+Led RGB tuỳ chỉnh,Có thể kết nối qua giao thức Bluetooth',1,'Loa JBL Quantum DUO.jpg')
 insert into sanpham values (N'Loa không dây Thonet & Vander LAUT BT',8,9,'2549000',N'Công suất cực đại 340W,Giao tiếp : RCA stereo,Tần số đáp ứng: 40Hz - 20kHz,Kết nối bluetooth,Kích thước: SUBWOOFER 205 x 300 x 246 mmSATELLITE: 100 x 160 x 100 mm
-Bảo hành 12 tháng',0,'LoakhôngdâyThonet&VanderLAUTBT.jpg')
+Bảo hành 12 tháng',0,N'Loa không dây Thonet & Vander LAUT BT.jpg')
 insert into sanpham values (N'Loa Kiểm âm JBL One Series 104',8,10,'5200000',N'Loa kiểm âm JBL 104 là sự kết hợp hoàn hảo giữa hiệu suất và tính di động. JBL 104 nhỏ gọn cung cấp âm thanh cân bằng, chính xác bất kỳ nơi đâu bạn cần. Dễ dàng setup, 
-âm trầm và công suất mạnh mẽ vượt trội, điều hiếm thấy ở các loa có kích thước này',1,'LoaKiêmâmJBLOneSeries104.png')
-insert into sanpham values (N'Loa Logitech Z213 2.1',8,10,'490000',N'Tổng watt (RMS): 14W,Loa siêu trầm: 4W,Các loa vệ tinh: 2 x 1,5W,Giắc đầu vào 3,5 mm: 1,Giắc cắm tai nghe: 1,Nút điều khiển: Các nút điều khiển công suất và âm thanh trên bộ điều khiển có dây; điều khiển âm trầm ở đằng sau loa siêu trầm',1,'LoaLogitechZ2132.1.png')
+âm trầm và công suất mạnh mẽ vượt trội, điều hiếm thấy ở các loa có kích thước này',1,N'Loa Kiểm âm JBL One Series 104.png')
+insert into sanpham values (N'Loa Logitech Z213 2.1',8,10,'490000',N'Tổng watt (RMS): 14W,Loa siêu trầm: 4W,Các loa vệ tinh: 2 x 1,5W,Giắc đầu vào 3,5 mm: 1,Giắc cắm tai nghe: 1,Nút điều khiển: Các nút điều khiển công suất và âm thanh trên bộ điều khiển có dây; điều khiển âm trầm ở đằng sau loa siêu trầm',1,'Loa Logitech Z213 2.1.png')
 insert into sanpham values (N'Loa Thonet & Vander VERTRAG BT™',8,10,'4450000',N'- Công suất: 36W RMS (18W x 2).Công suất cực đại: 180W.Tầng số đáp ứng: 60Hz - 20kHz.Kích thước: (WxDxH, inch) 161 x 190 x 240mm, 4".Ngõ vào tín hiệu: Bluetooth 4.0 hoặc jack cắm 3.5mm,RCA
-Điều khiển: Volume, Treble, Bass hoặc Remote.Màu sắc: Đen.',1,'LoaThonet&VanderVERTRAGBT™.jpg')
+Điều khiển: Volume, Treble, Bass hoặc Remote.Màu sắc: Đen.',1,'Loa Thonet & Vander VERTRAG BT™.jpg')
 insert into sanpham values (N'Loa vi tính không dây Logitech Z407 2.1',8,1,'2499000',N'Thông số sản phẩm,Loa siêu trầm và Điều khiển không dây,Kết nối Bluetooth,Tổng công suất: 40W
-,Loa siêu trầm: 20W,Các loa vệ tinh: 2 x 10W',0,'LoavitinhkhôngdâyLogitechZ4072.1.jpg')
+,Loa siêu trầm: 20W,Các loa vệ tinh: 2 x 10W',0,N'Loa vi tính không dây Logitech Z407 2.1jpg')
 insert into sanpham values (N'Loa vi tính không dây Logitech Z407 2.1',8,2,'2499000',N'Thông số sản phẩm,Loa siêu trầm và Điều khiển không dây,Kết nối Bluetooth,Tổng công suất: 40W,Loa siêu trầm: 20W
-Các loa vệ tinh: 2 x 10W',0,'LoavitinhkhôngdâyLogitechZ4072.1.png')
+Các loa vệ tinh: 2 x 10W',0,'Loa vi tính không dây Logitech Z407 2.1.png')
 ----
-insert into sanpham values (N'Màn hình Acer',9,3,'3490000',N'Màn hình ACER EK241Y 24 inch – Công tắc mở ra không gian giải trí,PC luôn mang đến cho người dùng khả năng trải nghiệm tuyệt vời mà không có bất kỳ chiếc laptop nào có thể mang lại',1,'ManhinhAcer.jpg')
+insert into sanpham values (N'Màn hình Acer',9,3,'3490000',N'Màn hình ACER EK241Y 24 inch – Công tắc mở ra không gian giải trí,PC luôn mang đến cho người dùng khả năng trải nghiệm tuyệt vời mà không có bất kỳ chiếc laptop nào có thể mang lại',1,N'Màn hình Acer.jpg')
 insert into sanpham values (N'Màn hình ASUS ProArt PA279CV 27',9,4,'13999000',N'Loại màn hình: Phẳng,Tỉ lệ: 16:9,Kích thước: 27 inch,Tấm nền: IPS,Độ phân giải : 4K (3840x2160 ),Thời gian đáp ứng: 5ms,Độ sáng: 350 cd/㎡
-,Nổi bật: 2W x 2 Stereo RMS 100% sRGB và 100% Rec',0,'ManhinhASUSProArtPA279CV27.jpg')
-insert into sanpham values (N'Màn hình ASUS ProArt',9,5,'5999000',N'Thông số sản phẩm,Kích thước 24.1″.,Tỉ lệ 16:10 WUXGA (1920 x 1200) IPS.,Chuẩn màu 100% sRGB, 100% Rec. 709 wide color gamut.Độ sai màu ΔE < 2.',1,'ManhìnhASUSProArt.jpg')
+,Nổi bật: 2W x 2 Stereo RMS 100% sRGB và 100% Rec',0,N'Màn hình ASUS ProArt PA279CV 27.jpg')
+insert into sanpham values (N'Màn hình ASUS ProArt',9,5,'5999000',N'Thông số sản phẩm,Kích thước 24.1″.,Tỉ lệ 16:10 WUXGA (1920 x 1200) IPS.,Chuẩn màu 100% sRGB, 100% Rec. 709 wide color gamut.Độ sai màu ΔE < 2.',1,N'Màn hình ASUS ProArt.jpg')
 insert into sanpham values (N'Màn hình Asus TUF GAMING',9,6,'5290000',N'Màn hình ASUS TUF Gaming VG249Q1R 24 inch Full HD - Màn hình chơi game cần thiết cho game thủ,
-Những gì game thủ cần ở một chiếc màn hình chơi game nay đã quy tụ lại bên trong sản phẩm màn hình ASUS TUF Gaming VG249Q1R 24 inch Full HD',0,'ManhinhAsusTUFGAMING.jpg')
+Những gì game thủ cần ở một chiếc màn hình chơi game nay đã quy tụ lại bên trong sản phẩm màn hình ASUS TUF Gaming VG249Q1R 24 inch Full HD',0,N'Màn hình Asus TUF GAMING.jpg')
 insert into sanpham values (N'Màn hình ASUS VA24EHE',9,7,'4299000',N'Thông số sản phẩm,Phủ bề mặt chống lóa / phủ cứng 3H,Độ phân giải 1920 x 1080,Tần số quét 75 Hz,Góc nhìn 178° (H) / 178° (V)
-Màu màn hình 16.7 triệu,Độ sáng 250 cd/m2,Độ tương phản 1000:1,Tỉ lệ màn hình 16:9,Thời gian phản ứng 5 ms (GTG),Tấm nền IPS',1,'ManhinhASUSVA24EHE.jpg')
+Màu màn hình 16.7 triệu,Độ sáng 250 cd/m2,Độ tương phản 1000:1,Tỉ lệ màn hình 16:9,Thời gian phản ứng 5 ms (GTG),Tấm nền IPS',1,N'Màn hình ASUS VA24EHE.jpg')
 insert into sanpham values (N'Màn hình ASUS VA24EHE',9,8,'4299000',N'Thông số sản phẩm,Phủ bề mặt chống lóa / phủ cứng 3H,Độ phân giải 1920 x 1080,Tần số quét 75 Hz,Góc nhìn 178° (H) / 178° (V)
-Màu màn hình 16.7 triệu,Độ sáng 250 cd/m2,Độ tương phản 1000:1,Tỉ lệ màn hình 16:9,Thời gian phản ứng 5 ms (GTG),Tấm nền IPS',1,'ManhinhASUSVA24EHE.png')
+Màu màn hình 16.7 triệu,Độ sáng 250 cd/m2,Độ tương phản 1000:1,Tỉ lệ màn hình 16:9,Thời gian phản ứng 5 ms (GTG),Tấm nền IPS',1,N'Màn hình ASUS VA24EHE.png')
 insert into sanpham values (N'Màn hình cong HKC',9,9,'2900000',N'LED | Panel VA | 23.6" | 1920 x 1080 | 16:9| 60hz,Độ sáng: 250 cd/m2 | 3000:1 | 16.7 triệu màu,T/g đáp ứng: 8ms (GTG),Độ rộng dải màu có thể hiển thị (NTSC): 72%
-,Kết nối: VGA|HDMI',1,'ManhinhcongHKC.jpg')
-insert into sanpham values (N'Màn hình cong Philips',9,10,'5850000',N'E Line 27" (68,6 cm) HD đầy đủ (1920 x 1080)Loại màn hình: W-LED Edge slimKích thước: 27inchĐộ phân giải: 1920 x 1080 pixelsĐộ tương phản: 50M:1Kết nối: VGA, DVI-D, MHL-HDMI',0,'ManhinhcongPhilips.jpg')
+,Kết nối: VGA|HDMI',1,N'Màn hình cong HKC.jpg')
+insert into sanpham values (N'Màn hình cong Philips',9,10,'5850000',N'E Line 27" (68,6 cm) HD đầy đủ (1920 x 1080)Loại màn hình: W-LED Edge slimKích thước: 27inchĐộ phân giải: 1920 x 1080 pixelsĐộ tương phản: 50M:1Kết nối: VGA, DVI-D, MHL-HDMI',0,N'Màn hình cong Philips.jpg')
 insert into sanpham values (N'Màn hình cong Samsung',9,10,'5689000',N'Màn hình cong Samsung LC27F397FHEXXV 27 inch - Cho góc nhìn tuyệt hảo,Bạn đã bao giờ thử chơi game hay xem phim với một chiếc màn hình cong chưa? 
-Có thể nói cả chất lượng hình ảnh lẫn góc nhìn đều trở nên tuyệt vời hơn với chiếc màn hình cong này.',0,'ManhinhcongSamsung.jpg')
+Có thể nói cả chất lượng hình ảnh lẫn góc nhìn đều trở nên tuyệt vời hơn với chiếc màn hình cong này.',0,N'Màn hình cong Samsung.jpg')
 insert into sanpham values (N'Màn hình LG 27GL850 UltraGear 27',9,10,'13990000',N'Màn hình LG 27GL850 là màn hình hỗ trợ G-Sync® đã được NVIDIA kiểm định và chứng nhận, giúp giảm hiện tượng xé hình và giật hình, mang đến trải nghiệm chơi game mượt mà hơn và nhanh hơn.
-Với tốc độ phản hồi 1ms trên màn hình Nano IPS, hiện tượng bóng mờ không còn ngăn cản bạn giành chiến thắng',0,'ManhinhLG27GL850UltraGear27.jpg')
-insert into sanpham values (N'Màn hình ViewSonic',9,10,'3390000',N'iewSonic VA2201-H là màn hình máy tính 22 inch Full HD với đầu vào HDMI và VGA đáp ứng tốt nhu cầu làm việc và giải trí của người dùng. Mang đến chất lượng hình ảnh tuyệt đẹp với mức tiêu thụ điện năng thấp',0,'ManhinhViewSonic.jpg')
+Với tốc độ phản hồi 1ms trên màn hình Nano IPS, hiện tượng bóng mờ không còn ngăn cản bạn giành chiến thắng',0,N'Màn hình LG 27GL850 UltraGear 27.jpg')
+insert into sanpham values (N'Màn hình ViewSonic',9,10,'3390000',N'iewSonic VA2201-H là màn hình máy tính 22 inch Full HD với đầu vào HDMI và VGA đáp ứng tốt nhu cầu làm việc và giải trí của người dùng. Mang đến chất lượng hình ảnh tuyệt đẹp với mức tiêu thụ điện năng thấp',0,N'Màn hình ViewSonic.jpg')
 ----
 insert into sanpham values (N'GVN AORUS X',4,1,'3170000',N'Qua thử nghiệm và đánh giá kỹ lưỡng, GEARVN cho ra mắt sản phẩm PC GVN Aorus X dành cho game thủ chuyên nghiệp',1,'GVN AORUS X.jpg')
 insert into sanpham values (N'GVN Avengers Z',4,2,'3170000',N'Thông tin đang được cập nhập',0,'GVNAvengersZ.jpg')
