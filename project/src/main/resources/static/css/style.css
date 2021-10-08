@@ -601,7 +601,7 @@ body {
   /*   padding-right: 5px;
     padding-left: 5px;
      padding-top: 5px; */
-     padding: var(--spaceS);
+     padding: var(--spaceS); 
 }
 
 .product__bottom {
