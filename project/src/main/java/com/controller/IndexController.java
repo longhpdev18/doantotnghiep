@@ -35,7 +35,7 @@ import com.repository.NhanHieuDAO;
 import com.repository.SanPhamDAO;
 
 @Controller
-public class SanPhamController {
+public class IndexController {
 	@Autowired
 	SanPhamDAO dao;
 
