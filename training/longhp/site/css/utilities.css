@@ -26,7 +26,7 @@ button {
 
 :root {
     --primaryColor: #0B71E8;
-    --primaryHover: #0e4482;
+    --primaryHover: #0984e3;
     --redColor: #F03C3D;
     --redHover: #f14c4c;
     --orangeColor: #FF5E02;
@@ -40,7 +40,7 @@ button {
     --yellowColor: #f9ca24;
     --yellowHover: #d4a704;
     --darkColor: #111;
-    --darkHover: #444;
+    --darkHover: rgb(24, 24, 24);
     --space8: .8rem;
     --spaceS: 1.2rem;
     --spaceM: 2.4rem;
