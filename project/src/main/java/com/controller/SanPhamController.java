@@ -53,7 +53,7 @@ public class SanPhamController {
 	public String index(Model model) {
 		List<SanPham> items = dao.findAll();
 		model.addAttribute("items", items);
-		return "phongTest";
+		return "home";
 	}
 
 	@GetMapping("SanPham/{masp}")

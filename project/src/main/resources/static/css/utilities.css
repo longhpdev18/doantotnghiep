@@ -25,6 +25,8 @@ button {
 }
 
 :root {
+	--yellowColor: #f9ca24;
+    --yellowHover: #d4a704;
     --primaryColor: #0B71E8;
     --primaryHover: #0e4482;
     --redColor: #F03C3D;
