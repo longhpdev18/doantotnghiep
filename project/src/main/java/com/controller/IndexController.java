@@ -44,9 +44,14 @@ public class IndexController {
 	public String index(Model model) {
 		List<SanPham> items = dao.findAll();
 		model.addAttribute("items", items);
-		return "home";
+		return "home/index";
 	}
-
+	
+	@RequestMapping("cart/index")
+	public String index() {
+		return "home/cart/index";
+	}
+	
 //	@RequestMapping("/product/page")
 //	public String paginate(Model model) {
 //		Pageable pageable = PageRequest.of(2, 5);
