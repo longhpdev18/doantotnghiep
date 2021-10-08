@@ -7,3 +7,7 @@ $('.btn-close').click(function() {
 $('.btn-cancel').click(function() {
     $('.formLogin__container').removeClass('active');
 })
+
+$('.btn-showUser').click(function() {
+    $('.dropdown-user').toggle('active');
+})
