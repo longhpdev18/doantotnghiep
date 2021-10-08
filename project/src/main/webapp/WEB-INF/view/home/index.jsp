@@ -34,9 +34,8 @@
 
 <body>
 	<div class="container">
-		<jsp:include page="./header.jsp"></jsp:include>
-		<jsp:include page="./menu.jsp"></jsp:include>
-		<jsp:include page="${page} "></jsp:include>
+		<jsp:include page="${menu}"></jsp:include>
+		<jsp:include page="${page}"></jsp:include>
 		<div class="products">
 			<ul class="products__container">
 				<div class="products__heading">

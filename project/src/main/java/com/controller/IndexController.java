@@ -44,7 +44,8 @@ public class IndexController {
 	public String index(Model model) {
 		List<SanPham> items = dao.findAll();
 		model.addAttribute("items", items);
-		model.addAttribute("page", "/ads.jsp");
+		model.addAttribute("page","./ads.jsp");
+		model.addAttribute("menu","./menuLogin.jsp");
 		return "home/index";
 	}
 	
