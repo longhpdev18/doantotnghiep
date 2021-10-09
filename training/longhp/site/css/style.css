@@ -193,7 +193,9 @@ body {
     cursor: pointer;
 }
 
-
+.menu__left{
+    width: 20%;
+}
 /* +++++++ MENUDROPDOWN CONTAINER +++++++ */
 .menu__container {
     width: 100%;
