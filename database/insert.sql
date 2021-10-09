@@ -51,7 +51,7 @@ insert into sanpham values (N'Chuột Asus Cerberus',6,2,'499000',N'Chuột chơ
 Điều khiển DPI linh hoạt - Bốn nấc DPI tùy chỉnh được với một đèn LED chỉ báo màu sắc
 Thiết kế hai tay thời trang - Được thiết kế cho cả các game thủ thuận tay trái và thuận tay phải',1,N'Chuột AsusCerberus.png')
 insert into sanpham values (N'Chuột Logitech G102 Lightsync RGB Black',6,3,'699.000',N'Thông số sản phẩm,mouse Logitech G102 Lightsync RGB Black,phiên bản nâng cấp của chuột chơi game "quốc dân" G102 Prodigy
-,độ phân giải : 8000 DPI,led RGB 16.8 triệu màu với tính năng Lightsync đồng bộ led của Logitech',0,N'Chuột Logitech G102 Lightsync RGB Black.jpg')
+,độ phân giải : 8000 DPI,led RGB 16.8 triệu màu với tính năng Lightsync đồng bộ led của Logitech',0,N'Chuột LogitechG102LightsyncRGBBlack.jpg')
 insert into sanpham values (N'Chuột Logitech G102 Lightsync RGB White',6,4,'599.000',N'Chuột Logitech G102 Gen2 LightSync White,Bộ xử lý ARM 32 bit bên trong,DPI từ 200 - 8000,Thiết kế đối xứng cơ bản
 ,LED RGB 16.8 triệu màu đồng bộ LightSync,Bảo hành: 24 Tháng',1,N'Chuột LogitechG102LightsyncRGBWhite.jpg')
 insert into sanpham values (N'Chuột Razer Deathadder Essential',6,7,'1249000',N'Chuột Razer DeathAdder Essential tHÔNG SỐ KỸ THUẬT:
