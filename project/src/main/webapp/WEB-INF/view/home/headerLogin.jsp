@@ -38,7 +38,7 @@
         <div class="header">
             <div class="header__container">
                 <div class="header__brand">
-                    <a href="./" class="header__brand--logo">
+                    <a href="./index" class="header__brand--logo">
                         <img src="./images/logo.png" alt="" class="header__brand--image" />
                     </a>
                 </div>
@@ -79,7 +79,7 @@
                             </ul>
                         </button>
 
-                        <a href="./modules/cart/" class="btn btn-primary rounded cta-link cta-cart cta-white"><i
+                        <a href="cart/index" class="btn btn-primary rounded cta-link cta-cart cta-white"><i
                                 class="fas fa-shopping-cart"></i></a>
 
                     </div>
