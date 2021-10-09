@@ -8,6 +8,7 @@
 			</div>
 		</div>
 
+<<<<<<< HEAD
 		<div class="form-group">
 			<label for="username"> Tên tài khoản: </label> <input type="text"
 				name="username" id="username" class="txtUsername"
@@ -52,6 +53,51 @@
 				</button>
 			</div>
 		</div>
+=======
+                <div class="form-group">
+                    <label for="username">
+                        Tên tài khoản:
+                    </label>
+                    <input type="text" name="username" id="username" class="txtUsername" placeholder="Tài khoản"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="password">
+                        Mật khẩu:
+                    </label>
+                    <input type="password" name="password" id="password" class="txtPassword" placeholder="Mật khẩu"
+                        required>
+                </div>
+                <div class="chk-remember">
+                    <input type="checkbox" name="chkremember" id="chkremember" class="chkRemember">
+                    <p>Ghi nhớ tài khoản</p>
+                </div>
+                <div class="group-button">
+                    <button class="btn btn-primary btn-login rounded-8">Đăng nhập</button>
+                    <button class="btn btn-light btn-cancel rounded-8">Hủy</button>
+                </div>
+                <div class="hr"></div>
+                <div class="toRegister">
+                    <p> Bạn chưa có tài khoản?</p> <a href="#" class="cta-link text-primary text-primary-hover">Đăng
+                        ký</a>
+                </div>
+            </form>
+        </div>
+        <div class="header">
+            <div class="header__container">
+                <div class="header__brand">
+                    <a href="/index" class="header__brand--logo">
+                        <img src="./images/logo.png" alt="" class="header__brand--image" />
+                    </a>
+                </div>
+                <div class="header__searchbox">
+                    <div class="searchbox">
+                        <input type="text" class="header__searchbox--input" placeholder="Tìm kiếm..." />
+                        <button class="header__searchbox--button btn-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
 
 		<div class="header__right">
 			<div class="header__right--container">
@@ -81,6 +127,9 @@
 				<a href="./modules/cart/"
 					class="btn btn-primary rounded cta-link cta-cart cta-white"><i
 					class="fas fa-shopping-cart"></i></a>
+=======
+                        <a href="cart/index" class="btn btn-primary rounded cta-link cta-cart cta-white"><i
+                                class="fas fa-shopping-cart"></i></a>
 
 			</div>
 		</div>
