@@ -1,13 +1,17 @@
-$('.btn-showLogin').click(function() {
+$('.btn-showLogin').click(function () {
     $('.formLogin__container').addClass('active');
 })
-$('.btn-close').click(function() {
+$('.btn-close').click(function () {
     $('.formLogin__container').removeClass('active');
 })
-$('.btn-cancel').click(function() {
+$('.btn-cancel').click(function () {
     $('.formLogin__container').removeClass('active');
 })
 
-$('.btn-showUser').click(function() {
-    $('.dropdown-user').toggle('active');
+$('.btn-showUser').click(function () {
+    $('.dropdown-user').toggleClass('active');
+})
+
+$('.btn-cat').click(function () {
+    $('.menu__container').toggleClass('active');
 })
