@@ -12,6 +12,8 @@ $('.btn-showUser').click(function () {
     $('.dropdown-user').toggleClass('active');
 })
 
-$('.btn-cat').click(function () {
-    $('.menu__container').toggleClass('active');
-})
+
+
+
+
+
