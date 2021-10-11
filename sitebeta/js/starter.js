@@ -44,3 +44,22 @@ window.addEventListener("load", function () {
     }
 
 })
+
+window.addEventListener("scroll", function () {
+    var pageScrollY = window.scrollY;
+    var btnCat = document.querySelector(".btn-cat");
+    console.log(pageScrollY);
+
+    if (pageScrollY >= 500) {
+        $('.btn-cat').mouseover(function () {
+            $('.dropmenu').removeClass('hidden');
+        })
+        $('.btn-cat').mouseout(function () {
+            $('.dropmenu').addClass('hidden');
+        })
+    } else {
+        $('.btn-cat').hover(function () {
+            $('.dropmenu').addClass('hidden');
+        })
+    }
+});
