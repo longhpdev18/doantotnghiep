@@ -1,0 +1,27 @@
+html {
+    font-size: 62.5%;
+}
+:root {
+    --primaryColor: #0B71E8;
+    --primaryHover: #0984e3;
+    --redColor: #F03C3D;
+    --redHover: #f14c4c;
+    --orangeColor: #FF5E02;
+    --orangeHover: #fa6b19;
+    --greenColor: #19C796;
+    --greenHover: #2ddaa9;
+    --whiteColor: #fff;
+    --whiteHover: #d8d9da;
+    --lightColor: #f1f2f6;
+    --lightHover: #d8d9da;
+    --text-grey :#8390A2;
+    --yellowColor: #f9ca24;
+    --yellowHover: #d4a704;
+    --darkColor: #111;
+    --darkHover: rgb(24, 24, 24);
+    --space8: .8rem;
+    --spaceS: 1.2rem;
+    --spaceM: 2.4rem;
+}
+
+
