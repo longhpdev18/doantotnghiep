@@ -1224,6 +1224,36 @@ body {
 	margin-bottom: var(--spaceS);
 }
 
+
+.group-rdo-gender {
+	display: flex;
+	flex-direction: row;
+
+}
+
+.rdo-gender {
+	align-items: center;
+	display: flex;
+}
+
+.rdo-gender input {
+	width: 1.6rem;
+	height: 1.6rem;
+	margin-right: .4rem;
+}
+
+.rdo-male {
+	align-items: center;
+	display: flex;
+	margin-right: var(--spaceS);
+}
+
+.rdo-female {
+	align-items: center;
+	display: flex;
+	margin-right: var(--spaceS);
+}
+
 .form-group label {
 	width: 100%;
 	height: 2.5rem;
