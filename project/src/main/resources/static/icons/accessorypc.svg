@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<rect x="10" y="10" fill="#7CB342" width="80" height="80"/>
+<rect x="16.666" y="16.667" fill="#F1F7E9" width="66.667" height="66.667"/>
+<polygon fill="#DBEBC7" points="20.666,79.334 20.666,16.667 16.666,16.667 16.666,83.334 83.333,83.334 83.333,79.334 "/>
+<path fill="#FFC00E" d="M49.999,43.333c0,3.665-3.001,6.667-6.667,6.667H29.999c-3.666,0-6.667-3.002-6.667-6.667V29.999
+	c0-3.665,3-6.666,6.667-6.666h13.333c3.666,0,6.667,3.001,6.667,6.666V43.333z"/>
+<rect x="23.333" y="70" fill="#2CABE1" width="26.666" height="6.667"/>
+<rect x="36.665" y="56.667" fill="#455A64" width="13.333" height="6.667"/>
+<rect x="23.333" y="70" fill="#0077BD" width="4" height="6.667"/>
+<rect x="36.665" y="56.667" fill="#263238" width="4" height="6.667"/>
+<rect x="70" y="23.333" fill="#455A64" width="6.666" height="40.001"/>
+<rect x="56.667" y="23.333" fill="#455A64" width="6.666" height="40.001"/>
+<rect x="70" y="59.334" fill="#263238" width="6.666" height="4"/>
+<rect x="56.667" y="59.334" fill="#263238" width="6.666" height="4"/>
+<rect x="70" y="70" fill="#E53A34" width="6.666" height="6.667"/>
+<rect x="56.667" y="70" fill="#E53A34" width="6.666" height="6.667"/>
+<rect x="56.667" y="70" fill="#B62025" width="3.2" height="6.667"/>
+<rect x="70" y="70" fill="#B62025" width="3.2" height="6.667"/>
+<rect x="29.999" y="29.999" fill="#FFF8E1" width="13.333" height="13.334"/>
+<polygon fill="#FFEBB2" points="33.999,39.333 33.999,29.999 29.999,29.999 29.999,43.333 43.332,43.333 43.332,39.333 "/>
+<path fill="#455A64" d="M29.999,60.002c0,1.834-1.49,3.332-3.334,3.332c-1.842,0-3.333-1.498-3.333-3.332
+	c0-1.844,1.491-3.335,3.333-3.335C28.509,56.667,29.999,58.158,29.999,60.002z"/>
+</svg>

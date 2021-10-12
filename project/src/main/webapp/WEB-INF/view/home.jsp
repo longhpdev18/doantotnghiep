@@ -1,1128 +1,495 @@
-<%@ page pageEncoding="utf-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Document</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
 
-<!-- STYLE CSS -->
-<link rel="stylesheet" href="./css/style.css" />
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="./css/style.css" />
 
-<!-- UTILITIES CSS -->
-<link rel="stylesheet" href="./css/utilities.css" />
+	<!-- UTILITIES CSS -->
+	<link rel="stylesheet" href="./css/utilities.css" />
 
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Index</title>
-<link rel="stylesheet" href="./css/style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Index </title>
+	<link rel="stylesheet" href="./css/style.css">
 
-<!-- FONT ANWESOME -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
-<!-- JQUERY -->
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- FONT ANWESOME -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+
+	<!-- FLAT-ICON -->
+	<link rel=”stylesheet”
+		href=”https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css” />
+
+	<!-- JQUERY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
 	<div class="container">
-		<div class="formLogin__container ">
+
+		<!-- ======= LOGIN =======-->
+		<div class="formLogin__container blur-dark">
 			<form action="" class="fLogin">
 				<div class="form-heading">
 					<h1 class="form-title">Đăng nhập</h1>
 					<div class="btn btn-close bg-red-hover">
-						<i class="fas fa-times"></i>
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label for="username"> Tên tài khoản: </label> <input type="text"
-						name="username" id="username" class="txtUsername"
-						placeholder="Tài khoản" required>
+						<i class="fas fa-times"></i></div>
 				</div>
 				<div class="form-group">
-					<label for="password"> Mật khẩu: </label> <input type="password"
-						name="password" id="password" class="txtPassword"
-						placeholder="Mật khẩu" required>
+					<label for="username">
+						Tên tài khoản:
+					</label>
+					<input type="text" name="username" id="username" class="txtUsername" placeholder="Tài khoản"
+						required>
+				</div>
+				<div class="form-group">
+					<label for="password">
+						Mật khẩu:
+					</label>
+					<input type="password" name="password" id="password" class="txtPassword" placeholder="Mật khẩu"
+						required>
 				</div>
 				<div class="chk-remember">
-					<input type="checkbox" name="chkremember" id="chkremember"
-						class="chkRemember">
+					<input type="checkbox" name="chkremember" id="chkremember" class="chkRemember">
 					<p>Ghi nhớ tài khoản</p>
 				</div>
 				<div class="group-button">
-					<button class="btn btn-primary btn-login rounded-8">Đăng
-						nhập</button>
+					<button class="btn btn-primary btn-login rounded-8">Đăng nhập</button>
 					<button class="btn btn-light btn-cancel rounded-8">Hủy</button>
 				</div>
 				<div class="hr"></div>
 				<div class="toRegister">
-					<p>Bạn chưa có tài khoản?</p>
-					<a href="#" class="cta-link text-primary text-primary-hover">Đăng
+					<p> Bạn chưa có tài khoản?</p> <a href="#"
+						class="cta-link btn-toRegister text-primary text-primary-hover">Đăng
 						ký</a>
 				</div>
 			</form>
 		</div>
+
+		<!-- ======= REGISTER =======-->
+		<div class="formRegister__container blur-dark">
+			<form action="" class="fRegister">
+				<div class="form-heading">
+					<h1 class="form-title">Đăng ký</h1>
+					<div class="btn btn-close bg-red-hover">
+						<i class="fas fa-times"></i></div>
+				</div>
+				<h2 class="heading-title">Thông tin tài khoản</h2>
+				<div class="form-group">
+					<label for="username">
+						Tên tài khoản:
+					</label>
+					<input type="text" name="username" id="username" class="txtUsername" placeholder="Tên tài khoản"
+						required>
+				</div>
+				<div class="form-group">
+					<label for="password">
+						Mật khẩu:
+					</label>
+					<input type="password" name="password" id="password" class="txtPassword" placeholder="Mật khẩu"
+						required>
+				</div>
+				<div class="form-group">
+					<label for="repassword">
+						Xác nhận mật khẩu:
+					</label>
+					<input type="password" name="repassword" id="repassword" class="txtRePassword"
+						placeholder="Xác nhận mật khẩu" required>
+				</div>
+				<div class="hr"></div>
+				<h2 class="heading-title">Thông tin người dùng</h2>
+				<div class="form-group">
+					<label for="fullname">
+						Họ và tên:
+					</label>
+					<input type="text" name="fullname" id="fullname" class="txtFullname" placeholder="Họ và tên"
+						required>
+				</div>
+				<div class="form-group">
+					<label for="email">
+						Xác nhận mật khẩu:
+					</label>
+					<input type="email" name="email" id="email" class="txtEmail" placeholder="Email" required>
+				</div>
+				<div class="group-button">
+					<button class="btn btn-primary btn-register rounded-8">Đăng ký</button>
+					<button class="btn btn-light btn-cancel rounded-8">Hủy</button>
+				</div>
+				<div class="hr"></div>
+				<div class="toLogin">
+					<p>Bạn đã có tài khoản?</p> <a href="#"
+						class="cta-link btn-toLogin text-primary text-primary-hover">Đăng
+						nhập ngay</a>
+				</div>
+			</form>
+		</div>
+
 		<div class="header">
 			<div class="header__container">
 				<div class="header__brand">
-					<a href="./" class="header__brand--logo"> <img
-						src="./images/logo.png" alt="" class="header__brand--image" />
+					<a href="./" class="header__brand--logo">
+						<img src="./images/logo.png" alt="" class="header__brand--image" />
 					</a>
 				</div>
 				<div class="header__searchbox">
 					<div class="searchbox">
-						<input type="text" class="header__searchbox--input"
-							placeholder="Tìm kiếm..." />
+						<input type="text" class="header__searchbox--input" placeholder="Tìm kiếm..." />
 						<button class="header__searchbox--button btn-primary">
 							<i class="fas fa-search"></i>
 						</button>
 					</div>
 				</div>
+
+				<!-- HEADER RIGHT ĐÃ LOGIN // Mở comment ra là được-->
+
+				<!-- <div class="header__right">
+                    <div class="header__right--container">
+                        <button href="#" class="btn btn-primary rounded btn btn-showUser">
+                            <p class="user-fullname">Hoàng Phi Long</p>
+                            <i class="fas fa-angle-down"></i>
+                            <ul class="dropdown-user">
+                                <li class="dropdown-user-item">
+                                    <a href="#" class="cta-link text-dark cta-user-item">
+                                        <i class="fas fa-user-alt"></i>
+                                        <p class="user-item-text">Thông tin tài khoản</p>
+                                    </a>
+                                </li>
+                                <li class="dropdown-user-item">
+                                    <a href="#" class="cta-link text-dark cta-user-item">
+                                        <i class="fas fa-list-ul"></i>
+                                        <p class="user-item-text">Đơn đặt hàng</p>
+                                    </a>
+                                </li>
+                                <div class="hr"></div>
+                                <li class="dropdown-user-item">
+                                    <a href="/logout.html" class="cta-link text-dark cta-user-item">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        <p class="user-item-text">Đăng xuất</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </button>
+
+                        <a href="./modules/cart/" class="btn btn-primary rounded cta-link cta-cart cta-white">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div> -->
+
+				<!-- HEADER RIGHT CHƯA LOGIN // Mở comment ra là được-->
 				<div class="header__right">
 					<div class="header__right--container">
-						<button href="#"
-							class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
+						<button href="#" class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
 							nhập</button>
-
-						<a href="./modules/cart/index.html"
-							class="btn btn-primary rounded cta-link cta-cart cta-white"><i
-							class="fas fa-shopping-cart"></i></a>
-
+						<a href="./modules/cart/" class="btn btn-primary rounded cta-link cta-cart cta-white"><i
+								class="fas fa-shopping-cart"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="hero__top">
-			<div class="hero__top--container">
-				<div class="hero__top--left rounded">
-					<li class="cat__title">Danh mục sản phẩm</li>
+		<div class="header__bottom">
+			<div class="header__bottom--container">
+				<div class="header__bottom--left rounded">
+					<li class="cat__title bg-primary btn-cat">Danh mục sản phẩm
+						<div class="dropmenu hidden">
+							<ul class="dropmenu__container">
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/laptop.svg" alt="">
+										</div>
+										<p>Laptop</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/desktop.svg" alt="">
+										</div>
+										<p>PC BestGear</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/apple.svg" alt="">
+										</div>
+										<p>Apple</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/pc.svg" alt="">
+										</div>
+										<p>PC Văn Phòng</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/pcacessory.svg" alt="">
+										</div>
+										<p>Linh Kiện</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/monitor.svg" alt="">
+										</div>
+										<p>Màn hình</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/keyboard.svg" alt="">
+										</div>
+										<p>Bàn phim</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/mouse.svg" alt="">
+										</div>
+										<p>Chuột + Lót chuột</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/headphone.svg" alt="">
+										</div>
+										<p>Tai nghe & Loa</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/chair.svg" alt="">
+										</div>
+										<p>Ghế Gaming</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/print.svg" alt="">
+										</div>
+										<p>Thiết bị văn phòng</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/internet.svg" alt="">
+										</div>
+										<p>Thiết bị mạng</p>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link cta-link">
+										<div class="menu-icon">
+											<img src="./icons/accessorypc.svg" alt="">
+										</div>
+										<p>Phụ Kiện</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
 				</div>
-				<div class="hero__top--right rounded">
+				<div class="header__bottom--right rounded">
 					<ul class="stkbn__container">
-						<li class="stkbn-item"><a href="#" class="cta-link cta-stk">
-								<i class="far fa-money-bill-alt"></i> Hướng dẫn thanh toán
-						</a></li>
-						<li class="stkbn-item"><a href="#" class="cta-link cta-stk">
-								<i class="fas fa-money-check-alt"></i> Hướng dẫn trả góp
-						</a></li>
-						<li class="stkbn-item"><a href="#" class="cta-link cta-stk">
-								<i class="fas fa-tools"></i> Chính sách bảo hành
-						</a></li>
-						<li class="stkbn-item"><a href="#" class="cta-link cta-stk">
-								<i class="fas fa-truck"></i> Chính sách vận chuyển
-						</a></li>
-						<li class="stkbn-item"><a href="#" class="cta-link cta-stk">
-								<i class="fas fa-user-clock"></i> Tuyển dụng
-						</a></li>
+						<li class="stkbn-item">
+							<a href="#" class="cta-link cta-stk">
+								<i class="far fa-money-bill-alt"></i>
+								Hướng dẫn thanh toán
+							</a>
+						</li>
+						<li class="stkbn-item">
+							<a href="#" class="cta-link cta-stk">
+								<i class="fas fa-money-check-alt"></i>
+								Hướng dẫn trả góp
+							</a>
+						</li>
+						<li class="stkbn-item">
+							<a href="#" class="cta-link cta-stk">
+								<i class="fas fa-tools"></i>
+								Chính sách bảo hành
+							</a>
+						</li>
+						<li class="stkbn-item">
+							<a href="#" class="cta-link cta-stk">
+								<i class="fas fa-truck"></i>
+								Chính sách vận chuyển
+							</a>
+						</li>
+						<li class="stkbn-item">
+							<a href="#" class="cta-link cta-stk">
+								<i class="fas fa-user-clock"></i>
+								Tuyển dụng
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="hero">
 			<div class="hero__container">
-				<div class="hero__bottom">
-					<div class="hero__left">
-						<ul class="menu__left">
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-laptop"></i> Laptop
+				<div class="hero__left">
+					<ul class="menu__container">
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/laptop.svg" alt="">
+								</div>
+								<p>Laptop</p>
 							</a>
-								<ul class="submenu submenu-laptop">
-									<div class="submenu__container">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop theo giá</h4> <a href="#"
-											class="cta-link cta-brand__item">Dưới 10 triệu</a> <a
-											href="#" class="cta-link cta-brand__item">Từ 10 đến 15
-												triệu</a> <a href="#" class="cta-link cta-brand__item">Từ 15
-												đến 30 triệu</a> <a href="#" class="cta-link cta-brand__item">Trên
-												30 triệu</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">Dưới 10
-												triệu</a> <a href="#" class="cta-link cta-brand__item">Từ 10
-												đến 15 triệu</a> <a href="#" class="cta-link cta-brand__item">Từ
-												15 đến 30 triệu</a> <a href="#" class="cta-link cta-brand__item">Trên
-												30 triệu</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"><i
-									class="fas fa-desktop"></i> PC BestGear </a>
-								<ul class="submenu submenu-pcbest">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fab fa-apple"></i> Apple
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/desktop.svg" alt="">
+								</div>
+								<p>PC BestGear</p>
 							</a>
-								<ul class="submenu submenu-apple">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop theo giá</h4> <a href="#"
-											class="cta-link cta-brand__item">Dưới 10 triệu</a> <a
-											href="#" class="cta-link cta-brand__item">Từ 10 đến 15
-												triệu</a> <a href="#" class="cta-link cta-brand__item">Từ 15
-												đến 30 triệu</a> <a href="#" class="cta-link cta-brand__item">Trên
-												30 triệu</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">Dưới 10
-												triệu</a> <a href="#" class="cta-link cta-brand__item">Từ 10
-												đến 15 triệu</a> <a href="#" class="cta-link cta-brand__item">Từ
-												15 đến 30 triệu</a> <a href="#" class="cta-link cta-brand__item">Trên
-												30 triệu</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-desktop"></i> PC Văn Phòng
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/apple.svg" alt="">
+								</div>
+								<p>Apple</p>
 							</a>
-								<ul class="submenu submenu-pc">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-microchip"></i> Linh kiện PC
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/pc.svg" alt="">
+								</div>
+								<p>PC Văn Phòng</p>
 							</a>
-								<ul class="submenu submenu-pcaccessory">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-tv"></i> Màn hình
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/pcacessory.svg" alt="">
+								</div>
+								<p>Linh Kiện</p>
 							</a>
-								<ul class="submenu submenu-monitor">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="far fa-keyboard"></i> Bàn phím
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/monitor.svg" alt="">
+								</div>
+								<p>Màn hình</p>
 							</a>
-								<ul class="submenu submenu-keyboard">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-mouse"></i> Chuột & Lót chuột
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/keyboard.svg" alt="">
+								</div>
+								<p>Bàn phim</p>
 							</a>
-								<ul class="submenu submenu-mouse">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-headphones-alt"></i> Tai nghe Gaming
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/mouse.svg" alt="">
+								</div>
+								<p>Chuột + Lót chuột</p>
 							</a>
-								<ul class="submenu submenu-headgame">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-chair"></i> Ghế Gaming
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/headphone.svg" alt="">
+								</div>
+								<p>Tai nghe & Loa</p>
 							</a>
-								<ul class="submenu submenu-chair">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-volume-up"></i> Loa & Tai nghe
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/chair.svg" alt="">
+								</div>
+								<p>Ghế Gaming</p>
 							</a>
-								<ul class="submenu submenu-speaker">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-print"></i> Thiết bị văn phòng
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/print.svg" alt="">
+								</div>
+								<p>Thiết bị văn phòng</p>
 							</a>
-								<ul class="submenu submenu-offaccessory">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-server"></i> Thiết bị mạng
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/internet.svg" alt="">
+								</div>
+								<p>Thiết bị mạng</p>
 							</a>
-								<ul class="submenu submenu-network">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fab fa-usb"></i> Phụ kiện
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link cta-link">
+								<div class="menu-icon">
+									<img src="./icons/accessorypc.svg" alt="">
+								</div>
+								<p>Phụ Kiện</p>
 							</a>
-								<ul class="submenu submenu-accessory">
-									<div class="submenu__container  ">
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming</h4> <a href="#"
-											class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop học tập & làm việc</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo giá</h4> <a
-											href="#" class="cta-link cta-brand__item">MSI</a> <a href="#"
-											class="cta-link cta-brand__item">Dell</a> <a href="#"
-											class="cta-link cta-brand__item">Acer</a> <a href="#"
-											class="cta-link cta-brand__item">Asus</a> <a href="#"
-											class="cta-link cta-brand__item">Lenovo</a> <a href="#"
-											class="cta-link cta-brand__item">Gigabyte</a> <a href="#"
-											class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-										<li class="submenu-item">
-											<h4 class="submenu-title">Laptop Gaming theo thương hiệu</h4>
-											<a href="#" class="cta-link cta-brand__item">MSI</a> <a
-											href="#" class="cta-link cta-brand__item">Dell</a> <a
-											href="#" class="cta-link cta-brand__item">Acer</a> <a
-											href="#" class="cta-link cta-brand__item">Asus</a> <a
-											href="#" class="cta-link cta-brand__item">Lenovo</a> <a
-											href="#" class="cta-link cta-brand__item">Gigabyte</a> <a
-											href="#" class="cta-link cta-brand__item">HP</a>
-										</li>
-									</div>
-								</ul></li>
-						</ul>
-					</div>
-					<div class="hero__right">
-						<div class="hero--right__top">
-							<ul class="hero__slide">
-								<li class="hero__slide-item"><a href="#"
-									class="cta-link cta-slide"> <img
-										src="https://i.vietgiaitri.com/2020/2/9/minh-da-tau-man-hinh-roi-cho-laptop-de-choi-game-dung-bai-hon-3ec28d.png"
-										alt="" class="slide--image" />
-								</a></li>
-							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="hero__right">
+					<div class="slider">
+						<div class="slider-prev">
+							<i class="fas fa-chevron-left"></i>
 						</div>
-						<div class="hero--right__bottom">
-							<ul class="hero__ads">
-								<li class="hero__ads-item"><a href="#"
-									class="cta-link cta-ads"> <img
-										src="http://www.myboss.vn/images/Upload/images/manhinh-razer.jpg"
-										alt="" class="ads--image">
-								</a></li>
-								<li class="hero__ads-item"><a href="#"
-									class="cta-link cta-ads"> <img
-										src="https://minhancomputer.com/media/lib/14-01-2021/razer.jpg"
-										alt="" class="ads--image">
-								</a></li>
-								<li class="hero__ads-item"><a href="#"
-									class="cta-link cta-ads"> <img
-										src="https://cdn.tgdd.vn/Files/2019/10/26/1212545/chon-mua-laptop-choi-game-nen-mua-hang-nao-cau-hinh-bao-nhieu-la-du-10.jpg"
-										alt="" class="ads--image">
-								</a></li>
-							</ul>
+						<div class="slider__wrapper">
+							<div class="slider__main">
+								<div class="slider-item">
+									<img src="http://bizweb.dktcdn.net/100/052/150/files/thu-mua-laptop-razer-cu-gia-cao1.jpg?v=1569842975244"
+										alt="" class="slider-image">
+								</div>
+								<div class="slider-item">
+									<img src="https://i0.wp.com/laptopmedia.com/wp-content/uploads/2018/05/razer-blade-15-gallery12-gaming-laptop.jpg"
+										alt="" class="slider-image">
+								</div>
+								<div class="slider-item">
+									<img src="https://nguyencongpc.vn/photos/20/B%C3%A0n%20ph%C3%ADm%20c%C6%A1%20Razer%20Huntsman%20Elite/B%C3%A0n%20ph%C3%ADm%20c%C6%A1%20Razer%20Huntsman%20Elite%203.jpg"
+										alt="" class="slider-image">
+								</div>
+								<div class="slider-item">
+									<img src="https://mega.com.vn/media/product/2164_ban_phim_co_razer_blackwidow_elite_green_switch_2.jpg"
+										alt="" class="slider-image">
+								</div>
+								<div class="slider-item">
+									<img src="https://file.hstatic.net/1000129940/file/tai-nghe-razer-blac-shark-v2-x-nd-1_56a0a929d5594a5c8ff983fb9c32fb4b.jpg"
+										alt="" class="slider-image">
+								</div>
+							</div>
+						</div>
+						<div class="slider-next">
+							<i class="fas fa-chevron-right"></i>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="adsbn">
-			<ul class="adsbn__container">
-				<li class="adsbn-item"><a href="#" class="cta-link cta-adsbn">
-						<img
-						src="https://cdn.tgdd.vn/hoi-dap/1291419/10-tieu-chi-can-quan-tam-khi-chon-mua-man-hinh-may-tinh-pc-7-1.jpg"
-						alt="" class="adsbn--images">
-				</a></li>
-				<li class="adsbn-item"><a href="#" class="cta-link cta-adsbn">
-						<img
-						src="https://cdn.tgdd.vn/hoi-dap/1291419/10-tieu-chi-can-quan-tam-khi-chon-mua-man-hinh-may-tinh-pc-7-1.jpg"
-						alt="" class="adsbn--images">
-				</a></li>
-				<li class="adsbn-item"><a href="#" class="cta-link cta-adsbn">
-						<img
-						src="https://cdn.tgdd.vn/hoi-dap/1291419/10-tieu-chi-can-quan-tam-khi-chon-mua-man-hinh-may-tinh-pc-7-1.jpg"
-						alt="" class="adsbn--images">
-				</a></li>
-				<li class="adsbn-item"><a href="#" class="cta-link cta-adsbn">
-						<img
-						src="https://cdn.tgdd.vn/hoi-dap/1291419/10-tieu-chi-can-quan-tam-khi-chon-mua-man-hinh-may-tinh-pc-7-1.jpg"
-						alt="" class="adsbn--images">
-				</a></li>
-			</ul>
 		</div>
 		<div class="products">
 			<ul class="products__container">
