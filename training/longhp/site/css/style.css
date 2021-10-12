@@ -203,7 +203,6 @@ body {
 	top: 100%;
 	z-index: 100;
 	border-radius: var(--spaceS);
-	box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
 }
 
 .dropmenu.hidden {
@@ -216,6 +215,7 @@ body {
 	border-radius: var(--spaceS);
 	padding: var(--spaceS);
 	margin-top: var(--spaceS);
+	box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
 }
 
 .menu__container {
@@ -958,6 +958,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: absolute;
+	z-index: 9999;
+	display: none;
 }
 
 .fLogin {
@@ -1026,12 +1029,6 @@ body {
 	font-size: 1.5rem;
 }
 
-.formLogin__container {
-	position: absolute;
-	z-index: 9999;
-	opacity: 0;
-	display: none;
-}
 
 .formLogin__container.active {
 	display: flex;
@@ -1071,9 +1068,9 @@ body {
 }
 
 .btn-close {
-	padding: 0;
-	height: 4.2rem;
-	width: 4.2rem;
+	padding: 0 !important;
+	height: 4.2rem !important;
+	width: 4.2rem !important;
 	background-color: var(--lightColor);
 	border-radius: 100%;
 	display: flex;
@@ -1181,3 +1178,147 @@ body {
 }
 
 .user-item-text {}
+
+/* ===== REGISTER ===== */
+.formRegister__container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 9999;
+	display: none;
+}
+
+.formRegister__container.active {
+	display: flex;
+	justify-content: center;
+	opacity: 1;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+.fRegister {
+	width: 55rem;
+	padding: var(--spaceM);
+	display: flex;
+	flex-direction: column;
+	background-color: var(--whiteColor);
+	border-radius: var(--spaceS);
+}
+
+.form-title {
+	font-size: 3rem;
+	text-align: center;
+	flex: 1;
+	margin-bottom: var(--spaceM);
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.6rem;
+	margin-bottom: var(--spaceS);
+}
+
+.form-group label {
+	width: 100%;
+	height: 2.5rem;
+}
+
+.form-group .txtUsername,
+.form-group .txtPassword,
+.form-group .txtRePassword,
+.form-group .txtFullname,
+.form-group .txtEmail {
+	background-color: var(--lightColor);
+	height: 4.8rem;
+	padding: var(--spaceS);
+	font-size: 1.6rem;
+	border-radius: var(--space8);
+}
+
+.heading-title {
+	font-size: 1.8rem;
+	font-weight: 600;
+	margin-top: var(--spaceS);
+	margin-bottom: var(--space8);
+}
+
+.heading-title:first-child {
+	margin-top: 0;
+}
+
+.group-button {
+	width: auto;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: var(--spaceS);
+}
+
+.chk-remember {
+	font-size: 1.5rem;
+	display: flex;
+	height: 2.5rem;
+	align-items: center;
+}
+
+.chkRemember {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.chk-remember p {
+	margin-left: var(--space8);
+}
+
+.btn-register,
+.btn-cancel {
+	height: 100%;
+	font-size: 1.5rem;
+}
+
+.toLogin {
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.4rem;
+}
+
+.hr {
+	width: 100%;
+	height: 0.1rem;
+	background-color: var(--primaryColor);
+	opacity: 0.2;
+	margin: 0.4rem 0;
+}
+
+.toLogin a {
+	margin-left: var(--space8);
+}
+
+.form-heading {
+	width: 100%;
+	height: 7.5rem;
+	display: flex;
+}
+
+.btn-close {
+	padding: 0 !important;
+	height: 4.2rem !important;
+	width: 4.2rem !important;
+	background-color: var(--lightColor);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.2rem;
+}
+
+.btn-cancel {
+	margin-left: var(--spaceS);
+}
