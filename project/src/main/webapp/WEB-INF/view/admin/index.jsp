@@ -19,7 +19,13 @@
 				<td>${item.manv}</td>
 				<td>${item.tendangnhap}</td>
 				<td>${item.matkhau}</td>
-				<td>${item.chucvu}</td>
+				<%-- <td>${item.chucvu}</td> --%>
+				<c:if test="${item.chucvu == 'true'}"> 
+					<td> sếp</td>
+				</c:if>
+				<c:if test="${item.chucvu == 'false'}"> 
+					<td> nhân viên</td>
+				</c:if>
 			</tr>
 		</c:forEach>
 	</table>

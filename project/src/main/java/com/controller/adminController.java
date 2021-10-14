@@ -40,8 +40,16 @@ public class adminController {
 		for(NhanVien item: items) {
 			if(item.getTendangnhap().equals(username)&&item.getMatkhau().equals(password)) {
 				System.out.println("Đăng nhập thành công");
-				model.addAttribute("items", items);
-				return "admin/index";
+				cookieService.add(username, username + password, 3600);
+				if(item.isChucvu()==true) {
+					System.out.print("chào sếp");
+					model.addAttribute("items", items);
+					return "admin/index";
+				}else {
+					System.out.print("Nhân viên");
+					return "admin/index";
+				}
+		
 			}	
 		}
 		System.out.println("Đăng nhập thất bại");
