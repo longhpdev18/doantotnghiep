@@ -35,11 +35,7 @@ function nextNum() {
     num[index].style.display = "flex";
 }
 
-function prevNum() {
-    num[index].style.display = "none";
-    index = (index + 1) % num.length;
-    num[index].style.display = "flex";
-}
+
 
 
 

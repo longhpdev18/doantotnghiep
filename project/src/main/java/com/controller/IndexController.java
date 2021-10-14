@@ -30,22 +30,49 @@ import com.model.LoaiHang;
 import com.model.NhanHieu;
 import com.model.SP_LH;
 import com.model.SanPham;
+import com.repository.KhachHangDAO;
 import com.repository.LoaiHangDAO;
 import com.repository.NhanHieuDAO;
 import com.repository.SanPhamDAO;
+import com.service.CookieService;
+import com.service.ParamService;
+import com.service.SessionService;
 
 @Controller
 public class IndexController {
 	@Autowired
-	SanPhamDAO dao;
-
+	SanPhamDAO spDAO;
+	@Autowired
+	ParamService paramService;
+	@Autowired
+	CookieService cookieService;
+	@Autowired
+	SessionService sessionService;
+	KhachHangDAO khDAO;
 
 	@GetMapping("index")
 	public String index(Model model) {
-		List<SanPham> items = dao.findAll();
+		List<SanPham> items = spDAO.findAll();
 		model.addAttribute("items", items);
 		model.addAttribute("page","./ads.jsp");
 		model.addAttribute("menu","./menuLogin.jsp");
+		sessionService.set("items", items);
+		return "home/index";
+	}
+	@PostMapping("login")
+	public String login() {
+		String username = paramService.getString("username", "");
+		String password = paramService.getString("password", "");
+		List<KhachHang> items = khDAO.findAll();
+		for(KhachHang item: items) {
+			System.out.println(item.getTendangnhap() + item.getMatkhau());
+			if(item.getTendangnhap().equalsIgnoreCase(username)&&item.getMatkhau().equals(password)) {
+				
+				cookieService.add(username, username + password, 3600);
+				
+			}
+		}
+		System.out.println(username + password);
 		return "home/index";
 	}
 	
