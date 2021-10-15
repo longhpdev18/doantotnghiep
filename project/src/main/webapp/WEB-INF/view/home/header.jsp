@@ -41,7 +41,7 @@
 			<div class="header__container">
 				<div class="header__brand">
 					<a href="/../index" class="header__brand--logo"> <img
-						src="./../images/logo.png" alt="" class="header__brand--image" />
+						src="./../assets/images/logo.png" alt="" class="header__brand--image" />
 					</a>
 				</div>
 				<div class="header__searchbox">
