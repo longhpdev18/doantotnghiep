@@ -191,7 +191,7 @@
 					<div class="header__right--container">
 						<button href="#" class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
 							nhập</button>
-						<a href="./modules/cart/" class="btn btn-primary rounded cta-link cta-cart cta-white"><i
+						<a href="./cart/index" class="btn btn-primary rounded cta-link cta-cart cta-white"><i
 								class="fas fa-shopping-cart"></i></a>
 					</div>
 				</div>
@@ -600,7 +600,7 @@
 						<h2 class="adrShowroom">-Địa chỉ: 100-102-104 Hoàng Hoa Thám,
 							Phường 11, Quận Tân Bình.</h2>
 					</div>
-					<div class="text--marketing">
+				<!-- 	<div class="text--marketing">
 						Mua <a href="#" class="cta-link text-primary text-primary-hover ">PC
 							Gaming</a>, <a href="#" text-primary-hover
 							class="cta-link text-primary text-primary-hover ">laptop
@@ -619,7 +619,7 @@
 						<p>- GPKD số 0316517394 do Sở KH và ĐT TP Hồ Chí Minh cấp ngày
 							01/10/2020</p>
 						<p>- GĐ/Sở hữu website: NHÓM BESTGEAR</p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
