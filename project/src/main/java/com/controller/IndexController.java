@@ -59,7 +59,8 @@ public class IndexController {
 		sessionService.set("items", items);
 		return "home/index";
 	}
-	@PostMapping("login")
+	
+	@PostMapping("")
 	public String login() {
 		String username = paramService.getString("username", "");
 		String password = paramService.getString("password", "");

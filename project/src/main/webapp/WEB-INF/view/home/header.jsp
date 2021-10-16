@@ -1,7 +1,7 @@
 <%@ page pageEncoding="utf-8"%>
 
 <div class="formLogin__container blur-dark">
-	<form action="login" class="fLogin">
+	<form action="" class="fLogin">
 		<div class="form-content">
 			<div class="form-content-left">
 				<div class="form-content-heading">
