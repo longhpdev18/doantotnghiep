@@ -1,203 +1,126 @@
 <%@ page pageEncoding="utf-8"%>
-<div class="formLogin__container ">
-			<form action="" class="fLogin">
-				<div class="form-heading">
-					<h1 class="form-title">Đăng nhập</h1>
-					<div class="btn btn-close bg-red-hover">
-						<i class="fas fa-times"></i>
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label for="username"> Tên tài khoản: </label> <input type="text"
-						name="username" id="username" class="txtUsername"
-						placeholder="Tài khoản" required>
-				</div>
-				<div class="form-group">
-					<label for="password"> Mật khẩu: </label> <input type="password"
-						name="password" id="password" class="txtPassword"
-						placeholder="Mật khẩu" required>
-				</div>
-				<div class="chk-remember">
-					<input type="checkbox" name="chkremember" id="chkremember"
-						class="chkRemember">
-					<p>Ghi nhớ tài khoản</p>
-				</div>
-				<div class="group-button">
-					<button class="btn btn-primary btn-login rounded-8">Đăng
-						nhập</button>
-					<button class="btn btn-light btn-cancel rounded-8">Hủy</button>
-				</div>
-				<div class="hr"></div>
-				<div class="toRegister">
-					<p>Bạn chưa có tài khoản?</p>
-					<a href="#" class="cta-link text-primary text-primary-hover">Đăng
-						ký</a>
-				</div>
-			</form>
-		</div>
-		<div class="header">
-			<div class="header__container">
-				<div class="header__brand">
-					<a href="/../index" class="header__brand--logo"> <img
-						src="./../images/logo.png" alt="" class="header__brand--image" />
-					</a>
-				</div>
-				<div class="header__searchbox">
-					<div class="searchbox">
-						<input type="text" class="header__searchbox--input"
-							placeholder="Tìm kiếm..." />
-						<button class="header__searchbox--button btn-primary">
-							<i class="fas fa-search"></i>
-						</button>
-					</div>
-				</div>
-				<div class="header__right">
-					<div class="header__right--container">
-						<button href="#"
-							class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
-							nhập</button>
-
-						<a href="/cart/index"
-							class="btn btn-primary rounded cta-link cta-cart cta-white"><i
-							class="fas fa-shopping-cart"></i></a>
-
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="hero__top">
-			<div class="hero__top--container">
-				<div class="hero__top--left rounded">
-					<li class="cat__title">Danh mục sản phẩm</li>
-				</div>
-				<div class="hero__top--right rounded">
-					<ul class="stkbn__container">
-						<li class="stkbn-item"><a href="#" class="cta-link cta-stk">
-								<i class="far fa-money-bill-alt"></i> Hướng dẫn thanh toán
-						</a></li>
-						<li class="stkbn-item"><a href="#" class="cta-link cta-stk">
-								<i class="fas fa-money-check-alt"></i> Hướng dẫn trả góp
-						</a></li>
-						<li class="stkbn-item"><a href="#" class="cta-link cta-stk">
-								<i class="fas fa-tools"></i> Chính sách bảo hành
-						</a></li>
-						<li class="stkbn-item"><a href="#" class="cta-link cta-stk">
-								<i class="fas fa-truck"></i> Chính sách vận chuyển
-						</a></li>
-						<li class="stkbn-item"><a href="#" class="cta-link cta-stk">
-								<i class="fas fa-user-clock"></i> Tuyển dụng
-						</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
 <div class="hero">
-			<div class="hero__container">
-				<div class="hero__bottom">
-					<div class="hero__left">
-						<ul class="menu__left">
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-laptop"></i> Laptop
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"><i
-									class="fas fa-desktop"></i> PC BestGear </a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fab fa-apple"></i> Apple
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-desktop"></i> PC Văn Phòng
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-microchip"></i> Linh kiện PC
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-tv"></i> Màn hình
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="far fa-keyboard"></i> Bàn phím
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-mouse"></i> Chuột & Lót chuột
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-headphones-alt"></i> Tai nghe Gaming
-							</a>
-							</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-chair"></i> Ghế Gaming
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-volume-up"></i> Loa & Tai nghe
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-print"></i> Thiết bị văn phòng
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fas fa-server"></i> Thiết bị mạng
-							</a>
-								</li>
-							<li class="menu-item"><a href="#"
-								class="cta-link cta-menu hover-primary rounded-8"> <i
-									class="fab fa-usb"></i> Phụ kiện
-							</a>
-								</li>
-						</ul>
-					</div>
-					<div class="hero__right">
-						<div class="hero--right__top">
-							<ul class="hero__slide">
-								<li class="hero__slide-item"><a href="#"
-									class="cta-link cta-slide"> <img
-										src="https://i.vietgiaitri.com/2020/2/9/minh-da-tau-man-hinh-roi-cho-laptop-de-choi-game-dung-bai-hon-3ec28d.png"
-										alt="" class="slide--image" />
-								</a></li>
-							</ul>
+	<div class="hero__container">
+		<div class="hero__left">
+			<ul class="menu__container">
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/laptop.svg" alt="">
 						</div>
-						<div class="hero--right__bottom">
-							<ul class="hero__ads">
-								<li class="hero__ads-item"><a href="#"
-									class="cta-link cta-ads"> <img
-										src="http://www.myboss.vn/images/Upload/images/manhinh-razer.jpg"
-										alt="" class="ads--image">
-								</a></li>
-								<li class="hero__ads-item"><a href="#"
-									class="cta-link cta-ads"> <img
-										src="https://minhancomputer.com/media/lib/14-01-2021/razer.jpg"
-										alt="" class="ads--image">
-								</a></li>
-								<li class="hero__ads-item"><a href="#"
-									class="cta-link cta-ads"> <img
-										src="https://cdn.tgdd.vn/Files/2019/10/26/1212545/chon-mua-laptop-choi-game-nen-mua-hang-nao-cau-hinh-bao-nhieu-la-du-10.jpg"
-										alt="" class="ads--image">
-								</a></li>
-							</ul>
+						<p>Laptop</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/desktop.svg" alt="">
+						</div>
+						<p>PC BestGear</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/apple.svg" alt="">
+						</div>
+						<p>Apple</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/pc.svg" alt="">
+						</div>
+						<p>PC Văn Phòng</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/pcacessory.svg" alt="">
+						</div>
+						<p>Linh Kiện</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/monitor.svg" alt="">
+						</div>
+						<p>Màn hình</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/keyboard.svg" alt="">
+						</div>
+						<p>Bàn phim</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/mouse.svg" alt="">
+						</div>
+						<p>Chuột + Lót chuột</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/headphone.svg" alt="">
+						</div>
+						<p>Tai nghe & Loa</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/chair.svg" alt="">
+						</div>
+						<p>Ghế Gaming</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/print.svg" alt="">
+						</div>
+						<p>Thiết bị văn phòng</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/internet.svg" alt="">
+						</div>
+						<p>Thiết bị mạng</p>
+				</a></li>
+				<li class="menu-item"><a href="#" class="menu-link cta-link">
+						<div class="menu-icon">
+							<img src="./assets/icons/accessorypc.svg" alt="">
+						</div>
+						<p>Phụ Kiện</p>
+				</a></li>
+			</ul>
+		</div>
+		<div class="hero__right">
+			<div class="slider">
+				<div class="slider-prev">
+					<i class="fas fa-chevron-left"></i>
+				</div>
+				<div class="slider__wrapper">
+					<div class="slider__main">
+						<div class="slider-item">
+							<img
+								src="http://bizweb.dktcdn.net/100/052/150/files/thu-mua-laptop-razer-cu-gia-cao1.jpg?v=1569842975244"
+								alt="" class="slider-image">
+						</div>
+						<div class="slider-item">
+							<img
+								src="https://i0.wp.com/laptopmedia.com/wp-content/uploads/2018/05/razer-blade-15-gallery12-gaming-laptop.jpg"
+								alt="" class="slider-image">
+						</div>
+						<div class="slider-item">
+							<img
+								src="https://nguyencongpc.vn/photos/20/B%C3%A0n%20ph%C3%ADm%20c%C6%A1%20Razer%20Huntsman%20Elite/B%C3%A0n%20ph%C3%ADm%20c%C6%A1%20Razer%20Huntsman%20Elite%203.jpg"
+								alt="" class="slider-image">
+						</div>
+						<div class="slider-item">
+							<img
+								src="https://mega.com.vn/media/product/2164_ban_phim_co_razer_blackwidow_elite_green_switch_2.jpg"
+								alt="" class="slider-image">
+						</div>
+						<div class="slider-item">
+							<img
+								src="https://file.hstatic.net/1000129940/file/tai-nghe-razer-blac-shark-v2-x-nd-1_56a0a929d5594a5c8ff983fb9c32fb4b.jpg"
+								alt="" class="slider-image">
 						</div>
 					</div>
 				</div>
+				<div class="slider-next">
+					<i class="fas fa-chevron-right"></i>
+				</div>
 			</div>
 		</div>
+	</div>
+</div>
