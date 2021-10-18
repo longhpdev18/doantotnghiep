@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Giỏ Hàng</title>
+    <title>CHI TIẾT SẢN PHẨM</title>
 
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="../../css/style.css" />
@@ -223,7 +223,7 @@
                     <button href="#" class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
                         nhập</button>
 
-                    <a href="./" class="btn btn-primary rounded cta-link cta-cart cta-white"><i
+                    <a href="../cart/" class="btn btn-primary rounded cta-link cta-cart cta-white"><i
                             class="fas fa-shopping-cart"></i></a>
 
                 </div>
@@ -380,79 +380,59 @@
             </div>
         </div>
     </div>
-    <div class="content">
-        <div class="content__container content__cart">
-            <h2 class="page__title">Giỏ hàng</h2>
-            <table class="cart__tbl ">
-                <tr class="cart-product cart-firstChild">
-                    <td>Sản phẩm</td>
-                    <td>Tên sản phẩm</td>
-                    <td>Số lượng</td>
-                    <td>Giá tiền</td>
-                    <td>Xóa</td>
-                </tr>
-
-                <!-- ==== KHI CHƯA CÓ SẢN PHẨM ====== -->
-
-                <!-- <tr class="cart-product">
-                        <td class="cart-empty">
-                            <h1 class="cart-empty-title">
-                                Bạn chưa thêm sản phẩm nào
-                            </h1>
-                            <a href="../../" class="cta-link">Tiếp tục mua hàng</a>
-                        </td>
-                    </tr> -->
-
-                <!-- ==== KHI CÓ SẢN PHẨM ====== -->
-                <tr class="cart-product">
-                    <td class="card-image"><img
-                            src="https://maxlinkcomputer.com/man-hinh-may-tinh-samsung-lcd-22-inch-ls22a330nhexxv-13.jpg"
-                            alt="" class="cart-contentImage"></td>
-                    <td class="cart-productName"><a href="#" class="cta-link text-primary text-primary-hover"></a>
-                        Tên sản phẩm Tên sản
-                        phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm
-                        Tên sản phẩm Tên sản phẩm </td>
-                    <td class="cart-qty">
-                        <div class="cart-qty-container">
-                            <button class="btn-qty-down" onclick="nextNum()"><i class="fas fa-minus"></i></button>
-                            <span id="cart-qty-input">0</span>
-                            <button class="btn-qty-up" onclick="prevNum()"><i class="fas fa-plus"></i></button>
+    <div class="content ">
+        <div class="content__container">
+            <div class="content-product-detail">
+                <div class="product-detail">
+                    <div class="product-detail-left">
+                        <img src="https://beobeostore.com/wp-content/uploads/2021/07/razer-blade-15-base-2019.jpg"
+                            alt="" class="product-detail-image">
+                    </div>
+                    <div class="product-detail-right">
+                        <div class="detail-right-content">
+                            <h1 class="product-detail-name">LAPTOP RAZER BLADE 15 BASE 2019 Pro 16ACH6 82L50095VN</h1>
+                            <h2 class="product-detail-id text-gray mb-10">#282722</h2>
+                            <h2 class="product-detail-nof mb-10">
+                                <span class="circle mr-10">
+                                    <i class="fas fa-bullhorn"></i>
+                                </span>
+                                <p> 12 người đang quan tâm sản phẩm</p>
+                            </h2>
+                            <ul class="product-info mb-10">
+                                <h3 class="mb-10">Thông tin chung:</h3>
+                                <div class="product-info-content">
+                                    <li><strong class="mr-10">Nhà sản xuất:</strong>RAZER</li>
+                                    <li><strong class="mr-10">Xuất xứ:</strong> Chính hãng</li>
+                                    <li><strong class="mr-10">Bảo hành:</strong> 24 Tháng</li>
+                                    <li><strong class="mr-10">Tình trạng:</strong> Mới</li>
+                                </div>
+                            </ul>
+                            <div class="product-promotion mb-10">
+                                <h1>Khuyến mãi</h1>
+                                <p class="text-red bg-light"> - Phong cách thể thao thể hiện qua ba màu sắc khác biệt
+                                    giúp
+                                    nâng tầm
+                                    diện mạo và phong
+                                    cách của bạn. Những phiên bản với màu đen nguyên bản Original Black, xám cực chất
+                                    Eclipse Gray, và Electro Punk rực rỡ sẽ thể hiện phong cách của bạn.</p>
+                            </div>
+                            <div class="product-group-price">
+                                <li class="product-price-old text-gray">24.499.000đ</li>
+                                <li class="product-price-current">24.499.000đ</li>
+                            </div>
                         </div>
-                    </td>
-                    <td class="cart-productPrice">21.490.000đ</td>
-                    <td class="cart-productDelete">
-                        <div class="btn btn-light btn-cart-delete bg-red-hover rounded-8 text-dark">
-                            <i class="far fa-trash-alt"></i>
+                        <div class="group-button-detail">
+                            <div class="group-button-content">
+                                <button class="btn btn-buy btn-primary rounded-8">Mua
+                                    ngay</button>
+                                <button class="btn btn-addToCart btn-light rounded-8">Thêm vào
+                                    giỏ</button>
+                            </div>
                         </div>
-                    </td>
-                </tr>
-                <tr class="cart-product">
-                    <td class="card-image"><img
-                            src="https://maxlinkcomputer.com/man-hinh-may-tinh-samsung-lcd-22-inch-ls22a330nhexxv-13.jpg"
-                            alt="" class="cart-contentImage"></td>
-                    <td class="cart-productName"><a href="#" class="cta-link text-primary text-primary-hover"></a>
-                        Tên sản phẩm Tên sản
-                        phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm
-                        Tên sản phẩm Tên sản phẩm </td>
-                    <td class="cart-qty">
-                        <div class="cart-qty-container">
-                            <button class="btn-qty-down"><i class="fas fa-minus"></i></button>
-                            <span class="cart-qty-input">10</span>
-                            <button class="btn-qty-up"><i class="fas fa-plus"></i></button>
-                        </div>
-                    </td>
-                    <td class="cart-productPrice">21.490.000đ</td>
-                    <td class="cart-productDelete">
-                        <div class="btn btn-light btn-cart-delete bg-red-hover rounded-8 text-dark">
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <div class="cart-group-button">
-                <button class="btn btn-primary btn-order rounded-8">Đặt hàng</button>
-                <button class="btn btn-white bg-white-hover btn-update rounded-8">Cập nhật</button>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 
