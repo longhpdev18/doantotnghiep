@@ -66,20 +66,34 @@
 											<img src="./assets/img/sanpham/${item.hinh}" alt=""
 												class="product-image">
 										</div>
+
 										<div class="product__bottom">
 											<div class="product__content">
 												<h6 class="product-name">${item.tensp}</h6>
 												<h6 class="product-priceOld">23,490,000 đ</h6>
 												<h4 class="product-priceNew">${item.gia}đ</h4>
 											</div>
+
 											<div class="product__btnGroups">
-												<button class="btn btn-primary btn-buy rounded-8">Mua
-													ngay</button>
-												<button class="btn btn-light btn-addToCart rounded-8">Thêm
-													vào giỏ</button>
+												<%-- <a href="cart/add/${item.masp}" class="btn btn-primary btn-buy rounded-8">Mua
+													ngay</a>
+												<a class="btn btn-light btn-addToCart rounded-8">Thêm
+													vào giỏ</a> --%>
+												<form method="post" action="cart/add/${item.masp}">
+													<button type="submit"
+														class="btn btn-primary btn-buy rounded-8">Mua
+														ngay</button>
+												</form>
+												<form method="post" action="cart/add/${item.masp}">
+													<button type="submit"
+														class="btn btn-light btn-addToCart rounded-8">Thêm
+														vào giỏ</button>
+												</form>
 											</div>
 										</div>
 								</a></li>
+
+
 							</c:forEach>
 						</ul>
 					</ul>

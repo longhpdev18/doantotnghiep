@@ -1,42 +1,21 @@
 package com.controller;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.exception.ResourceNotFoundException;
 import com.model.KhachHang;
-import com.model.LoaiHang;
-import com.model.NhanHieu;
-import com.model.SP_LH;
 import com.model.SanPham;
 import com.repository.KhachHangDAO;
-import com.repository.LoaiHangDAO;
-import com.repository.NhanHieuDAO;
 import com.repository.SanPhamDAO;
 import com.service.CookieService;
 import com.service.ParamService;
 import com.service.SessionService;
+import com.service.ShoppingCartService;
 
 @Controller
 public class IndexController {
@@ -49,6 +28,8 @@ public class IndexController {
 	@Autowired
 	SessionService sessionService;
 	KhachHangDAO khDAO;
+	@Autowired
+	ShoppingCartService cart;
 
 	@GetMapping("index")
 	public String index(Model model) {
@@ -77,10 +58,19 @@ public class IndexController {
 		return "home/index";
 	}
 	
-	@RequestMapping("cart/index")
-	public String index() {
-		return "home/cart/index";
-	}
+//	@RequestMapping("cart/index")
+//	public String view(Model model) {
+//		model.addAttribute("items", cart);
+//		return "home/cart/test"; //3. view lên trang giỏ hảng index
+//	}
+//	
+//	
+//	 @RequestMapping("/cart/add/{masp}") 
+//	 public String add(@PathVariable("masp") Integer masp) {
+//		 cart.add(masp); 
+//		 return "redirect:/cart/index"; // hiển thị giỏhàng 
+//	  }
+	  
 	
 //	@RequestMapping("/product/page")
 //	public String paginate(Model model) {
