@@ -45,17 +45,7 @@
                     </tr> -->
 
 
-					<%-- <c:forEach var="item" items="${cart.items}">
-						<c:choose>
-							<c:when test="${cart.items == 'null'}">
-								<tr class="cart-product">
-									<td class="cart-empty">
-										<h1 class="cart-empty-title">Bạn chưa thêm sản phẩm nào</h1> <a
-										href="../../index" class="cta-link">Tiếp tục mua hàng</a>
-									</td>
-								</tr>
-							</c:when>
-							<c:when test="${cart.items != '0'}">
+					<c:forEach var="item" items="${items}">
 								<tr class="cart-product">
 									<td class="card-image"><img
 										src="./../assets/img/sanpham/${item.hinh}" alt=""
@@ -82,11 +72,10 @@
 										</div>
 									</td>
 								</tr>
-							</c:when>
-							</c:choose>
-					</c:forEach> --%>
+					
+					</c:forEach> 
 					<!-- ==== KHI CÓ SẢN PHẨM ====== -->
-					<tr class="cart-product">
+					<!-- <tr class="cart-product">
 						<td class="card-image"><img
 							src="https://maxlinkcomputer.com/man-hinh-may-tinh-samsung-lcd-22-inch-ls22a330nhexxv-13.jpg"
 							alt="" class="cart-contentImage"></td>
@@ -139,7 +128,7 @@
 								<i class="far fa-trash-alt"></i>
 							</div>
 						</td>
-					</tr>
+					</tr> -->
 				</table>
 				<div class="cart-group-button">
 					<button class="btn btn-primary btn-order rounded-8">Đặt

@@ -1,6 +1,6 @@
 package com.controller;
 
-
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.model.SanPham;
 import com.repository.HoaDonDAO;
 import com.repository.SanPhamDAO;
 import com.service.SessionService;
@@ -24,18 +25,21 @@ public class ShoppingCartController {
 	@Autowired
 	HoaDonDAO orderDao;
 	@Autowired
-	SanPhamDAO productDao;
+	SanPhamDAO sanphamDAO;
 	//2. xem giỏ hàng
 	@RequestMapping("/cart/view")
-	public String view(Model model) {
-		model.addAttribute("cart", cart);
+	public String view(Model model, Integer masp) {
+		List<SanPham> items = sanphamDAO.getID(masp);
+		model.addAttribute("items", items);
 		return "home/cart/index";
 	}
 	
 	
 	@RequestMapping("/cart/add/{masp}")
-	public String add(@PathVariable("masp") Integer masp) {
-		cart.add(masp);
+	public String add(Model model, Integer masp) {
+		//cart.add(masp);
+		List<SanPham> items = sanphamDAO.getID(masp);
+		model.addAttribute("items", items);
 		return "redirect:/cart/view"; 
 	}
 	@RequestMapping("/cart/remove/{masp}")

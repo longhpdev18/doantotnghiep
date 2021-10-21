@@ -31,8 +31,9 @@
 								alt="" class="product-detail-image">
 						</div>
 						<div class="product-detail-right">
+						<c:forEach var="item" items="${items}">
 							<div class="detail-right-content">
-								<h1 class="product-detail-name">${cart.tensp}</h1>
+								<h1 class="product-detail-name">${item.tensp}</h1>
 								<h2 class="product-detail-id text-gray mb-10">#282722</h2>
 								<h2 class="product-detail-nof mb-10">
 									<span class="circle mr-10"> <i class="fas fa-bullhorn"></i>
@@ -61,6 +62,7 @@
 									<li class="product-price-current">24.499.000đ</li>
 								</div>
 							</div>
+							</c:forEach>
 							<div class="group-button-detail">
 								<div class="group-button-content">
 									<button class="btn btn-buy btn-primary rounded-8">Mua
