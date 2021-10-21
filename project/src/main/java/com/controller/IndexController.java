@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +22,7 @@ import com.service.ShoppingCartService;
 @Controller
 public class IndexController {
 	@Autowired
-	SanPhamDAO spDAO;
+	SanPhamDAO sanphamDAO;
 	@Autowired
 	ParamService paramService;
 	@Autowired
@@ -33,7 +35,7 @@ public class IndexController {
 
 	@GetMapping("index")
 	public String index(Model model) {
-		List<SanPham> items = spDAO.findAll();
+		List<SanPham> items = sanphamDAO.findAll();
 		model.addAttribute("items", items);
 		model.addAttribute("page","./ads.jsp");
 		model.addAttribute("menu","./menuLogin.jsp");
@@ -58,35 +60,10 @@ public class IndexController {
 		return "home/index";
 	}
 	
-//	@RequestMapping("cart/index")
-//	public String view(Model model) {
-//		model.addAttribute("items", cart);
-//		return "home/cart/test"; //3. view lên trang giỏ hảng index
-//	}
-//	
-//	
-//	 @RequestMapping("/cart/add/{masp}") 
-//	 public String add(@PathVariable("masp") Integer masp) {
-//		 cart.add(masp); 
-//		 return "redirect:/cart/index"; // hiển thị giỏhàng 
-//	  }
-	  
-	
-//	@RequestMapping("/product/page")
-//	public String paginate(Model model) {
-//		Pageable pageable = PageRequest.of(2, 5);
-//		Page<SanPham> page = dao.findAll(pageable);
-//		model.addAttribute("page", page);
-//		return "phongTest";
-//
-//	}
-//
-//	@RequestMapping("/product/page")
-//	public String paginate(Model model, @RequestParam("p") Optional<Integer> p) {
-//		Pageable pageable = PageRequest.of(p.orElse(0), 5);
-//		Page<SanPham> page = dao.findAll(pageable);
-//		model.addAttribute("page", page);
-//		return "phongTest";
-//	}
-
+	@RequestMapping("product/{masp}")
+	public String productDetail(Model model, Integer masp){ 
+		return"home/product/detail";
+	}
+		
+			
 }

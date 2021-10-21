@@ -51,8 +51,8 @@
 						<ul class="products__list">
 
 							<c:forEach var="item" items="${items}">
-								<li class="product__item"><a href="#"
-									class="cta-link cta-product">
+								<li class="product__item">
+								<a href="product/${item.masp}" name="masp"	class="cta-link cta-product">
 										<div class="product__deal">
 											<div class="product__deal--container">
 												<div class="deal-tg-left"></div>
@@ -75,10 +75,6 @@
 											</div>
 
 											<div class="product__btnGroups">
-												<%-- <a href="cart/add/${item.masp}" class="btn btn-primary btn-buy rounded-8">Mua
-													ngay</a>
-												<a class="btn btn-light btn-addToCart rounded-8">Thêm
-													vào giỏ</a> --%>
 												<form method="post" action="cart/add/${item.masp}">
 													<button type="submit"
 														class="btn btn-primary btn-buy rounded-8">Mua

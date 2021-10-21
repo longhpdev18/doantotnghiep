@@ -194,7 +194,7 @@
 					class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
 					nhập</button>
 
-				<a href="./../cart/index"
+				<a href="./../cart/view"
 					class="btn btn-primary rounded cta-link cta-cart cta-white"><i
 					class="fas fa-shopping-cart"></i></a>
 

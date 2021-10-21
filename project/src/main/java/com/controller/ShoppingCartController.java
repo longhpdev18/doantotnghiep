@@ -1,8 +1,6 @@
 package com.controller;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.bean.Item;
 import com.repository.HoaDonDAO;
 import com.repository.SanPhamDAO;
 import com.service.SessionService;
@@ -21,7 +18,7 @@ import com.service.ShoppingCartService;
 @Controller
 public class ShoppingCartController {
 	@Autowired
-	ShoppingCartService cart; // 1. tiêm Spring Bean đã viết ở bài trước
+	ShoppingCartService cart;
 	@Autowired
 	SessionService session;
 	@Autowired
@@ -32,15 +29,14 @@ public class ShoppingCartController {
 	@RequestMapping("/cart/view")
 	public String view(Model model) {
 		model.addAttribute("cart", cart);
-		return "home/cart/test"; //3. view lên trang giỏ hảng index
+		return "home/cart/index";
 	}
 	
-	///////////////////////////////////
 	
 	@RequestMapping("/cart/add/{masp}")
 	public String add(@PathVariable("masp") Integer masp) {
 		cart.add(masp);
-		return "redirect:/cart/view"; // hiển thị giỏ hàng
+		return "redirect:/cart/view"; 
 	}
 	@RequestMapping("/cart/remove/{masp}")
 	public String remove(@PathVariable("masp") Integer masp) {
