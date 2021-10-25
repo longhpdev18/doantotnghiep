@@ -75,12 +75,12 @@
 											</div>
 
 											<div class="product__btnGroups">
-												<form method="post" action="cart/add/${item.masp}">
-													<button type="submit"
+												<form method="get" action="cart/add/${item.masp}">
+													[<button type="submit"
 														class="btn btn-primary btn-buy rounded-8">Mua
-														ngay</button>
+														ngay</button>]
 												</form>
-												<form method="post" action="cart/add/${item.masp}">
+												<form method="get" action="cart/add/${item.masp}">
 													<button type="submit"
 														class="btn btn-light btn-addToCart rounded-8">Thêm
 														vào giỏ</button>

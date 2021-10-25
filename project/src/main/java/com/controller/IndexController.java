@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,7 +38,7 @@ public class IndexController {
 
 	@GetMapping("index")
 	public String index(Model model) {
-		List<SanPham> items = sanphamDAO.findAll();
+	    List<SanPham> items = sanphamDAO.findAll();
 		model.addAttribute("items", items);
 		model.addAttribute("page","./ads.jsp");
 		model.addAttribute("menu","./menuLogin.jsp");
@@ -60,10 +63,6 @@ public class IndexController {
 		return "home/index";
 	}
 	
-	@RequestMapping("product/{masp}")
-	public String productDetail(Model model, Integer masp){ 
-		return"home/product/detail";
-	}
-		
+
 			
 }

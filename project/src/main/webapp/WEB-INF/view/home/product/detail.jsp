@@ -1,4 +1,5 @@
 <%@ page pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,17 +25,18 @@
 		<div class="content">
 			<div class="content__container">
 				<div class="content-product-detail">
+				<c:forEach var="item" items="${items}">
 					<div class="product-detail">
 						<div class="product-detail-left">
 							<img
-								src="https://beobeostore.com/wp-content/uploads/2021/07/razer-blade-15-base-2019.jpg"
+								src="./../assets/img/sanpham/${item.hinh}" 
 								alt="" class="product-detail-image">
 						</div>
 						<div class="product-detail-right">
-						<c:forEach var="item" items="${items}">
+						
 							<div class="detail-right-content">
 								<h1 class="product-detail-name">${item.tensp}</h1>
-								<h2 class="product-detail-id text-gray mb-10">#282722</h2>
+								<h2 class="product-detail-id text-gray mb-10">#${item.masp}</h2>
 								<h2 class="product-detail-nof mb-10">
 									<span class="circle mr-10"> <i class="fas fa-bullhorn"></i>
 									</span>
@@ -43,23 +45,19 @@
 								<ul class="product-info mb-10">
 									<h3 class="mb-10">Thông tin chung:</h3>
 									<div class="product-info-content">
-										<li><strong class="mr-10">Nhà sản xuất:</strong>RAZER</li>
+										<li><strong class="mr-10">Nhà sản xuất:</strong>${item.manh}</li>
 										<li><strong class="mr-10">Xuất xứ:</strong> Chính hãng</li>
 										<li><strong class="mr-10">Bảo hành:</strong> 24 Tháng</li>
-										<li><strong class="mr-10">Tình trạng:</strong> Mới</li>
+										<li><strong class="mr-10">Tình trạng:</strong> ${item.tinhtrang}</li>
 									</div>
 								</ul>
 								<div class="product-promotion mb-10">
 									<h1>Khuyến mãi</h1>
-									<p class="text-red bg-light">- Phong cách thể thao thể hiện
-										qua ba màu sắc khác biệt giúp nâng tầm diện mạo và phong cách
-										của bạn. Những phiên bản với màu đen nguyên bản Original
-										Black, xám cực chất Eclipse Gray, và Electro Punk rực rỡ sẽ
-										thể hiện phong cách của bạn.</p>
+									<p class="text-red bg-light">${item.mota}</p>
 								</div>
 								<div class="product-group-price">
 									<li class="product-price-old text-gray">24.499.000đ</li>
-									<li class="product-price-current">24.499.000đ</li>
+									<li class="product-price-current">${item.gia}</li>
 								</div>
 							</div>
 							</c:forEach>

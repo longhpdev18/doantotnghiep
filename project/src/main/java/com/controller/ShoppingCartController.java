@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,11 +36,11 @@ public class ShoppingCartController {
 	}
 	
 	
-	@RequestMapping("/cart/add/{masp}")
-	public String add(Model model, Integer masp) {
-		//cart.add(masp);
-		List<SanPham> items = sanphamDAO.getID(masp);
-		model.addAttribute("items", items);
+	@RequestMapping("cart/add/{masp}")
+	public String add(Model model,@PathVariable("masp") Integer masp) {
+		cart.add(masp);
+//		List<SanPham> items = sanphamDAO.getID(masp);
+//		model.addAttribute("items", items);
 		return "redirect:/cart/view"; 
 	}
 	@RequestMapping("/cart/remove/{masp}")
