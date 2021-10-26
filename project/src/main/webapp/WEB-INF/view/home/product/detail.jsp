@@ -25,57 +25,70 @@
 		<div class="content">
 			<div class="content__container">
 				<div class="content-product-detail">
-				<c:forEach var="item" items="${items}">
-					<div class="product-detail">
-						<div class="product-detail-left">
-							<img
-								src="./../assets/img/sanpham/${item.hinh}" 
-								alt="" class="product-detail-image">
-						</div>
-						<div class="product-detail-right">
-						
-							<div class="detail-right-content">
-								<h1 class="product-detail-name">${item.tensp}</h1>
-								<h2 class="product-detail-id text-gray mb-10">#${item.masp}</h2>
-								<h2 class="product-detail-nof mb-10">
-									<span class="circle mr-10"> <i class="fas fa-bullhorn"></i>
-									</span>
-									<p>12 người đang quan tâm sản phẩm</p>
-								</h2>
-								<ul class="product-info mb-10">
-									<h3 class="mb-10">Thông tin chung:</h3>
-									<div class="product-info-content">
-										<li><strong class="mr-10">Nhà sản xuất:</strong>${item.manh}</li>
-										<li><strong class="mr-10">Xuất xứ:</strong> Chính hãng</li>
-										<li><strong class="mr-10">Bảo hành:</strong> 24 Tháng</li>
-										<li><strong class="mr-10">Tình trạng:</strong> ${item.tinhtrang}</li>
+					<c:forEach var="item" items="${items}">
+						<div class="product-detail">
+							<div class="product-detail-left">
+								<img src="./../assets/img/sanpham/${item.hinh}" alt=""
+									class="product-detail-image">
+							</div>
+							<div class="product-detail-right">
+
+								<div class="detail-right-content">
+									<h1 class="product-detail-name">${item.tensp}</h1>
+									<h2 class="product-detail-id text-gray mb-10">#${item.masp}</h2>
+									<h2 class="product-detail-nof mb-10">
+										<span class="circle mr-10"> <i class="fas fa-bullhorn"></i>
+										</span>
+										<p>12 người đang quan tâm sản phẩm</p>
+									</h2>
+									<ul class="product-info mb-10">
+										<h3 class="mb-10">Thông tin chung:</h3>
+										<div class="product-info-content">
+											<li><strong class="mr-10">Nhà sản xuất:</strong> <c:choose>
+													<c:when test="${item.manh == 1}">Asus</c:when>
+													<c:when test="${item.manh == 2}">Acer</c:when>
+													<c:when test="${item.manh == 3}">Lenovo</c:when>
+													<c:when test="${item.manh == 4}">MSI</c:when>
+													<c:when test="${item.manh == 5}">Logitech</c:when>
+													<c:when test="${item.manh == 6}">Razer</c:when>
+													<c:when test="${item.manh == 7}">HP</c:when>
+													<c:when test="${item.manh == 8}">GVN</c:when>
+													<c:when test="${item.manh == 9}">Microsoft</c:when>
+													<c:otherwise>Stell Series</c:otherwise>
+												</c:choose></li>
+											<li><strong class="mr-10">Xuất xứ:</strong> Chính hãng</li>
+											<li><strong class="mr-10">Bảo hành:</strong> 24 Tháng</li>
+											<li><strong class="mr-10">Tình trạng:</strong> <c:choose>
+													<c:when test="${item.tinhtrang == true }">hàng mới</c:when>
+													<c:otherwise>Đã qua sử dụng</c:otherwise>
+												</c:choose></li>
+										</div>
+									</ul>
+									<div class="product-promotion mb-10">
+										<h1>Khuyến mãi</h1>
+										<p class="text-red bg-light">${item.mota}</p>
 									</div>
-								</ul>
-								<div class="product-promotion mb-10">
-									<h1>Khuyến mãi</h1>
-									<p class="text-red bg-light">${item.mota}</p>
+									<div class="product-group-price">
+										<li class="product-price-old text-gray">24.499.000đ</li>
+										<li class="product-price-current">${item.gia}</li>
+									</div>
 								</div>
-								<div class="product-group-price">
-									<li class="product-price-old text-gray">24.499.000đ</li>
-									<li class="product-price-current">${item.gia}</li>
-								</div>
-							</div>
-							</c:forEach>
-							<div class="group-button-detail">
-								<div class="group-button-content">
-									<button class="btn btn-buy btn-primary rounded-8">Mua
-										ngay</button>
-									<button class="btn btn-addToCart btn-light rounded-8">Thêm
-										vào giỏ</button>
-								</div>
-							</div>
+					</c:forEach>
+					<div class="group-button-detail">
+						<div class="group-button-content">
+							<button class="btn btn-buy btn-primary rounded-8">Mua
+								ngay</button>
+							<button class="btn btn-addToCart btn-light rounded-8">Thêm
+								vào giỏ</button>
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
-		<jsp:include page="./../../home/footer.jsp"></jsp:include>
+
+	</div>
+	</div>
+	<jsp:include page="./../../home/footer.jsp"></jsp:include>
 	</div>
 </body>
 <!-- BOXICON -->

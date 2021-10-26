@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.exception.ResourceNotFoundException;
+import com.model.NhanHieu;
 import com.model.SanPham;
 import com.repository.SanPhamDAO;
 
