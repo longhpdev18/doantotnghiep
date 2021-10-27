@@ -77,7 +77,7 @@ public class IndexController {
 		}
 		return "home/index";
 	}
-	@PostMapping("profile")
+	@GetMapping("/profile")
 	public String showProfile(Model model) {
 		String maKH = paramService.getString("maKH", "");
 		System.out.println(maKH);
