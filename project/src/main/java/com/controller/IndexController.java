@@ -63,7 +63,6 @@ public class IndexController {
 		}
 		return "home/index";
 	}
-<<<<<<< HEAD
 	@GetMapping("/profile")
 	public String showProfile(Model model) {
 		String maKH = paramService.getString("maKH", "");
@@ -71,7 +70,7 @@ public class IndexController {
 		return "home/index";
 	}
 	@RequestMapping("cart/index")
-	public String index() {
+	public String cart(){
 		return "home/cart/index";
 	}
 	
@@ -91,9 +90,6 @@ public class IndexController {
 //		model.addAttribute("page", page);
 //		return "phongTest";
 //	}
-=======
-	
->>>>>>> 7990fc2ab7de6025d5df377f50a2b9d6bf6791d9
 
 			
 }
