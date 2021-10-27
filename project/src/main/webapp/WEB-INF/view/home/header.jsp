@@ -1,7 +1,8 @@
 <%@ page pageEncoding="utf-8"%>
 
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <div class="formLogin__container blur-dark">
-	<form action="" class="fLogin">
+	<form action="" class="fLogin" method="POST">
 		<div class="form-content">
 			<div class="form-content-left">
 				<div class="form-content-heading">
@@ -150,56 +151,53 @@
 				</button>
 			</div>
 		</div>
+		<c:if test="${not empty fullname}">
+			<div class="header__right">
+				<div class="header__right--container">
+					<button href="#" class="btn btn-primary rounded btn btn-showUser">
+						<p class="user-fullname">${fullname}</p>
+						<i class="fas fa-angle-down"></i>
+						<ul class="dropdown-user">
+							<li class="dropdown-user-item"><a href="#"
+								class="cta-link text-dark cta-user-item"> <i
+									class="fas fa-user-alt"></i>
+									<p class="user-item-text">Thông tin tài khoản</p>
+							</a></li>
+							<li class="dropdown-user-item"><a href="#"
+								class="cta-link text-dark cta-user-item"> <i
+									class="fas fa-list-ul"></i>
+									<p class="user-item-text">Đơn đặt hàng</p>
+							</a></li>
+							<div class="hr"></div>
+							<li class="dropdown-user-item"><a href="/logout.html"
+								class="cta-link text-dark cta-user-item"> <i
+									class="fas fa-sign-out-alt"></i>
+									<p class="user-item-text">Đăng xuất</p>
+							</a></li>
+						</ul>
+					</button>
 
-		<!-- HEADER RIGHT ĐÃ LOGIN // Mở comment ra là được-->
-
-		<!-- <div class="header__right">
-                    <div class="header__right--container">
-                        <button href="#" class="btn btn-primary rounded btn btn-showUser">
-                            <p class="user-fullname">Hoàng Phi Long</p>
-                            <i class="fas fa-angle-down"></i>
-                            <ul class="dropdown-user">
-                                <li class="dropdown-user-item">
-                                    <a href="#" class="cta-link text-dark cta-user-item">
-                                        <i class="fas fa-user-alt"></i>
-                                        <p class="user-item-text">Thông tin tài khoản</p>
-                                    </a>
-                                </li>
-                                <li class="dropdown-user-item">
-                                    <a href="#" class="cta-link text-dark cta-user-item">
-                                        <i class="fas fa-list-ul"></i>
-                                        <p class="user-item-text">Đơn đặt hàng</p>
-                                    </a>
-                                </li>
-                                <div class="hr"></div>
-                                <li class="dropdown-user-item">
-                                    <a href="/logout.html" class="cta-link text-dark cta-user-item">
-                                        <i class="fas fa-sign-out-alt"></i>
-                                        <p class="user-item-text">Đăng xuất</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </button>
-
-                        <a href="./modules/cart/" class="btn btn-primary rounded cta-link cta-cart cta-white">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </div>
-                </div> -->
-
-		<!-- HEADER RIGHT CHƯA LOGIN // Mở comment ra là được-->
-		<div class="header__right">
-			<div class="header__right--container">
-				<button href="#"
-					class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
-					nhập</button>
-
-				<a href="./../cart/index"
-					class="btn btn-primary rounded cta-link cta-cart cta-white"><i
-					class="fas fa-shopping-cart"></i></a>
-
+					<a href="./modules/cart/"
+						class="btn btn-primary rounded cta-link cta-cart cta-white"> <i
+						class="fas fa-shopping-cart"></i>
+					</a>
+				</div>
 			</div>
-		</div>
+		</c:if>
+		<c:if test="${empty fullname}">
+			<div class="header__right">
+				<div class="header__right--container">
+					<button href="#"
+						class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
+						nhập</button>
+
+					<a href="./../cart/index"
+						class="btn btn-primary rounded cta-link cta-cart cta-white"><i
+						class="fas fa-shopping-cart"></i></a>
+
+				</div>
+			</div>
+		</c:if>
 	</div>
 </div>
 <div class="header__bottom">

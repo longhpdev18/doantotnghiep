@@ -48,9 +48,10 @@ public class IndexController {
 	CookieService cookieService;
 	@Autowired
 	SessionService sessionService;
+	@Autowired
 	KhachHangDAO khDAO;
 
-	@GetMapping("index")
+	@GetMapping("")
 	public String index(Model model) {
 		List<SanPham> items = spDAO.findAll();
 		model.addAttribute("items", items);
@@ -61,19 +62,19 @@ public class IndexController {
 	}
 	
 	@PostMapping("")
-	public String login() {
+	public String login(Model model) {
 		String username = paramService.getString("username", "");
 		String password = paramService.getString("password", "");
 		List<KhachHang> items = khDAO.findAll();
 		for(KhachHang item: items) {
 			System.out.println(item.getTendangnhap() + item.getMatkhau());
 			if(item.getTendangnhap().equalsIgnoreCase(username)&&item.getMatkhau().equals(password)) {
-				
 				cookieService.add(username, username + password, 3600);
+				System.out.println(item.getFullname());
+				model.addAttribute("fullname", item.getFullname());
 				
 			}
 		}
-		System.out.println(username + password);
 		return "home/index";
 	}
 	

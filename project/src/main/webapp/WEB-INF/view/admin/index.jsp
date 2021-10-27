@@ -1,5 +1,6 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib prefix="fn" uri="http://Java.Sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
