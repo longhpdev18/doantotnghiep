@@ -1,47 +1,31 @@
 package com.controller;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.exception.ResourceNotFoundException;
 import com.model.KhachHang;
-import com.model.LoaiHang;
-import com.model.NhanHieu;
-import com.model.SP_LH;
 import com.model.SanPham;
 import com.repository.KhachHangDAO;
-import com.repository.LoaiHangDAO;
-import com.repository.NhanHieuDAO;
 import com.repository.SanPhamDAO;
 import com.service.CookieService;
 import com.service.ParamService;
 import com.service.SessionService;
+import com.service.ShoppingCartService;
 
 @Controller
 public class IndexController {
 	@Autowired
-	SanPhamDAO spDAO;
+	SanPhamDAO sanphamDAO;
 	@Autowired
 	ParamService paramService;
 	@Autowired
@@ -50,10 +34,12 @@ public class IndexController {
 	SessionService sessionService;
 	@Autowired
 	KhachHangDAO khDAO;
+	@Autowired
+	ShoppingCartService cart;
 
 	@GetMapping("")
 	public String index(Model model) {
-		List<SanPham> items = spDAO.findAll();
+	    List<SanPham> items = sanphamDAO.findAll();
 		model.addAttribute("items", items);
 		model.addAttribute("page","./ads.jsp");
 		model.addAttribute("menu","./menuLogin.jsp");
@@ -77,6 +63,7 @@ public class IndexController {
 		}
 		return "home/index";
 	}
+<<<<<<< HEAD
 	@GetMapping("/profile")
 	public String showProfile(Model model) {
 		String maKH = paramService.getString("maKH", "");
@@ -104,5 +91,9 @@ public class IndexController {
 //		model.addAttribute("page", page);
 //		return "phongTest";
 //	}
+=======
+	
+>>>>>>> 7990fc2ab7de6025d5df377f50a2b9d6bf6791d9
 
+			
 }

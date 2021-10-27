@@ -51,8 +51,8 @@
 						<ul class="products__list">
 
 							<c:forEach var="item" items="${items}">
-								<li class="product__item"><a href="#"
-									class="cta-link cta-product">
+								<li class="product__item">
+								<a href="product/${item.masp}" name="masp"	class="cta-link cta-product">
 										<div class="product__deal">
 											<div class="product__deal--container">
 												<div class="deal-tg-left"></div>
@@ -66,20 +66,30 @@
 											<img src="./assets/img/sanpham/${item.hinh}" alt=""
 												class="product-image">
 										</div>
+
 										<div class="product__bottom">
 											<div class="product__content">
 												<h6 class="product-name">${item.tensp}</h6>
 												<h6 class="product-priceOld">23,490,000 đ</h6>
 												<h4 class="product-priceNew">${item.gia}đ</h4>
 											</div>
+
 											<div class="product__btnGroups">
-												<button class="btn btn-primary btn-buy rounded-8">Mua
-													ngay</button>
-												<button class="btn btn-light btn-addToCart rounded-8">Thêm
-													vào giỏ</button>
+												<form method="get" action="cart/add/${item.masp}">
+													[<button type="submit"
+														class="btn btn-primary btn-buy rounded-8">Mua
+														ngay</button>]
+												</form>
+												<form method="get" action="cart/add/${item.masp}">
+													<button type="submit"
+														class="btn btn-light btn-addToCart rounded-8">Thêm
+														vào giỏ</button>
+												</form>
 											</div>
 										</div>
 								</a></li>
+
+
 							</c:forEach>
 						</ul>
 					</ul>

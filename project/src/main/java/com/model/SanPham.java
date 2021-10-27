@@ -1,24 +1,43 @@
 package com.model;
 
 import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Data;
 
-@Data
-@Entity
+
+@Entity(name = "sanpham")
 @Table(name = "sanpham")
-public class SanPham implements Serializable{
+public class SanPham {
 	@Id
-	Integer masp;
-	String tensp;
-	Integer maloai;
-	Integer manh;
-	Double gia;
-	String mota;
-	Boolean tinhtrang;
-	String hinh;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer masp;
+	
+	@Column(name = "tensp", nullable = false)
+	private String tensp;
+	
+	@Column(name = "maloai", nullable = false)
+	private Integer maloai;
+	
+	@Column(name = "manh", nullable = false)
+	private Integer manh;
+	
+	@Column(name = "gia", nullable = false)
+	private Double gia;
+	
+	@Column(name = "mota", nullable = false)
+	private String mota;
+	
+	@Column(name = "tinhtrang", nullable = false)
+	private Boolean tinhtrang;
+	
+	@Column(name = "hinh", nullable = false)
+	private String hinh;
 	
 	public Integer getMasp() {
 		return masp;

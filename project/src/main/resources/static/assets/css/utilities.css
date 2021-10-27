@@ -46,6 +46,10 @@ button {
     --spaceM: 2.4rem;
 }
 
+.bg-light {
+    background-color: var(--lightColor);
+}
+
 .btn {
     outline: none;
     border: none;
