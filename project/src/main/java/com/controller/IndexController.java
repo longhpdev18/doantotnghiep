@@ -37,7 +37,7 @@ public class IndexController {
 	@Autowired
 	ShoppingCartService cart;
 
-	@GetMapping("")
+	@GetMapping("index")
 	public String index(Model model) {
 	    List<SanPham> items = sanphamDAO.findAll();
 		model.addAttribute("items", items);
@@ -47,7 +47,7 @@ public class IndexController {
 		return "home/index";
 	}
 	
-	@PostMapping("")
+	@PostMapping("index")
 	public String login(Model model) {
 		String username = paramService.getString("username", "");
 		String password = paramService.getString("password", "");
@@ -67,7 +67,7 @@ public class IndexController {
 	public String showProfile(Model model) {
 		String maKH = paramService.getString("maKH", "");
 		System.out.println(maKH);
-		return "home/index";
+		return "home/profile/index";
 	}
 	@RequestMapping("cart/index")
 	public String cart(){

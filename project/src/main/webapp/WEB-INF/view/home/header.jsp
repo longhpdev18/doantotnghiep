@@ -2,7 +2,7 @@
 
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <div class="formLogin__container blur-dark">
-	<form action="" class="fLogin" method="POST">
+	<form action="index" class="fLogin" method="POST">
 		<div class="form-content">
 			<div class="form-content-left">
 				<div class="form-content-heading">
