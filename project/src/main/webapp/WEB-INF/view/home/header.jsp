@@ -158,10 +158,10 @@
 						<p class="user-fullname">${fullname}</p>
 						<i class="fas fa-angle-down"></i>
 						<ul class="dropdown-user">
-							<li class="dropdown-user-item"><a href="#"
+							<li class="dropdown-user-item"><a href="/profile" id="maKH" values="1"
 								class="cta-link text-dark cta-user-item"> <i
 									class="fas fa-user-alt"></i>
-									<p class="user-item-text">Thông tin tài khoản</p>
+									<p class="user-item-text" >Thông tin tài khoản</p>
 							</a></li>
 							<li class="dropdown-user-item"><a href="#"
 								class="cta-link text-dark cta-user-item"> <i

@@ -77,7 +77,12 @@ public class IndexController {
 		}
 		return "home/index";
 	}
-	
+	@PostMapping("profile")
+	public String showProfile(Model model) {
+		String maKH = paramService.getString("maKH", "");
+		System.out.println(maKH);
+		return "home/index";
+	}
 	@RequestMapping("cart/index")
 	public String index() {
 		return "home/cart/index";
