@@ -1780,14 +1780,34 @@ body {
 	object-fit: cover;
 }
 
-.btn-profile-image {
-	width: 4rem;
-	height: 4rem;
+.veri-account {
+	width: 3rem;
+	height: 3rem;
 	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--whiteColor);
 	position: absolute;
-	right: 15px;
 	bottom: 0;
-	border: 2px solid var(--primaryColor2);
+	right: 15px;
+	font-size: 1.6rem;
+	background-color: var(--greenColor);
+}
+
+.wait-account {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--whiteColor);
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+	font-size: 1.6rem;
+	background-color: var(--yellowColor);
 }
 
 .profile-right {
