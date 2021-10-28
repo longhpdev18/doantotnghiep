@@ -1664,6 +1664,7 @@ body {
 /* =======  profile  ======= */
 
 .profile {
+	width: 100%;
 	height: 100%;
 	display: flex;
 	margin: 0 auto;
@@ -1677,6 +1678,7 @@ body {
 	width: 100%;
 	height: 4rem;
 	display: flex;
+	font-size: 2.4rem;
 }
 
 .profile-content {
@@ -1736,4 +1738,8 @@ body {
 	right: 15px;
 	bottom: 0;
 	border: 2px solid var(--primaryColor2);
+}
+
+.profile-right {
+	flex: 1;
 }
