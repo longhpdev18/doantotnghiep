@@ -12,6 +12,13 @@ $('.btn-showUser').click(function () {
     $('.dropdown-user').toggleClass('active');
 })
 
+$('.btn-showGenders').click(function () {
+    $('.sub-genders').toggleClass('active');
+})
+
+$('.gender-option').click(function () {
+    $('.sub-genders').removeClass('active');
+})
 
 $('.btn-cat').mouseover(function () {
     $('.dropmenu').removeClass('hidden');
