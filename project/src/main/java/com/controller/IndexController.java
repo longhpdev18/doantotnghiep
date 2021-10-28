@@ -57,18 +57,14 @@ public class IndexController {
 			if(item.getTendangnhap().equalsIgnoreCase(username)&&item.getMatkhau().equals(password)) {
 				cookieService.add(username, username + password, 3600);
 				System.out.println(item.getFullname());
+				System.out.println(item.getMakh());
 				model.addAttribute("fullname", item.getFullname());
-				
+				model.addAttribute("maKH", item.getMakh());
 			}
 		}
 		return "home/index";
 	}
-	@GetMapping("/profile")
-	public String showProfile(Model model) {
-		String maKH = paramService.getString("maKH", "");
-		System.out.println(maKH);
-		return "home/profile/index";
-	}
+	
 	@RequestMapping("cart/index")
 	public String cart(){
 		return "home/cart/index";

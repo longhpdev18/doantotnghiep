@@ -35,6 +35,11 @@ public class ParamService {
 		String value = getString(name, String.valueOf(defaultValue));
 		return Integer.parseInt(value);
 	}
+	
+	public long getLong(String name, long defaultValue){
+		String value = getString(name, String.valueOf(defaultValue));
+		return Long.parseLong(value);
+	}
 	/**
 	 * Đọc số thực giá trị của tham số
 	 * @param name tên tham số

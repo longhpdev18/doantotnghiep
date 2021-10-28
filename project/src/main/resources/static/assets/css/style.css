@@ -382,6 +382,7 @@ body {
 	width: 100%;
 	height: auto;
 	display: flex;
+	justify-content: center;
 }
 
 .products__container {
@@ -789,6 +790,7 @@ body {
 	width: 100%;
 	min-height: 40rem;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	margin-bottom: var(--spaceM);
 	margin-top: var(--spaceM);
@@ -800,7 +802,9 @@ body {
 	height: 100%;
 	min-height: 55rem;
 	display: flex;
+	margin: auto;
 	flex-direction: column;
+	margin-top: calc(10rem + var(--spaceS));
 }
 
 .content__cart {
@@ -1003,6 +1007,7 @@ body {
 	font-size: 1.6rem;
 	border-radius: var(--space8);
 }
+
 
 .group-button {
 	width: fit-content;
@@ -1314,12 +1319,64 @@ body {
 .form-group .txtFullname,
 .form-group .txtPhone,
 .form-group .txtAddress,
-.form-group .txtEmail {
+.form-group .txtEmail,
+.form-group .txtCity,
+.form-group .txtZipcode,
+.form-group .txtWard,
+.form-group .txtTown,
+.form-group .txtBirthday,
+.form-group .genders {
 	background-color: var(--lightColor);
 	height: 4.8rem;
 	padding: var(--spaceS);
 	font-size: 1.6rem;
 	border-radius: var(--space8);
+}
+
+.form-group .genders {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+.btn-showGenders {
+	width: 3rem;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.sub-genders {
+	width: 100%;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	background-color: var(--whiteColor);
+}
+
+.sub-genders .rdo-gender {
+	width: 100%;
+	height: 4.2rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: var(--spaceS);
+	cursor: pointer;
+	z-index: 99;
+}
+
+.sub-genders .rdo-gender:hover {
+	background-color: var(--primaryColor2);
+}
+
+.sub-genders.active {
+	display: block;
 }
 
 .form-group .txtPhone::-webkit-outer-spin-button,
@@ -1567,7 +1624,7 @@ body {
 	display: flex;
 	width: 100%;
 	height: 100%;
-	margin-top: calc(10rem + var(--spaceS));
+
 	border-radius: var(--spaceS);
 }
 
@@ -1642,13 +1699,117 @@ body {
 	width: 100%;
 	height: 100%;
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .list-item {
 	--col: 4;
-	width: calc(100% / var(--col));
-	height: auto;
+	width: calc(100% / var(--col) - var(--spaceS));
 	display: flex;
 	background-color: var(--whiteColor);
 	margin-left: var(--spaceS);
+}
+
+/* =======  profile  ======= */
+
+.profile {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;
+	background-color: var(--whiteColor);
+	padding: var(--spaceM);
+	border-radius: var(--spaceS);
+}
+
+.profile-title {
+	width: 100%;
+	height: 4rem;
+	display: flex;
+	font-size: 2.4rem;
+}
+
+.profile-content {
+	display: flex;
+}
+
+.profile-left {
+	width: 30rem;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: var(--spaceS);
+	margin-right: var(--spaceM);
+}
+
+.profile-id {
+	padding: .5rem 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.4rem;
+	color: var(--primaryColor);
+	border: 1px solid var(--primaryColor2);
+	border-radius: var(--space8);
+	background-color: var(--primaryColor2);
+}
+
+.profile-button {
+	height: 5rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.profile-image {
+	width: 20rem;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.profile-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.veri-account {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--whiteColor);
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+	font-size: 1.6rem;
+	background-color: var(--greenColor);
+}
+
+.wait-account {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--whiteColor);
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+	font-size: 1.6rem;
+	background-color: var(--yellowColor);
+}
+
+.profile-right {
+	flex: 1;
 }

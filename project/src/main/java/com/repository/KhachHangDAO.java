@@ -15,5 +15,7 @@ public interface KhachHangDAO  extends JpaRepository<KhachHang, Long> {
 	@Query("select kh from khachhang kh where kh.tendangnhap=:username and kh.matkhau =:password")
 	List<KhachHang> loginKH(@Param("username") String tendangnhap,@Param("password") String matkhau);
 
+	@Query("select kh from khachhang kh where kh.makh=:maKH")
+	List<KhachHang> ID(@Param("maKH") Long maKH);
 
 }
