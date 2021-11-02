@@ -26,6 +26,7 @@ button {
 
 :root {
     --primaryColor: #0B71E8;
+    --primaryColor2: rgba(11, 113, 232, .2);
     --primaryHover: #0984e3;
     --redColor: #F03C3D;
     --redHover: #f14c4c;
@@ -39,10 +40,11 @@ button {
     --lightHover: #d8d9da;
     --yellowColor: #f9ca24;
     --yellowHover: #d4a704;
+    --grayColor: #576574;
     --darkColor: #111;
     --darkHover: rgb(24, 24, 24);
-    --space8: .8rem;
-    --spaceS: 1.2rem;
+    --space8: .5rem;
+    --spaceS: 1rem;
     --spaceM: 2.4rem;
 }
 
@@ -190,12 +192,6 @@ button {
     z-index: 1;
 }
 
-.cta-link {
-    text-decoration: none;
-    cursor: pointer;
-    display: block;
-}
-
 .cta-white {
     color: var(--whiteColor);
 }
@@ -210,14 +206,14 @@ button {
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     .blur-dark {
-        background-color: rgba(0, 0, 0, .4);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, .3);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
     }
 
     .blur-white {
-        background-color: rgba(0, 0, 0, .4);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, .3);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
     }
 }
