@@ -2,13 +2,20 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
 
 body {
+	width: 100%;
 	background-color: var(--lightColor);
 	font-family: "Open Sans", sans-serif;
+
+}
+
+.center {
+	margin: auto;
 }
 
 .container {
 	width: 100%;
 	height: 100%;
+	background-color: var(--lightColor);
 	display: flex;
 	flex-direction: column;
 	font-weight: 500;
@@ -274,10 +281,14 @@ body {
 .hero {
 	width: 100%;
 	margin-top: calc(var(--spaceM) + 11rem);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin: auto;
 }
 
 .hero__container {
-	width: 120rem;
+	width: 120rem !important;
 	height: 50.4rem;
 	display: flex;
 	margin: auto;
@@ -285,6 +296,8 @@ body {
 
 .hero__right {
 	flex: 1;
+	width: 100%;
+	max-width: 988px;
 	border-radius: var(--spaceS);
 	background-color: var(--whiteColor);
 }
@@ -371,7 +384,8 @@ body {
 }
 
 .hero__left {
-	width: 20rem;
+	width: 100%;
+	max-width: 20rem;
 	border-radius: var(--spaceS);
 	margin-right: var(--spaceS);
 }
@@ -380,6 +394,7 @@ body {
 
 .products {
 	width: 100%;
+	min-width: 120rem;
 	height: auto;
 	display: flex;
 	justify-content: center;
@@ -660,6 +675,7 @@ body {
 .footer {
 	width: 100%;
 	height: 30rem;
+	min-width: 120rem;
 	background-color: var(--whiteColor);
 	display: flex;
 }
@@ -736,6 +752,7 @@ body {
 
 .pagination {
 	width: 100%;
+	min-width: 120rem;
 	height: 6rem;
 	padding: var(--spaceS);
 	display: flex;
@@ -1100,12 +1117,11 @@ body {
 }
 
 .btn-showUser {
-	width: fit-content;
 	height: 100%;
-	padding: 0.2rem 1.5rem;
+	padding: 1.2rem 1.2rem;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: space-between;
 	font-size: 1.4rem;
 	margin-right: var(--spaceS);
 	position: relative;
@@ -1113,11 +1129,18 @@ body {
 
 .btn-showLogin .user-fullname {
 	flex: 1;
+	width: 100%;
 	height: 100%;
-	padding-bottom: 100%;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-word;
+	justify-content: flex-start;
 }
 
-.btn-showUser i {
+.btn-showUser .show-user {
 	width: 3rem;
 	height: 3rem;
 	font-size: 1.4rem;
@@ -1125,6 +1148,34 @@ body {
 	align-items: center;
 	justify-content: flex-end;
 }
+
+.show-user i {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon-user-user {
+	display: none;
+}
+
+.btn-menu-mobile {
+	display: none;
+}
+
+.header__left {
+	display: none;
+}
+
+.cta-cart {
+	width: 5.2rem;
+	height: 4.0rem;
+}
+
+.menu-mobile {
+	display: none;
+}
+
 
 /*========= DROPDOWN USER ======== */
 
