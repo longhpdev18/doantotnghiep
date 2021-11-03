@@ -1,5 +1,5 @@
 <%@ page pageEncoding="utf-8"%>
- <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,43 +35,47 @@
 					</tr>
 
 					<!-- ==== KHI CHƯA CÓ SẢN PHẨM ====== -->
+					<c:if test="${empty cart.items}">
+						<tr class="cart-product">
+							<td class="cart-empty">
+								<h1 class="cart-empty-title">Bạn chưa thêm sản phẩm nào</h1> <a
+								href="../../index" class="cta-link">Tiếp tục mua hàng</a>
+							</td>
+						</tr>
+					</c:if>
 
-					<!-- <tr class="cart-product">
-                        <td class="cart-empty">
-                            <h1 class="cart-empty-title">
-                                Bạn chưa thêm sản phẩm nào
-                            </h1>
-                            <a href="../../" class="cta-link">Tiếp tục mua hàng</a>
-                        </td>
-                    </tr> -->
-					<tr class="cart-product">
+					<c:if test="${not empty cart.items}">
 						<c:forEach var="item" items="${cart.items}">
-							<td class="card-image"><img
-								src="./../assets/img/sanpham/${item.hinh}" alt=""
-								class="cart-contentImage"></td>
-							<td class="cart-productName"><a href="#"
-								class="cta-link text-primary text-primary-hover"></a>
-								${item.masp}</td>
-							<td class="cart-qty">
-								<div class="cart-qty-container">
-									<button class="btn-qty-down" onclick="nextNum()">
-										<i class="fas fa-minus"></i>
-									</button>
-									<span id="cart-qty-input">${item.qty}</span>
-									<button class="btn-qty-up" onclick="prevNum()">
-										<i class="fas fa-plus"></i>
-									</button>
-								</div>
-							</td>
-							<td class="cart-productPrice">${item.gia}</td>
-							<td class="cart-productDelete">
-								<div
-									class="btn btn-light btn-cart-delete bg-red-hover rounded-8 text-dark">
-									<i class="far fa-trash-alt"></i>
-								</div>
-							</td>
+							<tr class="cart-product">
+
+								<td class="card-image"><img
+									src="./../assets/img/sanpham/${item.hinh}" alt=""
+									class="cart-contentImage"></td>
+								<td class="cart-productName"><a href="#"
+									class="cta-link text-primary text-primary-hover"></a>
+									${item.tensp}</td>
+								<td class="cart-qty">
+									<div class="cart-qty-container">
+										<button class="btn-qty-down" onclick="nextNum()">
+											<i class="fas fa-minus"></i>
+										</button>
+										<span id="cart-qty-input">${item.qty}1</span>
+										<button class="btn-qty-up" onclick="prevNum()">
+											<i class="fas fa-plus"></i>
+										</button>
+									</div>
+								</td>
+								<td class="cart-productPrice">${item.gia}</td>
+								<td class="cart-productDelete">
+									<div
+										class="btn btn-light btn-cart-delete bg-red-hover rounded-8 text-dark">
+										<i class="far fa-trash-alt"></i>
+									</div>
+								</td>
+
+							</tr>
 						</c:forEach>
-					</tr>
+					</c:if>
 					<!-- ==== KHI CÓ SẢN PHẨM ====== -->
 					<!-- <tr class="cart-product">
 						<td class="card-image"><img

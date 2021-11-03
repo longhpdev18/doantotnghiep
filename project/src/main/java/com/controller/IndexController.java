@@ -65,11 +65,6 @@ public class IndexController {
 		return "home/index";
 	}
 	
-	@RequestMapping("cart/index")
-	public String cart(){
-		return "home/cart/index";
-	}
-	
 //	@RequestMapping("/product/page")
 //	public String paginate(Model model) {
 //		Pageable pageable = PageRequest.of(2, 5);

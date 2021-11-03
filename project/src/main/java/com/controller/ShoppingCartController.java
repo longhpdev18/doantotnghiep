@@ -28,10 +28,11 @@ public class ShoppingCartController {
 	@Autowired
 	SanPhamDAO sanphamDAO;
 	//2. xem giỏ hàng
-	@RequestMapping("/cart/view")
+	@RequestMapping("/cart/index")
 	public String view(Model model, Integer masp) {
-		List<SanPham> items = sanphamDAO.getID(masp);
-		model.addAttribute("items", items);
+//		List<SanPham> items = sanphamDAO.getID(masp);
+//		model.addAttribute("items", items);
+		model.addAttribute("cart", cart);
 		return "home/cart/index";
 	}
 	
@@ -41,7 +42,7 @@ public class ShoppingCartController {
 		cart.add(masp);
 //		List<SanPham> items = sanphamDAO.getID(masp);
 //		model.addAttribute("items", items);
-		return "redirect:/cart/view"; 
+		return "redirect:/cart/index"; 
 	}
 	@RequestMapping("/cart/remove/{masp}")
 	public String remove(@PathVariable("masp") Integer masp) {
