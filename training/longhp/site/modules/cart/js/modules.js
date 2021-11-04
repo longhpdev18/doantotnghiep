@@ -20,20 +20,21 @@ $('.btn-cat').mouseout(function () {
     $('.dropmenu').addClass('hidden');
 })
 
-var numbers = document.getElementById('cart-qty-input');
-for (i = 0; i < 100; i++) {
-    var span = document.createElement('span');
-    span.textContent = i;
-    numbers.appendChild(span);
+const qtyValue = document.getElementById('qty-value');
+function stepper(btn) {
+    let id = btn.getAttribute('id');
+    let min = qtyValue.getAttribute('min');
+    let max = qtyValue.getAttribute('max');
+    let step = qtyValue.getAttribute('step');
+    let val = qtyValue.getAttribute('value');
+    let calcStep = (id == "btn-qty-up") ? (step * 1) : (step * -1);
+    console.log(id, min, max, step, val, calcStep)
+    let newValue = parseInt(val) + calcStep;
+    if (newValue >= min && newValue <= max) {
+        qtyValue.setAttribute("value", newValue);
+    }
 }
-var num = numbers.getElementsByTagName('span');
-var index = 0;
 
-function nextNum() {
-    num[index].style.display = "none";
-    index = (index + 1) % num.length;
-    num[index].style.display = "flex";
-}
 
 
 

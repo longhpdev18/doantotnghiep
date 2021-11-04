@@ -616,58 +616,71 @@ body {
 	position: absolute;
 }
 
-#cart-qty-input {
-	width: 100%;
-	height: inherit;
-	padding: var(--spaceS);
-	background-color: var(--whiteColor);
-	border: 2px solid var(--lightColor);
-	display: none;
-}
-
-.cart-qty-input {
-	flex: 1;
-	background-color: transparent;
-
-}
-
-.cart-qty-container {
-	width: 80%;
-	height: 4rem;
-	overflow: hidden;
-	border-radius: var(--spaceS);
+.cart-qty {
+	min-height: 100%;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
+	padding: 1.5rem 1.5rem;
+}
+
+.qty-container {
+	width: 100%;
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
+	border-radius: var(--spaceS);
 }
 
 .btn-qty-down {
 	width: 3rem;
 	height: 100%;
-	cursor: pointer;
+	font-size: 1.8rem;
+	background-color: var(--whiteColor);
+	border-radius: var(--spaceS) 0 0 var(--spaceS);
+}
+
+.btn-qty-down:hover {
+	height: 100%;
+	transition: all .1s linear;
+	font-size: 2.4rem;
+	color: var(--primaryColor);
+}
+
+.qty-value {
+	flex: 1;
+	max-width: 5rem;
+	-moz-appearance: textfield;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.qty-value::-webkit-inner-spin-button,
+.qty-value::-webkit-outer-spin-button {
+	-webkit-appearance: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--lightColor);
+	text-align: center;
 }
 
 .btn-qty-up {
 	width: 3rem;
 	height: 100%;
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--lightColor);
+	font-size: 1.8rem;
+	background-color: var(--whiteColor);
+	border-radius: 0 var(--spaceS) var(--spaceS) 0;
 }
 
-.btn-qty-down:hover,
 .btn-qty-up:hover {
-	background-color: var(--darkHover);
-	color: var(--whiteColor);
-	transition: .3s;
-}
+	height: 100%;
+	color: var(--primaryColor);
+	transition: all .3s linear;
+	font-size: 2.4rem;
 
+}
 
 
 /* ===== FOOTER ===== */
@@ -873,8 +886,8 @@ body {
 
 .cart-product td {
 	font-size: 1.6rem;
-	justify-content: center;
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	text-align: center;
 }

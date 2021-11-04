@@ -413,32 +413,14 @@
                         phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm
                         Tên sản phẩm Tên sản phẩm </td>
                     <td class="cart-qty">
-                        <div class="cart-qty-container">
-                            <button class="btn-qty-down" onclick="nextNum()"><i class="fas fa-minus"></i></button>
-                            <span id="cart-qty-input">0</span>
-                            <button class="btn-qty-up" onclick="prevNum()"><i class="fas fa-plus"></i></button>
-                        </div>
-                    </td>
-                    <td class="cart-productPrice">21.490.000đ</td>
-                    <td class="cart-productDelete">
-                        <div class="btn btn-light btn-cart-delete bg-red-hover rounded-8 text-dark">
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="cart-product">
-                    <td class="card-image"><img
-                            src="https://maxlinkcomputer.com/man-hinh-may-tinh-samsung-lcd-22-inch-ls22a330nhexxv-13.jpg"
-                            alt="" class="cart-contentImage"></td>
-                    <td class="cart-productName"><a href="#" class="cta-link text-primary text-primary-hover"></a>
-                        Tên sản phẩm Tên sản
-                        phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm
-                        Tên sản phẩm Tên sản phẩm </td>
-                    <td class="cart-qty">
-                        <div class="cart-qty-container">
-                            <button class="btn-qty-down"><i class="fas fa-minus"></i></button>
-                            <span class="cart-qty-input">10</span>
-                            <button class="btn-qty-up"><i class="fas fa-plus"></i></button>
+                        <div class="qty-container">
+                            <button class="btn-qty-down" id="btn-qty-down" onclick="stepper(this)">
+                                <i class="fas fa-caret-left"></i>
+                            </button>
+                            <input type="number" class="qty-value" id="qty-value" step="1" value="1" min="0" max="100">
+                            <button class="btn-qty-up" id="btn-qty-up" onclick="stepper(this)">
+                                <i class="fas fa-caret-right"></i>
+                            </button>
                         </div>
                     </td>
                     <td class="cart-productPrice">21.490.000đ</td>
