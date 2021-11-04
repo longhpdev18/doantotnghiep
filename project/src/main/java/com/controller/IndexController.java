@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.model.KhachHang;
 import com.model.SanPham;
 import com.repository.KhachHangDAO;
@@ -48,21 +50,21 @@ public class IndexController {
 	}
 	
 	@PostMapping("index")
-	public String login(Model model) {
-		String username = paramService.getString("username", "");
-		String password = paramService.getString("password", "");
-		List<KhachHang> items = khDAO.findAll();
+	public String login(Model model, 
+			@RequestParam("username") String username,
+			@RequestParam("password") String password) {
+		List<KhachHang> items = khDAO.loginKH(username,password);
 		for(KhachHang item: items) {
 			System.out.println(item.getTendangnhap() + item.getMatkhau());
 			if(item.getTendangnhap().equalsIgnoreCase(username)&&item.getMatkhau().equals(password)) {
-				cookieService.add(username, username + password, 3600);
+				//cookieService.add(username, username + password, 3600);
 				System.out.println(item.getFullname());
 				System.out.println(item.getMakh());
-				model.addAttribute("fullname", item.getFullname());
-				model.addAttribute("maKH", item.getMakh());
+				sessionService.set("fullname", item.getFullname());
+				sessionService.set("maKH", item.getMakh());
 			}
 		}
-		return "home/index";
+		return "redirect:/index";
 	}
 	
 //	@RequestMapping("/product/page")
