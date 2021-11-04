@@ -251,6 +251,7 @@ body {
     grid-template-columns: 2fr 1fr; /*chia làm 2 phần */
     grid-gap : 30px;  /*khoảng cách 2 phần */
     margin-top: 10px;
+    font-size: 13px; /* đâsdasdasdasdasdasdasd*/
 }
 
 .details .recentOrders 
