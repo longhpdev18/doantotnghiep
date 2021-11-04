@@ -1,5 +1,5 @@
 html {
-    font-size: 62.5%;
+    font-size: 75%;
 }
 :root {
     --primaryColor: #0B71E8;
@@ -14,14 +14,15 @@ html {
     --whiteHover: #d8d9da;
     --lightColor: #f1f2f6;
     --lightHover: #d8d9da;
+    --grey: #f5f5f5;
     --text-grey :#8390A2;
     --yellowColor: #f9ca24;
     --yellowHover: #d4a704;
     --darkColor: #111;
+    --black1: #222;
+    --blue: rgb(68, 171, 255);
     --darkHover: rgb(24, 24, 24);
     --space8: .8rem;
     --spaceS: 1.2rem;
     --spaceM: 2.4rem;
 }
-
-
