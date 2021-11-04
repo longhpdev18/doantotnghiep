@@ -131,7 +131,7 @@
     }
 
     .btn-mobile-searchbox {
-        width: 5rem;
+        width: 5.2rem;
         height: 4.2rem;
         display: flex;
         justify-content: center;
@@ -174,7 +174,7 @@
 
     .btn-menu-mobile {
         width: 5rem;
-        height: 4.2rem;
+        height: 4rem;
         display: flex;
         justify-content: center;
         align-items: center;
