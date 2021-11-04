@@ -14,7 +14,7 @@
 <!-- FONT ANWESOME -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
-	<script src="./../assets/js/starter.js"></script>
+<script src="./../assets/js/starter.js"></script>
 <!-- JQUERY -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -57,22 +57,25 @@
 									${item.tensp}</td>
 								<td class="cart-qty">
 									<div class="cart-qty-container">
-										<button class="btn-qty-down" onclick="nextNum()">
+										<button class="btn-qty-down">
 											<i class="fas fa-minus"></i>
 										</button>
-										<span id="cart-qty-input">${item.qty}1</span>
-										<button class="btn-qty-up" onclick="prevNum()">
+										<span class="cart-qty-input">${item.qty}</span>
+										<button class="btn-qty-up">
 											<i class="fas fa-plus"></i>
 										</button>
 									</div>
 								</td>
 								<td class="cart-productPrice">${item.gia}</td>
-								<td class="cart-productDelete">
-									<div
-										class="btn btn-light btn-cart-delete bg-red-hover rounded-8 text-dark">
-										<i class="far fa-trash-alt"></i>
-									</div>
-								</td>
+								<td class="cart-productDelete"><a
+									href="/cart/remove/${item.masp}">
+										<div
+											class="btn btn-light btn-cart-delete bg-red-hover rounded-8 text-dark">
+
+											<i class="far fa-trash-alt"></i>
+
+										</div>
+								</a></td>
 
 							</tr>
 						</c:forEach>
