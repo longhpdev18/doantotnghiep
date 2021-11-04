@@ -177,7 +177,7 @@
 						</ul>
 					</button>
 
-					<a href="./modules/cart/"
+					<a href="./../cart/index"
 						class="btn btn-primary rounded cta-link cta-cart cta-white"> <i
 						class="fas fa-shopping-cart"></i>
 					</a>
