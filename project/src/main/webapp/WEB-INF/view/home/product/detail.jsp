@@ -10,6 +10,7 @@
 <title>Index</title>
 <link rel="stylesheet" href="./../assets/css/style.css">
 <link rel="stylesheet" href="./../assets/css/utilities.css">
+<link rel="stylesheet" href="./../assets/css/responsive.css">
 <script src="./../assets/js/starter.js"></script>
 <!-- FONT ANWESOME -->
 <link rel="stylesheet"

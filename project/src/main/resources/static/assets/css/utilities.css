@@ -43,8 +43,8 @@ button {
     --grayColor: #576574;
     --darkColor: #111;
     --darkHover: rgb(24, 24, 24);
-    --space8: .8rem;
-    --spaceS: 1.2rem;
+    --space8: .5rem;
+    --spaceS: 1rem;
     --spaceM: 2.4rem;
 }
 

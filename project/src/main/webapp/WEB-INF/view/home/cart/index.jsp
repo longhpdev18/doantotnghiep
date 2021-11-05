@@ -10,11 +10,12 @@
 <title>Index</title>
 <link rel="stylesheet" href="./../assets/css/style.css">
 <link rel="stylesheet" href="./../assets/css/utilities.css">
-
+<link rel="stylesheet" href="./../assets/css/responsive.css">
 <!-- FONT ANWESOME -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 <script src="./../assets/js/starter.js"></script>
+
 <!-- JQUERY -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -47,26 +48,29 @@
 
 					<c:if test="${not empty cart.items}">
 						<c:forEach var="item" items="${cart.items}">
+							
 							<tr class="cart-product">
-
 								<td class="card-image"><img
-									src="./../assets/img/sanpham/${item.hinh}" alt=""
-									class="cart-contentImage"></td>
+									src="./../assets/img/sanpham/${item.hinh}"
+                            alt="${item.tensp}" class="cart-contentImage"></td>
 								<td class="cart-productName"><a href="#"
 									class="cta-link text-primary text-primary-hover"></a>
 									${item.tensp}</td>
 								<td class="cart-qty">
-									<div class="cart-qty-container">
-										<button class="btn-qty-down">
-											<i class="fas fa-minus"></i>
+									<div class="qty-container">
+										<button class="btn-qty-down" id="btn-qty-down"
+											onclick="stepper(this)">
+											<i class="fas fa-caret-left"></i>
 										</button>
-										<span class="cart-qty-input">${item.qty}</span>
-										<button class="btn-qty-up">
-											<i class="fas fa-plus"></i>
+										<input type="number" class="qty-value" id="qty-value" step="1"
+											value="${item.qty}" min="1" max="100" onChange="this.form.submit()">
+										<button class="btn-qty-up" id="btn-qty-up"
+											onclick="stepper(this)">
+											<i class="fas fa-caret-right"></i>
 										</button>
 									</div>
 								</td>
-								<td class="cart-productPrice">${item.gia}</td>
+								<td class="cart-productPrice">${item.qty * item.gia}</td>
 								<td class="cart-productDelete"><a
 									href="/cart/remove/${item.masp}">
 										<div
@@ -76,65 +80,12 @@
 
 										</div>
 								</a></td>
-
 							</tr>
+
 						</c:forEach>
 					</c:if>
-					<!-- ==== KHI CÓ SẢN PHẨM ====== -->
-					<!-- <tr class="cart-product">
-						<td class="card-image"><img
-							src="https://maxlinkcomputer.com/man-hinh-may-tinh-samsung-lcd-22-inch-ls22a330nhexxv-13.jpg"
-							alt="" class="cart-contentImage"></td>
-						<td class="cart-productName"><a href="#"
-							class="cta-link text-primary text-primary-hover"></a> Tên sản
-							phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm Tên sản
-							phẩm Tên sản phẩm</td>
-						<td class="cart-qty">
-							<div class="cart-qty-container">
-								<button class="btn-qty-down" onclick="nextNum()">
-									<i class="fas fa-minus"></i>
-								</button>
-								<span id="cart-qty-input">1</span>
-								<button class="btn-qty-up" onclick="prevNum()">
-									<i class="fas fa-plus"></i>
-								</button>
-							</div>
-						</td>
-						<td class="cart-productPrice">21.490.000đ</td>
-						<td class="cart-productDelete">
-							<div
-								class="btn btn-light btn-cart-delete bg-red-hover rounded-8 text-dark">
-								<i class="far fa-trash-alt"></i>
-							</div>
-						</td>
-					</tr>
-					<tr class="cart-product">
-						<td class="card-image"><img
-							src="https://maxlinkcomputer.com/man-hinh-may-tinh-samsung-lcd-22-inch-ls22a330nhexxv-13.jpg"
-							alt="" class="cart-contentImage"></td>
-						<td class="cart-productName"><a href="#"
-							class="cta-link text-primary text-primary-hover"></a> Tên sản
-							phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm Tên sản
-							phẩm Tên sản phẩm</td>
-						<td class="cart-qty">
-							<div class="cart-qty-container">
-								<button class="btn-qty-down">
-									<i class="fas fa-minus"></i>
-								</button>
-								<span class="cart-qty-input">10</span>
-								<button class="btn-qty-up">
-									<i class="fas fa-plus"></i>
-								</button>
-							</div>
-						</td>
-						<td class="cart-productPrice">21.490.000đ</td>
-						<td class="cart-productDelete">
-							<div
-								class="btn btn-light btn-cart-delete bg-red-hover rounded-8 text-dark">
-								<i class="far fa-trash-alt"></i>
-							</div>
-						</td>
-					</tr> -->
+			
+			
 				</table>
 				<div class="cart-group-button">
 					<button class="btn btn-primary btn-order rounded-8">Đặt
@@ -151,7 +102,7 @@
 <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
 <!-- MY JS -->
 <script src="./../assets/js/app.js"></script>
-
+<script src="./../assets/js/modules.js"></script>
 <!-- JQUERY -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

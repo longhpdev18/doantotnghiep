@@ -15,7 +15,7 @@
 
 <!-- UTILITIES CSS -->
 <link rel="stylesheet" href="./assets/css/utilities.css" />
-
+<link rel="stylesheet" href="./../assets/css/responsive.css">
 
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
