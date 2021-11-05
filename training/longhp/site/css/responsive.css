@@ -397,4 +397,39 @@
         font-size: 1.6rem;
         background-color: transparent;
     }
+
+    .profile {
+        padding: var(--spaceS);
+    }
+
+    .profile-left {
+        width: 100%;
+    }
+
+    .profile-right {
+        width: 100%;
+    }
+
+    .profile-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: var(--spaceS);
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .profile-content {
+        flex-direction: column;
+    }
+
+    .profile-right form {
+        width: 100%;
+    }
+
+    .profile-button {
+        justify-content: center;
+    }
 }
