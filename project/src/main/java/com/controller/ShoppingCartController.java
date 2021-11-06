@@ -47,7 +47,7 @@ public class ShoppingCartController {
 	}
 	@RequestMapping("/cart/update/{masp}")
 	public String update(@PathVariable("masp") Integer masp, 
-	@RequestParam("qty") Integer qty) {
+	@RequestParam("qty") int qty) {
 		cart.update(masp, qty);
 		return "redirect:/cart/index";
 	}

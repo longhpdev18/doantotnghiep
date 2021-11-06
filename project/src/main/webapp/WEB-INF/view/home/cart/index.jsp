@@ -48,11 +48,11 @@
 
 					<c:if test="${not empty cart.items}">
 						<c:forEach var="item" items="${cart.items}">
-							
+							<form action="/cart/update/${item.masp}" method="post">
 							<tr class="cart-product">
 								<td class="card-image"><img
-									src="./../assets/img/sanpham/${item.hinh}"
-                            alt="${item.tensp}" class="cart-contentImage"></td>
+									src="./../assets/img/sanpham/${item.hinh}" alt="${item.tensp}"
+									class="cart-contentImage"></td>
 								<td class="cart-productName"><a href="#"
 									class="cta-link text-primary text-primary-hover"></a>
 									${item.tensp}</td>
@@ -62,8 +62,9 @@
 											onclick="stepper(this)">
 											<i class="fas fa-caret-left"></i>
 										</button>
-										<input type="number" class="qty-value" id="qty-value" step="1"
-											value="${item.qty}" min="1" max="100" onChange="this.form.submit()">
+										<input name="qty" type="number" class="qty-value"
+											id="qty-value" step="1" value="${item.qty}" min="1" max="100"
+											onblur="this.form.submit()">
 										<button class="btn-qty-up" id="btn-qty-up"
 											onclick="stepper(this)">
 											<i class="fas fa-caret-right"></i>
@@ -75,17 +76,15 @@
 									href="/cart/remove/${item.masp}">
 										<div
 											class="btn btn-light btn-cart-delete bg-red-hover rounded-8 text-dark">
-
 											<i class="far fa-trash-alt"></i>
-
 										</div>
 								</a></td>
 							</tr>
-
+							</form>
 						</c:forEach>
 					</c:if>
-			
-			
+
+
 				</table>
 				<div class="cart-group-button">
 					<button class="btn btn-primary btn-order rounded-8">Đặt
