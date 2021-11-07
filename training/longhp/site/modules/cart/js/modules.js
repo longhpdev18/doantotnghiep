@@ -20,20 +20,39 @@ $('.btn-cat').mouseout(function () {
     $('.dropmenu').addClass('hidden');
 })
 
-const qtyValue = document.getElementById('qty-value');
-function stepper(btn) {
-    let id = btn.getAttribute('id');
-    let min = qtyValue.getAttribute('min');
-    let max = qtyValue.getAttribute('max');
-    let step = qtyValue.getAttribute('step');
-    let val = qtyValue.getAttribute('value');
-    let calcStep = (id == "btn-qty-up") ? (step * 1) : (step * -1);
-    console.log(id, min, max, step, val, calcStep)
-    let newValue = parseInt(val) + calcStep;
-    if (newValue >= min && newValue <= max) {
-        qtyValue.setAttribute("value", newValue);
-    }
+
+const decButton = document.getElementsByClassName('btn-qty-down');
+const incButton = document.getElementsByClassName('btn-qty-up');
+
+for (var i = 0; i < incButton.length; i++) {
+    var button = incButton[i];
+    button.addEventListener('click', function (event) {
+        var buttonClicked = event.target;
+        var input = buttonClicked.parentElement.parentElement.children[1];
+        var inputValue = input.value;
+        if (inputValue >= 100) {
+            var newValue = 100;
+        } else {
+            var newValue = parseInt(inputValue) + 1;
+        }
+        input.value = newValue;
+    })
 }
+for (var i = 0; i < decButton.length; i++) {
+    var button = decButton[i];
+    button.addEventListener('click', function (event) {
+        var buttonClicked = event.target;
+        var input = buttonClicked.parentElement.parentElement.children[1];
+        var inputValue = input.value;
+        if (inputValue <= 1) {
+            var newValue = 1;
+        } else {
+            var newValue = parseInt(inputValue) - 1;
+        }
+        input.value = newValue;
+    })
+}
+
 
 
 
