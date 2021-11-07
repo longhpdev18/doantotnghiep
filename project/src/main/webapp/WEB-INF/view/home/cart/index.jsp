@@ -41,7 +41,7 @@
 						<tr class="cart-product">
 							<td class="cart-empty">
 								<h1 class="cart-empty-title">Bạn chưa thêm sản phẩm nào</h1> <a
-								href="../../index" class="cta-link">Tiếp tục mua hàng</a>
+								href="../../" class="cta-link">Tiếp tục mua hàng</a>
 							</td>
 						</tr>
 					</c:if>
@@ -84,9 +84,8 @@
 
 				</table>
 				<div class="cart-group-button">
-					<button class="btn btn-primary btn-order rounded-8">Đặt
-						hàng</button>
-					<a href="./../index"><button class="btn btn-white bg-white-hover btn-update rounded-8">Tiếp tục mua hàng</button></a>
+				<a href="./../"><button class="btn-order btn btn-white bg-white-hover  rounded-8">Tiếp tục mua hàng</button></a>
+					<button class="btn btn-primary btn-update rounded-8">Đặt hàng</button>
 				</div>
 			</div>
 		</div>

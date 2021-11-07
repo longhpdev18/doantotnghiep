@@ -137,7 +137,7 @@
 <div class="header">
 	<div class="header__container">
 		<div class="header__brand">
-			<a href="../../index" class="header__brand--logo"> <img
+			<a href="../../" class="header__brand--logo"> <img
 				src="../../assets/images/logo.png" alt=""
 				class="header__brand--image" />
 			</a>

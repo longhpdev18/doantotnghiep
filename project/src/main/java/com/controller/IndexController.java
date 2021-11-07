@@ -39,7 +39,7 @@ public class IndexController {
 	@Autowired
 	ShoppingCartService cart;
 
-	@GetMapping("index")
+	@GetMapping("/")
 	public String index(Model model) {
 	    List<SanPham> items = sanphamDAO.findAll();
 		model.addAttribute("items", items);
@@ -49,7 +49,7 @@ public class IndexController {
 		return "home/index";
 	}
 	
-	@PostMapping("index")
+	@PostMapping("/")
 	public String login(Model model, 
 			@RequestParam("username") String username,
 			@RequestParam("password") String password) {
