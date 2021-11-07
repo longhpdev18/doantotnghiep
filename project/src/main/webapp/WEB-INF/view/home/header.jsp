@@ -2,7 +2,7 @@
 
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <div class="formLogin__container blur-dark">
-	<form action="index" class="fLogin" method="POST">
+	<form action="/" class="fLogin" method="POST">
 		<div class="form-content">
 			<div class="form-content-left">
 				<div class="form-content-heading">
@@ -158,7 +158,9 @@
 						<p class="user-fullname">${fullname}</p>
 						<i class="fas fa-angle-down"></i>
 						<ul class="dropdown-user">
-							<li class="dropdown-user-item"><a href="/profile"name="maKH" id="maKH" values="${maKH}"
+							<li class="dropdown-user-item">
+				
+							<a href="/profile/${maKH}" name="maKH" id="maKH" values="${maKH}"
 								class="cta-link text-dark cta-user-item"> <i
 									class="fas fa-user-alt"></i>
 									<p class="user-item-text" >Thông tin tài khoản</p>
@@ -167,7 +169,9 @@
 								class="cta-link text-dark cta-user-item"> <i
 									class="fas fa-list-ul"></i>
 									<p class="user-item-text">Đơn đặt hàng</p>
-							</a></li>
+							</a>
+				
+							</li>
 							<div class="hr"></div>
 							<li class="dropdown-user-item"><a href="/logout.html"
 								class="cta-link text-dark cta-user-item"> <i

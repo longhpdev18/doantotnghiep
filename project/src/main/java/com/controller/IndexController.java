@@ -64,7 +64,7 @@ public class IndexController {
 				sessionService.set("maKH", item.getMakh());
 			}
 		}
-		return "redirect:/index";
+		return "redirect://";
 	}
 	
 //	@RequestMapping("/product/page")
