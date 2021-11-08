@@ -17,9 +17,15 @@ list.forEach((item) =>
         main.classList.toggle('active');
     }
 //click all checkbox 
-function checkUncheck(main){
-    all = document.getElementsByName('lang');
-    for(var a = 0; a<all.length; a++) {
-        all[a].checked = main.checked;
-    }
+// function checkUncheck(main){
+//     all = document.getElementsByName('lang');
+//     for(var a = 0; a<all.length; a++) {
+//         all[a].checked = main.checked;
+//     }
+// }
+
+//profile 
+function menuToggle(){
+    const toggleMenu = document.querySelector('.menu');
+    toggleMenu.classList.toggle('active')
 }

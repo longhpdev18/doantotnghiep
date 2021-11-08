@@ -177,7 +177,12 @@ body {
     left: 10px;
     font-size: 1.2rem;
 }
-.user {
+.action {
+    /* position: fixed; */
+    position: relative;
+    right: 10px;
+}
+.action .user {
     position: relative;
     width: 40px;
     height: 40px;
@@ -185,7 +190,7 @@ body {
     overflow: hidden;
     cursor: pointer;
 }
-.user img {
+.action .user img {
     position: absolute;
     top: 0;
     left: 0;
@@ -193,6 +198,78 @@ body {
     height: 100%;
     object-fit: cover;
 }
+.action .menu {
+    position: absolute;
+    top: 60px;
+    right: -10px;
+    padding: 10px 20px;
+    background: var(--blue);
+    width: 160px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+}
+.action .menu.active{
+    top: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+.action .menu::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: var(--blue);
+    transform: rotate(45deg);
+}
+.action .menu h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--whiteColor);
+    line-height: 1.2em;
+}
+.action .menu h3 span {
+    font-size: 14px;
+    color: var(--text-grey);
+    font-weight: 200;
+}
+.action .menu ul li {
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+}
+.action .menu ul li i{
+    
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.action .menu ul li:hover i {
+    opacity: 1;
+}
+.action .menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--black1);
+    font-weight: 500;
+    transition: 0.5s;
+}
+.action .menu ul li:hover a {
+    color: var(--whiteColor);
+}
+
+
 /* cardbox */
 .cardBox {
     position: relative;
@@ -251,7 +328,6 @@ body {
     grid-template-columns: 2fr 1fr; /*chia làm 2 phần */
     grid-gap : 30px;  /*khoảng cách 2 phần */
     margin-top: 10px;
-    font-size: 13px; /* đâsdasdasdasdasdasdasd*/
 }
 
 .details .recentOrders 
