@@ -28,6 +28,7 @@
             <div class="profile">
 
                 <div class="profile-content">
+                <c:forEach var="item" items="${items}">
                     <div class="profile-left">
                         <div class="profile-image">
                             <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="">
@@ -39,7 +40,7 @@
                                 <i class="far fa-clock"></i>
                             </div> -->
                         </div>
-                        <p class="profile-id">#0001</p>
+                        <p class="profile-id">#000${item.makh}</p>
                     </div>
                     <div class="profile-right">
                         <h1 class="profile-title">Thông tin cá nhân</h1>
@@ -50,14 +51,14 @@
                                         Tên đăng nhập:
                                     </label>
                                     <input type="text" name="fullname" id="fullname" class="txtFullname"
-                                        value="Hoàng Phi Long" readonly>
+                                        value="${item.tendangnhap}" readonly>
                                 </div>
                                 <div class="form-group-col2 flex-col ml-m">
                                     <label for="password">
                                         Mật khẩu:
                                     </label>
                                     <input type="password" name="password" id="password" class="txtPassword"
-                                        placeholder="Mật khẩu tài khoản của bạn" readonly>
+                                       value="${item.tendangnhap}" placeholder="Mật khẩu tài khoản của bạn" readonly>
                                 </div>
                             </div>
                             <div class="form-group flex-row">
@@ -66,13 +67,13 @@
                                         Họ và tên:
                                     </label>
                                     <input type="text" name="fullname" id="fullname" class="txtFullname"
-                                        value="Hoàng Phi Long" readonly>
+                                        value="${item.tendangnhap}" readonly>
                                 </div>
                                 <div class="form-group-col2 flex-col ml-m">
                                     <label for="phone">
                                         Số điện thoại:
                                     </label>
-                                    <input type="number" name="phone" id="phone" class="txtPhone" value="0385818520"
+                                    <input type="number" name="phone" id="phone" class="txtPhone" value="${item.tendangnhap}"
                                         readonly>
                                 </div>
                             </div>
@@ -82,7 +83,7 @@
                                         Ngày sinh:
                                     </label>
                                     <input type="date" name="birthday" id="birthday" class="txtBirthday"
-                                        value="2000-05-18" readonly>
+                                        value="${item.tendangnhap}" readonly>
                                 </div>
                                 <div class="form-group-col2 flex-col ml-m">
                                     <label for="phone">
@@ -136,6 +137,7 @@
 
                         </form>
                     </div>
+                    </c:forEach>
                 </div>
             </div>
         </div>

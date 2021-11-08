@@ -30,8 +30,6 @@ public class ShoppingCartController {
 	//2. xem giỏ hàng
 	@RequestMapping("/cart/index")
 	public String view(Model model, Integer masp) {
-//		List<SanPham> items = sanphamDAO.getID(masp);
-//		model.addAttribute("items", items);
 		model.addAttribute("cart", cart);
 		return "home/cart/index";
 	}
@@ -40,26 +38,23 @@ public class ShoppingCartController {
 	@RequestMapping("cart/add/{masp}")
 	public String add(Model model,@PathVariable("masp") Integer masp) {
 		cart.add(masp);
-//		List<SanPham> items = sanphamDAO.getID(masp);
-//		model.addAttribute("items", items);
 		return "redirect:/cart/index"; 
 	}
 	@RequestMapping("/cart/remove/{masp}")
 	public String remove(@PathVariable("masp") Integer masp) {
 		cart.remove(masp);
-		return "redirect:/cart/view";
+		return "redirect:/cart/index";
 	}
 	@RequestMapping("/cart/update/{masp}")
 	public String update(@PathVariable("masp") Integer masp, 
-	@RequestParam("qty") Integer qty) {
+	@RequestParam("qty") int qty) {
 		cart.update(masp, qty);
-		return "redirect:/cart/view";
+		return "redirect:/cart/index";
 	}
 	@RequestMapping("/cart/clear")
 	public String clear() {
-		
 		cart.clear();
-		return "redirect:/cart/view";
+		return "redirect:/cart/index";
 	}
 	
 	

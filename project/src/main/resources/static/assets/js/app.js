@@ -21,7 +21,17 @@ $('.btn-cancel').click(function () {
 $('.btn-showUser').click(function () {
     $('.dropdown-user').toggleClass('active');
 })
+$('.btn-menu-mobile').click(function () {
+    $('.menu-mobile').toggleClass('active');
+})
 
+$('.menu-mobile-close').click(function () {
+    $('.menu-mobile').removeClass('active');
+})
+
+$('.btn-mobile-searchbox').click(function () {
+    $('.mb-search').toggleClass('active');
+})
 
 
 

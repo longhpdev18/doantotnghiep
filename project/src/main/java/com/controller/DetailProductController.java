@@ -25,8 +25,6 @@ public class DetailProductController {
 			throws ResourceNotFoundException {
 		List<SanPham> items = sanphamDAO.getID(masp);
 		model.addAttribute("items", items);
-		//SanPham SanPham = sanphamDAO.findById(masp);
-		//return ResponseEntity.ok().body(SanPham);
 		return"home/product/detail";
 	}
 }
