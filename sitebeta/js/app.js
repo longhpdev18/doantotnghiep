@@ -29,6 +29,9 @@ $('.menu-mobile-close').click(function () {
     $('.menu-mobile').removeClass('active');
 })
 
+$('.btn-mobile-searchbox').click(function () {
+    $('.mb-search').toggleClass('active');
+})
 
 
 
