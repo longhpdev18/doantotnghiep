@@ -432,4 +432,137 @@
     .profile-button {
         justify-content: center;
     }
+
+    .orders {
+        padding: var(--spaceS);
+    }
+
+    .order-item-bottom {
+        flex-direction: column;
+    }
+
+    .order-item-bottom .left {
+        width: 100%;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .order-item-bottom .order-status {
+        align-items: flex-end;
+    }
+
+    .order-status-title {
+        display: none;
+    }
+
+    .order-item-bottom .right {
+        width: 100%;
+        align-items: flex-end;
+        max-width: none;
+    }
+
+    .total-price-order {
+        width: 100%;
+        align-items: flex-end;
+
+    }
+
+    .order-detail {
+        padding: var(--spaceS);
+    }
+
+    .odd-heading {
+        height: auto;
+
+    }
+
+    .odd-pd-name {
+        font-size: 1.6rem;
+    }
+
+    .odd-heading .right {
+        width: 100%;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .order-detail-status {
+        margin-top: var(--space8);
+    }
+
+    .sd-status-text {
+        padding: var(--spaceS);
+    }
+
+    .odd-ship-detail {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .odd-ship-content {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .sd-col {
+        width: 100%;
+        flex-direction: row;
+        margin-top: var(--spaceM);
+    }
+
+
+    .sd-col .sd-col-top {
+        width: 20%;
+        justify-content: flex-start;
+    }
+
+    .sd-col .sd-col-bottom {
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    .address-status-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .address-date-wp {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .address-date {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .address-log-wp {
+        width: 100%;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    .address-log {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .odd-address-right {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+    .sd-status-wp {
+        display: none;
+    }
+
+    .odd-bottom-right {
+        width: 50%;
+    }
+
 }
