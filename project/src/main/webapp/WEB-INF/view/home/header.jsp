@@ -160,7 +160,7 @@
 						<ul class="dropdown-user">
 							<li class="dropdown-user-item">
 				
-							<a href="/profile/${maKH}" name="maKH" id="maKH" values="${maKH}"
+							<a href="/profile" name="maKH" id="maKH"
 								class="cta-link text-dark cta-user-item"> <i
 									class="fas fa-user-alt"></i>
 									<p class="user-item-text" >Thông tin tài khoản</p>
