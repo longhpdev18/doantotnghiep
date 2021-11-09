@@ -29,11 +29,12 @@ body {
 	z-index: 999;
 }
 
-.header__container {
+.header-wp {
 	max-width: 120rem;
 	display: flex;
 	justify-content: space-around;
 	margin: auto;
+	align-items: center;
 }
 
 .header__brand {
@@ -280,15 +281,19 @@ body {
 
 .hero {
 	width: 100%;
+	max-height: 50rem;
 	margin-top: calc(var(--spaceM) + 11rem);
 	position: relative;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .hero__container {
-	width: 120rem;
-	height: 50.4rem;
+	width: 100%;
+	max-width: 120rem;
+	height: 100%;
+	max-height: 50rem;
 	display: flex;
 	margin: auto;
 }
@@ -302,6 +307,7 @@ body {
 }
 
 .slider {
+	width: 100%;
 	max-width: 988px;
 	border-radius: inherit;
 	height: 100%;
@@ -393,16 +399,18 @@ body {
 
 .products {
 	width: 100%;
-	min-width: 120rem;
 	height: auto;
 	display: flex;
 	justify-content: center;
+	margin-top: var(--spaceS);
 }
 
 .products__container {
+	width: 100%;
 	max-width: 120rem;
 	height: auto;
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 }
 
@@ -683,16 +691,20 @@ body {
 
 .footer {
 	width: 100%;
-	height: 30rem;
-	min-width: 120rem;
+	min-height: 30rem;
 	background-color: var(--whiteColor);
 	display: flex;
+	bottom: 0;
+	position: relative;
 }
 
-.footer__container {
-	width: 120rem;
-	margin: var(--spaceM) auto;
+.footer-wp {
+	width: 100%;
+	max-width: 120rem;
+	margin: auto;
 	display: flex;
+	padding-top: var(--spaceS);
+	padding-bottom: var(--spaceS);
 }
 
 .footer__info {
@@ -703,11 +715,16 @@ body {
 
 .footer__info--top {
 	display: flex;
+	font-size: 1.4rem;
 	flex-direction: column;
 	margin-bottom: var(--spaceS);
 }
 
 .footer__info--top h2 {
+	font-weight: 400;
+}
+
+.footer__info--top h3 {
 	font-weight: 400;
 }
 
@@ -761,7 +778,6 @@ body {
 
 .pagination {
 	width: 100%;
-	min-width: 120rem;
 	height: 6rem;
 	padding: var(--spaceS);
 	display: flex;
@@ -774,6 +790,7 @@ body {
 	justify-content: space-around;
 	width: 30rem;
 	height: 100%;
+	max-width: 120rem;
 }
 
 .btn-prev {
@@ -982,7 +999,7 @@ body {
 
 .flex-col {
 	display: flex;
-	flex-direction: column !important;
+	flex-direction: column;
 }
 
 .ml-s {
@@ -993,8 +1010,8 @@ body {
 	margin-left: var(--spaceM);
 }
 
-.form-group-col2 {
-	width: calc(100% / 2);
+.mr-m {
+	margin-right: var(--spaceM);
 }
 
 .fLogin {
@@ -1012,12 +1029,37 @@ body {
 	margin-bottom: var(--spaceM);
 }
 
+.form-group-2 {
+	min-width: 100%;
+	width: calc(100% / 2);
+	display: flex;
+}
+
+.form-group-1 {
+	max-width: 100%;
+	width: 100%;
+	display: flex;
+}
+
+.form-group-1 .form-group {
+	margin-right: 0 !important;
+}
+
+.txtUsername,
+.txtPassword {
+	color: var(--grayColor);
+}
+
 .form-group {
 	width: 100%;
 	display: flex;
-	flex-direction: column;
 	font-size: 1.6rem;
 	margin-bottom: var(--spaceS);
+	font-weight: 600;
+}
+
+.form-group:first-child {
+	margin-right: var(--spaceM);
 }
 
 .form-group label {
@@ -1127,7 +1169,7 @@ body {
 
 .btn-showUser {
 	height: 100%;
-	padding: 1.2rem 1.2rem;
+	padding: 1rem 1rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -1177,8 +1219,9 @@ body {
 }
 
 .cta-cart {
-	width: 5.2rem;
-	height: 4.0rem;
+	width: 5rem;
+	height: 4.2rem;
+	padding: 1rem 1rem;
 }
 
 .menu-mobile {
@@ -1391,55 +1434,71 @@ body {
 	padding: var(--spaceS);
 	font-size: 1.6rem;
 	border-radius: var(--space8);
+	border: none;
+	outline: none;
 }
 
-.form-group .genders {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	position: relative;
-}
-
-.btn-showGenders {
+.gender-button {
 	width: 3rem;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	cursor: pointer;
 }
 
-.sub-genders {
-	width: 100%;
-	display: none;
+.gender-select {
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.gender-list {
 	position: absolute;
 	top: 100%;
 	left: 0;
-	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	width: 100%;
 	background-color: var(--whiteColor);
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	font-size: 1.4rem;
+	color: var(--darkColor);
+	display: none;
+	flex-direction: column;
+	border-radius: var(--space8);
 }
 
-.sub-genders .rdo-gender {
+.gender-list.active {
+	display: flex;
+}
+
+.gender-option {
 	width: 100%;
 	height: 4.2rem;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	padding: var(--spaceS);
-	cursor: pointer;
-	z-index: 99;
+	font-size: 1.4rem;
+	appearance: none;
+	-webkit-appearance: none;
 }
 
-.sub-genders .rdo-gender:hover {
-	background-color: var(--primaryColor2);
+.gender-option:hover {
+	background-color: var(--lightColor2);
 }
 
-.sub-genders.active {
-	display: block;
+.form-group .genders {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	appearance: none;
+	-webkit-appearance: none;
 }
 
-.form-group .txtPhone::-webkit-outer-spin-button,
+
+
+.gen .form-group .txtPhone::-webkit-outer-spin-button,
 .form-group .txtPhone::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
@@ -1608,9 +1667,12 @@ body {
 	color: #747d8c;
 }
 
+
+
 .flex-col2 {
 	width: calc(100% / 2);
 	display: flex;
+	flex-direction: column;
 }
 
 .product-info {
@@ -1894,12 +1956,22 @@ body {
 
 .profile {
 	width: 100%;
-	height: 100%;
 	display: flex;
-	margin: 0 auto;
 	flex-direction: column;
-	background-color: var(--whiteColor);
 	padding: var(--spaceM);
+	border-radius: var(--spaceS);
+	min-height: 60vh;
+	margin-top: 11rem;
+}
+
+.profile-wp {
+	width: 100%;
+	max-width: 120rem;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	background-color: var(--whiteColor);
+	padding: var(--spaceS);
 	border-radius: var(--spaceS);
 }
 
@@ -1910,9 +1982,7 @@ body {
 	font-size: 2.4rem;
 }
 
-.profile-content {
-	display: flex;
-}
+
 
 .profile-left {
 	width: 30rem;
@@ -1942,6 +2012,7 @@ body {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	font-size: 1.6rem;
 }
 
 .profile-image {
@@ -1991,6 +2062,8 @@ body {
 
 .profile-right {
 	flex: 1;
+	display: flex;
+	flex-direction: column;
 }
 
 .mb-search {
@@ -2229,6 +2302,7 @@ body {
 	flex-direction: column;
 	background-color: var(--whiteColor);
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	margin-top: var(--spaceS);
 	border-radius: var(--spaceS);
 }
 

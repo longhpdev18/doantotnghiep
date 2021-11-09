@@ -27,21 +27,6 @@ $('.btn-cat').mouseout(function () {
     $('.dropmenu').addClass('hidden');
 })
 
-var numbers = document.getElementById('cart-qty-input');
-for (i = 0; i < 100; i++) {
-    var span = document.createElement('span');
-    span.textContent = i;
-    numbers.appendChild(span);
-}
-var num = numbers.getElementsByTagName('span');
-var index = 0;
-
-function nextNum() {
-    num[index].style.display = "none";
-    index = (index + 1) % num.length;
-    num[index].style.display = "flex";
-}
-
 
 
 
