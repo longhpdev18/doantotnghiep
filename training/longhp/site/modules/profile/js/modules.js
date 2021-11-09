@@ -12,12 +12,8 @@ $('.btn-showUser').click(function () {
     $('.dropdown-user').toggleClass('active');
 })
 
-$('.btn-showGenders').click(function () {
-    $('.sub-genders').toggleClass('active');
-})
-
-$('.gender-option').click(function () {
-    $('.sub-genders').removeClass('active');
+$('.genders').click(function () {
+    $('.gender-list').toggleClass('active');
 })
 
 $('.btn-cat').mouseover(function () {
@@ -41,6 +37,16 @@ function nextNum() {
     index = (index + 1) % num.length;
     num[index].style.display = "flex";
 }
+
+var genderOption = document.getElementsByClassName('gender-option');
+var genderValue = document.getElementById('gender-value')
+
+for (gender of genderOption) {
+    gender.onclick = function () {
+        genderValue.innerHTML = this.textContent;
+    }
+}
+
 
 
 
