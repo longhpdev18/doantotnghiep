@@ -49,71 +49,76 @@
 			<div class="content__container">
 				<div class="products">
 					<ul class="products__container">
-						<div class="products__heading">
-							<h2 class="products__title">Top sản phẩm bán chạy</h2>
-							<a href="#" class="cta-link cta-pdmore">Xem thêm</a>
-						</div>
-						<ul class="products__list">
+						<c:forEach var="item" items="${items}">
+							<div class="products__heading">
+								<h2 class="products__title">${item.getLh().tenloai}</h2>
+								<a href="#" class="cta-link cta-pdmore">Xem thêm</a>
+							</div>
 
-							<c:forEach var="item" items="${items}">
-								<li class="product__item">
-								<a href="product/${item.masp}" name="masp"	class="cta-link cta-product">
-										<div class="product__deal">
-											<div class="product__deal--container">
-												<div class="deal-tg-left"></div>
-												<div class="deal-tg-right"></div>
-												<div class="deal-content">
-													Giảm<span>30%</span>
+							<ul class="products__list">
+
+								<c:forEach var="sp" items="${item.getSp().content}">
+										<li class="product__item"><a href="product/${sp.masp}"
+											name="masp" class="cta-link cta-product">
+												<div class="product__deal">
+													<div class="product__deal--container">
+														<div class="deal-tg-left"></div>
+														<div class="deal-tg-right"></div>
+														<div class="deal-content">
+															Giảm<span>30%</span>
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="product__top">
-											<img src="./assets/img/sanpham/${item.hinh}" alt=""
-												class="product-image">
-										</div>
+												<div class="product__top">
+													<img src="./assets/img/sanpham/${sp.hinh}" alt=""
+														class="product-image">
+												</div>
 
-										<div class="product__bottom">
-											<div class="product__content">
-												<h6 class="product-name">${item.tensp}</h6>
-												<h6 class="product-priceOld">23,490,000 đ</h6>
-												<h4 class="product-priceNew">${item.gia}đ</h4>
-											</div>
+												<div class="product__bottom">
+													<div class="product__content">
+														<h6 class="product-name">${sp.tensp}</h6>
+														<h6 class="product-priceOld">23,490,000 đ</h6>
+														<h4 class="product-priceNew">${sp.gia}đ</h4>
+													</div>
 
-											<div class="product__btnGroups">
-												<form method="get" action="cart/add/${item.masp}">
-													[<button type="submit"
-														class="btn btn-primary btn-buy rounded-8">Mua
-														ngay</button>]
-												</form>
-												<form method="get" action="cart/add/${item.masp}">
-													<button type="submit"
-														class="btn btn-light btn-addToCart rounded-8">Thêm
-														vào giỏ</button>
-												</form>
-											</div>
-										</div>
-								</a></li>
+													<div class="product__btnGroups">
+														<form method="get" action="cart/add/${sp.masp}">
+															[
+															<button type="submit"
+																class="btn btn-primary btn-buy rounded-8">Mua
+																ngay</button>
+															]
+														</form>
+														<form method="get" action="cart/add/${sp.masp}">
+															<button type="submit"
+																class="btn btn-light btn-addToCart rounded-8">Thêm
+																vào giỏ</button>
+														</form>
+													</div>
+												</div>
+										</a></li>
+								</c:forEach>
 
-
-							</c:forEach>
-						</ul>
+								<div class="pagination">
+									<div class="pagination__container">
+										<button
+											class="btn btn-pagination btn-prev bg-primary-hover text-primary-hover">
+											<i class="fas fa-caret-left"></i>
+										</button>
+										<button class="btn btn-pagination btn-number bg-primary-hover">2</button>
+										<button class="btn btn-pagination btn-number bg-primary-hover">3</button>
+										<button class="btn btn-pagination btn-number bg-primary-hover">4</button>
+										<button
+											class="btn btn-pagination btn-next bg-primary-hover text-primary-hover">
+											<i class="fas fa-caret-right"></i>
+										</button>
+									</div>
+								</div>
+							</ul>
+						</c:forEach>
 					</ul>
 				</div>
-				<div class="pagination">
-					<div class="pagination__container">
-						<button
-							class="btn btn-pagination btn-prev bg-primary-hover text-primary-hover">
-							<i class="fas fa-caret-left"></i>
-						</button>
-						<button class="btn btn-pagination btn-number bg-primary-hover">2</button>
-						<button class="btn btn-pagination btn-number bg-primary-hover">3</button>
-						<button class="btn btn-pagination btn-number bg-primary-hover">4</button>
-						<button
-							class="btn btn-pagination btn-next bg-primary-hover text-primary-hover">
-							<i class="fas fa-caret-right"></i>
-						</button>
-					</div>
-				</div>
+
 			</div>
 		</div>
 		<jsp:include page="footer.jsp"></jsp:include>

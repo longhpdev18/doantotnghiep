@@ -1,5 +1,6 @@
 package com.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,8 +22,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.model.KhachHang;
+import com.model.LH_SP;
+import com.model.LoaiHang;
 import com.model.SanPham;
 import com.repository.KhachHangDAO;
+import com.repository.LoaiHangDAO;
 import com.repository.SanPhamDAO;
 import com.service.CookieService;
 import com.service.ParamService;
@@ -43,10 +47,39 @@ public class IndexController {
 	KhachHangDAO khDAO;
 	@Autowired
 	ShoppingCartService cart;
-
+	@Autowired
+	LoaiHangDAO lhDAO;
 	@GetMapping("/")
 	public String index(Model model) {
-	    List<SanPham> items = sanphamDAO.findAll();
+		
+		Pageable Pageable = PageRequest.of(0, 4);
+	    List<LoaiHang> listLH = lhDAO.findAll();
+	    List<LH_SP> items = new ArrayList<LH_SP>();
+	    for(LoaiHang lh:listLH) {
+	    	LH_SP item = new LH_SP();
+	    	Page<SanPham> tempList =  sanphamDAO.getByLH((int) lh.getMaloai(),Pageable);
+	    	item.setLh(lh);
+	    	item.setSp(tempList);
+	    	items.add(item);
+		    
+	    }
+	    
+	    System.out.println(listLH.size());
+		model.addAttribute("items", items);
+		model.addAttribute("page","./ads.jsp");
+		model.addAttribute("menu","./menuLogin.jsp");
+		return "home/index";
+	}
+	@PostMapping("/search")
+	public String laptop(Model model) {
+		System.out.println(paramService.getInt("maloai", 0));
+		List<LH_SP> items = new ArrayList<LH_SP>();
+		Pageable Pageable = PageRequest.of(1, 4);
+		LH_SP item = new LH_SP();
+		Page<SanPham> tempList =  sanphamDAO.getByLH((int) paramService.getInt("maloai", 0),Pageable);
+    	item.setLh(lhDAO.getById((long) paramService.getInt("maloai", 0)));
+    	item.setSp(tempList);
+    	items.add(item);
 		model.addAttribute("items", items);
 		model.addAttribute("page","./ads.jsp");
 		model.addAttribute("menu","./menuLogin.jsp");

@@ -212,86 +212,88 @@
 		<div class="header__bottom--left rounded">
 			<li class="cat__title bg-primary btn-cat">Danh mục sản phẩm
 				<div class="dropmenu hidden">
+				<form action="/search" method="POST">
 					<ul class="dropmenu__container">
-						<li class="menu-item"><a href="#" class="menu-link ">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/laptop.svg" alt="">
 								</div>
 								<p>Laptop</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/desktop.svg" alt="">
 								</div>
 								<p>PC BestGear</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link ">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/apple.svg" alt="">
 								</div>
 								<p>Apple</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/pc.svg" alt="">
 								</div>
 								<p>PC Văn Phòng</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link ">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/pcacessory.svg" alt="">
 								</div>
 								<p>Linh Kiện</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/monitor.svg" alt="">
 								</div>
 								<p>Màn hình</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/keyboard.svg" alt="">
 								</div>
 								<p>Bàn phim</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/mouse.svg" alt="">
 								</div>
 								<p>Chuột + Lót chuột</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/headphone.svg" alt="">
 								</div>
 								<p>Tai nghe & Loa</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/chair.svg" alt="">
 								</div>
 								<p>Ghế Gaming</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/print.svg" alt="">
 								</div>
 								<p>Thiết bị văn phòng</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/internet.svg" alt="">
 								</div>
 								<p>Thiết bị mạng</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/accessorypc.svg" alt="">
 								</div>
 								<p>Phụ Kiện</p>
 						</a></li>
 					</ul>
+					</form>
 				</div>
 			</li>
 		</div>
