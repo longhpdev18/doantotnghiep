@@ -3,13 +3,18 @@ package com.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,12 +50,11 @@ public class IndexController {
 		model.addAttribute("items", items);
 		model.addAttribute("page","./ads.jsp");
 		model.addAttribute("menu","./menuLogin.jsp");
-		sessionService.set("items", items);
 		return "home/index";
 	}
 	
 	@PostMapping("/")
-	public String login(Model model, 
+	public String login(Model model,
 			@RequestParam("username") String username,
 			@RequestParam("password") String password) {
 		List<KhachHang> items = khDAO.loginKH(username,password);
@@ -66,7 +70,32 @@ public class IndexController {
 		}
 		return "redirect:/";
 	}
-	
+	@GetMapping("/logout")
+	public String logout(Model model) {
+		sessionService.remove("fullname");
+		sessionService.remove("maKH");
+		return "redirect:/";
+	}
+	@PostMapping("/register")
+	public String register(Model model , KhachHang item) {
+		System.out.println(paramService.getString("tendangnhapRegister", ""));
+		System.out.println(paramService.getString("matkhau", ""));
+		System.out.println(paramService.getString("email", ""));
+		System.out.println(paramService.getString("fullname", ""));
+		System.out.println(paramService.getInt("phone", 0));
+		System.out.println(paramService.getString("diachi", ""));
+		item.setTendangnhap(paramService.getString("tendangnhap", ""));
+		item.setMatkhau(paramService.getString("matkhau", ""));
+		item.setEmail(paramService.getString("email", ""));
+		item.setFullname(paramService.getString("fullname", ""));
+		item.setSodienthoai(paramService.getInt("phone", 0));
+		item.setDiachi(paramService.getString("diachi", ""));
+		if(khDAO.getByUsername(item.getTendangnhap())!=null) {
+			
+			khDAO.save(item);
+		}
+		return "redirect:/";
+	}
 //	@RequestMapping("/product/page")
 //	public String paginate(Model model) {
 //		Pageable pageable = PageRequest.of(2, 5);

@@ -55,7 +55,7 @@
 
 <!-- ======= REGISTER =======-->
 <div class="formRegister__container blur-dark">
-	<form action="" class="fRegister">
+	<form action="register" class="fRegister" method="POST" >
 		<div class="form-content">
 			<div class="form-content-left">
 				<div class="form-content-heading">
@@ -77,20 +77,21 @@
 				<div class="form-group flex-row">
 					<div class="form-group-col2 flex-col">
 						<label for="username"> Tên tài khoản: </label> <input type="text"
-							name="username" id="username" class="txtUsername"
+							name="username" id="tendangnhapRegister" class="txtUsername" 
 							placeholder="Tên tài khoản" required>
 					</div>
 					<div class="form-group-col2 flex-col ml-m">
 						<label for="email"> Email: </label> <input type="email"
-							name="email" id="useemailrname" class="txtEmail"
+							name="email" id="email" class="txtEmail" 
 							placeholder="Email" required>
 					</div>
 				</div>
 				<div class="form-group flex-row">
 					<div class="form-group-col2 flex-col">
 						<label for="password"> Mật khẩu: </label> <input type="password"
-							name="password" id="password" class="txtPassword"
+							name="password" id="matkhau" class="txtPassword" path="matkhau"
 							placeholder="Mật khẩu" required>
+							<form:errors path="matkhau"/>
 					</div>
 					<div class="form-group-col2 flex-col ml-m ">
 						<label for="repassword"> Xác nhận mật khẩu: </label> <input
@@ -98,13 +99,12 @@
 							class="txtRePassword" placeholder="Xác nhận mật khẩu" required>
 					</div>
 				</div>
-
 				<div class="hr"></div>
 				<h2 class="heading-title">Thông tin người dùng</h2>
 				<div class="form-group flex-row">
 					<div class="form-group-col2 flex-col">
 						<label for="fullname"> Họ và tên: </label> <input type="text"
-							name="fullname" id="fullname" class="txtFullname"
+							name="fullname" id="fullname" class="txtFullname" 
 							placeholder="Họ và tên" required>
 					</div>
 					<div class="form-group-col2 ml-m flex-col">
@@ -115,8 +115,8 @@
 				</div>
 				<div class="form-group">
 					<label for="address"> Địa chỉ: </label> <input type="text"
-						name="address" id="address" class="txtAddress"
-						placeholder="Địa chỉ" required>
+						name="address" id="diachi" class="txtAddress" 
+						placeholder="Địa chỉ" required> 
 				</div>
 				<div class="group-button">
 					<button class="btn btn-primary btn-register rounded-8">Đăng
@@ -173,7 +173,7 @@
 				
 							</li>
 							<div class="hr"></div>
-							<li class="dropdown-user-item"><a href="/logout.html"
+							<li class="dropdown-user-item"><a href="/logout"
 								class="cta-link text-dark cta-user-item"> <i
 									class="fas fa-sign-out-alt"></i>
 									<p class="user-item-text">Đăng xuất</p>
