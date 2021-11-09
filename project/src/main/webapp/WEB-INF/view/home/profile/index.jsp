@@ -57,26 +57,26 @@
 										<label for="password"> Mật khẩu: </label> <input
 											type="password" name="password" id="password"
 											class="txtPassword" value="${item.matkhau}"
-											placeholder="Mật khẩu tài khoản của bạn" readonly>
+											placeholder="Mật khẩu tài khoản của bạn" >
 									</div>
 								</div>
 								<div class="form-group flex-row">
 									<div class="form-group-col2 flex-col">
 										<label for="fullname"> Họ và tên: </label> <input type="text"
 											name="fullname" id="fullname" class="txtFullname"
-											value="${item.fullname}" readonly>
+											value="${item.fullname}" >
 									</div>
 									<div class="form-group-col2 flex-col ml-m">
 										<label for="phone"> Số điện thoại: </label> <input
 											type="number" name="phone" id="phone" class="txtPhone"
-											value="${item.sodienthoai}" readonly>
+											value="${item.sodienthoai}" >
 									</div>
 								</div>
 								<div class="form-group flex-row">
 									<div class="form-group-col2 flex-col">
 										<label for="birthday"> Ngày sinh: </label> <input type="date"
 											name="birthday" id="birthday" class="txtBirthday"
-											value="${item.ngaysinh}" readonly>
+											value="${item.ngaysinh}" >
 									</div>
 									<div class="form-group-col2 flex-col ml-m">
 										<label for="phone"> Giới tính: </label>
@@ -93,12 +93,12 @@
 								<div class="form-group">
 									<label for="Địa chỉ"> Địa chỉ: </label> <input type="text"
 										name="address" id="address" class="txtAddress"
-										value="${item.diachi}" readonly>
+										value="${item.diachi}" >
 								</div>
 								<div class="form-group">
 									<label for="email"> Email: </label> <input type="email"
 										name="email" id="email" class="txtEmail" value="${item.email}"
-										readonly>
+										>
 								</div>
 
 								<!-- PROFILE-BUTTON Khi đã click sửa -->
