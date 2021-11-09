@@ -78,21 +78,22 @@ public class IndexController {
 	}
 	@PostMapping("/register")
 	public String register(Model model , KhachHang item) {
-		System.out.println(paramService.getString("tendangnhapRegister", ""));
-		System.out.println(paramService.getString("matkhau", ""));
-		System.out.println(paramService.getString("email", ""));
-		System.out.println(paramService.getString("fullname", ""));
-		System.out.println(paramService.getInt("phone", 0));
-		System.out.println(paramService.getString("diachi", ""));
-		item.setTendangnhap(paramService.getString("tendangnhap", ""));
-		item.setMatkhau(paramService.getString("matkhau", ""));
+		item.setTendangnhap(paramService.getString("username", ""));
+		if(paramService.getString("password", "").equals(paramService.getString("repassword", ""))) {
+			item.setMatkhau(paramService.getString("password", ""));
+		}else {
+			model.addAttribute("message","Mật khẩu không trùng khớp!");
+			return "redirect:/";
+		}
 		item.setEmail(paramService.getString("email", ""));
 		item.setFullname(paramService.getString("fullname", ""));
 		item.setSodienthoai(paramService.getInt("phone", 0));
-		item.setDiachi(paramService.getString("diachi", ""));
+		item.setDiachi(paramService.getString("address", ""));
 		if(khDAO.getByUsername(item.getTendangnhap())!=null) {
 			
 			khDAO.save(item);
+			sessionService.set("fullname", item.getFullname());
+			sessionService.set("maKH", item.getMakh());
 		}
 		return "redirect:/";
 	}

@@ -97,6 +97,8 @@
 						<label for="repassword"> Xác nhận mật khẩu: </label> <input
 							type="password" name="repassword" id="repassword"
 							class="txtRePassword" placeholder="Xác nhận mật khẩu" required>
+							
+					${message}
 					</div>
 				</div>
 				<div class="hr"></div>
@@ -155,7 +157,8 @@
 			<div class="header__right">
 				<div class="header__right--container">
 					<button href="#" class="btn btn-primary rounded btn btn-showUser">
-						<p class="user-fullname">${fullname}</p>
+						<p class="user-fullname">${fullname} </p>
+						&nbsp;
 						<i class="fas fa-angle-down"></i>
 						<ul class="dropdown-user">
 							<li class="dropdown-user-item">

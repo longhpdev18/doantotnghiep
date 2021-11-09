@@ -79,8 +79,10 @@
 						<div class="group-button-content">
 							<button class="btn btn-buy btn-primary rounded-8">Mua
 								ngay</button>
-							<button class="btn btn-addToCart btn-light rounded-8">Thêm
-								vào giỏ</button>
+								<form action="/cart/add/${masp}">
+									<button class="btn btn-addToCart btn-light rounded-8">Thêm vào giỏ
+								</button>
+								</form>
 						</div>
 					</div>
 				</div>
