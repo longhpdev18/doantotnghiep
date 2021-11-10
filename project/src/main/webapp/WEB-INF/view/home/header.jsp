@@ -262,7 +262,7 @@
 								</div>
 								<p>Chuột + Lót chuột</p>
 						</a></li>
-						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+						<li class="menu-item"><button type="submit" name="maloai" value="5" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/headphone.svg" alt="">
 								</div>
