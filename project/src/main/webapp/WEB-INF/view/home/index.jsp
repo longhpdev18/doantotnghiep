@@ -27,7 +27,7 @@
 <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
 
 <!-- MY JS -->
-<script src="./assets/js/app.js"></script>
+
 <!-- FONT ANWESOME -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -89,7 +89,7 @@
 																ngay</button>
 															]
 														</form>
-														<form method="get" action="cart/add/${sp.masp}">
+														<form method="get" action="${sp.masp}">
 															<button type="submit"
 																class="btn btn-light btn-addToCart rounded-8">Thêm
 																vào giỏ</button>
@@ -127,6 +127,7 @@
 
 <script src="./../assets/js/starter.js"></script>
 <script src="./../assets/js/modules.js"></script>
+<script src="./assets/js/app.js"></script>
 <!-- JQUERY -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

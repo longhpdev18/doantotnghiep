@@ -130,6 +130,13 @@ public class IndexController {
 		}
 		return "redirect:/";
 	}
+	
+	@RequestMapping("{masp}")
+	public String add(Model model,@PathVariable("masp") Integer masp) {
+		cart.add(masp);
+		return "redirect:"; 
+	}
+	
 //	@RequestMapping("/product/page")
 //	public String paginate(Model model) {
 //		Pageable pageable = PageRequest.of(2, 5);

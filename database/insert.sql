@@ -9,8 +9,15 @@ insert into nhanhieu values ('Asus'),('Acer'),('Lenovo'),('MSI'),('Logitech')
 select * from nhanhieu
 -----
 ---loaihang---
-insert into loaihang values (N'Laptop'),(N'PC'),(N'Bàn phím'),(N'Chuột'),(N'Ghế Gaming')
-,(N'Loa'),(N'Màn hình'),(N'Phụ kiện'),(N'Tai nghe')
+insert into loaihang values (N'Bàn Phím'),
+(N'Máy In'),
+(N'Lap Top'),
+(N'PC'),
+(N'Tai Nghe')
+,(N'Chuột')
+,(N'Ghế Gaming'),
+(N'Loa'),
+(N'Màn Hình')
 ,(N'Thiết bị văn phòng');
 
 select * from loaihang
@@ -169,26 +176,26 @@ insert into sanpham values (N'Tản nhiệt GIGABYTE AORUS ATC800',10,10,'209000
 Thời gian bảo hành:36 Tháng',0,'Tan nhiet GIGABYTE AORUS ATC800.jpg')
 insert into sanpham values (N'Tản nhiệt RAIJINTEK JUNO PRO RBW',10,10,'350000',N'Thông số sản phẩm,Kích thước nhỏ gọn, hiệu năng với mức giá thành hợp lý,Giải pháp thay thế mẫu tản nhiệt stock đi kèm CPU của các hãng, Đèn RGB cho hiệu ứng ánh sáng độc đáo và hiệu suất tản nhiệt cải thiện',0,'Tan nhiet RAIJINTEK JUNO PRO RBW.jpg')
 
-insert into sanpham values (N'Tai nghe DareU EH416 RGB',9,1,'350000',N'Tai nghe gaming giá rẻ DareU EH416 RGB với tông màu chủ đạo là đen bóng huyền bí, cá tính cùng với hai củ tai to và dày mang lại cảm giác mạnh mẽ nhưng cũng không kém phần sang trọng. Trọng lượng của tai nghe khá nhẹ chỉ 450gr dù dáng vẻ hơi cồng kềnh',0,'tai nghe DareU EH416 RGB.png')
-,(N'DAREU EH469 7.1 RGB PINK',9,1,'350000',N'Tai nghe gaming giá rẻ DAREU EH469 7.1 RGB PINK với tông màu chủ đạo là đen bóng huyền bí, cá tính cùng với hai củ tai to và dày mang lại cảm giác mạnh mẽ nhưng cũng không kém phần sang trọng. Trọng lượng của tai nghe khá nhẹ chỉ 450gr dù dáng vẻ hơi cồng kềnh',0,'DAREU EH469 7.1 RGB PINK.jpg')
-,(N'Razer BlackShark V2 Pro',9,1,'350000',N'Tai nghe gaming giá rẻ Razer BlackShark V2 Pro với tông màu chủ đạo là đen bóng huyền bí, cá tính cùng với hai củ tai to và dày mang lại cảm giác mạnh mẽ nhưng cũng không kém phần sang trọng. Trọng lượng của tai nghe khá nhẹ chỉ 450gr dù dáng vẻ hơi cồng kềnh',0,'Razer BlackShark V2 Pro.jpg')
+insert into sanpham values (N'Tai nghe DareU EH416 RGB',5,1,'350000',N'Tai nghe gaming giá rẻ DareU EH416 RGB với tông màu chủ đạo là đen bóng huyền bí, cá tính cùng với hai củ tai to và dày mang lại cảm giác mạnh mẽ nhưng cũng không kém phần sang trọng. Trọng lượng của tai nghe khá nhẹ chỉ 450gr dù dáng vẻ hơi cồng kềnh',0,'tai nghe DareU EH416 RGB.png')
+,(N'DAREU EH469 7.1 RGB PINK',5,1,'350000',N'Tai nghe gaming giá rẻ DAREU EH469 7.1 RGB PINK với tông màu chủ đạo là đen bóng huyền bí, cá tính cùng với hai củ tai to và dày mang lại cảm giác mạnh mẽ nhưng cũng không kém phần sang trọng. Trọng lượng của tai nghe khá nhẹ chỉ 450gr dù dáng vẻ hơi cồng kềnh',0,'DAREU EH469 7.1 RGB PINK.jpg')
+,(N'Razer BlackShark V2 Pro',5,1,'350000',N'Tai nghe gaming giá rẻ Razer BlackShark V2 Pro với tông màu chủ đạo là đen bóng huyền bí, cá tính cùng với hai củ tai to và dày mang lại cảm giác mạnh mẽ nhưng cũng không kém phần sang trọng. Trọng lượng của tai nghe khá nhẹ chỉ 450gr dù dáng vẻ hơi cồng kềnh',0,'Razer BlackShark V2 Pro.jpg')
 
-insert into sanpham values (N'Razer SteelSeries Arctis 5 Black Edition - 2019 Edition',9,1,'350000',N'Tai nghe gaming giá rẻ SteelSeries Arctis 5 Black Edition - 2019 Edition với tông màu chủ đạo là đen bóng huyền bí, cá tính cùng với hai củ tai to và dày mang lại cảm giác mạnh mẽ nhưng cũng không kém phần sang trọng. Trọng lượng của tai nghe khá nhẹ chỉ 450gr dù dáng vẻ hơi cồng kềnh',0,'SteelSeries Arctis 5 Black Edition - 2019 Edition.jpg')
+insert into sanpham values (N'Razer SteelSeries Arctis 5 Black Edition - 2019 Edition',5,1,'350000',N'Tai nghe gaming giá rẻ SteelSeries Arctis 5 Black Edition - 2019 Edition với tông màu chủ đạo là đen bóng huyền bí, cá tính cùng với hai củ tai to và dày mang lại cảm giác mạnh mẽ nhưng cũng không kém phần sang trọng. Trọng lượng của tai nghe khá nhẹ chỉ 450gr dù dáng vẻ hơi cồng kềnh',0,'SteelSeries Arctis 5 Black Edition - 2019 Edition.jpg')
 
-insert into sanpham values (N'SteelSeries Arctis 7P White',9,1,'350000',N'Tai nghe gaming giá rẻ SteelSeries Arctis 7P White với tông màu chủ đạo là đen bóng huyền bí, cá tính cùng với hai củ tai to và dày mang lại cảm giác mạnh mẽ nhưng cũng không kém phần sang trọng. Trọng lượng của tai nghe khá nhẹ chỉ 450gr dù dáng vẻ hơi cồng kềnh',0,'Razer BlackShark V2 Pro.jpg')
-, (N'Tai nghe HyperX Cloud Earbuds',9,6,'790000',N'Hiện chưa có thông tin',1,'Tai nghe HyperX Cloud Earbuds.png')
-, (N'Tai nghe HyperX Cloud II RED',9,7,'2090000',N'Đánh giá chi tiết tai nghe HyperX Cloud II RED
+insert into sanpham values (N'SteelSeries Arctis 7P White',5,1,'350000',N'Tai nghe gaming giá rẻ SteelSeries Arctis 7P White với tông màu chủ đạo là đen bóng huyền bí, cá tính cùng với hai củ tai to và dày mang lại cảm giác mạnh mẽ nhưng cũng không kém phần sang trọng. Trọng lượng của tai nghe khá nhẹ chỉ 450gr dù dáng vẻ hơi cồng kềnh',0,'Razer BlackShark V2 Pro.jpg')
+, (N'Tai nghe HyperX Cloud Earbuds',5,6,'790000',N'Hiện chưa có thông tin',1,'Tai nghe HyperX Cloud Earbuds.png')
+, (N'Tai nghe HyperX Cloud II RED',5,7,'2090000',N'Đánh giá chi tiết tai nghe HyperX Cloud II RED
 Với những gì thể hiện, tai nghe gaming chụp tai đến từ HyperX được xem là một trong số những chiếc tai nghe gaming giá rẻ dành riêng cho game thủ tốt nhất với giá thành vô cùng hợp lý.',0,'Tai nghe HyperX Cloud II RED.jpg')
-, (N'Tai nghe Rapoo VH150',9,8,'490000',N'Tai Nghe Rapoo VH150 là một trong những dòng tai nghe gaming giá rẻ, được thiết kế tối ưu cho cảm giác êm tai, không bị khó chịu khi đeo trong thời gian dài. Tai nghe ôm khít mọi cỡ đầu và tạo được cảm giác dễ chịu cho mọi đối tượng.',1,'Tai nghe Rapoo VH150.jpg')
-, (N'Tai nghe Rapoo VM150 In-ear',9,9,'400000',N'Tai nghe gaming giá rẻ Rapoo VM150 In-ear với thiết kế hiện đại, đậm chất gaming dù chỉ là tai nghe In-ear. Đi kèm 1 Mic rời, 1 dây chia jack 3.5, 2 cặp buds (cộng với cặp mặc định sẽ là 3 size S-M-L).',0,'Tai nghe Rapoo VM150 In-ear.jpg')
-, (N'Tai nghe Razer Kraken X - Black',9,10,'1190000',N'Tai nghe gaming giá rẻ Razer Kraken X - Black được trang bị phần mềm tuỳ chỉnh hệ thống âm thanh vòm 7.1 nên chính vì vậy bạn có thể trải nghiệm âm thanh từ các hướng khác nhau một cách chính xác - bạn có thể biết được hướng ',1,'Tai nghe Razer Kraken X - Black.png')
+, (N'Tai nghe Rapoo VH150',5,8,'490000',N'Tai Nghe Rapoo VH150 là một trong những dòng tai nghe gaming giá rẻ, được thiết kế tối ưu cho cảm giác êm tai, không bị khó chịu khi đeo trong thời gian dài. Tai nghe ôm khít mọi cỡ đầu và tạo được cảm giác dễ chịu cho mọi đối tượng.',1,'Tai nghe Rapoo VH150.jpg')
+, (N'Tai nghe Rapoo VM150 In-ear',5,9,'400000',N'Tai nghe gaming giá rẻ Rapoo VM150 In-ear với thiết kế hiện đại, đậm chất gaming dù chỉ là tai nghe In-ear. Đi kèm 1 Mic rời, 1 dây chia jack 3.5, 2 cặp buds (cộng với cặp mặc định sẽ là 3 size S-M-L).',0,'Tai nghe Rapoo VM150 In-ear.jpg')
+, (N'Tai nghe Razer Kraken X - Black',5,10,'1190000',N'Tai nghe gaming giá rẻ Razer Kraken X - Black được trang bị phần mềm tuỳ chỉnh hệ thống âm thanh vòm 7.1 nên chính vì vậy bạn có thể trải nghiệm âm thanh từ các hướng khác nhau một cách chính xác - bạn có thể biết được hướng ',1,'Tai nghe Razer Kraken X - Black.png')
 
-insert into sanpham values (N'Máy in Brother In Phun đa chức năng DCP-T710W',10,2,'5100000',N'hIn, Scan & Copy với kết nối Wifi và khay ADF tiện lợi. Bình mực dung tích lớn, in đến 6,500 trang trắng đen và 5,000 trang màu. Tốc độ in nhanh vượt trội lên đến 12/10ipm.',1,'Máy in Brother In Phun DCP-T710W.jpg')
-, (N'Máy in Brother laser đa năng MFC-L2701D',10,3,'5490000',N'In, Scan & Copy với kết nối Wifi và khay ADF tiện lợi. Bình mực dung tích lớn, in đến 6,500 trang trắng đen và 5,000 trang màu. Tốc độ in nhanh vượt trội lên đến 12/10ipm.',1,'Máy in Brother laser MFC-L2701D.jpg')
-, (N'Máy in Brother laser Trắng Đen HL L2321D',10,7,'5700000',N'Máy in Brother laser đa năng MFC-L2701D',0,'Máy in Brother laser HL L2321D.jpg')
-, (N'Máy in laser BROTHER MFC-L6900DW',10,9,'22990000',N'Tất cả tính năng in, scan, fax, photo tích hợp trong một tính năng nhỏ gọn. Brother MFC-L6900DW thực hiện tiết kiệm chi phí nhờ hộp mực siêu năng suất cao, tốc độ in và sao chụp cực nhanh lên đến 52 trang/ phút và dung lượng khay giấy lớn chứa tối đa 570 tờ.',0,'Máy in laser BROTHER MFC-L6900DW.jpg')
-, (N'Máy in phun màu BROTHER HL-T4000DW',10,2,'12000000',N'Tất cả tính năng in, scan, fax, photo tích hợp trong một tính năng nhỏ gọn. Brother MFC-L6900DW thực hiện tiết kiệm chi phí nhờ hộp mực siêu năng suất cao, tốc độ in và sao chụp cực nhanh lên đến 52 trang/ phút và dung lượng khay giấy lớn chứa tối đa 570 tờ.',0,'Máy in phun màu BROTHER HL-T4000DW.jpg')
-, (N'Mực in Brother BT 5000C',10,4,'140000',N'Tất cả tính năng in, scan, fax, photo tích hợp trong một tính năng nhỏ gọn. Brother MFC-L6900DW thực hiện tiết kiệm chi phí nhờ hộp mực siêu năng suất cao, tốc độ in và sao chụp cực nhanh lên đến 52 trang/ phút và dung lượng khay giấy lớn chứa tối đa 570 tờ.',0,'Muc in Brother BT 5000C.jpg')
+insert into sanpham values (N'Máy in Brother In Phun đa chức năng DCP-T710W',2,2,'5100000',N'hIn, Scan & Copy với kết nối Wifi và khay ADF tiện lợi. Bình mực dung tích lớn, in đến 6,500 trang trắng đen và 5,000 trang màu. Tốc độ in nhanh vượt trội lên đến 12/10ipm.',1,'Máy in Brother In Phun DCP-T710W.jpg')
+, (N'Máy in Brother laser đa năng MFC-L2701D',2,3,'5490000',N'In, Scan & Copy với kết nối Wifi và khay ADF tiện lợi. Bình mực dung tích lớn, in đến 6,500 trang trắng đen và 5,000 trang màu. Tốc độ in nhanh vượt trội lên đến 12/10ipm.',1,'Máy in Brother laser MFC-L2701D.jpg')
+, (N'Máy in Brother laser Trắng Đen HL L2321D',2,7,'5700000',N'Máy in Brother laser đa năng MFC-L2701D',0,'Máy in Brother laser HL L2321D.jpg')
+, (N'Máy in laser BROTHER MFC-L6900DW',2,9,'22990000',N'Tất cả tính năng in, scan, fax, photo tích hợp trong một tính năng nhỏ gọn. Brother MFC-L6900DW thực hiện tiết kiệm chi phí nhờ hộp mực siêu năng suất cao, tốc độ in và sao chụp cực nhanh lên đến 52 trang/ phút và dung lượng khay giấy lớn chứa tối đa 570 tờ.',0,'Máy in laser BROTHER MFC-L6900DW.jpg')
+, (N'Máy in phun màu BROTHER HL-T4000DW',2,2,'12000000',N'Tất cả tính năng in, scan, fax, photo tích hợp trong một tính năng nhỏ gọn. Brother MFC-L6900DW thực hiện tiết kiệm chi phí nhờ hộp mực siêu năng suất cao, tốc độ in và sao chụp cực nhanh lên đến 52 trang/ phút và dung lượng khay giấy lớn chứa tối đa 570 tờ.',0,'Máy in phun màu BROTHER HL-T4000DW.jpg')
+, (N'Mực in Brother BT 5000C',2,4,'140000',N'Tất cả tính năng in, scan, fax, photo tích hợp trong một tính năng nhỏ gọn. Brother MFC-L6900DW thực hiện tiết kiệm chi phí nhờ hộp mực siêu năng suất cao, tốc độ in và sao chụp cực nhanh lên đến 52 trang/ phút và dung lượng khay giấy lớn chứa tối đa 570 tờ.',0,'Muc in Brother BT 5000C.jpg')
 , (N'Phần mềm Microsoft 365 Family 6GQ-00083',10,5,'1390000',N'Thông tin chung:
 Nhà sản xuất : Mircosoft,Mã sản phẩm:  6GQ-00083 (Sản phẩm là Key điện tử, không thể hoàn lại khi mua.), Thời hạn 1 năm  Số tài khoản: 6 người dùng, Số thiết bị: 30 thiết bị ( Lưu ý: 5 thiết bị/ 1 người dùng)',1,'Microsoft 365 Family 6GQ-00083.jpg')
 , (N'Phần mềm Office Home & Student 2019 79G-05020',10,8,'2090000',N'Dành cho Sinh viên & Hộ gia đình có nhu cầu sử dụng phiên bản Office 2019 cổ điển của các ứng dụng Word, Excel, PowerPoint và OneNote dành cho Windows 10, cài đặt trên một PC hoặc Mac để sử dụng tại nhà hoặc trường học, bao gồm 60 ngày hỗ trợ miễn phí từ Microsoft',1,'Office Home & Student 2019 79G-05020.jpg')
