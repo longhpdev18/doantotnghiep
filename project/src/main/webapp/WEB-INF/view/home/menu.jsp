@@ -4,37 +4,37 @@
 		<div class="hero__left">
 			<ul class="menu__container">
 			<form action="search" method="POST">
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="3" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/laptop.svg" alt="">
 						</div>
 						<p>Laptop</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="4" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/desktop.svg" alt="">
 						</div>
 						<p>PC BestGear</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="11" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/apple.svg" alt="">
 						</div>
 						<p>Apple</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="4" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/pc.svg" alt="">
 						</div>
 						<p>PC Văn Phòng</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="10" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/pcacessory.svg" alt="">
 						</div>
 						<p>Linh Kiện</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="9" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/monitor.svg" alt="">
 						</div>
@@ -46,37 +46,37 @@
 						</div>
 						<p>Bàn phim</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="6" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/mouse.svg" alt="">
 						</div>
 						<p>Chuột + Lót chuột</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="5" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/headphone.svg" alt="">
 						</div>
 						<p>Tai nghe & Loa</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="7" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/chair.svg" alt="">
 						</div>
 						<p>Ghế Gaming</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="10" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/print.svg" alt="">
 						</div>
 						<p>Thiết bị văn phòng</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="11" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/internet.svg" alt="">
 						</div>
 						<p>Thiết bị mạng</p>
 				</a></li>
-				<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
+				<li class="menu-item"><button type="submit" name="maloai" value="11" class="menu-link ">
 						<div class="menu-icon">
 							<img src="./assets/icons/accessorypc.svg" alt="">
 						</div>
