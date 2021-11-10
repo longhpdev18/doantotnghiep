@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>THÔNG TIN CHI TIẾT KHÁCH HÀNG</title>
+    <title>THÔNG TIN ĐƠN HÀNG</title>
 
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="../../css/style.css" />
@@ -72,6 +72,7 @@
                 </div>
             </form>
         </div>
+
 
         <!-- ======= REGISTER =======-->
         <div class="formRegister__container blur-dark">
@@ -518,120 +519,106 @@
                 </div>
             </div>
         </div>
-        <div class="profile">
-            <div class="profile-wp">
-                <div class="profile-left">
-                    <div class="profile-image">
-                        <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="">
-                        <div class="veri-account">
-                            <i class="fas fa-check"></i>
+        <div class="content">
+            <div class="content__container">
+                <div class="orders">
+                    <h1>Danh sách đơn hàng</h1>
+
+                    <!-- KHI DANH SÁCH ĐƠN HÀNG TRỐNG // MỞ COMMENT RA LÀ ĐƯỢC -->
+
+                    <!--                     <ul class="order-empty">
+                        <div class="empty-image">
+                            <img src="../../images/pdcat-empty.png" alt="">
                         </div>
-                    </div>
-                    <p class="profile-id">#0001</p>
-                </div>
-                <div class="profile-right">
-                    <h1 class="profile-title">Thông tin cá nhân</h1>
-                    <form action="">
-                        <div class="form-group-2">
-                            <div class="form-group">
-                                <label for="username">
-                                    Tên đăng nhập:
-                                </label>
-                                <input type="text" name="username" id="username" class="txtUsername" value="longhpdev1"
-                                    readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">
-                                    Mật khẩu:
-                                </label>
-                                <input type="password" name="password" id="password" class="txtPassword"
-                                    value="********" readonly>
-                            </div>
+                        <h1>Oh no!</h1>
+                        <p>Danh sách đơn hàng trống...</p>
+                        <a href="../../" class="">Tiếp tục mua hàng</a>
+                    </ul> -->
+                    <ul class="order-item">
+                        <div class="order-item-top">
+                            <li class="order-product">
+                                <a href="#" class="order-pd-content">
+                                    <div class="order-pd-image"></div>
+                                </a>
+                            </li>
                         </div>
-                        <div class="form-group-2">
-                            <div class="form-group">
-                                <label for="fullname">
-                                    Họ và tên:
-                                </label>
-                                <input type="text" name="fullname" id="fullname" class="txtFullname"
-                                    value="Hoàng Phi Long">
+                        <div class="order-item-bottom">
+                            <div class="left">
+                                <div class="order-status">
+                                    <div class="order-status-title">Trạng thái đơn hàng:</div>
+                                    <div class="od-status">Đơn hàng đã được tiếp nhận</div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="phone">
-                                    Số điện thoại:
-                                </label>
-                                <input type="number" name="phone" id="phone" class="txtPhone" value="0385818520">
-                            </div>
-                        </div>
-                        <div class="form-group-2">
-                            <div class="form-group">
-                                <label for="birthday">
-                                    Ngày sinh:
-                                </label>
-                                <input type="date" name="birthday" id="birthday" class="txtBirthday" value="2000-05-18">
-                            </div>
-                            <div class="form-group">
-                                <label for="genders">
-                                    Giới tính:
-                                </label>
-                                <div class="genders">
-                                    <div class="gender-select">
-                                        <span class="gender-value" id="gender-value">Nam</span>
-                                        <div class="gender-button">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </div>
+                            <div class="right">
+                                <div class="total-price-order">
+                                    <div class="total-price-left">
+                                        Tổng thanh toán:
                                     </div>
-                                    <div class="gender-list">
-                                        <div class="gender-option">Nam</div>
-                                        <div class="gender-option">Nữ</div>
+                                    <div class="total-price-right">
+                                        59.000.000 đ
                                     </div>
+                                </div>
+                                <div class="order-item-button">
+                                    <a href="../order-detail/" class="order-btn order-btn-detail">
+                                        Chi tiết đơn hàng</a>
+                                    <button class="order-btn order-btn-cancel">Hủy đơn hàng</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group-1">
-                            <div class="form-group">
-                                <label for="address">
-                                    Địa chỉ:
-                                </label>
-                                <input type="text" name="address" id="address" class="txtAddress"
-                                    value="Khu Phố Long Điền 1, Phường Long Phước">
+                    </ul>
+                    <ul class="order-item">
+                        <div class="order-item-top">
+                            <li class="order-product">
+                                <a href="#" class="order-pd-content">
+                                    <div class="order-pd-image"></div>
+                                </a>
+                            </li>
+                            <li class="order-product">
+                                <a href="#" class="order-pd-content">
+                                    <div class="order-pd-image"></div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="order-item-bottom">
+                            <div class="left">
+                                <div class="order-status">
+                                    <div class="order-status-title">Trạng thái đơn hàng:</div>
+                                    <div class="od-status">Đơn hàng đã được tiếp nhận</div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="total-price-order">
+                                    <div class="total-price-left">
+                                        Tổng thanh toán:
+                                    </div>
+                                    <div class="total-price-right">
+                                        59.000.000 đ
+                                    </div>
+                                </div>
+                                <div class="order-item-button">
+                                    <a href="../order-detail/" class="order-btn order-btn-detail">
+                                        Chi tiết đơn hàng</a>
+                                    <button class="order-btn order-btn-cancel">Hủy đơn hàng</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group-1">
-                            <div class="form-group">
-                                <label for="email">
-                                    Email:
-                                </label>
-                                <input type="mail" name="email" id="email" class="txtEmail"
-                                    value="longhpdev18@gmail.com">
-                            </div>
-                        </div>
-                        <!-- PROFILE-BUTTON Khi đã click sửa -->
-                        <div class="profile-button">
-                            <button class="btn btn-primary btn-save mr-10 rounded-8">Chỉnh sửa</button>
-                            <button class="btn btn-light rounded-8">Hủy</button>
-                        </div>
+                    </ul>
 
-                        <!-- PROFILE-BUTTON Khi chưa click sửa -->
-                        <!-- <div class="profile-button">
-                                <button class="btn btn-primary btn-edit rounded-8">Chỉnh sửa</button>
-                            </div> -->
-
-                    </form>
                 </div>
             </div>
         </div>
-        <!-- ==== FOOTER ==== -->
+        <!--====FOOTER====-->
         <div class="footer">
             <div class="footer-wp">
                 <div class="footer__info">
                     <div class="footer__info--top">
-                        <h3><strong>CÔNG TY TNHH THƯƠNG MẠI BESTGEAR</strong></h3>
-                        <p><strong>EMAIL: CSKH@BESTGEAR.COM</strong></p>
-                        <p><strong>HỆ THỐNG TỔNG ĐÀI MIỄN PHÍ:</strong> <span>(Làm việc từ 8h00 - 22h00)</span>
-                        </p>
-                        <p>Gọi mua hàng: <strong>19001000</strong></p>
-                        <p>Hỗ trợ khách hàng: <strong>19001002</strong></p>
+                        <h2><strong>CÔNG TY TNHH THƯƠNG MẠI BESTGEAR</strong></h2>
+                        <h3><strong>EMAIL: CSKH@BESTGEAR.COM</strong></h3>
+                        <h3><strong>HỆ THỐNG TỔNG ĐÀI MIỄN PHÍ:</strong> <span>(Làm việc từ 8h00 -
+                                22h00)</span>
+                        </h3>
+                        <h3>Gọi mua hàng: <strong>19001000</strong></h3>
+                        <h3>Hỗ trợ khách hàng: <strong>19001002</strong></h3>
                     </div>
                     <div class="footer__info--center">
                         <a href="#" class="cta-link text-primary-hover">Chính sách bảo hành</a>
@@ -648,22 +635,28 @@
                     <div class="footer__adrShowroom--top">
                         <h2 class="text-primary"><strong>HỆ THỐNG CỬA HÀNG</strong></h2>
                         <h2><strong>SHOWROOM HCM</strong> (Làm việc từ 8h00 - 22h00)</h2>
-                        <h2 class="adrShowroom">-Địa chỉ: 100-102-104 Hoàng Hoa Thám, Phường 11, Quận Tân Bình.</h2>
+                        <h2 class="adrShowroom">-Địa chỉ: 100-102-104 Hoàng Hoa Thám, Phường 11,
+                            Quận Tân Bình.</h2>
                         <h2><strong>SHOWROOM HCM</strong> (Làm việc từ 8h00 - 22h00)</h2>
-                        <h2 class="adrShowroom">-Địa chỉ: 100-102-104 Hoàng Hoa Thám, Phường 11, Quận Tân Bình.</h2>
+                        <h2 class="adrShowroom">-Địa chỉ: 100-102-104 Hoàng Hoa Thám, Phường 11,
+                            Quận Tân Bình.</h2>
                     </div>
                     <div class="text--marketing">
                         Mua <a href="#" class="text-primary text-primary-hover ">PC Gaming</a>, <a href="#"
                             class="text-primary text-primary-hover ">laptop gaming</a>,
                         <a href="#" class="text-primary text-primary-hover ">card màn
-                            hình</a>, <a href="#" class="text-primary text-primary-hover ">màn hình máy
-                            tính</a>, <a href="#" class="text-primary text-primary-hover">ghế gaming</a>, <a href="#"
-                            class="text-primary text-primary-hover">thiết bị chơi game</a>
-                        như PS5 hàng đầu Việt Nam bảo hành chính hãng. Mua online nhận nhiều ưu đãi hấp dẫn.
+                            hình</a>, <a href="#" class="text-primary text-primary-hover ">màn hình
+                            máy
+                            tính</a>, <a href="#" class="text-primary text-primary-hover">ghế
+                            gaming</a>, <a href="#" class="text-primary text-primary-hover">thiết bị
+                            chơi game</a>
+                        như PS5 hàng đầu Việt Nam bảo hành chính hãng. Mua online nhận nhiều ưu đãi
+                        hấp dẫn.
                     </div>
                     <div class="text--company">
                         <p>- Công ty TNHH Thương Mại BestGear</p>
-                        <p>- GPKD số 0316517394 do Sở KH và ĐT TP Hồ Chí Minh cấp ngày 01/10/2020</p>
+                        <p>- GPKD số 0316517394 do Sở KH và ĐT TP Hồ Chí Minh cấp ngày 01/10/2020
+                        </p>
                         <p>- GĐ/Sở hữu website: NHÓM BESTGEAR</p>
                     </div>
                 </div>
@@ -677,17 +670,6 @@
 <!-- MY JS -->
 <script src="../../js/app.js"></script>
 <script src="./js/modules.js"></script>
-
-<script>
-    var genderOption = document.getElementsByClassName('gender-option');
-    var genderValue = document.getElementById('gender-value')
-
-    for (gender of genderOption) {
-        gender.onclick = function () {
-            genderValue.innerHTML = this.textContent;
-        }
-    }
-</script>
 
 <!-- JQUERY -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -10,6 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity(name = "khachhang")
 @Table(name = "khachhang")
@@ -18,30 +23,23 @@ public class KhachHang {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long makh;
-	@Column(name = "tendangnhap", nullable = false)
+	@Column(name = "tendangnhap")
 	private String tendangnhap;
-
-	@Column(name = "matkhau", nullable = false)
+	@Column(name = "matkhau")
 	private String matkhau;
 	
-	
-	@Column(name = "fullname", nullable = false)
+	@Column(name = "fullname")
 	private String fullname;
-	
 	@Temporal(TemporalType.DATE)
-	@Column(name = "ngaysinh", nullable = false)
+	
+	@Column(name = "ngaysinh")
 	private Date ngaysinh;
-	
-	@Column(name = "gioitinh", nullable = false)
+	@Column(name = "gioitinh")
 	private boolean gioitinh;
-	
-	@Column(name = "diachi", nullable = false)
+	@Column(name = "diachi")
 	private String diachi;
-	
-	
-	@Column(name = "sodienthoai", nullable = false)
+	@Column(name = "sodienthoai")
 	private int sodienthoai;
-	
 	@Column(name = "email")
 	private String email;
 	

@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>THÔNG TIN CHI TIẾT KHÁCH HÀNG</title>
+    <title>THÔNG TIN ĐƠN HÀNG</title>
 
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="../../css/style.css" />
@@ -72,6 +72,7 @@
                 </div>
             </form>
         </div>
+
 
         <!-- ======= REGISTER =======-->
         <div class="formRegister__container blur-dark">
@@ -282,7 +283,7 @@
         </div>
 
         <div class="header">
-            <div class="header-wp">
+            <div class="header__container">
                 <div class="mb-search">
                     <div class="mb-searchbox">
                         <input type="text" class="mb-inputtext" placeholder="Tìm kiếm sản phẩm...">
@@ -518,120 +519,331 @@
                 </div>
             </div>
         </div>
-        <div class="profile">
-            <div class="profile-wp">
-                <div class="profile-left">
-                    <div class="profile-image">
-                        <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="">
-                        <div class="veri-account">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                    <p class="profile-id">#0001</p>
-                </div>
-                <div class="profile-right">
-                    <h1 class="profile-title">Thông tin cá nhân</h1>
-                    <form action="">
-                        <div class="form-group-2">
-                            <div class="form-group">
-                                <label for="username">
-                                    Tên đăng nhập:
-                                </label>
-                                <input type="text" name="username" id="username" class="txtUsername" value="longhpdev1"
-                                    readonly>
+        <div class="content">
+            <div class="content__container">
+                <div class="order-detail">
+                    <h1>Chi tiết đơn hàng</h1>
+                    <div class="odd-wp">
+                        <div class="odd-heading">
+                            <div class="left">
+                                <div class="order-detail-date">
+                                    Ngày đặt hàng: <span>08/11/2021</span>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="password">
-                                    Mật khẩu:
-                                </label>
-                                <input type="password" name="password" id="password" class="txtPassword"
-                                    value="********" readonly>
+                            <div class="right">
+                                <div class="order-detail-id">
+                                    ID đơn hàng: <span>20210811ABCDEF</span>
+                                </div>
+                                <div class="order-detail-status">
+                                    <div class="odd-status">Đơn hàng đang được vận chuyển</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group-2">
-                            <div class="form-group">
-                                <label for="fullname">
-                                    Họ và tên:
-                                </label>
-                                <input type="text" name="fullname" id="fullname" class="txtFullname"
-                                    value="Hoàng Phi Long">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">
-                                    Số điện thoại:
-                                </label>
-                                <input type="number" name="phone" id="phone" class="txtPhone" value="0385818520">
-                            </div>
-                        </div>
-                        <div class="form-group-2">
-                            <div class="form-group">
-                                <label for="birthday">
-                                    Ngày sinh:
-                                </label>
-                                <input type="date" name="birthday" id="birthday" class="txtBirthday" value="2000-05-18">
-                            </div>
-                            <div class="form-group">
-                                <label for="genders">
-                                    Giới tính:
-                                </label>
-                                <div class="genders">
-                                    <div class="gender-select">
-                                        <span class="gender-value" id="gender-value">Nam</span>
-                                        <div class="gender-button">
-                                            <i class="fas fa-chevron-down"></i>
+                        <div class="odd-ship-detail">
+                            <div class="odd-ship-content">
+                                <div class="sd-ship-wp">
+                                    <div class="sd-point-wp">
+                                        <div class="status-point active">
+                                            <i class="far fa-list-alt"></i>
                                         </div>
                                     </div>
-                                    <div class="gender-list">
-                                        <div class="gender-option">Nam</div>
-                                        <div class="gender-option">Nữ</div>
+                                    <div class="sd-point-wp">
+                                        <div class="status-point active">
+                                            <i class="fas fa-truck-loading"></i>
+                                        </div>
+                                    </div>
+                                    <div class="sd-point-wp">
+                                        <div class="status-point active">
+                                            <i class="fas fa-shipping-fast"></i>
+                                        </div>
+                                    </div>
+                                    <div class="sd-point-wp">
+                                        <div class="status-point">
+                                            <i class="fas fa-box"></i>
+                                        </div>
+                                    </div>
+                                    <div class="sd-point-wp">
+                                        <div class="status-point">
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sd-process-wp">
+                                    <div class="sd-process-load"></div>
+                                </div>
+
+                            </div>
+                            <div class="sd-status-wp">
+                                <div class="sd-status-text">
+                                    Đơn hàng đã được tiếp nhận
+                                </div>
+                                <div class="sd-status-text">
+                                    Đơn hàng đang được chuẩn bị
+                                </div>
+                                <div class="sd-status-text">
+                                    Đơn hàng đang vận chuyển
+                                </div>
+                                <div class="sd-status-text">
+                                    Đơn hàng đang giao
+                                </div>
+                                <div class="sd-status-text">
+                                    Đánh giá
+                                </div>
+                            </div>
+                        </div>
+                        <div class="odd-button">
+                            <button class="odd-btn odd-btn-received">
+                                Đã nhận hàng
+                            </button>
+                            <button class="odd-btn odd-btn-contact">
+                                Liên hệ
+                            </button>
+                            <button class="odd-btn odd-btn-complain">
+                                Khiếu nại
+                            </button>
+                        </div>
+                        <div class="odd-address">
+                            <div class="odd-address-heading">
+                                <div class="odd-heading-left">
+                                    <h1>Địa chỉ nhận hàng</h1>
+                                </div>
+                                <div class="odd-address-right">
+                                    <div class="odd-shipunit">
+                                        Giao hàng tiết kiệm
+                                    </div>
+                                    <div class="odd-shipcode">
+                                        829048590
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="odd-address-wp">
+                                <div class="odd-address-buyer">
+                                    <p class="odd-address-name">Hoàng Phi Long</p>
+                                    <p class="odd-address-phone">(+84) 385818520</p>
+                                    <p class="odd-address-address">Khu Phố Long Điền 1, Phường Long Phước, Thị Xã Phước
+                                        Long, Tỉnh Bình Phước</p>
+                                </div>
+                                <div class="odd-address-status">
+                                    <div class="address-status">
+                                        <li class="address-status-item">
+                                            <div class="address-point-wp">
+                                                <i class="fas fa-circle"></i>
+                                            </div>
+                                            <div class="address-status-content">
+                                                <div class="address-date-wp">
+                                                    <div class="address-date">
+                                                        <div class="address-date-time">14:30</div>
+                                                        <div class="address-date-date">08-11-2021</div>
+                                                    </div>
+                                                </div>
+                                                <div class="address-log-wp">
+                                                    <div class="address-log">Đơn hàng đang được vận chuyển</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="address-status-item">
+                                            <div class="address-point-wp">
+                                                <div class="address-point"></div>
+                                            </div>
+                                            <div class="address-status-content">
+                                                <div class="address-date-wp">
+                                                    <div class="address-date">
+                                                        <div class="address-date-time">12:30</div>
+                                                        <div class="address-date-date">08-11-2021</div>
+                                                    </div>
+                                                </div>
+                                                <div class="address-log-wp">
+                                                    <div class="address-log">Đơn hàng đang được chuẩn bị</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="address-status-item">
+                                            <div class="address-point-wp">
+                                                <div class="address-point"></div>
+                                            </div>
+                                            <div class="address-status-content">
+                                                <div class="address-date-wp">
+                                                    <div class="address-date">
+                                                        <div class="address-date-time">10:30</div>
+                                                        <div class="address-date-date">08-11-2021</div>
+                                                    </div>
+                                                </div>
+                                                <div class="address-log-wp">
+                                                    <div class="address-log">Đơn hàng đã được tiếp nhận</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="address-status-item">
+                                            <div class="address-point-wp">
+                                                <div class="address-point"></div>
+                                            </div>
+                                            <div class="address-status-content">
+                                                <div class="address-date-wp">
+                                                    <div class="address-date">
+                                                        <div class="address-date-time">10:30</div>
+                                                        <div class="address-date-date">08-11-2021</div>
+                                                    </div>
+                                                </div>
+                                                <div class="address-log-wp">
+                                                    <div class="address-log">Đơn hàng đã được tiếp nhận</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="address-status-item">
+                                            <div class="address-point-wp">
+                                                <div class="address-point"></div>
+                                            </div>
+                                            <div class="address-status-content">
+                                                <div class="address-date-wp">
+                                                    <div class="address-date">
+                                                        <div class="address-date-time">10:30</div>
+                                                        <div class="address-date-date">08-11-2021</div>
+                                                    </div>
+                                                </div>
+                                                <div class="address-log-wp">
+                                                    <div class="address-log">Đơn hàng đã được tiếp nhận</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="address-status-item">
+                                            <div class="address-point-wp">
+                                                <div class="address-point"></div>
+                                            </div>
+                                            <div class="address-status-content">
+                                                <div class="address-date-wp">
+                                                    <div class="address-date">
+                                                        <div class="address-date-time">10:30</div>
+                                                        <div class="address-date-date">08-11-2021</div>
+                                                    </div>
+                                                </div>
+                                                <div class="address-log-wp">
+                                                    <div class="address-log">Đơn hàng đã được tiếp nhận</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="address-status-item">
+                                            <div class="address-point-wp">
+                                                <div class="address-point"></div>
+                                            </div>
+                                            <div class="address-status-content">
+                                                <div class="address-date-wp">
+                                                    <div class="address-date">
+                                                        <div class="address-date-time">10:30</div>
+                                                        <div class="address-date-date">08-11-2021</div>
+                                                    </div>
+                                                </div>
+                                                <div class="address-log-wp">
+                                                    <div class="address-log">Đơn hàng đã được tiếp nhận</div>
+                                                </div>
+                                            </div>
+                                        </li>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group-1">
-                            <div class="form-group">
-                                <label for="address">
-                                    Địa chỉ:
-                                </label>
-                                <input type="text" name="address" id="address" class="txtAddress"
-                                    value="Khu Phố Long Điền 1, Phường Long Phước">
+                        <div class="odd-content">
+                            <li class="odd-product">
+                                <a href="#" class="odd-pd-content">
+                                    <div class="odd-pd-image">
+                                        <img src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="odd-pd-detail">
+                                        <div class="odd-pd-name">Laptop Gaming Asus ROG Zephyrus G14 GA401QE K2097T
+                                        </div>
+                                        <div class="odd-pd-qty">x5
+                                        </div>
+                                    </div>
+                                    <div class="odd-pd-price">
+                                        59.000.000 đ
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="odd-product">
+                                <a href="#" class="odd-pd-content">
+                                    <div class="odd-pd-image">
+                                        <img src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="odd-pd-detail">
+                                        <div class="odd-pd-name">Laptop Gaming Asus ROG Zephyrus G14 GA401QE K2097T
+                                        </div>
+                                        <div class="odd-pd-qty">x5
+                                        </div>
+                                    </div>
+                                    <div class="odd-pd-price">
+                                        59.000.000 đ
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="odd-product">
+                                <a href="#" class="odd-pd-content">
+                                    <div class="odd-pd-image">
+                                        <img src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="odd-pd-detail">
+                                        <div class="odd-pd-name">Laptop Gaming Asus ROG Zephyrus G14 GA401QE K2097T
+                                        </div>
+                                        <div class="odd-pd-qty">x5
+                                        </div>
+                                    </div>
+                                    <div class="odd-pd-price">
+                                        59.000.000 đ
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="odd-bottom">
+                            <div class="odd-bottom-row">
+                                <div class="odd-bottom-left">
+                                    Tổng tiền hàng:
+                                </div>
+                                <div class="odd-bottom-right odd-total-price">
+                                    177.000.000 đ
+                                </div>
+                            </div>
+                            <div class="odd-bottom-row">
+                                <div class="odd-bottom-left shipping-fee-text">
+                                    Phí vận chuyển:
+                                </div>
+                                <div class="odd-bottom-right shipping-fee">
+                                    0 đ
+                                </div>
+                            </div>
+                            <div class="odd-bottom-row">
+                                <div class="odd-bottom-left  discount-text">
+                                    Giảm giá từ Voucher: <span class="voucher-apply active">(ABCDEFG)</span>
+                                </div>
+                                <div class="odd-bottom-right discount-money">
+                                    3.000.000 đ
+                                </div>
+                            </div>
+                            <div class="odd-bottom-row">
+                                <div class="odd-bottom-left total-paid-text">
+                                    Tổng thanh toán:
+                                </div>
+                                <div class="odd-bottom-right total-paid">
+                                    174.000.000 đ
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group-1">
-                            <div class="form-group">
-                                <label for="email">
-                                    Email:
-                                </label>
-                                <input type="mail" name="email" id="email" class="txtEmail"
-                                    value="longhpdev18@gmail.com">
-                            </div>
-                        </div>
-                        <!-- PROFILE-BUTTON Khi đã click sửa -->
-                        <div class="profile-button">
-                            <button class="btn btn-primary btn-save mr-10 rounded-8">Chỉnh sửa</button>
-                            <button class="btn btn-light rounded-8">Hủy</button>
-                        </div>
-
-                        <!-- PROFILE-BUTTON Khi chưa click sửa -->
-                        <!-- <div class="profile-button">
-                                <button class="btn btn-primary btn-edit rounded-8">Chỉnh sửa</button>
-                            </div> -->
-
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- ==== FOOTER ==== -->
+        <!--====FOOTER====-->
         <div class="footer">
-            <div class="footer-wp">
+            <div class="footer__container">
                 <div class="footer__info">
                     <div class="footer__info--top">
-                        <h3><strong>CÔNG TY TNHH THƯƠNG MẠI BESTGEAR</strong></h3>
-                        <p><strong>EMAIL: CSKH@BESTGEAR.COM</strong></p>
-                        <p><strong>HỆ THỐNG TỔNG ĐÀI MIỄN PHÍ:</strong> <span>(Làm việc từ 8h00 - 22h00)</span>
-                        </p>
-                        <p>Gọi mua hàng: <strong>19001000</strong></p>
-                        <p>Hỗ trợ khách hàng: <strong>19001002</strong></p>
+                        <h2><strong>CÔNG TY TNHH THƯƠNG MẠI BESTGEAR</strong></h2>
+                        <h2><strong>EMAIL: CSKH@BESTGEAR.COM</strong></h2>
+                        <h2><strong>HỆ THỐNG TỔNG ĐÀI MIỄN PHÍ:</strong> <span>(Làm việc từ 8h00 -
+                                22h00)</span>
+                        </h2>
+                        <h2>Gọi mua hàng: <strong>19001000</strong></h2>
+                        <h2>Hỗ trợ khách hàng: <strong>19001002</strong></h2>
                     </div>
                     <div class="footer__info--center">
                         <a href="#" class="cta-link text-primary-hover">Chính sách bảo hành</a>
@@ -648,22 +860,28 @@
                     <div class="footer__adrShowroom--top">
                         <h2 class="text-primary"><strong>HỆ THỐNG CỬA HÀNG</strong></h2>
                         <h2><strong>SHOWROOM HCM</strong> (Làm việc từ 8h00 - 22h00)</h2>
-                        <h2 class="adrShowroom">-Địa chỉ: 100-102-104 Hoàng Hoa Thám, Phường 11, Quận Tân Bình.</h2>
+                        <h2 class="adrShowroom">-Địa chỉ: 100-102-104 Hoàng Hoa Thám, Phường 11,
+                            Quận Tân Bình.</h2>
                         <h2><strong>SHOWROOM HCM</strong> (Làm việc từ 8h00 - 22h00)</h2>
-                        <h2 class="adrShowroom">-Địa chỉ: 100-102-104 Hoàng Hoa Thám, Phường 11, Quận Tân Bình.</h2>
+                        <h2 class="adrShowroom">-Địa chỉ: 100-102-104 Hoàng Hoa Thám, Phường 11,
+                            Quận Tân Bình.</h2>
                     </div>
                     <div class="text--marketing">
                         Mua <a href="#" class="text-primary text-primary-hover ">PC Gaming</a>, <a href="#"
                             class="text-primary text-primary-hover ">laptop gaming</a>,
                         <a href="#" class="text-primary text-primary-hover ">card màn
-                            hình</a>, <a href="#" class="text-primary text-primary-hover ">màn hình máy
-                            tính</a>, <a href="#" class="text-primary text-primary-hover">ghế gaming</a>, <a href="#"
-                            class="text-primary text-primary-hover">thiết bị chơi game</a>
-                        như PS5 hàng đầu Việt Nam bảo hành chính hãng. Mua online nhận nhiều ưu đãi hấp dẫn.
+                            hình</a>, <a href="#" class="text-primary text-primary-hover ">màn hình
+                            máy
+                            tính</a>, <a href="#" class="text-primary text-primary-hover">ghế
+                            gaming</a>, <a href="#" class="text-primary text-primary-hover">thiết bị
+                            chơi game</a>
+                        như PS5 hàng đầu Việt Nam bảo hành chính hãng. Mua online nhận nhiều ưu đãi
+                        hấp dẫn.
                     </div>
                     <div class="text--company">
                         <p>- Công ty TNHH Thương Mại BestGear</p>
-                        <p>- GPKD số 0316517394 do Sở KH và ĐT TP Hồ Chí Minh cấp ngày 01/10/2020</p>
+                        <p>- GPKD số 0316517394 do Sở KH và ĐT TP Hồ Chí Minh cấp ngày 01/10/2020
+                        </p>
                         <p>- GĐ/Sở hữu website: NHÓM BESTGEAR</p>
                     </div>
                 </div>
@@ -677,17 +895,6 @@
 <!-- MY JS -->
 <script src="../../js/app.js"></script>
 <script src="./js/modules.js"></script>
-
-<script>
-    var genderOption = document.getElementsByClassName('gender-option');
-    var genderValue = document.getElementById('gender-value')
-
-    for (gender of genderOption) {
-        gender.onclick = function () {
-            genderValue.innerHTML = this.textContent;
-        }
-    }
-</script>
 
 <!-- JQUERY -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -20,20 +20,40 @@ $('.btn-cat').mouseout(function () {
     $('.dropmenu').addClass('hidden');
 })
 
-var numbers = document.getElementById('cart-qty-input');
-for (i = 0; i < 100; i++) {
-    var span = document.createElement('span');
-    span.textContent = i;
-    numbers.appendChild(span);
-}
-var num = numbers.getElementsByTagName('span');
-var index = 0;
 
-function nextNum() {
-    num[index].style.display = "none";
-    index = (index + 1) % num.length;
-    num[index].style.display = "flex";
+const decButton = document.getElementsByClassName('btn-qty-down');
+const incButton = document.getElementsByClassName('btn-qty-up');
+
+for (var i = 0; i < incButton.length; i++) {
+    var button = incButton[i];
+    button.addEventListener('click', function (event) {
+        var buttonClicked = event.target;
+        var input = buttonClicked.parentElement.parentElement.children[1];
+        var inputValue = input.value;
+        if (inputValue >= 100) {
+            var newValue = 100;
+        } else {
+            var newValue = parseInt(inputValue) + 1;
+        }
+        input.value = newValue;
+    })
 }
+for (var i = 0; i < decButton.length; i++) {
+    var button = decButton[i];
+    button.addEventListener('click', function (event) {
+        var buttonClicked = event.target;
+        var input = buttonClicked.parentElement.parentElement.children[1];
+        var inputValue = input.value;
+        if (inputValue <= 1) {
+            var newValue = 1;
+        } else {
+            var newValue = parseInt(inputValue) - 1;
+        }
+        input.value = newValue;
+    })
+}
+
+
 
 
 

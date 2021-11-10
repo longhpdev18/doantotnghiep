@@ -10,7 +10,7 @@
 
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="../../css/style.css" />
-
+    <link rel="stylesheet" href="../../css/responsive.css" />
     <!-- UTILITIES CSS -->
     <link rel="stylesheet" href="../../css/utilities.css" />
 
@@ -165,8 +165,141 @@
             </div>
         </form>
     </div>
+    <!-- ====== MENU - MOBILE ====== -->
+
+    <div class="menu-mobile blur-white">
+        <div class="menu-mobile-container">
+            <div class="menu-mobile-heading">
+                <h2>Danh Mục</h2>
+                <div class="menu-mobile-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <li class="menu-item">
+                <a href="../laptop/" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/laptop.svg" alt="">
+                    </div>
+                    <p>Laptop</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/desktop.svg" alt="">
+                    </div>
+                    <p>PC BestGear</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/apple.svg" alt="">
+                    </div>
+                    <p>Apple</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/pc.svg" alt="">
+                    </div>
+                    <p>PC Văn Phòng</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/pcacessory.svg" alt="">
+                    </div>
+                    <p>Linh Kiện</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/monitor.svg" alt="">
+                    </div>
+                    <p>Màn hình</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/keyboard.svg" alt="">
+                    </div>
+                    <p>Bàn phim</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/mouse.svg" alt="">
+                    </div>
+                    <p>Chuột + Lót chuột</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/headphone.svg" alt="">
+                    </div>
+                    <p>Tai nghe & Loa</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/chair.svg" alt="">
+                    </div>
+                    <p>Ghế Gaming</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/print.svg" alt="">
+                    </div>
+                    <p>Thiết bị văn phòng</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/internet.svg" alt="">
+                    </div>
+                    <p>Thiết bị mạng</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <div class="menu-icon">
+                        <img src="../../icons/accessorypc.svg" alt="">
+                    </div>
+                    <p>Phụ Kiện</p>
+                </a>
+            </li>
+        </div>
+    </div>
+
     <div class="header">
         <div class="header__container">
+            <div class="mb-search">
+                <div class="mb-searchbox">
+                    <input type="text" class="mb-inputtext" placeholder="Tìm kiếm sản phẩm...">
+                    <button class="mb-submit"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="header__left">
+                <div class="btn-menu-mobile rounded">
+                    <div class="menu-mobile-icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <div class="btn-mobile-searchbox rounded">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
             <div class="header__brand">
                 <a href="../../" class="header__brand--logo">
                     <img src="../../images/logo.png" alt="" class="header__brand--image" />
@@ -187,23 +320,31 @@
                 <div class="header__right--container">
                     <button href="#" class="btn-primary rounded btn-showUser">
                         <p class="user-fullname">Hoàng Phi Long</p>
-                        <i class="fas fa-angle-down"></i>
+                        <div class="show-user">
+                            <div class="icon-user-down">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="icon-user-user">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+
                         <ul class="dropdown-user">
                             <li class="dropdown-user-item">
-                                <a href="#" class="cta-link text-dark cta-user-item">
+                                <a href="./" class="text-dark cta-user-item">
                                     <i class="fas fa-user-alt"></i>
                                     <p class="user-item-text">Thông tin tài khoản</p>
                                 </a>
                             </li>
                             <li class="dropdown-user-item">
-                                <a href="#" class="cta-link text-dark cta-user-item">
+                                <a href="#" class="text-dark cta-user-item">
                                     <i class="fas fa-list-ul"></i>
                                     <p class="user-item-text">Đơn đặt hàng</p>
                                 </a>
                             </li>
                             <div class="hr"></div>
                             <li class="dropdown-user-item">
-                                <a href="/logout.html" class="text-dark cta-user-item">
+                                <a href="/logout.html" class="cta-link text-dark cta-user-item">
                                     <i class="fas fa-sign-out-alt"></i>
                                     <p class="user-item-text">Đăng xuất</p>
                                 </a>
@@ -211,7 +352,7 @@
                         </ul>
                     </button>
 
-                    <a href="./modules/cart/" class="btn btn-primary rounded cta-link cta-cart cta-white">
+                    <a href="./modules/cart/" class=" btn-primary rounded cta-link cta-cart cta-white">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </div>
@@ -219,15 +360,13 @@
 
             <!-- HEADER RIGHT CHƯA LOGIN // Mở comment ra là được-->
             <!-- <div class="header__right">
-                <div class="header__right--container">
-                    <button href="#" class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
-                        nhập</button>
-
-                    <a href="../cart/" class="btn btn-primary rounded cta-link cta-cart cta-white"><i
-                            class="fas fa-shopping-cart"></i></a>
-
-                </div>
-            </div> -->
+				<div class="header__right--container">
+					<button href="#" class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
+						nhập</button>
+					<a href="./modules/cart/" class="btn btn-primary rounded cta-link cta-cart cta-white"><i
+							class="fas fa-shopping-cart"></i></a>
+				</div>
+			</div> -->
         </div>
     </div>
     <div class="header__bottom">
@@ -237,7 +376,7 @@
                     <div class="dropmenu hidden">
                         <ul class="dropmenu__container">
                             <li class="menu-item">
-                                <a href="#" class="menu-link ">
+                                <a href="../laptop/" class="menu-link">
                                     <div class="menu-icon">
                                         <img src="../../icons/laptop.svg" alt="">
                                     </div>
@@ -253,7 +392,7 @@
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="#" class="menu-link ">
+                                <a href="#" class="menu-link">
                                     <div class="menu-icon">
                                         <img src="../../icons/apple.svg" alt="">
                                     </div>
@@ -269,7 +408,7 @@
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="#" class="menu-link ">
+                                <a href="#" class="menu-link">
                                     <div class="menu-icon">
                                         <img src="../../icons/pcacessory.svg" alt="">
                                     </div>
@@ -380,10 +519,9 @@
             </div>
         </div>
     </div>
-    <div class="content ">
+    <div class="content">
         <div class="content__container">
             <div class="profile">
-
                 <div class="profile-content">
                     <div class="profile-left">
                         <div class="profile-image">
@@ -391,10 +529,7 @@
                             <div class="veri-account">
                                 <i class="fas fa-check"></i>
                             </div>
-                            <!-- CHỜ DUYỆT -->
-                            <!--                             <div class="wait-account">
-                                <i class="far fa-clock"></i>
-                            </div> -->
+
                         </div>
                         <p class="profile-id">#0001</p>
                     </div>

@@ -55,7 +55,7 @@
 
 <!-- ======= REGISTER =======-->
 <div class="formRegister__container blur-dark">
-	<form action="" class="fRegister">
+	<form action="register" class="fRegister" method="POST" >
 		<div class="form-content">
 			<div class="form-content-left">
 				<div class="form-content-heading">
@@ -77,34 +77,36 @@
 				<div class="form-group flex-row">
 					<div class="form-group-col2 flex-col">
 						<label for="username"> Tên tài khoản: </label> <input type="text"
-							name="username" id="username" class="txtUsername"
+							name="username" id="tendangnhapRegister" class="txtUsername" 
 							placeholder="Tên tài khoản" required>
 					</div>
 					<div class="form-group-col2 flex-col ml-m">
 						<label for="email"> Email: </label> <input type="email"
-							name="email" id="useemailrname" class="txtEmail"
+							name="email" id="email" class="txtEmail" 
 							placeholder="Email" required>
 					</div>
 				</div>
 				<div class="form-group flex-row">
 					<div class="form-group-col2 flex-col">
 						<label for="password"> Mật khẩu: </label> <input type="password"
-							name="password" id="password" class="txtPassword"
+							name="password" id="matkhau" class="txtPassword" path="matkhau"
 							placeholder="Mật khẩu" required>
+							<form:errors path="matkhau"/>
 					</div>
 					<div class="form-group-col2 flex-col ml-m ">
 						<label for="repassword"> Xác nhận mật khẩu: </label> <input
 							type="password" name="repassword" id="repassword"
 							class="txtRePassword" placeholder="Xác nhận mật khẩu" required>
+							
+					${message}
 					</div>
 				</div>
-
 				<div class="hr"></div>
 				<h2 class="heading-title">Thông tin người dùng</h2>
 				<div class="form-group flex-row">
 					<div class="form-group-col2 flex-col">
 						<label for="fullname"> Họ và tên: </label> <input type="text"
-							name="fullname" id="fullname" class="txtFullname"
+							name="fullname" id="fullname" class="txtFullname" 
 							placeholder="Họ và tên" required>
 					</div>
 					<div class="form-group-col2 ml-m flex-col">
@@ -115,8 +117,8 @@
 				</div>
 				<div class="form-group">
 					<label for="address"> Địa chỉ: </label> <input type="text"
-						name="address" id="address" class="txtAddress"
-						placeholder="Địa chỉ" required>
+						name="address" id="diachi" class="txtAddress" 
+						placeholder="Địa chỉ" required> 
 				</div>
 				<div class="group-button">
 					<button class="btn btn-primary btn-register rounded-8">Đăng
@@ -155,12 +157,13 @@
 			<div class="header__right">
 				<div class="header__right--container">
 					<button href="#" class="btn btn-primary rounded btn btn-showUser">
-						<p class="user-fullname">${fullname}</p>
+						<p class="user-fullname">${fullname} </p>
+						&nbsp;
 						<i class="fas fa-angle-down"></i>
 						<ul class="dropdown-user">
 							<li class="dropdown-user-item">
 				
-							<a href="/profile/${maKH}" name="maKH" id="maKH" values="${maKH}"
+							<a href="/profile" name="maKH" id="maKH"
 								class="cta-link text-dark cta-user-item"> <i
 									class="fas fa-user-alt"></i>
 									<p class="user-item-text" >Thông tin tài khoản</p>
@@ -173,7 +176,7 @@
 				
 							</li>
 							<div class="hr"></div>
-							<li class="dropdown-user-item"><a href="/logout.html"
+							<li class="dropdown-user-item"><a href="/logout"
 								class="cta-link text-dark cta-user-item"> <i
 									class="fas fa-sign-out-alt"></i>
 									<p class="user-item-text">Đăng xuất</p>
@@ -209,86 +212,88 @@
 		<div class="header__bottom--left rounded">
 			<li class="cat__title bg-primary btn-cat">Danh mục sản phẩm
 				<div class="dropmenu hidden">
+				<form action="/search" method="POST">
 					<ul class="dropmenu__container">
-						<li class="menu-item"><a href="#" class="menu-link ">
+						<li class="menu-item"><button type="submit" name="maloai" value="3" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/laptop.svg" alt="">
 								</div>
 								<p>Laptop</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="4" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/desktop.svg" alt="">
 								</div>
 								<p>PC BestGear</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link ">
+						<li class="menu-item"><button type="submit" name="maloai" value="11" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/apple.svg" alt="">
 								</div>
 								<p>Apple</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="4" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/pc.svg" alt="">
 								</div>
 								<p>PC Văn Phòng</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link ">
+						<li class="menu-item"><button type="submit" name="maloai" value="10" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/pcacessory.svg" alt="">
 								</div>
 								<p>Linh Kiện</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="9" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/monitor.svg" alt="">
 								</div>
 								<p>Màn hình</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/keyboard.svg" alt="">
 								</div>
 								<p>Bàn phim</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="6" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/mouse.svg" alt="">
 								</div>
 								<p>Chuột + Lót chuột</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="1" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/headphone.svg" alt="">
 								</div>
 								<p>Tai nghe & Loa</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="7" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/chair.svg" alt="">
 								</div>
 								<p>Ghế Gaming</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="10" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/print.svg" alt="">
 								</div>
 								<p>Thiết bị văn phòng</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="11" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/internet.svg" alt="">
 								</div>
 								<p>Thiết bị mạng</p>
 						</a></li>
-						<li class="menu-item"><a href="#" class="menu-link">
+						<li class="menu-item"><button type="submit" name="maloai" value="11" class="menu-link ">
 								<div class="menu-icon">
 									<img src="../../assets/icons/accessorypc.svg" alt="">
 								</div>
 								<p>Phụ Kiện</p>
 						</a></li>
 					</ul>
+					</form>
 				</div>
 			</li>
 		</div>

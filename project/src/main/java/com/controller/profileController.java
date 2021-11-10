@@ -30,9 +30,9 @@ public class profileController {
 	@Autowired
 	KhachHangDAO khDAO;
 	
-	@RequestMapping(value = "/profile/{maKH}")
-	public String showProfile(Model model, @PathVariable(value = "maKH") long maKH) {
-		List<KhachHang> khachhang = khDAO.ID(maKH);
+	@RequestMapping(value = "/profile")
+	public String showProfile(Model model) {
+		List<KhachHang> khachhang = khDAO.ID(sessionService.get("maKH"));
 		model.addAttribute("items", khachhang);
 		return "home/profile/index";
 	}	

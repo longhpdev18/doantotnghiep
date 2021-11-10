@@ -15,7 +15,11 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 <script src="./../assets/js/starter.js"></script>
+<script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
 
+<!-- MY JS -->
+<script src="./../assets/js/app.js"></script>
+<script src="./../assets/js/modules.js"></script>
 <!-- JQUERY -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
