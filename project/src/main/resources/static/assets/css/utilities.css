@@ -38,14 +38,20 @@ button {
     --whiteHover: #d8d9da;
     --lightColor: #f1f2f6;
     --lightHover: #d8d9da;
+    --lightColor3: #dfe4ea;
     --yellowColor: #f9ca24;
     --yellowHover: #d4a704;
+    --lightColor2: #F8F9FA;
+    --darkLightColor: rgba(0, 0, 0, 0.05);
+
+    --yellowColor2: rgba(255, 235, 153, .3);
     --grayColor: #576574;
     --darkColor: #111;
     --darkHover: rgb(24, 24, 24);
     --space8: .5rem;
     --spaceS: 1rem;
     --spaceM: 2.4rem;
+    --spaceL: 3.2rem;
 }
 
 .bg-light {
