@@ -57,7 +57,7 @@
 
 							<ul class="products__list">
 
-								<c:forEach var="sp" items="${item.getSp().content}">
+								<c:forEach var="sp" items="${item.getSp()}">
 										<li class="product__item"><a href="product/${sp.masp}"
 											name="masp" class="cta-link cta-product">
 												<div class="product__deal">
@@ -123,9 +123,7 @@
 		</div>
 		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
-</body>
-
-<script src="./../assets/js/starter.js"></script>
+</body><script src="./../assets/js/starter.js"></script>
 <script src="./../assets/js/modules.js"></script>
 <script src="./assets/js/app.js"></script>
 <!-- JQUERY -->

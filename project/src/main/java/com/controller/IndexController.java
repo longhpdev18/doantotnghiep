@@ -49,15 +49,22 @@ public class IndexController {
 	ShoppingCartService cart;
 	@Autowired
 	LoaiHangDAO lhDAO;
+	@GetMapping("/admin")
+	public String admin(Model model) {
+		return "admin/login";
+	}
+	@GetMapping("/admin/index")
+	public String indexAdmin(Model model) {
+		return "admin/index";
+	}
+	
 	@GetMapping("/")
 	public String index(Model model) {
-		
-		Pageable Pageable = PageRequest.of(0, 4);
 	    List<LoaiHang> listLH = lhDAO.findAll();
 	    List<LH_SP> items = new ArrayList<LH_SP>();
 	    for(LoaiHang lh:listLH) {
 	    	LH_SP item = new LH_SP();
-	    	Page<SanPham> tempList =  sanphamDAO.getByLH((int) lh.getMaloai(),Pageable);
+	    	List<SanPham> tempList =  sanphamDAO.getByLH((int) lh.getMaloai());
 	    	item.setLh(lh);
 	    	item.setSp(tempList);
 	    	items.add(item);
@@ -74,9 +81,8 @@ public class IndexController {
 	public String laptop(Model model) {
 		System.out.println(paramService.getInt("maloai", 0));
 		List<LH_SP> items = new ArrayList<LH_SP>();
-		Pageable Pageable = PageRequest.of(1, 4);
 		LH_SP item = new LH_SP();
-		Page<SanPham> tempList =  sanphamDAO.getByLH((int) paramService.getInt("maloai", 0),Pageable);
+		List<SanPham> tempList =  sanphamDAO.getByLH((int) paramService.getInt("maloai", 0));
     	item.setLh(lhDAO.getById((long) paramService.getInt("maloai", 0)));
     	item.setSp(tempList);
     	items.add(item);
@@ -84,24 +90,6 @@ public class IndexController {
 		model.addAttribute("page","./ads.jsp");
 		model.addAttribute("menu","./menuLogin.jsp");
 		return "home/index";
-	}
-	
-	@PostMapping("/")
-	public String login(Model model,
-			@RequestParam("username") String username,
-			@RequestParam("password") String password) {
-		List<KhachHang> items = khDAO.loginKH(username,password);
-		for(KhachHang item: items) {
-			System.out.println(item.getTendangnhap() + item.getMatkhau());
-			if(item.getTendangnhap().equalsIgnoreCase(username)&&item.getMatkhau().equals(password)) {
-				//cookieService.add(username, username + password, 3600);
-				System.out.println(item.getFullname());
-				System.out.println(item.getMakh());
-				sessionService.set("fullname", item.getFullname());
-				sessionService.set("maKH", item.getMakh());
-			}
-		}
-		return "redirect:/";
 	}
 	@GetMapping("/logout")
 	public String logout(Model model) {

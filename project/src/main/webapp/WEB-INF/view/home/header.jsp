@@ -1,8 +1,12 @@
 <%@ page pageEncoding="utf-8"%>
 
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
+<c:url var ="urlLogin" value="/login"/>
 <div class="formLogin__container blur-dark">
-	<form action="/" class="fLogin" method="POST">
+	<form id="formLogin" class="fLogin">
 		<div class="form-content">
 			<div class="form-content-left">
 				<div class="form-content-heading">
@@ -97,8 +101,6 @@
 						<label for="repassword"> Xác nhận mật khẩu: </label> <input
 							type="password" name="repassword" id="repassword"
 							class="txtRePassword" placeholder="Xác nhận mật khẩu" required>
-							
-					${message}
 					</div>
 				</div>
 				<div class="hr"></div>
@@ -318,3 +320,7 @@
 		</div>
 	</div>
 </div>
+
+<script src="./../assets/js/starter.js"></script>
+<script src="./assets/js/app.js"></script>
+<script src="./assets/js/login.js"></script>
