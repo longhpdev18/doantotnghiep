@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, var(--primaryColor), var( --blue));
+    font-family: 'Open Sans', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form {
+    background: var(--whiteColor);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+    padding: 40px 40px;
+    text-align: center;
+    border-radius: 30px;
+}
+form img{
+    text-align: center;
+    max-width: 70%;
+}
+
+form .box {
+    position: relative;
+    margin-bottom: 20px;
+}
+input {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    text-indent: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.1rem;
+    transition: linear 0.2s;
+}
+input:focus {
+    border-color: var(--primaryHover);
+    text-indent: 20px;
+
+}
+
+.btn_Login {
+    display: inline-block;
+    padding: 10px 45px;
+    margin-top: 20px;
+    color: var(--primaryColor);
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2),
+                -2px -2px var(--lightColor),
+                inset 2px 2px rgba(0, 0, 0, 0.2),
+                inset -2px -2px var(--lightColor);
+    transition: linear 0.2s;
+}
+.btn_Login:hover{
+    background-color: var(--primaryColor);
+    color: white;
+    box-shadow: none;
+}
+
+form .query {
+    margin: 20px 0;
+}
+form .query p {
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+form .query p button {
+    text-decoration: none;
+    color: var(--primaryColor);
+    transition: linear 0.2s;
+}
+form .query p button:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
