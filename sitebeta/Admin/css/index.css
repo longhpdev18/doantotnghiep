@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 
 body {
-    background-color: var( --whiteColor);
+    background-color: var(--whiteColor);
     font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 * {
@@ -10,178 +14,178 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     min-height: 100vh;
     overflow-x: hidden;
 }
+
 .container {
-    position: relative;
-    width: 100%;
-}
-.navigation {
     position: fixed;
-    width: 300px;
+    width: 100%;
     height: 100%;
-    background: var(--primaryHover);
-    border-left: 10px solid var(--primaryHover);
+    display: flex;
+}
+
+.navigation {
+    width: 100%;
+    max-width: 25rem;
+    height: 100%;
+    background: var(--primaryColor);
     transition: 0.5s;
-    overflow: hidden;
+    font-size: 1.4rem;
+    display: none;
 }
 
 .navigation.active {
-    width: 80px;
+    display: flex;
 }
 
-.navigation ul{
-    position: absolute;
-    top: 0;
-    left: 0;
+.navigation-wp {
     width: 100%;
+    height: 100%;
+    padding: var(--spaceS);
 }
-.navigation ul li {
-    position: relative;
+
+.nav-header {
     width: 100%;
-    list-style: none;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-.navigation ul li:hover,
-.navigation ul li.hovered {
-    background: var(--whiteColor);
-}
-.navigation ul li:nth-child(1){ /*  khoảng cách dòng đầu tiên */
-    margin-bottom: 40px;
-    pointer-events: none;
-    left: 25px;
-}
-.navigation ul li a {
-    position: relative;
-    display: block;
-    width: 100%;
+    height: 6rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-brand {
+    height: 100%;
+    object-fit: cover;
+}
+
+.navigation-wp li {
+    min-height: 5rem;
+    width: 100%;
+}
+
+.navigation-wp li a {
+    width: 100%;
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    border-radius: var(--spaceS);
     text-decoration: none;
     color: var(--whiteColor);
+    font-weight: 600;
 }
-.navigation ul li:hover a,
-.navigation ul li.hovered a {
-    color: var(--primaryHover);
-}
-.navigation ul li a .icon {
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    line-height: 70px;
-    text-align: center;
-}
-.navigation ul li a .icon ion-icon {
-    font-size: 1.75rem;
-}
-.navigation ul li a .title {
-   position: relative;
-   display: block;
-   padding: 0 10px;
-   height: 60px;
-   line-height: 60px;
-   text-align: start;
-   white-space: nowrap;
-}
-.navigation ul li a .title img {
-    width: 200px; 
-}
-/* đường con bên ngoài */
 
-.navigation ul li:hover a::before,
-.navigation ul li.hovered a::before
-{
-    content: '';
-    position: absolute;
-    right: 0;
-    top: -50px;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 35px 35px 0 10px var( --whiteColor);
-    pointer-events: none;
+.navigation-wp li a .icon {
+    width: 5rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
 }
-.navigation ul li:hover a::after,
-.navigation ul li.hovered a::after{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -50px;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 35px -35px 0 10px var( --whiteColor);
-    pointer-events: none;
+
+.navigation-wp li a:hover {
+    background-color: var(--whiteTransparent);
+    color: var(--darkColor);
 }
+
 /* main */
-.main 
-{
-    position: absolute;
-    width:  calc(100% - 300px);
-    left: 300px;
-    min-height: var(--whiteColor);
-    transition: 0.5s;
+.main {
+    flex: 1;
 }
 
-.main.active {
-    width:  calc(100% - 80px);
-    left: 80px;
-}
-
-.topbar 
-{
+.topbar {
     width: 100%;
-    height: 60px;
+    height: 7rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: var(--spaceS);
+    background-color: var(--whiteColor);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 99;
 }
-.toggle {
-    position: relative;
-    width: 60px;
-    height: 60px;
+
+.topbar-left {
+    width: 100%;
+    max-width: 23rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topbar-brand {
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: var(--spaceS);
+    display: none;
+}
+
+.topbar-brand.active {
+    display: flex;
+}
+
+.topbar-brand-image {
+    height: 7rem;
+    object-fit: cover;
+}
+
+.btn-menu {
+    width: 5rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.5em;
     cursor: pointer;
+    border-radius: var(--spaceS);
 }
+
+.btn-menu:hover {
+    background-color: var(--lightColor);
+}
+
 .search {
-    position: relative;
-    width: 400px;
-    margin: 0 10px;
-}
-.search label {
-    position: relative;
     width: 100%;
+    max-width: 40rem;
+    height: 100%;
+    background-color: var(--lightColor);
+    display: flex;
+    align-items: center;
+    border-radius: var(--space8);
+    overflow: hidden;
 }
-.search label input {
-    width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    padding: 5px 20px;
-    padding-left: 30px;
-    font-size: 18px;
+
+.search-input {
+    flex: 1;
+    border: none;
     outline: none;
-    border: 1px solid var(--darkHover);
+    background-color: transparent;
+    padding: var(--spaceS);
+    font-size: 1.4rem;
 }
-.search label ion-icon {
-    position: absolute;
-    top : 0;
-    left: 10px;
-    font-size: 1.2rem;
+
+.search-button {
+    width: 5rem;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .action {
     /* position: fixed; */
     position: relative;
     right: 10px;
 }
+
 .action .user {
     position: relative;
     width: 40px;
@@ -190,6 +194,7 @@ body {
     overflow: hidden;
     cursor: pointer;
 }
+
 .action .user img {
     position: absolute;
     top: 0;
@@ -198,6 +203,7 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 .action .menu {
     position: absolute;
     top: 60px;
@@ -205,7 +211,7 @@ body {
     padding: 10px 20px;
     background: var(--whiteColor);
     width: 250px;
-    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.5s;
@@ -213,12 +219,14 @@ body {
     opacity: 0;
     z-index: 99;
 }
-.action .menu.active{
+
+.action .menu.active {
     top: 50px;
     visibility: visible;
     opacity: 1;
 }
-.action .menu::before{
+
+.action .menu::before {
     content: '';
     position: absolute;
     top: -5px;
@@ -228,6 +236,7 @@ body {
     background: var(--whiteColor);
     transform: rotate(45deg);
 }
+
 .action .menu h3 {
     width: 100%;
     text-align: center;
@@ -238,11 +247,13 @@ body {
     color: var(--primaryColor);
     line-height: 1.2em;
 }
+
 .action .menu h3 span {
     font-size: 14px;
     color: var(--text-grey);
     font-weight: 200;
 }
+
 .action .menu ul li {
     list-style: none;
     padding: 10px 0;
@@ -250,15 +261,18 @@ body {
     display: flex;
     align-items: center;
 }
-.action .menu ul li i{
-    
+
+.action .menu ul li i {
+
     margin-right: 10px;
     opacity: 0.5;
     transition: 0.5s;
 }
+
 .action .menu ul li:hover i {
     opacity: 1;
 }
+
 .action .menu ul li a {
     display: inline-block;
     text-decoration: none;
@@ -266,6 +280,7 @@ body {
     font-weight: 500;
     transition: 0.5s;
 }
+
 .action .menu ul li:hover a {
     color: var(--primaryHover);
 }
@@ -277,13 +292,13 @@ body {
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
 }
 
 .cardBox .card {
     position: relative;
-    background: var( --whiteColor);
+    background: var(--whiteColor);
     padding: 30px;
     display: flex;
     justify-content: space-between;
@@ -300,7 +315,7 @@ body {
 }
 
 .cardBox .card .cardName {
-    color: var( --text-grey);
+    color: var(--text-grey);
     font-size: 1.2rem;
     margin-top: 5px;
 }
@@ -316,23 +331,23 @@ body {
 
 .cardBox .card:hover .numbers,
 .cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBx
-{
+.cardBox .card:hover .iconBx {
     color: var(--whiteColor);
 }
-.details
-{
+
+.details {
     position: relative;
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: 2fr 1fr; /*chia làm 2 phần */
-    grid-gap : 30px;  /*khoảng cách 2 phần */
+    grid-template-columns: 2fr 1fr;
+    /*chia làm 2 phần */
+    grid-gap: 30px;
+    /*khoảng cách 2 phần */
     margin-top: 10px;
 }
 
-.details .recentOrders 
-{
+.details .recentOrders {
     position: relative;
     display: grid;
     min-height: 500px;
@@ -341,6 +356,7 @@ body {
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
 }
+
 .cardHeader {
     display: flex;
     justify-content: space-between;
@@ -348,7 +364,7 @@ body {
 
 }
 
-.cardHeader h2{
+.cardHeader h2 {
     font-weight: 600;
     color: var(--primaryHover);
 }
@@ -362,6 +378,7 @@ body {
     color: var(--whiteColor);
     border-radius: 6px;
 }
+
 /* 
 .btn ion-icon {
     top: 1px;
@@ -369,7 +386,7 @@ body {
 
 .details table {
     width: 100%;
-    border-collapse: collapse ;
+    border-collapse: collapse;
     margin-top: 10px;
 }
 
@@ -384,11 +401,13 @@ body {
 
 .details .recentOrders table tr:last-child {
     border-bottom: none;
-} 
+}
+
 .details .recentOrders table tbody tr:hover {
     background: var(--blue);
     color: var(--whiteColor);
 }
+
 .details .recentOrders table tr td {
     padding: 16px;
 }
@@ -396,21 +415,23 @@ body {
 /* .details .recentOrders table tr td:last-child {
     text-align: end;
 } */
-.details .recentOrders table tr td:nth-child(1){
+.details .recentOrders table tr td:nth-child(1) {
     text-align: center;
 }
 
-.details .recentOrders table tr td:nth-child(2){/*  ở cột thứ 2 */
+.details .recentOrders table tr td:nth-child(2) {
+    /*  ở cột thứ 2 */
     text-align: center;
 }
 
-.details .recentOrders table tr td:nth-child(3){
+.details .recentOrders table tr td:nth-child(3) {
     text-align: center;
 }
 
-.details .recentOrders table tr td:nth-child(4){
+.details .recentOrders table tr td:nth-child(4) {
     text-align: center;
 }
+
 .status.delivered {
     padding: 2px 4px;
     background: var(--greenHover);
@@ -419,25 +440,28 @@ body {
     font-size: 14px;
     font-weight: 500;
 }
+
 .status.return {
     padding: 2px 4px;
-    background:var(--yellowColor);
+    background: var(--yellowColor);
     color: var(--whiteColor);
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
 }
+
 .status.pending {
     padding: 2px 4px;
-    background:var(--primaryHover);
+    background: var(--primaryHover);
     color: var(--whiteColor);
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
 }
+
 .status.inprogress {
     padding: 2px 4px;
-    background:var(--orangeHover);
+    background: var(--orangeHover);
     color: var(--whiteColor);
     border-radius: 4px;
     font-size: 14px;
@@ -445,28 +469,31 @@ body {
 }
 
 .details .recentOrders table tbody tr td .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
     color: var(--darkColor);
     background-color: inherit;
 }
 
-.details .recentOrders table tbody tr td .dropdown .dropdown-content  {
+.details .recentOrders table tbody tr td .dropdown .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--whiteColor);
     /*min-width: 160px;*/
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
+
 .details .recentOrders table tbody tr td .dropdown .dropdown-content a {
     color: var(--darkColor);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
+
 .details .recentOrders table tbody tr td .dropdown .dropdown-content a:hover {
     background-color: var(--lightHover);
 }
+
 .details .recentOrders table tbody tr td .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -478,26 +505,26 @@ body {
 .pagination {
     display: inline-block;
     padding-top: 4px;
-   margin: 0 auto;
-  }
-  
-  .pagination a {
+    margin: 0 auto;
+}
+
+.pagination a {
     color: black;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
     /* border: 1px solid #ddd; */
-     border-radius: 40px;
-  }
-  
-  .pagination a.active {
+    border-radius: 40px;
+}
+
+.pagination a.active {
     background-color: var(--primaryHover);
     color: white;
     /* border: 1px solid var(--primaryColor); */
-  }
+}
 
-  .pagination a:hover:not(.active) {
+.pagination a:hover:not(.active) {
     background-color: var(--primaryHover);
     color: var(--whiteColor);
 }
@@ -520,6 +547,7 @@ body {
     overflow: hidden;
 
 }
+
 .recentCustomers .imgBx img {
     position: absolute;
     top: 0;
@@ -539,6 +567,7 @@ body {
     font-weight: 500;
     line-height: 1.2em;
 }
+
 .recentCustomers table tr td h4 span {
     font-size: 14px;
     color: var(--text-grey);
@@ -549,15 +578,16 @@ body {
     color: var(--whiteColor);
 }
 
-.recentCustomers table tr:hover td h4 span{
+.recentCustomers table tr:hover td h4 span {
     color: var(--whiteColor);
 }
 
-.recentCustomers table tr td.tbicon a ion-icon{
+.recentCustomers table tr td.tbicon a ion-icon {
     font-size: 20px;
     padding: 8px;
     float: right;
 }
+
 .recentCustomers table tr td.tbicon a ion-icon:hover {
     color: var(--whiteColor);
 }
