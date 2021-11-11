@@ -37,7 +37,7 @@
                         <span class="icon">
                             <ion-icon name="home"></ion-icon>
                         </span>
-                        <span class="title">Dashboard</span>
+                        <span class="title">Trang chủ</span>
                     </a>
                 </li>
                 <li>
@@ -45,7 +45,15 @@
                         <span class="icon">
                             <ion-icon name="logo-pinterest"></ion-icon>
                         </span>
-                        <span class="title">Add Product</span>
+                        <span class="title">Thêm sản phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listProduct.html">
+                        <span class="icon">
+                            <ion-icon name="list"></ion-icon>
+                        </span>
+                        <span class="title">Danh sách sản phẩm</span>
                     </a>
                 </li>
                 <li>
@@ -53,23 +61,16 @@
                         <span class="icon">
                             <ion-icon name="chatbubbles"></ion-icon>
                         </span>
-                        <span class="title">Message</span>
+                        <span class="title">Tin nhắn</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="help"></ion-icon>
-                        </span>
-                        <span class="title">Help</span>
-                    </a>
-                </li>
+
                 <li>
                     <a href="#">
                         <span class="icon">
                             <ion-icon name="settings"></ion-icon>
                         </span>
-                        <span class="title">Settings</span>
+                        <span class="title">Cài đặt</span>
                     </a>
                 </li>
                 <li>
@@ -77,7 +78,7 @@
                         <span class="icon">
                             <ion-icon name="lock"></ion-icon>
                         </span>
-                        <span class="title">Password</span>
+                        <span class="title">Quên mật khẩu</span>
                     </a>
                 </li>
                 <li>
@@ -85,7 +86,7 @@
                         <span class="icon">
                             <ion-icon name="log-in"></ion-icon>
                         </span>
-                        <span class="title">Sign Out</span>
+                        <span class="title">Thoát</span>
                     </a>
                 </li>
             </ul>
@@ -126,36 +127,41 @@
 
             <!-- add products-->
             <div class="add_product">
-                <div class="title">Add New Product</div>
+                <div class="title">Thêm sản phẩm</div>
                 <form action="#">
                     <div class="input_left">
+                        
                         <div class="input_box">
-                            <span class="title_product">Product Id </span>
-                            <input type="text" placeholder="Enter product id" required>
-                        </div>
-                        <div class="input_box">
-                            <span class="title_product">Name </span>
+                            <span class="title_product">Tên </span>
                             <input type="text" placeholder="Name product" required>
                         </div>
                         <div class="input_box">
-                            <span class="title_product">Quantity </span>
+                            <span class="title_product">Số lượng </span>
                             <input type="number" id="quantity" name="quantity" min="1" max="100">
                         </div>
                         <div class="input_box">
-                            <span class="title_product">Price </span>
+                            <span class="title_product">Giá </span>
                             <input type="number" placeholder="Price" required>
                         </div>
                         <div class="input_box">
-                            <span class="title_product">Category </span>
+                            <span class="title_product">Trạng thái </span>
                             <select name="dropdown">
-                                <option value="Maths" selected></option>
-                                <option value="Physics">Laptop</option>
-                                <option value="Physics">keyboard</option>
+                                <option value="Maths" selected>Chọn...</option>
+                                <option value="Physics">Hàng mới</option>
+                                <option value="Physics">Hàng cũ</option>
                             </select>
                         </div>
                         <div class="input_box">
-                            <span class="title_product">Description </span>
-                            <textarea name="" id="" cols="30" rows="5"></textarea>
+                            <span class="title_product">Loại </span>
+                            <select name="dropdown">
+                                <option value="Maths" selected></option>
+                                <option value="Physics">Màn hình</option>
+                                <option value="Physics">Bàn phím</option>
+                            </select>
+                        </div>
+                        <div class="input_box">
+                            <span class="title_product">Mô tả </span>
+                            <textarea name="subject" id="subject" placeholder="Mô tả sản phẩm..." cols="30" rows="5"></textarea>
                         </div>
                     </div>
 
@@ -163,7 +169,7 @@
                         <div class="input_img">
                             <div class="wrapper">
                                 <div class="image">
-                                    <img src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/127222247_1086079278516962_38767906172782592_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=FcF-DqXSBUYAX-u-j1Z&tn=8Xk759-Pc91XDR0g&_nc_ht=scontent.fdad1-1.fna&oh=39f0b948a1be6268de1169086e3e2d21&oe=6192E86C" alt="">
+                                    <img src="#" alt="">
                                 </div>
                                 <div class="center">
                                     <ion-icon name="cloud-upload"></ion-icon>
@@ -186,9 +192,9 @@
 
                 </form>
                 <div class="wrap">
-                    <!-- <div class="item">
+                    <div class="item">
                         <button class="btn-outline">New</button>
-                    </div> -->
+                    </div>
                     <div class="item">
                         <button class="btn">Save</button>
                     </div>

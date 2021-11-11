@@ -474,7 +474,7 @@ form .input_right .input_img .wrapper .image img {
     display: block;
     border: none;
     color: var(--whiteColor);
-    background: linear-gradient(135deg, #f1f2f6 0%, #0B71E8 100%);
+    background: linear-gradient(135deg, rgb(68, 171, 255) 0%, #0B71E8 100%);
 }
 /* .add_product form .input_right .input_img .wrapper .center {
     display: flex;
@@ -493,7 +493,7 @@ align-items: center;
     padding-top: 5px ;
 }
 .add_product .wrap .item{
-    padding: 10px;
+    padding: 5px;
 }
 .add_product .wrap .item .btn {
     outline: none;
@@ -501,8 +501,8 @@ align-items: center;
     border: 0;
     font-size: 16px;
     line-height: 1;
-    padding: 16px 30px;
-    border-radius: 30px;
+    padding: 12px 20px;
+    border-radius: 10px;
     background: var(--blue);
     color: var(--whiteColor);
     cursor: pointer;
@@ -513,4 +513,23 @@ align-items: center;
 }
 .add_product .wrap .item .btn:active {
     background: var(--primaryColor);
+}
+.add_product .wrap .item .btn-outline {
+    outline: none;
+    display: block;
+    border: 0;
+    font-size: 16px;
+    line-height: 1;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: var(--orangeHover);
+    color: var(--whiteColor);
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.add_product .wrap .item .btn-outline:hover, .btn-outline:focus{
+    background: var(--orangeColor);
+}
+.add_product .wrap .item .btn-outline:active{
+    background: var(--redColor);
 }
