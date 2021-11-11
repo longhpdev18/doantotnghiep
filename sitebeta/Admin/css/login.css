@@ -77,12 +77,12 @@ form .query p {
     font-weight: 400;
 }
 
-form .query p a {
+form .query p button {
     text-decoration: none;
     color: var(--primaryColor);
     transition: linear 0.2s;
 }
-form .query p a:hover {
+form .query p button:hover {
     text-decoration: underline;
     font-weight: 700;
 }
