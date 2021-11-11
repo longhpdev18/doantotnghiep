@@ -42,6 +42,7 @@
 	</div>
 	<div class="profile">
             <div class="profile-wp">
+            <c:forEach var="item" items="${items}">
                 <div class="profile-left">
                     <div class="profile-image">
                         <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="">
@@ -49,7 +50,7 @@
                             <i class="fas fa-check"></i>
                         </div>
                     </div>
-                    <p class="profile-id">#0001</p>
+                    <p class="profile-id">#000${item.makh}</p>
                 </div>
                 <div class="profile-right">
                     <h1 class="profile-title">Thông tin cá nhân</h1>
@@ -59,7 +60,7 @@
                                 <label for="username">
                                     Tên đăng nhập:
                                 </label>
-                                <input type="text" name="username" id="username" class="txtUsername" value="longhpdev1"
+                                <input type="text" name="username" id="username" class="txtUsername" value="${item.tendangnhap}"
                                     readonly>
                             </div>
                             <div class="form-group">
@@ -67,7 +68,7 @@
                                     Mật khẩu:
                                 </label>
                                 <input type="password" name="password" id="password" class="txtPassword"
-                                    value="********" readonly>
+                                    value="${item.matkhau}" readonly>
                             </div>
                         </div>
                         <div class="form-group-2">
@@ -76,13 +77,13 @@
                                     Họ và tên:
                                 </label>
                                 <input type="text" name="fullname" id="fullname" class="txtFullname"
-                                    value="Hoàng Phi Long">
+                                    value="${item.fullname}">
                             </div>
                             <div class="form-group">
                                 <label for="phone">
                                     Số điện thoại:
                                 </label>
-                                <input type="number" name="phone" id="phone" class="txtPhone" value="0385818520">
+                                <input type="number" name="phone" id="phone" class="txtPhone" value="${item.sodienthoai}">
                             </div>
                         </div>
                         <div class="form-group-2">
@@ -90,7 +91,7 @@
                                 <label for="birthday">
                                     Ngày sinh:
                                 </label>
-                                <input type="date" name="birthday" id="birthday" class="txtBirthday" value="2000-05-18">
+                                <input type="date" name="birthday" id="birthday" class="txtBirthday" value="${item.ngaysinh}">
                             </div>
                             <div class="form-group">
                                 <label for="genders">
@@ -104,8 +105,12 @@
                                         </div>
                                     </div>
                                     <div class="gender-list">
+                                    <c:if test="${item.gioitinh=true}">
                                         <div class="gender-option">Nam</div>
+                                        </c:if>
+                                        <c:if test="${item.gioitinh=false}">
                                         <div class="gender-option">Nữ</div>
+                                        </c:if>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +121,7 @@
                                     Địa chỉ:
                                 </label>
                                 <input type="text" name="address" id="address" class="txtAddress"
-                                    value="Khu Phố Long Điền 1, Phường Long Phước">
+                                    value="${item.diachi}">
                             </div>
                         </div>
                         <div class="form-group-1">
@@ -125,7 +130,7 @@
                                     Email:
                                 </label>
                                 <input type="mail" name="email" id="email" class="txtEmail"
-                                    value="longhpdev18@gmail.com">
+                                    value="${item.email}">
                             </div>
                         </div>
                         <!-- PROFILE-BUTTON Khi đã click sửa -->
@@ -141,6 +146,7 @@
 
                     </form>
                 </div>
+                </c:forEach>
             </div>
         </div>
 	<jsp:include page="./../../home/footer.jsp"></jsp:include>
