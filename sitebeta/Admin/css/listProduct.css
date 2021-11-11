@@ -369,9 +369,9 @@ body {
 .details .recentOrders table tr td:nth-child(5){
     text-align: center;
 }
-.details .recentOrders table tr td .images {
+/* .details .recentOrders table tr td .images {
 
-}
+} */
 .details .recentOrders table tr td .images img {
     max-width: 50px;
 }
