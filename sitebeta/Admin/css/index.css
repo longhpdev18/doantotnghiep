@@ -39,6 +39,7 @@ body {
 
 .navigation.active {
     display: flex;
+    
 }
 
 .navigation-wp {
@@ -63,6 +64,7 @@ body {
 .navigation-wp li {
     min-height: 5rem;
     width: 100%;
+    list-style: none;
 }
 
 .navigation-wp li a {
