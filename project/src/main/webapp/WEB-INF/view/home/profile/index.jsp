@@ -29,8 +29,7 @@
 <link rel=”stylesheet”
 	href=”https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css” />
 
- <script
-	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
 
@@ -68,7 +67,7 @@
                                     Mật khẩu:
                                 </label>
                                 <input type="password" name="password" id="password" class="txtPassword"
-                                    value="${item.matkhau}" readonly>
+                                    value="${item.matkhau}" placeholder="Mật khẩu tài khoản của bạn">
                             </div>
                         </div>
                         <div class="form-group-2">
@@ -157,6 +156,10 @@
 <script src="./../assets/js/starter.js"></script>
 <script src="./../assets/js/modules.js"></script>
 <script src="./../assets/js/app.js"></script>
+<script src="./../assets/js/login.js"></script>
+
+ <script
+	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <!-- JQUERY -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

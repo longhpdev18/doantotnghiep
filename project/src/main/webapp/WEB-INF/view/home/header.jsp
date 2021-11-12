@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 
 
-
 <div class="formLogin__container blur-dark">
 	<form id="formLogin" class="fLogin">
 		<div class="form-content">
@@ -57,7 +56,7 @@
 
 <!-- ======= REGISTER =======-->
 <div class="formRegister__container blur-dark">
-	<form action="register" class="fRegister" method="POST" >
+	<form action="register" class="fRegister" method="POST">
 		<div class="form-content">
 			<div class="form-content-left">
 				<div class="form-content-heading">
@@ -150,79 +149,79 @@
 		<li class="menu-item"><a href="./modules/laptop/"
 			class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/laptop.svg" alt="">
+					<img src="../../assets/icons/laptop.svg" alt="">
 				</div>
 				<p>Laptop</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/desktop.svg" alt="">
+					<img src="../../assets/icons/desktop.svg" alt="">
 				</div>
 				<p>PC BestGear</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/apple.svg" alt="">
+					<img src="../../assets/icons/apple.svg" alt="">
 				</div>
 				<p>Apple</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/pc.svg" alt="">
+					<img src="../../assets/icons/pc.svg" alt="">
 				</div>
 				<p>PC Văn Phòng</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/pcacessory.svg" alt="">
+					<img src="../../assets/icons/pcacessory.svg" alt="">
 				</div>
 				<p>Linh Kiện</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/monitor.svg" alt="">
+					<img src="../../assets/icons/monitor.svg" alt="">
 				</div>
 				<p>Màn hình</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/keyboard.svg" alt="">
+					<img src="../../assets/icons/keyboard.svg" alt="">
 				</div>
 				<p>Bàn phim</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/mouse.svg" alt="">
+					<img src="../../assets/icons/mouse.svg" alt="">
 				</div>
 				<p>Chuột + Lót chuột</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/headphone.svg" alt="">
+					<img src="../../assets/icons/headphone.svg" alt="">
 				</div>
 				<p>Tai nghe & Loa</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/chair.svg" alt="">
+					<img src="../../assets/icons/chair.svg" alt="">
 				</div>
 				<p>Ghế Gaming</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/print.svg" alt="">
+					<img src="../../assets/icons/print.svg" alt="">
 				</div>
 				<p>Thiết bị văn phòng</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/internet.svg" alt="">
+					<img src="../../assets/icons/internet.svg" alt="">
 				</div>
 				<p>Thiết bị mạng</p>
 		</a></li>
 		<li class="menu-item"><a href="#" class="menu-link">
 				<div class="menu-icon">
-					<img src="./icons/accessorypc.svg" alt="">
+					<img src="../../assets/icons/accessorypc.svg" alt="">
 				</div>
 				<p>Phụ Kiện</p>
 		</a></li>
@@ -280,45 +279,45 @@
 		</div>
 
 		<!-- HEADER RIGHT ĐÃ LOGIN // Mở comment ra là được-->
-<c:if test="${not empty fullname}">
-		<div class="header__right">
-			<div class="header__right--container">
-				<button href="#" class="btn-primary rounded btn-showUser">
-					<p class="user-fullname">${fullname}</p>
-					<div class="show-user">
-						<div class="icon-user-down">
-							<i class="fas fa-angle-down"></i>
+		<c:if test="${not empty fullname}">
+			<div class="header__right">
+				<div class="header__right--container">
+					<button href="#" class="btn-primary rounded btn-showUser">
+						<p class="user-fullname">${fullname}</p>
+						<div class="show-user">
+							<div class="icon-user-down">
+								<i class="fas fa-angle-down"></i>
+							</div>
+							<div class="icon-user-user">
+								<i class="fas fa-user"></i>
+							</div>
 						</div>
-						<div class="icon-user-user">
-							<i class="fas fa-user"></i>
-						</div>
-					</div>
 
-					<ul class="dropdown-user">
-						<li class="dropdown-user-item">
-						<a href="/profile" name="maKH" id="maKH"
-							class="text-dark cta-user-item"> <i class="fas fa-user-alt"></i>
-								<p class="user-item-text">Thông tin tài khoản</p>
-						</a></li>
-						<li class="dropdown-user-item"><a href="./modules/order/"
-							class="text-dark cta-user-item"> <i class="fas fa-list-ul"></i>
-								<p class="user-item-text">Đơn đặt hàng</p>
-						</a></li>
-						<div class="hr"></div>
-						<li class="dropdown-user-item"><a href="/logout"
-							class="cta-link text-dark cta-user-item"> <i
-								class="fas fa-sign-out-alt"></i>
-								<p class="user-item-text">Đăng xuất</p>
-						</a></li>
-					</ul>
-				</button>
+						<ul class="dropdown-user">
+							<li class="dropdown-user-item"><a href="/profile"
+								name="maKH" id="maKH" class="text-dark cta-user-item"> <i
+									class="fas fa-user-alt"></i>
+									<p class="user-item-text">Thông tin tài khoản</p>
+							</a></li>
+							<li class="dropdown-user-item"><a href="./modules/order/"
+								class="text-dark cta-user-item"> <i class="fas fa-list-ul"></i>
+									<p class="user-item-text">Đơn đặt hàng</p>
+							</a></li>
+							<div class="hr"></div>
+							<li class="dropdown-user-item"><a href="/logout"
+								class="cta-link text-dark cta-user-item"> <i
+									class="fas fa-sign-out-alt"></i>
+									<p class="user-item-text">Đăng xuất</p>
+							</a></li>
+						</ul>
+					</button>
 
-				<a href="./cart/"
-					class=" btn-primary rounded cta-link cta-cart cta-white"> <i
-					class="fas fa-shopping-cart"></i>
-				</a>
+					<a href="./cart/"
+						class=" btn-primary rounded cta-link cta-cart cta-white"> <i
+						class="fas fa-shopping-cart"></i>
+					</a>
+				</div>
 			</div>
-		</div>
 		</c:if>
 		<c:if test="${empty fullname}">
 			<!-- HEADER RIGHT CHƯA LOGIN // Mở comment ra là được-->
@@ -445,7 +444,3 @@
 		</div>
 	</div>
 </div>
-
-<script src="./../assets/js/starter.js"></script>
-<script src="./../assets/js/app.js"></script>
-<script src="./../assets/js/login.js"></script>

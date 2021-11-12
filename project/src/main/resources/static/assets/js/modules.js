@@ -13,12 +13,7 @@ $('.btn-showUser').click(function () {
 })
 
 
-$('.btn-cat').mouseover(function () {
-    $('.dropmenu').removeClass('hidden');
-})
-$('.btn-cat').mouseout(function () {
-    $('.dropmenu').addClass('hidden');
-})
+
 
 
 const decButton = document.getElementsByClassName('btn-qty-down');
