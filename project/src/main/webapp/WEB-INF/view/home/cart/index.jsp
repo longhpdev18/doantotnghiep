@@ -104,22 +104,25 @@
 								<div class="cart-bottom-right total-paid">174.000.000 đ</div>
 							</div>
 						</div>
-				</div>
+						<div class="cart-group-button">
+							<button class="btn btn-primary btn-order rounded-8">Đặt
+								hàng</button>
+							<button class="btn btn-white bg-white-hover btn-update rounded-8">Cập
+								nhật</button>
+						</div>
+						
+					</c:if>
 
-				<div class="cart-group-button">
-					<button class="btn btn-primary btn-order rounded-8">Đặt
-						hàng</button>
-					<button class="btn btn-white bg-white-hover btn-update rounded-8">Cập
-						nhật</button>
+
+					<!-- ==== KHI CHƯA CÓ SẢN PHẨM ====== -->
+					<c:if test="${empty cart.items}">
+						<div class="cart-empty">
+							<h2 class="cart-empty-title">Bạn chưa thêm sản phẩm nào</h2>
+							<a href="../../">Tiếp tục mua hàng</a>
+						</div>
+					</c:if>
+					
 				</div>
-				</c:if>
-				<!-- ==== KHI CHƯA CÓ SẢN PHẨM ====== -->
-				<c:if test="${empty cart.items}">
-					<div class="cart-empty">
-						<h2 class="cart-empty-title">Bạn chưa thêm sản phẩm nào</h2>
-						<a href="../../">Tiếp tục mua hàng</a>
-					</div>
-				</c:if>
 
 			</div>
 		</div>

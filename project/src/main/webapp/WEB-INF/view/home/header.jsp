@@ -312,7 +312,7 @@
 						</ul>
 					</button>
 
-					<a href="./cart/"
+					<a href="./../cart/"
 						class=" btn-primary rounded cta-link cta-cart cta-white"> <i
 						class="fas fa-shopping-cart"></i>
 					</a>
@@ -326,7 +326,7 @@
 					<button href="#"
 						class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
 						nhập</button>
-					<a href="./cart/"
+					<a href="./../cart/"
 						class="btn btn-primary rounded cta-link cta-cart cta-white"><i
 						class="fas fa-shopping-cart"></i></a>
 				</div>
