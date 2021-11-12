@@ -1,75 +1,50 @@
 <%@ page pageEncoding="utf-8"%>
+
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
-<c:url var = "urlLogin" value = "/admin/login"/>
-<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Insert title here</title>
-<!-- FONT ANWESOME -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 
-<!-- FLAT-ICON -->
-<link rel=”stylesheet”
-	href=”https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css” />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/admin/login.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/admin/2.css">
 
-<!-- JQUERY -->
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
+    <!-- BOXICON -->
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <!-- FONT ANWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <!--LINE AWSOME-->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+
 <body>
-	<form id="formSubmit">
-				
-				<div class="form-group">
-					<label for="username">
-						Tên tài khoản:
-					</label>
-					<input type="text" name="username" id="username" class="txtUsername" placeholder="Tài khoản"
-						required>
-				</div>
-				<div class="form-group">
-					<label for="password">
-						Mật khẩu:
-					</label>
-					<input type="password" name="password" id="password" class="txtPassword" placeholder="Mật khẩu"
-						required>
-				</div>
-				<div class="chk-remember">
-					<input type="checkbox" name="chkremember" id="chkremember" class="chkRemember">
-					<p>Ghi nhớ tài khoản</p>
-				</div>
-				<div class="group-button">
-					<button class="btn btn-primary btn-login rounded-8" id="btnLogin">Đăng nhập</button>
-					<button class="btn btn-light btn-cancel rounded-8">Hủy</button>
-				</div>
-				
-			</form>
-			<script>
-				$('#btnLogin').click(function(e){
-					e.preventDefault();
-					var data={};
-					var formData =$('#formSubmit').serializeArray();
-					$.each(formData,function(i,v){
-						data[""+v.name+""]=v.value;
-					});
-					login(data);
-				});
-				function login(data){
-					$.ajax({
-						url:'${urlLogin}',
-						type:'POST',
-						contentType:'application/json',
-						data:JSON.stringify(data),
-						dataType:'json',
-						success:function(result){
-							window.location.href="/admin/index";
-							window.open();
-						},error:function(err){
-							console.log(err)
-						}
-					})
-				}
-			</script>
+    <form id = "formLogin">
+        <img src="./assets/images/logo.png" alt="">
+        <div class="box">
+            <input type="text" name="username" id="username" class="txtUsername" placeholder="Tài khoản" required>
+        </div>
+        <div class="box">
+            <input type="password" name="username" id="password" class="txtPassword" placeholder="Mật khẩu">
+        </div>
+        <button type = "submit" class="btn_Login">Đăng nhập</button>
+        <div class="query">
+            <p>Quên <a href="">Mật khẩu</a>?</p>
+            <p>Tạo một <a href="">Tài khoản</a>?</p>
+        </div>
+    </form>
 </body>
+<!--Link icon-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="./assets/js/admin/hovered.js"></script>
+<script src="./assets/js/admin/loginAdmin.js"></script>
 </html>

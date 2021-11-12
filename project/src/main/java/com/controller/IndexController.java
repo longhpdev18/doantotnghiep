@@ -51,10 +51,31 @@ public class IndexController {
 	LoaiHangDAO lhDAO;
 	@GetMapping("/admin")
 	public String admin(Model model) {
+		
 		return "admin/login";
 	}
 	@GetMapping("/admin/index")
 	public String indexAdmin(Model model) {
+		if(sessionService.get("fullnameNV")==null) {
+			return "redirect:/admin";
+		}
+		model.addAttribute("page","./home.jsp");
+		return "admin/index";
+	}
+	@GetMapping("/admin/add")
+	public String addProductAdmin(Model model) {
+		if(sessionService.get("fullnameNV")==null) {
+			return "redirect:/admin";
+		}
+		model.addAttribute("page","./addProduct.jsp");
+		return "admin/index";
+	}
+	@GetMapping("/admin/show")
+	public String showProductAdmin(Model model) {
+		if(sessionService.get("fullnameNV")==null) {
+			return "redirect:/admin";
+		}
+		model.addAttribute("page","./showProduct.jsp");
 		return "admin/index";
 	}
 	

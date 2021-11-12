@@ -21,5 +21,5 @@ public interface NhanVienDAO extends JpaRepository<NhanVien, Long> {
 //		return null;
 //	}
 	@Query("select nv from nhanvien nv where nv.tendangnhap=:username and nv.matkhau =:password")
-	List<NhanVien> loginAdmin(@Param("username") String tendangnhap,@Param("password") String matkhau);
+	NhanVien loginAdmin(@Param("username") String tendangnhap,@Param("password") String matkhau);
 }

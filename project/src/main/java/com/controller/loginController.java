@@ -45,7 +45,6 @@ public class loginController {
 			mess.setValue("success");
 			sessionService.set("fullname", kh.getFullname());
 			sessionService.set("maKH", kh.getMakh());
-			System.out.println(sessionService.get("fullname").toString());
 		}else{
 			mess.setValue("Sai tài khoản hoặc mật khẩu!");
 		}
