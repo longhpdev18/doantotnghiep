@@ -52,7 +52,8 @@
 						<h2 class="products__title">${item.getLh().tenloai}</h2>
 							<a href="#" class="cta-link cta-pdmore">Xem thêm</a>
 					</div>
-					<c:if test="${item.getLh().maloai%2!=0}">
+					<c:choose>
+					<c:when test="${item.getLh().maloai%2!=0}">
 						<ul class="products__list product-slider">
 							<c:forEach var="sp" items="${item.getSp()}">
 								<li class="product__item">
@@ -68,7 +69,7 @@
 											</div>
 										</div>
 										<div class="product__top">
-											<img src="./assets/img/sanpham/${sp.hinh}" alt=""
+											<img src="../../assets/img/sanpham/${sp.hinh}" alt=""
 												class="product-image">
 										</div>
 	
@@ -96,8 +97,8 @@
 								</a></li>
 							</c:forEach>
 						</ul>
-					</c:if>					
-					<c:if test ="${item.getLh().maloai%2==0}">
+					</c:when>					
+					<c:otherwise>
 						<div class="product-multi product-multi-slider">
 							<ul class="products__list">
 								<c:forEach var="sp" items="${item.getSp()}">
@@ -143,7 +144,8 @@
 							</ul>
 						</div>
 						
-					</c:if>
+					</c:otherwise>
+					</c:choose>
 		</div>
 		
 				</c:forEach>

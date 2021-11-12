@@ -1,7 +1,10 @@
-$('#formLogin').click(function(e){
+$('#btnLoginIndex').click(function(e){
 	e.preventDefault();
 	
 	login();
+});
+$('#btnCancelLoginIndex').click(function(e){
+	e.preventDefault();
 });
 function login(){
 	var username = document.getElementById("username").value;

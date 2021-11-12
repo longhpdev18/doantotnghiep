@@ -45,6 +45,7 @@ $(document).ready(function () {
         pauseOnHover: true,
         autoplay: true,
         autoplaySpeed: 3000,
+		dots: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -52,14 +53,14 @@ $(document).ready(function () {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
+					
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 2,
                 }
             },
             {
@@ -80,7 +81,8 @@ $(document).ready(function () {
         pauseOnHover: true,
         autoplay: false,
         autoplaySpeed: 3000,
-        dots: true
+        dots: true,
+
     });
     $('.hero-slider').slick({
         infinite: true,

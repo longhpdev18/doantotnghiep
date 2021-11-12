@@ -14,8 +14,6 @@ $('.btn-showUser').click(function () {
 
 
 
-
-
 const decButton = document.getElementsByClassName('btn-qty-down');
 const incButton = document.getElementsByClassName('btn-qty-up');
 

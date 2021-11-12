@@ -14,7 +14,8 @@
 <!-- UTILITIES CSS -->
 <link rel="stylesheet" href="./../assets/css/utilities.css" />
 <link rel="stylesheet" href="./../assets/css/responsive.css">
-
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>Giỏ hàng</title>
 
 
@@ -56,10 +57,10 @@
 											</div>
 											<div class="cart-rowdetail-right">
 												<div class="qty-wp">
-													<button class="btn-qty-down" id="btn-qty-down">
+													<button class="btn-qty-down" id="btn-qty-down" >
 														<i class="fas fa-caret-left"></i>
 													</button>
-													<input type="number" class="qty-value" step="1"
+													<input type="number" class="qty-value" step="1" name="qty"
 														value="${item.qty}" min="1" max="100"
 														onblur="this.form.submit()">
 													<button class="btn-qty-up" id="btn-qty-up">
@@ -83,7 +84,7 @@
 							<div class="cart-bottom-row">
 								<div class="cart-bottom-left">Tổng tiền hàng:</div>
 								<div class="cart-bottom-right cart-total-price">
-									177.000.000 đ</div>
+									${cart.getAmount()}</div>
 							</div>
 							<div class="cart-bottom-row">
 								<div class="cart-bottom-left shipping-fee-text">Phí vận
@@ -101,14 +102,15 @@
 							<div class="cart-bottom-row">
 								<div class="cart-bottom-left total-paid-text">Tổng thanh
 									toán:</div>
-								<div class="cart-bottom-right total-paid">174.000.000 đ</div>
+								<div class="cart-bottom-right total-paid">${cart.getAmount()}</div>
 							</div>
 						</div>
 						<div class="cart-group-button">
 							<button class="btn btn-primary btn-order rounded-8">Đặt
 								hàng</button>
-							<button class="btn btn-white bg-white-hover btn-update rounded-8">Cập
-								nhật</button>
+							<button class="btn btn-white bg-white-hover btn-update rounded-8"><a href="/" >
+											 Tiếp tục mua hàng
+											</a></button>
 						</div>
 						
 					</c:if>
@@ -132,15 +134,11 @@
 <!-- BOXICON -->
 
 <!-- MY JS -->
-<script src="./../assets/js/starter.js"></script>
+<script src="./../assets/js/starterCart.js"></script>
 <script src="./../assets/js/modules.js"></script>
 <script src="./../assets/js/app.js"></script>
 <script src="./../assets/js/login.js"></script>
 <!-- JQUERY -->
-<script type="text/javascript"
-	src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript"
-	src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript"
 	src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>

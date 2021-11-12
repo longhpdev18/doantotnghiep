@@ -98,7 +98,7 @@ public class IndexController {
 		model.addAttribute("menu","./menuLogin.jsp");
 		return "home/index";
 	}
-	@PostMapping("/search")
+	@GetMapping("/search")
 	public String laptop(Model model) {
 		System.out.println(paramService.getInt("maloai", 0));
 		List<LH_SP> items = new ArrayList<LH_SP>();
