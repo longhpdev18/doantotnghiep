@@ -47,8 +47,8 @@
 								<div class="cart-list-content">
 									<div class="cart-row">
 										<div class="cart-row-image">
-											<img
-												src="./../assets/img/sanpham/${item.hinh}" alt="${item.tensp}" class="cart-image">
+											<img src="./../assets/img/sanpham/${item.hinh}"
+												alt="${item.tensp}" class="cart-image">
 										</div>
 										<div class="cart-row-detail">
 											<div class="cart-rowdetail-left">
@@ -59,8 +59,9 @@
 													<button class="btn-qty-down" id="btn-qty-down">
 														<i class="fas fa-caret-left"></i>
 													</button>
-													<input type="number" class="qty-value" step="1" value="${item.qty}"
-														min="1" max="100" onblur="this.form.submit()">
+													<input type="number" class="qty-value" step="1"
+														value="${item.qty}" min="1" max="100"
+														onblur="this.form.submit()">
 													<button class="btn-qty-up" id="btn-qty-up">
 														<i class="fas fa-caret-right"></i>
 													</button>
@@ -103,7 +104,6 @@
 								<div class="cart-bottom-right total-paid">174.000.000 đ</div>
 							</div>
 						</div>
-					</c:if>
 				</div>
 
 				<div class="cart-group-button">
@@ -112,7 +112,7 @@
 					<button class="btn btn-white bg-white-hover btn-update rounded-8">Cập
 						nhật</button>
 				</div>
-
+				</c:if>
 				<!-- ==== KHI CHƯA CÓ SẢN PHẨM ====== -->
 				<c:if test="${empty cart.items}">
 					<div class="cart-empty">
