@@ -32,6 +32,8 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- JQUERY -->
 
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
 </head>
 
 <body>
@@ -88,14 +90,15 @@
 										<li class="product-price-current">${item.gia}</li>
 									</div>
 								</div>
-								</c:forEach>
                     <div class="group-button-detail">
 						<div class="group-button-content">
 							<a href="/cart/" class="btn btn-buy btn-primary rounded-8">Mua
 								ngay</a>
-									<a href="/cart/add/${masp}" class="btn btn-addToCart btn-light rounded-8">Thêm vào giỏ</a>
+									<button class="btn btn-addToCart btn-light rounded-8" value="${item.masp}">Thêm vào giỏ</button>
 						</div>
 					</div>
+					
+								</c:forEach>
                 </div>
             </div>
             <div class="product-specs">
@@ -300,6 +303,8 @@
 	<jsp:include page="./../../home/footer.jsp"></jsp:include>
 	</div>
 
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="./../assets/js/starterCart.js"></script>
 <script src="./../assets/js/modules.js"></script>
 <script src="./../assets/js/app.js"></script>

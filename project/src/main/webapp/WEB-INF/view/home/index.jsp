@@ -75,7 +75,7 @@
 	
 										<div class="product__bottom">
 											<div class="product__content">
-												<h6 class="product-name">${sp.tensp}</h6>
+												<h6 class="product-name" >${sp.tensp}</h6>
 												<h6 class="product-priceOld">23,490,000 đ</h6>
 												<h4 class="product-priceNew">${sp.gia}đ</h4>
 											</div>
@@ -87,9 +87,9 @@
 														class="btn btn-primary btn-buy rounded-8">Mua ngay</button>
 													]
 												</form>
-												<form method="get" action="${sp.masp}">
+												<form >
 													<button type="submit"
-														class="btn btn-light btn-addToCart rounded-8">Thêm
+														class="btn btn-light btn-addToCart rounded-8" value="${sp.masp}">Thêm
 														vào giỏ</button>
 												</form>
 											</div>
@@ -132,9 +132,9 @@
 														class="btn btn-primary btn-buy rounded-8">Mua ngay</button>
 													]
 												</form>
-												<form method="get" action="${sp.masp}">
+												<form >
 													<button type="submit"
-														class="btn btn-light btn-addToCart rounded-8">Thêm
+														class="btn btn-light btn-addToCart rounded-8" value="${sp.masp}">Thêm
 														vào giỏ</button>
 												</form>
 											</div>
@@ -158,6 +158,7 @@
 <script src="./../assets/js/modules.js"></script> -->
 <script src="./../assets/js/app.js"></script>
 <script src="./../assets/js/starter.js"></script>
+<script src="./../assets/js/starterCart.js"></script>
 <script src="./../assets/js/login.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

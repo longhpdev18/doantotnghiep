@@ -1494,8 +1494,25 @@ body {
 	width: 5rem;
 	height: 4.2rem;
 	padding: 1rem 1rem;
+	position: relative;
+}
+.cta-cart .cart-badge {
+	width: 2.2rem;
+	height: 2.2rem;
+	background-color: var(--redColor);
+	border-radius: 100%;
+	top: -7px;
+	right: -7px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
 }
 
+.cart-badge.active {
+	display: flex;
+}
 .menu-mobile {
 	display: none;
 }
@@ -2229,6 +2246,15 @@ body {
 	align-items: center;
 }
 
+.group-button-content button {
+	width: calc(100% / 2);
+	height: 100%;
+	font-size: 1.4rem;
+	padding: 1.5rem 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .group-button-content a {
 	width: calc(100% / 2);
 	height: 100%;
@@ -2238,7 +2264,6 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-
 .detail-right-content {
 	flex: 1;
 }
@@ -3374,4 +3399,7 @@ body {
 	position: absolute;
 	right: 50px;
 	background-color: var(--whiteColor);
+}
+.toast-top-right{
+	margin-top:50px;
 }

@@ -75,6 +75,7 @@ $(document).ready(function () {
     $('.product-multi-slider').slick({
         infinite: false,
         slidesToShow: 1,
+ 		slidesToScroll: 2, 
         arrows: false,
         draggable: false,
         pauseOnFocus: true,

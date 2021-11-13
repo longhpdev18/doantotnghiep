@@ -38,9 +38,10 @@
 					<p>Ghi nhớ tài khoản</p>
 				</div>
 				<div class="group-button">
-					<button class="btn btn-primary btn-login rounded-8" id="btnLoginIndex">Đăng
-						nhập</button>
-					<button class="btn btn-light btn-cancel rounded-8" id="btnCancelLoginIndex">Hủy</button>
+					<button class="btn btn-primary btn-login rounded-8"
+						id="btnLoginIndex">Đăng nhập</button>
+					<button class="btn btn-light btn-cancel rounded-8"
+						id="btnCancelLoginIndex">Hủy</button>
 				</div>
 				<div class="hr"></div>
 				<div class="toRegister">
@@ -146,84 +147,97 @@
 				<i class="fas fa-times"></i>
 			</div>
 		</div>
-		<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/laptop.svg" alt="">
-						</div>
-						<p>Laptop</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=4" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/desktop.svg" alt="">
-						</div>
-						<p>PC BestGear</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/apple.svg" alt="">
-						</div>
-						<p>Apple</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/pc.svg" alt="">
-						</div>
-						<p>PC Văn Phòng</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/pcacessory.svg" alt="">
-						</div>
-						<p>Linh Kiện</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=9" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/monitor.svg" alt="">
-						</div>
-						<p>Màn hình</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=1" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/keyboard.svg" alt="">
-						</div>
-						<p>Bàn phim</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=6" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/mouse.svg" alt="">
-						</div>
-						<p>Chuột + Lót chuột</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=5" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/headphone.svg" alt="">
-						</div>
-						<p>Tai nghe & Loa</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=7" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/chair.svg" alt="">
-						</div>
-						<p>Ghế Gaming</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=10" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/print.svg" alt="">
-						</div>
-						<p>Thiết bị văn phòng</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/internet.svg" alt="">
-						</div>
-						<p>Thiết bị mạng</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/accessorypc.svg" alt="">
-						</div>
-						<p>Phụ Kiện</p>
-				</a></li>
+		<li class="menu-item"><a href="/search/?maloai=3"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/laptop.svg" alt="">
+				</div>
+				<p>Laptop</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=4"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/desktop.svg" alt="">
+				</div>
+				<p>PC BestGear</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=3"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/apple.svg" alt="">
+				</div>
+				<p>Apple</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=3"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/pc.svg" alt="">
+				</div>
+				<p>PC Văn Phòng</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=3"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/pcacessory.svg" alt="">
+				</div>
+				<p>Linh Kiện</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=9"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/monitor.svg" alt="">
+				</div>
+				<p>Màn hình</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=1"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/keyboard.svg" alt="">
+				</div>
+				<p>Bàn phim</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=6"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/mouse.svg" alt="">
+				</div>
+				<p>Chuột + Lót chuột</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=5"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/headphone.svg" alt="">
+				</div>
+				<p>Tai nghe & Loa</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=7"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/chair.svg" alt="">
+				</div>
+				<p>Ghế Gaming</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=10"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/print.svg" alt="">
+				</div>
+				<p>Thiết bị văn phòng</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=3"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/internet.svg" alt="">
+				</div>
+				<p>Thiết bị mạng</p>
+		</a></li>
+		<li class="menu-item"><a href="/search/?maloai=3"
+			class="menu-link">
+				<div class="menu-icon">
+					<img src="../../assets/icons/accessorypc.svg" alt="">
+				</div>
+				<p>Phụ Kiện</p>
+		</a></li>
 	</div>
 </div>
 
@@ -312,8 +326,9 @@
 					</button>
 
 					<a href="./../cart/"
-						class=" btn-primary rounded cta-link cta-cart cta-white"> <i
-						class="fas fa-shopping-cart"></i>
+						class=" btn-primary rounded cta-link cta-cart cta-white"
+						id="showCountCart"><i class="fas fa-shopping-cart"></i> <span
+						class="cart-badge active">${cart.getCount()}</span>
 					</a>
 				</div>
 			</div>
@@ -326,8 +341,11 @@
 						class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
 						nhập</button>
 					<a href="./../cart/"
-						class="btn btn-primary rounded cta-link cta-cart cta-white"><i
-						class="fas fa-shopping-cart"></i></a>
+						class=" btn-primary rounded cta-link cta-cart cta-white"
+						id="showCountCart"><i class="fas fa-shopping-cart"></i> <span
+						class="cart-badge active">${cart.getCount()}</span>
+					</a>
+
 				</div>
 			</div>
 		</c:if>

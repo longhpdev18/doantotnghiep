@@ -1,16 +1,14 @@
 package com.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.model.KhachHang;
-import com.model.Login;
+import com.model.CartShop;
 import com.model.Message;
+import com.model.SanPham;
 import com.repository.KhachHangDAO;
 import com.repository.LoaiHangDAO;
 import com.repository.SanPhamDAO;
@@ -20,7 +18,7 @@ import com.service.SessionService;
 import com.service.ShoppingCartService;
 
 @RestController
-public class loginController {
+public class ShoppingCartRestAPI {
 	@Autowired
 	SanPhamDAO sanphamDAO;
 	@Autowired
@@ -34,22 +32,20 @@ public class loginController {
 	@Autowired
 	ShoppingCartService cart;
 	@Autowired
-	LoaiHangDAO lhDAO;
+	SanPhamDAO spDAO;
 	@CrossOrigin
-	@PostMapping("/login")
-	public Message login(@RequestBody Login login) {
+	@PostMapping("cart/add")
+	public int add(@RequestBody SanPham cs)
+	{	Message message = new Message();
 		
-		Message mess = new Message();
-		KhachHang kh = khDAO.loginKH(login.getUsername(), login.getPassword());
-		if(kh!=null) {
-			mess.setValue("success");
-			sessionService.set("fullname", kh.getFullname());
-			sessionService.set("maKH", kh.getMakh());
-		}else{
-			mess.setValue("Sai tài khoản hoặc mật khẩu!");
+		cart.add(cs.getMasp());
+		System.out.println(String.valueOf(cs.getMasp()));
+		if(spDAO.getById(cs.getMasp())!=null) {
+
+			message.setValue("success");
+		}else {
+			message.setValue("Lỗi!");
 		}
-		
-		return mess;
-		
+		return cart.getCount();
 	}
 }
