@@ -43,7 +43,7 @@ $(document).ready(function () {
         nextArrow: "<button type='button' class='slick-next  slick-button pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
         pauseOnFocus: true,
         pauseOnHover: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         responsive: [
             {
@@ -93,13 +93,21 @@ $(document).ready(function () {
         pauseOnHover: true,
         autoplay: false,
         autoplaySpeed: 5000,
-      
-      });
-      
-  
-
-
+    });
 });
+
+$('.address-1').click(function () {
+    $('.address-1').addClass('active');
+    $('.address-2').removeClass('active');
+    $('#address-1').attr('checked', true);
+    $('#address-2').attr('checked', false);
+})
+$('.address-2').click(function () {
+    $('.address-1').removeClass('active');
+    $('.address-2').addClass('active');
+    $('#address-1').attr('checked', false);
+    $('#address-2').attr('checked', true);
+})
 
 
 
