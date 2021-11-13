@@ -327,8 +327,12 @@
 
 					<a href="./../cart/"
 						class=" btn-primary rounded cta-link cta-cart cta-white"
-						id="showCountCart"><i class="fas fa-shopping-cart"></i> <span
+						id="showCountCart"><i class="fas fa-shopping-cart"></i> 
+						
+						<span
 						class="cart-badge active">${cart.getCount()}</span>
+						
+						
 					</a>
 				</div>
 			</div>
@@ -342,8 +346,9 @@
 						nhập</button>
 					<a href="./../cart/"
 						class=" btn-primary rounded cta-link cta-cart cta-white"
-						id="showCountCart"><i class="fas fa-shopping-cart"></i> <span
-						class="cart-badge active">${cart.getCount()}</span>
+						id="showCountCart"><i class="fas fa-shopping-cart"></i> 
+							<span
+							class="cart-badge active">${cart.getCount()}</span>
 					</a>
 
 				</div>
