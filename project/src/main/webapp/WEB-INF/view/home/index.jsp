@@ -57,7 +57,7 @@
 						<ul class="products__list product-slider">
 							<c:forEach var="sp" items="${item.getSp().content}">
 								<li class="product__item">
-								<a href="product/${sp.masp}"
+								<a href="/product/${sp.masp}"
 									name="masp" class="cta-link cta-product">
 										<div class="product__deal">
 											<div class="product__deal--container">
@@ -82,10 +82,9 @@
 	
 											<div class="product__btnGroups">
 												<form method="get" action="cart/add/${sp.masp}">
-													[
+													
 													<button type="submit"
 														class="btn btn-primary btn-buy rounded-8">Mua ngay</button>
-													]
 												</form>
 												<form >
 													<button type="submit"
