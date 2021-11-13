@@ -92,7 +92,7 @@
 								</div>
                     <div class="group-button-detail">
 						<div class="group-button-content">
-							<a href="/cart/" class="btn btn-buy btn-primary rounded-8">Mua
+							<a href="/cart/add/${item.masp}" class="btn btn-buy btn-primary rounded-8">Mua
 								ngay</a>
 									<button class="btn btn-addToCart btn-light rounded-8" value="${item.masp}">Thêm vào giỏ</button>
 						</div>
