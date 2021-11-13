@@ -31,7 +31,8 @@
 	href=”https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css” />
 
 <!-- JQUERY -->
-
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
 </head>
 
 <body>
@@ -134,6 +135,8 @@
 <!-- BOXICON -->
 
 <!-- MY JS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="./../assets/js/starterCart.js"></script>
 <script src="./../assets/js/modules.js"></script>
 <script src="./../assets/js/app.js"></script>

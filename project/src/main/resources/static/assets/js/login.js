@@ -22,7 +22,6 @@ function login(){
 			),
 			dataType:'json',
 			success:function(result){
-				console.log(result);
 				if(result.value=='success'){
 					window.location.href = '/';
 					window.open();

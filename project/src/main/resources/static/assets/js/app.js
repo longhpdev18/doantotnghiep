@@ -35,7 +35,7 @@ $('.btn-mobile-searchbox').click(function () {
 
 $(document).ready(function () {
     $('.product-slider').slick({
-        infinite: false,
+        infinite: true,
         slidesToShow: 4,
         arrows: true,
         draggable: false,
@@ -75,7 +75,7 @@ $(document).ready(function () {
     $('.product-multi-slider').slick({
         infinite: false,
         slidesToShow: 1,
- 		slidesToScroll: 2, 
+ 		slidesToScroll:1, 
         arrows: false,
         draggable: false,
         pauseOnFocus: true,

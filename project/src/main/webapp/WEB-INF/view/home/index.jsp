@@ -51,11 +51,11 @@
 					<div class="products__heading">
 						<h2 class="products__title">${item.getLh().tenloai}</h2>
 							<a href="#" class="cta-link cta-pdmore">Xem thêm</a>
-					</div>
+					</div><%-- 
 					<c:choose>
-					<c:when test="${item.getLh().maloai%2!=0}">
+					<c:when test="${item.getLh().maloai%2!=0}"> --%>
 						<ul class="products__list product-slider">
-							<c:forEach var="sp" items="${item.getSp()}">
+							<c:forEach var="sp" items="${item.getSp().content}">
 								<li class="product__item">
 								<a href="product/${sp.masp}"
 									name="masp" class="cta-link cta-product">
@@ -97,11 +97,12 @@
 								</a></li>
 							</c:forEach>
 						</ul>
-					</c:when>					
+					<%-- </c:when>					
 					<c:otherwise>
 						<div class="product-multi product-multi-slider">
+						
+								<c:forEach var="sp" items="${item.getSp().content}">
 							<ul class="products__list">
-								<c:forEach var="sp" items="${item.getSp()}">
 								<li class="product__item"><a href="product/${sp.masp}"
 									name="masp" class="cta-link cta-product">
 										<div class="product__deal">
@@ -114,7 +115,7 @@
 											</div>
 										</div>
 										<div class="product__top">
-											<img src="./assets/img/sanpham/${sp.hinh}" alt=""
+											<img src="../../assets/img/sanpham/${sp.hinh}" alt=""
 												class="product-image">
 										</div>
 	
@@ -140,12 +141,13 @@
 											</div>
 										</div>
 								</a></li>
-							</c:forEach>
 							</ul>
+							
+							</c:forEach>
 						</div>
 						
 					</c:otherwise>
-					</c:choose>
+					</c:choose> --%>
 		</div>
 		
 				</c:forEach>

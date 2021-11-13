@@ -81,21 +81,20 @@ public class IndexController {
 	
 	@GetMapping("/")
 	public String index(Model model) {
-	    List<LoaiHang> listLH = lhDAO.findAll();
-	    List<LH_SP> items = new ArrayList<LH_SP>();
-	    for(LoaiHang lh:listLH) {
-	    	LH_SP item = new LH_SP();
-	    	List<SanPham> tempList =  sanphamDAO.getByLH((int) lh.getMaloai());
-	    	item.setLh(lh);
-	    	item.setSp(tempList);
-	    	items.add(item);
-		    
-	    }
-	    
-	    System.out.println(listLH.size());
-		model.addAttribute("items", items);
-		model.addAttribute("page","./ads.jsp");
-		model.addAttribute("menu","./menuLogin.jsp");
+		if(sessionService.get("items")==null) {
+			List<LoaiHang> listLH = lhDAO.findAll();
+		    List<LH_SP> items = new ArrayList<LH_SP>();
+		    for(LoaiHang lh:listLH) {
+		    	LH_SP item = new LH_SP();
+		    	Pageable pageable = PageRequest.of(0, 8);
+		    	Page<SanPham> tempList =  sanphamDAO.getByLH((int) lh.getMaloai(),pageable);
+		    	item.setLh(lh);
+		    	item.setSp(tempList);
+		    	items.add(item);
+			    
+		    }
+			sessionService.set("items", items);
+		}
 		return "home/index";
 	}
 	@GetMapping("/search")
@@ -103,13 +102,12 @@ public class IndexController {
 		System.out.println(paramService.getInt("maloai", 0));
 		List<LH_SP> items = new ArrayList<LH_SP>();
 		LH_SP item = new LH_SP();
-		List<SanPham> tempList =  sanphamDAO.getByLH((int) paramService.getInt("maloai", 0));
+		Pageable pageable = PageRequest.of(0, 8);
+		Page<SanPham> tempList =  sanphamDAO.getByLH((int) paramService.getInt("maloai", 0),pageable);
     	item.setLh(lhDAO.getById((long) paramService.getInt("maloai", 0)));
     	item.setSp(tempList);
     	items.add(item);
 		model.addAttribute("items", items);
-		model.addAttribute("page","./ads.jsp");
-		model.addAttribute("menu","./menuLogin.jsp");
 		return "home/index";
 	}
 	@GetMapping("/logout")

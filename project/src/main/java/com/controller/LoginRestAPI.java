@@ -41,6 +41,7 @@ public class LoginRestAPI {
 		
 		Message mess = new Message();
 		KhachHang kh = khDAO.loginKH(login.getUsername(), login.getPassword());
+		System.out.println(kh);
 		if(kh!=null) {
 			mess.setValue("success");
 			sessionService.set("fullname", kh.getFullname());

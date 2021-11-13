@@ -11,7 +11,7 @@ import com.repository.SanPhamDAO;
 public class LH_SP {
 	LoaiHangDAO lhDAO;
 	SanPhamDAO spDAO;
-	List<SanPham> sp;
+	Page<SanPham> sp;
 	public LoaiHangDAO getLhDAO() {
 		return lhDAO;
 	}
@@ -24,10 +24,10 @@ public class LH_SP {
 	public void setSpDAO(SanPhamDAO spDAO) {
 		this.spDAO = spDAO;
 	}
-	public List<SanPham> getSp() {
+	public Page<SanPham> getSp() {
 		return sp;
 	}
-	public void setSp(List<SanPham> sp) {
+	public void setSp(Page<SanPham> sp) {
 		this.sp = sp;
 	}
 	public LoaiHang getLh() {
