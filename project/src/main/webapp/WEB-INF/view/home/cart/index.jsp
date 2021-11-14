@@ -107,8 +107,8 @@
 							</div>
 						</div>
 						<div class="cart-group-button">
-							<button class="btn btn-primary btn-order rounded-8">Đặt
-								hàng</button>
+							<button class="btn btn-primary btn-order rounded-8"><a style="text-decoration: none; color: white;" href="./../paid" >Đặt
+								hàng</a></button>
 							<button class="btn btn-white bg-white-hover btn-update rounded-8"><a href="/" >
 											 Tiếp tục mua hàng
 											</a></button>

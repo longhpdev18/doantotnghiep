@@ -312,7 +312,7 @@
 									class="fas fa-user-alt"></i>
 									<p class="user-item-text">Thông tin tài khoản</p>
 							</a></li>
-							<li class="dropdown-user-item"><a href="./modules/order/"
+							<li class="dropdown-user-item"><a href="./../order"
 								class="text-dark cta-user-item"> <i class="fas fa-list-ul"></i>
 									<p class="user-item-text">Đơn đặt hàng</p>
 							</a></li>

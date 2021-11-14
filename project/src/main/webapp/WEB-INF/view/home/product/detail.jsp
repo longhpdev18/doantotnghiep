@@ -299,7 +299,7 @@
         </div>
     </div>
 	
-	</div>
+	
 	<jsp:include page="./../../home/footer.jsp"></jsp:include>
 	</div>
 
@@ -311,3 +311,5 @@
 <script src="./../assets/js/login.js"></script>
 <!-- JQUERY -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>
