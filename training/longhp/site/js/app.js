@@ -95,19 +95,17 @@ $(document).ready(function () {
         autoplaySpeed: 5000,
     });
 });
+$('.add-address').click(function () {
+    $('.sub-address').addClass('active');
+})
+$('.btn-save').click(function () {
+    $('.sub-address').removeClass('active');
+})
 
-$('.address-1').click(function () {
-    $('.address-1').addClass('active');
-    $('.address-2').removeClass('active');
-    $('#address-1').attr('checked', true);
-    $('#address-2').attr('checked', false);
+$('.btn-cancel-address').click(function () {
+    $('.sub-address').removeClass('active');
 })
-$('.address-2').click(function () {
-    $('.address-1').removeClass('active');
-    $('.address-2').addClass('active');
-    $('#address-1').attr('checked', false);
-    $('#address-2').attr('checked', true);
-})
+
 
 
 

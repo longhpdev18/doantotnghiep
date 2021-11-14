@@ -1100,7 +1100,24 @@ body {
 	margin-bottom: var(--spaceM);
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-left: calc(-1 * var(--spaceS));
+	position: relative;
+}
+
+.rdo-address[type=radio] {
+	display: none;
+}
+
+.rdo-address:checked+label {
+	background-color: rgba(46, 204, 113, .1);
+	color: var(--greenColor);
+}
+
+.address-nameKH {
+	font-size: 1.8rem;
+	font-weight: 600;
+	margin-bottom: var(--spaceS);
 }
 
 .sl-wp {
@@ -1111,24 +1128,39 @@ body {
 	align-items: center;
 }
 
+.rdo-address {
+	display: block;
+}
 
-.rdo-address-wp:first-child {
-	margin-right: var(--spaceM);
+.paid-method {
+	width: 100%;
+	display: flex;
+	padding: var(--spaceS);
+	flex-direction: column;
+	border: 1px solid var(--darkLightColor);
+	margin-top: var(--spaceM);
+}
+
+.faddress-group .txtPhone {
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.paid-method input[type=radio] {
+	display: none;
 }
 
 .rdo-address-wp {
-	width: calc(100% / 2);
-	padding: var(--spaceM);
+	max-width: calc((100% / 2) - var(--spaceS));
+	padding: var(--spaceS);
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
+	flex-direction: column;
 	border-radius: var(--spaceS);
 	background-color: var(--lightColor2);
 	margin-top: var(--spaceS);
-}
-
-.rdo-address-wp.active {
-
-	background-color: rgba(46, 204, 113, .3);
+	margin-left: var(--spaceS);
+	cursor: pointer;
 }
 
 .rdo-address-content {
@@ -1141,6 +1173,35 @@ body {
 .address-text {
 	font-weight: 600;
 	margin-bottom: var(--spaceS);
+}
+
+.paid-method-list {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	margin-top: var(--spaceS);
+}
+
+.rdo-method-wp {
+	--col: 4;
+	height: 100%;
+	width: calc(100% / var(--col));
+	padding: var(--spaceS);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--lightColor);
+	margin-right: var(--spaceS);
+	border-radius: var(--space8);
+}
+
+.rdo-method-wp:last-child {
+	margin-right: 0;
+}
+
+.rdo-method:checked+label {
+	background-color: rgba(46, 204, 113, .1);
+	color: var(--greenColor);
 }
 
 .address-phone {
@@ -1157,7 +1218,93 @@ body {
 
 .add-address {
 	margin-right: var(--spaceS);
+	position: relative;
 }
+
+.sub-address {
+	position: absolute;
+	width: 100%;
+	width: 40rem;
+	min-height: 10rem;
+	padding: var(--spaceS);
+	display: flex;
+	top: 100%;
+	right: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	z-index: 15;
+	box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+	border-radius: var(--spaceS);
+	display: none;
+}
+
+.sub-address.active {
+	display: flex;
+}
+
+.faddress-group {
+	width: 100%;
+	height: 7rem;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: var(--spaceS);
+}
+
+.faddress-button {
+	width: 100%;
+	height: 4.5rem;
+	display: flex;
+	margin-top: var(--spaceS);
+}
+
+.faddress-button button {
+	width: calc(100% / 2);
+	border-radius: var(--space8);
+	font-size: 1.4rem;
+}
+
+.btn-save {
+	background-color: var(--primaryColor);
+	color: var(--whiteColor);
+	margin-right: var(--spaceS);
+}
+
+.btn-save:hover {
+	background-color: var(--primaryColor2);
+	color: var(--primaryColor);
+	transition: .2s linear;
+}
+
+.btn-cancel-address {
+	background-color: var(--lightColor);
+	color: var(--darkColor);
+}
+
+.btn-cancel-address:hover {
+	background-color: var(--lightColor2);
+	color: var(--darkColor);
+	transition: .2s linear;
+}
+
+.faddress-group:last-child {
+	margin-bottom: 0;
+}
+
+.faddress-group label {
+	margin-bottom: var(--space8);
+}
+
+.faddress-group input {
+	flex: 1;
+	background-color: var(--lightColor);
+	border-radius: var(--space8);
+	padding: var(--spaceS);
+	font-size: 1.4rem;
+}
+
+
 
 .list-andress-right a {
 	font-size: 1.4rem;

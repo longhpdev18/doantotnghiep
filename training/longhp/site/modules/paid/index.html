@@ -388,27 +388,54 @@
                         <div class="paid-list-heading">
                             <div class="list-andress-left">Địa chỉ nhận hàng</div>
                             <div class="list-andress-right">
-                                <a href="#" class="add-address">Thêm địa chỉ</a>
+                                <a href="#" class="add-address">Thêm địa chỉ
+                                    <div class="sub-address">
+                                        <div class="faddress-group">
+                                            <label for="fullname">Tên người nhận</label>
+                                            <input type="text" class="txtFullname" name="fullname"
+                                                placeholder="Họ và tên" required>
+                                        </div>
+                                        <div class="faddress-group">
+                                            <label for="address">Địa chỉ</label>
+                                            <input type="text" class="txtAddress" name="address" placeholder="Địa chỉ"
+                                                required>
+                                        </div>
+                                        <div class="faddress-group">
+                                            <label for="phone">Số điện thoại</label>
+                                            <input type="number" class="txtPhone" name="address"
+                                                placeholder="Số điện thoại" required>
+                                        </div>
+                                        <div class="faddress-button">
+                                            <button class="btn-save">Lưu</button>
+                                            <button class="btn-cancel-address">Hủy</button>
+                                        </div>
+                                    </div>
+                                </a>
                                 <a href="#" class="remove-address">Xóa</a>
                             </div>
                         </div>
                         <div class="paid-address">
-                            <div class="rdo-address-wp address-1 active">
-                                <input type="radio" class="rdo-address" id="address-1" name="rdo-address" checked>
-                                <div class="rdo-address-content">
-                                    <p class="address-text">Khu Phố Long Điền 1, Phường Long Phước, Thị Xã Phước Long,
-                                        Tỉnh Bình Phước</p>
-                                    <p class="address-phone">0385818520</p>
-                                </div>
-                            </div>
-                            <div class="rdo-address-wp address-2">
-                                <input type="radio" id="address-2" class="rdo-address" name="rdo-address">
-                                <div class="rdo-address-content">
-                                    <p class="address-text">Khu Phố Long Điền 1, Phường Long Phước, Thị Xã Phước Long,
-                                        Tỉnh Bình Phước</p>
-                                    <p class="address-phone">0385818520</p>
-                                </div>
-                            </div>
+                            <input type="radio" class="rdo-address" id="address-1" name="rdo-address" checked="checked">
+                            <label class="rdo-address-wp" for="address-1">
+                                <p class="address-nameKH">Hoàng Phi Long</p>
+                                <p class="address-text">Khu Phố Long Điền 1, Phường Long Phước, Thị Xã Phước Long,
+                                    Tỉnh Bình Phước</p>
+                                <p class="address-phone">0385818520</p>
+                            </label>
+                            <input type="radio" class="rdo-address" id="address-2" name="rdo-address">
+                            <label class="rdo-address-wp" for="address-2">
+                                <p class="address-nameKH">Hoàng Phi Long</p>
+                                <p class="address-text">Khu Phố Long Điền 1, Phường Long Phước, Thị Xã Phước Long,
+                                    Tỉnh Bình Phước</p>
+                                <p class="address-phone">0385818520</p>
+                            </label>
+                            <input type="radio" class="rdo-address" id="address-3" name="rdo-address">
+                            <label class="rdo-address-wp" for="address-3">
+                                <p class="address-nameKH">Hoàng Phi Long</p>
+                                <p class="address-text">Khu Phố Long Điền 1, Phường Long Phước, Thị Xã Phước Long,
+                                    Tỉnh Bình Phước</p>
+                                <p class="address-phone">0385818520</p>
+                            </label>
                         </div>
                     </div>
                     <div class="paid-list-content">
@@ -464,6 +491,21 @@
                                     174.000.000 đ
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="paid-method">
+                        <div class="paid-list-heading">
+                            Phương thức thanh toán
+                        </div>
+                        <div class="paid-method-list">
+                            <input type="radio" class="rdo-method" id="method-1" name="rdo-method">
+                            <label class="rdo-method-wp" for="method-1">
+                                Thanh toán khi nhận hàng
+                            </label>
+                            <input type="radio" class="rdo-method" id="method-2" name="rdo-method">
+                            <label class="rdo-method-wp" for="method-2">
+                                Thanh toán qua chuyển khoản
+                            </label>
                         </div>
                     </div>
                     <div class="paid-group-button">
