@@ -1112,6 +1112,8 @@ body {
 .rdo-address:checked+label {
 	background-color: rgba(46, 204, 113, .1);
 	color: var(--greenColor);
+	border: 2.4px solid var(--greenColor);
+	border-style: dashed;
 }
 
 .address-nameKH {
@@ -1202,6 +1204,8 @@ body {
 .rdo-method:checked+label {
 	background-color: rgba(46, 204, 113, .1);
 	color: var(--greenColor);
+	border: 2.4px solid var(--greenColor);
+	border-style: dashed;
 }
 
 .address-phone {
