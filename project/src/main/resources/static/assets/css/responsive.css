@@ -116,6 +116,10 @@
         padding: var(--spaceS);
     }
 
+.button-loginText {
+	
+	display:none;}
+
     .fLogin {
         border-radius: var(--spaceS);
         overflow: hidden;

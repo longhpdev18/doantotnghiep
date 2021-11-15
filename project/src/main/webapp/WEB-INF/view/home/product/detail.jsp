@@ -191,7 +191,10 @@
                 </div>
             </div>
             
-        <div class="comment">
+        
+    </div>
+	
+	<div class="comment">
             <div class="comment-wp">
                 <div class="comment-headding">
                     <i class="fas fa-comments"></i>Hỏi đáp & hỗ trợ
@@ -297,9 +300,6 @@
                 </div>
             </div>
         </div>
-    </div>
-	
-	
 	<jsp:include page="./../../home/footer.jsp"></jsp:include>
 	</div>
 
