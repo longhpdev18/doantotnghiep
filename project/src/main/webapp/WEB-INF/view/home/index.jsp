@@ -61,8 +61,6 @@
 									name="masp" class="cta-link cta-product">
 										<div class="product__deal">
 											<div class="product__deal--container">
-												<div class="deal-tg-left"></div>
-												<div class="deal-tg-right"></div>
 												<div class="deal-content">
 													Giảm<span>30%</span>
 												</div>
@@ -84,11 +82,11 @@
 												<form method="get" action="cart/add/${sp.masp}">
 													
 													<button type="submit"
-														class="btn btn-primary btn-buy rounded-8">Mua ngay</button>
+														class=" btn-primary rounded-8">Mua ngay</button>
 												</form>
 												<form >
 													<button type="submit"
-														class="btn btn-light btn-addToCart rounded-8" value="${sp.masp}">Thêm
+														class=" btn-light rounded-8" value="${sp.masp}">Thêm
 														vào giỏ</button>
 												</form>
 											</div>

@@ -407,7 +407,7 @@ body {
 	width: 100%;
 	max-width: 20rem;
 	border-radius: var(--spaceS);
-	margin-right: var(--spaceS);
+	margin-right: var(--spaceM);
 }
 
 /* ===== PRODUCTS ===== */
@@ -648,29 +648,28 @@ body {
 .product__deal {
 	position: absolute;
 	width: 100%;
-	height: 5rem;
+	height: 3.5rem;
+		display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .product__deal--container {
-	width: 5rem;
+	width: 10rem;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	background-color: var(--yellowColor);
+background: var(--primaryColor);
 	color: var(--whiteColor);
 	font-size: 1.4rem;
-	right: var(--spaceS);
+	top: 10px;
+	right: 0;
+	border-radius: 50px 0 0 50px;
 	position: absolute;
-	box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
+	box-shadow: var(--yellowColor) 0px 4px 0 0;
 }
 
-.product__deal--container span {
-	color: var(--redColor);
-	font-weight: bolder;
-	margin-left: 2px;
-}
 
 .product__bottom {
 	padding: var(--spaceS);
@@ -714,28 +713,65 @@ body {
 .product__btnGroups {
 	display: flex;
 	width: 100%;
+	height:100%;
 	min-height: 4.3rem;
 	justify-content: space-between;
 	color: var(--whiteColor);
 	margin-top: auto;
 }
 
-.btn-buy {
-	font-weight: 600;
-	height: 100%;
-	margin-right: var(--spaceM);
+.product__btnGroups form {
+	width: calc(100% / 2);
+	height:100%;
 }
 
-.btn-addToCart {
+.product__btnGroups form:first-child {
+margin-right: var(--spaceS)
+}
+
+.product__btnGroups form button{
+	width: 100%;
+	height:100%;
+	min-height:4.2rem;
+		display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.group-button-content .btn-buy {
+	width:50%;
+	font-weight: 600;
+		display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.4rem;
+	height: 100%;
+	margin-right: var(--spaceM);
+	
+}
+
+.group-button-content .btn-addToCart {
+	width:50%;
+		display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 100%;
 	font-weight: 600;
-	padding: 1.4rem 2rem;
 }
 
 .deal-content {
 	display: flex;
-	flex-direction: column;
+	align-items: center;
 	position: absolute;
+		font-size: 1.2rem;
+	
+}
+
+.deal-content span {
+	font-size: 1.6rem;
+		font-weight: 800;
+		color: #FFD700;
+		margin-left: 8px;
 }
 
 .deal-tg-left {
@@ -896,6 +932,10 @@ body {
 	align-items: center;
 }
 
+.paid-group-button button:first-child {
+	margin-right: var(--spaceS)
+}
+
 .group-button-content button {
 	width: calc(100% / 2);
 	height: 100%;
@@ -903,6 +943,11 @@ body {
 	padding: 1.5rem 2.5rem;
 }
 
+.button-loginText {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 
 /* ===== FOOTER ===== */
@@ -2294,6 +2339,7 @@ body {
 	background-color: var(--whiteColor);
 	border-radius: var(--spaceS);
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .product-detail-top {
@@ -2388,6 +2434,7 @@ body {
 .comment {
 	width: 100%;
 	margin-top: var(--spaceM);
+		margin-bottom: var(--spaceM);
 }
 
 .comment-wp {
@@ -2632,10 +2679,12 @@ body {
 .group-button-detail {
 	width: 100%;
 	height: 100%;
+	min-height:5rem;
 }
 
 .group-button-content {
 	width: 100%;
+	max-height:5rem;
 	display: flex;
 	justify-content: space-between;
 	height: 100%;

@@ -242,7 +242,7 @@
 </div>
 
 <!-- ADS -->
-
+<!-- 
 <div class="ads">
 	<div class="ads-wp">
 		<div class="ads-left ads-content">
@@ -252,7 +252,7 @@
 			<img src="../../assets/images/ads_openbrand.png" alt="">
 		</div>
 	</div>
-</div>
+</div> -->
 <div class="header">
 	<div class="header-wp">
 		<div class="mb-search">
@@ -341,8 +341,13 @@
 			<div class="header__right">
 				<div class="header__right--container">
 					<button href="#"
-						class="btn btn-primary rounded btn btn-showLogin cta-white">Đăng
-						nhập</button>
+						class="btn btn-primary rounded btn btn-showLogin cta-white">
+						<p class="button-loginText">Đăng nhập</p>
+						<div class="show-user">
+								<div class="icon-user-user">
+									<i class="fas fa-user"></i>
+								</div>
+							</div></button>
 					<a href="./../cart/"
 						class=" btn-primary rounded cta-link cta-cart cta-white"
 						id="showCountCart"><i class="fas fa-shopping-cart"></i> 
