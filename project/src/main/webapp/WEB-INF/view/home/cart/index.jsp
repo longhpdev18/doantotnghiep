@@ -107,7 +107,7 @@
 							</div>
 						</div>
 						<div class="cart-group-button">
-							<button class="btn btn-primary btn-order rounded-8"><a style="text-decoration: none; color: white;" href="./../paid" >Đặt
+							<button class="btn btn-primary btn-order rounded-8"><a style="text-decoration: none; color: white;" href="/paid" >Đặt
 								hàng</a></button>
 							<button class="btn btn-white bg-white-hover btn-update rounded-8"><a href="/" >
 											 Tiếp tục mua hàng
@@ -121,7 +121,7 @@
 					<c:if test="${empty cart.items}">
 						<div class="cart-empty">
 							<h2 class="cart-empty-title">Bạn chưa thêm sản phẩm nào</h2>
-							<a href="../../">Tiếp tục mua hàng</a>
+							<a href="/">Tiếp tục mua hàng</a>
 						</div>
 					</c:if>
 					

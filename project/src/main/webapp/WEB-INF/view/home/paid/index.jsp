@@ -50,8 +50,8 @@
 												required>
 										</div>
 										<div class="faddress-button">
-											<button class="btn-save">Lưu</button>
-											<button class="btn-cancel-address">Hủy</button>
+											<button class="btn-save" id="btn-save">Lưu</button>
+											<button class="btn-cancel-address" id="btn-cancel-address">Hủy</button>
 										</div>
 									</div>
 								</a> <a href="#" class="remove-address">Xóa</a>
@@ -150,6 +150,7 @@
 <script src="./../assets/js/starterCart.js"></script>
 <script src="./../assets/js/modules.js"></script>
 <script src="./../assets/js/app.js"></script>
+<script src="./../assets/js/paid.js"></script>
 <script src="./../assets/js/login.js"></script>
 <!-- JQUERY -->
 <script type="text/javascript"

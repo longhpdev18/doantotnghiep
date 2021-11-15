@@ -118,8 +118,8 @@ public class IndexController {
 	}
 	@PostMapping("/register")
 	public String register(Model model , KhachHang item) {
-		item.setTendangnhap(paramService.getString("username", ""));
-		if(paramService.getString("password", "").equals(paramService.getString("repassword", ""))) {
+		item.setTendangnhap(paramService.getString("usernameRegister", ""));
+		if(paramService.getString("passwordRegister", "").equals(paramService.getString("repassword", ""))) {
 			item.setMatkhau(paramService.getString("password", ""));
 		}else {
 			model.addAttribute("message","Mật khẩu không trùng khớp!");
@@ -137,7 +137,11 @@ public class IndexController {
 		}
 		return "redirect:/";
 	}
-	
+	@RequestMapping("/paid")
+	public String paid(Model model) {
+		
+		return "paid/index";
+	}
 	@RequestMapping("{masp}")
 	public String add(Model model,@PathVariable("masp") Integer masp) {
 		cart.add(masp);

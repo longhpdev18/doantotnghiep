@@ -79,19 +79,19 @@
 				<div class="form-group flex-row">
 					<div class="form-group-col2 flex-col">
 						<label for="username"> Tên tài khoản: </label> <input type="text"
-							name="username" id="username" class="txtUsername"
+							name="username" id="usernameRegister" class="txtUsername"
 							placeholder="Tên tài khoản" required>
 					</div>
 					<div class="form-group-col2 flex-col ml-m">
 						<label for="email"> Email: </label> <input type="email"
-							name="email" id="useemailrname" class="txtEmail"
+							name="email" id="email" class="txtEmail"
 							placeholder="Email" required>
 					</div>
 				</div>
 				<div class="form-group flex-row">
 					<div class="form-group-col2 flex-col">
 						<label for="password"> Mật khẩu: </label> <input type="password"
-							name="password" id="password" class="txtPassword"
+							name="password" id="passwordRegister" class="txtPassword"
 							placeholder="Mật khẩu" required>
 					</div>
 					<div class="form-group-col2 flex-col ml-m ">

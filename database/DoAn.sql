@@ -1,4 +1,4 @@
-CREATE DATABASE DOAN;
+﻿CREATE DATABASE DOAN;
 go
 USE DOAN
 
@@ -67,8 +67,11 @@ go
 CREATE TABLE hoadon(
 	mahd int IDENTITY(1,1) primary key,
 	makh int not null,
-	ngaymua date not null,
-	trangthai nvarchar(250) not null,
+	ngaymua date not null DEFAULT getDATE(),
+	trangthai nvarchar(250) not null DEFAULT N'Đang xác nhận!',
+	tennguoinhan nvarchar(250) not null,
+	diachinguoinhan nvarchar(250) not null,
+	sdtnguoinhan int not null
 	FOREIGN KEY (makh) REFERENCES khachhang(makh)
 )
 go
