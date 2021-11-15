@@ -64,7 +64,7 @@
 												<div class="deal-tg-left"></div>
 												<div class="deal-tg-right"></div>
 												<div class="deal-content">
-													Giảm<span>30%</span>
+													Giảm<span>${sp.deal}%</span>
 												</div>
 											</div>
 										</div>
