@@ -32,7 +32,7 @@
 						<div class="paid-list-heading">
 							<div class="list-andress-left">Địa chỉ nhận hàng</div>
 							<div class="list-andress-right">
-								<a href="#" class="add-address">Thêm địa chỉ
+								<a class="add-address">Thêm địa chỉ
 									<div class="sub-address">
 										<div class="faddress-group">
 											<label for="fullname">Tên người nhận</label> <input
@@ -54,12 +54,13 @@
 											<button class="btn-cancel-address" id="btn-cancel-address">Hủy</button>
 										</div>
 									</div>
-								</a> <a href="#" class="remove-address">Xóa</a>
+								</a>
+								 <a href="#" class="remove-address">Xóa</a>
 							</div>
 						</div>
 						<div class="paid-address">
 							<input type="radio" class="rdo-address" id="address-1"
-								name="rdo-address" checked="checked"> <label
+								name="rdo-address" checked="checked"/> <label
 								class="rdo-address-wp" for="address-1">
 								<p class="address-nameKH">Hoàng Phi Long</p>
 								<p class="address-text">Khu Phố Long Điền 1, Phường Long
@@ -133,6 +134,7 @@
 						</div>
 					</div>
 					<div class="paid-group-button">
+					
 						<button class="btn btn-primary btn-buy rounded-8">Đặt
 							hàng</button>
 						<button class="btn btn-white bg-white-hover btn-update rounded-8">Cập

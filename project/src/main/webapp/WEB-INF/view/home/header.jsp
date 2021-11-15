@@ -253,7 +253,6 @@
 		</div>
 	</div>
 </div>
-
 <div class="header">
 	<div class="header-wp">
 		<div class="mb-search">
