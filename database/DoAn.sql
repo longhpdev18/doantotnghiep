@@ -54,8 +54,8 @@ CREATE TABLE sanpham(
 	mota nvarchar(4000) not null,
 	tinhtrang bit not null,
 	hinh nvarchar(100) not null,
+	deal int null default 0
 	/*
-	deal nvarchar(10) null,
 	out_price varchar(255) null,
 	old_price varchar(255) null,
 	new_price varchar(255) null, */
