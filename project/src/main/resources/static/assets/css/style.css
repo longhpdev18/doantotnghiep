@@ -25,7 +25,7 @@ body {
 	height: 7.5rem;
 	background-color: var(--whiteColor);
 	position: fixed;
-	z-index: 20;
+	z-index: 30;
 }
 
 .header-wp {
@@ -118,7 +118,7 @@ body {
 	width: 100%;
 	display: flex;
 	position: fixed;
-	z-index: 19;
+	z-index: 20;
 	margin-top: 7.5rem;
 	background-color: var(--whiteColor);
 	padding-bottom: var(--space8);
@@ -239,7 +239,6 @@ body {
 	padding: var(--space8);
 	border-radius: var(--space8);
 	position: relative;
-	z-index: 102;
 	display: flex;
 	height: 3.2rem;
 	align-items: center;
@@ -1940,6 +1939,7 @@ body {
 	border-radius: var(--space8);
 	background-color: var(--whiteColor);
 	box-shadow: 0px 5px 20px rgba(11, 113, 232, 0.3);
+	z-index:21;
 }
 
 .dropdown-user.active {
