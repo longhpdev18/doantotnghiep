@@ -38,14 +38,7 @@ public class SanPham {
 	
 	@Column(name = "hinh", nullable = false)
 	private String hinh;
-	@Column(name = "deal", nullable = false)
-	private int deal;
-	public int getDeal() {
-		return deal;
-	}
-	public void setDeal(int deal) {
-		this.deal = deal;
-	}
+	
 	public Integer getMasp() {
 		return masp;
 	}

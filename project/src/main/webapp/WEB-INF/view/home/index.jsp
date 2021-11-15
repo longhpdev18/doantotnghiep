@@ -62,7 +62,7 @@
 										<div class="product__deal">
 											<div class="product__deal--container">
 												<div class="deal-content">
-													Giảm<span>${sp.deal}%</span>
+													Giảm<span>30%</span>
 												</div>
 											</div>
 										</div>
@@ -74,8 +74,8 @@
 										<div class="product__bottom">
 											<div class="product__content">
 												<h6 class="product-name" >${sp.tensp}</h6>
-												<h6 class="product-priceOld">${sp.gia} đ</h6>
-												<h4 class="product-priceNew">${sp.gia-(sp.gia*sp.deal)/100} đ</h4>
+												<h6 class="product-priceOld">23,490,000 đ</h6>
+												<h4 class="product-priceNew">${sp.gia}đ</h4>
 											</div>
 	
 											<div class="product__btnGroups">
