@@ -1156,7 +1156,7 @@ body {
 }
 
 .rdo-address-wp {
-	max-width: calc((100% / 2) - var(--spaceS));
+	width: calc((100% / 2) - var(--spaceS));
 	padding: var(--spaceS);
 	display: flex;
 	align-items: flex-start;
@@ -1167,7 +1167,9 @@ body {
 	margin-left: var(--spaceS);
 	cursor: pointer;
 }
-
+.saveIfm{
+	display:none;
+}
 .rdo-address-content {
 	width: 100%;
 	display: flex;

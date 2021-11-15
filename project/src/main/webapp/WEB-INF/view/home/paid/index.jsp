@@ -33,15 +33,16 @@
 								<div class="add-address">Thêm địa chỉ
 									<div class="sub-address">
 										<div class="faddress-group">
-											<label for="fullname">Tên người nhận</label> <input type="text"
+											<label for="fullname">Tên người nhận</label> <input type="text" id="txtFullname"
 												class="txtFullname" name="fullname" placeholder="Họ và tên" required>
 										</div>
 										<div class="faddress-group">
 											<label for="address">Địa chỉ</label> <input type="text" class="txtAddress"
-												name="address" placeholder="Địa chỉ" required>
+												name="address" placeholder="Địa chỉ" id="txtAddress" required>
+												
 										</div>
 										<div class="faddress-group">
-											<label for="phone">Số điện thoại</label> <input type="number"
+											<label for="phone">Số điện thoại</label> <input type="number" id="txtPhone"
 												class="txtPhone" name="address" placeholder="Số điện thoại" required>
 										</div>
 										<div class="faddress-button">
@@ -54,25 +55,21 @@
 							</div>
 						</div>
 						<div class="paid-address">
-							<input type="radio" class="rdo-address" id="address-1" name="rdo-address"
+							<input type="radio" class="rdo-address" id="address-1" name="rdo-address" value="1"
 								checked="checked" /> <label class="rdo-address-wp" for="address-1">
 								<p class="address-nameKH">Hoàng Phi Long</p>
 								<p class="address-text">Khu Phố Long Điền 1, Phường Long
 									Phước, Thị Xã Phước Long, Tỉnh Bình Phước</p>
 								<p class="address-phone">0385818520</p>
-							</label> <input type="radio" class="rdo-address" id="address-2" name="rdo-address"> <label
+							</label> <input type="radio" class="rdo-address" id="address-2" name="rdo-address" value="2"> <label
 								class="rdo-address-wp" for="address-2">
 								<p class="address-nameKH">Hoàng Phi Long</p>
 								<p class="address-text">Khu Phố Long Điền 1, Phường Long
 									Phước, Thị Xã Phước Long, Tỉnh Bình Phước</p>
 								<p class="address-phone">0385818520</p>
-							</label> <input type="radio" class="rdo-address" id="address-3" name="rdo-address"> <label
-								class="rdo-address-wp" for="address-3">
-								<p class="address-nameKH">Hoàng Phi Long</p>
-								<p class="address-text">Khu Phố Long Điền 1, Phường Long
-									Phước, Thị Xã Phước Long, Tỉnh Bình Phước</p>
-								<p class="address-phone">0385818520</p>
 							</label>
+							
+							
 						</div>
 					</div>
 					<div class="paid-list-content">
@@ -124,9 +121,13 @@
 						</div>
 					</div>
 					<div class="paid-group-button">
-
-						<button class="btn btn-primary btn-buy rounded-8">Đặt
+						<form >
+							<input class="saveIfm" id="saveFullname">
+							<input class="saveIfm" id="saveAddress">
+							<input class="saveIfm" id="savePhone">
+							<button class="btn btn-primary btn-buy rounded-8">Đặt
 							hàng</button>
+						</form>
 						<button class="btn btn-white bg-white-hover btn-update rounded-8">Cập
 							nhật</button>
 					</div>
