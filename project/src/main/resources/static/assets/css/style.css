@@ -118,7 +118,7 @@ body {
 	width: 100%;
 	display: flex;
 	position: fixed;
-	z-index: 998;
+	z-index: 19;
 	margin-top: 7.5rem;
 	background-color: var(--whiteColor);
 	padding-bottom: var(--space8);
@@ -287,7 +287,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index:19;
+	z-index: 19;
 }
 
 .hero__container {
@@ -420,7 +420,7 @@ body {
 	justify-content: center;
 	margin-top: var(--spaceM);
 	flex-direction: column;
-	z-index:18;
+	z-index: 18;
 }
 
 .products-wp {
@@ -1075,7 +1075,7 @@ body {
 	margin-top: 12rem;
 	display: flex;
 	min-height: 60vh;
-	z-index:19;
+	z-index: 19;
 }
 
 .paid {
@@ -1084,7 +1084,7 @@ body {
 	display: flex;
 	min-height: 60vh;
 	margin-bottom: var(--spaceM);
-	z-index:19;
+	z-index: 19;
 }
 
 .paid-wp {
@@ -1224,9 +1224,16 @@ body {
 	margin-right: var(--spaceS);
 }
 
+.list-address-right {
+	display:flex;
+	align-items:center;
+	justify-content: flex-end;
+}
+
 .add-address {
 	margin-right: var(--spaceS);
 	position: relative;
+	cursor: pointer;
 }
 
 .sub-address {
@@ -1242,7 +1249,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	background-color: white;
-	z-index: 15;
+	z-index: 18;
 	box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
 	border-radius: var(--spaceS);
 	display: none;
@@ -1274,6 +1281,7 @@ body {
 }
 
 .btn-save {
+	cursor:pointer;
 	background-color: var(--primaryColor);
 	color: var(--whiteColor);
 	margin-right: var(--spaceS);
@@ -1286,6 +1294,7 @@ body {
 }
 
 .btn-cancel-address {
+	cursor: pointer;
 	background-color: var(--lightColor);
 	color: var(--darkColor);
 }
@@ -1312,16 +1321,8 @@ body {
 	font-size: 1.4rem;
 }
 
-
-
-.list-andress-right a {
-	font-size: 1.4rem;
-	color: var(--primaryColor);
-}
-
-.list-andress-right a:hover {
-	transition: color .2s linear;
-	color: var(--grayColor);
+.list-address-right {
+	font-size: 1.2rem;
 }
 
 .paid-list-heading {
@@ -3756,7 +3757,7 @@ body {
 	position: fixed;
 	display: flex;
 	align-items: center;
-	z-index:3;
+	z-index: 3;
 }
 
 .ads-wp {
