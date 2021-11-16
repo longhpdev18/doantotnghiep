@@ -30,12 +30,12 @@ public class ShoppingCartController {
 	//2. xem giỏ hàng
 	@RequestMapping("/cart/")
 	public String view(Model model, Integer masp) {
-		model.addAttribute("cart", cart);
+		session.set("cart", cart);
 		return "home/cart/index";
 	}
 	
 	
-	@RequestMapping("cart/add/{masp}")
+	@GetMapping("cart/add/{masp}")
 	public String add(Model model,@PathVariable("masp") Integer masp) {
 		cart.add(masp);
 		return "redirect:/cart/"; 

@@ -1,7 +1,10 @@
-$('#formLogin').click(function(e){
+$('#btnLoginIndex').click(function(e){
 	e.preventDefault();
 	
 	login();
+});
+$('#btnCancelLoginIndex').click(function(e){
+	e.preventDefault();
 });
 function login(){
 	var username = document.getElementById("username").value;
@@ -19,7 +22,6 @@ function login(){
 			),
 			dataType:'json',
 			success:function(result){
-				console.log(result);
 				if(result.value=='success'){
 					window.location.href = '/';
 					window.open();

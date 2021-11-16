@@ -33,9 +33,40 @@ $('.btn-mobile-searchbox').click(function () {
     $('.mb-search').toggleClass('active');
 })
 
+$('.add-address').mousedown(function () {
+    $('.sub-address').addClass('active');
+})
+$('.btn-save').click(function () {
+    $('.sub-address').removeClass('active');
+    var test =   $('.rdo-address');
+    var count ;
+    test.each(function(index){
+        count= ++index;
+    })
+    count++;
+	$('.paid-address').append('<input type="radio" class="rdo-address" id="address-'+count+'" name="rdo-address"> <label class="rdo-address-wp" for="address-'+count+'">'
+  +  '<p class="address-nameKH">'+$('#txtFullname').val()+'</p>'
+  + ' <p class="address-text">'+$('#txtAddress').val()+'</p>'
+   + '<p class="address-phone">'+$('#txtPhone').val()+'</p>'
++'</label>')
+})
+
+$('.btn-cancel-address').click(function () {
+    $('.sub-address').removeClass('active');
+})
+$('.rdo-address').click(function(){
+    this.id;
+    $('label[for='+this.id+']').find('.address-nameKH').html();
+    $('label[for='+this.id+']').find('.address-text').html();
+    $('label[for='+this.id+']').find('.address-phone').html();
+    $('#saveFullname').html($('label[for='+this.id+']').find('.address-nameKH').html());
+    $('#saveAddress').html($('label[for='+this.id+']').find('.address-text').html());
+    $('#savePhone').html($('label[for='+this.id+']').find('.address-phone').html());
+})
+
 $(document).ready(function () {
     $('.product-slider').slick({
-        infinite: true,
+        infinite: false,
         slidesToShow: 4,
         arrows: true,
         draggable: false,
@@ -43,7 +74,7 @@ $(document).ready(function () {
         nextArrow: "<button type='button' class='slick-next  slick-button pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
         pauseOnFocus: true,
         pauseOnHover: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         responsive: [
             {
@@ -52,7 +83,6 @@ $(document).ready(function () {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
                 }
             },
             {
@@ -71,6 +101,17 @@ $(document).ready(function () {
             }
         ]
     });
+    $('.product-multi-slider').slick({
+        infinite: false,
+        slidesToShow: 1,
+        arrows: false,
+        draggable: false,
+        pauseOnFocus: true,
+        pauseOnHover: true,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        dots: true
+    });
     $('.hero-slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -83,29 +124,9 @@ $(document).ready(function () {
         autoplay: false,
         autoplaySpeed: 5000,
     });
-
 });
 
 
-
-window.addEventListener("scroll", function () {
-    var pageScrollY = window.scrollY;
-    var btnCat = document.querySelector(".btn-cat");
-    console.log(pageScrollY);
-
-    if (pageScrollY >= 500) {
-        $('.btn-cat').mouseover(function () {
-            $('.dropmenu').removeClass('hidden');
-        })
-        $('.btn-cat').mouseout(function () {
-            $('.dropmenu').addClass('hidden');
-        })
-    } else {
-        $('.btn-cat').hover(function () {
-            $('.dropmenu').addClass('hidden');
-        })
-    }
-});
 
 
 

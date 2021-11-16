@@ -1,4 +1,4 @@
-CREATE DATABASE DOAN;
+﻿CREATE DATABASE DOAN;
 go
 USE DOAN
 
@@ -25,8 +25,8 @@ CREATE TABLE khachhang(
 	tendangnhap varchar(50) not null,
 	matkhau varchar(50) not null,
 	fullname nvarchar(100) not null,
-	ngaysinh date not null,
-	gioitinh bit not null,
+	ngaysinh date,
+	gioitinh bit,
 	diachi nvarchar(250) not null,
 	sodienthoai int not null,
 	email varchar(100),
@@ -54,8 +54,8 @@ CREATE TABLE sanpham(
 	mota nvarchar(4000) not null,
 	tinhtrang bit not null,
 	hinh nvarchar(100) not null,
+	deal int null default 0
 	/*
-	deal nvarchar(10) null,
 	out_price varchar(255) null,
 	old_price varchar(255) null,
 	new_price varchar(255) null, */
@@ -67,8 +67,11 @@ go
 CREATE TABLE hoadon(
 	mahd int IDENTITY(1,1) primary key,
 	makh int not null,
-	ngaymua date not null,
-	trangthai nvarchar(250) not null,
+	ngaymua date not null DEFAULT getDATE(),
+	trangthai nvarchar(250) not null DEFAULT N'Đang xác nhận!',
+	tennguoinhan nvarchar(250) not null,
+	diachinguoinhan nvarchar(250) not null,
+	sdtnguoinhan int not null
 	FOREIGN KEY (makh) REFERENCES khachhang(makh)
 )
 go

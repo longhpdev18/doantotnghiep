@@ -1,5 +1,6 @@
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1599px) {
     .ads {
+    	
         display: none;
     }
 }
@@ -92,7 +93,7 @@
     }
 
     .product__item {
-        --col: 3 !important;
+        --col: 3;
     }
 
     .btn-addToCart {
@@ -115,9 +116,17 @@
         padding: var(--spaceS);
     }
 
+.button-loginText {
+	
+	display:none;}
+
     .fLogin {
         border-radius: var(--spaceS);
         overflow: hidden;
+    }
+
+    .rdo-method-wp {
+        --col: 2
     }
 
     .product-detail-top {

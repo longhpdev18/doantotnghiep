@@ -11,15 +11,12 @@ $('.btn-cancel').click(function () {
 $('.btn-showUser').click(function () {
     $('.dropdown-user').toggleClass('active');
 })
-
-
 $('.btn-cat').mouseover(function () {
     $('.dropmenu').removeClass('hidden');
 })
 $('.btn-cat').mouseout(function () {
     $('.dropmenu').addClass('hidden');
 })
-
 
 const decButton = document.getElementsByClassName('btn-qty-down');
 const incButton = document.getElementsByClassName('btn-qty-up');

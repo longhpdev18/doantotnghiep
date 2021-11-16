@@ -120,6 +120,10 @@
         overflow: hidden;
     }
 
+    .rdo-method-wp {
+        --col: 2
+    }
+
     .product-detail-top {
         padding: var(--spaceS);
         flex-direction: column;
