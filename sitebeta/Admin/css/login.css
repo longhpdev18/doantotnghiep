@@ -6,14 +6,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, var(--primaryColor), var( --blue));
+    background: linear-gradient(45deg, var(--primaryColor), var(--blue));
     font-family: 'Open Sans', sans-serif;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 form {
     background: var(--whiteColor);
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
@@ -21,7 +23,8 @@ form {
     text-align: center;
     border-radius: 30px;
 }
-form img{
+
+form img {
     text-align: center;
     max-width: 70%;
 }
@@ -30,6 +33,7 @@ form .box {
     position: relative;
     margin-bottom: 20px;
 }
+
 input {
     position: relative;
     width: 300px;
@@ -41,13 +45,14 @@ input {
     font-size: 1.1rem;
     transition: linear 0.2s;
 }
+
 input:focus {
     border-color: var(--primaryHover);
     text-indent: 20px;
 
 }
 
-.btn_Login {
+button.btn_Login {
     display: inline-block;
     padding: 10px 45px;
     margin-top: 20px;
@@ -57,13 +62,14 @@ input:focus {
     border-radius: 10px;
     letter-spacing: 2px;
     font-weight: 700;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.2),
-                -2px -2px var(--lightColor),
-                inset 2px 2px rgba(0, 0, 0, 0.2),
-                inset -2px -2px var(--lightColor);
+    /* box-shadow: 2px 2px rgba(0, 0, 0, 0.2),
+        -2px -2px var(--lightColor),
+        inset 2px 2px rgba(0, 0, 0, 0.2),
+        inset -2px -2px var(--lightColor); */
     transition: linear 0.2s;
 }
-.btn_Login:hover{
+
+button.btn_Login:hover {
     background-color: var(--primaryColor);
     color: white;
     box-shadow: none;
@@ -72,17 +78,20 @@ input:focus {
 form .query {
     margin: 20px 0;
 }
+
 form .query p {
     margin-top: 10px;
     font-weight: 400;
 }
 
-form .query p button {
+form .query p a {
     text-decoration: none;
     color: var(--primaryColor);
     transition: linear 0.2s;
+    /* list-style: none; */
 }
-form .query p button:hover {
+
+form .query p a:hover {
     text-decoration: underline;
     font-weight: 700;
 }
