@@ -291,9 +291,10 @@
 		</div>
 
 		<!-- HEADER RIGHT ĐÃ LOGIN // Mở comment ra là được-->
-		<c:if test="${not empty fullname}">
 			<div class="header__right">
 				<div class="header__right--container">
+				
+		<c:if test="${not empty fullname}">
 					<button href="#" class="btn-primary rounded btn-showUser">
 						<p class="user-fullname">${fullname}</p>
 						<div class="show-user">
@@ -316,14 +317,28 @@
 									<p class="user-item-text">Đơn đặt hàng</p>
 							</a></li>
 							<div class="hr"></div>
-							<li class="dropdown-user-item"><a href="/logout"
-								class="cta-link text-dark cta-user-item"> <i
+							<li class="dropdown-user-item"><a 
+								class="cta-link text-dark cta-user-item btn-Logout"> <i
 									class="fas fa-sign-out-alt"></i>
 									<p class="user-item-text">Đăng xuất</p>
 							</a></li>
 						</ul>
 					</button>
 
+		</c:if>
+		<c:if test="${empty fullname}">
+			<!-- HEADER RIGHT CHƯA LOGIN // Mở comment ra là được-->
+					<button href="#"
+						class="btn btn-primary rounded btn btn-showLogin cta-white">
+						<p class="button-loginText">Đăng nhập</p>
+						<div class="show-user">
+								<div class="icon-user-user">
+									<i class="fas fa-user"></i>
+								</div>
+							</div></button>
+				</div>
+			</div>
+		</c:if>
 					<a href="./../cart/"
 						class=" btn-primary rounded cta-link cta-cart cta-white"
 						id="showCountCart"><i class="fas fa-shopping-cart"></i> 
@@ -335,29 +350,7 @@
 					</a>
 				</div>
 			</div>
-		</c:if>
-		<c:if test="${empty fullname}">
-			<!-- HEADER RIGHT CHƯA LOGIN // Mở comment ra là được-->
-			<div class="header__right">
-				<div class="header__right--container">
-					<button href="#"
-						class="btn btn-primary rounded btn btn-showLogin cta-white">
-						<p class="button-loginText">Đăng nhập</p>
-						<div class="show-user">
-								<div class="icon-user-user">
-									<i class="fas fa-user"></i>
-								</div>
-							</div></button>
-					<a href="./../cart/"
-						class=" btn-primary rounded cta-link cta-cart cta-white"
-						id="showCountCart"><i class="fas fa-shopping-cart"></i> 
-							<span
-							class="cart-badge active">${cart.getCount()}</span>
-					</a>
-
-				</div>
-			</div>
-		</c:if>
+		
 	</div>
 </div>
 <div class="header__bottom">

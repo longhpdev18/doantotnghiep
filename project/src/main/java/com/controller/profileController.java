@@ -32,7 +32,7 @@ public class profileController {
 	
 	@RequestMapping(value = "/profile")
 	public String showProfile(Model model) {
-		List<KhachHang> khachhang = khDAO.ID(sessionService.get("maKH"));
+		KhachHang khachhang = khDAO.getById(sessionService.get("maKH"));
 		model.addAttribute("items", khachhang);
 		return "home/profile/index";
 	}	

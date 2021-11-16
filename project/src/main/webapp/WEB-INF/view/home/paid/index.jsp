@@ -61,13 +61,7 @@
 								<p class="address-text">Khu Phố Long Điền 1, Phường Long
 									Phước, Thị Xã Phước Long, Tỉnh Bình Phước</p>
 								<p class="address-phone">0385818520</p>
-							</label> <input type="radio" class="rdo-address" id="address-2" name="rdo-address" value="2"> <label
-								class="rdo-address-wp" for="address-2">
-								<p class="address-nameKH">Hoàng Phi Long</p>
-								<p class="address-text">Khu Phố Long Điền 1, Phường Long
-									Phước, Thị Xã Phước Long, Tỉnh Bình Phước</p>
-								<p class="address-phone">0385818520</p>
-							</label>
+							</label> 
 							
 							
 						</div>

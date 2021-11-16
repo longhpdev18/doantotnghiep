@@ -110,12 +110,6 @@ public class IndexController {
 		model.addAttribute("items", items);
 		return "home/index";
 	}
-	@GetMapping("/logout")
-	public String logout(Model model) {
-		sessionService.remove("fullname");
-		sessionService.remove("maKH");
-		return "redirect:/";
-	}
 	@PostMapping("/register")
 	public String register(Model model , KhachHang item) {
 		item.setTendangnhap(paramService.getString("usernameRegister", ""));

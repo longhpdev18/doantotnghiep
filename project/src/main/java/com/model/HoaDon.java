@@ -11,6 +11,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name= "hoadon")
 public class HoaDon {
@@ -20,14 +22,43 @@ public class HoaDon {
 	
 	@Column(name = "makh", nullable = false)
 	private long makh;
-	
+	@JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
 	@Temporal(TemporalType.DATE)
 	@Column(name = "ngaymua", nullable = false)
-	private Date ngaymua;
+	private Date ngaymua ;
 	
 	@Column(name = "trangthai", nullable = false)
 	private String trangthai;
+	@Column(name = "tennguoinhan", nullable = false)
+	private String tennguoinhan;
+	public String getTennguoinhan() {
+		return tennguoinhan;
+	}
 
+	public void setTennguoinhan(String tennguoinhan) {
+		this.tennguoinhan = tennguoinhan;
+	}
+
+	public String getDiachinguoinhan() {
+		return diachinguoinhan;
+	}
+
+	public void setDiachinguoinhan(String diachinguoinhan) {
+		this.diachinguoinhan = diachinguoinhan;
+	}
+
+	public String getSdtnguoinhan() {
+		return sdtnguoinhan;
+	}
+
+	public void setSdtnguoinhan(String sdtnguoinhan) {
+		this.sdtnguoinhan = sdtnguoinhan;
+	}
+
+	@Column(name = "diachinguoinhan", nullable = false)
+	private String diachinguoinhan;
+	@Column(name = "sdtnguoinhan", nullable = false)
+	private String sdtnguoinhan;
 	public long getMahd() {
 		return mahd;
 	}

@@ -1,19 +1,18 @@
 package com.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.model.HoaDon;
 import com.model.KhachHang;
-import com.model.Login;
 import com.model.Message;
+import com.repository.HoaDonDAO;
 import com.repository.KhachHangDAO;
-import com.repository.LoaiHangDAO;
 import com.repository.SanPhamDAO;
 import com.service.CookieService;
 import com.service.ParamService;
@@ -21,7 +20,7 @@ import com.service.SessionService;
 import com.service.ShoppingCartService;
 
 @RestController
-public class LoginRestAPI {
+public class PaidRestAPI {
 	@Autowired
 	SanPhamDAO sanphamDAO;
 	@Autowired
@@ -31,35 +30,27 @@ public class LoginRestAPI {
 	@Autowired
 	SessionService sessionService;
 	@Autowired
-	KhachHangDAO khDAO;
-	@Autowired
 	ShoppingCartService cart;
 	@Autowired
-	LoaiHangDAO lhDAO;
+	KhachHangDAO khDAO;
+	@Autowired
+	HoaDonDAO hdDAO;
 	@CrossOrigin
-	@PostMapping("/login")
-	public Message login(@RequestBody Login login) {
-		
-		Message mess = new Message();
-		KhachHang kh = khDAO.loginKH(login.getUsername(), login.getPassword());
-		System.out.println(kh);
-		if(kh!=null) {
-			mess.setValue( kh.getFullname());
-			sessionService.set("fullname", kh.getFullname());
-			sessionService.set("maKH", kh.getMakh());
-		}else{
-			mess.setValue(null);
+	@GetMapping("/getAddressPaid")
+	public KhachHang getAddress() {
+		KhachHang kh= new KhachHang();
+		if(sessionService.get("maKH")!=null) {
+			kh= khDAO.getById(Long.parseLong(sessionService.get("maKH").toString()));
 		}
 		
-		return mess;
-		
+		return kh;
 	}
-	@GetMapping("/logout")
-	public Message logout() {
-		sessionService.remove("fullname");
-		sessionService.remove("maKH");
-		Message mess = new Message();
-		mess.setValue("success");
-		return mess;
+	@PostMapping("/addPill")
+	public Message addPill(@RequestBody HoaDon hd) {
+		hd.setMakh(Long.parseLong(sessionService.get("maKH").toString()));
+		System.out.println(hd.getNgaymua());  
+		hdDAO.save(hd);
+		return null;
+		
 	}
 }
