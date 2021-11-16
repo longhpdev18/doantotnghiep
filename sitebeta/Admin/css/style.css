@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 
 body {
-    background-color: #f1f2f6;
+    background-color: rgba(223, 228, 234, .5);
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -95,8 +95,13 @@ html {
     width: 100%;
     height: 100%;
     display: flex;
-    overflow: hidden;
     flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
 }
 
 .topbar {
@@ -109,6 +114,8 @@ html {
     background-color: var(--whiteColor);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     z-index: 29;
+    position: sticky;
+    top: 0;
 }
 
 .topbar-left {
@@ -306,23 +313,27 @@ html {
 
 /* cardbox */
 .cardBox {
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: var(--spaceS);
+    margin-right: var(--spaceS);
+    margin-bottom: var(--spaceS);
 }
 
 .cardBox .card {
-    position: relative;
+    --col: 4;
+    width: calc((100% / var(--col)) - var(--spaceS));
+    height: 14rem;
     background: var(--whiteColor);
-    padding: 30px;
     display: flex;
     justify-content: space-between;
-    border-radius: 20px;
+    align-items: center;
+    margin-left: var(--spaceS);
+    border-radius: var(--spaceS);
+    padding: var(--spaceS);
     cursor: pointer;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .cardBox .card .numbers {
@@ -354,44 +365,60 @@ html {
 }
 
 .recent {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
+    flex: 1;
     display: flex;
-
+    margin-right: var(--spaceS);
+    margin-bottom: var(--spaceS);
+    margin-left: var(--spaceS);
 }
 
 .recentOrders {
     flex: 1;
     min-height: 500px;
     background: var(--whiteColor);
-    padding: 20px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
+    border-radius: var(--space5);
     margin-right: var(--spaceS);
+    overflow-y: scroll;
+}
+
+.recentOrders::-webkit-scrollbar {
+    display: none;
 }
 
 .cardHeader {
+    width: 100%;
     height: 5rem;
+    padding: var(--spaceS);
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    border-bottom: 1px solid var(--lightColor);
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    background-color: var(--whiteColor);
 }
 
 .cardHeader h2 {
     font-weight: 600;
     color: var(--primaryHover);
+    font-size: 1.8rem;
 }
 
-.btn {
+.btn-export {
     position: relative;
-    padding: 5px 10px;
+    width: 8rem;
+    padding: .5rem 1rem;
     /* height: 28px; */
     background: var(--primaryColor);
     text-decoration: none;
     color: var(--whiteColor);
     border-radius: 6px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* 
@@ -399,53 +426,61 @@ html {
     top: 1px;
 } */
 
-.recent table {
+.recentOrders table {
     width: 100%;
+    height: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    font-size: 1.5rem;
+
 }
 
-.recent table thead td {
-    font-weight: 700;
+.recentOrders table tr {
+    border-bottom: 1px solid var(--lightColor);
 }
 
-.recent .recentOrders table tr {
-    color: var(--darkColor);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+.recentOrders table td:first-child {
+    width: 6rem;
 }
 
-.recent .recentOrders table tr:last-child {
-    border-bottom: none;
+.recentOrders table td:nth-child(3) {
+    width: 16rem;
 }
 
-.recent .recentOrders table tbody tr:hover {
-    background: var(--blue);
-    color: var(--whiteColor);
+.recentOrders table td:nth-child(4) {
+    width: 16rem;
 }
 
-.recent .recentOrders table tr td {
-    padding: 16px;
+.recentOrders table td:nth-child(5) {
+    width: 16rem;
+}
+
+.recentOrders table td:last-child {
+    width: 6rem;
+}
+
+.recentOrders table tr:hover {
+    background-color: var(--lightColor);
+}
+
+.recentOrders table tr:first-child {
+    text-align: center;
+    height: 4rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: var(--grey);
+    position: sticky;
+    top: 5rem;
+    z-index: 12;
+}
+
+.recentOrders table td {
+    text-align: center;
 }
 
 /* .details .recentOrders table tr td:last-child {
     text-align: end;
 } */
-.recent.recentOrders table tr td:nth-child(1) {
-    text-align: center;
-}
 
-.recent .recentOrders table tr td:nth-child(2) {
-    /*  ở cột thứ 2 */
-    text-align: center;
-}
-
-.recent .recentOrders table tr td:nth-child(3) {
-    text-align: center;
-}
-
-.recent .recentOrders table tr td:nth-child(4) {
-    text-align: center;
-}
 
 .status {
     padding: .3rem 1rem;
@@ -478,7 +513,6 @@ html {
 }
 
 .status.inprogress {
-
     background: var(--orangeHover);
     color: var(--whiteColor);
     border-radius: 4px;
@@ -486,76 +520,59 @@ html {
     font-weight: 500;
 }
 
-.recent .recentOrders table tbody tr td .dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    color: var(--darkColor);
-    background-color: inherit;
-}
-
-.recent .recentOrders table tbody tr td .dropdown .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--whiteColor);
-    /*min-width: 160px;*/
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.recent .recentOrders table tbody tr td .dropdown .dropdown-content a {
-    color: var(--darkColor);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.recent .recentOrders table tbody tr td .dropdown .dropdown-content a:hover {
-    background-color: var(--lightHover);
-}
-
-.recent .recentOrders table tbody tr td .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.recent .recentOrders table tbody tr td .dropdown .dropbtn i:hover {
-    color: var(--whiteColor);
-}
-
-.pagination {
+.dropdown {
+    width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4rem;
 }
 
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content {
+    width: 6rem;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    display: none;
+    background-color: var(--whiteColor);
+    z-index: 10;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: var(--space5);
+}
+
+.dropdown-content a {
     text-decoration: none;
-    transition: background-color .3s;
-    /* border: 1px solid #ddd; */
-    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 5rem;
+    color: var(--darkColor);
 }
 
-.pagination a.active {
-    background-color: var(--primaryHover);
-    color: white;
-    /* border: 1px solid var(--primaryColor); */
+.dropdown-content a:hover {
+    background-color: var(--lightColor);
 }
 
-.pagination a:hover:not(.active) {
-    background-color: var(--primaryHover);
-    color: var(--whiteColor);
-}
+
 
 .recentCustomers {
-
     width: 100%;
-    max-width: 40rem;
-    padding: 20px;
+    max-width: 50rem;
     background: var(--whiteColor);
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
+    border-radius: var(--space5);
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.recentCustomers::-webkit-scrollbar {
+    display: none;
 }
 
 .recentCustomers .imgBx {
@@ -564,7 +581,6 @@ html {
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
-
 }
 
 .recentCustomers .imgBx img {
@@ -576,39 +592,121 @@ html {
     object-fit: cover;
 }
 
-.recentCustomers table tr td {
-    padding: 12px 10px;
+.recentCustomers table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5rem;
 }
 
-.recentCustomers table tr td h4 {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.2em;
-}
-
-.recentCustomers table tr td h4 span {
-    font-size: 14px;
-    color: var(--text-grey);
+.recentCustomers table tr {
+    width: 100%;
+    height: 7rem;
+    border: 1px solid var(--lightColor);
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .recentCustomers table tr:hover {
-    background: var(--blue);
-    color: var(--whiteColor);
+    background-color: var(--lightColor);
 }
 
-.recentCustomers table tr:hover td h4 span {
-    color: var(--whiteColor);
+.recentCustomers table tr:first-child {
+    width: 100%;
+    height: 4rem !important;
+    background-color: var(--grey);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: sticky;
+    top: 5rem;
+    z-index: 12;
 }
 
-.recentCustomers table tr td.tbicon a ion-icon {
-    font-size: 20px;
-    padding: 8px;
-    float: right;
+.recentCustomers table td:first-child {
+    width: 15rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.recentCustomers table tr td.tbicon a ion-icon:hover {
-    color: var(--whiteColor);
+.recentCustomers table td:nth-child(2) {
+    font-size: 1.5rem;
+    flex-direction: column;
+
 }
+
+.recentCustomers table td:nth-child(2) h4 {
+    font-size: 1.8rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.recentCustomers table td:nth-child(2) p {
+    font-size: 1.6rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.recentCustomers table td:last-child {
+    width: 15rem;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tbicon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tbicon a {
+    width: calc(100% / 2);
+    height: 4rem;
+    background-color: var(--greenColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: var(--space8);
+    border-radius: var(--space5);
+    color: white;
+    font-size: 2rem;
+}
+
+.tbicon a:first-child {
+    background-color: var(--primaryColor);
+}
+
+
+.recentCustomers table td {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.recentCustomers .imgBx {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recentCustomers .imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* List product  */
 .manage-product {

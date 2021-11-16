@@ -55,6 +55,8 @@ input:focus {
 button.btn_Login {
     display: inline-block;
     padding: 10px 45px;
+    border: none;
+    outline: none;
     margin-top: 20px;
     color: var(--primaryColor);
     text-decoration: none;
