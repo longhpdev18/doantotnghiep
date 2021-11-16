@@ -31,13 +31,27 @@
 .list_product .list_product-wp {
     display: flex;
     width: 100%;
-    overflow-y: scroll;
+    height: 100%;
 }
 
-.list_product .list_product-wp .add_product {
+.list_product-wp .add_product {
     max-width: 400px;
-    max-height: 100%;
+    height: 100%;
     overflow-y: scroll;
+    margin-right: 16px;
+}
+
+.add_product::-webkit-scrollbar {
+    width: 12px;
+}
+
+.add_product::-webkit-scrollbar-button {
+    display: none;
+}
+
+.add_product::-webkit-scrollbar-thumb {
+    background-color: var(--primaryColor);
+    border-radius: 16px;
 }
 
 .list_product .left form {
@@ -53,10 +67,6 @@
 
 }
 
-.list_product .left form .input_form span {
-    font-size: 20px;
-    font-weight: 400;
-}
 
 .input_form input,
 .input_form textarea,
@@ -96,11 +106,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: -10px;
 }
 
 .add_product .button button {
     width: calc(100% / 4);
     height: 80%;
+    border: none;
+    outline: none;
+    margin-left: 10px;
 }
 
 .list_product .left form .input_form input:focus {
@@ -228,11 +242,35 @@
 
 .list_product .list-product {
     flex: 1;
+    height: 100%;
+    overflow-y: scroll;
 }
 
-.list_product table {
+.list-product::-webkit-scrollbar {
+    width: 12px;
+}
+
+.list-product::-webkit-scrollbar-button {
+    display: none;
+}
+
+.list-product::-webkit-scrollbar-thumb {
+    background-color: var(--primaryColor);
+    border-radius: 16px;
+}
+
+.list-product table {
     border-collapse: collapse;
     width: 100%;
+}
+
+.list-product table tr {
+    width: 100%;
+    height: 4rem;
+}
+
+.list-product table tr:nth-child(odd) {
+    background: var(--lightColor);
 }
 
 .list_product .right th,
@@ -240,4 +278,62 @@ td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+}
+
+.list-product table tr td:nth-child(1) {
+    text-align: center;
+}
+
+.list-product table tr td:nth-child(2) {
+    text-align: center;
+}
+
+.list-product table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.list-product table tr td:nth-child(4) {
+    text-align: center;
+}
+
+.list-product table tr td:nth-child(5) {
+    text-align: center;
+}
+
+.list-product table tr td:nth-child(6) {
+    text-align: center;
+}
+
+.list-product table tr td .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    color: var(--darkColor);
+    background-color: inherit;
+}
+
+.list-product table tr td .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--whiteColor);
+    /*min-width: 160px;*/
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.list-product table tr td .dropdown .dropdown-content a {
+    color: var(--darkColor);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.list-product table tr td .dropdown .dropdown-content a:hover {
+    background-color: var(--lightHover);
+}
+
+.list-product table tr td .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.list-product table tr td .dropdown .dropbtn i:hover {
+    color: var(--whiteColor);
 }
