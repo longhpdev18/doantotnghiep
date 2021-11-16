@@ -1,0 +1,151 @@
+@media screen and (max-width: 1365px) {
+
+    .container {
+        position: static;
+    }
+
+    .nav-close {
+        display: block;
+        cursor: pointer;
+    }
+
+    .topbar {
+        justify-content: space-between;
+    }
+
+    .topbar-left {
+        max-width: 20rem;
+    }
+
+    .action {
+        width: 20rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .topbar-brand {
+        display: black;
+    }
+
+    .search {
+        display: flex;
+    }
+
+    .search .search-input {
+        flex: 1;
+    }
+
+    .navigation {
+        position: absolute;
+        z-index: 30;
+    }
+
+    .manage-product {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .manage-product-wp {
+        height: 100%;
+        flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .manage-product-wp .add_product {
+        min-width: 100%;
+        height: fit-content;
+        margin-right: 0;
+        padding-bottom: 3rem;
+        margin-bottom: var(--spaceM);
+
+    }
+
+    .manage-product-wp .list-product {
+        min-width: 100%;
+        height: fit-content;
+        overflow: visible !important;
+    }
+
+    .manage-product-wp::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1123px) {
+    .recent {
+        flex-direction: column;
+    }
+
+    .main {
+        overflow: scroll;
+    }
+
+    .main::-webkit-scrollbar {
+        display: none;
+    }
+
+    .recentOrders {
+        margin-right: 0;
+        height: fit-content;
+    }
+
+    .recentCustomers {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: var(--spaceM);
+        height: fit-content;
+        overflow: scroll;
+    }
+
+    .recentCustomers::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .topbar-brand {
+        display: none;
+    }
+
+    .cardBox .card {
+        --col: 2;
+        margin-top: var(--spaceS);
+    }
+
+    .nav-close {
+        display: block;
+        cursor: pointer;
+    }
+
+    .topbar-left {
+        width: 15%;
+    }
+
+    .search {
+        flex: 1;
+        max-width: 35rem;
+    }
+
+    .search-input {
+        max-width: 30rem;
+    }
+
+    .action {
+        width: 15%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .recentOrders {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .recentCustomers {
+        width: 100%;
+        height: fit-content;
+    }
+}

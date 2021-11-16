@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <form id = "formLogin">
+    <form class="form-login" id = "formLogin">
         <img src="./assets/images/logo.png" alt="">
         <div class="box">
             <input type="text" name="username" id="username" class="txtUsername" placeholder="Tài khoản" required>

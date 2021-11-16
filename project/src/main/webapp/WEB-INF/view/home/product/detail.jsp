@@ -76,8 +76,8 @@
 											<li><strong class="mr-10">Xuất xứ:</strong> Chính hãng</li>
 											<li><strong class="mr-10">Bảo hành:</strong> 24 Tháng</li>
 											<li><strong class="mr-10">Tình trạng:</strong> <c:choose>
-													<c:when test="${item.tinhtrang == true }">hàng mới</c:when>
-													<c:otherwise>Đã qua sử dụng</c:otherwise>
+													<c:when test="${item.tinhtrang == true }">còn hàng</c:when>
+													<c:otherwise>hết hàng</c:otherwise>
 												</c:choose></li>
 										</div>
 									</ul>
