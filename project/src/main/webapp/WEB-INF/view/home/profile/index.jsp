@@ -41,7 +41,7 @@
 	</div>
 	<div class="profile">
             <div class="profile-wp">
-            <c:forEach var="item" items="${items}">
+         
                 <div class="profile-left">
                     <div class="profile-image">
                         <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="">
@@ -49,7 +49,7 @@
                             <i class="fas fa-check"></i>
                         </div>
                     </div>
-                    <p class="profile-id">#000${item.makh}</p>
+                    <p class="profile-id">#000${makh}</p>
                 </div>
                 <div class="profile-right">
                     <h1 class="profile-title">Thông tin cá nhân</h1>
@@ -59,7 +59,7 @@
                                 <label for="username">
                                     Tên đăng nhập:
                                 </label>
-                                <input type="text" name="username" id="username" class="txtUsername" value="${item.tendangnhap}"
+                                <input type="text" name="username" id="username" class="txtUsername" value="${tendangnhap}"
                                     readonly>
                             </div>
                             <div class="form-group">
@@ -67,7 +67,7 @@
                                     Mật khẩu:
                                 </label>
                                 <input type="password" name="password" id="password" class="txtPassword"
-                                    value="${item.matkhau}" placeholder="Mật khẩu tài khoản của bạn">
+                                    value="${matkhau}" placeholder="Mật khẩu tài khoản của bạn">
                             </div>
                         </div>
                         <div class="form-group-2">
@@ -76,13 +76,13 @@
                                     Họ và tên:
                                 </label>
                                 <input type="text" name="fullname" id="fullname" class="txtFullname"
-                                    value="${item.fullname}">
+                                    value="${fullname}">
                             </div>
                             <div class="form-group">
                                 <label for="phone">
                                     Số điện thoại:
                                 </label>
-                                <input type="number" name="phone" id="phone" class="txtPhone" value="${item.sodienthoai}">
+                                <input type="number" name="phone" id="phone" class="txtPhone" value="${sodienthoai}">
                             </div>
                         </div>
                         <div class="form-group-2">
@@ -90,7 +90,7 @@
                                 <label for="birthday">
                                     Ngày sinh:
                                 </label>
-                                <input type="date" name="birthday" id="birthday" class="txtBirthday" value="${item.ngaysinh}">
+                                <input type="date" name="birthday" id="birthday" class="txtBirthday" value="${ngaysinh}">
                             </div>
                             <div class="form-group">
                                 <label for="genders">
@@ -104,10 +104,10 @@
                                         </div>
                                     </div>
                                     <div class="gender-list">
-                                    <c:if test="${item.gioitinh=true}">
+                                    <c:if test="${gioitinh=true}">
                                         <div class="gender-option">Nam</div>
                                         </c:if>
-                                        <c:if test="${item.gioitinh=false}">
+                                        <c:if test="${gioitinh=false}">
                                         <div class="gender-option">Nữ</div>
                                         </c:if>
                                     </div>
@@ -120,7 +120,7 @@
                                     Địa chỉ:
                                 </label>
                                 <input type="text" name="address" id="address" class="txtAddress"
-                                    value="${item.diachi}">
+                                    value="${diachi}">
                             </div>
                         </div>
                         <div class="form-group-1">
@@ -129,7 +129,7 @@
                                     Email:
                                 </label>
                                 <input type="mail" name="email" id="email" class="txtEmail"
-                                    value="${item.email}">
+                                    value="${email}">
                             </div>
                         </div>
                         <!-- PROFILE-BUTTON Khi đã click sửa -->
@@ -145,7 +145,7 @@
 
                     </form>
                 </div>
-                </c:forEach>
+              
             </div>
         </div>
 	<jsp:include page="./../../home/footer.jsp"></jsp:include>
