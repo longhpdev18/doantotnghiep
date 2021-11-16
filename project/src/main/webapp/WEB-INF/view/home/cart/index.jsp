@@ -45,16 +45,16 @@
 					<h2 class="cart-title">Giỏ hàng</h2>
 					<c:if test="${not empty cart.items}">
 						<c:forEach var="item" items="${cart.items}">
-							<form action="/cart/update/${item.masp}" method="post">
+							<form action="/cart/update/${item.getSp().masp}" method="post">
 								<div class="cart-list-content">
 									<div class="cart-row">
 										<div class="cart-row-image">
-											<img src="./../assets/img/sanpham/${item.hinh}"
-												alt="${item.tensp}" class="cart-image">
+											<img src="./../assets/img/sanpham/${item.getSp().hinh}"
+												alt="${item.getSp().tensp}" class="cart-image">
 										</div>
 										<div class="cart-row-detail">
 											<div class="cart-rowdetail-left">
-												<div class="cart-name">${item.tensp}</div>
+												<div class="cart-name">${item.getSp().tensp}</div>
 											</div>
 											<div class="cart-rowdetail-right">
 												<div class="qty-wp">
@@ -68,11 +68,11 @@
 														<i class="fas fa-caret-right"></i>
 													</button>
 												</div>
-												<div class="cart-price">${item.qty * item.gia}</div>
+												<div class="cart-price">${item.qty * item.getSp().gia}</div>
 											</div>
 										</div>
 										<div class="cart-row-manage">
-											<a href="/cart/remove/${item.masp}" class="btn-cart-delete">
+											<a href="/cart/remove/${item.getSp().masp}" class="btn-cart-delete">
 												<i class="far fa-trash-alt"></i>
 											</a>
 										</div>

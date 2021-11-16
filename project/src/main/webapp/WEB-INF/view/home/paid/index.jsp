@@ -74,29 +74,30 @@
 					</div>
 					<div class="paid-list-content">
 						<div class="paid-list-heading">Sản phẩm</div>
+						<c:if test="${not empty cart.items}">
+						<c:forEach var="item" items="${cart.items}">
 						<div class="paid-row">
 							<div class="paid-row-image">
-								<img src="https://cdn.tgdd.vn/Products/Images/44/231255/macbook-pro-m1-2020-gray-600x600.jpg"
-									alt="" class="cart-image">
+								<img src="./../assets/img/sanpham/${item.getSp().hinh}"
+												alt="${item.getSp().tensp}" class="cart-image">
 							</div>
 							<div class="paid-row-detail">
 								<div class="paid-rowdetail-left">
-									<div class="paid-name">PC Gaming Zotac MEK ULTRA-S13060
-										i7-9700k/RAM 16GB/SSD 240GB/HDD 2TB/Wifi+BT/Win10 PC Gaming
-										Zotac MEK ULTRA-S13060 i7-9700k/RAM 16GB/SSD 240GB/HDD
-										2TB/Wifi+BT/Win10</div>
+									<div class="paid-name">${item.getSp().tensp}</div>
 								</div>
 								<div class="paid-rowdetail-right">
-									<div class="sl-wp">x1</div>
-									<div class="paid-price">100.000.000 đ</div>
+									<div class="sl-wp">${item.qty}</div>
+									<div class="paid-price">${item.qty * item.getSp().gia} đ</div>
 								</div>
 							</div>
 						</div>
+						</c:forEach>
+						
 						<div class="paid-bottom">
 							<div class="paid-bottom-row">
 								<div class="paid-bottom-left">Tổng tiền hàng:</div>
 								<div class="paid-bottom-right paid-total-price">
-									177.000.000 đ</div>
+									${cart.getAmount()} đ</div>
 							</div>
 							<div class="cart-bottom-row">
 								<div class="paid-bottom-left shipping-fee-text">Phí vận
@@ -106,9 +107,11 @@
 							<div class="paid-bottom-row">
 								<div class="paid-bottom-left total-paid-text">Tổng thanh
 									toán:</div>
-								<div class="paid-bottom-right total-paid">174.000.000 đ</div>
+								<div class="paid-bottom-right total-paid">${cart.getAmount()} đ</div>
 							</div>
 						</div>
+						</c:if>
+						
 					</div>
 					<div class="paid-method">
 						<div class="paid-list-heading">Phương thức thanh toán</div>

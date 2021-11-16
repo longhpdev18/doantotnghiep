@@ -62,7 +62,7 @@
 										<div class="product__deal">
 											<div class="product__deal--container">
 												<div class="deal-content">
-													Giảm<span>30%</span>
+													Giảm<span>${sp.deal} %</span>
 												</div>
 											</div>
 										</div>
@@ -86,7 +86,7 @@
 												</form>
 												<form >
 													<button type="submit"
-														class=" btn-light rounded-8" value="${sp.masp}">Thêm
+														class=" btn-light rounded-8 btn-addToCart" value="${sp.masp}">Thêm
 														vào giỏ</button>
 												</form>
 											</div>

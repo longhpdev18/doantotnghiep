@@ -2,8 +2,6 @@ window.addEventListener("load", function () {
     const slider = document.querySelector('.slider');
     const sliderMain = document.querySelector('.slider__main');
     const sliderItem = document.querySelectorAll('.slider-item');
-    const prevBtn = document.querySelector('.slider-prev');
-    const nextBtn = document.querySelector('.slider-next');
     const sliderItemWidth = sliderItem[0].offsetWidth;
     const sliderLength = sliderItem.length;
 
@@ -12,13 +10,6 @@ window.addEventListener("load", function () {
 
 	
 
-
-    nextBtn.addEventListener("click", function () {
-        handleChangeSlide(1);
-    })
-    prevBtn.addEventListener("click", function () {
-        handleChangeSlide(-1);
-    })
 
 
 

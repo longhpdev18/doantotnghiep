@@ -23,7 +23,7 @@ public class DetailProductController {
 	@GetMapping("product/{masp}")
 	public String getKhachHangId(Model model, @PathVariable(value = "masp") Integer masp)
 			throws ResourceNotFoundException {
-		List<SanPham> items = sanphamDAO.getID(masp);
+		SanPham items = sanphamDAO.getID(masp);
 		model.addAttribute("items", items);
 		return"home/product/detail";
 	}

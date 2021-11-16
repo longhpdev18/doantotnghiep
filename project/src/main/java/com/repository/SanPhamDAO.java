@@ -16,7 +16,7 @@ import com.model.SanPham;
 public interface SanPhamDAO  extends JpaRepository<SanPham, Integer> {
 	//@Query("select sp from sanpham sp where sp.masp =?1")
 	@Query(value="select sp, nh.tennh from sanpham sp, nhanhieu nh where sp.manh = nh.manh and sp.masp =?1")
-	List<SanPham> getID(Integer masp); 
+	SanPham getID(Integer masp); 
 	@Query(value="select sp from sanpham sp where sp.maloai=:maloai")
 	Page<SanPham> getByLH(int maloai,Pageable pageable);
 }
