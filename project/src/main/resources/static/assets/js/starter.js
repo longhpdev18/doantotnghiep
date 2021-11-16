@@ -8,7 +8,9 @@ window.addEventListener("load", function () {
     let positionX = 0;
     let index = 0;
 
-	
+	$('.btn-showUser').click(function () {
+        $('.dropdown-user').toggleClass('active');
+    })
 
 
 

@@ -6,6 +6,22 @@ $('#btnLoginIndex').click(function(e){
 $('#btnCancelLoginIndex').click(function(e){
 	e.preventDefault();
 });
+$('.btn-Logout').click(function(e){
+	e.preventDefault();
+	$.ajax({
+		url:'/logout',
+		type:'GET',
+		contentType:'application/json',
+		dataType:'json',
+		success:function(result){
+				location.reload();
+			
+		},error:function(err){
+			console.log(err)
+		}
+		
+	})
+})
 function login(){
 	var username = document.getElementById("username").value;
 	var password = document.getElementById("password").value;
@@ -22,11 +38,12 @@ function login(){
 			),
 			dataType:'json',
 			success:function(result){
-				if(result.value=='success'){
-					window.location.href = '/';
-					window.open();
+				if(result.value!=null){
+					
+					location.reload();
+				
 				}else{
-					toastr.error(result.value);
+					toastr.error('Sai tài khoản hoặc mật khẩu!');
 				}
 			},error:function(err){
 				console.log(err)

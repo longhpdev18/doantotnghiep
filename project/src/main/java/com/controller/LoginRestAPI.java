@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,14 +44,22 @@ public class LoginRestAPI {
 		KhachHang kh = khDAO.loginKH(login.getUsername(), login.getPassword());
 		System.out.println(kh);
 		if(kh!=null) {
-			mess.setValue("success");
+			mess.setValue( kh.getFullname());
 			sessionService.set("fullname", kh.getFullname());
 			sessionService.set("maKH", kh.getMakh());
 		}else{
-			mess.setValue("Sai tài khoản hoặc mật khẩu!");
+			mess.setValue(null);
 		}
 		
 		return mess;
 		
+	}
+	@GetMapping("/logout")
+	public Message logout() {
+		sessionService.remove("fullname");
+		sessionService.remove("maKH");
+		Message mess = new Message();
+		mess.setValue("success");
+		return mess;
 	}
 }

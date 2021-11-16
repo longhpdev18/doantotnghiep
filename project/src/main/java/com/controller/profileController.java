@@ -2,7 +2,6 @@ package com.controller;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,11 +28,20 @@ public class profileController {
 	SessionService sessionService;
 	@Autowired
 	KhachHangDAO khDAO;
-	
+
 	@RequestMapping(value = "/profile")
 	public String showProfile(Model model) {
-		List<KhachHang> khachhang = khDAO.ID(sessionService.get("maKH"));
+		KhachHang khachhang = khDAO.getById(sessionService.get("maKH"));
 		model.addAttribute("items", khachhang);
+		model.addAttribute("maKH", khachhang.getMakh());
+		model.addAttribute("tendangnhap", khachhang.getTendangnhap());
+		model.addAttribute("matkhau", khachhang.getMatkhau());
+		model.addAttribute("fullname", khachhang.getFullname());
+		model.addAttribute("sodienthoai", khachhang.getSodienthoai());
+		model.addAttribute("ngaysinh", khachhang.getNgaysinh());
+		model.addAttribute("gioitinh", khachhang.isGioitinh());
+		model.addAttribute("diachi", khachhang.getDiachi());
+		model.addAttribute("email", khachhang.getEmail());
 		return "home/profile/index";
-	}	
+	}
 }

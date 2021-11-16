@@ -18,9 +18,6 @@ $('.btn-cancel').click(function () {
     $('.formRegister__container').removeClass('active');
 })
 
-$('.btn-showUser').click(function () {
-    $('.dropdown-user').toggleClass('active');
-})
 $('.btn-menu-mobile').click(function () {
     $('.menu-mobile').toggleClass('active');
 })
