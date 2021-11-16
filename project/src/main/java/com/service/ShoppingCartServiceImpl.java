@@ -33,20 +33,12 @@ public class ShoppingCartServiceImpl implements ShoppingCartService{
 		if(item == null) {
 			////////////THAY CÁC DÒNG NÀY VÀO NHÉ :)
 			item = new Item();
-			SanPham sp = new SanPham();
-			List<SanPham> list = spdao.findAll() ;
+			SanPham sp = spdao.getID(masp) ;
 			//p = list.get(id);	// hàm get lấy theo index, ko lấy theo id
 			//6. lấy ra 1 món hàng dựa vào id
-			sp = list.stream()
-					.filter(it->it.getMasp()==masp)
-					.collect(Collectors.toList())
-					.get(0);
-			item.setMasp(sp.getMasp());
-			item.setTensp(sp.getTensp());
-			item.setGia(sp.getGia());
-			item.setHinh(sp.getHinh());
+			
 								//item.setQty(1);
-								//item = DB.items.get(id);
+			item.setSp(sp);			//item = DB.items.get(id);
 			item.setQty(1); //7. set số lượng là 1
 			map.put(masp, item); //8. thêm vào giỏ hàng
 		} else {
@@ -85,7 +77,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService{
 	@Override
 	public double getAmount() {
 		return map.values().stream()
-				.mapToDouble(item -> item.getGia()*item.getQty())
+				.mapToDouble(item -> item.getSp().getGia()*item.getSp().getDeal()/100*item.getQty())
 				.sum();
 	}
 }
