@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bean.Item;
 import com.model.HoaDon;
+import com.model.HoaDonChiTiet;
 import com.model.KhachHang;
 import com.model.Message;
+import com.repository.HoaDonCTDAO;
 import com.repository.HoaDonDAO;
 import com.repository.KhachHangDAO;
 import com.repository.SanPhamDAO;
@@ -35,6 +38,8 @@ public class PaidRestAPI {
 	KhachHangDAO khDAO;
 	@Autowired
 	HoaDonDAO hdDAO;
+	@Autowired
+	HoaDonCTDAO hdctDAO;
 	@CrossOrigin
 	@GetMapping("/getAddressPaid")
 	public KhachHang getAddress() {
@@ -50,6 +55,15 @@ public class PaidRestAPI {
 		hd.setMakh(Long.parseLong(sessionService.get("maKH").toString()));
 		System.out.println(hd.getNgaymua());  
 		hdDAO.save(hd);
+		for(Item item: cart.getItems()){
+			HoaDonChiTiet hdct = new HoaDonChiTiet();
+			hdct.setMahd((int)hdDAO.getLastID().getMahd());
+			hdct.setMasp(item.getSp().getMasp());
+			hdct.setSoluong(item.getQty());
+			hdct.setDongia(1);
+			hdctDAO.save(hdct);
+        }
+		
 		return null;
 		
 	}
