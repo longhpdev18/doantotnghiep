@@ -10,7 +10,9 @@
     <!--CSS-->
     <link rel="stylesheet" href="./css/style.css">
     <!--CSS-->
-    <link rel="stylesheet" href="./css/2.css">
+    <link rel="stylesheet" href="./css/unilities.css">
+
+    <link rel="stylesheet" href="./css/responsive.css">
     <!-- <link rel="stylesheet" href="./css/lproduct.css"> -->
     <!-- BOXICON -->
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
@@ -27,6 +29,9 @@
             <ul class="navigation-wp">
                 <div class="nav-header">
                     <img src="./images/logo_white.png" alt="" class="header-brand">
+                    <button class="nav-close">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
                 <li>
                     <a href="./index.html" class="active">
@@ -143,14 +148,17 @@
             </div>
 
             <!-- list product-->
-            <div class="list_product">
+            <div class="manage-product">
                 <!-- <div class="border_form"> -->
-                <div class="title_product">
-                    List product
+                <div class="title-page">
+                    Quản lý sản phẩm
                 </div>
-                <div class="list_product-wp">
+                <div class="manage-product-wp">
                     <div class="add_product">
-                        <form action="">
+                        <div class="add_product-heading">
+                            Thêm sản phẩm
+                        </div>
+                        <form action="" class="fAdd-product">
                             <div class="input_form">
                                 <label for="nameproduct" class="name">Tên </label>
                                 <input type="text" name="nameproduct" placeholder="Tên sản phẩm" required>
@@ -202,15 +210,17 @@
                                     </label> -->
                                 </div>
                             </div>
-                            <div class="button">
-                                <button class="new">New</button>
-                                <button class="add">Thêm</button>
-                                <button class="delete">Xóa</button>
-                                <button class="edit">Sửa</button>
+                            <div class="group-button-add">
+                                <button class="add-product">Thêm</button>
+                                <button class="add-cancel">Hủy</button>
                             </div>
+                        </form>
                     </div>
-                    </form>
+
                     <div class="list-product">
+                        <div class="list-product-heading">
+                            Danh sách sản phẩm
+                        </div>
                         <table>
                             <tr>
                                 <th>Mã SP</th>
@@ -237,10 +247,10 @@
                                 <td>
                                     <div class="dropdown">
                                         <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
+                                            <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="#">Thêm</a>
+
                                             <a href="#">Xóa</a>
                                             <a href="#">Sửa</a>
                                         </div>
@@ -263,10 +273,10 @@
                                 <td>
                                     <div class="dropdown">
                                         <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
+                                            <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="#">Thêm</a>
+
                                             <a href="#">Xóa</a>
                                             <a href="#">Sửa</a>
                                         </div>
@@ -289,17 +299,16 @@
                                 <td>
                                     <div class="dropdown">
                                         <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
+                                            <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="#">Thêm</a>
+
                                             <a href="#">Xóa</a>
                                             <a href="#">Sửa</a>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>4</td>
                                 <td>Start Refrigerator</td>
@@ -316,10 +325,10 @@
                                 <td>
                                     <div class="dropdown">
                                         <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
+                                            <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="#">Thêm</a>
+
                                             <a href="#">Xóa</a>
                                             <a href="#">Sửa</a>
                                         </div>
@@ -342,10 +351,10 @@
                                 <td>
                                     <div class="dropdown">
                                         <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
+                                            <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="#">Thêm</a>
+
                                             <a href="#">Xóa</a>
                                             <a href="#">Sửa</a>
                                         </div>
@@ -368,10 +377,10 @@
                                 <td>
                                     <div class="dropdown">
                                         <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
+                                            <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="#">Thêm</a>
+
                                             <a href="#">Xóa</a>
                                             <a href="#">Sửa</a>
                                         </div>
@@ -394,10 +403,218 @@
                                 <td>
                                     <div class="dropdown">
                                         <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
+                                            <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="#">Thêm</a>
+
+                                            <a href="#">Xóa</a>
+                                            <a href="#">Sửa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Start Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Mới</td>
+
+                                <td><span class="status delivered">Bàn phím</span></td>
+                                <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-content">
+
+                                            <a href="#">Xóa</a>
+                                            <a href="#">Sửa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Start Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Mới</td>
+
+                                <td><span class="status delivered">Bàn phím</span></td>
+                                <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-content">
+
+                                            <a href="#">Xóa</a>
+                                            <a href="#">Sửa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Start Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Mới</td>
+
+                                <td><span class="status delivered">Bàn phím</span></td>
+                                <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-content">
+
+                                            <a href="#">Xóa</a>
+                                            <a href="#">Sửa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Start Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Mới</td>
+
+                                <td><span class="status delivered">Bàn phím</span></td>
+                                <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-content">
+
+                                            <a href="#">Xóa</a>
+                                            <a href="#">Sửa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Start Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Mới</td>
+
+                                <td><span class="status delivered">Bàn phím</span></td>
+                                <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-content">
+
+                                            <a href="#">Xóa</a>
+                                            <a href="#">Sửa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Start Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Mới</td>
+
+                                <td><span class="status delivered">Bàn phím</span></td>
+                                <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-content">
+
+                                            <a href="#">Xóa</a>
+                                            <a href="#">Sửa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Start Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Mới</td>
+
+                                <td><span class="status delivered">Bàn phím</span></td>
+                                <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-content">
+
+                                            <a href="#">Xóa</a>
+                                            <a href="#">Sửa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Start Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Mới</td>
+
+                                <td><span class="status delivered">Bàn phím</span></td>
+                                <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-content">
+
                                             <a href="#">Xóa</a>
                                             <a href="#">Sửa</a>
                                         </div>
@@ -418,6 +635,6 @@
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./js/hovered.js"></script>
-
+<script src="./js/app.js"></script>
 
 </html>
