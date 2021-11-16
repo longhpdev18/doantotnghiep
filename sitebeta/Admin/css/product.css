@@ -487,7 +487,7 @@ form .input_right .input_img .wrapper .image img {
 }
 .add_product form .input_right .input_img label {
     color: aliceblue;
-    width: 674px;
+    width: 47%;
     height: 50px;
     background: linear-gradient(135deg, rgb(68, 171, 255) 0%, #0B71E8 100%);
     position: absolute;
