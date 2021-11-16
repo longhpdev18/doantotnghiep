@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <!--CSS-->
     <link rel="stylesheet" href="./css/unilities.css">
-
+    <link rel="stylesheet" href="./css/responsive.css">
     <!-- BOXICON -->
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <!-- FONT ANWESOME -->
@@ -27,6 +27,9 @@
             <ul class="navigation-wp">
                 <div class="nav-header">
                     <img src="./images/logo_white.png" alt="" class="header-brand">
+                    <button class="nav-close">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
                 <li>
                     <a href="./index.html" class="active">
@@ -187,169 +190,157 @@
                 <div class="recentOrders">
                     <div class="cardHeader">
                         <h2>Gần đây</h2>
-                        <a href="" class="btn">
+                        <a href="" class="btn-export">
                             <ion-icon name="download"></ion-icon>
-                            Tải về
+                            <p>Tải về</p>
                         </a>
                     </div>
                     <table>
-                        <thead>
-                            <tr>
-                                <!-- <td><input type="checkbox" onclick='checkUncheck(this)' > All</td> -->
-                                <td>Mã</td>
-                                <td>Tên</td>
-                                <td>Giá</td>
-                                <td>Thanh toán</td>
-                                <td>Trạng thái</td>
-                                <td></td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
-                                <td>1</td>
-                                <td>Start Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Đã thanh toán</td>
-                                <td><span class="status delivered">Đã giao hàng</span></td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Xóa</a>
-                                            <!-- <a href="#">Edit</a> -->
-                                        </div>
+
+                        <tr>
+                            <!-- <td><input type="checkbox" onclick='checkUncheck(this)' > All</td> -->
+                            <td>Mã</td>
+                            <td>Tên</td>
+                            <td>Giá</td>
+                            <td>Thanh toán</td>
+                            <td>Trạng thái</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
+                            <td>1</td>
+                            <td>Start Refrigerator</td>
+                            <td>$1200</td>
+                            <td>Đã thanh toán</td>
+                            <td><span class="status delivered">Đã giao hàng</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <span>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </span>
+                                    <div class="dropdown-content">
+                                        <a href="#">Xóa</a>
+                                        <!-- <a href="#">Edit</a> -->
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
-                                <td>2</td>
-                                <td>Start Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Qúa hạn</td>
-                                <td><span class="status pending">Chưa giải quyết</span></td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Xóa</a>
-                                            <!-- <a href="#">Edit</a> -->
-                                        </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
+                            <td>2</td>
+                            <td>Start Refrigerator</td>
+                            <td>$1200</td>
+                            <td>Qúa hạn</td>
+                            <td><span class="status pending">Chưa giải quyết</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <span>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </span>
+                                    <div class="dropdown-content">
+                                        <a href="#">Xóa</a>
+                                        <!-- <a href="#">Edit</a> -->
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
-                                <td>3</td>
-                                <td>Start Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Đã thanh toán</td>
-                                <td><span class="status delivered">Đã giao hàng</span></td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Xóa</a>
-                                            <!-- <a href="#">Edit</a> -->
-                                        </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
+                            <td>3</td>
+                            <td>Start Refrigerator</td>
+                            <td>$1200</td>
+                            <td>Đã thanh toán</td>
+                            <td><span class="status delivered">Đã giao hàng</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <span>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </span>
+                                    <div class="dropdown-content">
+                                        <a href="#">Xóa</a>
+                                        <!-- <a href="#">Edit</a> -->
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
-                                <td>4</td>
-                                <td>Start Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Đã thanh toán</td>
-                                <td><span class="status return">Trả hàng</span></td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Xóa</a>
-                                            <!-- <a href="#">Edit</a> -->
-                                        </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
+                            <td>4</td>
+                            <td>Start Refrigerator</td>
+                            <td>$1200</td>
+                            <td>Đã thanh toán</td>
+                            <td><span class="status return">Trả hàng</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <span>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </span>
+                                    <div class="dropdown-content">
+                                        <a href="#">Xóa</a>
+                                        <!-- <a href="#">Edit</a> -->
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
-                                <td>5</td>
-                                <td>Start Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Đã thanh toán</td>
-                                <td><span class="status delivered">Đã giao hàng</span></td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Xóa</a>
-                                            <!-- <a href="#">Edit</a> -->
-                                        </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
+                            <td>5</td>
+                            <td>Start Refrigerator</td>
+                            <td>$1200</td>
+                            <td>Đã thanh toán</td>
+                            <td><span class="status delivered">Đã giao hàng</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <span>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </span>
+                                    <div class="dropdown-content">
+                                        <a href="#">Xóa</a>
+                                        <!-- <a href="#">Edit</a> -->
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
-                                <td>6</td>
-                                <td>Start Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Chưa thanh toán</td>
-                                <td><span class="status inprogress">Vận chuyển</span></td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Xóa</a>
-                                            <!-- <a href="#">Edit</a> -->
-                                        </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
+                            <td>6</td>
+                            <td>Start Refrigerator</td>
+                            <td>$1200</td>
+                            <td>Chưa thanh toán</td>
+                            <td><span class="status inprogress">Vận chuyển</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <span>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </span>
+                                    <div class="dropdown-content">
+                                        <a href="#">Xóa</a>
+                                        <!-- <a href="#">Edit</a> -->
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
-                                <td>7</td>
-                                <td>Start Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Đã thanh toán</td>
-                                <td><span class="status delivered">Đã giao hàng</span></td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Xóa</a>
-                                            <!-- <a href="#">Edit</a> -->
-                                        </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
+                            <td>7</td>
+                            <td>Start Refrigerator</td>
+                            <td>$1200</td>
+                            <td>Đã thanh toán</td>
+                            <td><span class="status delivered">Đã giao hàng</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <span>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </span>
+                                    <div class="dropdown-content">
+                                        <a href="#">Xóa</a>
+                                        <!-- <a href="#">Edit</a> -->
                                     </div>
-                                </td>
-                            </tr>
-                        </tbody>
+                                </div>
+                            </td>
+                        </tr>
                     </table>
-                    <!--pagination-->
-                    <div class="pagination">
-                        <a href="#"><i class="fas fa-chevron-left"></i></a>
-                        <a href="#">1</a>
-                        <a href="#" class="active">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#"><i class="fas fa-chevron-right"></i></a>
-                    </div>
                 </div>
 
                 <!--New Customers-->
@@ -359,13 +350,19 @@
                     </div>
                     <table>
                         <tr>
-                            <td width="60px">
+                            <td>Ảnh</td>
+                            <td>Tên</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <div class="imgBx"><img
-                                        src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/127222247_1086079278516962_38767906172782592_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=FcF-DqXSBUYAX-u-j1Z&tn=8Xk759-Pc91XDR0g&_nc_ht=scontent.fdad1-1.fna&oh=39f0b948a1be6268de1169086e3e2d21&oe=6192E86C"
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
                                         alt=""></div>
                             </td>
                             <td>
-                                <h4>David<br><span>Italy</span></h4>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
                             </td>
                             <td class="tbicon">
                                 <a href="">
@@ -377,13 +374,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td width="60px">
+                            <td>
                                 <div class="imgBx"><img
-                                        src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/127222247_1086079278516962_38767906172782592_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=FcF-DqXSBUYAX-u-j1Z&tn=8Xk759-Pc91XDR0g&_nc_ht=scontent.fdad1-1.fna&oh=39f0b948a1be6268de1169086e3e2d21&oe=6192E86C"
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
                                         alt=""></div>
                             </td>
                             <td>
-                                <h4>David<br><span>Italy</span></h4>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
                             </td>
                             <td class="tbicon">
                                 <a href="">
@@ -395,13 +393,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td width="60px">
+                            <td>
                                 <div class="imgBx"><img
-                                        src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/127222247_1086079278516962_38767906172782592_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=FcF-DqXSBUYAX-u-j1Z&tn=8Xk759-Pc91XDR0g&_nc_ht=scontent.fdad1-1.fna&oh=39f0b948a1be6268de1169086e3e2d21&oe=6192E86C"
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
                                         alt=""></div>
                             </td>
                             <td>
-                                <h4>David<br><span>Italy</span></h4>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
                             </td>
                             <td class="tbicon">
                                 <a href="">
@@ -413,13 +412,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td width="60px">
+                            <td>
                                 <div class="imgBx"><img
-                                        src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/127222247_1086079278516962_38767906172782592_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=FcF-DqXSBUYAX-u-j1Z&tn=8Xk759-Pc91XDR0g&_nc_ht=scontent.fdad1-1.fna&oh=39f0b948a1be6268de1169086e3e2d21&oe=6192E86C"
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
                                         alt=""></div>
                             </td>
                             <td>
-                                <h4>David<br><span>Italy</span></h4>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
                             </td>
                             <td class="tbicon">
                                 <a href="">
@@ -431,13 +431,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td width="60px">
+                            <td>
                                 <div class="imgBx"><img
-                                        src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/127222247_1086079278516962_38767906172782592_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=FcF-DqXSBUYAX-u-j1Z&tn=8Xk759-Pc91XDR0g&_nc_ht=scontent.fdad1-1.fna&oh=39f0b948a1be6268de1169086e3e2d21&oe=6192E86C"
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
                                         alt=""></div>
                             </td>
                             <td>
-                                <h4>David<br><span>Italy</span></h4>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
                             </td>
                             <td class="tbicon">
                                 <a href="">
@@ -449,13 +450,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td width="60px">
+                            <td>
                                 <div class="imgBx"><img
-                                        src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/127222247_1086079278516962_38767906172782592_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=FcF-DqXSBUYAX-u-j1Z&tn=8Xk759-Pc91XDR0g&_nc_ht=scontent.fdad1-1.fna&oh=39f0b948a1be6268de1169086e3e2d21&oe=6192E86C"
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
                                         alt=""></div>
                             </td>
                             <td>
-                                <h4>David<br><span>Italy</span></h4>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
                             </td>
                             <td class="tbicon">
                                 <a href="">
@@ -467,13 +469,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td width="60px">
+                            <td>
                                 <div class="imgBx"><img
-                                        src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/127222247_1086079278516962_38767906172782592_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=FcF-DqXSBUYAX-u-j1Z&tn=8Xk759-Pc91XDR0g&_nc_ht=scontent.fdad1-1.fna&oh=39f0b948a1be6268de1169086e3e2d21&oe=6192E86C"
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
                                         alt=""></div>
                             </td>
                             <td>
-                                <h4>David<br><span>Italy</span></h4>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
                             </td>
                             <td class="tbicon">
                                 <a href="">
@@ -484,7 +487,120 @@
                                 </a>
                             </td>
                         </tr>
-
+                        <tr>
+                            <td>
+                                <div class="imgBx"><img
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
+                                        alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
+                            </td>
+                            <td class="tbicon">
+                                <a href="">
+                                    <ion-icon name="phone-portrait"></ion-icon>
+                                </a>
+                                <a href="">
+                                    <ion-icon name="chatbubbles"></ion-icon>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="imgBx"><img
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
+                                        alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
+                            </td>
+                            <td class="tbicon">
+                                <a href="">
+                                    <ion-icon name="phone-portrait"></ion-icon>
+                                </a>
+                                <a href="">
+                                    <ion-icon name="chatbubbles"></ion-icon>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="imgBx"><img
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
+                                        alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
+                            </td>
+                            <td class="tbicon">
+                                <a href="">
+                                    <ion-icon name="phone-portrait"></ion-icon>
+                                </a>
+                                <a href="">
+                                    <ion-icon name="chatbubbles"></ion-icon>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="imgBx"><img
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
+                                        alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
+                            </td>
+                            <td class="tbicon">
+                                <a href="">
+                                    <ion-icon name="phone-portrait"></ion-icon>
+                                </a>
+                                <a href="">
+                                    <ion-icon name="chatbubbles"></ion-icon>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="imgBx"><img
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
+                                        alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
+                            </td>
+                            <td class="tbicon">
+                                <a href="">
+                                    <ion-icon name="phone-portrait"></ion-icon>
+                                </a>
+                                <a href="">
+                                    <ion-icon name="chatbubbles"></ion-icon>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="imgBx"><img
+                                        src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
+                                        alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Hoàng Phi Long</h4>
+                                <p>Hồ Chí Minh</p>
+                            </td>
+                            <td class="tbicon">
+                                <a href="">
+                                    <ion-icon name="phone-portrait"></ion-icon>
+                                </a>
+                                <a href="">
+                                    <ion-icon name="chatbubbles"></ion-icon>
+                                </a>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -496,6 +612,6 @@
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./js/hovered.js"></script>
-
+<script src="./js/app.js"></script>
 
 </html>
