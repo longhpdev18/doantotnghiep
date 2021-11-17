@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/utilities.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-heading">
+            Quản lý nhân viên
+        </div>
+        <div class="manage-staff">
+            <div class="staff-update blur-dark">
+                <div class="staff-update-wp">
+                    <div class="staff-update-heading">
+                        Cập nhật thông tin nhân viên
+                    </div>
+                    <form action="" class="staff-update-form">
+                        <div class="form-group">
+                            <label for="fullname">Họ và tên</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Nhập họ và tên"
+                                class="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại</label>
+                            <input type="number" name="phone" id="phone" placeholder="Nhập số điện thoại" class="phone"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Ngày sinh</label>
+                            <input type="date" name="birthday" id="birthday" placeholder="Chọn ngày sinh"
+                                class="birthday" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Giới tính</label>
+                            <div class="form-group-gender">
+                                <div class="gender-item">
+                                    <input type="radio" name="gender" id="male" class="gender">
+                                    <label for="male">Nam</label>
+                                </div>
+                                <div class="gender-item">
+                                    <input type="radio" name="gender" id="female" class="gender">
+                                    <label for="female">Nữ</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Địa chỉ</label>
+                            <input type="email" name="email" id="email" placeholder="Nhập email" class="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ</label>
+                            <input type="text" name="address" id="address" placeholder="Nhập địa chỉ" class="address"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Chức vụ</label>
+                            <input type="text" name="position" id="position" class="position" value="Nhân viên"
+                                readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">hình ảnh</label>
+                            <input type="file" name="image" id="image" class="image" accept="image/*">
+                        </div>
+                        <div class="update-form-button">
+                            <button class="update-button-edit">Chỉnh sửa</button>
+                            <button class="update-button-cancel">Hủy</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="manage-staff-wp">
+                <div class="manage-staff-heading">
+                    <div class="staff-heading-left">
+                        Danh sách nhân viên
+                    </div>
+                    <div class="staff-heading-center">
+                        <div class="searchbox">
+                            <input type="text" class="search-input" placeholder="Nhập tên nhân viên, id nhân viên">
+                            <button class="search-button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="staff-heading-right">
+                        <button class="btn-export">
+                            <i class="fas fa-download"></i>
+                            <p>Export</p>
+                        </button>
+                        <div class="pagination">
+                            <div class="pagination-left">
+                                <span>1</span>
+                                <i class="fas fa-circle"></i>
+                                <span>10</span>
+                            </div>
+                            <div class="pagination-right">
+                                <button class="btn-prev">
+                                    <i class="fas fa-angle-left"></i>
+                                </button>
+                                <button class="btn-next">
+                                    <i class="fas fa-angle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-staff">
+                    <li class="staff-item">
+                        <div class="staff-id">
+                            1
+                        </div>
+                        <div class="staff-image">
+                            <img src="https://upanh123.com/wp-content/uploads/2020/12/hinh-nen-cute05.jpg" alt="">
+                        </div>
+                        <div class="staff-account">
+                            <div class="staff-account-username">
+                                longhpdev18
+                            </div>
+                            <div class="staff-account-password">
+                                long123
+                            </div>
+                        </div>
+                        <div class="staff-information">
+                            <div class="staff-information-fullname">
+                                Hoàng Phi Long
+                            </div>
+                            <div class="staff-information-gender">
+                                Nam
+                            </div>
+                            <div class="staff-information-birthday">
+                                18-05-2000
+                            </div>
+                        </div>
+                        <div class="staff-contact">
+                            <div class="staff-phone">
+                                0385818520
+                            </div>
+                            <div class="staff-email">
+                                longhpdev18@gmail.com
+                            </div>
+                            <div class="staff-address">
+                                Khu Phố Long Điền 1, Phường Long Phước, Bình Phước
+                            </div>
+                        </div>
+
+                        <div class="staff-position">
+                            <span class="staff-seller">Nhân viên bán hàng</span>
+                        </div>
+                        <div class="staff-action">
+                            <button class="staff-button-edit"><i class="fas fa-pencil-alt"></i></button>
+                            <button class="staff-button-delete"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                    </li>
+                    <li class="staff-item">
+                        <div class="staff-id">
+                            1
+                        </div>
+                        <div class="staff-image">
+                            <img src="https://toigingiuvedep.vn/wp-content/uploads/2021/06/hinh-anh-hoat-hinh-au-trung-de-thuong-cute.jpg"
+                                alt="">
+                        </div>
+                        <div class="staff-account">
+                            <div class="staff-account-username">
+                                longhpdev18
+                            </div>
+                            <div class="staff-account-password">
+                                long123
+                            </div>
+                        </div>
+                        <div class="staff-information">
+                            <div class="staff-information-fullname">
+                                Hoàng Phi Long
+                            </div>
+                            <div class="staff-information-gender">
+                                Nam
+                            </div>
+                            <div class="staff-information-birthday">
+                                18-05-2000
+                            </div>
+                        </div>
+                        <div class="staff-contact">
+                            <div class="staff-phone">
+                                0385818520
+                            </div>
+                            <div class="staff-email">
+                                longhpdev18@gmail.com
+                            </div>
+                            <div class="staff-address">
+                                Khu Phố Long Điền 1, Phường Long Phước, Bình Phước
+                            </div>
+                        </div>
+
+                        <div class="staff-position">
+                            <span class="staff-tech">Nhân viên kỷ thuật</span>
+                        </div>
+                        <div class="staff-action">
+                            <button class="staff-button-edit"><i class="fas fa-pencil-alt"></i></button>
+                            <button class="staff-button-delete"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../../js/app.js"></script>
+
+</html>

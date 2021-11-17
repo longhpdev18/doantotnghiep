@@ -1834,9 +1834,11 @@ body {
 .btn-showLogin {
 	height: 100%;
 	padding: 0.2rem 2.5rem;
-	display: block;
 	margin-right: var(--spaceS);
 	font-size: 1.4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .btn-showUser {
@@ -1850,9 +1852,22 @@ body {
 	position: relative;
 }
 
+.button-loginText {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-showLogin .show-user {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .btn-showLogin .user-fullname {
 	flex: 1;
 	width: 100%;
+	align-items: center;
 	height: 100%;
 	display: -webkit-box;
 	-webkit-line-clamp: 1;

@@ -1,0 +1,104 @@
+@media screen and (max-width: 1365px) {
+
+    .staff-item {
+        height: 12rem;
+        min-width: 110rem;
+    }
+
+    .staff-item .staff-account {
+        width: 100%;
+        max-width: 13rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .staff-item .staff-information {
+        width: 100%;
+        max-width: 20rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .staff-item .staff-information-fullname {
+        justify-content: flex-start;
+    }
+
+    .staff-item .staff-information-gender {
+        justify-content: flex-start;
+    }
+
+    .staff-item .staff-information-birthday {
+        justify-content: flex-start;
+    }
+
+    .staff-item .staff-contact {
+        width: 100%;
+        max-width: 30rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .staff-item .staff-phone {
+        justify-content: flex-start;
+    }
+
+    .staff-item .staff-email {
+        align-items: flex-start;
+    }
+
+    .staff-item .staff-address {
+        justify-content: flex-start;
+    }
+
+    /* ========= CUSTOMER ========== */
+
+    .customer-item {
+        height: 12rem;
+        min-width: 110rem;
+    }
+
+    .customer-item .customer-account {
+        width: 100%;
+        max-width: 13rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .customer-item .customer-information {
+        width: 100%;
+        max-width: 20rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .customer-item .customer-information-fullname {
+        justify-content: flex-start;
+    }
+
+    .customer-item .customer-information-gender {
+        justify-content: flex-start;
+    }
+
+    .customer-item .customer-information-birthday {
+        justify-content: flex-start;
+    }
+
+    .customer-item .customer-contact {
+        width: 100%;
+        max-width: 30rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .customer-item .customer-phone {
+        justify-content: flex-start;
+    }
+
+    .customer-item .customer-email {
+        align-items: flex-start;
+    }
+
+    .customer-item .customer-address {
+        justify-content: flex-start;
+    }
+}
