@@ -117,7 +117,7 @@
 								<th>Hình ảnh</th>
 								<th></th>
 							</tr>
-							<c:forEach var="item" items="${listProductAD}">
+							<c:forEach var="item" items="${listProductAD.content}">
 								<tr>
 									<td>${item.masp}</td>
 									<td>${item.tensp}</td>
