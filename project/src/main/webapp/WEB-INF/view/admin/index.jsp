@@ -16,9 +16,9 @@
    
     <link rel="stylesheet" href="./../assets/css/admin/2.css"> -->
 
-<link rel="stylesheet" href="./../assets/css/admin/responsive.css">
 <link rel="stylesheet" href="./../assets/css/admin/style.css">
 <link rel="stylesheet" href="./../assets/css/admin/unilities.css">
+<link rel="stylesheet" href="./../assets/css/admin/responsive.css">
 
 
 <!-- BOXICON -->
@@ -41,10 +41,28 @@
 			<div class="recent">
 				<div class="recentOrders">
 					<div class="cardHeader">
-						<h2>Gần đây</h2>
-						<a href="" class="btn-export"> <ion-icon name="download"></ion-icon>
-							<p>Tải về</p>
-						</a>
+						<div class="cardHeader-left">
+							<h2>Đơn hàng gần đây</h2>
+						</div>
+						<div class="cardHeader-right">
+							<a href="" class="btn-export"> <ion-icon name="download"></ion-icon>
+								<p>Tải về</p>
+							</a>
+							<div class="pagination">
+								<span>1</span>
+								<div class="pagination-icon">
+									<i class="fas fa-circle"></i>
+								</div>
+								<span>10</span>
+							</div>
+							
+								<button class="btn-prev">
+									<i class="fas fa-angle-left"></i>
+								</button>
+								<button class="btn-next">
+									<i class="fas fa-angle-right"></i>
+								</button>
+						</div>
 					</div>
 					<table>
 
@@ -65,15 +83,16 @@
 							<td>$1200</td>
 							<td>Đã thanh toán</td>
 							<td><span class="status delivered">Đã giao hàng</span></td>
-							<td>
+	<td>
 								<div class="dropdown">
-									<span> <i class="fas fa-ellipsis-h"></i>
-									</span>
+									<button class="dropbtn">
+										<i class="fas fa-ellipsis-h"></i>
+									</button>
 									<div class="dropdown-content">
-										<a href="#">Xóa</a>
-										<!-- <a href="#">Edit</a> -->
+										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
+										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
 									</div>
-								</div>
+								</div>							
 							</td>
 						</tr>
 						<tr>
@@ -85,13 +104,14 @@
 							<td><span class="status pending">Chưa giải quyết</span></td>
 							<td>
 								<div class="dropdown">
-									<span> <i class="fas fa-ellipsis-h"></i>
-									</span>
+									<button class="dropbtn">
+										<i class="fas fa-ellipsis-h"></i>
+									</button>
 									<div class="dropdown-content">
-										<a href="#">Xóa</a>
-										<!-- <a href="#">Edit</a> -->
+										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
+										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
 									</div>
-								</div>
+								</div>							
 							</td>
 						</tr>
 						<tr>
@@ -103,13 +123,14 @@
 							<td><span class="status delivered">Đã giao hàng</span></td>
 							<td>
 								<div class="dropdown">
-									<span> <i class="fas fa-ellipsis-h"></i>
-									</span>
+									<button class="dropbtn">
+										<i class="fas fa-ellipsis-h"></i>
+									</button>
 									<div class="dropdown-content">
-										<a href="#">Xóa</a>
-										<!-- <a href="#">Edit</a> -->
+										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
+										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
 									</div>
-								</div>
+								</div>							
 							</td>
 						</tr>
 						<tr>
@@ -121,13 +142,14 @@
 							<td><span class="status return">Trả hàng</span></td>
 							<td>
 								<div class="dropdown">
-									<span> <i class="fas fa-ellipsis-h"></i>
-									</span>
+									<button class="dropbtn">
+										<i class="fas fa-ellipsis-h"></i>
+									</button>
 									<div class="dropdown-content">
-										<a href="#">Xóa</a>
-										<!-- <a href="#">Edit</a> -->
+										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
+										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
 									</div>
-								</div>
+								</div>							
 							</td>
 						</tr>
 						<tr>
@@ -139,13 +161,14 @@
 							<td><span class="status delivered">Đã giao hàng</span></td>
 							<td>
 								<div class="dropdown">
-									<span> <i class="fas fa-ellipsis-h"></i>
-									</span>
+									<button class="dropbtn">
+										<i class="fas fa-ellipsis-h"></i>
+									</button>
 									<div class="dropdown-content">
-										<a href="#">Xóa</a>
-										<!-- <a href="#">Edit</a> -->
+										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
+										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
 									</div>
-								</div>
+								</div>							
 							</td>
 						</tr>
 						<tr>
@@ -157,13 +180,14 @@
 							<td><span class="status inprogress">Vận chuyển</span></td>
 							<td>
 								<div class="dropdown">
-									<span> <i class="fas fa-ellipsis-h"></i>
-									</span>
+									<button class="dropbtn">
+										<i class="fas fa-ellipsis-h"></i>
+									</button>
 									<div class="dropdown-content">
-										<a href="#">Xóa</a>
-										<!-- <a href="#">Edit</a> -->
+										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
+										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
 									</div>
-								</div>
+								</div>							
 							</td>
 						</tr>
 						<tr>
@@ -173,15 +197,73 @@
 							<td>$1200</td>
 							<td>Đã thanh toán</td>
 							<td><span class="status delivered">Đã giao hàng</span></td>
-							<td>
+						<td>
 								<div class="dropdown">
-									<span> <i class="fas fa-ellipsis-h"></i>
-									</span>
+									<button class="dropbtn">
+										<i class="fas fa-ellipsis-h"></i>
+									</button>
 									<div class="dropdown-content">
-										<a href="#">Xóa</a>
-										<!-- <a href="#">Edit</a> -->
+										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
+										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
 									</div>
-								</div>
+								</div>							
+							</td>
+						</tr>
+												<tr>
+							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
+							<td>7</td>
+							<td>Start Refrigerator</td>
+							<td>$1200</td>
+							<td>Đã thanh toán</td>
+							<td><span class="status delivered">Đã giao hàng</span></td>
+						<td>
+								<div class="dropdown">
+									<button class="dropbtn">
+										<i class="fas fa-ellipsis-h"></i>
+									</button>
+									<div class="dropdown-content">
+										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
+										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+									</div>
+								</div>							
+							</td>
+						</tr>
+												<tr>
+							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
+							<td>7</td>
+							<td>Start Refrigerator</td>
+							<td>$1200</td>
+							<td>Đã thanh toán</td>
+							<td><span class="status delivered">Đã giao hàng</span></td>
+						<td>
+								<div class="dropdown">
+									<button class="dropbtn">
+										<i class="fas fa-ellipsis-h"></i>
+									</button>
+									<div class="dropdown-content">
+										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
+										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+									</div>
+								</div>							
+							</td>
+						</tr>
+												<tr>
+							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
+							<td>7</td>
+							<td>Start Refrigerator</td>
+							<td>$1200</td>
+							<td>Đã thanh toán</td>
+							<td><span class="status delivered">Đã giao hàng</span></td>
+					<td>
+								<div class="dropdown">
+									<button class="dropbtn">
+										<i class="fas fa-ellipsis-h"></i>
+									</button>
+									<div class="dropdown-content">
+										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
+										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+									</div>
+								</div>							
 							</td>
 						</tr>
 					</table>
@@ -190,7 +272,25 @@
 				<!--New Customers-->
 				<div class="recentCustomers">
 					<div class="cardHeader">
-						<h2>Khách hàng gần đây</h2>
+						<div class="cardHeader-left">
+							<h2>Khách hàng gần đây</h2>
+						</div>
+						<div class="cardHeader-right">
+							<div class="pagination">
+								<span>1</span>
+								<div class="pagination-icon">
+									<i class="fas fa-circle"></i>
+								</div>
+								<span>10</span>
+							</div>
+							
+								<button class="btn-prev">
+									<i class="fas fa-angle-left"></i>
+								</button>
+								<button class="btn-next">
+									<i class="fas fa-angle-right"></i>
+								</button>
+						</div>
 					</div>
 					<table>
 						<tr>

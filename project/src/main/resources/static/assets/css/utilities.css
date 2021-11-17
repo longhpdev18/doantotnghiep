@@ -30,8 +30,8 @@ button {
     --primaryHover: #0984e3;
     --redColor: #F03C3D;
     --redHover: #f14c4c;
-    --orangeColor: #FF5E02;
-    --orangeHover: #fa6b19;
+   --orangeColor: #F58840;
+    --orangeHover: rgba(255, 200, 152, .6);
     --greenColor: #19C796;
     --greenHover: #2ddaa9;
     --whiteColor: #fff;

@@ -147,6 +147,60 @@
 					</div>
 				</td>
 			</tr>
+			<tr>
+				<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
+				<td>7</td>
+				<td>Start Refrigerator</td>
+				<td>$1200</td>
+				<td>Đã thanh toán</td>
+				<td><span class="status delivered">Đã giao hàng</span></td>
+				<td>
+					<div class="dropdown">
+						<span> <i class="fas fa-ellipsis-h"></i>
+						</span>
+						<div class="dropdown-content">
+							<a href="#">Xóa</a>
+							<!-- <a href="#">Edit</a> -->
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
+				<td>7</td>
+				<td>Start Refrigerator</td>
+				<td>$1200</td>
+				<td>Đã thanh toán</td>
+				<td><span class="status delivered">Đã giao hàng</span></td>
+				<td>
+					<div class="dropdown">
+						<span> <i class="fas fa-ellipsis-h"></i>
+						</span>
+						<div class="dropdown-content">
+							<a href="#">Xóa</a>
+							<!-- <a href="#">Edit</a> -->
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
+				<td>7</td>
+				<td>Start Refrigerator</td>
+				<td>$1200</td>
+				<td>Đã thanh toán</td>
+				<td><span class="status delivered">Đã giao hàng</span></td>
+				<td>
+					<div class="dropdown">
+						<span> <i class="fas fa-ellipsis-h"></i>
+						</span>
+						<div class="dropdown-content">
+							<a href="#">Xóa</a>
+							<!-- <a href="#">Edit</a> -->
+						</div>
+					</div>
+				</td>
+			</tr>
 		</table>
 	</div>
 
@@ -161,159 +215,7 @@
 				<td>Tên</td>
 				<td></td>
 			</tr>
-			<tr>
-				<td>
-					<div class="imgBx">
-						<img
-							src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-							alt="">
-					</div>
-				</td>
-				<td>
-					<h4>Hoàng Phi Long</h4>
-					<p>Hồ Chí Minh</p>
-				</td>
-				<td class="tbicon"><a href=""> <ion-icon
-							name="phone-portrait"></ion-icon>
-				</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-				</a></td>
-			</tr>
-			<tr>
-				<td>
-					<div class="imgBx">
-						<img
-							src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-							alt="">
-					</div>
-				</td>
-				<td>
-					<h4>Hoàng Phi Long</h4>
-					<p>Hồ Chí Minh</p>
-				</td>
-				<td class="tbicon"><a href=""> <ion-icon
-							name="phone-portrait"></ion-icon>
-				</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-				</a></td>
-			</tr>
-			<tr>
-				<td>
-					<div class="imgBx">
-						<img
-							src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-							alt="">
-					</div>
-				</td>
-				<td>
-					<h4>Hoàng Phi Long</h4>
-					<p>Hồ Chí Minh</p>
-				</td>
-				<td class="tbicon"><a href=""> <ion-icon
-							name="phone-portrait"></ion-icon>
-				</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-				</a></td>
-			</tr>
-			<tr>
-				<td>
-					<div class="imgBx">
-						<img
-							src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-							alt="">
-					</div>
-				</td>
-				<td>
-					<h4>Hoàng Phi Long</h4>
-					<p>Hồ Chí Minh</p>
-				</td>
-				<td class="tbicon"><a href=""> <ion-icon
-							name="phone-portrait"></ion-icon>
-				</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-				</a></td>
-			</tr>
-			<tr>
-				<td>
-					<div class="imgBx">
-						<img
-							src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-							alt="">
-					</div>
-				</td>
-				<td>
-					<h4>Hoàng Phi Long</h4>
-					<p>Hồ Chí Minh</p>
-				</td>
-				<td class="tbicon"><a href=""> <ion-icon
-							name="phone-portrait"></ion-icon>
-				</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-				</a></td>
-			</tr>
-			<tr>
-				<td>
-					<div class="imgBx">
-						<img
-							src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-							alt="">
-					</div>
-				</td>
-				<td>
-					<h4>Hoàng Phi Long</h4>
-					<p>Hồ Chí Minh</p>
-				</td>
-				<td class="tbicon"><a href=""> <ion-icon
-							name="phone-portrait"></ion-icon>
-				</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-				</a></td>
-			</tr>
-			<tr>
-				<td>
-					<div class="imgBx">
-						<img
-							src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-							alt="">
-					</div>
-				</td>
-				<td>
-					<h4>Hoàng Phi Long</h4>
-					<p>Hồ Chí Minh</p>
-				</td>
-				<td class="tbicon"><a href=""> <ion-icon
-							name="phone-portrait"></ion-icon>
-				</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-				</a></td>
-			</tr>
-			<tr>
-				<td>
-					<div class="imgBx">
-						<img
-							src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-							alt="">
-					</div>
-				</td>
-				<td>
-					<h4>Hoàng Phi Long</h4>
-					<p>Hồ Chí Minh</p>
-				</td>
-				<td class="tbicon"><a href=""> <ion-icon
-							name="phone-portrait"></ion-icon>
-				</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-				</a></td>
-			</tr>
-			<tr>
-				<td>
-					<div class="imgBx">
-						<img
-							src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-							alt="">
-					</div>
-				</td>
-				<td>
-					<h4>Hoàng Phi Long</h4>
-					<p>Hồ Chí Minh</p>
-				</td>
-				<td class="tbicon"><a href=""> <ion-icon
-							name="phone-portrait"></ion-icon>
-				</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-				</a></td>
-			</tr>
+			
 			<tr>
 				<td>
 					<div class="imgBx">

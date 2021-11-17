@@ -5,129 +5,36 @@
 <head>
 <meta charset="utf-8">
 <title>Sorting</title>
-
-
-<!-- JQUERY -->
-<!-- BOXICON -->
-<script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
-<!-- FONT ANWESOME -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
-<!--LINE AWSOME-->
-<link rel="stylesheet"
-	href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-	<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-	<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-	
-	<h3>Nhãn Hiệu</h3>
+	<h3>PAGINATION</h3>
 	<table border="1" style="width: 100%">
 		<tr>
 			<th>Id</th>
 			<th>Name</th>
-		</tr>
-		<c:forEach var="item" items="${listNH.content}">
-			<tr>
-				<td>${item.manh}</td>
-				<td>${item.tennh}</td>
-			</tr>
-		</c:forEach>
-	</table>
-	
-	<h3>LoaiHang</h3>
-	<table border="1" style="width: 100%">
-		<tr>
-			<th>Id</th>
-			<th>Name</th>
-		</tr>
-		<c:forEach var="item" items="${listLH.content}">
-			<tr>
-				<td>${item.maloai}</td>
-				<td>${item.tenloai}</td>
-			</tr>
-		</c:forEach>
-	</table>
-	
-	<h3>NhanVien</h3>
-	<table border="1" style="width: 100%">
-		<tr>
-			<th>Id</th>
-			<th>tên đăng nhập</th>
-			<th>mật khẩu</th>
-			<th>chức vụ</th>
-		</tr>
-		<c:forEach var="item" items="${listNV.content}">
-			<tr>
-				<td>${item.manv}</td>
-				<td>${item.tendangnhap}</td>
-				<td>${item.matkhau}</td>
-				<td>${item.chucvu}</td>
-			</tr>
-		</c:forEach>
-	</table>
-	
-	<h3>KhachHang</h3>
-	<table border="1" style="width: 100%">
-		<tr>
-			<th>Id</th>
-			<th>tên đăng nhập</th>
-			<th>tên</th>
-			<th>email</th>
-		</tr>
-		<c:forEach var="item" items="${listKH.content}">
-			<tr>
-				<td>${item.makh}</td>
-				<td>${item.tendangnhap}</td>
-				<td>${item.fullname}</td>
-				<td>${item.email}</td>
-			</tr>
-		</c:forEach>
-	</table>
-	
-	<h3>HoaDon</h3>
-	<table border="1" style="width: 100%">
-		<tr>
-			<th>Id</th>
-			<th>mã khách hàng</th>
-			<th>tên người nhận</th>
+			<th>Price</th>
 			<th>Date</th>
 		</tr>
-		<c:forEach var="item" items="${listHD.content}">
+		<c:forEach var="item" items="${page.content}">
 			<tr>
-				<td>${item.mahd}</td>
-				<td>${item.makh}</td>
-				<td>${item.tennguoinhan}</td>
-				<td>${item.ngaymua}</td>
+				<td>${item.masp}</td>
+				<td>${item.tensp}</td>
+				<td>${item.gia}</td>
+				<td>${item.hinh}</td>
 			</tr>
 		</c:forEach>
 	</table>
-	
-		<h3>HoaDonCT</h3>
-	<table border="1" style="width: 100%">
-		<tr>
-			<th>IdCT</th>
-			<th>mã HD</th>
-			<th>mã sản phẩm</th>
-			<th>giá</th>
-		</tr>
-		<c:forEach var="item" items="${listHDCT.content}">
-			<tr>
-				<td>${item.mahdct}</td>
-				<td>${item.mahd}</td>
-				<td>${item.masp}</td>
-				<td>${item.dongia}</td>
-			</tr>
-		</c:forEach>
-	</table> 
-
+	LAB5: JPAREPOSITORY #1 SOF3021 – LẬP TRÌNH JAVA 5 TRANG 13
+	<a href="/product/page?p=0">First</a>
+	<a href="/product/page?p=${page.number-1}">Previous</a>
+	<a href="/product/page?p=${page.number+1}">Next</a>
+	<a href="/product/page?p=${page.totalPages-1}">Last</a>
+	<ul>
+		<li>Số thực thể hiện tại: ${page.numberOfElements}</li>
+		<li>Trang số: ${page.number}</li>
+		<li>Kích thước trang: ${page.size}</li>
+		<li>Tổng số thực thể: ${page.totalElements}</li>
+		<li>Tổng số trang: ${page.totalPages}</li>
+	</ul>
 </body>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	
-<script src="../assets/js/admin/TestAPI.js"></script>
-<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-<script src="../assets/js/admin/app.js"></script>
-<script src="../assets/js/admin/hovered.js"></script>
 </html>

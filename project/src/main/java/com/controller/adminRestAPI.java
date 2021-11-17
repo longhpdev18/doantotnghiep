@@ -52,7 +52,7 @@ public class adminRestAPI {
 			sessionService.set("fullnameNV", nv.getFullname());
 			sessionService.set("maNV", nv.getManv());
 
-			Pageable pageable = PageRequest.of(0, 8);
+			Pageable pageable = PageRequest.of(0, 10);
 			Page<SanPham> listProductAD = sanphamDao.findAll(pageable);
 			System.out.println(listProductAD);
 			sessionService.set("listProductAD",listProductAD);
