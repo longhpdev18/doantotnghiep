@@ -35,7 +35,7 @@
 
 		<jsp:include page="./../navigation.jsp"></jsp:include>
 		<div class="main">
-			<jsp:include page="topbar.jsp"></jsp:include>
+			<jsp:include page="./../topbar.jsp"></jsp:include>
 			
 			
 			<div class="delete_product_nof">
@@ -178,7 +178,7 @@
 			</div>
 
 			<div class="manage-product">
-				<div class="title-page">Quản lý sản phẩm</div>
+				<!-- <div class="title-page">Quản lý sản phẩm</div> -->
 				<div class="manage-product-wp">
 
 					<!-- add-product -->
