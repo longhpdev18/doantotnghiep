@@ -71,84 +71,8 @@
     .manage-product-wp::-webkit-scrollbar {
         display: none;
     }
-}
-
-@media screen and (max-width: 1123px) {
-    .recent {
-        flex-direction: column;
-    }
-
-    .main {
-        overflow: scroll;
-    }
-
-    .main::-webkit-scrollbar {
-        display: none;
-    }
-
-    .recentOrders {
-        margin-right: 0;
-        height: fit-content;
-    }
-
-    .recentCustomers {
-        max-width: 100%;
-        margin-left: 0;
-        margin-top: var(--spaceM);
-        height: fit-content;
-        overflow: scroll;
-    }
-
-    .recentCustomers::-webkit-scrollbar {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .topbar-brand {
-        display: none;
-    }
-
-    .cardBox .card {
-        --col: 2;
-        margin-top: var(--spaceS);
-    }
-
-    .nav-close {
-        display: block;
-        cursor: pointer;
-    }
-
-    .topbar-left {
-        width: 15%;
-    }
-
-    .search {
-        flex: 1;
-        max-width: 35rem;
-    }
-
-    .search-input {
-        max-width: 30rem;
-    }
-
-    .action {
-        width: 15%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .recentOrders {
-        width: 100%;
-        height: fit-content;
-    }
-
-    .recentCustomers {
-        width: 100%;
-        height: fit-content;
-    }
-     .staff-item {
+    
+      .staff-item {
         height: 12rem;
         min-width: 110rem;
     }
@@ -249,4 +173,77 @@
     .customer-item .customer-address {
         justify-content: flex-start;
     }
+}
+
+@media screen and (max-width: 1123px) {
+    .recent {
+        flex-direction: column;
+    }
+
+    .main {
+        overflow: scroll;
+    }
+
+    .main::-webkit-scrollbar {
+        display: none;
+    }
+
+    .recentOrders {
+        margin-right: 0;
+        height: fit-content;
+    }
+
+    .recentCustomers {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: var(--spaceM);
+        height: fit-content;
+        overflow: scroll;
+    }
+
+    .recentCustomers::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .topbar-brand {
+        display: none;
+    }
+
+    .cardBox .card {
+        --col: 2;
+        margin-top: var(--spaceS);
+    }
+
+    .topbar-left {
+        width: 15%;
+    }
+
+    .search {
+        flex: 1;
+        max-width: 35rem;
+    }
+
+    .search-input {
+        max-width: 30rem;
+    }
+
+    .action {
+        width: 15%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .recentOrders {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .recentCustomers {
+        width: 100%;
+        height: fit-content;
+    }
+   
 }

@@ -1,7 +1,7 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 
-<div class="navigation active">
+<div class="navigation">
 	<ul class="navigation-wp">
 		<div class="nav-header">
 			<img src="./../assets/images/logo_white.png" alt="" class="header-brand">
