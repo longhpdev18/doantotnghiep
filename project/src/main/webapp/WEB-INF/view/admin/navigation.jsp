@@ -9,13 +9,24 @@
 				<i class="fas fa-times"></i>
 			</button>
 		</div>
-		<li><a href="./index" class="active"> <span class="icon">
+		<li><a href="./index"> <span class="icon">
 					<ion-icon name="home"></ion-icon>
 			</span> <span class="title">Trang chủ</span>
 		</a></li>
-		<li><a href="./product"> <span class="icon"> <ion-icon
-						name="list"></ion-icon>
+		<li><a href="./product"> <span class="icon"><i class="fas fa-box"></i>
 			</span> <span class="title">Danh sách sản phẩm</span>
+		</a></li>
+		<li><a href="./product">
+			<span class="icon"> 
+				<i class="far fa-user-circle"></i>
+			</span> 
+			<span class="title">Quản lý người dùng</span>
+		</a></li>
+		<li><a href="./product">
+			<span class="icon"> 
+				<i class="fas fa-users"></i>
+			</span> 
+			<span class="title">Quản lý nhân viên</span>
 		</a></li>
 		<!-- <li>
                     <a href="./editProduct.html">

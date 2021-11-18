@@ -40,28 +40,35 @@
 			<jsp:include page="cardBox.jsp"></jsp:include>
 			<div class="recent">
 				<div class="recentOrders">
-					<div class="cardHeader">
-						<div class="cardHeader-left">
-							<h2>Đơn hàng gần đây</h2>
-						</div>
-						<div class="cardHeader-right">
-							<a href="" class="btn-export"> <ion-icon name="download"></ion-icon>
-								<p>Tải về</p>
-							</a>
-							<div class="pagination">
-								<span>1</span>
-								<div class="pagination-icon">
-									<i class="fas fa-circle"></i>
-								</div>
-								<span>10</span>
+					<div class="manage-customer-heading">
+						<div class="customer-heading-left">Đơn hàng gần đây</div>
+						<div class="customer-heading-center">
+							<div class="searchbox">
+								<input type="text" class="search-input"
+									placeholder="Nhập tên sản phẩm, hoặc id đơn hàng">
+								<button class="search-button">
+									<i class="fas fa-search"></i>
+								</button>
 							</div>
-
-							<button class="btn-prev">
-								<i class="fas fa-angle-left"></i>
+						</div>
+						<div class="customer-heading-right">
+							<button class="btn-export">
+								<i class="fas fa-download"></i>
+								<p>Export</p>
 							</button>
-							<button class="btn-next">
-								<i class="fas fa-angle-right"></i>
-							</button>
+							<div class="pagination">
+								<div class="pagination-left">
+									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
+								</div>
+								<div class="pagination-right">
+									<button class="btn-prev">
+										<i class="fas fa-angle-left"></i>
+									</button>
+									<button class="btn-next">
+										<i class="fas fa-angle-right"></i>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 					<table>
@@ -331,25 +338,22 @@
 
 				<!--New Customers-->
 				<div class="recentCustomers">
-					<div class="cardHeader">
-						<div class="cardHeader-left">
-							<h2>Khách hàng gần đây</h2>
-						</div>
-						<div class="cardHeader-right">
+					<div class="manage-customer-heading">
+						<div class="customer-heading-left">Khách hàng</div>
+						<div class="customer-heading-right">
 							<div class="pagination">
-								<span>1</span>
-								<div class="pagination-icon">
-									<i class="fas fa-circle"></i>
+								<div class="pagination-left">
+									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
 								</div>
-								<span>10</span>
+								<div class="pagination-right">
+									<button class="btn-prev">
+										<i class="fas fa-angle-left"></i>
+									</button>
+									<button class="btn-next">
+										<i class="fas fa-angle-right"></i>
+									</button>
+								</div>
 							</div>
-
-							<button class="btn-prev">
-								<i class="fas fa-angle-left"></i>
-							</button>
-							<button class="btn-next">
-								<i class="fas fa-angle-right"></i>
-							</button>
 						</div>
 					</div>
 					<table>

@@ -792,10 +792,10 @@ button {
 .manage-product-wp .add_product {
     width: 100%;
     max-width: 50rem;
-    height: 100%;
+    height: fit-content;
     /*     overflow-y: scroll; */
     position:sticky;
-    top:7rem;
+    top:7.2rem;
     background-color: var(--whiteColor);
     margin-right: var(--spaceS);
     border-radius: var(--space5);
@@ -886,8 +886,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: -10px;
-    margin-top: var(--spaceL);
+    margin-top: var(--spaceM);
+     margin-bottom: var(--spaceS);
 }
 
 .add_product .group-button-add button {
@@ -896,7 +896,10 @@ button {
     border: none;
     outline: none;
     border-radius: var(--space5);
-    margin-left: 10px;
+}
+
+.add_product .group-button-add button:first-child {
+    margin-right: var(--spaceS);
 }
 
 .add-product {
@@ -1102,6 +1105,7 @@ button {
 .manage-product .list-product {
     flex: 1;
     width: 100%;
+    height: fit-content;
     background-color: var(--whiteColor);
     border-radius: var(--space5);
     position: relative;
@@ -1212,7 +1216,6 @@ button {
     border-collapse: collapse;
     width: 100%;
     font-size: 1.4rem;
-    margin-bottom: 6.2rem;
 }
 
 .list-product table tr:first-child {
@@ -2073,6 +2076,7 @@ button {
 .customer-heading-center {
     font-size: 1.4rem;
     flex: 1;
+    height: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2080,7 +2084,7 @@ button {
 
 .searchbox {
     width: 100%;
-    max-width: 50rem;
+    max-width: 40rem;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -2115,7 +2119,8 @@ button {
 }
 
 .customer-heading-right .btn-export {
-    width: 10rem;
+    width: 9rem;
+    height: 3.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2126,7 +2131,7 @@ button {
 }
 
 .customer-heading-right .btn-export i {
-    width: 2.3rem;
+    width: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;

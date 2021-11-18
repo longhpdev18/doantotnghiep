@@ -242,27 +242,37 @@
 					</div>
 					<!-- list product -->
 					<div class="list-product">
-						<div class="list-product-heading">
-							<div class="product-heading-left">
-								<p>Danh sách sản phẩm</p>
-							</div>
-							<div class="product-heading-right">
-								<div class="pagination">
-									<span>1</span>
-									<div class="pagination-icon">
-										<i class="fas fa-circle"></i>
-									</div>
-									<span>10</span>
-								</div>
-
-								<button class="btn-prev">
-									<i class="fas fa-angle-left"></i>
-								</button>
-								<button class="btn-next">
-									<i class="fas fa-angle-right"></i>
+						<div class="manage-customer-heading">
+						<div class="customer-heading-left">Danh sách sản phẩm</div>
+						<div class="customer-heading-center">
+							<div class="searchbox">
+								<input type="text" class="search-input"
+									placeholder="Nhập tên sản phẩm, hoặc id sản phẩm">
+								<button class="search-button">
+									<i class="fas fa-search"></i>
 								</button>
 							</div>
 						</div>
+						<div class="customer-heading-right">
+							<button class="btn-export">
+								<i class="fas fa-download"></i>
+								<p>Export</p>
+							</button>
+							<div class="pagination">
+								<div class="pagination-left">
+									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
+								</div>
+								<div class="pagination-right">
+									<button class="btn-prev">
+										<i class="fas fa-angle-left"></i>
+									</button>
+									<button class="btn-next">
+										<i class="fas fa-angle-right"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 						<table>
 							<tr>
 								<th>Mã SP</th>
