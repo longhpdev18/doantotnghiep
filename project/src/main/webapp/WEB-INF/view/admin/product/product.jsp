@@ -20,7 +20,6 @@
 	<link rel="stylesheet" href="./../assets/css/admin/unilities.css">
 	<link rel="stylesheet" href="./../assets/css/admin/responsive.css">
 
-	<script src="../assets/js/admin/product.js"></script>
 	<!-- BOXICON -->
 	<script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
 	<!-- FONT ANWESOME -->
@@ -261,7 +260,7 @@
 							</button></form>
 							<div class="pagination">
 								<div class="pagination-left">
-									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
+									<span id="countPage">${pageCount.getCount()+1}</span> <i class="fas fa-circle"></i> <span>10</span>
 								</div>
 								<div class="pagination-right">
 									<button class="btn-prev">
@@ -322,6 +321,7 @@
 </body>
 <!--Link icon-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../assets/js/admin/product.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="../assets/js/admin/app.js"></script>
 <script src="../assets/js/admin/hovered.js"></script>
