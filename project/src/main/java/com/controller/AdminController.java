@@ -73,4 +73,9 @@ public class AdminController {
 		
 		return "admin/staff/index";
 	}
+	@GetMapping("/customer")
+	public String customer() {
+		
+		return "admin/customer/index";
+	}
 }
