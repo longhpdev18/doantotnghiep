@@ -49,7 +49,7 @@ public class AdminController {
 		}
 //		List<SanPham> items = sanphamDAO.findAll();
 //		model.addAttribute("items",items);
-		return "admin/product";
+		return "admin/product/product";
 	}
 	
 	@GetMapping("/admin/add")
@@ -67,5 +67,10 @@ public class AdminController {
 		}
 		model.addAttribute("page","./showProduct.jsp");
 		return "admin/index";
+	}
+	@GetMapping("/staff")
+	public String staff() {
+		
+		return "admin/staff/index";
 	}
 }

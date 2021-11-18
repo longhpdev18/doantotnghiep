@@ -55,13 +55,13 @@
 								</div>
 								<span>10</span>
 							</div>
-							
-								<button class="btn-prev">
-									<i class="fas fa-angle-left"></i>
-								</button>
-								<button class="btn-next">
-									<i class="fas fa-angle-right"></i>
-								</button>
+
+							<button class="btn-prev">
+								<i class="fas fa-angle-left"></i>
+							</button>
+							<button class="btn-next">
+								<i class="fas fa-angle-right"></i>
+							</button>
 						</div>
 					</div>
 					<table>
@@ -83,16 +83,22 @@
 							<td>$1200</td>
 							<td>Đã thanh toán</td>
 							<td><span class="status delivered">Đã giao hàng</span></td>
-	<td>
+							<td>
 								<div class="dropdown">
 									<button class="dropbtn">
 										<i class="fas fa-ellipsis-h"></i>
 									</button>
 									<div class="dropdown-content">
-										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+										<button class="btn-showEdit">
+											<i class="far fa-edit"></i>
+											<p>Sửa</p>
+										</button>
+										<button class="btn-delete">
+											<i class="far fa-trash-alt"></i>
+											<p>Xóa</p>
+										</button>
 									</div>
-								</div>							
+								</div>
 							</td>
 						</tr>
 						<tr>
@@ -108,10 +114,16 @@
 										<i class="fas fa-ellipsis-h"></i>
 									</button>
 									<div class="dropdown-content">
-										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+										<button class="btn-showEdit">
+											<i class="far fa-edit"></i>
+											<p>Sửa</p>
+										</button>
+										<button class="btn-delete">
+											<i class="far fa-trash-alt"></i>
+											<p>Xóa</p>
+										</button>
 									</div>
-								</div>							
+								</div>
 							</td>
 						</tr>
 						<tr>
@@ -127,10 +139,16 @@
 										<i class="fas fa-ellipsis-h"></i>
 									</button>
 									<div class="dropdown-content">
-										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+										<button class="btn-showEdit">
+											<i class="far fa-edit"></i>
+											<p>Sửa</p>
+										</button>
+										<button class="btn-delete">
+											<i class="far fa-trash-alt"></i>
+											<p>Xóa</p>
+										</button>
 									</div>
-								</div>							
+								</div>
 							</td>
 						</tr>
 						<tr>
@@ -146,10 +164,16 @@
 										<i class="fas fa-ellipsis-h"></i>
 									</button>
 									<div class="dropdown-content">
-										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+										<button class="btn-showEdit">
+											<i class="far fa-edit"></i>
+											<p>Sửa</p>
+										</button>
+										<button class="btn-delete">
+											<i class="far fa-trash-alt"></i>
+											<p>Xóa</p>
+										</button>
 									</div>
-								</div>							
+								</div>
 							</td>
 						</tr>
 						<tr>
@@ -165,10 +189,16 @@
 										<i class="fas fa-ellipsis-h"></i>
 									</button>
 									<div class="dropdown-content">
-										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+										<button class="btn-showEdit">
+											<i class="far fa-edit"></i>
+											<p>Sửa</p>
+										</button>
+										<button class="btn-delete">
+											<i class="far fa-trash-alt"></i>
+											<p>Xóa</p>
+										</button>
 									</div>
-								</div>							
+								</div>
 							</td>
 						</tr>
 						<tr>
@@ -184,10 +214,16 @@
 										<i class="fas fa-ellipsis-h"></i>
 									</button>
 									<div class="dropdown-content">
-										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+										<button class="btn-showEdit">
+											<i class="far fa-edit"></i>
+											<p>Sửa</p>
+										</button>
+										<button class="btn-delete">
+											<i class="far fa-trash-alt"></i>
+											<p>Xóa</p>
+										</button>
 									</div>
-								</div>							
+								</div>
 							</td>
 						</tr>
 						<tr>
@@ -197,73 +233,97 @@
 							<td>$1200</td>
 							<td>Đã thanh toán</td>
 							<td><span class="status delivered">Đã giao hàng</span></td>
-						<td>
+							<td>
 								<div class="dropdown">
 									<button class="dropbtn">
 										<i class="fas fa-ellipsis-h"></i>
 									</button>
 									<div class="dropdown-content">
-										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+										<button class="btn-showEdit">
+											<i class="far fa-edit"></i>
+											<p>Sửa</p>
+										</button>
+										<button class="btn-delete">
+											<i class="far fa-trash-alt"></i>
+											<p>Xóa</p>
+										</button>
 									</div>
-								</div>							
+								</div>
 							</td>
 						</tr>
-												<tr>
+						<tr>
 							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
 							<td>7</td>
 							<td>Start Refrigerator</td>
 							<td>$1200</td>
 							<td>Đã thanh toán</td>
 							<td><span class="status delivered">Đã giao hàng</span></td>
-						<td>
+							<td>
 								<div class="dropdown">
 									<button class="dropbtn">
 										<i class="fas fa-ellipsis-h"></i>
 									</button>
 									<div class="dropdown-content">
-										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+										<button class="btn-showEdit">
+											<i class="far fa-edit"></i>
+											<p>Sửa</p>
+										</button>
+										<button class="btn-delete">
+											<i class="far fa-trash-alt"></i>
+											<p>Xóa</p>
+										</button>
 									</div>
-								</div>							
+								</div>
 							</td>
 						</tr>
-												<tr>
+						<tr>
 							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
 							<td>7</td>
 							<td>Start Refrigerator</td>
 							<td>$1200</td>
 							<td>Đã thanh toán</td>
 							<td><span class="status delivered">Đã giao hàng</span></td>
-						<td>
+							<td>
 								<div class="dropdown">
 									<button class="dropbtn">
 										<i class="fas fa-ellipsis-h"></i>
 									</button>
 									<div class="dropdown-content">
-										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+										<button class="btn-showEdit">
+											<i class="far fa-edit"></i>
+											<p>Sửa</p>
+										</button>
+										<button class="btn-delete">
+											<i class="far fa-trash-alt"></i>
+											<p>Xóa</p>
+										</button>
 									</div>
-								</div>							
+								</div>
 							</td>
 						</tr>
-												<tr>
+						<tr>
 							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
 							<td>7</td>
 							<td>Start Refrigerator</td>
 							<td>$1200</td>
 							<td>Đã thanh toán</td>
 							<td><span class="status delivered">Đã giao hàng</span></td>
-					<td>
+							<td>
 								<div class="dropdown">
 									<button class="dropbtn">
 										<i class="fas fa-ellipsis-h"></i>
 									</button>
 									<div class="dropdown-content">
-										<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-										<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+										<button class="btn-showEdit">
+											<i class="far fa-edit"></i>
+											<p>Sửa</p>
+										</button>
+										<button class="btn-delete">
+											<i class="far fa-trash-alt"></i>
+											<p>Xóa</p>
+										</button>
 									</div>
-								</div>							
+								</div>
 							</td>
 						</tr>
 					</table>
@@ -283,13 +343,13 @@
 								</div>
 								<span>10</span>
 							</div>
-							
-								<button class="btn-prev">
-									<i class="fas fa-angle-left"></i>
-								</button>
-								<button class="btn-next">
-									<i class="fas fa-angle-right"></i>
-								</button>
+
+							<button class="btn-prev">
+								<i class="fas fa-angle-left"></i>
+							</button>
+							<button class="btn-next">
+								<i class="fas fa-angle-right"></i>
+							</button>
 						</div>
 					</div>
 					<table>

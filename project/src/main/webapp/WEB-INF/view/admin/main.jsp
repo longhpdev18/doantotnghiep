@@ -1,9 +1,0 @@
-<%@ page pageEncoding="utf-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
-
-
-
-    <!-- RECENT  -->
- <jsp:include page="recent.jsp"></jsp:include>
-    <!-- RECENTORDER -->
-

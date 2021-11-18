@@ -33,7 +33,7 @@
 <body>
 	<div class="container">
 
-		<jsp:include page="navigation.jsp"></jsp:include>
+		<jsp:include page="./../navigation.jsp"></jsp:include>
 		<div class="main">
 			<jsp:include page="topbar.jsp"></jsp:include>
 			

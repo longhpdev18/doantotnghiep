@@ -1,0 +1,225 @@
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+}
+
+:root {
+    --primaryColor: #0B71E8;
+    --primaryColor2: rgba(11, 113, 232, .2);
+    --primaryHover: #0984e3;
+    --redColor: #F03C3D;
+    --redHover: #f14c4c;
+    --orangeColor: #FF5E02;
+    --orangeHover: #fa6b19;
+    --greenColor: #19C796;
+    --greenHover: #2ddaa9;
+    --whiteColor: #fff;
+    --whiteHover: #d8d9da;
+    --lightColor: #f1f2f6;
+    --lightHover: #d8d9da;
+    --lightColor3: #dfe4ea;
+    --yellowColor: #f9ca24;
+    --yellowHover: #d4a704;
+    --lightColor2: #F8F9FA;
+    --darkLightColor: rgba(0, 0, 0, 0.05);
+
+    --yellowColor2: rgba(255, 235, 153, .3);
+    --grayColor: #576574;
+    --darkColor: #111;
+    --darkHover: rgb(24, 24, 24);
+    --space8: .5rem;
+    --spaceS: 1rem;
+    --spaceM: 2.4rem;
+    --spaceL: 3.2rem;
+}
+
+.bg-light {
+    background-color: var(--lightColor);
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 1.2rem 2.5rem;
+    cursor: pointer;
+}
+
+.text-primary {
+    color: var(--primaryColor);
+}
+
+.text-dark {
+    color: var(--darkColor);
+}
+
+.text-red {
+    color: var(--redColor);
+}
+
+.text-green {
+    color: var(--greenColor);
+}
+
+.text-orange {
+    color: var(--orangeColor);
+}
+
+.text-white {
+    color: var(--whiteColor);
+}
+
+.text-primary-hover:hover {
+    color: var(--primaryHover);
+    transition: color .3s linear;
+}
+
+.text-red-hover:hover {
+    color: var(--redHover);
+    transition: color .3s linear;
+}
+
+.text-green-hover:hover {
+    color: var(--greenHover);
+    transition: color .3s linear;
+}
+
+.text-orange-hover:hover {
+    color: var(--orangeHover);
+    transition: color .3s linear;
+}
+
+.bg-primary {
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
+}
+
+.bg-primary-hover:hover {
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
+    transition: background-color, color .3s linear;
+}
+
+.bg-red-hover:hover {
+    background-color: var(--redHover);
+    transition: background-color, color .3s linear;
+    color: var(--whiteColor);
+}
+
+.bg-green-hover:hover {
+    background-color: var(--greenColor);
+    transition: background-color, color .3s linear;
+    color: var(--whiteColor);
+}
+
+.bg-orange-hover:hover {
+    background-color: var(--orangeColor);
+    transition: background-color, color .3s linear;
+    color: var(--whiteColor);
+}
+
+.bg-white-hover:hover {
+    background-color: var(--whiteHover);
+    transition: background-color, color .3s linear;
+    color: var(--darkColor);
+}
+
+.btn-white {
+    background-color: var(--whiteColor);
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--primaryHover);
+    transition: background-color .3s linear;
+}
+
+.btn-light {
+    background-color: var(--lightColor);
+    cursor: pointer;
+}
+
+.btn-light:hover {
+    background-color: var(--lightHover);
+    transition: background-color, color .3s linear;
+}
+
+.btn-red {
+    background-color: var(--redColor);
+    cursor: pointer;
+}
+
+.btn-red:hover {
+    background-color: var(--redHover);
+    transition: background-color, color .3s linear;
+    color: var(--whiteColor);
+}
+
+.btn-dark {
+    color: var(--whiteColor);
+    background-color: var(--darkColor);
+    cursor: pointer;
+}
+
+.btn-dark:hover {
+    background-color: var(--darkHover);
+    transition: background-color, color .3s linear;
+    color: var(--whiteColor);
+}
+
+.cta-menu {
+    z-index: 1;
+}
+
+.cta-white {
+    color: var(--whiteColor);
+}
+
+.rounded-8 {
+    border-radius: var(--space8);
+}
+
+.rounded {
+    border-radius: var(--spaceS);
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .blur-dark {
+        background-color: rgba(0, 0, 0, .3);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+
+    .blur-white {
+        background-color: rgba(0, 0, 0, .3);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+}
