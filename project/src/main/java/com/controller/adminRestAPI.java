@@ -108,6 +108,7 @@ public class adminRestAPI {
 		Message mess = new Message();
 		try {
 			if(count.getCount()>0) {
+				
 				Pageable pageable = PageRequest.of(count.getCount()-1, 10);
 				listProductAD = sanphamDao.findAll(pageable);
 				sessionService.set("listProductAD",listProductAD);

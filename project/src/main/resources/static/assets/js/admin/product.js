@@ -42,6 +42,7 @@ function checkSession() {
 }
 
 $('.btn-prev').click(function(){
+	//lấy ra số page hiện tại VD vào là 1, nhưng trên api mảng tính từ giá trị 0 còn form tính từ giá trị 1 nên phải -1
 	var count = $('#countPage').text()-1;
 	console.log(count)
 	$.ajax({
