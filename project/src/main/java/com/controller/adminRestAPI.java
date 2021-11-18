@@ -127,7 +127,7 @@ public class adminRestAPI {
 			Pageable pageable = PageRequest.of(count.getCount()+1, 10);
 			listProductAD = sanphamDao.findAll(pageable);
 			sessionService.set("listProductAD",listProductAD);
-			pageCount.setCount(count.getCount());
+			pageCount.setCount(count.getCount()+1);
 			mess.setValue("success");
 		} catch (Exception e) {
 			mess.setValue("error");

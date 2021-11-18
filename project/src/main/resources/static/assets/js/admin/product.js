@@ -66,7 +66,7 @@ $('.btn-prev').click(function(){
 	})
 })
 $('.btn-next').click(function(){
-	var count = $('#countPage').text();
+	var count = $('#countPage').text()-1;
 	console.log(count)
 	$.ajax({
 		url: '/nextPage',
