@@ -33,6 +33,8 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
 
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -153,7 +155,6 @@
 </body>
 
 <!-- MY JS -->
-<script src="./../assets/js/starter.js"></script>
 <script src="./../assets/js/modules.js"></script>
 <script src="./../assets/js/app.js"></script>
 <script src="./../assets/js/login.js"></script>
