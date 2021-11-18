@@ -20,7 +20,6 @@
 <link rel="stylesheet" href="./../assets/css/admin/responsive.css">
 
 
-<script src="../assets/js/admin/product.js"></script>
 <!-- BOXICON -->
 <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
 <!-- FONT ANWESOME -->
@@ -129,31 +128,31 @@
 						</div>
 					</div>
 					<ul class="list-staff">
+						<c:forEach var="item" items="${listNV.content}">
 						<li class="staff-item">
-							<div class="staff-id">1</div>
+							<div class="staff-id">${item.manv}</div>
 							<div class="staff-image">
 								<img
 									src="https://upanh123.com/wp-content/uploads/2020/12/hinh-nen-cute05.jpg"
 									alt="">
 							</div>
 							<div class="staff-account">
-								<div class="staff-account-username">longhpdev18</div>
-								<div class="staff-account-password">long123</div>
+								<div class="staff-account-username">${item.tendangnhap}</div>
+								<div class="staff-account-password">${item.matkhau}</div>
 							</div>
 							<div class="staff-information">
-								<div class="staff-information-fullname">Hoàng Phi Long</div>
-								<div class="staff-information-gender">Nam</div>
-								<div class="staff-information-birthday">18-05-2000</div>
+								<div class="staff-information-fullname">${item.fullname}</div>
+								<div class="staff-information-gender">${item.gioitinh}</div>
+								<div class="staff-information-birthday">${item.ngaysinh}</div>
 							</div>
 							<div class="staff-contact">
-								<div class="staff-phone">0385818520</div>
-								<div class="staff-email">longhpdev18@gmail.com</div>
-								<div class="staff-address">Khu Phố Long Điền 1, Phường
-									Long Phước, Bình Phước</div>
+								<div class="staff-phone">${item.sodienthoai}</div>
+								<div class="staff-email">${item.email}</div>
+								<div class="staff-address">${item.diachi}</div>
 							</div>
 
 							<div class="staff-position">
-								<span class="staff-seller">Nhân viên bán hàng</span>
+								<span class="staff-seller">${item.chucvu}</span>
 							</div>
 							<div class="staff-action">
 								<button class="staff-button-edit">
@@ -164,41 +163,8 @@
 								</button>
 							</div>
 						</li>
-						<li class="staff-item">
-							<div class="staff-id">1</div>
-							<div class="staff-image">
-								<img
-									src="https://toigingiuvedep.vn/wp-content/uploads/2021/06/hinh-anh-hoat-hinh-au-trung-de-thuong-cute.jpg"
-									alt="">
-							</div>
-							<div class="staff-account">
-								<div class="staff-account-username">longhpdev18</div>
-								<div class="staff-account-password">long123</div>
-							</div>
-							<div class="staff-information">
-								<div class="staff-information-fullname">Hoàng Phi Long</div>
-								<div class="staff-information-gender">Nam</div>
-								<div class="staff-information-birthday">18-05-2000</div>
-							</div>
-							<div class="staff-contact">
-								<div class="staff-phone">0385818520</div>
-								<div class="staff-email">longhpdev18@gmail.com</div>
-								<div class="staff-address">Khu Phố Long Điền 1, Phường
-									Long Phước, Bình Phước</div>
-							</div>
-
-							<div class="staff-position">
-								<span class="staff-tech">Nhân viên kỷ thuật</span>
-							</div>
-							<div class="staff-action">
-								<button class="staff-button-edit">
-									<i class="fas fa-pencil-alt"></i>
-								</button>
-								<button class="staff-button-delete">
-									<i class="far fa-trash-alt"></i>
-								</button>
-							</div>
-						</li>
+						</c:forEach>
+						
 					</ul>
 				</div>
 			</div>
@@ -207,6 +173,7 @@
 </body>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="../assets/js/admin/app.js"></script>
 <script src="../assets/js/admin/hovered.js"></script>

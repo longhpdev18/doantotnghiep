@@ -44,7 +44,8 @@ public class testAPI {
 	@GetMapping("/getData")
 	public Message getData() {
 		Message mess = new Message();
-		if(sessionService.get("listHDCT")!=null) {
+		if(sessionService.get("listHDCT")!=null||sessionService.get("listHD")!=null||sessionService.get("listKH")!=null|sessionService.get("listNV")!=null
+				|| sessionService.get("listLH")!=null||sessionService.get("listNH")!=null) {
 			mess.setValue("có session");
 		}else {
 			mess.setValue("Lỗi");

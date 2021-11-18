@@ -12,16 +12,17 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.model.Excel;
 import com.model.SanPham;
 import com.repository.SanPhamDAO;
 
-@Controller
+@RestController
 public class ExcelController {
 	@Autowired
 	SanPhamDAO sanphamDAO;
-	@RequestMapping("excel")
+	@RequestMapping("excelSP")
 	public void ExportToExcel(HttpServletResponse response) throws IOException {
 		response.setContentType("application/octet-stream");
 		String headerKey = "Content-Disposition";
@@ -35,6 +36,6 @@ public class ExcelController {
 		
 		List<SanPham> listSP = sanphamDAO.findAll();
 		Excel excelExporter = new Excel(listSP);
-		excelExporter.export(response); 
+		excelExporter.exportSP(response); 
 	}
 }

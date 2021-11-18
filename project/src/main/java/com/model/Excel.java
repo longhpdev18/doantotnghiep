@@ -26,7 +26,7 @@ public class Excel {
 
 	}
 
-	public void writeHeaderRow() {
+	public void writeHeaderRowSP() {
 		Row row = sheet.createRow(0);
 
 		CellStyle style = workbook.createCellStyle();
@@ -69,7 +69,7 @@ public class Excel {
 		cell.setCellStyle(style);
 	}
 
-	public void writeDataRow() {
+	public void writeDataRowSP() {
 		int rowCount = 1;
 		CellStyle style = workbook.createCellStyle();
 		XSSFFont font = workbook.createFont();
@@ -121,9 +121,9 @@ public class Excel {
 		}
 	}
 
-	public void export(HttpServletResponse response) throws IOException {
-		writeHeaderRow();
-		writeDataRow();
+	public void exportSP(HttpServletResponse response) throws IOException {
+		writeHeaderRowSP();
+		writeDataRowSP();
 
 		ServletOutputStream outputStream = response.getOutputStream();
 		workbook.write(outputStream);

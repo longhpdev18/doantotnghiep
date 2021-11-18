@@ -254,10 +254,11 @@
 							</div>
 						</div>
 						<div class="customer-heading-right">
+						<form action="excelSP" method="get">
 							<button class="btn-export">
 								<i class="fas fa-download"></i>
 								<p>Export</p>
-							</button>
+							</button></form>
 							<div class="pagination">
 								<div class="pagination-left">
 									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
@@ -317,8 +318,6 @@
 					</div>
 				</div>
 			</div>
-
-
 		</div>
 </body>
 <!--Link icon-->
