@@ -37,6 +37,8 @@ button {
     transition: 0.5s;
     font-size: 1.4rem;
     display: none;
+    position: absolute;
+    z-index: 40;
 }
 
 .navigation.active {
@@ -127,7 +129,7 @@ button {
 
 .topbar-left {
     width: 100%;
-    max-width: 23rem;
+    max-width: 20rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -139,12 +141,8 @@ button {
     justify-content: center;
     align-items: center;
     margin-left: var(--spaceS);
-    display: none;
 }
 
-.topbar-brand.active {
-    display: flex;
-}
 
 .topbar-brand-image {
     height: 7rem;
@@ -176,7 +174,6 @@ button {
     outline: none;
     position: absolute;
     right: 0;
-    display: none;
 }
 
 .search {
@@ -216,6 +213,11 @@ button {
     /* position: fixed; */
     position: relative;
     right: 10px;
+    width: 100%;
+    max-width: 20rem;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .action .user {
@@ -1156,11 +1158,13 @@ button {
 }
 
 .pagination {
-    width: 8rem;
+    flex: 1;
+    max-width: fit-content;
+    height: 4rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
-    margin-right: var(--space8)
+    margin-left: var(--space8);
 }
 
 .pagination span {
@@ -1702,10 +1706,9 @@ button {
 /* ====== STAFF MANAGE ======= */
 
 .manage-staff {
-    width: 100%;
     height: 100%;
     display: flex;
-    margin-bottom: var(--spaceS);
+	margin: var(--spaceS);
     overflow: hidden;
 
 }
@@ -1828,7 +1831,7 @@ button {
 
 .staff-item .staff-id {
     width: 100%;
-    max-width: 6rem;
+    max-width: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1855,7 +1858,7 @@ button {
 
 .staff-item .staff-account {
     width: 100%;
-    max-width: 20rem;
+    max-width: 13rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1880,7 +1883,7 @@ button {
 }
 
 .staff-item .staff-information-gender {
-    max-width: 10rem;
+    max-width: 5rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1889,7 +1892,7 @@ button {
 }
 
 .staff-item .staff-information-birthday {
-    max-width: 15rem;
+    max-width: 12rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1899,15 +1902,15 @@ button {
 
 .staff-item .staff-contact {
     width: 100%;
+    max-width: 60rem;
     display: flex;
     align-items: center;
-    max-width: 70rem;
     margin-right: var(--spaceS);
 }
 
 .staff-item .staff-email {
     width: 100%;
-    max-width: 25rem;
+    max-width: 22rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1916,7 +1919,7 @@ button {
 
 .staff-item .staff-phone {
     width: 100%;
-    max-width: 13rem;
+    max-width: 11rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1925,6 +1928,7 @@ button {
 
 .staff-item .staff-address {
     flex: 1;
+    max-width:25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1957,7 +1961,7 @@ button {
 
 .staff-item .staff-position {
     width: 100%;
-    max-width: 20rem;
+    max-width: 18rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2355,7 +2359,8 @@ button {
 }
 
 .staff-update {
-    width: inherit;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     position: absolute;
@@ -2372,6 +2377,7 @@ button {
 
 .staff-update-wp {
     width: 100%;
+    height: fit-content;
     max-width: 60rem;
     min-height: 40rem;
     background-color: white;
@@ -2452,10 +2458,10 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: var(--spaceM);
+    /* margin-right: var(--spaceM); */
     font-size: 1.8rem;
-    width: 100%;
-    height: 4.4rem !important;
+    /* width: 100%; */
+    max-height: 4.4rem !important;
 }
 
 
