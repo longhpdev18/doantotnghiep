@@ -464,7 +464,7 @@ button {
     min-height: 500px;
     background: var(--whiteColor);
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    border-radius: var(--space5);
+    border-radius: var(--space8);
 }
 
 .recentOrders button {
@@ -684,17 +684,219 @@ button {
     background-color: var(--lightColor);
 }
 
+.recentCustomer-slider {
+	  display: flex !important;
+	  flex: 1;
+}
 
+.slick-button {
+	width: 3rem;
+	height: 3rem;
+	position:absolute;
+	border-radius: 100%;
+	background-color: rgba(255,255,255,.6);
+	z-index: 5;
+}
+
+.slick-prev  {
+	top: 50%;
+	left: -15px;
+	transform:transtaleY(-50%);
+		box-shadow: 0px 2px 7px rgba(0,0,0,0.3);
+}
+
+.slick-next  {
+	top: 50%;
+	right: -15px;
+	transform:transtaleY(-50%);
+		box-shadow: 0px 2px 7px rgba(0,0,0,0.3);
+}
+
+
+.slick-button:hover {
+	background-color: rgba(255,255,255,1);
+} 
 
 .recentCustomers {
     width: 100%;
-    height:100%;
-    background: var(--whiteColor);
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    border-radius: var(--space5);
+	height: fit-content;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+    border-radius: var(--space8);
     display: flex;
     flex-direction: column;
+    background-color: white;
+    padding: var(--spaceS);
 }
+
+.recentCustomer-heading {
+	width: 100%;
+	height: 3.5rem;
+	font-size: 1.6rem;
+	display: flex;
+	font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.recentCustomer-heading .recentCustomer-more {
+	width: fit-content;
+	height: 3.2rem;
+	background-color: var(--lightColor);
+		display: flex;
+    justify-content: center;
+    align-items: center;
+       border-radius: var(--spaceS);
+       font-size: 1.2rem;
+       padding:var(--spaceS)
+}
+
+.recentCustomer-heading .recentCustomer-more i{
+margin-left: 4px;
+}
+
+.recentCustomer-content {
+	flex: 1;
+}
+
+.recentCustomer-item {
+	width: 100%;
+	height: calc(100% / 3) - 2px;
+	display: flex;
+    align-items: center;	
+    background-color: var(--lightColor);
+    border-radius: var(--spaceS);
+    padding: var(--space8);
+    margin-top: var(--space8);
+    cursor: pointer;
+}
+
+.recentCustomer-item:hover {
+	    background-color: var(--lightColor2);
+	    	transition: .3s linear;
+}
+
+.recentCustomer-image {
+	width: 6rem;
+	height: 6rem;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+     border-radius: var(--spaceS);
+}
+
+.recentCustomer-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+     border-radius: inherit;
+}
+
+
+.recentCustomer-detail {
+	flex: 1;
+	height: 80%;
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: var(--spaceM);
+    flex-direction: column;
+}
+
+.recentCustomer-detail-name {
+	width: 100%;
+	height: 40%;
+	font-weight: 600;
+	display: flex;
+	font-size: 1.8rem;
+    align-items: flex-start;
+
+	
+}
+
+.recentCustomer-detail-username {
+	flex: 1;
+	font-size: 1.4rem;
+	display: flex;
+	align-items: flex-start;
+	color: rgba(0,0,0,.54);
+}
+
+.recentCustomer-icon {
+	font-size: 1.2rem;
+	margin-right: 8px;
+}
+
+.recentCustomer-item:hover .recentCustomer-icon {
+	font-size: 1.4rem;
+	margin-right: 0;
+	transition: .3s linear;
+	
+}
+
+.recentCustomer-detail-id {
+	width: 100%;
+		height: 2rem;
+	font-size: 1.2rem;
+	color: rgba(0,0,0,.64);
+	display: flex;
+    align-items: center;
+	
+}	
+
+.recentCustomer-detail-id span{
+	width: 5rem;
+	height: 1.8rem;
+	font-size: 1.2rem;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	color: var(--greenColor);
+	font-weight: 600l;
+	background-color: white;
+	border: 2.2px solid var(--greenColor);
+	border-radius: var(--spaceS);
+	margin-left: 4px;
+}	
+
+.target {
+	width: 100%;
+	height: 30rem;
+	background-color: var(--whiteColor);
+	border-radius: var(--space8);
+		margin-top: var(--spaceS);
+		padding:var(--spaceS);
+}
+
+
+.target-heading {
+	width: 100%;
+	height: 3.5rem;
+	font-size: 1.6rem;
+	display: flex;
+	font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.target-heading .target-more {
+	width: fit-content;
+	height: 3.2rem;
+	background-color: var(--lightColor);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--spaceS);
+    font-size: 1.2rem;
+    padding:var(--spaceS)
+}
+
+.target-heading .target-more i{
+	margin-left: 4px;
+}
+
+
 
 
 .recentCustomers .imgBx {
