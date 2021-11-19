@@ -11,9 +11,4 @@ public class paidController {
 		
 		return "home/paid/index";
 	}
-	@GetMapping("/paidCompleted")
-	public String paidCompleted(Model model) {
-		
-		return "home/paid/index";
-	}
 }

@@ -52,22 +52,19 @@ public class PaidRestAPI {
 	}
 	@PostMapping("/addPill")
 	public Message addPill(@RequestBody HoaDon hd) {
-		Message mess = new Message();
 		hd.setMakh(Long.parseLong(sessionService.get("maKH").toString()));
 		System.out.println(hd.getNgaymua());  
+		hdDAO.save(hd);
 		for(Item item: cart.getItems()){
-
-			hdDAO.save(hd);
 			HoaDonChiTiet hdct = new HoaDonChiTiet();
 			hdct.setMahd((int)hdDAO.getLastID().getMahd());
 			hdct.setMasp(item.getSp().getMasp());
 			hdct.setSoluong(item.getQty());
 			hdct.setDongia(1);
 			hdctDAO.save(hdct);
-			mess.setValue("success");
         }
 		
-		return mess;
+		return null;
 		
 	}
 }
