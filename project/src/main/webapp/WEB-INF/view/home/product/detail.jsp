@@ -43,7 +43,6 @@
 	 <div class="product-detail">
         <div class="product-detail-wp">
             <div class="product-detail-top">
-            <c:forEach var="item" items="${items}">
                 <div class="product-detail-left">
 								<img src="./../assets/img/sanpham/${item.hinh}" alt=""
 									class="product-detail-image">
@@ -98,7 +97,6 @@
 						</div>
 					</div>
 					
-								</c:forEach>
                 </div>
             </div>
             <div class="product-specs">

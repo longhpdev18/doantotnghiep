@@ -71,7 +71,10 @@ $('.btn-buy').click(function(e){
         ),
         dataType:'json',
         success:function(result){
-            console.log(result)
+			if(result.value=='success'){
+				location.href = '/order';
+				window.load();
+			}
         },error:function(err){
             console.log(err)
         }
