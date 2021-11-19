@@ -41,10 +41,6 @@
                     </ul> -->
 					<ul class="order-item">
 						<div class="order-item-top">
-							<li class="order-product"><a href="#"
-								class="order-pd-content">
-									<div class="order-pd-image"></div>
-							</a></li>
 						</div>
 						<div class="order-item-bottom">
 							<div class="left">
@@ -69,14 +65,6 @@
 					</ul>
 					<ul class="order-item">
 						<div class="order-item-top">
-							<li class="order-product"><a href="#"
-								class="order-pd-content">
-									<div class="order-pd-image"></div>
-							</a></li>
-							<li class="order-product"><a href="#"
-								class="order-pd-content">
-									<div class="order-pd-image"></div>
-							</a></li>
 						</div>
 						<div class="order-item-bottom">
 							<div class="left">
