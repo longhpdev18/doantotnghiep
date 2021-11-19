@@ -51,7 +51,7 @@
 	<div class="card card-total-customer">
 		<div class="card-heading">
 			<div class="card-icon">
-				<i class="fas fa-boxes"></i>
+				<i class="fas fa-users"></i>
 			</div>
 			<div class="card-button">
 				<i class="fas fa-ellipsis-h"></i>
@@ -74,7 +74,7 @@
 	<div class="card card-total-revenue">
 		<div class="card-heading">
 			<div class="card-icon">
-				<i class="fas fa-boxes"></i>
+				<i class="fas fa-dollar-sign"></i>
 			</div>
 			<div class="card-button">
 				<i class="fas fa-ellipsis-h"></i>

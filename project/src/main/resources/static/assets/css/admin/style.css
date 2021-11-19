@@ -125,7 +125,6 @@ button {
 
 .main-right {
 	width: 30%;
-	height:100%;
 	margin: var(--spaceS);
 	max-width: 40rem;
 }
@@ -456,7 +455,6 @@ button {
 
 .recent {
     flex: 1;
-    height: 100%;
     display: flex;
     overflow: hidden;
 }
