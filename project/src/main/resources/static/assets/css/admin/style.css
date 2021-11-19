@@ -102,14 +102,33 @@ button {
 .main {
     flex: 1;
     width: 100%;
-  
     overflow-y:scroll;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     position: relative;
+    min-width: 128rem;
 }
 
+.main-wp {
+	display: flex;
+}
+
+.w-50 {
+	width: 50% !important;
+}
+
+.main-left {
+	flex:1;
+	margin: var(--spaceS) 0 var(--spaceS) var(--spaceS);
+}
+
+.main-right {
+	width: 30%;
+	height:100%;
+	margin: var(--spaceS);
+	max-width: 40rem;
+}
 .main::-webkit-scrollbar {
     display: none;
 }
@@ -325,62 +344,120 @@ button {
 .cardBox {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: var(--spaceS);
-    margin-right: var(--spaceS);
     margin-bottom: var(--spaceS);
 }
 
 .cardBox .card {
     --col: 4;
-    width: calc((100% / var(--col)) - var(--spaceS));
+    width: calc((100% / var(--col)) - var(--space8));
     height: 14rem;
     background: var(--whiteColor);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-left: var(--spaceS);
+    align-items: flex-start;
+    flex-direction: column;
     border-radius: var(--spaceS);
     padding: var(--spaceS);
     cursor: pointer;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.cardBox .card .numbers {
-    position: relative;
-    font-weight: 500;
-    font-size: 2.5em;
-    color: var(--primaryHover);
+.card-heading {
+	width: 100%;
+	height: 30%;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.2rem;
 }
 
-.cardBox .card .cardName {
-    color: var(--text-grey);
-    font-size: 1.2rem;
-    margin-top: 5px;
+.card-icon {
+	width: 4rem;
+	height: 4rem;
+	color: white;
+	padding: var(--spaceS);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--spaceS);
+
 }
 
-.cardBox .card .iconBx {
-    font-size: 3.5em;
-    color: var(--text-grey);
+.card-total .card-icon{
+	background-color: var(--greenColor);
+	box-shadow: 0px 3px 7px var(--greenColor);
 }
 
-.cardBox .card:hover {
-    background: var(--blue);
+.card-total-week  .card-icon{
+	background-color: var(--primaryColor);
+	box-shadow: 0px 3px 7px var(--primaryColor);
 }
 
-.cardBox .card:hover .numbers,
-.cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBx {
-    color: var(--whiteColor);
+.card-total-customer .card-icon{
+	background-color: var(--orangeColor);
+	box-shadow: 0px 3px 7px var(--orangeColor);
+}
+
+.card-total-revenue .card-icon{
+	background-color: var(--yellowColor);
+	box-shadow: 0px 3px 7px var(--yellowColor);
+}
+
+.card-percent.up {
+	color: var(--greenColor);
+}
+
+.card-percent.down {
+	color: var(--redColor);
+}
+.card-button {
+	font-size: 1.8rem;
+}
+
+.card-content {
+	flex: 1;
+	display: flex;
+    align-items: center;
+}
+
+.card-count {
+	font-size: 3.2rem;
+	font-weight: 800;
+}
+
+.card-bottom {
+	width: 100%;
+	height: 20%;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.card-text {
+	color: rgba(0,0,0,.54);
+}
+
+.card-percent {
+	font-size: 1.8rem;
+	font-weight: 600;
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-percent i{
+	font-size: 1.8rem;
+	font-weight: 600;
+	margin-right: 4px;
 }
 
 .recent {
     flex: 1;
     height: 100%;
     display: flex;
-    margin-right: var(--spaceS);
-    margin-bottom: var(--spaceS);
-    margin-left: var(--spaceS);
     overflow: hidden;
 }
 
@@ -390,7 +467,6 @@ button {
     background: var(--whiteColor);
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: var(--space5);
-    margin-right: var(--spaceS);
 }
 
 .recentOrders button {
@@ -614,7 +690,7 @@ button {
 
 .recentCustomers {
     width: 100%;
-    max-width: 50rem;
+    height:100%;
     background: var(--whiteColor);
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: var(--space5);
@@ -1755,8 +1831,8 @@ button {
 }
 
 .searchbox {
-    width: 100%;
-    max-width: 50rem;
+    width: 60%;
+    min-width: 20rem;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -2082,16 +2158,6 @@ button {
     align-items: center;
 }
 
-.searchbox {
-    width: 100%;
-    max-width: 40rem;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--lightColor);
-    border-radius: var(--space5);
-}
 
 .searchbox .search-input {
     flex: 1;
