@@ -33,12 +33,17 @@ public class AdminController {
 		
 		return "admin/login";
 	}
+	@GetMapping("/logoutAdmin")
+	public String adminOut(Model model) {
+		sessionService.remove("fullnameNV");
+		sessionService.remove("maNV");
+		return "redirect:/admin";
+	}
 	@GetMapping("/admin/index")
 	public String indexAdmin(Model model) {
 		if(sessionService.get("fullnameNV")==null) {
 			return "redirect:/admin";
 		}
-		model.addAttribute("page","./home.jsp");
 		return "admin/index";
 	}
 	
@@ -47,35 +52,21 @@ public class AdminController {
 		if(sessionService.get("fullnameNV")==null) {
 			return "redirect:/admin";
 		}
-//		List<SanPham> items = sanphamDAO.findAll();
-//		model.addAttribute("items",items);
 		return "admin/product/product";
 	}
 	
-	@GetMapping("/admin/add")
-	public String addProductAdmin(Model model) {
-		if(sessionService.get("fullnameNV")==null) {
-			return "redirect:/admin";
-		}
-		model.addAttribute("page","./addProduct.jsp");
-		return "admin/index";
-	}
-	@GetMapping("/admin/show")
-	public String showProductAdmin(Model model) {
-		if(sessionService.get("fullnameNV")==null) {
-			return "redirect:/admin";
-		}
-		model.addAttribute("page","./showProduct.jsp");
-		return "admin/index";
-	}
 	@GetMapping("admin/staff")
 	public String staff() {
-		
+		if(sessionService.get("fullnameNV")==null) {
+			return "redirect:/admin";
+		}
 		return "admin/staff/index";
 	}
 	@GetMapping("admin/customer")
 	public String customer() {
-		
+		if(sessionService.get("fullnameNV")==null) {
+			return "redirect:/admin";
+		}
 		return "admin/customer/index";
 	}
 }

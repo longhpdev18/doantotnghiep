@@ -29,7 +29,7 @@ function getData(){
 		),
 		dataType: 'json',
 		success: function(mess) {
-			if(mess.value=="có session"){
+			if(mess.value=="session"){
 				
 			}else{
 				loadData();

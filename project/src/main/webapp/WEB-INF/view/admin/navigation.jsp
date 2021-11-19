@@ -53,7 +53,7 @@
 						name="lock"></ion-icon>
 			</span> <span class="title">Quên mật khẩu</span>
 		</a></li>
-		<li><a href="#"> <span class="icon"> <ion-icon
+		<li><a href="/logoutAdmin"> <span class="icon"> <ion-icon
 						name="log-in"></ion-icon>
 			</span> <span class="title">Thoát</span>
 		</a></li>
