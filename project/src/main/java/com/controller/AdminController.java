@@ -68,12 +68,12 @@ public class AdminController {
 		model.addAttribute("page","./showProduct.jsp");
 		return "admin/index";
 	}
-	@GetMapping("/staff")
+	@GetMapping("admin/staff")
 	public String staff() {
 		
 		return "admin/staff/index";
 	}
-	@GetMapping("/customer")
+	@GetMapping("admin/customer")
 	public String customer() {
 		
 		return "admin/customer/index";

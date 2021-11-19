@@ -55,6 +55,24 @@ public class testAPI {
 	@GetMapping("/tatca")
 	public Message load(Model model) {
 		Message mess = new Message();
+		Pageable pageable = PageRequest.of(0, 8);
+		Page<NhanHieu> listNH = nhanhieuDAO.findAll(pageable);
+		sessionService.set("listNH",listNH);
+		
+		Page<LoaiHang> listLH = loaihangDAO.findAll(pageable);
+		sessionService.set("listLH",listLH);
+		
+		Page<NhanVien> listNV = nhanvienDAO.findAll(pageable);
+		sessionService.set("listNV",listNV);
+		
+		Page<KhachHang> listKH = khachhangDAO.findAll(pageable);
+		sessionService.set("listKH",listKH);
+		
+		Page<HoaDon> listHD = hoadonDAO.findAll(pageable);
+		sessionService.set("listHD",listHD);
+		
+		Page<HoaDonChiTiet> listHDCT = hoadonCTDAO.findAll(pageable);
+		sessionService.set("listHDCT",listHDCT);
 		return mess;
 	}
 }

@@ -16,13 +16,13 @@
 		<li><a href="./product"> <span class="icon"><i class="fas fa-box"></i>
 			</span> <span class="title">Danh sách sản phẩm</span>
 		</a></li>
-		<li><a href="./product">
+		<li><a href="./customer">
 			<span class="icon"> 
 				<i class="far fa-user-circle"></i>
 			</span> 
 			<span class="title">Quản lý người dùng</span>
 		</a></li>
-		<li><a href="./product">
+		<li><a href="./staff">
 			<span class="icon"> 
 				<i class="fas fa-users"></i>
 			</span> 

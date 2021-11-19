@@ -75,264 +75,46 @@
 
 						<tr>
 							<!-- <td><input type="checkbox" onclick='checkUncheck(this)' > All</td> -->
-							<td>Mã</td>
-							<td>Tên</td>
-							<td>Giá</td>
-							<td>Thanh toán</td>
+							<td>Mã HĐ</td>
+							<td>Mã KH</td>
+							<td>Ngày Mua</td>
+							<td>Tên Người Nhận</td>
+							<td>Số Điện Thoại</td>
+							<td>Địa Chỉ</td>
 							<td>Trạng thái</td>
 							<td></td>
 						</tr>
 
-						<tr>
-							<!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
-							<td>1</td>
-							<td>Start Refrigerator</td>
-							<td>$1200</td>
-							<td>Đã thanh toán</td>
-							<td><span class="status delivered">Đã giao hàng</span></td>
-							<td>
-								<div class="dropdown">
-									<button class="dropbtn">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-									<div class="dropdown-content">
-										<button class="btn-showEdit">
-											<i class="far fa-edit"></i>
-											<p>Sửa</p>
+						<c:forEach var="item" items="${listHD.content}">
+
+							<tr>
+								<!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
+								<td>${item.mahd}</td>
+								<td>${item.makh}</td>
+								<td>${item.ngaymua}</td>
+								<td>${item.tennguoinhan}</td>
+								<td>${item.sdtnguoinhan}</td>
+								<td>${item.diachinguoinhan}</td>
+								<td><span class="status delivered">${item.trangthai}</span></td>
+								<td>
+									<div class="dropdown">
+										<button class="dropbtn">
+											<i class="fas fa-ellipsis-h"></i>
 										</button>
-										<button class="btn-delete">
-											<i class="far fa-trash-alt"></i>
-											<p>Xóa</p>
-										</button>
+										<div class="dropdown-content">
+											<button class="btn-showEdit">
+												<i class="far fa-edit"></i>
+												<p>Sửa</p>
+											</button>
+											<button class="btn-delete">
+												<i class="far fa-trash-alt"></i>
+												<p>Xóa</p>
+											</button>
+										</div>
 									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
-							<td>2</td>
-							<td>Start Refrigerator</td>
-							<td>$1200</td>
-							<td>Qúa hạn</td>
-							<td><span class="status pending">Chưa giải quyết</span></td>
-							<td>
-								<div class="dropdown">
-									<button class="dropbtn">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-									<div class="dropdown-content">
-										<button class="btn-showEdit">
-											<i class="far fa-edit"></i>
-											<p>Sửa</p>
-										</button>
-										<button class="btn-delete">
-											<i class="far fa-trash-alt"></i>
-											<p>Xóa</p>
-										</button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
-							<td>3</td>
-							<td>Start Refrigerator</td>
-							<td>$1200</td>
-							<td>Đã thanh toán</td>
-							<td><span class="status delivered">Đã giao hàng</span></td>
-							<td>
-								<div class="dropdown">
-									<button class="dropbtn">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-									<div class="dropdown-content">
-										<button class="btn-showEdit">
-											<i class="far fa-edit"></i>
-											<p>Sửa</p>
-										</button>
-										<button class="btn-delete">
-											<i class="far fa-trash-alt"></i>
-											<p>Xóa</p>
-										</button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
-							<td>4</td>
-							<td>Start Refrigerator</td>
-							<td>$1200</td>
-							<td>Đã thanh toán</td>
-							<td><span class="status return">Trả hàng</span></td>
-							<td>
-								<div class="dropdown">
-									<button class="dropbtn">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-									<div class="dropdown-content">
-										<button class="btn-showEdit">
-											<i class="far fa-edit"></i>
-											<p>Sửa</p>
-										</button>
-										<button class="btn-delete">
-											<i class="far fa-trash-alt"></i>
-											<p>Xóa</p>
-										</button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
-							<td>5</td>
-							<td>Start Refrigerator</td>
-							<td>$1200</td>
-							<td>Đã thanh toán</td>
-							<td><span class="status delivered">Đã giao hàng</span></td>
-							<td>
-								<div class="dropdown">
-									<button class="dropbtn">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-									<div class="dropdown-content">
-										<button class="btn-showEdit">
-											<i class="far fa-edit"></i>
-											<p>Sửa</p>
-										</button>
-										<button class="btn-delete">
-											<i class="far fa-trash-alt"></i>
-											<p>Xóa</p>
-										</button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
-							<td>6</td>
-							<td>Start Refrigerator</td>
-							<td>$1200</td>
-							<td>Chưa thanh toán</td>
-							<td><span class="status inprogress">Vận chuyển</span></td>
-							<td>
-								<div class="dropdown">
-									<button class="dropbtn">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-									<div class="dropdown-content">
-										<button class="btn-showEdit">
-											<i class="far fa-edit"></i>
-											<p>Sửa</p>
-										</button>
-										<button class="btn-delete">
-											<i class="far fa-trash-alt"></i>
-											<p>Xóa</p>
-										</button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
-							<td>7</td>
-							<td>Start Refrigerator</td>
-							<td>$1200</td>
-							<td>Đã thanh toán</td>
-							<td><span class="status delivered">Đã giao hàng</span></td>
-							<td>
-								<div class="dropdown">
-									<button class="dropbtn">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-									<div class="dropdown-content">
-										<button class="btn-showEdit">
-											<i class="far fa-edit"></i>
-											<p>Sửa</p>
-										</button>
-										<button class="btn-delete">
-											<i class="far fa-trash-alt"></i>
-											<p>Xóa</p>
-										</button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
-							<td>7</td>
-							<td>Start Refrigerator</td>
-							<td>$1200</td>
-							<td>Đã thanh toán</td>
-							<td><span class="status delivered">Đã giao hàng</span></td>
-							<td>
-								<div class="dropdown">
-									<button class="dropbtn">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-									<div class="dropdown-content">
-										<button class="btn-showEdit">
-											<i class="far fa-edit"></i>
-											<p>Sửa</p>
-										</button>
-										<button class="btn-delete">
-											<i class="far fa-trash-alt"></i>
-											<p>Xóa</p>
-										</button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
-							<td>7</td>
-							<td>Start Refrigerator</td>
-							<td>$1200</td>
-							<td>Đã thanh toán</td>
-							<td><span class="status delivered">Đã giao hàng</span></td>
-							<td>
-								<div class="dropdown">
-									<button class="dropbtn">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-									<div class="dropdown-content">
-										<button class="btn-showEdit">
-											<i class="far fa-edit"></i>
-											<p>Sửa</p>
-										</button>
-										<button class="btn-delete">
-											<i class="far fa-trash-alt"></i>
-											<p>Xóa</p>
-										</button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<!-- <td><input type="checkbox" name="lang" class="chkboxname"></td> -->
-							<td>7</td>
-							<td>Start Refrigerator</td>
-							<td>$1200</td>
-							<td>Đã thanh toán</td>
-							<td><span class="status delivered">Đã giao hàng</span></td>
-							<td>
-								<div class="dropdown">
-									<button class="dropbtn">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-									<div class="dropdown-content">
-										<button class="btn-showEdit">
-											<i class="far fa-edit"></i>
-											<p>Sửa</p>
-										</button>
-										<button class="btn-delete">
-											<i class="far fa-trash-alt"></i>
-											<p>Xóa</p>
-										</button>
-									</div>
-								</div>
-							</td>
-						</tr>
+								</td>
+							</tr>
+						</c:forEach>
 					</table>
 				</div>
 
@@ -593,7 +375,9 @@
 <!--Link icon-->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../assets/js/admin/hoaDon.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
 <script src="../assets/js/admin/app.js"></script>
 <script src="../assets/js/admin/hovered.js"></script>
 
