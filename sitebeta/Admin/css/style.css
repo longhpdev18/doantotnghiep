@@ -1006,3 +1006,335 @@ html {
 .list-product table tr td .dropdown .dropbtn i:hover {
     color: var(--whiteColor);
 }
+ /*Hóa đơn chi tiết */ 
+
+ .content {
+	border-radius: var(--space5);
+    margin: var(--spaceS);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.title_detail_order {
+	width: 100%;
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    background-color: var(--whiteColor);
+    margin-bottom: var(--spaceS);
+}
+
+.odd-wp {
+    width: 100%;
+	min-width: 40rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--whiteColor);
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border-radius: var(--spaceS);
+}
+
+.odd-heading {
+	width: 100%;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.4rem;
+	padding: var(--spaceS);
+	border-bottom: 1px solid var(--lightColor);
+}
+
+.odd-heading .left {
+	width: 30%;
+	display: flex;
+	align-items: center;
+}
+
+.odd-heading .right {
+	width: 70%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.order-detail-id span {
+	margin-right: .5rem;
+}
+
+.order-detail-status {
+	margin-left: .5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.odd-status {
+	color: var(--greenColor);
+	position: relative;
+}
+
+.odd-status {
+	color: var(--greenColor);
+	position: relative;
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .5rem 1rem;
+	border-radius: var(--space8);
+	font-weight: 600;
+}
+
+.odd-status:after {
+	color: var(--greenColor);
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: currentColor;
+	opacity: .2;
+	border-radius: var(--space8);
+}
+
+.odd-ship-detail {
+	width: 100%;
+	height: 22rem;
+	padding: var(--spaceS);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-bottom: 1px solid var(--lightColor);
+}
+.odd-ship-content {
+	width: 100%;
+	height: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+.sd-ship-wp {
+	width: 100%;
+	height: 100%;
+	min-height: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.sd-point-wp {
+	width: calc(100% / 5);
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+.sd-process-wp {
+	width: 75%;
+	height: 1rem;
+	background-color: var(--lightColor);
+	position: absolute;
+	z-index: 1;
+}
+.sd-process-load {
+	width: 50%;
+	height: inherit;
+	background-color: var(--greenColor);
+}
+
+.sd-status-wp {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.sd-status-text {
+	width: calc(100% /5);
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding-left: var(--spaceL);
+	padding-right: var(--spaceL);
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+.status-point {
+	width: 6rem;
+	height: 6rem;
+	border-radius: 100%;
+	border: 4px solid var(--greenColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.4rem;
+	background-color: var(--whiteColor);
+	color: var(--greenColor);
+}
+.status-point.active {
+	background-color: var(--greenColor);
+	color: var(--whiteColor);
+}
+.odd-pd-qty {
+	display: flex;
+	align-items: flex-end;
+	margin-top: var(--spaceL);
+	color: var(--grayColor);
+	font-size: 1.6rem;
+}
+.odd-pd-price {
+	width: 40%;
+	max-width: 15rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: var(--spaceS);
+}
+.odd-button {
+	width: 100%;
+	height: 10rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: var(--spaceS);
+	background-color: #F8F9FA;
+}
+.odd-btn {
+	padding: 1.5rem 2.5rem;
+	font-size: 1.6rem;
+	margin-left: var(--spaceS);
+	border-radius: var(--space8);
+	background-color: #F8F9FA;
+}
+
+.odd-btn-received {
+	background-color: var(--primaryColor);
+	color: var(--whiteColor);
+}
+
+.odd-btn-received:hover {
+	background-color: var(--primaryColor2);
+	color: var(--primaryColor);
+	transition: background-color .3s linear;
+}
+.odd-btn-contact:hover,
+.odd-btn-complain:hover {
+	background-color: var(--lightColor);
+	color: var(--darkColor);
+	transition: background-color .3s linear;
+}
+.odd-address {
+	width: 100%;
+	min-height: 28rem;
+	display: flex;
+	flex-direction: column;
+}
+.odd-address-heading {
+	width: 100%;
+	height: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--spaceS);
+	border-bottom: 1px solid var(--lightColor);
+}
+.odd-heading-left {
+	min-height: 28rem;
+	height: 100%;
+	display: flex;
+	text-align: left;
+	align-items: center;
+	font-size: 1.4rem;
+}
+.odd-content {
+	/* width: 100%; */
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+    margin-top:  var(--spaceS);
+	margin: var(--spaceS);
+	padding: var(--spaceS);
+	padding-left: var(--spaceS);
+	padding-right: var(--spaceS);
+	background-color: var(--lightColor2);
+}
+.odd-product {
+	width: 100%;
+	height: 12rem;
+	display: flex;
+	align-items: center;
+	background-color: var(--lightColor);
+	margin-top: var(--spaceS);
+	border-bottom: 1px solid var(--darkLightColor);
+	border-top: 1px solid var(--darkLightColor);
+	border-right: 1px solid var(--darkLightColor);
+}
+.odd-pd-content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	font-size: 1.8rem;
+	color: var(--darkColor);
+}
+
+.odd-pd-detail {
+	display: flex;
+	align-items: flex-start;
+	margin-left: var(--spaceS);
+	flex-direction: column;
+	flex: 1;
+}
+.odd-pd-image {
+	width: 15rem;
+	height: 100%;
+	flex-shrink: 0;
+	background-color: var(--lightColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.odd-pd-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.odd-pd-name {
+	height: auto;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-word;
+}
+.odd-pd-qty {
+	display: flex;
+	align-items: flex-end;
+	margin-top: var(--spaceL);
+	color: var(--grayColor);
+	font-size: 1.6rem;
+}
+
+input ,button {
+    outline: none;
+    border: none;
+}
+a {
+    text-decoration: none;
+}
+
