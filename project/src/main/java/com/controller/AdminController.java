@@ -12,6 +12,7 @@ import com.service.CookieService;
 import com.service.ParamService;
 import com.service.SessionService;
 import com.service.ShoppingCartService;
+
 @Controller
 public class AdminController {
 	@Autowired
@@ -28,43 +29,55 @@ public class AdminController {
 	ShoppingCartService cart;
 	@Autowired
 	LoaiHangDAO lhDAO;
+
 	@GetMapping("/admin")
 	public String admin(Model model) {
-		
+
 		return "admin/login";
 	}
+
 	@GetMapping("/logoutAdmin")
 	public String adminOut(Model model) {
 		sessionService.remove("fullnameNV");
 		sessionService.remove("maNV");
 		return "redirect:/admin";
 	}
+
 	@GetMapping("/admin/index")
 	public String indexAdmin(Model model) {
-		if(sessionService.get("fullnameNV")==null) {
+		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
 		return "admin/index";
 	}
-	
+
+	@GetMapping("/admin/order-detail")
+	public String order_detailAD(Model model) {
+		if (sessionService.get("fullnameNV") == null) {
+			return "redirect:/admin";
+		}
+		return "admin/order/order-detail";
+	}
+
 	@GetMapping("/admin/product")
 	public String productAdmin(Model model) {
-		if(sessionService.get("fullnameNV")==null) {
+		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
 		return "admin/product/product";
 	}
-	
+
 	@GetMapping("admin/staff")
 	public String staff() {
-		if(sessionService.get("fullnameNV")==null) {
+		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
 		return "admin/staff/index";
 	}
+
 	@GetMapping("admin/customer")
 	public String customer() {
-		if(sessionService.get("fullnameNV")==null) {
+		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
 		return "admin/customer/index";
