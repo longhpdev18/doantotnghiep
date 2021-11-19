@@ -934,7 +934,7 @@ html {
     border-bottom: 1px solid var(--lightColor);
 }
 
-.list-product table td {}
+/* .list-product table td {} */
 
 .list-product table tr:hover {
     background-color: #f1f2f6;
