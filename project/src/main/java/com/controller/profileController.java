@@ -33,7 +33,7 @@ public class profileController {
 	public String showProfile(Model model) {
 		KhachHang khachhang = khDAO.getById(sessionService.get("maKH"));
 		model.addAttribute("items", khachhang);
-		model.addAttribute("maKH", khachhang.getMakh());
+//		model.addAttribute("makh", khachhang.getMakh());
 		model.addAttribute("tendangnhap", khachhang.getTendangnhap());
 		model.addAttribute("matkhau", khachhang.getMatkhau());
 		model.addAttribute("fullname", khachhang.getFullname());

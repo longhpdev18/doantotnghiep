@@ -22,9 +22,15 @@ public class DetailProductController {
 
 	@GetMapping("product/{masp}")
 	public String getKhachHangId(Model model, @PathVariable(value = "masp") Integer masp)
-			throws ResourceNotFoundException {
-		SanPham items = sanphamDAO.getID(masp);
-		model.addAttribute("items", items);
+	{
+		SanPham itemsSP = sanphamDAO.getID(masp);
+		model.addAttribute("masp", itemsSP.getMasp());
+		model.addAttribute("giasp", itemsSP.getGia());
+		model.addAttribute("tensp", itemsSP.getTensp());
+		model.addAttribute("tinhtrang", itemsSP.getTinhtrang());
+		model.addAttribute("hinhsp", itemsSP.getHinh());
+		model.addAttribute("mota", itemsSP.getMota());
+		model.addAttribute("manh", itemsSP.getManh());
 		return"home/product/detail";
 	}
 }

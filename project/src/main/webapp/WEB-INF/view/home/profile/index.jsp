@@ -51,7 +51,7 @@
                             <i class="fas fa-check"></i>
                         </div>
                     </div>
-                    <p class="profile-id" value="${makh}"></p>
+                    <p class="profile-id" value="${maKH}">#${maKH}</p>
                 </div>
                 <div class="profile-right">
                     <h1 class="profile-title" >Thông tin cá nhân</h1>
