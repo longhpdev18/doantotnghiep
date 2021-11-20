@@ -21,7 +21,7 @@ import com.service.SessionService;
 import com.service.ShoppingCartService;
 
 @RestController
-public class LoginRestAPI {
+public class IndexRestAPI {
 	@Autowired
 	SanPhamDAO sanphamDAO;
 	@Autowired
@@ -59,6 +59,23 @@ public class LoginRestAPI {
 		sessionService.remove("fullname");
 		sessionService.remove("maKH");
 		Message mess = new Message();
+		mess.setValue("success");
+		return mess;
+	}
+	@PostMapping("/updateProfile")
+	public Message updateProfile(@RequestBody KhachHang kh) {
+		Message mess = new Message();
+		System.out.println(kh.isGioitinh());
+		KhachHang khTest=khDAO.getByUsername(kh.getTendangnhap());
+		khTest.setMatkhau(kh.getMatkhau());
+		khTest.setDiachi(kh.getDiachi());
+		khTest.setEmail(kh.getEmail());
+		khTest.setFullname(kh.getFullname());
+		khTest.setGioitinh(kh.isGioitinh());
+		khTest.setNgaysinh(kh.getNgaysinh());
+		khTest.setTendangnhap(kh.getTendangnhap());
+		khTest.setSodienthoai(kh.getSodienthoai());
+		khDAO.save(khTest);
 		mess.setValue("success");
 		return mess;
 	}

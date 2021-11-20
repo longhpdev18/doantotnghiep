@@ -69,7 +69,7 @@ public class IndexController {
 		return "home/index";
 	}
 	@GetMapping("/search")
-	public String laptop(Model model) {
+	public String search(Model model) {
 		System.out.println(paramService.getInt("maloai", 0));
 		List<LH_SP> items = new ArrayList<LH_SP>();
 		LH_SP item = new LH_SP();
@@ -80,6 +80,13 @@ public class IndexController {
     	items.add(item);
 		model.addAttribute("items", items);
 		return "home/index";
+	}@GetMapping("/timkiem")
+	public String timkiem(Model model,@RequestParam(value = "tensp", required = false) String tensp) {
+		System.out.println(tensp);
+		
+		List<SanPham> items =  sanphamDAO.getByName(tensp);
+		model.addAttribute("items", items);
+		return "home/timkiem";
 	}
 	@PostMapping("/register")
 	public String register(Model model , KhachHang item) {

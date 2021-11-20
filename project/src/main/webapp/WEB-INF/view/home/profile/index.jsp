@@ -51,24 +51,24 @@
                             <i class="fas fa-check"></i>
                         </div>
                     </div>
-                    <p class="profile-id">#000${makh}</p>
+                    <p class="profile-id" value="${makh}"></p>
                 </div>
                 <div class="profile-right">
-                    <h1 class="profile-title">Thông tin cá nhân</h1>
+                    <h1 class="profile-title" >Thông tin cá nhân</h1>
                     <form action="">
                         <div class="form-group-2">
                             <div class="form-group">
                                 <label for="username">
                                     Tên đăng nhập:
                                 </label>
-                                <input type="text" name="username" id="username" class="txtUsername" value="${tendangnhap}"
+                                <input type="text" name="username" id="usernameProfile" class="txtUsername" value="${tendangnhap}"
                                     readonly>
                             </div>
                             <div class="form-group">
                                 <label for="password">
                                     Mật khẩu:
                                 </label>
-                                <input type="password" name="password" id="password" class="txtPassword"
+                                <input type="password" name="password" id="passwordProfile" class="txtPassword"
                                     value="${matkhau}" placeholder="Mật khẩu tài khoản của bạn">
                             </div>
                         </div>
@@ -77,14 +77,14 @@
                                 <label for="fullname">
                                     Họ và tên:
                                 </label>
-                                <input type="text" name="fullname" id="fullname" class="txtFullname"
+                                <input type="text" name="fullname" id="fullnameProfile" class="txtFullname"
                                     value="${fullname}">
                             </div>
                             <div class="form-group">
                                 <label for="phone">
                                     Số điện thoại:
                                 </label>
-                                <input type="number" name="phone" id="phone" class="txtPhone" value="${sodienthoai}">
+                                <input type="number" name="phone" id="phoneProfile" class="txtPhone" value="${sodienthoai}">
                             </div>
                         </div>
                         <div class="form-group-2">
@@ -92,7 +92,7 @@
                                 <label for="birthday">
                                     Ngày sinh:
                                 </label>
-                                <input type="date" name="birthday" id="birthday" class="txtBirthday" value="${ngaysinh}">
+                                <input type="date" name="birthday" id="birthdayProfile" class="txtBirthday" value="${ngaysinh}">
                             </div>
                             <div class="form-group">
                                 <label for="genders">
@@ -100,18 +100,25 @@
                                 </label>
                                 <div class="genders">
                                     <div class="gender-select">
-                                        <span class="gender-value" id="gender-value">Nam</span>
+                                    <c:if test="${gioitinh==false}">
+                                        <span class="gender-value" id="gender-valueProfile">
+                                        Nam
+                                        
+                                        </span>
+                                        </c:if>
+                                        <c:if test="${gioitinh==true}">
+                                        <span class="gender-value" id="gender-valueProfile">
+                                        Nữ
+                                        
+                                        </span>
+                                        </c:if>
                                         <div class="gender-button">
                                             <i class="fas fa-chevron-down"></i>
                                         </div>
                                     </div>
                                     <div class="gender-list">
-                                    <c:if test="${gioitinh=true}">
                                         <div class="gender-option">Nam</div>
-                                        </c:if>
-                                        <c:if test="${gioitinh=false}">
                                         <div class="gender-option">Nữ</div>
-                                        </c:if>
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +128,7 @@
                                 <label for="address">
                                     Địa chỉ:
                                 </label>
-                                <input type="text" name="address" id="address" class="txtAddress"
+                                <input type="text" name="address" id="addressProfile" class="txtAddress"
                                     value="${diachi}">
                             </div>
                         </div>
@@ -130,14 +137,14 @@
                                 <label for="email">
                                     Email:
                                 </label>
-                                <input type="mail" name="email" id="email" class="txtEmail"
+                                <input type="mail" name="email" id="emailProfile" class="txtEmail"
                                     value="${email}">
                             </div>
                         </div>
                         <!-- PROFILE-BUTTON Khi đã click sửa -->
                         <div class="profile-button">
-                            <button class="btn btn-primary btn-save mr-10 rounded-8">Chỉnh sửa</button>
-                            <button class="btn btn-light rounded-8">Hủy</button>
+                            <button class="btn btn-primary btn-save mr-10 rounded-8 ">Chỉnh sửa</button>
+                            <button class="btn btn-light rounded-8 btn-cancle">Hủy</button>
                         </div>
 
                         <!-- PROFILE-BUTTON Khi chưa click sửa -->
@@ -158,7 +165,7 @@
 <script src="./../assets/js/modules.js"></script>
 <script src="./../assets/js/app.js"></script>
 <script src="./../assets/js/login.js"></script>
-
+<script src="./../assets/js/profile.js"></script>
  <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <!-- JQUERY -->

@@ -18,6 +18,6 @@ public interface KhachHangDAO  extends JpaRepository<KhachHang, Long> {
 	@Query("select kh from khachhang kh where kh.makh=:maKH")
 	KhachHang getById(@Param("maKH") long maKH);
 	@Query("select kh from khachhang kh where kh.tendangnhap=:tenDangNhap")
-	List<KhachHang> getByUsername(@Param("tenDangNhap") String tenDangNhap);
+	KhachHang getByUsername(@Param("tenDangNhap") String tenDangNhap);
 	
 }

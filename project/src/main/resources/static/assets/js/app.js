@@ -124,7 +124,18 @@ $(document).ready(function () {
 });
 
 
-
+$('.mb-submit').click(function(){
+    if($('.mb-inputtext').val()!=''){
+        location.href = '/timkiem?tensp='+$('.mb-inputtext').val();
+    }
+    
+})
+$('.header__searchbox--button').click(function(){
+    if($('.header__searchbox--input').val()!=''){
+        location.href = '/timkiem?tensp='+$('.header__searchbox--input').val();
+    }
+    
+})
 
 
 
