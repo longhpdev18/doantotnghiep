@@ -14,14 +14,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.model.Excel;
+import com.model.Excel.*;
+import com.model.HoaDon;
 import com.model.SanPham;
+import com.repository.HoaDonDAO;
 import com.repository.SanPhamDAO;
 
 @RestController
+@RequestMapping("admin")
 public class ExcelController {
 	@Autowired
 	SanPhamDAO sanphamDAO;
+	@Autowired
+	HoaDonDAO hoadonDAO;
+	
 	@RequestMapping("excelSP")
 	public void ExportToExcel(HttpServletResponse response) throws IOException {
 		response.setContentType("application/octet-stream");
@@ -35,7 +41,24 @@ public class ExcelController {
 		response.setHeader(headerKey, headerValues);
 		
 		List<SanPham> listSP = sanphamDAO.findAll();
-		Excel excelExporter = new Excel(listSP);
+		ExcelSP excelExporter = new ExcelSP(listSP);
 		excelExporter.exportSP(response); 
+	}
+	
+	@RequestMapping("/excelHD")
+	public void ExportToExcelHD(HttpServletResponse response) throws IOException {
+		response.setContentType("application/octet-stream");
+		String headerKey = "Content-Disposition";
+		
+		DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+		String currentDateTime = dateFormatter.format(new Date());
+		String fileName = "HoaDon_" + currentDateTime + ".xlsx";
+		String headerValues = "attachement; filename=" + fileName;
+		
+		response.setHeader(headerKey, headerValues);
+		
+		List<HoaDon> listHD = hoadonDAO.findAll();
+		ExcelHD excelExporter = new ExcelHD(listHD);
+		excelExporter.exportHD(response); 
 	}
 }
