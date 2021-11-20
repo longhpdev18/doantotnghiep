@@ -1,4 +1,4 @@
-package com.model;
+package com.model.Excel;
 
 import java.io.IOException;
 import java.util.List;
@@ -13,19 +13,20 @@ import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Excel {
+import com.model.HoaDon;
+import com.model.SanPham;
+
+public class ExcelSP {
 	private XSSFWorkbook workbook;
 	private XSSFSheet sheet;
-
 	private List<SanPham> listSP;
 
-	public Excel(List<SanPham> listSP) {
+	public ExcelSP(List<SanPham> listSP) {
 		this.listSP = listSP;
 		workbook = new XSSFWorkbook();
 		sheet = workbook.createSheet("San Pham");
-
 	}
-
+	
 	public void writeHeaderRowSP() {
 		Row row = sheet.createRow(0);
 
@@ -130,7 +131,8 @@ public class Excel {
 		workbook.close();
 		outputStream.close();
 	}
-
+	
+	
 	public List<SanPham> getListSP() {
 		return listSP;
 	}
