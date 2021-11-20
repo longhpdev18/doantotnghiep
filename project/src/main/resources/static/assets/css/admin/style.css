@@ -748,7 +748,8 @@ button {
     align-items: center;
        border-radius: var(--spaceS);
        font-size: 1.2rem;
-       padding:var(--spaceS)
+       padding:var(--spaceS);
+       color: rgba(0,0,0,0.54);
 }
 
 .recentCustomer-heading .recentCustomer-more i{
@@ -764,7 +765,6 @@ margin-left: 4px;
 	height: calc(100% / 3) - 2px;
 	display: flex;
     align-items: center;	
-    background-color: var(--lightColor);
     border-radius: var(--spaceS);
     padding: var(--space8);
     margin-top: var(--space8);
@@ -777,8 +777,8 @@ margin-left: 4px;
 }
 
 .recentCustomer-image {
-	width: 6rem;
-	height: 6rem;
+	width: 5rem;
+	height:5rem;
 		display: flex;
     justify-content: center;
     align-items: center;
@@ -808,7 +808,7 @@ object-fit: cover;
 	height: 40%;
 	font-weight: 600;
 	display: flex;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
     align-items: flex-start;
 
 	
@@ -816,7 +816,7 @@ object-fit: cover;
 
 .recentCustomer-detail-username {
 	flex: 1;
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 	display: flex;
 	align-items: flex-start;
 	color: rgba(0,0,0,.54);
@@ -828,7 +828,7 @@ object-fit: cover;
 }
 
 .recentCustomer-item:hover .recentCustomer-icon {
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 	margin-right: 0;
 	transition: .3s linear;
 	
@@ -837,7 +837,7 @@ object-fit: cover;
 .recentCustomer-detail-id {
 	width: 100%;
 		height: 2rem;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	color: rgba(0,0,0,.64);
 	display: flex;
     align-items: center;
@@ -889,13 +889,117 @@ object-fit: cover;
     align-items: center;
     border-radius: var(--spaceS);
     font-size: 1.2rem;
-    padding:var(--spaceS)
+    
+    padding:var(--spaceS);
+    color: rgba(0,0,0,0.54);
 }
 
 .target-heading .target-more i{
 	margin-left: 4px;
 }
 
+.target-list {
+	flex:1;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.target-item {
+	width: 100%;
+	height: calc(100% / 3);
+	margin-top: var(--spaceM);
+	display: flex;
+    align-items: center;
+}
+
+.target-icon {
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--spaceS);
+    color: white;
+    font-size: 2.4rem;
+
+}
+
+.target-icon.order {
+	color: white;
+	background-color: var(--greenColor);
+	box-shadow: 0px 2px 7px var(--greenColor);
+}
+
+.target-icon.customer {
+	color: white;
+	background-color: var(--orangeColor);
+	box-shadow: 0px 2px 7px var(--orangeColor);
+}
+
+.target-icon.revenue {
+	color: white;
+	background-color: var(--yellowColor);
+	box-shadow: 0px 2px 7px var(--yellowColor);
+}
+
+.target-content {
+flex:1;
+	margin-left: var(--spaceM);
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.target-content-top {
+	height: 4rem;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    color: rgba(0,0,0,0.67);
+}
+
+.target-content-percent {
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: rgba(0,0,0,1);
+}
+
+.target-content-bottom {
+	flex:1;
+	width: 100%;
+	display: flex;
+    align-items: center;
+}
+
+.target-processbar {
+	width: 100%;
+	height: 1rem;
+	border-radius: var(--spaceS);
+	background-color: var(--lightColor);
+}
+
+.target-processbar-load.order {
+	width: 38%;
+	height: 100%;
+	background-color: var(--greenColor);
+	border-radius: inherit;
+}
+
+.target-processbar-load.customer {
+	width:55%;
+	height: 100%;
+	background-color: var(--orangeColor);
+	border-radius: inherit;
+}
+
+.target-processbar-load.revenue {
+	width:82%;
+	height: 100%;
+	background-color: var(--yellowColor);
+	border-radius: inherit;
+}
 
 
 

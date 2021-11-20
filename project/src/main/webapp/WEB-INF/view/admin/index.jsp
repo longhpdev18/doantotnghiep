@@ -301,6 +301,76 @@
 								Xem thêm<i class="fas fa-angle-right"></i>
 							</a>
 						</div>
+					
+						<div class="target-list">
+							<div class="target-item">
+								<div class="target-icon order">
+									<i class="fas fa-boxes"></i>
+								</div>
+								<div class="target-content">
+									<div class="target-content-top">
+										<div class="target-content-title">
+											Đơn hàng (đạt 1000 đơn hàng)
+										</div>
+										<div class="target-content-percent">
+											38%
+										</div>
+									</div>
+									<div class="target-content-bottom">
+										<div class="target-processbar">
+											<div class="target-processbar-load order">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="target-item">
+								<div class="target-icon customer">
+									<i class="fas fa-users"></i>
+								</div>
+								<div class="target-content">
+									<div class="target-content-top">
+										<div class="target-content-title">
+											Khách hàng (đạt 100 khách hàng)
+										</div>
+										<div class="target-content-percent">
+											55%
+										</div>
+									</div>
+									<div class="target-content-bottom">
+										<div class="target-processbar">
+											<div class="target-processbar-load customer">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="target-item">
+								<div class="target-icon revenue">
+									<i class="fas fa-dollar-sign"></i>
+								</div>
+								<div class="target-content">
+									<div class="target-content-top">
+										<div class="target-content-title">
+											Doanh thu (đạt 100.000 $)
+										</div>
+										<div class="target-content-percent">
+											82%
+										</div>
+									</div>
+									<div class="target-content-bottom">
+										<div class="target-processbar">
+											<div class="target-processbar-load revenue">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
 					</div>
 				</div>
 			</div>
