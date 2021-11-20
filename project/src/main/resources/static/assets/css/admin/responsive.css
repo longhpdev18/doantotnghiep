@@ -1,3 +1,22 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1365px) {
+	.order-update-heading {
+		height: 5rem;
+	}
+	
+	.order-update-orderid {
+		flex-direction: column;
+	}
+	
+	.order-update-orderid span {
+		margin-left: 0;
+	}
+	
+	.order-update-date {
+		flex-direction: column;
+	}
+	
+	.order-update-date span {
+		margin-left: 0;
+	}
 	
 }

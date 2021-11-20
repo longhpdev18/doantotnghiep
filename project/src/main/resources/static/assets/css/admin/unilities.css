@@ -28,3 +28,27 @@
     --spaceM: 2.4rem;
     --spaceL: 3.2rem;
 }
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .blur-dark {
+        background-color: rgba(0, 0, 0, .4);
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+    }
+
+    .blur-white-sm {
+        background-color: rgba(255, 255, 255, .4);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+    .blur-white-md {
+        background-color: rgba(255, 255, 255, .6);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+     .blur-white-lg {
+        background-color: rgba(255, 255, 255, .8);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+    }
+}

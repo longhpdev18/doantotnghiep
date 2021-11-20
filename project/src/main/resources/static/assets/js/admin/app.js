@@ -36,8 +36,24 @@ $('.update-button-cancel').click(function () {
 })
 
 
+$('.btn-showEdit').click(function() {
+    $('.order-update').addClass('active');
+})
 
+$('.order-update-cancel').click(function() {
+    $('.order-update').removeClass('active');
+})
 
+$('.btn-showAction').click(function() {
+    $('.action-content').addClass('active');
+})
+
+$('.add-item').click(function() {
+    $('.action-content').removeClass('active');
+})
+$('.export-file').click(function() {
+    $('.action-content').removeClass('active');
+})
 
 
 

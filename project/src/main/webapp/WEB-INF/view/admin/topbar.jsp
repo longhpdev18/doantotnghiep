@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 
 
-<div class="topbar">
+<div class="topbar blur-white-lg">
     <div class="topbar-left">
         <div class="btn-menu">
             <i class="fas fa-bars"></i>

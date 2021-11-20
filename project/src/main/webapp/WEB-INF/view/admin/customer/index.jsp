@@ -29,8 +29,6 @@
 		<jsp:include page="./../navigation.jsp"></jsp:include>
 		<div class="main">
 			<jsp:include page="./../topbar.jsp"></jsp:include>
-			<div class="page-heading" style="margin-top: 5px;">Quản lý
-				khách hàng</div>
 			<div class="manage-customer">
 				<div class="manage-customer-wp">
 					<div class="manage-customer-heading">
@@ -45,10 +43,15 @@
 							</div>
 						</div>
 						<div class="customer-heading-right">
-							<button class="btn-export">
-								<i class="fas fa-download"></i>
-								<p>Export</p>
-							</button>
+							<div class="btn-showAction">
+								<p>Hành động</p><i class="fas fa-angle-down"></i>
+								<div class="action-content blur-white-md">
+									<button class="add-item"><i class="fas fa-user-plus"></i>  Thêm khách hàng</button>
+									<form action="excelSP" method="get">
+										<button class="export-file"><i class="fas fa-file-export"></i>Xuất file</button>		
+									</form>
+								</div>
+							</div>
 							<div class="pagination">
 								<div class="pagination-left">
 									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>

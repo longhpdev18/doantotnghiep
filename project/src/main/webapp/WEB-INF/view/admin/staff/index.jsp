@@ -108,10 +108,15 @@
 							</div>
 						</div>
 						<div class="staff-heading-right">
-							<button class="btn-export">
-								<i class="fas fa-download"></i>
-								<p>Export</p>
-							</button>
+							<div class="btn-showAction">
+							<p>Hành động</p><i class="fas fa-angle-down"></i>
+							<div class="action-content blur-white-md">
+							<button class="add-item"><i class="fas fa-user-plus"></i>  Thêm nhân viên</button>
+								<form action="excelSP" method="get">
+									<button class="export-file"><i class="fas fa-file-export"></i>Xuất file</button>		
+								</form>
+							</div>
+						</div>
 							<div class="pagination">
 								<div class="pagination-left">
 									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>

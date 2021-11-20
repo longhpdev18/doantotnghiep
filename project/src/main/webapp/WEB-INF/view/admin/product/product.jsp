@@ -253,11 +253,16 @@
 							</div>
 						</div>
 						<div class="customer-heading-right">
-						<form action="excelSP" method="get">
-							<button class="btn-export">
-								<i class="fas fa-download"></i>
-								<p>Export</p>
-							</button></form>
+						<div class="btn-showAction">
+							<p>Hành động</p><i class="fas fa-angle-down"></i>
+							<div class="action-content blur-white-md">
+								<form action="excelSP" method="get">
+									<button class="export-file"><i class="fas fa-file-export"></i>Xuất file</button>		
+								</form>
+							</div>
+						</div>
+					
+					
 							<div class="pagination">
 								<div class="pagination-left">
 									<span id="countPage">${pageCount.getCount()+1}</span> <i class="fas fa-circle"></i> <span>10</span>

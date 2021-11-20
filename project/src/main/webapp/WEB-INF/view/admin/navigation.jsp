@@ -1,10 +1,10 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 
-<div class="navigation">
+<div class="navigation blur-white-md">
 	<ul class="navigation-wp">
 		<div class="nav-header">
-			<img src="./../assets/images/logo_white.png" alt="" class="header-brand">
+			<img src="./../assets/images/logo.png" alt="" class="header-brand">
 			<button class="nav-close">
 				<i class="fas fa-times"></i>
 			</button>

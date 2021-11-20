@@ -39,6 +39,7 @@ button {
     display: none;
     position: absolute;
     z-index: 40;
+    box-shadow: 3px 0px 7px rgba(0,0,0,0.2);
 }
 
 .navigation.active {
@@ -71,6 +72,7 @@ button {
     min-height: 5rem;
     width: 100%;
     list-style: none;
+
 }
 
 .navigation-wp li a {
@@ -80,8 +82,9 @@ button {
     align-items: center;
     border-radius: var(--spaceS);
     text-decoration: none;
-    color: var(--whiteColor);
+    color: var(--primaryColor);
     font-weight: 600;
+        background-color: rgba(255,255,255,0.1);
 }
 
 .navigation-wp li a .icon {
@@ -120,12 +123,17 @@ button {
 
 .main-left {
 	flex:1;
-	margin: var(--spaceS) 0 var(--spaceS) var(--spaceS);
+	margin-top: 16px;
+	margin-right: 16px;
+	margin-left: 16px;
+	margin-bottom: 16px;
 }
 
 .main-right {
 	width: 30%;
-	margin: var(--spaceS);
+	margin-right: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
 	max-width: 40rem;
 }
 .main::-webkit-scrollbar {
@@ -139,7 +147,6 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: var(--spaceS);
-    background-color: var(--whiteColor);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     z-index: 29;
     position: sticky;
@@ -345,12 +352,12 @@ button {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: var(--spaceS);
+    margin-bottom: var(--spaceM);
 }
 
 .cardBox .card {
     --col: 4;
-    width: calc((100% / var(--col)) - var(--space8));
+    width: calc((100% / var(--col)) - 16px);
     height: 14rem;
     background: var(--whiteColor);
     display: flex;
@@ -457,7 +464,174 @@ button {
     flex: 1;
     display: flex;
     overflow: hidden;
+    position: relative;
 }
+
+.order-update {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.67);
+	z-index: 31;
+	top: 0;
+	left: 0;
+	border-radius: var(--space8);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	display: none;
+}
+
+.order-update.active {
+	display: flex;
+}
+
+.order-update-wp {
+	width: 60%;
+	min-height: 15rem;
+	background-color: white; 
+	border-radius: var(--space8);
+}
+
+.order-update-heading {
+	width:100%;
+	height: 4rem;
+	border-bottom: 1px solid var(--lightColor);
+	display: flex;
+    align-items: center;
+	font-size: 1.4rem;
+	padding: var(--space8);
+}
+
+.order-update-orderid {
+	width: fit-content;
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.order-update-orderid span {
+	margin-left: var(--space8);
+	font-weight: 600;
+	color: white;
+	background-color: var(--primaryColor);
+	padding: .3rem 1.5rem;
+	border-radius: 16px;
+}
+
+.order-update-title {
+	flex: 1;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+  	font-weight: 600;
+  	font-size: 1.6rem
+}
+
+.order-update-date {
+	width: fit-content;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.order-update-date span {
+		margin-left: var(--space8);
+	font-weight: 600;
+	color: rgba(0,0,0,.89);
+	background-color: var(--lightColor);
+	padding: .3rem 1.5rem;
+	border-radius: 16px;
+}
+
+.order-update-content {
+	width: 100%;
+	flex: 1;
+	display: flex;
+    align-items: center;
+      justify-content: space-between;
+    padding: var(--spaceS);
+}
+
+.order-form-group {
+	width: calc((100% / 4) - var(--spaceS));
+	height:7rem;
+	display: flex;
+    align-items: center;
+  
+    flex-direction: column;
+}
+
+.order-form-group label{
+	width: 100%;
+	height: 2rem;
+	font-size: 1.4rem;
+	margin-bottom: var(--space8);
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.order-form-group input{
+	flex:1;
+	width: 100%;
+	height: 100%;
+	background-color: var(--lightColor);
+	padding: var(--spaceS);
+	border-radius: var(--space8);
+}
+
+.order-form-group input:nth-child(2){
+	
+}
+
+.order-form-group select {
+	width: 100%;
+	height: 100%;
+	background-color: var(--lightColor);
+	padding: var(--spaceS);
+	border-radius: var(--space8);
+	border:none; 
+	outline:none;
+}
+
+.order-update-button {
+	width: 100%;
+	height: 6rem;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    padding: var(--spaceS);
+}
+
+.order-update-button .order-update-update {
+	width: 13rem;
+	height: 100%;
+		display: flex;
+	justify-content: center;
+    align-items: center;
+    border-radius: var(--space5);
+    margin-right: var(--spaceS);
+    background-color: var(--orangeColor);
+}
+
+.order-update-button .order-update-update:hover {
+    background-color: #e67e22;
+}
+
+.order-update-button .order-update-cancel {
+	width: 13rem;
+	height: 100%;
+	display: flex;
+	    border-radius: var(--space5);
+	justify-content: center;
+    align-items: center;
+}
+
+
+
+
 
 .recentOrders {
     flex: 1;
@@ -614,11 +788,24 @@ button {
 }
 
 .status.delivered {
-    background: var(--greenHover);
-    color: var(--whiteColor);
+    color: var(--greenColor);
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
+    position:relative;
+    border-radius: var(--space5);
+}
+
+.status.delivered::after {
+	position:absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	background-color:currentColor;
+	opacity: .2;
+	border-radius: inherit;
 }
 
 .status.return {
@@ -864,8 +1051,8 @@ object-fit: cover;
 	height: 30rem;
 	background-color: var(--whiteColor);
 	border-radius: var(--space8);
-		margin-top: var(--spaceS);
-		padding:var(--spaceS);
+	margin-top: 16px;
+	padding:var(--spaceS);
 }
 
 
@@ -2420,10 +2607,10 @@ flex:1;
 /* ======= CUSTOMER ======= */
 
 .manage-customer {
-    width: 100%;
     height: 100%;
     display: flex;
-    margin-bottom: var(--spaceS);
+    margin: var(--spaceS);
+
 }
 
 .manage-customer-wp {
@@ -3229,3 +3416,67 @@ input ,button {
 a {
     text-decoration: none;
 }
+
+
+
+
+.btn-showAction {
+	padding: .5rem 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--primaryColor) !important;
+	border-radius:var(--space5);
+	color: white;
+	font-size: 1.2rem;
+	position:relative;
+}
+
+.action-content {
+	width: 18rem;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 100%;
+	right: 0;
+	box-shadow: 0px 2px 7px rgba(0,0,0,.1);
+	padding: var(--spaceS);
+	border-radius: var(--space5);
+	z-index:35;
+	display: none;
+}
+
+.action-content.active {
+	display: flex;
+}
+
+.action-content button {
+	height: 4rem;
+	width:100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: var(--space8);
+	border-radius:var(--space5);
+	background-color: transparent;
+}
+
+.action-content button:hover {
+	background-color: rgba(0,0,0,.07);
+}
+
+.action-content button i {
+	width: 2rem;
+	height:2rem;
+	margin-right: var(--space5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-showAction i{
+	margin-left: var(--space5);
+}
+
+
+

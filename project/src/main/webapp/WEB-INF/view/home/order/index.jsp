@@ -40,10 +40,31 @@
                         <a href="../../" class="">Tiếp tục mua hàng</a>
                     </ul> -->
 					<ul class="order-item">
+						<div class="order-item-heading">
+							<div class="order-item-id">
+								ID đơn hàng: <span>23123121</span>
+							</div>
+							<div class="order-item-date">
+								08-11-2021
+							</div>
+						</div>
 						<div class="order-item-top">
 							<li class="order-product"><a href="#"
 								class="order-pd-content">
-									<div class="order-pd-image"></div>
+									<div class="order-pd-image">
+										<img src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"/>
+									</div>
+									<div class="order-pd-detail">
+										<div class="order-pd-detail-name">
+											Laptop Lenovo Ideapad 5 Pro 14ITL6 i5 1135G7/8GB/512GB/2GB MX450/Win10 (82L30094VN) 
+										</div>
+										<div class="order-pd-detail-qty">
+											x10
+										</div>
+									</div>
+									<div class="order-pd-price">
+										23.490.000 đ
+									</div>
 							</a></li>
 						</div>
 						<div class="order-item-bottom">
@@ -68,14 +89,31 @@
 						</div>
 					</ul>
 					<ul class="order-item">
+						<div class="order-item-heading">
+							<div class="order-item-id">
+								ID đơn hàng: <span>23123121</span>
+							</div>
+							<div class="order-item-date">
+								08-11-2021
+							</div>
+						</div>
 						<div class="order-item-top">
 							<li class="order-product"><a href="#"
 								class="order-pd-content">
-									<div class="order-pd-image"></div>
-							</a></li>
-							<li class="order-product"><a href="#"
-								class="order-pd-content">
-									<div class="order-pd-image"></div>
+									<div class="order-pd-image">
+										<img src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"/>
+									</div>
+									<div class="order-pd-detail">
+										<div class="order-pd-detail-name">
+											Laptop Lenovo Ideapad 5 Pro 14ITL6 i5 1135G7/8GB/512GB/2GB MX450/Win10 (82L30094VN) 
+										</div>
+										<div class="order-pd-detail-qty">
+											x10
+										</div>
+									</div>
+									<div class="order-pd-price">
+										23.490.000 đ
+									</div>
 							</a></li>
 						</div>
 						<div class="order-item-bottom">
@@ -99,7 +137,7 @@
 							</div>
 						</div>
 					</ul>
-
+				
 				</div>
 			</div>
 		</div>
