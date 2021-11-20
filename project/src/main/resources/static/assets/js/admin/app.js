@@ -34,3 +34,21 @@ $('.staff-button-edit').click(function () {
 $('.update-button-cancel').click(function () {
     $('.staff-update').removeClass('active');
 })
+
+
+
+
+
+
+
+$(document).ready(function () {
+    $('.recentCustomer-slider').slick({
+        infinite: false,
+        slidesToShow: 1,
+        arrows: true,
+        draggable: false,
+        prevArrow: "<button type='button' class='slick-prev slick-button pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+        nextArrow: "<button type='button' class='slick-next  slick-button pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+
+	});
+});

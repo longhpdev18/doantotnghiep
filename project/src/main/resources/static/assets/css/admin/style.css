@@ -102,14 +102,32 @@ button {
 .main {
     flex: 1;
     width: 100%;
-  
     overflow-y:scroll;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     position: relative;
+    min-width: 128rem;
 }
 
+.main-wp {
+	display: flex;
+}
+
+.w-50 {
+	width: 50% !important;
+}
+
+.main-left {
+	flex:1;
+	margin: var(--spaceS) 0 var(--spaceS) var(--spaceS);
+}
+
+.main-right {
+	width: 30%;
+	margin: var(--spaceS);
+	max-width: 40rem;
+}
 .main::-webkit-scrollbar {
     display: none;
 }
@@ -325,62 +343,119 @@ button {
 .cardBox {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: var(--spaceS);
-    margin-right: var(--spaceS);
     margin-bottom: var(--spaceS);
 }
 
 .cardBox .card {
     --col: 4;
-    width: calc((100% / var(--col)) - var(--spaceS));
+    width: calc((100% / var(--col)) - var(--space8));
     height: 14rem;
     background: var(--whiteColor);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-left: var(--spaceS);
+    align-items: flex-start;
+    flex-direction: column;
     border-radius: var(--spaceS);
     padding: var(--spaceS);
     cursor: pointer;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.cardBox .card .numbers {
-    position: relative;
-    font-weight: 500;
-    font-size: 2.5em;
-    color: var(--primaryHover);
+.card-heading {
+	width: 100%;
+	height: 30%;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.2rem;
 }
 
-.cardBox .card .cardName {
-    color: var(--text-grey);
-    font-size: 1.2rem;
-    margin-top: 5px;
+.card-icon {
+	width: 4rem;
+	height: 4rem;
+	color: white;
+	padding: var(--spaceS);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--spaceS);
+
 }
 
-.cardBox .card .iconBx {
-    font-size: 3.5em;
-    color: var(--text-grey);
+.card-total .card-icon{
+	background-color: var(--greenColor);
+	box-shadow: 0px 3px 7px var(--greenColor);
 }
 
-.cardBox .card:hover {
-    background: var(--blue);
+.card-total-week  .card-icon{
+	background-color: var(--primaryColor);
+	box-shadow: 0px 3px 7px var(--primaryColor);
 }
 
-.cardBox .card:hover .numbers,
-.cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBx {
-    color: var(--whiteColor);
+.card-total-customer .card-icon{
+	background-color: var(--orangeColor);
+	box-shadow: 0px 3px 7px var(--orangeColor);
+}
+
+.card-total-revenue .card-icon{
+	background-color: var(--yellowColor);
+	box-shadow: 0px 3px 7px var(--yellowColor);
+}
+
+.card-percent.up {
+	color: var(--greenColor);
+}
+
+.card-percent.down {
+	color: var(--redColor);
+}
+.card-button {
+	font-size: 1.8rem;
+}
+
+.card-content {
+	flex: 1;
+	display: flex;
+    align-items: center;
+}
+
+.card-count {
+	font-size: 3.2rem;
+	font-weight: 800;
+}
+
+.card-bottom {
+	width: 100%;
+	height: 20%;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.card-text {
+	color: rgba(0,0,0,.54);
+}
+
+.card-percent {
+	font-size: 1.8rem;
+	font-weight: 600;
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-percent i{
+	font-size: 1.8rem;
+	font-weight: 600;
+	margin-right: 4px;
 }
 
 .recent {
     flex: 1;
-    height: 100%;
     display: flex;
-    margin-right: var(--spaceS);
-    margin-bottom: var(--spaceS);
-    margin-left: var(--spaceS);
     overflow: hidden;
 }
 
@@ -389,8 +464,7 @@ button {
     min-height: 500px;
     background: var(--whiteColor);
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    border-radius: var(--space5);
-    margin-right: var(--spaceS);
+    border-radius: var(--space8);
 }
 
 .recentOrders button {
@@ -610,17 +684,219 @@ button {
     background-color: var(--lightColor);
 }
 
+.recentCustomer-slider {
+	  display: flex !important;
+	  flex: 1;
+}
 
+.slick-button {
+	width: 3rem;
+	height: 3rem;
+	position:absolute;
+	border-radius: 100%;
+	background-color: rgba(255,255,255,.6);
+	z-index: 5;
+}
+
+.slick-prev  {
+	top: 50%;
+	left: -15px;
+	transform:transtaleY(-50%);
+		box-shadow: 0px 2px 7px rgba(0,0,0,0.3);
+}
+
+.slick-next  {
+	top: 50%;
+	right: -15px;
+	transform:transtaleY(-50%);
+		box-shadow: 0px 2px 7px rgba(0,0,0,0.3);
+}
+
+
+.slick-button:hover {
+	background-color: rgba(255,255,255,1);
+} 
 
 .recentCustomers {
     width: 100%;
-    max-width: 50rem;
-    background: var(--whiteColor);
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    border-radius: var(--space5);
+	height: fit-content;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+    border-radius: var(--space8);
     display: flex;
     flex-direction: column;
+    background-color: white;
+    padding: var(--spaceS);
 }
+
+.recentCustomer-heading {
+	width: 100%;
+	height: 3.5rem;
+	font-size: 1.6rem;
+	display: flex;
+	font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.recentCustomer-heading .recentCustomer-more {
+	width: fit-content;
+	height: 3.2rem;
+	background-color: var(--lightColor);
+		display: flex;
+    justify-content: center;
+    align-items: center;
+       border-radius: var(--spaceS);
+       font-size: 1.2rem;
+       padding:var(--spaceS)
+}
+
+.recentCustomer-heading .recentCustomer-more i{
+margin-left: 4px;
+}
+
+.recentCustomer-content {
+	flex: 1;
+}
+
+.recentCustomer-item {
+	width: 100%;
+	height: calc(100% / 3) - 2px;
+	display: flex;
+    align-items: center;	
+    background-color: var(--lightColor);
+    border-radius: var(--spaceS);
+    padding: var(--space8);
+    margin-top: var(--space8);
+    cursor: pointer;
+}
+
+.recentCustomer-item:hover {
+	    background-color: var(--lightColor2);
+	    	transition: .3s linear;
+}
+
+.recentCustomer-image {
+	width: 6rem;
+	height: 6rem;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+     border-radius: var(--spaceS);
+}
+
+.recentCustomer-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+     border-radius: inherit;
+}
+
+
+.recentCustomer-detail {
+	flex: 1;
+	height: 80%;
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: var(--spaceM);
+    flex-direction: column;
+}
+
+.recentCustomer-detail-name {
+	width: 100%;
+	height: 40%;
+	font-weight: 600;
+	display: flex;
+	font-size: 1.8rem;
+    align-items: flex-start;
+
+	
+}
+
+.recentCustomer-detail-username {
+	flex: 1;
+	font-size: 1.4rem;
+	display: flex;
+	align-items: flex-start;
+	color: rgba(0,0,0,.54);
+}
+
+.recentCustomer-icon {
+	font-size: 1.2rem;
+	margin-right: 8px;
+}
+
+.recentCustomer-item:hover .recentCustomer-icon {
+	font-size: 1.4rem;
+	margin-right: 0;
+	transition: .3s linear;
+	
+}
+
+.recentCustomer-detail-id {
+	width: 100%;
+		height: 2rem;
+	font-size: 1.2rem;
+	color: rgba(0,0,0,.64);
+	display: flex;
+    align-items: center;
+	
+}	
+
+.recentCustomer-detail-id span{
+	width: 5rem;
+	height: 1.8rem;
+	font-size: 1.2rem;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	color: var(--greenColor);
+	font-weight: 600l;
+	background-color: white;
+	border: 2.2px solid var(--greenColor);
+	border-radius: var(--spaceS);
+	margin-left: 4px;
+}	
+
+.target {
+	width: 100%;
+	height: 30rem;
+	background-color: var(--whiteColor);
+	border-radius: var(--space8);
+		margin-top: var(--spaceS);
+		padding:var(--spaceS);
+}
+
+
+.target-heading {
+	width: 100%;
+	height: 3.5rem;
+	font-size: 1.6rem;
+	display: flex;
+	font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.target-heading .target-more {
+	width: fit-content;
+	height: 3.2rem;
+	background-color: var(--lightColor);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--spaceS);
+    font-size: 1.2rem;
+    padding:var(--spaceS)
+}
+
+.target-heading .target-more i{
+	margin-left: 4px;
+}
+
+
 
 
 .recentCustomers .imgBx {
@@ -1755,8 +2031,8 @@ button {
 }
 
 .searchbox {
-    width: 100%;
-    max-width: 50rem;
+    width: 60%;
+    min-width: 20rem;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -2082,16 +2358,6 @@ button {
     align-items: center;
 }
 
-.searchbox {
-    width: 100%;
-    max-width: 40rem;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--lightColor);
-    border-radius: var(--space5);
-}
 
 .searchbox .search-input {
     flex: 1;
