@@ -48,7 +48,7 @@ function getData(){
         
     })
 }
-$('.btn-buy').click(function(e){
+ $('.btn-buy').click(function(e){
     e.preventDefault();
     console.log($('#saveFullname'))
     var fullname= $('#saveFullname').text();
@@ -71,6 +71,10 @@ $('.btn-buy').click(function(e){
         ),
         dataType:'json',
         success:function(result){
+			if(result.value=='success'){
+				location.href = '/order';
+				window.load();
+			}
             console.log(result)
         },error:function(err){
             console.log(err)
