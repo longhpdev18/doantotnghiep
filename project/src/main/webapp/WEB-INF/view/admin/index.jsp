@@ -123,6 +123,7 @@
 									</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 			<!-- CARD BOX -->
@@ -158,6 +159,8 @@
 									</button>
 >>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)
 >>>>>>> parent of 0598e21 (update)
+=======
+>>>>>>> parent of 60fbc5f (update)
 =======
 >>>>>>> parent of 60fbc5f (update)
 								</div>

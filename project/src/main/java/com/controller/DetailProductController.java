@@ -33,6 +33,7 @@ public class DetailProductController {
 		model.addAttribute("manh", itemsSP.getManh());
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 			throws ResourceNotFoundException {
@@ -41,6 +42,8 @@ public class DetailProductController {
 		System.out.println(item.getDeal());
 >>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)
 >>>>>>> parent of 0598e21 (update)
+=======
+>>>>>>> parent of 60fbc5f (update)
 =======
 >>>>>>> parent of 60fbc5f (update)
 		return"home/product/detail";

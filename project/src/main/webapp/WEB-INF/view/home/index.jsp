@@ -76,10 +76,13 @@
 												<h6 class="product-name" >${sp.tensp}</h6>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 												<h6 class="product-priceOld">23,490,000 đ</h6>
 												<h4 class="product-priceNew">${sp.gia}đ</h4>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 60fbc5f (update)
 =======
 >>>>>>> parent of 60fbc5f (update)
 												<h6 class="product-priceOld">${sp.gia} đ</h6>
