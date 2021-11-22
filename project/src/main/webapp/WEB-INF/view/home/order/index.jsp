@@ -49,6 +49,7 @@
 							</div>
 						</div>
 						<div class="order-item-top">
+<<<<<<< HEAD
 							<li class="order-product"><a href="#"
 								class="order-pd-content">
 									<div class="order-pd-image">
@@ -66,6 +67,8 @@
 										23.490.000 đ
 									</div>
 							</a></li>
+=======
+>>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)
 						</div>
 						<div class="order-item-bottom">
 							<div class="left">
@@ -98,6 +101,7 @@
 							</div>
 						</div>
 						<div class="order-item-top">
+<<<<<<< HEAD
 							<li class="order-product"><a href="#"
 								class="order-pd-content">
 									<div class="order-pd-image">
@@ -115,6 +119,8 @@
 										23.490.000 đ
 									</div>
 							</a></li>
+=======
+>>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)
 						</div>
 						<div class="order-item-bottom">
 							<div class="left">

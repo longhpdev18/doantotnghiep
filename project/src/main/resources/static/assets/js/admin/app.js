@@ -33,6 +33,7 @@ $('.staff-button-edit').click(function () {
 
 $('.update-button-cancel').click(function () {
     $('.staff-update').removeClass('active');
+<<<<<<< HEAD
 })
 
 
@@ -68,3 +69,6 @@ $(document).ready(function () {
 
 	});
 });
+=======
+})
+>>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)

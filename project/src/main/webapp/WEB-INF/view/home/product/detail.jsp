@@ -96,6 +96,10 @@
 									<button class="btn btn-addToCart btn-light rounded-8" value="${masp}">Thêm vào giỏ</button>
 						</div>
 					</div>
+<<<<<<< HEAD
+=======
+					
+>>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)
                 </div>
             </div>
             <div class="product-specs">

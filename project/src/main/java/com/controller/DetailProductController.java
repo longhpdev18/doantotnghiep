@@ -22,6 +22,7 @@ public class DetailProductController {
 
 	@GetMapping("product/{masp}")
 	public String getKhachHangId(Model model, @PathVariable(value = "masp") Integer masp)
+<<<<<<< HEAD
 	{
 		SanPham itemsSP = sanphamDAO.getID(masp);
 		model.addAttribute("masp", itemsSP.getMasp());
@@ -31,6 +32,15 @@ public class DetailProductController {
 		model.addAttribute("hinhsp", itemsSP.getHinh());
 		model.addAttribute("mota", itemsSP.getMota());
 		model.addAttribute("manh", itemsSP.getManh());
+<<<<<<< HEAD
+=======
+=======
+			throws ResourceNotFoundException {
+		SanPham item = sanphamDAO.getID(masp);
+		model.addAttribute("item", item);
+		System.out.println(item.getDeal());
+>>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)
+>>>>>>> parent of 0598e21 (update)
 		return"home/product/detail";
 	}
 }
