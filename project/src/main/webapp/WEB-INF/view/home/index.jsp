@@ -74,11 +74,7 @@
 										<div class="product__bottom">
 											<div class="product__content">
 												<h6 class="product-name" >${sp.tensp}</h6>
-<<<<<<< HEAD
 												<h6 class="product-priceOld">${sp.gia} đ</h6>
-=======
-												<h6 class="product-priceOld">${sp.gia}đ</h6>
->>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)
 												<h4 class="product-priceNew">${sp.gia*sp.deal/100}đ</h4>
 											</div>
 	

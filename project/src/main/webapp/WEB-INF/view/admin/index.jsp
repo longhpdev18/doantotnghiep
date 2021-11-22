@@ -36,7 +36,6 @@
 		<jsp:include page="navigation.jsp"></jsp:include>
 		<div class="main">
 			<jsp:include page="topbar.jsp"></jsp:include>
-<<<<<<< HEAD
 			<div class="main-wp">
 				<div class="main-left">
 
@@ -155,7 +154,6 @@
 									<button class="btn-next">
 										<i class="fas fa-angle-right"></i>
 									</button>
->>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)
 								</div>
 							</div>
 						</div>
