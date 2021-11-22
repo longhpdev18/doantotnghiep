@@ -81,7 +81,7 @@
 								</div>
 								<div class="paid-rowdetail-right">
 									<div class="sl-wp">${item.qty}</div>
-									<div class="paid-price">${item.qty * item.getSp().gia} đ</div>
+									<div class="paid-price">${item.qty * item.getSp().gia*item.getSp().deal/100} đ</div>
 								</div>
 							</div>
 						</div>
