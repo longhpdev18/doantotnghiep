@@ -68,7 +68,7 @@
 														<i class="fas fa-caret-right"></i>
 													</button>
 												</div>
-												<div class="cart-price">${item.qty * item.getSp().gia*item.getSp().deal/100}</div>
+												<div class="cart-price">${item.qty * item.getSp().gia}</div>
 											</div>
 										</div>
 										<div class="cart-row-manage">
