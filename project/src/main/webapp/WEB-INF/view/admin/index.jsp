@@ -37,7 +37,6 @@
 		<jsp:include page="navigation.jsp"></jsp:include>
 		<div class="main">
 			<jsp:include page="topbar.jsp"></jsp:include>
-<<<<<<< HEAD
 			<div class="main-wp">
 				<div class="main-left">
 
@@ -123,6 +122,7 @@
 										</div>
 									</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 			<!-- CARD BOX -->
@@ -158,6 +158,8 @@
 									</button>
 >>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)
 >>>>>>> parent of 0598e21 (update)
+=======
+>>>>>>> parent of 60fbc5f (update)
 								</div>
 							</div>
 							<table>
