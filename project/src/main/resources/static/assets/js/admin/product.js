@@ -1,7 +1,5 @@
 $(window).on('load', checkSession())
 function loadData() {
-var test = $listProductAD
-console.log(test)
 	$.ajax({
 		url: '/product',
 		type: 'GET',

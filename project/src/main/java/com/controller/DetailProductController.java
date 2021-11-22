@@ -31,9 +31,6 @@ public class DetailProductController {
 		model.addAttribute("hinhsp", itemsSP.getHinh());
 		model.addAttribute("mota", itemsSP.getMota());
 		model.addAttribute("manh", itemsSP.getManh());
-		SanPham item = sanphamDAO.getID(masp);
-		model.addAttribute("item", item);
-		System.out.println(item.getDeal());
 		return"home/product/detail";
 	}
 }

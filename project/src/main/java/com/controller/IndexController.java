@@ -114,6 +114,11 @@ public class IndexController {
 		
 		return "paid/index";
 	}
+	@RequestMapping("{masp}")
+	public String add(Model model,@PathVariable("masp") Integer masp) {
+		cart.add(masp);
+		return "redirect:"; 
+	}
 	
 //	@RequestMapping("/product/page")
 //	public String paginate(Model model) {

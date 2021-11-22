@@ -16,6 +16,7 @@
    
     <link rel="stylesheet" href="./../assets/css/admin/2.css"> -->
 
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <link rel="stylesheet" href="./../assets/css/admin/style.css">
 <link rel="stylesheet" href="./../assets/css/admin/unilities.css">
 <link rel="stylesheet" href="./../assets/css/admin/responsive.css">
@@ -104,9 +105,7 @@
 										<p>Hành động</p><i class="fas fa-angle-down"></i>
 										<div class="action-content blur-white-md">
 											<button class="add-item"><i class="fas fa-user-plus"></i> Thêm nhân viên</button>
-											<form action="excelHD" method="get">
 											<button class="export-file"><i class="fas fa-file-export"></i>Xuất file</button>
-											</form>
 										</div>
 									</div>
 									<div class="pagination">
@@ -122,107 +121,233 @@
 											</button>
 										</div>
 									</div>
-=======
-			<!-- CARD BOX -->
-			<jsp:include page="cardBox.jsp"></jsp:include>
-			<div class="recent">
-				<div class="recentOrders">
-					<div class="manage-customer-heading">
-						<div class="customer-heading-left">Đơn hàng gần đây</div>
-						<div class="customer-heading-center">
-							<div class="searchbox">
-								<input type="text" class="search-input"
-									placeholder="Nhập tên sản phẩm, hoặc id đơn hàng">
-								<button class="search-button">
-									<i class="fas fa-search"></i>
-								</button>
-							</div>
-						</div>
-						<div class="customer-heading-right">
-							<button class="btn-export">
-								<i class="fas fa-download"></i>
-								<p>Export</p>
-							</button>
-							<div class="pagination">
-								<div class="pagination-left">
-									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
-								</div>
-								<div class="pagination-right">
-									<button class="btn-prev">
-										<i class="fas fa-angle-left"></i>
-									</button>
-									<button class="btn-next">
-										<i class="fas fa-angle-right"></i>
-									</button>
 								</div>
 							</div>
+							<table>
+
+								<tr>
+									<!-- <td><input type="checkbox" onclick='checkUncheck(this)' > All</td> -->
+									<td>Mã HĐ</td>
+									<td>Mã KH</td>
+									<td>Ngày Mua</td>
+									<td>Tên Người Nhận</td>
+									<td>Số Điện Thoại</td>
+									<td>Địa Chỉ</td>
+									<td>Trạng thái</td>
+									<td></td>
+								</tr>
+
+								<c:forEach var="item" items="${listHD.content}">
+
+									<tr>
+										<!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
+										<td>${item.mahd}</td>
+										<td>${item.makh}</td>
+										<td>${item.ngaymua}</td>
+										<td>${item.tennguoinhan}</td>
+										<td>${item.sdtnguoinhan}</td>
+										<td>${item.diachinguoinhan}</td>
+										<td><span class="status delivered">${item.trangthai}</span></td>
+										<td>
+											<div class="dropdown">
+												<button class="dropbtn">
+													<i class="fas fa-ellipsis-h"></i>
+												</button>
+												<div class="dropdown-content">
+													<button class="btn-showEdit">
+														<i class="far fa-edit"></i>
+														<p>Sửa</p>
+													</button>
+													<button class="btn-delete">
+														<i class="far fa-trash-alt"></i>
+														<p>Xóa</p>
+													</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</c:forEach>
+							</table>
 						</div>
 					</div>
-					<table>
-
-						<tr>
-							<!-- <td><input type="checkbox" onclick='checkUncheck(this)' > All</td> -->
-							<td>Mã HĐ</td>
-							<td>Mã KH</td>
-							<td>Ngày Mua</td>
-							<td>Tên Người Nhận</td>
-							<td>Số Điện Thoại</td>
-							<td>Địa Chỉ</td>
-							<td>Trạng thái</td>
-							<td></td>
-						</tr>
-
-						<c:forEach var="item" items="${listHD.content}">
-
-							<tr>
-								<!-- <td><input type="checkbox" name="lang" class="chkboxname" ></td> -->
-								<td>${item.mahd}</td>
-								<td>${item.makh}</td>
-								<td>${item.ngaymua}</td>
-								<td>${item.tennguoinhan}</td>
-								<td>${item.sdtnguoinhan}</td>
-								<td>${item.diachinguoinhan}</td>
-								<td><span class="status delivered">${item.trangthai}</span></td>
-								<td>
-									<div class="dropdown">
-										<button class="dropbtn">
-											<i class="fas fa-ellipsis-h"></i>
-										</button>
-										<div class="dropdown-content">
-											<button class="btn-showEdit">
-												<i class="far fa-edit"></i>
-												<p>Sửa</p>
-											</button>
-											<button class="btn-delete">
-												<i class="far fa-trash-alt"></i>
-												<p>Xóa</p>
-											</button>
+				</div>
+				<div class="main-right">
+					<div class="recentCustomers">
+						<div class="recentCustomer-heading">
+							<div class="recentCustomer-title">
+								Khách hàng gần đây
+							</div>
+							<a href="./customer" class="recentCustomer-more">	
+								Xem thêm<i class="fas fa-angle-right"></i>
+							</a>
+						</div>
+						<div class="recentCustomer-slider">
+							<ul class="recentCustomer-content">
+								<li class="recentCustomer-item">
+									<div class="recentCustomer-image">
+										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+									</div>
+									<div class="recentCustomer-detail">
+										<div class="recentCustomer-detail-name">
+										Long Hoàng Nè
+										</div>
+										<div class="recentCustomer-detail-username">
+										@longhpps09046
+										</div>
+										<div class="recentCustomer-detail-id">
+										Mã khách hàng <span>8</span>
 										</div>
 									</div>
-								</td>
-							</tr>
-						</c:forEach>
-					</table>
-				</div>
-
-				<!--New Customers-->
-				<div class="recentCustomers">
-					<div class="manage-customer-heading">
-						<div class="customer-heading-left">Khách hàng</div>
-						<div class="customer-heading-right">
-							<div class="pagination">
-								<div class="pagination-left">
-									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
-								</div>
-								<div class="pagination-right">
-									<button class="btn-prev">
-										<i class="fas fa-angle-left"></i>
-									</button>
-									<button class="btn-next">
+									<div class="recentCustomer-icon">
 										<i class="fas fa-angle-right"></i>
-									</button>
-								</div>
+									</div>
+								</li>
+								<li class="recentCustomer-item">
+									<div class="recentCustomer-image">
+										<img src="https://i.vietgiaitri.com/2018/11/26/cung-ngam-hinh-anh-nhung-nguoi-dep-co-khuon-mat-mang-ti-le-can-d-103d74.jpg" />
+									</div>
+									<div class="recentCustomer-detail">
+										<div class="recentCustomer-detail-name">
+										Hoàng Phi Long
+										</div>
+										<div class="recentCustomer-detail-username">
+										@longhpdev18
+										</div>
+										<div class="recentCustomer-detail-id">
+										Mã khách hàng <span>7</span>
+										</div>
+									</div>
+									<div class="recentCustomer-icon">
+										<i class="fas fa-angle-right"></i>
+									</div>
+								</li>	
+								<li class="recentCustomer-item">
+									<div class="recentCustomer-image">
+										<img src="https://bizweb.dktcdn.net/100/175/849/files/chup-anh-doanh-nhan-trong-studio-chuyen-nghiep-nhat-ha-noi-gia-re-bao-nhieu-tien-media-07.jpg?v=1575710139260" />
+									</div>
+									<div class="recentCustomer-detail">
+										<div class="recentCustomer-detail-name">
+										Hoàng Phi Long
+										</div>
+										<div class="recentCustomer-detail-username">
+										@longhpdev18
+										</div>
+										<div class="recentCustomer-detail-id">
+										Mã khách hàng <span>6</span>
+										</div>
+									</div>
+									<div class="recentCustomer-icon">
+										<i class="fas fa-angle-right"></i>
+									</div>
+								</li>	
+								<li class="recentCustomer-item">
+									<div class="recentCustomer-image">
+										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+									</div>
+									<div class="recentCustomer-detail">
+										<div class="recentCustomer-detail-name">
+										Hoàng Phi Long
+										</div>
+										<div class="recentCustomer-detail-username">
+										@longhpdev18
+										</div>
+										<div class="recentCustomer-detail-id">
+										Mã khách hàng <span>5</span>
+										</div>
+									</div>
+									<div class="recentCustomer-icon">
+										<i class="fas fa-angle-right"></i>
+									</div>
+								</li>	
+							</ul>
+							<ul class="recentCustomer-content">
+								<li class="recentCustomer-item">
+									<div class="recentCustomer-image">
+										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+									</div>
+									<div class="recentCustomer-detail">
+										<div class="recentCustomer-detail-name">
+										Long Hoàng Nè
+										</div>
+										<div class="recentCustomer-detail-username">
+										@longhpps09046
+										</div>
+										<div class="recentCustomer-detail-id">
+										Mã khách hàng <span>4</span>
+										</div>
+									</div>
+									<div class="recentCustomer-icon">
+										<i class="fas fa-angle-right"></i>
+									</div>
+								</li>
+								<li class="recentCustomer-item">
+									<div class="recentCustomer-image">
+										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+									</div>
+									<div class="recentCustomer-detail">
+										<div class="recentCustomer-detail-name">
+										Hoàng Phi Long
+										</div>
+										<div class="recentCustomer-detail-username">
+										@longhpdev18
+										</div>
+										<div class="recentCustomer-detail-id">
+										Mã khách hàng <span>3</span>
+										</div>
+									</div>
+									<div class="recentCustomer-icon">
+										<i class="fas fa-angle-right"></i>
+									</div>
+								</li>	
+								<li class="recentCustomer-item">
+									<div class="recentCustomer-image">
+										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+									</div>
+									<div class="recentCustomer-detail">
+										<div class="recentCustomer-detail-name">
+										Hoàng Phi Long
+										</div>
+										<div class="recentCustomer-detail-username">
+										@longhpdev18
+										</div>
+										<div class="recentCustomer-detail-id">
+										Mã khách hàng <span>2</span>
+										</div>
+									</div>
+									<div class="recentCustomer-icon">
+										<i class="fas fa-angle-right"></i>
+									</div>
+								</li>	
+								<li class="recentCustomer-item">
+									<div class="recentCustomer-image">
+										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+									</div>
+									<div class="recentCustomer-detail">
+										<div class="recentCustomer-detail-name">
+										Hoàng Phi Long
+										</div>
+										<div class="recentCustomer-detail-username">
+										@longhpdev18
+										</div>
+										<div class="recentCustomer-detail-id">
+										Mã khách hàng <span>1</span>
+										</div>
+									</div>
+									<div class="recentCustomer-icon">
+										<i class="fas fa-angle-right"></i>
+									</div>
+								</li>	
+							</ul>
+						</div>
+					</div>
+					<div class="target">
+						<div class="target-heading">
+							<div class="target-title">
+								Mục tiêu đề xuất
 							</div>
+							<a href="#" class="target-more">	
+								Xem thêm<i class="fas fa-angle-right"></i>
+							</a>
 						</div>
 					
 						<div class="target-list">
@@ -295,245 +420,21 @@
 						</div>
 						
 					</div>
-					<table>
-						<tr>
-							<td>Ảnh</td>
-							<td>Tên</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="imgBx">
-									<img
-										src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-3.jpg"
-										alt="">
-								</div>
-							</td>
-							<td>
-								<h4>Hoàng Phi Long</h4>
-								<p>Hồ Chí Minh</p>
-							</td>
-							<td class="tbicon"><a href=""> <ion-icon
-										name="phone-portrait"></ion-icon>
-							</a> <a href=""> <ion-icon name="chatbubbles"></ion-icon>
-							</a></td>
-						</tr>
-					</table>
 				</div>
 			</div>
-
-
 		</div>
+	</div>
 </body>
 <!--Link icon-->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../assets/js/admin/hoaDon.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script src="../assets/js/admin/app.js"></script>
 <script src="../assets/js/admin/hovered.js"></script>
