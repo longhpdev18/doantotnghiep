@@ -121,48 +121,6 @@
 											</button>
 										</div>
 									</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-			<!-- CARD BOX -->
-			<jsp:include page="cardBox.jsp"></jsp:include>
-			<div class="recent">
-				<div class="recentOrders">
-					<div class="manage-customer-heading">
-						<div class="customer-heading-left">Đơn hàng gần đây</div>
-						<div class="customer-heading-center">
-							<div class="searchbox">
-								<input type="text" class="search-input"
-									placeholder="Nhập tên sản phẩm, hoặc id đơn hàng">
-								<button class="search-button">
-									<i class="fas fa-search"></i>
-								</button>
-							</div>
-						</div>
-						<div class="customer-heading-right">
-							<button class="btn-export">
-								<i class="fas fa-download"></i>
-								<p>Export</p>
-							</button>
-							<div class="pagination">
-								<div class="pagination-left">
-									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
-								</div>
-								<div class="pagination-right">
-									<button class="btn-prev">
-										<i class="fas fa-angle-left"></i>
-									</button>
-									<button class="btn-next">
-										<i class="fas fa-angle-right"></i>
-									</button>
->>>>>>> parent of c1a2219 (Merge branch 'beta' of https://github.com/longhpdev18/doantotnghiep into beta)
->>>>>>> parent of 0598e21 (update)
-=======
->>>>>>> parent of 60fbc5f (update)
-=======
->>>>>>> parent of 60fbc5f (update)
 								</div>
 							</div>
 							<table>
