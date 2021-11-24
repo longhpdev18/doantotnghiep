@@ -1583,3 +1583,64 @@ a {
     justify-content: space-between;
     position: relative;
 }
+
+.btn-showGenders {
+    width: 3rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sub-genders {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: var(--whiteColor);
+}
+
+.sub-genders .rdo-gender {
+    width: 100%;
+    height: 4.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--spaceS);
+    cursor: pointer;
+    z-index: 99;
+}
+
+.sub-genders .rdo-gender:hover {
+    background-color: var(--primaryColor2);
+}
+
+.sub-genders.active {
+    display: block;
+}
+
+.rdo-gender {
+    align-items: center;
+    display: flex;
+}
+
+.rdo-gender input {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: .4rem;
+}
+
+.rdo-male {
+    align-items: center;
+    display: flex;
+    margin-right: var(--spaceS);
+}
+
+.rdo-female {
+    align-items: center;
+    display: flex;
+    margin-right: var(--spaceS);
+}
