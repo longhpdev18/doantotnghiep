@@ -1644,3 +1644,27 @@ a {
     display: flex;
     margin-right: var(--spaceS);
 }
+
+/* BRAND */
+.btn-brand {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.btn-brand button {
+    width: 10rem;
+    height: 80%;
+    border: none;
+    outline: none;
+    border-radius: var(--space5);
+    margin-right: 10px;
+}
+
+.edit-btn-brand {
+    background-color: var(--primaryColor);
+    color: white;
+}

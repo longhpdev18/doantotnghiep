@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/unilities.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- BOXICON -->
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <!-- FONT ANWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <!--LINE AWSOME-->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation active">
+            <ul class="navigation-wp">
+                <div class="nav-header">
+                    <img src="./images/logo_white.png" alt="" class="header-brand">
+                    <button class="nav-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <li>
+                    <a href="./index.html" class="active">
+                        <span class="icon">
+                            <ion-icon name="home"></ion-icon>
+                        </span>
+                        <span class="title">Trang chủ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./lproduct.html">
+                        <span class="icon">
+                            <ion-icon name="list"></ion-icon>
+                        </span>
+                        <span class="title">Danh sách sản phẩm</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="./editProduct.html">
+                        <span class="icon">
+                            <ion-icon name="create"></ion-icon>
+                        </span>
+                        <span class="title">Sửa sản phẩm</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="./listProduct.html">
+                        <span class="icon">
+                            <ion-icon name="list"></ion-icon>
+                        </span>
+                        <span class="title">Danh sách sản phẩm</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="chatbubbles"></ion-icon>
+                        </span>
+                        <span class="title">Tin nhắn</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock"></ion-icon>
+                        </span>
+                        <span class="title">Quên mật khẩu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-in"></ion-icon>
+                        </span>
+                        <span class="title">Thoát</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- main -->
+        <div class="main">
+            <div class="topbar">
+                <div class="topbar-left">
+                    <div class="btn-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="topbar-brand">
+                        <img src="./images/logo.png" alt="" class="topbar-brand-image">
+                    </div>
+                </div>
+                <!-- search-->
+                <div class="search">
+
+                    <input type="text" placeholder="Tìm kiếm" class="search-input">
+                    <button class="search-button">
+                        <ion-icon name="search"></ion-icon>
+                    </button>
+
+                </div>
+                <!-- userImg -->
+                <div class="action">
+                    <div class="user" onclick="menuToggle();">
+                        <!--profile-->
+                        <img src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/127222247_1086079278516962_38767906172782592_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=FcF-DqXSBUYAX-u-j1Z&tn=8Xk759-Pc91XDR0g&_nc_ht=scontent.fdad1-1.fna&oh=39f0b948a1be6268de1169086e3e2d21&oe=6192E86C"
+                            alt="" width="50px">
+                    </div>
+                    <div class="menu">
+                        <h3>Tân Đặng <br><span>Page Admin</span></h3>
+                        <ul>
+                            <li><i class="far fa-user-circle"></i><a href="">My Profile</a></li>
+                            <li><i class="far fa-edit"></i><a href="">Edit Profile</a></li>
+                            <li><i class="far fa-envelope"></i><a href="">Inbox</a></li>
+                            <li><i class="far fa-question-circle"></i><a href="">Help</a></li>
+                            <li><i class="fas fa-sign-out-alt"></i><a href="">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="action">
+                    <div class="profile" onclick="menuToggle();">
+                        <img src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/127222247_1086079278516962_38767906172782592_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=FcF-DqXSBUYAX-u-j1Z&tn=8Xk759-Pc91XDR0g&_nc_ht=scontent.fdad1-1.fna&oh=39f0b948a1be6268de1169086e3e2d21&oe=6192E86C" alt="">
+                    </div>
+                    <div class="menu">
+                        <h3>Someone Famous <br><span>Website Designer</span></h3>
+                        <ul>
+                            <li><i class="far fa-user-circle"></i><a href="">My Profile</a></li>
+                            <li><i class="far fa-edit"></i><a href="">Edit Profile</a></li>
+                            <li><i class="far fa-envelope"></i><a href="">Inbox</a></li>
+                            <li><i class="far fa-question-circle"></i><a href="">Help</a></li>
+                            <li><i class="fas fa-sign-out-alt"></i><a href="">Logout</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+
+            <!--BRAND-->
+            <div class="manage-product">
+                <!-- <div class="border_form"> -->
+                <div class="title-page">
+                    Quản lý các loại sản phẩm
+                </div>
+                <div class="manage-product-wp">
+                    <div class="add_product">
+                        <div class="add_product-heading">
+                            Thêm loại
+                        </div>
+                        <form action="" class="fAdd-product">
+                            <div class="input_form">
+                                <label for="nameproduct" class="name">Tên </label>
+                                <input type="text" name="nameproduct" placeholder="Tên loại" required>
+                            </div>
+                            <!-- <div class="input_form">
+                                <label for="soluong" class="name">Số lượng</label>
+                                <input type="number" name="soluong" placeholder="Số lượng" min="1" required>
+                            </div>
+                            <div class="input_form">
+                                <label for="gia" class="name">Giá</label>
+                                <input type="number" name="gia" placeholder="Nhập giá" required>
+                            </div>
+                            <div class="input_form">
+                                <label for="status" class="name">Trạng thái</label>
+                                <select name="status">
+                                    <option value="Maths" selected>Chọn...</option>
+                                    <option value="Physics">Hàng mới</option>
+                                    <option value="Physics">Hàng cũ</option>
+                                </select>
+                            </div> -->
+                            <!-- <div class="input_form">
+                                <label for="dropdown" class="name">Loại</label>
+                                <select name="dropdown">
+                                    <option value="Maths" selected>Chọn thể loại...</option>
+                                    <option value="Physics">Màn hình</option>
+                                    <option value="Physics">Bàn phím</option>
+                                </select>
+                            </div> -->
+                            <div class="input_form">
+                                <label for="mota" class="name">Mô tả</label>
+                                <textarea name="mota" id="subject" placeholder="Mô tả loại sản phẩm..." cols="30"
+                                    rows="7"></textarea>
+                            </div>
+                            <div class="input_form">
+                                <!-- <div class="border_image">
+                                <div class="image">
+                                    <img src="#" alt="">
+                                </div>
+                                <div class="center">
+                                    <ion-icon name="cloud-upload"></ion-icon>
+                                    <span class="image_file">Imge File</span>
+                                </div>
+                            </div> -->
+                                <div class="button_file">
+                                    <input type="file" id="file" accept="image/*">
+                                    <!-- <label for="file">
+                                        <i class="far fa-image"></i> &nbsp;
+                                        Choose a Photo
+                                    </label> -->
+                                </div>
+                            </div>
+                            <div class="group-button-add">
+                                <button class="add-product">Thêm</button>
+                                <button class="add-cancel">Hủy</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="list-product">
+                        <div class="list-product-heading">
+                            Danh sách các loại sản phẩm
+                        </div>
+                        <table>
+                            <tr>
+                                <th>Mã loại</th>
+                                <th>Tên loại</th>
+                                <!-- <th>Giá</th>
+                                <th>Trạng thái</th> -->
+                                <!-- <th>Loại</th> -->
+                                <!-- <th>Hình ảnh</th> -->
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Start Refrigerator</td>
+                                <!-- <td>$1200</td>
+                                <td>Mới</td> -->
+
+                                <!-- <td><span class="status delivered">Bàn phím</span></td> -->
+                                <!-- <td>
+                                    <div class="images">
+                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
+                                            width="50px">
+                                    </div>
+                                </td> -->
+                                <td>
+                                    <div class="btn-brand">
+                                        <button class="edit-btn-brand">Sửa</button>
+                                        <button class="delete-btn-brand">Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<!--Link icon-->
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./js/hovered.js"></script>
+<script src="./js/app.js"></script>
+
+</html>
