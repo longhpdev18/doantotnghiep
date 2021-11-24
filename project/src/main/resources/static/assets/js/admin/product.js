@@ -90,3 +90,46 @@ $('.btn-next').click(function(){
 
 	})
 })
+
+$('.add-product').click(function(e){
+	 e.preventDefault();
+
+// var maloaiName = $('#maloai').find(":selected").text();
+// var manhName = $('#manh').find(":selected").text();
+// var tinhtrangName = $('#trangthaisp').find(":selected").text();
+var maloaiName = $('#maloai').val();
+var manhName = $('#manh').val();
+var tinhtrangName = $('#trangthaisp').val();
+var tensp = $('#tensp').val();
+var giasp = $('#giasp').val();
+var motasp = $('textarea#motasp').val();
+var hinh = $('#fileSP')[0].files[0].name;
+var deal = $('#deal').val();
+	$.ajax({
+		url: '/product/add',
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify(
+			{
+				
+    "tensp": tensp,
+    "maloai": maloaiName,
+    "manh": manhName,
+    "gia": giasp,
+    "mota": motasp,
+    "tinhtrang":tinhtrangName,
+    "hinh": hinh,
+    "deal": deal
+			}
+		),
+		dataType: 'json',
+		success: function(result) {
+			if(result.value=='success'){
+				location.reload();
+			}
+		}, error: function(err) {
+			console.log(err)
+		}
+
+	})
+})

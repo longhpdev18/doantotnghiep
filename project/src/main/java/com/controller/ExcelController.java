@@ -14,8 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.model.Excel;
 import com.model.SanPham;
+import com.model.Excel.ExcelSP;
 import com.repository.SanPhamDAO;
 
 @RestController
@@ -35,7 +35,7 @@ public class ExcelController {
 		response.setHeader(headerKey, headerValues);
 		
 		List<SanPham> listSP = sanphamDAO.findAll();
-		Excel excelExporter = new Excel(listSP);
+		ExcelSP excelExporter = new ExcelSP(listSP);
 		excelExporter.exportSP(response); 
 	}
 }

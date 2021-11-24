@@ -74,7 +74,7 @@
 			</div>
 
 			<div class="edit_product blur-dark">
-				<form action="" class="edit_product-wp">
+				<form action="" id="sp" class="edit_product-wp">
 					<div class="form-heading">
 						<div class="form-heading-left">
 						</div>
@@ -131,7 +131,7 @@
 							<label for="decriptionproduct">
 								Mô tả sản phẩm:
 							</label>
-							<textarea name="decriptionproduct" placeholder="Nhập mô tả sản phẩm">
+							<textarea  id="motasp" name="decriptionproduct" placeholder="Nhập mô tả sản phẩm">
 							
 							</textarea>
 						</div>
@@ -185,34 +185,45 @@
 						<div class="add_product-heading">Thêm sản phẩm</div>
 						<form action="" class="fAdd-product">
 							<div class="input_form">
-								<label for="nameproduct" class="name">Tên </label> <input type="text" name="nameproduct"
+								<label for="nameproduct" class="name">Tên </label> <input id="tensp" type="text" name="nameproduct"
 									placeholder="Tên sản phẩm" required>
 							</div>
 							<div class="input_form">
-								<label for="soluong" class="name">Số lượng</label> <input type="number" name="soluong"
+								<label for="soluong" class="name">giảm giá</label> <input id="deal" type="number" name="soluong"
 									placeholder="Số lượng" min="1" required>
 							</div>
 							<div class="input_form">
-								<label for="gia" class="name">Giá</label> <input type="number" name="gia"
+								<label for="gia" class="name">Giá</label> <input id="giasp" type="number" name="gia"
 									placeholder="Nhập giá" required>
 							</div>
 							<div class="input_form">
-								<label for="status" class="name">Trạng thái</label> <select name="status">
+								<label for="status" class="name">Trạng thái</label> 
+								<select name="status" id="trangthaisp">
 									<option value="Maths" selected>Chọn...</option>
-									<option value="Physics">Hàng mới</option>
-									<option value="Physics">Hàng cũ</option>
+									<option value="0">Hết hàng</option>
+									<option value="1">Còn hàng</option>
 								</select>
 							</div>
 							<div class="input_form">
-								<label for="dropdown" class="name">Loại</label> <select name="dropdown">
+								<label for="dropdown" class="name">Tên nhãn hiệu</label>
+								 <select id="manh"  name="dropdown">
 									<option value="Maths" selected>Chọn thể loại...</option>
-									<option value="Physics">Màn hình</option>
-									<option value="Physics">Bàn phím</option>
+									<option value="0">dell</option>
+									<option value="1">Bàn </option>
+								</select>
+							</div>
+							
+							<div class="input_form">
+								<label for="dropdown" class="name">Loại</label> 
+								<select name="dropdown" id="maloai">
+									<option value="Maths" selected>Chọn thể loại...</option>
+									<option value="0">Màn hình</option>
+									<option value="1">Bàn phím</option>
 								</select>
 							</div>
 							<div class="input_form">
 								<label for="mota" class="name">Mô tả</label>
-								<textarea name="mota" id="subject" placeholder="Mô tả sản phẩm..." cols="30"
+								<textarea name="mota" id="motasp" placeholder="Mô tả sản phẩm..." cols="30"
 									rows="7"></textarea>
 							</div>
 							<div class="input_form">
@@ -226,7 +237,7 @@
             </div>
         </div> -->
 								<div class="button_file">
-									<input type="file" id="file" accept="image/*">
+									<input type="file" id="fileSP" accept="image/*">
 									<!-- <label for="file">
                     <i class="far fa-image"></i> &nbsp;
                     Choose a Photo
