@@ -68,3 +68,11 @@ $(document).ready(function () {
 
 	});
 });
+
+$('.btn-showGenders').click(function () {
+    $('.sub-genders').toggleClass('active');
+})
+
+/*$('.gender-option').click(function () {
+    $('.sub-genders').removeClass('active');
+})*/

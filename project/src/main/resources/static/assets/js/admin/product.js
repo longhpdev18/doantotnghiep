@@ -9,10 +9,10 @@ function loadData() {
 		),
 		dataType: 'json',
 		success: function(result) {
-			if(result.value=='success'){
-				
+			if (result.value == 'success') {
+
 				location.reload()
-			}else{
+			} else {
 
 			}
 		}, error: function(err) {
@@ -31,7 +31,7 @@ function checkSession() {
 		),
 		dataType: 'json',
 		success: function(result) {
-			if(result.value!='success'){
+			if (result.value != 'success') {
 				loadData();
 			}
 		}, error: function(err) {
@@ -41,9 +41,9 @@ function checkSession() {
 	})
 }
 
-$('.btn-prev').click(function(){
+$('.btn-prev').click(function() {
 	//lấy ra số page hiện tại VD vào là 1, nhưng trên api mảng tính từ giá trị 0 còn form tính từ giá trị 1 nên phải -1
-	var count = $('#countPage').text()-1;
+	var count = $('#countPage').text() - 1;
 	console.log(count)
 	$.ajax({
 		url: '/prevPage',
@@ -52,12 +52,12 @@ $('.btn-prev').click(function(){
 		data: JSON.stringify(
 			{
 
-				'count' : count
+				'count': count
 			}
 		),
 		dataType: 'json',
 		success: function(result) {
-			if(result.value=='success'){
+			if (result.value == 'success') {
 				location.reload();
 			}
 		}, error: function(err) {
@@ -66,8 +66,8 @@ $('.btn-prev').click(function(){
 
 	})
 })
-$('.btn-next').click(function(){
-	var count = $('#countPage').text()-1;
+$('.btn-next').click(function() {
+	var count = $('#countPage').text() - 1;
 	console.log(count)
 	$.ajax({
 		url: '/nextPage',
@@ -76,12 +76,12 @@ $('.btn-next').click(function(){
 		data: JSON.stringify(
 			{
 
-				'count' : count
+				'count': count
 			}
 		),
 		dataType: 'json',
 		success: function(result) {
-			if(result.value=='success'){
+			if (result.value =  'success')  {
 				location.reload();
 			}
 		}, error: function(err) {
@@ -91,42 +91,38 @@ $('.btn-next').click(function(){
 	})
 })
 
-$('.add-product').click(function(e){
-	 e.preventDefault();
+$('.add-product').click(function(e) {
+	e.preventDefault();
 
-// var maloaiName = $('#maloai').find(":selected").text();
-// var manhName = $('#manh').find(":selected").text();
-// var tinhtrangName = $('#trangthaisp').find(":selected").text();
-var maloaiName = $('#maloai').val();
-var manhName = $('#manh').val();
-var tinhtrangName = $('#trangthaisp').val();
-var tensp = $('#tensp').val();
-var giasp = $('#giasp').val();
-var motasp = $('textarea#motasp').val();
-var hinh = $('#fileSP')[0].files[0].name;
-var deal = $('#deal').val();
+	var tenspName = $('#tensp').val();
+	var giaspName = $('#giasp').val();
+	var maloaiName = $('#maloai').val();
+	var manhName = $('#manh').val();
+	var tinhtrangName = $('#trangthaisp').val();
+	var motasp = $('textarea#motasp').val();
+	var hinhName = $('#fileSP')[0].files[0].name;
+	var dealName = $('#deal').val();
 	$.ajax({
 		url: '/product/add',
 		type: 'POST',
 		contentType: 'application/json',
 		data: JSON.stringify(
 			{
-				
-    "tensp": tensp,
-    "maloai": maloaiName,
-    "manh": manhName,
-    "gia": giasp,
-    "mota": motasp,
-    "tinhtrang":tinhtrangName,
-    "hinh": hinh,
-    "deal": deal
+				"tensp": tenspName,
+				"maloai": maloaiName,
+				"manh": manhName,
+				"gia": giaspName,
+				"mota": motasp,
+				"tinhtrang": tinhtrangName,
+				"hinh": hinhName,
+				"deal": dealName
 			}
 		),
 		dataType: 'json',
-		success: function(result) {
-			if(result.value=='success'){
+		success: function() {
+			
 				location.reload();
-			}
+			
 		}, error: function(err) {
 			console.log(err)
 		}

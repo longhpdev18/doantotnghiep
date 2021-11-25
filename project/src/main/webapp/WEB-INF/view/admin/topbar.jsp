@@ -23,8 +23,8 @@
         <div class="menu">
             <h3>${fullnameNV} <br><span>Page Admin</span></h3>
             <ul>
-                <li><i class="far fa-user-circle"></i><a href="">My Profile</a></li>
-                <li><i class="far fa-edit"></i><a href="">Edit Profile</a></li>
+                <li><i class="far fa-user-circle"></i><a href="./profile">My Profile</a></li>
+                <li><i class="far fa-edit"></i><a href="./profile">Edit Profile</a></li>
                 <li><i class="far fa-envelope"></i><a href="">Inbox</a></li>
                 <li><i class="far fa-question-circle"></i><a href="">Help</a></li>
                 <li><i class="fas fa-sign-out-alt"></i><a href="/logoutAdmin">Logout</a></li>

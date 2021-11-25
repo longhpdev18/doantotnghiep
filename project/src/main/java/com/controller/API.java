@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,9 +20,11 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;
 
+import com.bean.Item;
 import com.exception.ResourceNotFoundException;
 import com.model.KhachHang;
 import com.model.LoaiHang;
+import com.model.Message;
 import com.model.NhanHieu;
 import com.model.NhanVien;
 import com.model.SanPham;
@@ -46,10 +50,12 @@ public class API {
 	
 	@Autowired
     private SanPhamDAO sanphamDAO;
-	@PostMapping("product/add")
-	@ResponseStatus(code = HttpStatus.CREATED)
+
+	//@ResponseStatus(code = HttpStatus.CREATED)
+	@RequestMapping(value = "product/add", method = RequestMethod.POST)
 	public SanPham createSanPham(@RequestParam String tensp, @RequestParam int maloai, @RequestParam int manh,
 			@RequestParam Double gia, @RequestParam String mota, @RequestParam boolean tinhtrang, @RequestParam("hinh") MultipartFile imageFile) throws IOException {
+		
 		Path staticPath = Paths.get("src/main/resources/static");
 		Path imagePath = Paths.get("images");
 		if (!Files.exists(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath))) {
@@ -60,6 +66,7 @@ public class API {
 		try (OutputStream os = Files.newOutputStream(file)) {
 			os.write(imageFile.getBytes());
 		}
+		Message mess = new Message();
 		SanPham sp = new SanPham();
 		sp.setTensp(tensp);
 		sp.setMaloai(maloai);
@@ -68,7 +75,9 @@ public class API {
 		sp.setMota(mota);
 		sp.setTinhtrang(tinhtrang);
 		sp.setHinh(imagePath.resolve(imageFile.getOriginalFilename()).toString());
-
+		
+		mess.setValue("ok");
+		
 		return sanphamDAO.save(sp);
 	}
 	

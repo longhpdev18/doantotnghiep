@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import com.model.KhachHang;
 import com.model.NhanVien;
 
 @Repository
@@ -22,4 +23,5 @@ public interface NhanVienDAO extends JpaRepository<NhanVien, Long> {
 //	}
 	@Query("select nv from nhanvien nv where nv.tendangnhap=:username and nv.matkhau =:password")
 	NhanVien loginAdmin(@Param("username") String tendangnhap,@Param("password") String matkhau);
+
 }

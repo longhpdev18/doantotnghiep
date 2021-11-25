@@ -42,121 +42,105 @@
 		<jsp:include page="./../../home/header.jsp"></jsp:include>
 	</div>
 	<div class="profile">
-            <div class="profile-wp">
-         
-                <div class="profile-left">
-                    <div class="profile-image">
-                        <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="">
-                        <div class="veri-account">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                    <p class="profile-id" value="${maKH}">#${maKH}</p>
-                </div>
-                <div class="profile-right">
-                    <h1 class="profile-title" >Thông tin cá nhân</h1>
-                    <form action="">
-                        <div class="form-group-2">
-                            <div class="form-group">
-                                <label for="username">
-                                    Tên đăng nhập:
-                                </label>
-                                <input type="text" name="username" id="usernameProfile" class="txtUsername" value="${tendangnhap}"
-                                    readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">
-                                    Mật khẩu:
-                                </label>
-                                <input type="password" name="password" id="passwordProfile" class="txtPassword"
-                                    value="${matkhau}" placeholder="Mật khẩu tài khoản của bạn">
-                            </div>
-                        </div>
-                        <div class="form-group-2">
-                            <div class="form-group">
-                                <label for="fullname">
-                                    Họ và tên:
-                                </label>
-                                <input type="text" name="fullname" id="fullnameProfile" class="txtFullname"
-                                    value="${fullname}">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">
-                                    Số điện thoại:
-                                </label>
-                                <input type="number" name="phone" id="phoneProfile" class="txtPhone" value="${sodienthoai}">
-                            </div>
-                        </div>
-                        <div class="form-group-2">
-                            <div class="form-group">
-                                <label for="birthday">
-                                    Ngày sinh:
-                                </label>
-                                <input type="date" name="birthday" id="birthdayProfile" class="txtBirthday" value="${ngaysinh}">
-                            </div>
-                            <div class="form-group">
-                                <label for="genders">
-                                    Giới tính:
-                                </label>
-                                <div class="genders">
-                                    <div class="gender-select">
-                                    <c:if test="${gioitinh==false}">
-                                        <span class="gender-value" id="gender-valueProfile">
-                                        Nam
-                                        
-                                        </span>
-                                        </c:if>
-                                        <c:if test="${gioitinh==true}">
-                                        <span class="gender-value" id="gender-valueProfile">
-                                        Nữ
-                                        
-                                        </span>
-                                        </c:if>
-                                        <div class="gender-button">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </div>
-                                    </div>
-                                    <div class="gender-list">
-                                        <div class="gender-option">Nam</div>
-                                        <div class="gender-option">Nữ</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group-1">
-                            <div class="form-group">
-                                <label for="address">
-                                    Địa chỉ:
-                                </label>
-                                <input type="text" name="address" id="addressProfile" class="txtAddress"
-                                    value="${diachi}">
-                            </div>
-                        </div>
-                        <div class="form-group-1">
-                            <div class="form-group">
-                                <label for="email">
-                                    Email:
-                                </label>
-                                <input type="mail" name="email" id="emailProfile" class="txtEmail"
-                                    value="${email}">
-                            </div>
-                        </div>
-                        <!-- PROFILE-BUTTON Khi đã click sửa -->
-                        <div class="profile-button">
-                            <button class="btn btn-primary btn-save mr-10 rounded-8 ">Chỉnh sửa</button>
-                            <button class="btn btn-light rounded-8 btn-cancle">Hủy</button>
-                        </div>
+		<div class="profile-wp">
 
-                        <!-- PROFILE-BUTTON Khi chưa click sửa -->
-                        <!-- <div class="profile-button">
+			<div class="profile-left">
+				<div class="profile-image">
+					<img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png"
+						alt="">
+					<div class="veri-account">
+						<i class="fas fa-check"></i>
+					</div>
+				</div>
+				<p class="profile-id" value="${maKH}">#${maKH}</p>
+			</div>
+			<div class="profile-right">
+				<h1 class="profile-title">Thông tin cá nhân</h1>
+				<form action="">
+					<div class="form-group-2">
+						<div class="form-group">
+							<label for="username"> Tên đăng nhập: </label> <input type="text"
+								name="username" id="usernameProfile" class="txtUsername"
+								value="${tendangnhap}" readonly>
+						</div>
+						<div class="form-group">
+							<label for="password"> Mật khẩu: </label> <input type="password"
+								name="password" id="passwordProfile" class="txtPassword"
+								value="${matkhau}" placeholder="Mật khẩu tài khoản của bạn">
+						</div>
+					</div>
+					<div class="form-group-2">
+						<div class="form-group">
+							<label for="fullname"> Họ và tên: </label> <input type="text"
+								name="fullname" id="fullnameProfile" class="txtFullname"
+								value="${fullname}">
+						</div>
+						<div class="form-group">
+							<label for="phone"> Số điện thoại: </label> <input type="number"
+								name="phone" id="phoneProfile" class="txtPhone"
+								value="${sodienthoai}">
+						</div>
+					</div>
+					<div class="form-group-2">
+						<div class="form-group">
+							<label for="birthday"> Ngày sinh: </label> <input type="date"
+								name="birthday" id="birthdayProfile" class="txtBirthday"
+								value="${ngaysinh}">
+						</div>
+						<div class="form-group">
+							<label for="genders"> Giới tính: </label>
+							<div class="genders">
+								<div class="gender-select">
+									<c:if test="${gioitinh==false}">
+										<span class="gender-value" id="gender-valueProfile">
+											Nam </span>
+									</c:if>
+									<c:if test="${gioitinh==true}">
+										<span class="gender-value" id="gender-valueProfile"> Nữ
+
+										</span>
+									</c:if>
+									<div class="gender-button">
+										<i class="fas fa-chevron-down"></i>
+									</div>
+								</div>
+								<div class="gender-list">
+									<div class="gender-option">Nam</div>
+									<div class="gender-option">Nữ</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group-1">
+						<div class="form-group">
+							<label for="address"> Địa chỉ: </label> <input type="text"
+								name="address" id="addressProfile" class="txtAddress"
+								value="${diachi}">
+						</div>
+					</div>
+					<div class="form-group-1">
+						<div class="form-group">
+							<label for="email"> Email: </label> <input type="mail"
+								name="email" id="emailProfile" class="txtEmail" value="${email}">
+						</div>
+					</div>
+					<!-- PROFILE-BUTTON Khi đã click sửa -->
+					<div class="profile-button">
+						<button class="btn btn-primary btn-save mr-10 rounded-8 ">Chỉnh
+							sửa</button>
+						<button class="btn btn-light rounded-8 btn-cancle">Hủy</button>
+					</div>
+
+					<!-- PROFILE-BUTTON Khi chưa click sửa -->
+					<!-- <div class="profile-button">
                                 <button class="btn btn-primary btn-edit rounded-8">Chỉnh sửa</button>
                             </div> -->
 
-                    </form>
-                </div>
-              
-            </div>
-        </div>
+				</form>
+			</div>
+
+		</div>
+	</div>
 	<jsp:include page="./../../home/footer.jsp"></jsp:include>
 	</div>
 </body>
@@ -166,9 +150,12 @@
 <script src="./../assets/js/app.js"></script>
 <script src="./../assets/js/login.js"></script>
 <script src="./../assets/js/profile.js"></script>
- <script
+<script
 	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <!-- JQUERY -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

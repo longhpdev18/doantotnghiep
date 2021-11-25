@@ -82,4 +82,15 @@ public class AdminController {
 		}
 		return "admin/customer/index";
 	}
+	@GetMapping("/admin/brand")
+	public String brand(Model model) {
+
+		return "admin/brand/index";
+	}
+	@GetMapping("/admin/product-type")
+	public String typeproduct(Model model) {
+
+		return "admin/product-type/index";
+	}
+
 }

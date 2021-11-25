@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.exception.ResourceNotFoundException;
 import com.model.KhachHang;
+import com.model.NhanVien;
 import com.repository.KhachHangDAO;
+import com.repository.NhanVienDAO;
 import com.service.CookieService;
 import com.service.ParamService;
 import com.service.SessionService;
@@ -28,6 +30,8 @@ public class profileController {
 	SessionService sessionService;
 	@Autowired
 	KhachHangDAO khDAO;
+	@Autowired
+	NhanVienDAO nvDAO;
 
 	@RequestMapping(value = "/profile")
 	public String showProfile(Model model) {
@@ -43,5 +47,19 @@ public class profileController {
 		model.addAttribute("diachi", khachhang.getDiachi());
 		model.addAttribute("email", khachhang.getEmail());
 		return "home/profile/index";
+	}
+	
+	@RequestMapping(value = "/admin/profile")
+	public String showProfileAD(Model model) {
+		NhanVien nhanvien = nvDAO.getById(sessionService.get("maNV"));
+		model.addAttribute("tendangnhap", nhanvien.getTendangnhap());
+		model.addAttribute("matkhau", nhanvien.getMatkhau());
+		model.addAttribute("fullname", nhanvien.getFullname());
+		model.addAttribute("sodienthoai", nhanvien.getSodienthoai());
+		model.addAttribute("ngaysinh", nhanvien.getNgaysinh());
+		model.addAttribute("gioitinh", nhanvien.isGioitinh());
+		model.addAttribute("diachi", nhanvien.getDiachi());
+		model.addAttribute("email", nhanvien.getEmail());
+		return "admin/profile/index";
 	}
 }

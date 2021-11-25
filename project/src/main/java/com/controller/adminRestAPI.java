@@ -61,79 +61,100 @@ public class adminRestAPI {
 	HoaDonCTDAO hoadonCTDAO;
 	Page<SanPham> listProductAD;
 	PageCount pageCount = new PageCount();
+
 	@PostMapping("/admin/login")
 	public Message login(@RequestBody Login login) {
-		
+
 		Message mess = new Message();
 		NhanVien nv = nhanvienDAO.loginAdmin(login.getUsername(), login.getPassword());
-		
-		if(nv!=null) {
+
+		if (nv != null) {
 			mess.setValue("success");
 			sessionService.set("fullnameNV", nv.getFullname());
 			sessionService.set("maNV", nv.getManv());
-		}else{
+		} else {
 			mess.setValue("Sai tài khoản hoặc mật khẩu!");
 		}
-		
+
 		return mess;
-		
+
 	}
-	
+
 	@GetMapping("/product")
 	public Message productAdmin(Model model) {
 		Message mess = new Message();
 		try {
 			Pageable pageable = PageRequest.of(pageCount.getCount(), 10);
 			listProductAD = sanphamDao.findAll(pageable);
-			sessionService.set("listProductAD",listProductAD);
-			sessionService.set("pageCount",pageCount);
+			sessionService.set("listProductAD", listProductAD);
+			sessionService.set("pageCount", pageCount);
 			mess.setValue("success");
 		} catch (Exception e) {
 			mess.setValue("error");
 		}
-		
+
 		return mess;
-	}@GetMapping("/checkProductAdmin")
+	}
+
+	@GetMapping("/checkProductAdmin")
 	public Message checkProductAdmin(Model model) {
 		Message mess = new Message();
-		if(sessionService.get("listProductAD")!=null) {
+		if (sessionService.get("listProductAD") != null) {
 			mess.setValue("success");
-		}else {
+		} else {
 			mess.setValue("error");
 		}
 		return mess;
 	}
+
+	@PostMapping("/updateProfileAD")
+	public Message updateProfileAD(@RequestBody NhanVien nv) {
+		Message mess = new Message();
+		NhanVien NV = nhanvienDAO.getById(nv.getManv());
+		NV.setMatkhau(nv.getMatkhau());
+		NV.setDiachi(nv.getDiachi());
+		NV.setEmail(nv.getEmail());
+		NV.setFullname(nv.getFullname());
+		NV.setGioitinh(nv.isGioitinh());
+		NV.setNgaysinh(nv.getNgaysinh());
+		NV.setSodienthoai(nv.getSodienthoai());
+		nhanvienDAO.save(NV);
+		mess.setValue("success");
+		return mess;
+	}
+
 	@PostMapping("/prevPage")
-	public Message prevPage(Model model,@RequestBody PageCount count) {
+	public Message prevPage(Model model, @RequestBody PageCount count) {
 		Message mess = new Message();
 		try {
-			if(count.getCount()>0) {
-				
-				Pageable pageable = PageRequest.of(count.getCount()-1, 10);
+			if (count.getCount() > 0) {
+
+				Pageable pageable = PageRequest.of(count.getCount() - 1, 10);
 				listProductAD = sanphamDao.findAll(pageable);
-				sessionService.set("listProductAD",listProductAD);
-				pageCount.setCount(count.getCount()-1);
+				sessionService.set("listProductAD", listProductAD);
+				pageCount.setCount(count.getCount() - 1);
 				mess.setValue("success");
 			}
 		} catch (Exception e) {
 			mess.setValue("error");
 		}
-		
+
 		return mess;
 	}
+
 	@PostMapping("/nextPage")
-	public Message nextPage(Model model,@RequestBody PageCount count) {
+	public Message nextPage(Model model, @RequestBody PageCount count) {
 		Message mess = new Message();
 		try {
-			Pageable pageable = PageRequest.of(count.getCount()+1, 10);
+			Pageable pageable = PageRequest.of(count.getCount() + 1, 10);
 			listProductAD = sanphamDao.findAll(pageable);
-			sessionService.set("listProductAD",listProductAD);
-			pageCount.setCount(count.getCount()+1);
+			sessionService.set("listProductAD", listProductAD);
+			pageCount.setCount(count.getCount() + 1);
 			mess.setValue("success");
 		} catch (Exception e) {
 			mess.setValue("error");
 		}
-		
+
 		return mess;
 	}
 }
