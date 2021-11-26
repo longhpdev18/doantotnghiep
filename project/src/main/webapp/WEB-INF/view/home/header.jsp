@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 
 
-<div class="formLogin__container blur-dark">
+<div class="formLogin__container">
 	<form id="formLogin" class="fLogin">
 		<div class="form-content">
 			<div class="form-content-left">

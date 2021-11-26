@@ -54,10 +54,9 @@ public class PaidRestAPI {
 	public Message addPill(@RequestBody HoaDon hd) {
 		Message mess = new Message();
 		hd.setMakh(Long.parseLong(sessionService.get("maKH").toString()));
-		hd.setTongtien(cart.getAmount());
 		System.out.println(hd.getNgaymua());  
 		for(Item item: cart.getItems()){
-			
+
 			hdDAO.save(hd);
 			HoaDonChiTiet hdct = new HoaDonChiTiet();
 			hdct.setMahd((int)hdDAO.getLastID().getMahd());

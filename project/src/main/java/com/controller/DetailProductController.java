@@ -34,7 +34,6 @@ public class DetailProductController {
 		SanPham item = sanphamDAO.getID(masp);
 		model.addAttribute("item", item);
 		System.out.println(item.getDeal());
-		
 		return"home/product/detail";
 	}
 }
