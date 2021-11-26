@@ -44,7 +44,7 @@ $('.order-update-cancel').click(function() {
     $('.order-update').removeClass('active');
 })
 
-$('.btn-showAction').click(function() {
+$('.btn-showAction').mousedown(function() {
     $('.action-content').addClass('active');
 })
 
