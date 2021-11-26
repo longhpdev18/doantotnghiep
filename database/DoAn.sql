@@ -71,7 +71,8 @@ CREATE TABLE hoadon(
 	trangthai nvarchar(250) not null DEFAULT N'Đang xác nhận!',
 	tennguoinhan nvarchar(250) not null,
 	diachinguoinhan nvarchar(250) not null,
-	sdtnguoinhan int not null
+	sdtnguoinhan int not null,
+	tongtien double not null
 	FOREIGN KEY (makh) REFERENCES khachhang(makh)
 )
 go
