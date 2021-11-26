@@ -72,7 +72,7 @@ CREATE TABLE hoadon(
 	tennguoinhan nvarchar(250) not null,
 	diachinguoinhan nvarchar(250) not null,
 	sdtnguoinhan int not null,
-	tongtien double not null
+	tongtien float not null,
 	FOREIGN KEY (makh) REFERENCES khachhang(makh)
 )
 go
