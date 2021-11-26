@@ -31,6 +31,16 @@ public class HoaDon {
 	private String trangthai;
 	@Column(name = "tennguoinhan", nullable = false)
 	private String tennguoinhan;
+	@Column(name = "tongtien", nullable = false)
+	private double tongtien;
+	public double getTongtien() {
+		return tongtien;
+	}
+
+	public void setTongtien(double tongtien) {
+		this.tongtien = tongtien;
+	}
+
 	public String getTennguoinhan() {
 		return tennguoinhan;
 	}
