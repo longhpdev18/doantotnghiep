@@ -32,6 +32,7 @@
 			<!--PROFILE-->
 			<div class="content_profile">
 				<div class="content__container">
+					<div class="title-page">Thông tin tài khoản</div>
 					<div class="profile">
 						<div class="profile-content">
 							<div class="profile-left">
@@ -47,6 +48,7 @@
 								<p class="profile-id">#${maNV}</p>
 							</div>
 							<div class="profile-right">
+								<h1 class="profile-title">Thông tin cá nhân</h1>
 								<form action="">
 									<div class="form-group flex-row">
 										<div class="form-group-col2 flex-col">
@@ -80,19 +82,25 @@
 										</div>
 										<div class="form-group-col2 flex-col ml-m">
 											<label for="phone"> Giới tính: </label>
-											<select class="genders">
-
-												<c:if test="${gioitinh==false}">
-													<span class="gender-value" id="gender-valueProfile">
-														Nam </span>
-												</c:if>
-												<c:if test="${gioitinh==true}">
-													<span class="gender-value" id="gender-valueProfile">
-														Nữ </span>
-												</c:if>
-													<option class="gender-option">Nam</option>
-													<option class="gender-option">Nữ</option>
-											</select>
+											<div class="genders">
+												<div class="gender-select">
+													<c:if test="${gioitinh==false}">
+														<span class="gender-value" id="gender-valueProfile">
+															Nam </span>
+													</c:if>
+													<c:if test="${gioitinh==true}">
+														<span class="gender-value" id="gender-valueProfile">
+															Nữ </span>
+													</c:if>
+													<div class="gender-button">
+														<i class="fas fa-chevron-down"></i>
+													</div>
+													<div class="gender-list">
+														<div class="gender-option">Nam</div>
+														<div class="gender-option">Nữ</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 									<div class="form-group">

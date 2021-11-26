@@ -21,12 +21,12 @@
 					class="far fa-user-circle"></i>
 			</span> <span class="title">Quản lý người dùng</span>
 		</a></li>
-		<li><a href="./product-type"> <span class="icon"> 
-			<i class="fas fa-list-ol"></i>
+		<li><a href="./product-type"> <span class="icon"> <i
+					class="fas fa-users"></i>
 			</span> <span class="title">Quản lý loại hàng</span>
 		</a></li>
-		<li><a href="./brand"> <span class="icon"> 
-			<i class="fas fa-tags"></i>
+		<li><a href="./brand"> <span class="icon"> <i
+					class="fas fa-users"></i>
 			</span> <span class="title">Quản lý nhãn hiệu</span>
 		</a></li>
 		<li><a href="./staff"> <span class="icon"> <i
