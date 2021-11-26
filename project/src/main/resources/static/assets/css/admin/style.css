@@ -84,7 +84,6 @@ button {
     text-decoration: none;
     color: var(--primaryColor);
     font-weight: 600;
-        background-color: rgba(255,255,255,0.1);
 }
 
 .navigation-wp li a .icon {
@@ -1593,9 +1592,6 @@ flex:1;
     border-radius: var(--space5);
 }
 
-.form-group:nth-child(6) {
-    min-height: 10rem !important;
-}
 
 .form-group:last-child {
     margin-bottom: 0;
@@ -2293,7 +2289,8 @@ flex:1;
     flex-direction: column;
     background-color: white;
     border-radius: var(--space5);
-}
+    position:relative;
+    }
 
 .manage-staff-heading {
     width: 100%;
@@ -2621,6 +2618,7 @@ flex:1;
     background-color: white;
     border-radius: var(--space5);
     box-shadow: 0 5px 12px rgba(0,0,0,.1);
+    position: relative;
 }
 
 .manage-customer-heading {
@@ -3770,3 +3768,152 @@ a {
     background-color: var(--primaryColor);
     color: white;
 }
+
+.add-customer {
+	height: 100%;
+	position: absolute;
+	display: none;
+	width: 100%;
+	z-index:20;
+	border-radius: inherit;
+	justify-content: center;
+	align-items:center;
+}
+
+.add-customer.active {
+	display:flex;
+}
+
+.form-add-customer {
+	width:100%;
+	max-width: 50rem;
+	background-color: white;
+	border-radius: var(--space8);
+}
+
+
+.center {
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.add-customer-button {
+	background-color: var(--primaryColor);
+	color: white;
+}
+
+
+.edit-customer {
+	height: 100%;
+	position: absolute;
+	display: none;
+	width: 100%;
+	z-index:20;
+	border-radius: inherit;
+	justify-content: center;
+	align-items:center;
+}
+
+.edit-customer.active {
+	display:flex;
+}
+
+.form-edit-customer {
+	width:100%;
+	max-width: 50rem;
+	background-color: white;
+	border-radius: var(--space8);
+}
+
+
+.center {
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.address input {
+	height: 4rem !important;
+}
+
+.edit-customer-button {
+	background-color: var(--orangeColor);
+	color: white;
+}
+
+
+.edit-staff	{
+	height: 100%;
+	position: absolute;
+	display: none;
+	width: 100%;
+	z-index:20;
+	border-radius: inherit;
+	justify-content: center;
+	align-items:center;
+}
+
+.edit-staff.active {
+	display:flex;
+}
+
+.form-edit-staff {
+	width:100%;
+	max-width: 50rem;
+	background-color: white;
+	border-radius: var(--space8);
+}
+
+
+.center {
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.address input {
+	height: 4rem !important;
+}
+
+.edit-staff-button {
+	background-color: var(--orangeColor);
+	color: white;
+}
+
+.add-staff {
+	height: 100%;
+	position: absolute;
+	display: none;
+	width: 100%;
+	z-index:20;
+	border-radius: inherit;
+	justify-content: center;
+	align-items:center;
+}
+
+.add-staff.active {
+	display:flex;
+}
+
+.form-add-staff {
+	width:100%;
+	max-width: 50rem;
+	background-color: white;
+	border-radius: var(--space8);
+}
+
+
+.center {
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.add-staff-button {
+	background-color: var(--primaryColor);
+	color: white;
+}
+
+
+
