@@ -48,12 +48,46 @@ $('.btn-showAction').click(function() {
     $('.action-content').addClass('active');
 })
 
-$('.add-item').click(function() {
+$('.add-item').mousedown(function() {
     $('.action-content').removeClass('active');
 })
-$('.export-file').click(function() {
+$('.export-file').mousedown(function() {
     $('.action-content').removeClass('active');
 })
+
+$('.add-item').mousedown(function() {
+     $('.add-customer').addClass('active');
+})
+
+$('.cancel-customer-button').mousedown(function() {
+    $('.add-customer').removeClass('active');
+})
+
+$('.customer-button-edit').mousedown(function() {
+     $('.edit-customer').addClass('active');
+})
+
+$('.cancel-customer-button').mousedown(function() {
+    $('.add-customer').removeClass('active');
+})
+
+$('.customer-button-edit').mousedown(function() {
+     $('.edit-customer').addClass('active');
+})
+
+$('.cancel-customer-button').mousedown(function() {
+    $('.add-customer').removeClass('active');
+})
+
+$('.add-item').mousedown(function() {
+    $('.add-staff').addClass('active');
+})
+
+$('.staff-button-edit').mousedown(function() {
+    $('.edit-staff').addClass('active');
+})
+
+
 
 
 

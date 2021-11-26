@@ -31,6 +31,129 @@
 			<jsp:include page="./../topbar.jsp"></jsp:include>
 			<div class="manage-customer">
 				<div class="manage-customer-wp">
+				
+					
+					<div class="add-customer blur-dark">
+						<form class="form-add-customer">
+							<div class="form-heading center">Thêm khách hàng</div>
+							<div class="form-content">
+								<div class="form-group">
+									<label>Tên tài khoản</label>
+									<input type="text" placeholder="Nhập tên tài khoản">
+								</div>
+								<div class="form-group">
+									<label>Mật khẩu</label>
+									<input type="password" placeholder="Mật khẩu">
+								</div>
+								<div class="form-group">
+									<label>Họ và tên</label>
+									<input type="text" placeholder="Họ và tên">
+								</div>
+								<div class="form-group">
+									<label>Giới tính</label>
+									<select>
+										<option>Nam</option>
+										<option>Nữ</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Ngày sinh</label>
+									<input type="date">
+								</div>
+								<div class="form-group address">
+									<label>Địa chỉ</label>
+									<input type="text" placeholder="Thêm địa chỉ">
+								</div>
+								<div class="form-group ">
+									<label>Email</label>
+									<input type="mail" placeholder="Thêm email">
+								</div>
+
+								<div class="form-group">
+									<label>Số điện thoại</label>
+									<input type="number" placeholder="Số điện thoại">
+								</div>
+								<div class="form-group">
+									<label>Hình ảnh</label>
+									<input type="file" accept="image/*">
+								</div>
+								<div class="form-group">
+									<label>Trạng thái</label>
+									<select>
+										<option>Đã kích hoạt</option>
+										<option selected>Chưa kích hoạt</option>
+									</select>
+								</div>
+								<div class="form-button">
+									<button class="add-customer-button">Thêm khách hàng</button>
+									<button class="cancel-customer-button">Hủy</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					
+					<div class="edit-customer blur-dark">
+						<form class="form-edit-customer">
+							<div class="form-heading center">Sửa khách hàng</div>
+							<div class="form-content">
+								<div class="form-group">
+									<label>Tên tài khoản</label>
+									<input type="text" placeholder="Nhập tên tài khoản">
+								</div>
+								<div class="form-group">
+									<label>Mật khẩu</label>
+									<input type="password" placeholder="Mật khẩu">
+								</div>
+								<div class="form-group">
+									<label>Họ và tên</label>
+									<input type="text" placeholder="Họ và tên">
+								</div>
+								<div class="form-group">
+									<label>Giới tính</label>
+									<select>
+										<option>Nam</option>
+										<option>Nữ</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Ngày sinh</label>
+									<input type="date">
+								</div>
+								<div class="form-group address">
+									<label>Địa chỉ</label>
+									<input type="text" placeholder="Thêm địa chỉ">
+								</div>
+								<div class="form-group ">
+									<label>Email</label>
+									<input type="mail" placeholder="Thêm email">
+								</div>
+
+								<div class="form-group">
+									<label>Số điện thoại</label>
+									<input type="number" placeholder="Số điện thoại">
+								</div>
+								<div class="form-group">
+									<label>Hình ảnh</label>
+									<input type="file" accept="image/*">
+								</div>
+								<div class="form-group">
+									<label>Trạng thái</label>
+									<select>
+										<option>Đã kích hoạt</option>
+										<option selected>Chưa kích hoạt</option>
+									</select>
+								</div>
+								<div class="form-button">
+									<button class="edit-customer-button">Sửa khách hàng</button>
+									<button class="cancel-customer-button">Hủy</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				
+				
+				
+				
 					<div class="manage-customer-heading">
 						<div class="customer-heading-left">Danh sách khách hàng</div>
 						<div class="customer-heading-center">
