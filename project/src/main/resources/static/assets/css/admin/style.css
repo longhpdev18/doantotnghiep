@@ -72,7 +72,6 @@ button {
     min-height: 5rem;
     width: 100%;
     list-style: none;
-
 }
 
 .navigation-wp li a {
@@ -84,7 +83,6 @@ button {
     text-decoration: none;
     color: var(--primaryColor);
     font-weight: 600;
-        background-color: rgba(255,255,255,0.1);
 }
 
 .navigation-wp li a .icon {
@@ -97,8 +95,7 @@ button {
 }
 
 .navigation-wp li a:hover {
-    background-color: var(--whiteTransparent);
-    color: var(--darkColor);
+    background-color: rgba(0,0,0,.07);
 }
 
 /* main */
@@ -3478,31 +3475,21 @@ a {
 
 /* PROFILE */
 .content_profile {
-    /* width: 100%;
-    min-height: 40rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; */
-    /* margin-bottom: var(--spaceM); */
-    /* margin-top: calc(10rem + var(--spaceS)); */
+	width:100%;
     border-radius: var(--space5);
     margin: var(--spaceS);
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
 }
 
-/* .content__container {
+ .content__container {
     width: 100%;
     max-width: 120rem;
-    height: 100%;
     min-height: 55rem;
     display: flex;
     margin: auto;
     flex-direction: column;
 
-} */
+} 
 .profile {
     width: 100%;
     height: 100%;

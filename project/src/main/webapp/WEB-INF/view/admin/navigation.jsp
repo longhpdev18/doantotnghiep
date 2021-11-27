@@ -1,7 +1,7 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 
-<div class="navigation blur-white-md">
+<div class="navigation blur-white-lg">
 	<ul class="navigation-wp">
 		<div class="nav-header">
 			<img src="./../assets/images/logo.png" alt="" class="header-brand">
@@ -21,12 +21,12 @@
 					class="far fa-user-circle"></i>
 			</span> <span class="title">Quản lý người dùng</span>
 		</a></li>
-		<li><a href="./product-type"> <span class="icon"> <i
-					class="fas fa-users"></i>
+		<li><a href="./product-type"> <span class="icon"> 
+<i class="fas fa-list-ol"></i>
 			</span> <span class="title">Quản lý loại hàng</span>
 		</a></li>
-		<li><a href="./brand"> <span class="icon"> <i
-					class="fas fa-users"></i>
+		<li><a href="./brand"> <span class="icon">
+<i class="fas fa-tags"></i>
 			</span> <span class="title">Quản lý nhãn hiệu</span>
 		</a></li>
 		<li><a href="./staff"> <span class="icon"> <i

@@ -35,67 +35,132 @@
 		<div class="main">
 			<jsp:include page="./../topbar.jsp"></jsp:include>
 			<div class="manage-staff">
-				<div class="staff-update blur-dark">
-					<div class="staff-update-wp">
-						<div class="staff-update-heading">Cập nhật thông tin nhân
-							viên</div>
-						<form action="" class="staff-update-form">
-							<div class="form-group">
-								<label for="fullname">Họ và tên</label> <input type="text"
-									name="fullname" id="fullname" placeholder="Nhập họ và tên"
-									class="fullname" required>
-							</div>
-							<div class="form-group">
-								<label for="phone">Số điện thoại</label> <input type="number"
-									name="phone" id="phone" placeholder="Nhập số điện thoại"
-									class="phone" required>
-							</div>
-							<div class="form-group">
-								<label for="birthday">Ngày sinh</label> <input type="date"
-									name="birthday" id="birthday" placeholder="Chọn ngày sinh"
-									class="birthday" required>
-							</div>
-							<div class="form-group">
-								<label for="gender">Giới tính</label>
-								<div class="form-group-gender">
-									<div class="gender-item">
-										<input type="radio" name="gender" id="male" class="gender">
-										<label for="male">Nam</label>
-									</div>
-									<div class="gender-item">
-										<input type="radio" name="gender" id="female" class="gender">
-										<label for="female">Nữ</label>
-									</div>
+
+				<div class="manage-staff-wp">
+										
+					<div class="add-customer blur-dark">
+						<form class="form-add-customer">
+							<div class="form-heading center">Thêm khách hàng</div>
+							<div class="form-content">
+								<div class="form-group">
+									<label>Tên tài khoản</label>
+									<input id="userKH" type="text" placeholder="Nhập tên tài khoản">
 								</div>
-							</div>
-							<div class="form-group">
-								<label for="email">Địa chỉ</label> <input type="email"
-									name="email" id="email" placeholder="Nhập email" class="email"
-									required>
-							</div>
-							<div class="form-group">
-								<label for="address">Địa chỉ</label> <input type="text"
-									name="address" id="address" placeholder="Nhập địa chỉ"
-									class="address" required>
-							</div>
-							<div class="form-group">
-								<label for="position">Chức vụ</label> <input type="text"
-									name="position" id="position" class="position"
-									value="Nhân viên" readonly>
-							</div>
-							<div class="form-group">
-								<label for="image">hình ảnh</label> <input type="file"
-									name="image" id="image" class="image" accept="image/*">
-							</div>
-							<div class="update-form-button">
-								<button class="update-button-edit">Chỉnh sửa</button>
-								<button class="update-button-cancel">Hủy</button>
+								<div class="form-group">
+									<label>Mật khẩu</label>
+									<input id="passKH" type="password" placeholder="Mật khẩu">
+								</div>
+								<div class="form-group">
+									<label>Họ và tên</label>
+									<input id="fullname" type="text" placeholder="Họ và tên">
+								</div>
+								<div class="form-group">
+									<label>Giới tính</label>
+									<select id="genders">
+										<option  value="0">Nam</option>
+										<option  value="1">Nữ</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Ngày sinh</label>
+									<input id="birthday" type="date">
+								</div>
+								<div class="form-group address">
+									<label>Địa chỉ</label>
+									<input id="address" type="text" placeholder="Thêm địa chỉ">
+								</div>
+								<div class="form-group ">
+									<label>Email</label>
+									<input id="emailKH" type="mail" placeholder="Thêm email">
+								</div>
+
+								<div class="form-group">
+									<label>Số điện thoại</label>
+									<input id="phoneKH" type="number" placeholder="Số điện thoại">
+								</div>
+								<div class="form-group">
+									<label>Hình ảnh</label>
+									<input id="fileKH" type="file" accept="image/*">
+								</div>
+								<div class="form-group">
+									<label>Trạng thái</label>
+									<select id="active">
+										<option value="1">Đã kích hoạt</option>
+										<option value="0" selected>Chưa kích hoạt</option>
+									</select>
+								</div>
+								<div class="form-button">
+									<button id="add-customer" class="add-customer-button">Thêm khách hàng</button>
+									<button class="cancel-customer-button">Hủy</button>
+								</div>
 							</div>
 						</form>
 					</div>
-				</div>
+					
+					<div class="edit-staff blur-dark">
+						<form class="form-edit-staff">
+							<div class="form-heading center">Sửa khách hàng</div>
+							<div class="form-content">
+								<div class="form-group">
+									<label>Tên tài khoản</label>
+									<input type="text" placeholder="Nhập tên tài khoản">
+								</div>
+								<div class="form-group">
+									<label>Mật khẩu</label>
+									<input type="password" placeholder="Mật khẩu">
+								</div>
+								<div class="form-group">
+									<label>Họ và tên</label>
+									<input type="text" placeholder="Họ và tên">
+								</div>
+								<div class="form-group">
+									<label>Giới tính</label>
+									<select>
+										<option>Nam</option>
+										<option>Nữ</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Ngày sinh</label>
+									<input type="date">
+								</div>
+								<div class="form-group address">
+									<label>Địa chỉ</label>
+									<input type="text" placeholder="Thêm địa chỉ">
+								</div>
+								<div class="form-group ">
+									<label>Email</label>
+									<input type="mail" placeholder="Thêm email">
+								</div>
 
-				<div class="manage-staff-wp">
+								<div class="form-group">
+									<label>Số điện thoại</label>
+									<input type="number" placeholder="Số điện thoại">
+								</div>
+								<div class="form-group">
+									<label>Hình ảnh</label>
+									<input type="file" accept="image/*">
+								</div>
+								<div class="form-group">
+									<label>Trạng thái</label>
+									<select>
+										<option>Đã kích hoạt</option>
+										<option selected>Chưa kích hoạt</option>
+									</select>
+								</div>
+								<div class="form-button">
+									<button class="edit-staff-button">Sửa khách hàng</button>
+									<button class="cancel-customer-button">Hủy</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				
+				
+				
+				
+				
+				
 					<div class="manage-staff-heading">
 						<div class="staff-heading-left">Danh sách nhân viên</div>
 						<div class="staff-heading-center">
