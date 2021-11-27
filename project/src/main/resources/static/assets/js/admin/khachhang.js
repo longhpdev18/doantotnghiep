@@ -5,13 +5,13 @@ $('#add-customer').click(function(e) {
 	var tendangnhap = $('#userKH').val();
 	var matkhau = $('#passKH').val();
 	var fullname = $('#fullname').val();
-	var gioitinh = $('#genders :selected').val();
+	var gioitinh = parseInt($('#genders :selected').val());
 	var birthday = Date.parse($('#birthday').val());
 	var diachi = $('#address').val();
 	var email = $('#emailKH').val();
 	var hinh = $('#fileKH')[0].files[0].name;
 	var sodienthoai = $('#phoneKH').val();
-	var active = $('#active :selected').val();
+	var active = parseInt($('#active :selected').val());
 	$.ajax({
 		url: '/admin/customer/add',
 		type: 'POST',

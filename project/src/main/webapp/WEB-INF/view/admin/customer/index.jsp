@@ -34,7 +34,7 @@
 				
 					
 					<div class="add-customer blur-dark">
-						<form class="form-add-customer">
+						<form class="form-add-customer" enctype=multipart/form-data>
 							<div class="form-heading center">Thêm khách hàng</div>
 							<div class="form-content">
 								<div class="form-group">
@@ -53,7 +53,7 @@
 									<label>Giới tính</label>
 									<select id="genders">
 										<option  value="0">Nam</option>
-										<option  value="1">Nữ</option>
+										<option  value="1">"Nữ</option>
 									</select>
 								</div>
 								<div class="form-group">

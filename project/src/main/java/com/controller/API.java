@@ -86,10 +86,7 @@ public class API {
 
 
 	@RequestMapping(value = "customer/add", method = RequestMethod.POST)
-	public  KhachHang createKhachHang(@RequestParam(value = "tendangnhap") String tendangnhap, @RequestParam String matkhau,
-			@RequestParam String fullname, @RequestParam Boolean gioitinh, @RequestParam Date ngaysinh,@RequestParam String diachi,
-			@RequestParam String email, @RequestParam int sodienthoai, @RequestParam Boolean active,
-			@RequestParam("hinh") MultipartFile imageFile)
+	public  KhachHang createKhachHang(@RequestBody KhachHang KH, @RequestParam("hinh") MultipartFile imageFile)
 			throws IOException {
 		Path staticPath = Paths.get("src/main/resources/static");
 		Path imagePath = Paths.get("images");
@@ -102,16 +99,16 @@ public class API {
 			os.write(imageFile.getBytes());
 		}
 		KhachHang kh = new KhachHang();
-		kh.setTendangnhap(tendangnhap);
-		kh.setMatkhau(matkhau);
-		kh.setFullname(fullname);
-		kh.setGioitinh(gioitinh);
-		kh.setNgaysinh(ngaysinh);
-		kh.setDiachi(diachi);
-		kh.setEmail(email);
-		kh.setSodienthoai(sodienthoai);
+		kh.setTendangnhap(KH.getTendangnhap());
+		kh.setMatkhau(KH.getMatkhau());
+		kh.setFullname(KH.getFullname());
+		kh.setGioitinh(KH.isGioitinh());
+		kh.setNgaysinh(KH.getNgaysinh());
+		kh.setDiachi(KH.getDiachi());
+		kh.setEmail(KH.getEmail());
+		kh.setSodienthoai(KH.getSodienthoai());
 		kh.setHinh(imagePath.resolve(imageFile.getOriginalFilename()).toString());
-		kh.setActive(active);
+		kh.setActive(KH.isActive());
 		return khachhangDAO.save(kh);
 	}
 
