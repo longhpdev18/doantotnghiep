@@ -12,28 +12,30 @@ $('.gender-option').click(function(){
 })
 $('.btn-save').click(function(e){
     e.preventDefault();
-    var maNV= $('.profile-id').val()
+   // var maNV= $('.profile-id').val();
+    var maNV = $("#MaNV").text();
     var username = $('#usernameProfile').val();
     var password = $('#passwordProfile').val();
     var fullname = $('#fullnameProfile').val();
     var birthday = Date.parse($('#birthdayProfile').val());
     var genders ;
     if($('#gender-valueProfile').text()=='Nam'){
-        genders=0;
+        genders=1;
         
     }else
     {
-        genders=1;
+        genders=0;
     }
-    var sodienthoai = $('#phoneProfile').val();
-    var address = $('#addressProfile').val();
-    var email = $('#emailProfile').val();
+    var sodienthoai = $('#phone').val();
+    var address = $('#address').val();
+    var email = $('#email').val();
     $.ajax({
         url:'/updateProfileAD',
         type:'POST',
         contentType:'application/json',
         data:JSON.stringify(
             {
+            	'manv':maNV,
                 'tendangnhap':username,
                 'matkhau':password,
                 'fullname':fullname,

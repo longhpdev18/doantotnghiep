@@ -39,53 +39,53 @@
 							<div class="form-content">
 								<div class="form-group">
 									<label>Tên tài khoản</label>
-									<input type="text" placeholder="Nhập tên tài khoản">
+									<input id="userKH" type="text" placeholder="Nhập tên tài khoản">
 								</div>
 								<div class="form-group">
 									<label>Mật khẩu</label>
-									<input type="password" placeholder="Mật khẩu">
+									<input id="passKH" type="password" placeholder="Mật khẩu">
 								</div>
 								<div class="form-group">
 									<label>Họ và tên</label>
-									<input type="text" placeholder="Họ và tên">
+									<input id="fullname" type="text" placeholder="Họ và tên">
 								</div>
 								<div class="form-group">
 									<label>Giới tính</label>
-									<select>
-										<option>Nam</option>
-										<option>Nữ</option>
+									<select id="genders">
+										<option  value="0">Nam</option>
+										<option  value="1">Nữ</option>
 									</select>
 								</div>
 								<div class="form-group">
 									<label>Ngày sinh</label>
-									<input type="date">
+									<input id="birthday" type="date">
 								</div>
 								<div class="form-group address">
 									<label>Địa chỉ</label>
-									<input type="text" placeholder="Thêm địa chỉ">
+									<input id="address" type="text" placeholder="Thêm địa chỉ">
 								</div>
 								<div class="form-group ">
 									<label>Email</label>
-									<input type="mail" placeholder="Thêm email">
+									<input id="emailKH" type="mail" placeholder="Thêm email">
 								</div>
 
 								<div class="form-group">
 									<label>Số điện thoại</label>
-									<input type="number" placeholder="Số điện thoại">
+									<input id="phoneKH" type="number" placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
 									<label>Hình ảnh</label>
-									<input type="file" accept="image/*">
+									<input id="fileKH" type="file" accept="image/*">
 								</div>
 								<div class="form-group">
 									<label>Trạng thái</label>
-									<select>
-										<option>Đã kích hoạt</option>
-										<option selected>Chưa kích hoạt</option>
+									<select id="active">
+										<option value="1">Đã kích hoạt</option>
+										<option value="0" selected>Chưa kích hoạt</option>
 									</select>
 								</div>
 								<div class="form-button">
-									<button class="add-customer-button">Thêm khách hàng</button>
+									<button id="add-customer" class="add-customer-button">Thêm khách hàng</button>
 									<button class="cancel-customer-button">Hủy</button>
 								</div>
 							</div>
@@ -266,5 +266,6 @@
 <script src="../assets/js/admin/testAPI.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="../assets/js/admin/app.js"></script>
+<script src="../assets/js/admin/khachhang.js"></script>
 <script src="../assets/js/admin/hovered.js"></script>
 </html>

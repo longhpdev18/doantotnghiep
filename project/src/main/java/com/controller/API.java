@@ -1,7 +1,7 @@
 package com.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Date;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;
@@ -35,6 +36,7 @@ import com.repository.NhanVienDAO;
 import com.repository.SanPhamDAO;
 
 @RestController
+@RequestMapping("admin")
 public class API {
 
 	@Autowired
@@ -47,15 +49,16 @@ public class API {
 	KhachHangDAO khachhangDAO;
 
 	private static final Path CURRENT_FOLDER = Paths.get(System.getProperty("user.dir"));
-	
-	@Autowired
-    private SanPhamDAO sanphamDAO;
 
-	//@ResponseStatus(code = HttpStatus.CREATED)
+	@Autowired
+	private SanPhamDAO sanphamDAO;
+
+	// @ResponseStatus(code = HttpStatus.CREATED)
 	@RequestMapping(value = "product/add", method = RequestMethod.POST)
 	public SanPham createSanPham(@RequestParam String tensp, @RequestParam int maloai, @RequestParam int manh,
-			@RequestParam Double gia, @RequestParam String mota, @RequestParam boolean tinhtrang, @RequestParam("hinh") MultipartFile imageFile) throws IOException {
-		
+			@RequestParam Double gia, @RequestParam String mota, @RequestParam boolean tinhtrang,
+			@RequestParam("hinh") MultipartFile imageFile) throws IOException {
+
 		Path staticPath = Paths.get("src/main/resources/static");
 		Path imagePath = Paths.get("images");
 		if (!Files.exists(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath))) {
@@ -75,35 +78,61 @@ public class API {
 		sp.setMota(mota);
 		sp.setTinhtrang(tinhtrang);
 		sp.setHinh(imagePath.resolve(imageFile.getOriginalFilename()).toString());
-		
+
 		mess.setValue("ok");
-		
+
 		return sanphamDAO.save(sp);
 	}
-	
+
+
+	@RequestMapping(value = "customer/add", method = RequestMethod.POST)
+	public  KhachHang createKhachHang(@RequestParam(value = "tendangnhap") String tendangnhap, @RequestParam String matkhau,
+			@RequestParam String fullname, @RequestParam Boolean gioitinh, @RequestParam Date ngaysinh,@RequestParam String diachi,
+			@RequestParam String email, @RequestParam int sodienthoai, @RequestParam Boolean active,
+			@RequestParam("hinh") MultipartFile imageFile)
+			throws IOException {
+		Path staticPath = Paths.get("src/main/resources/static");
+		Path imagePath = Paths.get("images");
+		if (!Files.exists(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath))) {
+			Files.createDirectories(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath));
+		}
+
+		Path file = CURRENT_FOLDER.resolve(staticPath).resolve(imagePath).resolve(imageFile.getOriginalFilename());
+		try (OutputStream os = Files.newOutputStream(file)) {
+			os.write(imageFile.getBytes());
+		}
+		KhachHang kh = new KhachHang();
+		kh.setTendangnhap(tendangnhap);
+		kh.setMatkhau(matkhau);
+		kh.setFullname(fullname);
+		kh.setGioitinh(gioitinh);
+		kh.setNgaysinh(ngaysinh);
+		kh.setDiachi(diachi);
+		kh.setEmail(email);
+		kh.setSodienthoai(sodienthoai);
+		kh.setHinh(imagePath.resolve(imageFile.getOriginalFilename()).toString());
+		kh.setActive(active);
+		return khachhangDAO.save(kh);
+	}
+
 	@PostMapping("nhanvien/add")
-	public NhanVien createNhanVien(@Validated @RequestBody NhanVien nhanvien) {
+	public NhanVien createKhachHang(@Validated @RequestParam NhanVien nhanvien) {
 		return nhanvienDAO.save(nhanvien);
 	}
 
-	@PostMapping("khachhang/add")
-	public KhachHang createKhachHang(@Validated @RequestBody KhachHang khachhang) {
-		return khachhangDAO.save(khachhang);
-	}
-
 	@PostMapping("loaihang/add")
-	public LoaiHang createLoaiHang(@Validated @RequestBody LoaiHang loaihang) {
+	public LoaiHang createLoaiHang(@Validated @RequestParam LoaiHang loaihang) {
 		return loaihangDAO.save(loaihang);
 	}
 
 	@PostMapping("nhanhieu/add")
-	public NhanHieu createNhanHieu(@Validated @RequestBody NhanHieu nhanhieu) {
+	public NhanHieu createNhanHieu(@Validated @RequestParam NhanHieu nhanhieu) {
 		return nhanhieuDAO.save(nhanhieu);
 	}
-	
+
 	@PutMapping("SanPham/edit/{masp}")
 	public ResponseEntity<SanPham> edit(@PathVariable(value = "masp") Integer masp,
-			@Validated @RequestBody SanPham SanPhamDetails) throws ResourceNotFoundException {
+			@Validated @RequestParam SanPham SanPhamDetails) throws ResourceNotFoundException {
 		SanPham SanPham = sanphamDAO.findById(masp)
 				.orElseThrow(() -> new ResourceNotFoundException("Khách hàng này không tồn tại: " + masp));
 		SanPham.setTensp(SanPhamDetails.getTensp());
@@ -118,10 +147,10 @@ public class API {
 
 		return ResponseEntity.ok(edit);
 	}
-	
+
 	@PutMapping("nhanvien/edit/{manv}")
 	public ResponseEntity<NhanVien> edit(@PathVariable(value = "manv") Long manv,
-			@Validated @RequestBody NhanVien nhanvienDetails) throws ResourceNotFoundException {
+			@Validated @RequestParam NhanVien nhanvienDetails) throws ResourceNotFoundException {
 		NhanVien nhanvien = nhanvienDAO.findById(manv)
 				.orElseThrow(() -> new ResourceNotFoundException("Nhân viên này không tồn tại: " + manv));
 		nhanvien.setTendangnhap(nhanvienDetails.getTendangnhap());
@@ -139,9 +168,10 @@ public class API {
 
 		return ResponseEntity.ok(edit);
 	}
+
 	@PutMapping("KhachHang/edit/{manv}")
 	public ResponseEntity<KhachHang> edit(@PathVariable(value = "manv") Long manv,
-			@Validated @RequestBody KhachHang KhachHangDetails) throws ResourceNotFoundException {
+			@Validated @RequestParam KhachHang KhachHangDetails) throws ResourceNotFoundException {
 		KhachHang KhachHang = khachhangDAO.findById(manv)
 				.orElseThrow(() -> new ResourceNotFoundException("Khách hàng này không tồn tại: " + manv));
 		KhachHang.setTendangnhap(KhachHangDetails.getTendangnhap());
@@ -159,5 +189,5 @@ public class API {
 
 		return ResponseEntity.ok(edit);
 	}
-	
+
 }

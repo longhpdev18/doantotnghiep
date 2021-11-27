@@ -45,7 +45,9 @@
 									</div>
 
 								</div>
-								<p class="profile-id">#${maNV}</p>
+								<p class="profile-id">#
+								<label id="MaNV">${maNV}</label>
+								</p> 
 							</div>
 							<div class="profile-right">
 								<h1 class="profile-title">Thông tin cá nhân</h1>
@@ -59,7 +61,7 @@
 										<div class="form-group-col2 flex-col ml-m">
 											<label for="password"> Mật khẩu: </label> <input
 												type="password" name="password" id="passwordProfile"
-												class="txtPassword" placeholder="${matkhau}">
+												class="txtPassword" value="${matkhau}">
 										</div>
 									</div>
 									<div class="form-group flex-row">
