@@ -103,7 +103,7 @@ $('.add-product').click(function(e) {
 	var hinhName = $('#fileSP')[0].files[0].name;
 	var dealName = $('#deal').val();
 	$.ajax({
-		url: '/product/add',
+		url: '/admin/product/add',
 		type: 'POST',
 		contentType: 'application/json',
 		data: JSON.stringify(

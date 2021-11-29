@@ -85,19 +85,20 @@ public class API {
 	}
 
 
-	@RequestMapping(value = "customer/add", method = RequestMethod.POST)
-	public  KhachHang createKhachHang(@RequestBody KhachHang KH, @RequestParam("hinh") MultipartFile imageFile)
+	//@RequestMapping(value = "customer/add", method = RequestMethod.POST)
+	@PostMapping("customer/add")
+	public  KhachHang createKhachHang(@RequestBody KhachHang KH)
 			throws IOException {
-		Path staticPath = Paths.get("src/main/resources/static");
-		Path imagePath = Paths.get("images");
-		if (!Files.exists(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath))) {
-			Files.createDirectories(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath));
-		}
-
-		Path file = CURRENT_FOLDER.resolve(staticPath).resolve(imagePath).resolve(imageFile.getOriginalFilename());
-		try (OutputStream os = Files.newOutputStream(file)) {
-			os.write(imageFile.getBytes());
-		}
+//		Path staticPath = Paths.get("src/main/resources/static");
+//		Path imagePath = Paths.get("images");
+//		if (!Files.exists(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath))) {
+//			Files.createDirectories(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath));
+//		}
+//
+//		Path file = CURRENT_FOLDER.resolve(staticPath).resolve(imagePath).resolve(imageFile.getOriginalFilename());
+//		try (OutputStream os = Files.newOutputStream(file)) {
+//			os.write(imageFile.getBytes());
+//		}
 		KhachHang kh = new KhachHang();
 		kh.setTendangnhap(KH.getTendangnhap());
 		kh.setMatkhau(KH.getMatkhau());
@@ -107,13 +108,14 @@ public class API {
 		kh.setDiachi(KH.getDiachi());
 		kh.setEmail(KH.getEmail());
 		kh.setSodienthoai(KH.getSodienthoai());
-		kh.setHinh(imagePath.resolve(imageFile.getOriginalFilename()).toString());
+		//kh.setHinh(imagePath.resolve(imageFile.getOriginalFilename()).toString());
+		kh.setHinh(KH.getHinh());
 		kh.setActive(KH.isActive());
 		return khachhangDAO.save(kh);
 	}
 
 	@PostMapping("nhanvien/add")
-	public NhanVien createKhachHang(@Validated @RequestParam NhanVien nhanvien) {
+	public NhanVien createKhachHang(@Validated @RequestBody NhanVien nhanvien) {
 		return nhanvienDAO.save(nhanvien);
 	}
 
