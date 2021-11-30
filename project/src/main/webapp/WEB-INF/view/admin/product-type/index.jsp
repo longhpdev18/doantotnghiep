@@ -23,6 +23,8 @@
 <!--LINE AWSOME-->
 <link rel="stylesheet"
 	href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
 </head>
 <body>
 	<div class="container">
@@ -39,26 +41,26 @@
 						<form action="" class="fAdd-product">
 							<div class="input_form">
 								<label for="nameproduct" class="name">Tên </label> <input
-									type="text" name="nameproduct" placeholder="Tên nhãn hiệu"
-									required>
+									type="text" id="nameProductType" name="nameproduct"
+									placeholder="Tên loại hàng" required>
 							</div>
 							<div class="group-button-add">
-								<button class="add-product">Thêm</button>
+								<button class="add-ProductType">Thêm</button>
 								<button class="add-cancel">Hủy</button>
 							</div>
 						</form>
-						
+
 						<div class="add_product-heading">Cập nhật loại hàng</div>
-						
+
 						<form action="" class="fAdd-product">
-						<div class="input_form">
-								<label for="nameproduct" class="name">Mã nhãn hiệu </label> <input
-									type="text" name="nameproduct" placeholder="Mã loại hàng"
+							<div class="input_form">
+								<label for="nameproduct" class="name">Mã loại hàng </label> <input
+									type="text" id="idLH" name="nameproduct" placeholder="Mã loại hàng"
 									required>
 							</div>
 							<div class="input_form">
-								<label for="nameproduct" class="name">Tên </label> <input
-									type="text" name="nameproduct" placeholder="Tên loại hàng"
+								<label for="nameproduct" class="name">Tên loại hàng </label> <input
+									type="text" id="nameLH" name="nameproduct" placeholder="Tên loại hàng"
 									required>
 							</div>
 							<div class="group-button-add">
@@ -74,53 +76,21 @@
 							<tr>
 								<th>Mã loại hàng</th>
 								<th>Tên loại hàng</th>
-								<!-- <th>Giá</th>
-                                <th>Trạng thái</th> -->
-								<!-- <th>Loại</th> -->
-								<!-- <th>Hình ảnh</th> -->
 								<th></th>
 							</tr>
-							<tr>
-								<td>1</td>
-								<td>Start Refrigerator</td>
-								<!-- <td>$1200</td>
-                                <td>Mới</td> -->
-
-								<!-- <td><span class="status delivered">Bàn phím</span></td> -->
-								<!-- <td>
-                                    <div class="images">
-                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
-                                            width="50px">
-                                    </div>
-                                </td> -->
-								<td>
-									<div class="btn-brand">
-										<button class="edit-btn-brand">Sửa</button>
-										<button class="delete-btn-brand">Xóa</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>Start Refrigerator</td>
-								<!-- <td>$1200</td>
-                                <td>Mới</td> -->
-
-								<!-- <td><span class="status delivered">Bàn phím</span></td> -->
-								<!-- <td>
-                                    <div class="images">
-                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
-                                            width="50px">
-                                    </div>
-                                </td> -->
-								<td>
-									<div class="btn-brand">
-										<button class="edit-btn-brand">Sửa</button>
-										<button class="delete-btn-brand">Xóa</button>
-									</div>
-								</td>
-							</tr>
-
+							<c:forEach var="item" items="${listLH}">
+								<tr>
+									<td>${item.maloai}</td>
+									<td>${item.tenloai}</td>
+									<td>
+										<div class="btn-brand">
+											<button class="edit-btn-brand" onclick="editLH(${item.maloai})">Sửa</button>
+											<button class="delete-btn-brand"
+												onclick="delectLH(${item.maloai})">Xóa</button>
+										</div>
+									</td>
+								</tr>
+							</c:forEach>
 						</table>
 					</div>
 				</div>
@@ -131,7 +101,9 @@
 </body>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="../assets/js/admin/testAPI.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../assets/js/admin/loaihang.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="../assets/js/admin/app.js"></script>
 <script src="../assets/js/admin/hovered.js"></script>

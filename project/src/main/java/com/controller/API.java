@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -17,6 +19,8 @@ import org.springframework.web.multipart.MultipartFile;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;
@@ -120,73 +124,105 @@ public class API {
 	}
 
 	@PostMapping("loaihang/add")
-	public LoaiHang createLoaiHang(@Validated @RequestParam LoaiHang loaihang) {
+	@ResponseBody
+	public LoaiHang createLoaiHang(@Validated @RequestBody LoaiHang loaihang) {
 		return loaihangDAO.save(loaihang);
 	}
-
+	
+	@GetMapping("loaihang/delete/{maloai}")
+	@ResponseBody
+	public String deleteLoaiHang(@PathVariable long maloai) {
+		loaihangDAO.deleteById(maloai);
+		return "ok";
+	}
+	
+	@GetMapping("getOneLH/{maloai}")
+	public String getOneLH(@PathVariable(value = "maloai") long maloai) {
+		 loaihangDAO.getById(maloai);
+		 return"ok";
+	}
+	
 	@PostMapping("nhanhieu/add")
-	public NhanHieu createNhanHieu(@Validated @RequestParam NhanHieu nhanhieu) {
+	@ResponseBody
+	public NhanHieu createNhanHieu(@Validated @RequestBody NhanHieu nhanhieu) {
 		return nhanhieuDAO.save(nhanhieu);
 	}
 
-	@PutMapping("SanPham/edit/{masp}")
-	public ResponseEntity<SanPham> edit(@PathVariable(value = "masp") Integer masp,
-			@Validated @RequestParam SanPham SanPhamDetails) throws ResourceNotFoundException {
-		SanPham SanPham = sanphamDAO.findById(masp)
-				.orElseThrow(() -> new ResourceNotFoundException("Khách hàng này không tồn tại: " + masp));
-		SanPham.setTensp(SanPhamDetails.getTensp());
-		SanPham.setMaloai(SanPhamDetails.getMaloai());
-		SanPham.setManh(SanPhamDetails.getManh());
-		SanPham.setGia(SanPhamDetails.getGia());
-		SanPham.setMota(SanPhamDetails.getMota());
-		SanPham.setTinhtrang(SanPhamDetails.getTinhtrang());
-		SanPham.setHinh(SanPhamDetails.getHinh());
-
-		final SanPham edit = sanphamDAO.save(SanPham);
-
-		return ResponseEntity.ok(edit);
-	}
-
-	@PutMapping("nhanvien/edit/{manv}")
-	public ResponseEntity<NhanVien> edit(@PathVariable(value = "manv") Long manv,
-			@Validated @RequestParam NhanVien nhanvienDetails) throws ResourceNotFoundException {
-		NhanVien nhanvien = nhanvienDAO.findById(manv)
-				.orElseThrow(() -> new ResourceNotFoundException("Nhân viên này không tồn tại: " + manv));
-		nhanvien.setTendangnhap(nhanvienDetails.getTendangnhap());
-		nhanvien.setMatkhau(nhanvienDetails.getMatkhau());
-		nhanvien.setChucvu(nhanvienDetails.isChucvu());
-		nhanvien.setFullname(nhanvienDetails.getFullname());
-		nhanvien.setNgaysinh(nhanvienDetails.getNgaysinh());
-		nhanvien.setGioitinh(nhanvien.isGioitinh());
-		nhanvien.setDiachi(nhanvienDetails.getDiachi());
-		nhanvien.setEmail(nhanvienDetails.getEmail());
-		nhanvien.setSodienthoai(nhanvienDetails.getSodienthoai());
-		nhanvien.setHinh(nhanvienDetails.getHinh());
-
-		final NhanVien edit = nhanvienDAO.save(nhanvien);
-
-		return ResponseEntity.ok(edit);
-	}
-
-	@PutMapping("KhachHang/edit/{manv}")
-	public ResponseEntity<KhachHang> edit(@PathVariable(value = "manv") Long manv,
-			@Validated @RequestParam KhachHang KhachHangDetails) throws ResourceNotFoundException {
-		KhachHang KhachHang = khachhangDAO.findById(manv)
-				.orElseThrow(() -> new ResourceNotFoundException("Khách hàng này không tồn tại: " + manv));
-		KhachHang.setTendangnhap(KhachHangDetails.getTendangnhap());
-		KhachHang.setMatkhau(KhachHangDetails.getMatkhau());
-		KhachHang.setFullname(KhachHangDetails.getFullname());
-		KhachHang.setNgaysinh(KhachHangDetails.getNgaysinh());
-		KhachHang.setGioitinh(KhachHang.isGioitinh());
-		KhachHang.setDiachi(KhachHangDetails.getDiachi());
-		KhachHang.setActive(KhachHangDetails.isActive());
-		KhachHang.setEmail(KhachHangDetails.getEmail());
-		KhachHang.setSodienthoai(KhachHangDetails.getSodienthoai());
-		KhachHang.setHinh(KhachHangDetails.getHinh());
-
-		final KhachHang edit = khachhangDAO.save(KhachHang);
-
-		return ResponseEntity.ok(edit);
-	}
+//	@PutMapping("SanPham/edit/{masp}")
+//	public ResponseEntity<SanPham> edit(@PathVariable(value = "masp") Integer masp,
+//			@Validated @RequestParam SanPham SanPhamDetails) throws ResourceNotFoundException {
+//		SanPham SanPham = sanphamDAO.findById(masp)
+//				.orElseThrow(() -> new ResourceNotFoundException("Khách hàng này không tồn tại: " + masp));
+//		SanPham.setTensp(SanPhamDetails.getTensp());
+//		SanPham.setMaloai(SanPhamDetails.getMaloai());
+//		SanPham.setManh(SanPhamDetails.getManh());
+//		SanPham.setGia(SanPhamDetails.getGia());
+//		SanPham.setMota(SanPhamDetails.getMota());
+//		SanPham.setTinhtrang(SanPhamDetails.getTinhtrang());
+//		SanPham.setHinh(SanPhamDetails.getHinh());
+//
+//		final SanPham edit = sanphamDAO.save(SanPham);
+//
+//		return ResponseEntity.ok(edit);
+//	}
+//
+//	@PutMapping("nhanvien/edit/{manv}")
+//	public ResponseEntity<NhanVien> edit(@PathVariable(value = "manv") Long manv,
+//			@Validated @RequestParam NhanVien nhanvienDetails) throws ResourceNotFoundException {
+//		NhanVien nhanvien = nhanvienDAO.findById(manv)
+//				.orElseThrow(() -> new ResourceNotFoundException("Nhân viên này không tồn tại: " + manv));
+//		nhanvien.setTendangnhap(nhanvienDetails.getTendangnhap());
+//		nhanvien.setMatkhau(nhanvienDetails.getMatkhau());
+//		nhanvien.setChucvu(nhanvienDetails.isChucvu());
+//		nhanvien.setFullname(nhanvienDetails.getFullname());
+//		nhanvien.setNgaysinh(nhanvienDetails.getNgaysinh());
+//		nhanvien.setGioitinh(nhanvien.isGioitinh());
+//		nhanvien.setDiachi(nhanvienDetails.getDiachi());
+//		nhanvien.setEmail(nhanvienDetails.getEmail());
+//		nhanvien.setSodienthoai(nhanvienDetails.getSodienthoai());
+//		nhanvien.setHinh(nhanvienDetails.getHinh());
+//
+//		final NhanVien edit = nhanvienDAO.save(nhanvien);
+//
+//		return ResponseEntity.ok(edit);
+//	}
+//
+//	@PutMapping("KhachHang/edit/{manv}")
+//	public ResponseEntity<KhachHang> edit(@PathVariable(value = "manv") Long manv,
+//			@Validated @RequestParam KhachHang KhachHangDetails) throws ResourceNotFoundException {
+//		KhachHang KhachHang = khachhangDAO.findById(manv)
+//				.orElseThrow(() -> new ResourceNotFoundException("Khách hàng này không tồn tại: " + manv));
+//		KhachHang.setTendangnhap(KhachHangDetails.getTendangnhap());
+//		KhachHang.setMatkhau(KhachHangDetails.getMatkhau());
+//		KhachHang.setFullname(KhachHangDetails.getFullname());
+//		KhachHang.setNgaysinh(KhachHangDetails.getNgaysinh());
+//		KhachHang.setGioitinh(KhachHang.isGioitinh());
+//		KhachHang.setDiachi(KhachHangDetails.getDiachi());
+//		KhachHang.setActive(KhachHangDetails.isActive());
+//		KhachHang.setEmail(KhachHangDetails.getEmail());
+//		KhachHang.setSodienthoai(KhachHangDetails.getSodienthoai());
+//		KhachHang.setHinh(KhachHangDetails.getHinh());
+//
+//		final KhachHang edit = khachhangDAO.save(KhachHang);
+//
+//		return ResponseEntity.ok(edit);
+//	}
+	
+//	@DeleteMapping("delete/{maloai}")
+//	public LoaiHang deleteLoaiHang(@PathVariable(value = "maloai") long maloai) {
+//		loaihangDAO.deleteById(maloai);
+//		return 
+//	}
+	
+//	@DeleteMapping("loaihang/delete")
+//	public LoaiHang deleteLoaiHang(@RequestBody LoaiHang loaihang ){
+//		
+//		LoaiHang lh = new LoaiHang();
+//		lh.setMaloai(loaihang.getMaloai());
+//		
+//		return loaihangDAO.deleteById(lh);
+//
+//	
+//	}
 
 }

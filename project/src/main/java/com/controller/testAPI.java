@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -55,11 +57,11 @@ public class testAPI {
 	public Message load(Model model) {
 		Message mess = new Message();
 		Pageable pageable = PageRequest.of(0, 8);
-//		Page<NhanHieu> listNH = nhanhieuDAO.findAll(pageable);
-//		sessionService.set("listNH",listNH);
-//		
-//		Page<LoaiHang> listLH = loaihangDAO.findAll(pageable);
-//		sessionService.set("listLH",listLH);
+		List<NhanHieu> listNH = nhanhieuDAO.findAll();
+		sessionService.set("listNH",listNH);
+		
+		List<LoaiHang> listLH = loaihangDAO.findAll();
+		sessionService.set("listLH",listLH);
 		
 		Page<NhanVien> listNV = nhanvienDAO.findAll(pageable);
 		sessionService.set("listNV",listNV);

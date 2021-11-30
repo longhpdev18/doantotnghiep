@@ -74,25 +74,12 @@
 							<tr>
 								<th>Mã NH</th>
 								<th>Tên nhãn hiệu</th>
-								<!-- <th>Giá</th>
-                                <th>Trạng thái</th> -->
-								<!-- <th>Loại</th> -->
-								<!-- <th>Hình ảnh</th> -->
 								<th></th>
 							</tr>
+							<c:forEach var="item" items="${listNH}" >
 							<tr>
-								<td>1</td>
-								<td>Start Refrigerator</td>
-								<!-- <td>$1200</td>
-                                <td>Mới</td> -->
-
-								<!-- <td><span class="status delivered">Bàn phím</span></td> -->
-								<!-- <td>
-                                    <div class="images">
-                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
-                                            width="50px">
-                                    </div>
-                                </td> -->
+								<td>${item.manh}</td>
+								<td>${item.tennh}</td>
 								<td>
 									<div class="btn-brand">
 										<button class="edit-btn-brand">Sửa</button>
@@ -100,27 +87,7 @@
 									</div>
 								</td>
 							</tr>
-							<tr>
-								<td>1</td>
-								<td>Start Refrigerator</td>
-								<!-- <td>$1200</td>
-                                <td>Mới</td> -->
-
-								<!-- <td><span class="status delivered">Bàn phím</span></td> -->
-								<!-- <td>
-                                    <div class="images">
-                                        <img src="https://betanews.com/wp-content/uploads/2014/11/front.jpg" alt=""
-                                            width="50px">
-                                    </div>
-                                </td> -->
-								<td>
-									<div class="btn-brand">
-										<button class="edit-btn-brand">Sửa</button>
-										<button class="delete-btn-brand">Xóa</button>
-									</div>
-								</td>
-							</tr>
-
+							</c:forEach>
 						</table>
 					</div>
 				</div>

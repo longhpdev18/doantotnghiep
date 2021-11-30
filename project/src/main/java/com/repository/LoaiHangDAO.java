@@ -8,4 +8,6 @@ import com.model.LoaiHang;
 @Repository
 public interface LoaiHangDAO  extends JpaRepository<LoaiHang, Long> {
 
+
+
 }
