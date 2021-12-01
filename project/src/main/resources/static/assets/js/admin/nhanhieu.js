@@ -1,7 +1,7 @@
 $(window).on('load', getData())
 function loadData() {
 	$.ajax({
-		url: '/loaihang',
+		url: '/nhanhieu',
 		type: 'GET',
 		contentType: 'application/json',
 		data: JSON.stringify(
@@ -21,7 +21,7 @@ function loadData() {
 }
 function getData() {
 	$.ajax({
-		url: '/getDataLH',
+		url: '/getDataNH',
 		type: 'GET',
 		contentType: 'application/json',
 		data: JSON.stringify(
@@ -40,22 +40,22 @@ function getData() {
 
 	})
 }
-$('#add-ProductType').click(function(e) {
+$('#addNH').click(function(e) {
 	e.preventDefault();
 
-	var tenloai = $('#nameLH').val();
-	if(tenloai == null || tenloai == ""){
-		toastr.success('Tên loại không được để trống');
+	var tennh = $('#nameNH').val();
+	if(tennh == null || tennh == ""){
+		toastr.success('Tên nhãn hiệu không được để trống');
 		return false;
 	}
 
 	$.ajax({
-		url: '/admin/loaihang/add',
+		url: '/admin/nhanhieu/add',
 		type: 'POST',
 		contentType: 'application/json',
 		data: JSON.stringify(
 			{
-				"tenloai": tenloai,
+				"tennh": tennh,
 			}
 		),
 		dataType: 'json',
@@ -76,7 +76,7 @@ $('#add-ProductType').click(function(e) {
 function editLH(maloai) {
 	$.ajax({
 		type: "GET",
-		url: "/admin/getOneLH/" + maloai,
+		url: "/admin/getOneNH/" + maloai,
 		contentType: 'application/json',
 		success: function() {
 			$("#idLH").val(maloai),
@@ -89,21 +89,21 @@ function editLH(maloai) {
 }
 
 
-$('#updateLH').click(function(e) {
+$('#updateNH').click(function(e) {
 	e.preventDefault();
-	var maloai = parseInt($("#idLH").val());
-	var tenloai = $("#nameLH").val();
-	if(tenloai == null || tenloai == ""){
+	var manh = parseInt($("#idNH").val());
+	var tennh = $("#nameNH").val();
+	if(tennh == null || tennh == ""){
 		toastr.success('Tên loại không được để trống');
 		return false;
 	}
 	$.ajax({
-		url: '/admin/updateLH',
+		url: '/admin/updateNH',
 		type: 'POST',
 		contentType: 'application/json',
 		data: JSON.stringify({
-			maloai: maloai,
-			tenloai: tenloai
+			manh: manh,
+			tennh: tennh
 		}),
 		success: function() {
 			toastr.success('Cập nhật thành công!');
@@ -117,29 +117,11 @@ $('#updateLH').click(function(e) {
 	});
 })
 
-/*function editLH(maloai) {
-	$.ajax({
-		type: "GET",
-		url: "/admin/getOneLH/" + maloai,
-		dataType: 'json',
-		success: function(response) {
-			//alert("student--"+response.id);
-			$("#idLH").val(response.maloai),
-			$("#nameLH").val(response.tenloai)
-		//	$('#saveStudent').hide();
-		//	$('#updateStudent').show();
-		//	$('#idfield').show();
-		},
-		error: function(err) {
-			alert("error is" + err)
-		}
-	});
-}*/
 
 
-function delectLH(maloai) {
+function delectNH(manh) {
 	$.ajax({
-		url: '/admin/loaihang/delete/' + maloai,
+		url: '/admin/nhanhieu/delete/' + manh,
 		success: function(result) {
 			toastr.success('Xóa thành công!');
 			setTimeout(function() {

@@ -38,21 +38,8 @@
 				<div class="manage-product-wp">
 					<div class="add_product">
 						<div class="add_product-heading">Thêm loại hàng</div>
-						<form action="" class="fAdd-product">
-							<div class="input_form">
-								<label for="nameproduct" class="name">Tên </label> <input
-									type="text" id="nameProductType" name="nameproduct"
-									placeholder="Tên loại hàng" required>
-							</div>
-							<div class="group-button-add">
-								<button class="add-ProductType">Thêm</button>
-								<button class="add-cancel">Hủy</button>
-							</div>
-						</form>
 
-						<div class="add_product-heading">Cập nhật loại hàng</div>
-
-						<form action="" class="fAdd-product">
+						<form class="fAdd-product">
 							<div class="input_form">
 								<label for="nameproduct" class="name">Mã loại hàng </label> <input
 									type="text" id="idLH" name="nameproduct" placeholder="Mã loại hàng"
@@ -64,8 +51,9 @@
 									required>
 							</div>
 							<div class="group-button-add">
-								<button class="add-product">Cập nhật</button>
-								<button class="add-cancel">Hủy</button>
+							<button class="add-product" id="add-ProductType">Thêm</button>
+								<button class="add-product" id="updateLH">Cập nhật</button>
+								
 							</div>
 						</form>
 					</div>

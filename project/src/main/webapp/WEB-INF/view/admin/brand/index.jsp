@@ -23,6 +23,8 @@
 <!--LINE AWSOME-->
 <link rel="stylesheet"
 	href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
 </head>
 <body>
 	<div class="container">
@@ -38,32 +40,18 @@
 						<div class="add_product-heading">Thêm nhãn hiệu</div>
 						<form action="" class="fAdd-product">
 							<div class="input_form">
-								<label for="nameproduct" class="name">Tên </label> <input
-									type="text" name="nameproduct" placeholder="Tên nhãn hiệu"
-									required>
-							</div>
-							<div class="group-button-add">
-								<button class="add-product">Thêm</button>
-								<button class="add-cancel">Hủy</button>
-							</div>
-						</form>
-						
-						<div class="add_product-heading">Cập nhật nhãn hiệu</div>
-						
-						<form action="" class="fAdd-product">
-						<div class="input_form">
 								<label for="nameproduct" class="name">Mã nhãn hiệu </label> <input
-									type="text" name="nameproduct" placeholder="Mã nhãn hiệu"
-									required>
+									id="idNH" type="text" name="nameproduct"
+									placeholder="Mã nhãn hiệu" required>
 							</div>
 							<div class="input_form">
-								<label for="nameproduct" class="name">Tên </label> <input
-									type="text" name="nameproduct" placeholder="Tên nhãn hiệu"
-									required>
+								<label for="nameproduct" class="name">Tên nhãn hiệu</label> <input
+									id="nameNH" type="text" name="nameproduct"
+									placeholder="Tên nhãn hiệu" required>
 							</div>
 							<div class="group-button-add">
-								<button class="add-product">Cập nhật</button>
-								<button class="add-cancel">Hủy</button>
+								<button id="addNH" class="add-product">Thêm</button>
+								<button id="updateNH" class="add-product">Cập nhật</button>
 							</div>
 						</form>
 					</div>
@@ -76,17 +64,18 @@
 								<th>Tên nhãn hiệu</th>
 								<th></th>
 							</tr>
-							<c:forEach var="item" items="${listNH}" >
-							<tr>
-								<td>${item.manh}</td>
-								<td>${item.tennh}</td>
-								<td>
-									<div class="btn-brand">
-										<button class="edit-btn-brand">Sửa</button>
-										<button class="delete-btn-brand">Xóa</button>
-									</div>
-								</td>
-							</tr>
+							<c:forEach var="item" items="${listNH}">
+								<tr>
+									<td>${item.manh}</td>
+									<td>${item.tennh}</td>
+									<td>
+										<div class="btn-brand">
+											<button class="edit-btn-brand">Sửa</button>
+											<button class="delete-btn-brand"
+												onclick="delectNH(${item.manh})">Xóa</button>
+										</div>
+									</td>
+								</tr>
 							</c:forEach>
 						</table>
 					</div>
@@ -98,7 +87,9 @@
 </body>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="../assets/js/admin/testAPI.js"></script>
+	<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../assets/js/admin/nhanhieu.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="../assets/js/admin/app.js"></script>
 <script src="../assets/js/admin/hovered.js"></script>

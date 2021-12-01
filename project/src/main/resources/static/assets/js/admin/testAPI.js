@@ -9,8 +9,7 @@ function loadData() {
 		),
 		dataType: 'json',
 		success: function(mess) {
-			
-				
+
 			location.reload()
 			
 		}, error: function(err) {

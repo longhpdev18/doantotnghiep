@@ -1,11 +1,13 @@
 package com.controller;
 
+import org.apache.xmlbeans.impl.soap.Detail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -43,14 +45,12 @@ import com.repository.SanPhamDAO;
 @RequestMapping("admin")
 public class API {
 
-	@Autowired
-	LoaiHangDAO loaihangDAO;
+	
 	@Autowired
 	NhanHieuDAO nhanhieuDAO;
 	@Autowired
 	NhanVienDAO nhanvienDAO;
-	@Autowired
-	KhachHangDAO khachhangDAO;
+	
 
 	private static final Path CURRENT_FOLDER = Paths.get(System.getProperty("user.dir"));
 
@@ -89,64 +89,7 @@ public class API {
 	}
 
 
-	//@RequestMapping(value = "customer/add", method = RequestMethod.POST)
-	@PostMapping("customer/add")
-	public  KhachHang createKhachHang(@RequestBody KhachHang KH)
-			throws IOException {
-//		Path staticPath = Paths.get("src/main/resources/static");
-//		Path imagePath = Paths.get("images");
-//		if (!Files.exists(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath))) {
-//			Files.createDirectories(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath));
-//		}
-//
-//		Path file = CURRENT_FOLDER.resolve(staticPath).resolve(imagePath).resolve(imageFile.getOriginalFilename());
-//		try (OutputStream os = Files.newOutputStream(file)) {
-//			os.write(imageFile.getBytes());
-//		}
-		KhachHang kh = new KhachHang();
-		kh.setTendangnhap(KH.getTendangnhap());
-		kh.setMatkhau(KH.getMatkhau());
-		kh.setFullname(KH.getFullname());
-		kh.setGioitinh(KH.isGioitinh());
-		kh.setNgaysinh(KH.getNgaysinh());
-		kh.setDiachi(KH.getDiachi());
-		kh.setEmail(KH.getEmail());
-		kh.setSodienthoai(KH.getSodienthoai());
-		//kh.setHinh(imagePath.resolve(imageFile.getOriginalFilename()).toString());
-		kh.setHinh(KH.getHinh());
-		kh.setActive(KH.isActive());
-		return khachhangDAO.save(kh);
-	}
-
-	@PostMapping("nhanvien/add")
-	public NhanVien createKhachHang(@Validated @RequestBody NhanVien nhanvien) {
-		return nhanvienDAO.save(nhanvien);
-	}
-
-	@PostMapping("loaihang/add")
-	@ResponseBody
-	public LoaiHang createLoaiHang(@Validated @RequestBody LoaiHang loaihang) {
-		return loaihangDAO.save(loaihang);
-	}
 	
-	@GetMapping("loaihang/delete/{maloai}")
-	@ResponseBody
-	public String deleteLoaiHang(@PathVariable long maloai) {
-		loaihangDAO.deleteById(maloai);
-		return "ok";
-	}
-	
-	@GetMapping("getOneLH/{maloai}")
-	public String getOneLH(@PathVariable(value = "maloai") long maloai) {
-		 loaihangDAO.getById(maloai);
-		 return"ok";
-	}
-	
-	@PostMapping("nhanhieu/add")
-	@ResponseBody
-	public NhanHieu createNhanHieu(@Validated @RequestBody NhanHieu nhanhieu) {
-		return nhanhieuDAO.save(nhanhieu);
-	}
 
 //	@PutMapping("SanPham/edit/{masp}")
 //	public ResponseEntity<SanPham> edit(@PathVariable(value = "masp") Integer masp,
@@ -187,33 +130,14 @@ public class API {
 //		return ResponseEntity.ok(edit);
 //	}
 //
-//	@PutMapping("KhachHang/edit/{manv}")
-//	public ResponseEntity<KhachHang> edit(@PathVariable(value = "manv") Long manv,
-//			@Validated @RequestParam KhachHang KhachHangDetails) throws ResourceNotFoundException {
-//		KhachHang KhachHang = khachhangDAO.findById(manv)
-//				.orElseThrow(() -> new ResourceNotFoundException("Khách hàng này không tồn tại: " + manv));
-//		KhachHang.setTendangnhap(KhachHangDetails.getTendangnhap());
-//		KhachHang.setMatkhau(KhachHangDetails.getMatkhau());
-//		KhachHang.setFullname(KhachHangDetails.getFullname());
-//		KhachHang.setNgaysinh(KhachHangDetails.getNgaysinh());
-//		KhachHang.setGioitinh(KhachHang.isGioitinh());
-//		KhachHang.setDiachi(KhachHangDetails.getDiachi());
-//		KhachHang.setActive(KhachHangDetails.isActive());
-//		KhachHang.setEmail(KhachHangDetails.getEmail());
-//		KhachHang.setSodienthoai(KhachHangDetails.getSodienthoai());
-//		KhachHang.setHinh(KhachHangDetails.getHinh());
-//
-//		final KhachHang edit = khachhangDAO.save(KhachHang);
-//
-//		return ResponseEntity.ok(edit);
-//	}
-	
+
+
 //	@DeleteMapping("delete/{maloai}")
 //	public LoaiHang deleteLoaiHang(@PathVariable(value = "maloai") long maloai) {
 //		loaihangDAO.deleteById(maloai);
 //		return 
 //	}
-	
+
 //	@DeleteMapping("loaihang/delete")
 //	public LoaiHang deleteLoaiHang(@RequestBody LoaiHang loaihang ){
 //		
