@@ -267,7 +267,7 @@
 						<div class="btn-showAction">
 							<p>Hành động</p><i class="fas fa-angle-down"></i>
 							<div class="action-content blur-white-md">
-								<form action="/excelSP" method="get">
+								<form action="./excelSP" method="get">
 									<button class="export-file"><i class="fas fa-file-export"></i>Xuất file</button>		
 								</form>
 							</div>

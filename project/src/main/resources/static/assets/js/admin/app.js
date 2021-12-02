@@ -51,7 +51,7 @@ $('.btn-showAction').click(function() {
 $('.add-item').mousedown(function() {
     $('.action-content').removeClass('active');
 })
-$('.export-file').mousedown(function() {
+$('.export-file').click(function() {
     $('.action-content').removeClass('active');
 })
 

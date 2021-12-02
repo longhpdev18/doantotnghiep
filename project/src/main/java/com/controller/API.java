@@ -45,9 +45,6 @@ import com.repository.SanPhamDAO;
 @RequestMapping("admin")
 public class API {
 
-	
-	@Autowired
-	NhanHieuDAO nhanhieuDAO;
 	@Autowired
 	NhanVienDAO nhanvienDAO;
 	
@@ -132,21 +129,5 @@ public class API {
 //
 
 
-//	@DeleteMapping("delete/{maloai}")
-//	public LoaiHang deleteLoaiHang(@PathVariable(value = "maloai") long maloai) {
-//		loaihangDAO.deleteById(maloai);
-//		return 
-//	}
-
-//	@DeleteMapping("loaihang/delete")
-//	public LoaiHang deleteLoaiHang(@RequestBody LoaiHang loaihang ){
-//		
-//		LoaiHang lh = new LoaiHang();
-//		lh.setMaloai(loaihang.getMaloai());
-//		
-//		return loaihangDAO.deleteById(lh);
-//
-//	
-//	}
 
 }

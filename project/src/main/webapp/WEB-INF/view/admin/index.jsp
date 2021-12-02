@@ -109,7 +109,7 @@
 											<button class="add-item">
 												<i class="fas fa-user-plus"></i> Thêm nhân viên
 											</button>
-											<form action="/excelHD" method="get">
+											<form action="./excelHD" method="get">
 												<button class="export-file">
 													<i class="fas fa-file-export"></i>Xuất file
 												</button>
