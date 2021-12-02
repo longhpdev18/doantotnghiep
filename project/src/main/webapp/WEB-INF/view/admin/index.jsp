@@ -16,7 +16,8 @@
    
     <link rel="stylesheet" href="./../assets/css/admin/2.css"> -->
 
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <link rel="stylesheet" href="./../assets/css/admin/style.css">
 <link rel="stylesheet" href="./../assets/css/admin/unilities.css">
 <link rel="stylesheet" href="./../assets/css/admin/responsive.css">
@@ -43,51 +44,51 @@
 					<!-- CARD BOX -->
 					<jsp:include page="cardBox.jsp"></jsp:include>
 					<div class="recent">
-					<div class="order-update blur-dark">
-						<form class="order-update-wp">
-							<div class="order-update-heading">
-								<div class="order-update-orderid">
-								<p> Mã ĐH:</p> <span>9999</span>
-								</div> 
-								<div class="order-update-title">
-									 Cập nhật đơn hàng 
+						<div class="order-update blur-dark">
+							<form class="order-update-wp">
+								<div class="order-update-heading">
+									<div class="order-update-orderid">
+										<p>Mã ĐH:</p>
+										<span>9999</span>
+									</div>
+									<div class="order-update-title">Cập nhật đơn hàng</div>
+
+									<div class="order-update-date">
+										<p>Ngày đặt:</p>
+										<span>08-11-2022</span>
+									</div>
 								</div>
-								
-								<div class="order-update-date">
-								<p>  Ngày đặt:</p><span>08-11-2022</span>
+								<div class="order-update-content">
+									<div class="order-form-group">
+										<label for="fullname">Họ và tên:</label> <input type="text"
+											name="fullname" id="fullname" placeHolder="Nhập họ và tên" />
+									</div>
+									<div class="order-form-group">
+										<label for="phone">Số điện thoại:</label> <input type="number"
+											name="" phone"" id=""
+											phone"" placeHolder="Nhập số điện thoại" />
+									</div>
+									<div class="order-form-group">
+										<label for="address">Họ và tên:</label> <input type="text"
+											name="address" id="address" placeHolder="Nhập địa chỉ" />
+									</div>
+									<div class="order-form-group">
+										<label for="status">Trạng thái:</label> <select>
+											<option>Chọn trạng thái</option>
+											<option>Đang chuẩn bị</option>
+											<option>Đang vận chuyển</option>
+											<option>Đang giao hàng</option>
+											<option>Đã hủy</option>
+										</select>
+									</div>
 								</div>
-							</div>
-							<div class="order-update-content">
-								<div class="order-form-group">
-									<label for="fullname">Họ và tên:</label>
-									<input type="text" name="fullname" id="fullname" placeHolder="Nhập họ và tên"/>
+								<div class="order-update-button">
+									<button class="order-update-update">Cập nhật</button>
+									<button class="order-update-cancel">Hủy</button>
 								</div>
-								<div class="order-form-group">
-									<label for="phone">Số điện thoại:</label>
-									<input type="number" name=""phone"" id=""phone"" placeHolder="Nhập số điện thoại"/>
-								</div>
-								<div class="order-form-group">
-									<label for="address">Họ và tên:</label>
-									<input type="text" name="address" id="address" placeHolder="Nhập địa chỉ"/>
-								</div>
-								<div class="order-form-group">
-									<label for="status">Trạng thái:</label>
-									<select>
-										<option>Chọn trạng thái</option>
-										<option>Đang chuẩn bị</option>
-										<option>Đang vận chuyển</option>
-										<option>Đang giao hàng</option>
-										<option>Đã hủy</option>
-									</select>
-								</div>
-							</div>
-							<div class="order-update-button">
-								<button class="order-update-update">Cập nhật</button>
-								<button class="order-update-cancel">Hủy</button>
-							</div>
-							
-						</form>
-					</div>
+
+							</form>
+						</div>
 						<div class="recentOrders">
 							<div class="manage-customer-heading">
 								<div class="customer-heading-left">Đơn hàng gần đây</div>
@@ -102,10 +103,17 @@
 								</div>
 								<div class="customer-heading-right">
 									<div class="btn-showAction">
-										<p>Hành động</p><i class="fas fa-angle-down"></i>
+										<p>Hành động</p>
+										<i class="fas fa-angle-down"></i>
 										<div class="action-content blur-white-md">
-											<button class="add-item"><i class="fas fa-user-plus"></i> Thêm nhân viên</button>
-											<button class="export-file"><i class="fas fa-file-export"></i>Xuất file</button>
+											<button class="add-item">
+												<i class="fas fa-user-plus"></i> Thêm nhân viên
+											</button>
+											<form action="/excelHD" method="get">
+												<button class="export-file">
+													<i class="fas fa-file-export"></i>Xuất file
+												</button>
+											</form>
 										</div>
 									</div>
 									<div class="pagination">
@@ -174,28 +182,24 @@
 				<div class="main-right">
 					<div class="recentCustomers">
 						<div class="recentCustomer-heading">
-							<div class="recentCustomer-title">
-								Khách hàng gần đây
-							</div>
-							<a href="./customer" class="recentCustomer-more">	
-								Xem thêm<i class="fas fa-angle-right"></i>
+							<div class="recentCustomer-title">Khách hàng gần đây</div>
+							<a href="./customer" class="recentCustomer-more"> Xem thêm<i
+								class="fas fa-angle-right"></i>
 							</a>
 						</div>
 						<div class="recentCustomer-slider">
 							<ul class="recentCustomer-content">
 								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
-										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+										<img
+											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
 									</div>
 									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">
-										Long Hoàng Nè
-										</div>
+										<div class="recentCustomer-detail-name">Long Hoàng Nè</div>
 										<div class="recentCustomer-detail-username">
-										@longhpps09046
-										</div>
+											@longhpps09046</div>
 										<div class="recentCustomer-detail-id">
-										Mã khách hàng <span>8</span>
+											Mã khách hàng <span>8</span>
 										</div>
 									</div>
 									<div class="recentCustomer-icon">
@@ -204,76 +208,68 @@
 								</li>
 								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
-										<img src="https://i.vietgiaitri.com/2018/11/26/cung-ngam-hinh-anh-nhung-nguoi-dep-co-khuon-mat-mang-ti-le-can-d-103d74.jpg" />
+										<img
+											src="https://i.vietgiaitri.com/2018/11/26/cung-ngam-hinh-anh-nhung-nguoi-dep-co-khuon-mat-mang-ti-le-can-d-103d74.jpg" />
 									</div>
 									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">
-										Hoàng Phi Long
-										</div>
+										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
 										<div class="recentCustomer-detail-username">
-										@longhpdev18
-										</div>
+											@longhpdev18</div>
 										<div class="recentCustomer-detail-id">
-										Mã khách hàng <span>7</span>
+											Mã khách hàng <span>7</span>
 										</div>
 									</div>
 									<div class="recentCustomer-icon">
 										<i class="fas fa-angle-right"></i>
 									</div>
-								</li>	
+								</li>
 								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
-										<img src="https://bizweb.dktcdn.net/100/175/849/files/chup-anh-doanh-nhan-trong-studio-chuyen-nghiep-nhat-ha-noi-gia-re-bao-nhieu-tien-media-07.jpg?v=1575710139260" />
+										<img
+											src="https://bizweb.dktcdn.net/100/175/849/files/chup-anh-doanh-nhan-trong-studio-chuyen-nghiep-nhat-ha-noi-gia-re-bao-nhieu-tien-media-07.jpg?v=1575710139260" />
 									</div>
 									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">
-										Hoàng Phi Long
-										</div>
+										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
 										<div class="recentCustomer-detail-username">
-										@longhpdev18
-										</div>
+											@longhpdev18</div>
 										<div class="recentCustomer-detail-id">
-										Mã khách hàng <span>6</span>
+											Mã khách hàng <span>6</span>
 										</div>
 									</div>
 									<div class="recentCustomer-icon">
 										<i class="fas fa-angle-right"></i>
 									</div>
-								</li>	
+								</li>
 								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
-										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+										<img
+											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
 									</div>
 									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">
-										Hoàng Phi Long
-										</div>
+										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
 										<div class="recentCustomer-detail-username">
-										@longhpdev18
-										</div>
+											@longhpdev18</div>
 										<div class="recentCustomer-detail-id">
-										Mã khách hàng <span>5</span>
+											Mã khách hàng <span>5</span>
 										</div>
 									</div>
 									<div class="recentCustomer-icon">
 										<i class="fas fa-angle-right"></i>
 									</div>
-								</li>	
+								</li>
 							</ul>
 							<ul class="recentCustomer-content">
 								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
-										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+										<img
+											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
 									</div>
 									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">
-										Long Hoàng Nè
-										</div>
+										<div class="recentCustomer-detail-name">Long Hoàng Nè</div>
 										<div class="recentCustomer-detail-username">
-										@longhpps09046
-										</div>
+											@longhpps09046</div>
 										<div class="recentCustomer-detail-id">
-										Mã khách hàng <span>4</span>
+											Mã khách hàng <span>4</span>
 										</div>
 									</div>
 									<div class="recentCustomer-icon">
@@ -282,74 +278,66 @@
 								</li>
 								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
-										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+										<img
+											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
 									</div>
 									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">
-										Hoàng Phi Long
-										</div>
+										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
 										<div class="recentCustomer-detail-username">
-										@longhpdev18
-										</div>
+											@longhpdev18</div>
 										<div class="recentCustomer-detail-id">
-										Mã khách hàng <span>3</span>
+											Mã khách hàng <span>3</span>
 										</div>
 									</div>
 									<div class="recentCustomer-icon">
 										<i class="fas fa-angle-right"></i>
 									</div>
-								</li>	
+								</li>
 								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
-										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+										<img
+											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
 									</div>
 									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">
-										Hoàng Phi Long
-										</div>
+										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
 										<div class="recentCustomer-detail-username">
-										@longhpdev18
-										</div>
+											@longhpdev18</div>
 										<div class="recentCustomer-detail-id">
-										Mã khách hàng <span>2</span>
+											Mã khách hàng <span>2</span>
 										</div>
 									</div>
 									<div class="recentCustomer-icon">
 										<i class="fas fa-angle-right"></i>
 									</div>
-								</li>	
+								</li>
 								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
-										<img src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+										<img
+											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
 									</div>
 									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">
-										Hoàng Phi Long
-										</div>
+										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
 										<div class="recentCustomer-detail-username">
-										@longhpdev18
-										</div>
+											@longhpdev18</div>
 										<div class="recentCustomer-detail-id">
-										Mã khách hàng <span>1</span>
+											Mã khách hàng <span>1</span>
 										</div>
 									</div>
 									<div class="recentCustomer-icon">
 										<i class="fas fa-angle-right"></i>
 									</div>
-								</li>	
+								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="target">
 						<div class="target-heading">
-							<div class="target-title">
-								Mục tiêu đề xuất
-							</div>
-							<a href="#" class="target-more">	
-								Xem thêm<i class="fas fa-angle-right"></i>
+							<div class="target-title">Mục tiêu đề xuất</div>
+							<a href="#" class="target-more"> Xem thêm<i
+								class="fas fa-angle-right"></i>
 							</a>
 						</div>
-					
+
 						<div class="target-list">
 							<div class="target-item">
 								<div class="target-icon order">
@@ -357,18 +345,13 @@
 								</div>
 								<div class="target-content">
 									<div class="target-content-top">
-										<div class="target-content-title">
-											Đơn hàng (đạt 1000 đơn hàng)
-										</div>
-										<div class="target-content-percent">
-											38%
-										</div>
+										<div class="target-content-title">Đơn hàng (đạt 1000 đơn
+											hàng)</div>
+										<div class="target-content-percent">38%</div>
 									</div>
 									<div class="target-content-bottom">
 										<div class="target-processbar">
-											<div class="target-processbar-load order">
-												
-											</div>
+											<div class="target-processbar-load order"></div>
 										</div>
 									</div>
 								</div>
@@ -379,18 +362,13 @@
 								</div>
 								<div class="target-content">
 									<div class="target-content-top">
-										<div class="target-content-title">
-											Khách hàng (đạt 100 khách hàng)
-										</div>
-										<div class="target-content-percent">
-											55%
-										</div>
+										<div class="target-content-title">Khách hàng (đạt 100
+											khách hàng)</div>
+										<div class="target-content-percent">55%</div>
 									</div>
 									<div class="target-content-bottom">
 										<div class="target-processbar">
-											<div class="target-processbar-load customer">
-												
-											</div>
+											<div class="target-processbar-load customer"></div>
 										</div>
 									</div>
 								</div>
@@ -401,24 +379,19 @@
 								</div>
 								<div class="target-content">
 									<div class="target-content-top">
-										<div class="target-content-title">
-											Doanh thu (đạt 100.000 $)
-										</div>
-										<div class="target-content-percent">
-											82%
-										</div>
+										<div class="target-content-title">Doanh thu (đạt 100.000
+											$)</div>
+										<div class="target-content-percent">82%</div>
 									</div>
 									<div class="target-content-bottom">
 										<div class="target-processbar">
-											<div class="target-processbar-load revenue">
-												
-											</div>
+											<div class="target-processbar-load revenue"></div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -432,9 +405,12 @@
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script src="../assets/js/admin/app.js"></script>
 <script src="../assets/js/admin/hovered.js"></script>
