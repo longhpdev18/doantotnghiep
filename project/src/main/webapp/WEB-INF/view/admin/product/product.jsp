@@ -210,8 +210,10 @@
 								<label for="dropdown" class="name">Tên nhãn hiệu</label>
 								 <select id="manh"  name="dropdown">
 									<option value="Maths" selected>Chọn nhãn hiệu...</option>
-									<option value="1">dell</option>
-									<option value="2">Bàn </option>
+									<c:forEach var="nh" items="${listNH}">
+									<option value="${nh.manh}">${nh.tennh}</option>
+									</c:forEach>
+									<!-- <option value="2">Bàn </option> -->
 								</select>
 							</div>
 							
@@ -219,8 +221,10 @@
 								<label for="dropdown" class="name">Loại</label> 
 								<select name="dropdown" id="maloai">
 									<option value="Maths" selected>Chọn thể loại...</option>
-									<option value="1">Màn hình</option>
-									<option value="2">Bàn phím</option>
+									<c:forEach var="loai" items="${listLH}">
+									<option value="${loai.maloai}">${loai.tenloai}</option>
+									</c:forEach>
+									
 								</select>
 							</div>
 							<div class="input_form">
@@ -342,6 +346,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="../assets/js/admin/nhanhieu.js"></script>
+	<script src="../assets/js/admin/loaihang.js"></script>
 <script src="../assets/js/admin/sanpham.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="../assets/js/admin/app.js"></script>
