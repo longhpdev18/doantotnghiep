@@ -42,25 +42,12 @@ public class adminRestAPI {
 	@Autowired
 	NhanVienDAO nhanvienDAO;
 	@Autowired
-	SanPhamDAO sanphamDao;
-	@Autowired
 	ParamService paramService;
 	@Autowired
 	CookieService cookieService;
 	@Autowired
-	SessionService sessionService;
-	@Autowired
-	NhanHieuDAO nhanhieuDAO;
-	@Autowired
-	LoaiHangDAO loaihangDAO;
-	@Autowired
-	KhachHangDAO khachhangDAO;
-	@Autowired
-	HoaDonDAO hoadonDAO;
-	@Autowired
-	HoaDonCTDAO hoadonCTDAO;
-	Page<SanPham> listProductAD;
-	PageCount pageCount = new PageCount();
+	SessionService sessionService;	
+	
 
 	@PostMapping("/admin/login")
 	public Message login(@RequestBody Login login) {
@@ -80,33 +67,6 @@ public class adminRestAPI {
 
 	}
 
-	@GetMapping("/product")
-	public Message productAdmin(Model model) {
-		Message mess = new Message();
-		try {
-			Pageable pageable = PageRequest.of(pageCount.getCount(), 10);
-			listProductAD = sanphamDao.findAll(pageable);
-			sessionService.set("listProductAD", listProductAD);
-			sessionService.set("pageCount", pageCount);
-			mess.setValue("success");
-		} catch (Exception e) {
-			mess.setValue("error");
-		}
-
-		return mess;
-	}
-
-	@GetMapping("/checkProductAdmin")
-	public Message checkProductAdmin(Model model) {
-		Message mess = new Message();
-		if (sessionService.get("listProductAD") != null) {
-			mess.setValue("success");
-		} else {
-			mess.setValue("error");
-		}
-		return mess;
-	}
-
 	@PostMapping("/updateProfileAD")
 	public Message updateProfileAD(@RequestBody NhanVien nv) {
 		Message mess = new Message();
@@ -123,38 +83,6 @@ public class adminRestAPI {
 		return mess;
 	}
 
-	@PostMapping("/prevPage")
-	public Message prevPage(Model model, @RequestBody PageCount count) {
-		Message mess = new Message();
-		try {
-			if (count.getCount() > 0) {
+	
 
-				Pageable pageable = PageRequest.of(count.getCount() - 1, 10);
-				listProductAD = sanphamDao.findAll(pageable);
-				sessionService.set("listProductAD", listProductAD);
-				pageCount.setCount(count.getCount() - 1);
-				mess.setValue("success");
-			}
-		} catch (Exception e) {
-			mess.setValue("error");
-		}
-
-		return mess;
-	}
-
-	@PostMapping("/nextPage")
-	public Message nextPage(Model model, @RequestBody PageCount count) {
-		Message mess = new Message();
-		try {
-			Pageable pageable = PageRequest.of(count.getCount() + 1, 10);
-			listProductAD = sanphamDao.findAll(pageable);
-			sessionService.set("listProductAD", listProductAD);
-			pageCount.setCount(count.getCount() + 1);
-			mess.setValue("success");
-		} catch (Exception e) {
-			mess.setValue("error");
-		}
-
-		return mess;
-	}
 }

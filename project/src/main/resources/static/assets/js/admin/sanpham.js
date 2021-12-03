@@ -1,7 +1,7 @@
 $(window).on('load', checkSession())
 function loadData() {
 	$.ajax({
-		url: '/product',
+		url: '/sanpham',
 		type: 'GET',
 		contentType: 'application/json',
 		data: JSON.stringify(
@@ -81,7 +81,7 @@ $('.btn-next').click(function() {
 		),
 		dataType: 'json',
 		success: function(result) {
-			if (result.value =  'success')  {
+			if (result.value = 'success') {
 				location.reload();
 			}
 		}, error: function(err) {
@@ -93,15 +93,14 @@ $('.btn-next').click(function() {
 
 $('.add-product').click(function(e) {
 	e.preventDefault();
-
 	var tenspName = $('#tensp').val();
-	var giaspName = $('#giasp').val();
-	var maloaiName = $('#maloai').val();
-	var manhName = $('#manh').val();
-	var tinhtrangName = $('#trangthaisp').val();
+	var giaspName = parseInt($('#giasp').val());
+	var maloaiName = parseInt($('#maloai :selected').val());
+	var manhName = parseInt($('#manh :selected').val());
+	var tinhtrangName = parseInt($('#trangthaisp :selected').val());
 	var motasp = $('textarea#motasp').val();
 	var hinhName = $('#fileSP')[0].files[0].name;
-	var dealName = $('#deal').val();
+	var dealName = parseInt($('#deal').val());
 	$.ajax({
 		url: '/admin/product/add',
 		type: 'POST',
@@ -120,12 +119,51 @@ $('.add-product').click(function(e) {
 		),
 		dataType: 'json',
 		success: function() {
-			
+			toastr.success('Thêm thành công!');
+			setTimeout(function() {
 				location.reload();
-			
+			}, 2000);
+
+
 		}, error: function(err) {
 			console.log(err)
 		}
 
 	})
 })
+
+function delectSP(masp) {
+	$.ajax({
+		url: '/admin/sanpham/delete/' + masp,
+		success: function() {
+			toastr.success('Xóa thành công!');
+			setTimeout(function() {
+				loadData();
+			}, 2000);
+		},
+		error: function(err) {
+			console.log(err)
+			toastr.error('Xóa thất bại');
+		}
+	})
+}
+
+function Search() {
+	var tensp = $('.search-input').val();
+	$.ajax({
+		url: '/admin/sanpham/' + tensp,
+		type: 'GET',
+		contentType: 'application/json',
+		data: JSON.stringify({
+
+			"tensp": tensp
+		}),
+		dataType: 'json',
+		success: function() {
+			location.reload()
+		}, error: function(err) {
+			console.log(err)
+		}
+
+	})
+}

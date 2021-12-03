@@ -27,6 +27,8 @@
 	<!--LINE AWSOME-->
 	<link rel="stylesheet"
 		href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+		<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
 </head>
 
 <body>
@@ -200,16 +202,16 @@
 								<label for="status" class="name">Trạng thái</label> 
 								<select name="status" id="trangthaisp">
 									<option value="Maths" selected>Chọn...</option>
-									<option value="0">Hết hàng</option>
-									<option value="1">Còn hàng</option>
+									<option value="1">Hết hàng</option>
+									<option value="2">Còn hàng</option>
 								</select>
 							</div>
 							<div class="input_form">
 								<label for="dropdown" class="name">Tên nhãn hiệu</label>
 								 <select id="manh"  name="dropdown">
-									<option value="Maths" selected>Chọn thể loại...</option>
-									<option value="0">dell</option>
-									<option value="1">Bàn </option>
+									<option value="Maths" selected>Chọn nhãn hiệu...</option>
+									<option value="1">dell</option>
+									<option value="2">Bàn </option>
 								</select>
 							</div>
 							
@@ -217,8 +219,8 @@
 								<label for="dropdown" class="name">Loại</label> 
 								<select name="dropdown" id="maloai">
 									<option value="Maths" selected>Chọn thể loại...</option>
-									<option value="0">Màn hình</option>
-									<option value="1">Bàn phím</option>
+									<option value="1">Màn hình</option>
+									<option value="2">Bàn phím</option>
 								</select>
 							</div>
 							<div class="input_form">
@@ -258,7 +260,7 @@
 							<div class="searchbox">
 								<input type="text" class="search-input"
 									placeholder="Nhập tên sản phẩm, hoặc id sản phẩm">
-								<button class="search-button">
+								<button class="search-button" onclick="Search()">
 									<i class="fas fa-search"></i>
 								</button>
 							</div>
@@ -323,7 +325,7 @@
 											</button>
 											<div class="dropdown-content">
 												<button class="btn-showEdit"><i class="far fa-edit"></i><p>Sửa</p></button>
-												<button class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
+												<button onclick="delectSP(${item.masp})" class="btn-delete"><i class="far fa-trash-alt"></i><p>Xóa</p></button>
 											</div>
 										</div>
 									</td>
@@ -336,8 +338,11 @@
 		</div>
 </body>
 <!--Link icon-->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="../assets/js/admin/product.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../assets/js/admin/sanpham.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="../assets/js/admin/app.js"></script>
 <script src="../assets/js/admin/hovered.js"></script>

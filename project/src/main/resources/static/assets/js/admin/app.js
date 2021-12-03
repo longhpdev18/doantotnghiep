@@ -15,10 +15,10 @@ $('.btn-close-edit').click(function () {
 	$('.edit_product').removeClass('active');
 })
 
-$('.btn-delete').click(function () {
+/*$('.btn-delete').click(function () {
 	$('.delete_product_nof').addClass('active');
 	$('.delete-warning').addClass('active');
-})
+})*/
 
 $('.btn-delete-done').click(function () {
 	$('.delete_product_nof').removeClass('active');
