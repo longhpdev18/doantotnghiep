@@ -210,9 +210,17 @@
 								<label for="dropdown" class="name">Tên nhãn hiệu</label>
 								 <select id="manh"  name="dropdown">
 									<option value="Maths" selected>Chọn nhãn hiệu...</option>
-									<c:forEach var="nh" items="${listNH}">
-									<option value="${nh.manh}">${nh.tennh}</option>
-									</c:forEach>
+									<option value="1">Asus</option>
+									<option value="2">Acer</option>
+									<option value="3">Lenovo</option>
+									<option value="4">MSI</option>
+									<option value="5">Logitech</option>
+									<option value="6">Razer</option>
+									<option value="7">HP</option>
+									<option value="8">GVN</option>
+									<option value="9">Microsoft</option>
+									<option value="10">Stell Series</option>
+								
 									<!-- <option value="2">Bàn </option> -->
 								</select>
 							</div>
@@ -221,9 +229,17 @@
 								<label for="dropdown" class="name">Loại</label> 
 								<select name="dropdown" id="maloai">
 									<option value="Maths" selected>Chọn thể loại...</option>
-									<c:forEach var="loai" items="${listLH}">
-									<option value="${loai.maloai}">${loai.tenloai}</option>
-									</c:forEach>
+									<option value="1">Bàn Phím</option>
+									<option value="2">Máy In</option>
+									<option value="3">Lap Top</option>
+									<option value="4">PC</option>
+									<option value="5">Tai Nghe</option>
+									<option value="6">Chuột</option>
+									<option value="7">Ghế Gaming</option>
+									<option value="8">Loa</option>
+									<option value="9">Màn Hình</option>
+									<option value="10">Thiết bị văn phòng</option>
+									
 									
 								</select>
 							</div>
@@ -346,8 +362,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-	<script src="../assets/js/admin/nhanhieu.js"></script>
-	<script src="../assets/js/admin/loaihang.js"></script>
+<!-- 	<script src="../assets/js/admin/nhanhieu.js"></script>
+	<script src="../assets/js/admin/loaihang.js"></script> -->
 <script src="../assets/js/admin/sanpham.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="../assets/js/admin/app.js"></script>
