@@ -58,6 +58,7 @@ public class adminRestAPI {
 		if (nv != null) {
 			mess.setValue("success");
 			sessionService.set("fullnameNV", nv.getFullname());
+			sessionService.set("chucVuNV", nv.isChucvu());
 			sessionService.set("maNV", nv.getManv());
 		} else {
 			mess.setValue("Sai tài khoản hoặc mật khẩu!");

@@ -189,24 +189,43 @@
 						</div>
 						<div class="recentCustomer-slider">
 							<ul class="recentCustomer-content">
+								<c:forEach var="top8kh" items="${listkhtop}">
+									<li class="recentCustomer-item">
+										<div class="recentCustomer-image">
+											<img
+												src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+										</div>
+										<div class="recentCustomer-detail">
+											<div class="recentCustomer-detail-name">${top8kh.fullname}</div>
+											<div class="recentCustomer-detail-username">
+												${top8kh.tendangnhap}</div>
+											<div class="recentCustomer-detail-id">
+												Mã khách hàng <span>${top8kh.makh}</span>
+											</div>
+										</div>
+										<div class="recentCustomer-icon">
+											<i class="fas fa-angle-right"></i>
+										</div>
+									</li>
+								</c:forEach>
 								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
 										<img
-											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
+											src="https://i.vietgiaitri.com/2018/11/26/cung-ngam-hinh-anh-nhung-nguoi-dep-co-khuon-mat-mang-ti-le-can-d-103d74.jpg" />
 									</div>
 									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">Long Hoàng Nè</div>
+										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
 										<div class="recentCustomer-detail-username">
-											@longhpps09046</div>
+											@longhpdev18</div>
 										<div class="recentCustomer-detail-id">
-											Mã khách hàng <span>8</span>
+											Mã khách hàng <span>7</span>
 										</div>
 									</div>
 									<div class="recentCustomer-icon">
 										<i class="fas fa-angle-right"></i>
 									</div>
 								</li>
-								<li class="recentCustomer-item">
+									<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
 										<img
 											src="https://i.vietgiaitri.com/2018/11/26/cung-ngam-hinh-anh-nhung-nguoi-dep-co-khuon-mat-mang-ti-le-can-d-103d74.jpg" />

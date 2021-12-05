@@ -1,12 +1,20 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.model.KhachHang;
+import com.model.LoaiHang;
+import com.model.NhanHieu;
+import com.model.NhanVien;
 import com.repository.KhachHangDAO;
 import com.repository.LoaiHangDAO;
+import com.repository.NhanHieuDAO;
+import com.repository.NhanVienDAO;
 import com.repository.SanPhamDAO;
 import com.service.CookieService;
 import com.service.ParamService;
@@ -24,11 +32,14 @@ public class AdminController {
 	@Autowired
 	SessionService sessionService;
 	@Autowired
-	KhachHangDAO khDAO;
+	NhanHieuDAO nhanhieuDAO;
+	@Autowired
+	KhachHangDAO khachhangDAO;
+	@Autowired
+	LoaiHangDAO loaihangDAO;
 	@Autowired
 	ShoppingCartService cart;
-	@Autowired
-	LoaiHangDAO lhDAO;
+
 
 	@GetMapping("/admin")
 	public String admin(Model model) {
@@ -48,6 +59,8 @@ public class AdminController {
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
+		List<KhachHang> listkhtop = khachhangDAO.getTopKH(8);
+		model.addAttribute("listkhtop",listkhtop);
 		return "admin/index";
 	}
 
@@ -64,6 +77,10 @@ public class AdminController {
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
+		List<LoaiHang> listLH = loaihangDAO.findAll();
+		model.addAttribute("listLH",listLH);
+		List<NhanHieu> listNH =nhanhieuDAO.findAll();
+		model.addAttribute("listNH",listNH);
 		return "admin/product/product";
 	}
 
@@ -88,7 +105,7 @@ public class AdminController {
 		return "admin/brand/index";
 	}
 	@GetMapping("/admin/product-type")
-	public String typeproduct(Model model) {
+	public String typeproduct( ) {
 
 		return "admin/product-type/index";
 	}
