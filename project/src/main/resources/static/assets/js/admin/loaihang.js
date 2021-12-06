@@ -8,9 +8,7 @@ function loadData() {
 
 		),
 		dataType: 'json',
-		success: function(mess) {
-
-
+		success: function() {
 			location.reload()
 
 		}, error: function(err) {
@@ -20,6 +18,9 @@ function loadData() {
 	})
 }
 function getData() {
+	$('#idLH').hide();
+	$('#updateLH').hide();
+	$('#labelID').hide();
 	$.ajax({
 		url: '/getDataLH',
 		type: 'GET',
@@ -44,8 +45,8 @@ $('#add-ProductType').click(function(e) {
 	e.preventDefault();
 
 	var tenloai = $('#nameLH').val();
-	if(tenloai == null || tenloai == ""){
-		toastr.success('Tên loại không được để trống');
+	if (tenloai == null || tenloai == "") {
+		toastr.error('Tên loại không được để trống');
 		return false;
 	}
 
@@ -67,7 +68,7 @@ $('#add-ProductType').click(function(e) {
 
 		}, error: function(err) {
 			console.log(err)
-			toastr.success('Thêm thất bại công!');
+			toastr.error('Thêm thất bại công!');
 		}
 
 	})
@@ -78,9 +79,12 @@ function editLH(maloai) {
 		type: "GET",
 		url: "/admin/getOneLH/" + maloai,
 		contentType: 'application/json',
-		success: function() {
-			$("#idLH").val(maloai),
-				$("#nameLH").val(tenloai)
+		success: function(response) {
+			$("#idLH").val(response.maloai),
+				$("#nameLH").val(response.tenloai)
+			$('#idLH').show();
+			$('#updateLH').show();
+			$('#labelID').show();
 		},
 		error: function(err) {
 			alert("error is" + err)
@@ -89,11 +93,12 @@ function editLH(maloai) {
 }
 
 
+
 $('#updateLH').click(function(e) {
 	e.preventDefault();
 	var maloai = parseInt($("#idLH").val());
 	var tenloai = $("#nameLH").val();
-	if(tenloai == null || tenloai == ""){
+	if (tenloai == null || tenloai == "") {
 		toastr.success('Tên loại không được để trống');
 		return false;
 	}
@@ -116,25 +121,6 @@ $('#updateLH').click(function(e) {
 		}
 	});
 })
-
-/*function editLH(maloai) {
-	$.ajax({
-		type: "GET",
-		url: "/admin/getOneLH/" + maloai,
-		dataType: 'json',
-		success: function(response) {
-			//alert("student--"+response.id);
-			$("#idLH").val(response.maloai),
-			$("#nameLH").val(response.tenloai)
-		//	$('#saveStudent').hide();
-		//	$('#updateStudent').show();
-		//	$('#idfield').show();
-		},
-		error: function(err) {
-			alert("error is" + err)
-		}
-	});
-}*/
 
 
 function delectLH(maloai) {

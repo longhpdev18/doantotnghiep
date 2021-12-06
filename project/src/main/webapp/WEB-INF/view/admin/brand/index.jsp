@@ -40,11 +40,10 @@
 						<div class="add_product-heading">Thêm nhãn hiệu</div>
 						<form action="" class="fAdd-product">
 							<div class="input_form">
-								<label for="nameproduct" class="name">Mã nhãn hiệu </label> <input
+								<label id="labelID" for="nameproduct" class="name">Mã nhãn hiệu </label> <input 
 									id="idNH" type="text" name="nameproduct"
-									placeholder="Mã nhãn hiệu" required>
-							</div>
-							<div class="input_form">
+									placeholder="Mã nhãn hiệu" readonly="readonly" required>
+							
 								<label for="nameproduct" class="name">Tên nhãn hiệu</label> <input
 									id="nameNH" type="text" name="nameproduct"
 									placeholder="Tên nhãn hiệu" required>
@@ -70,7 +69,7 @@
 									<td>${item.tennh}</td>
 									<td>
 										<div class="btn-brand">
-											<button class="edit-btn-brand">Sửa</button>
+											<button class="edit-btn-brand" onclick="editNH(${item.manh})">Sửa</button>
 											<button class="delete-btn-brand"
 												onclick="delectNH(${item.manh})">Xóa</button>
 										</div>

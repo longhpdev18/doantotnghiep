@@ -72,9 +72,9 @@ $('#add-customer').click(function(e) {
 		),
 		dataType: 'json',
 		success: function() {
-			
-				loadData();
-			
+
+			loadData();
+
 		}, error: function(err) {
 			console.log(err)
 		}
@@ -97,3 +97,61 @@ function delectKH(makh) {
 		}
 	})
 }
+
+
+function editKH(makh) {
+	$('.edit-customer').addClass('active');
+	$.ajax({
+		type: "GET",
+		url: "/admin/getOneKH/" + makh,
+		contentType: 'application/json',
+		success: function(response) {
+			$("#udID").val(response.makh)
+				, $("#udUser").val(response.tendangnhap)
+				, $("#udPass").val(response.matkhau)
+				, $("#udName").val(response.fullname)
+				, $("#udDate").val(response.ngaysinh)
+				, $("#udAddress").val(response.diachi)
+				, $("#udMAil").val(response.email)
+				, $("#udPhone").val(response.sodienthoai)
+				, $("#udImg").val(response.hinh)
+			if (response.active == false) {
+				$("#udActive").val("0")
+			} else {
+				$("#udActive").val("1")
+			}
+			if (response.gioitinh == false) {
+				$("#udGT").val("0")
+			} else {
+				$("#udGT").val("1")
+			}
+		},
+		error: function(err) {
+			alert("error is" + err)
+		}
+	});
+}
+
+
+$('#UpdateKH').click(function(e) {
+	e.preventDefault();
+
+	$.ajax({
+		url: '/admin/updateNH',
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify({
+			manh: manh,
+			tennh: tennh
+		}),
+		success: function() {
+			toastr.success('Cập nhật thành công!');
+			setTimeout(function() {
+				loadData();
+			}, 2000);
+		},
+		error: function(err) {
+			alert("error is" + err)
+		}
+	});
+})

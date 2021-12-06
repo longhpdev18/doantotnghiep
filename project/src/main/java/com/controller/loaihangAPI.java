@@ -66,7 +66,7 @@ public class loaihangAPI {
 	@GetMapping("admin/getOneLH/{maloai}")
 	@ResponseBody
 	public LoaiHang getOneLH(@PathVariable long maloai) {
-		LoaiHang loaihang = loaihangDAO.getOne(maloai);
+		LoaiHang loaihang = loaihangDAO.findById(maloai).get();
 		return loaihang;
 	}
 

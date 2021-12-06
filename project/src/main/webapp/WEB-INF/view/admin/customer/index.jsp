@@ -54,7 +54,7 @@
 								<div class="form-group">
 									<label>Giới tính</label> <select id="genders">
 										<option value="0">Nam</option>
-										<option value="1">"Nữ</option>
+										<option value="1">Nữ</option>
 									</select>
 								</div>
 								<div class="form-group">
@@ -97,58 +97,59 @@
 							<div class="form-heading center">Sửa khách hàng</div>
 							<div class="form-content">
 								<div class="form-group">
-									<label>Tên tài khoản</label> <input type="text"
+									<label>Mã khách hàng </label> 
+									<input id="udID" type="text" readonly="readonly">
+								</div>
+								<div class="form-group">
+									<label>Tên tài khoản</label> <input id="udUser" type="text"
 										placeholder="Nhập tên tài khoản">
 								</div>
 								<div class="form-group">
-									<label>Mật khẩu</label> <input type="password"
+									<label>Mật khẩu</label> <input id="udPass" type="password"
 										placeholder="Mật khẩu">
 								</div>
 								<div class="form-group">
-									<label>Họ và tên</label> <input type="text"
+									<label>Họ và tên</label> <input id="udName" type="text"
 										placeholder="Họ và tên">
 								</div>
 								<div class="form-group">
-									<label>Giới tính</label> <select>
-										<option>Nam</option>
-										<option>Nữ</option>
+									<label>Giới tính</label> <select id="udGT">
+										<option value="0">Nam</option>
+										<option value="1">Nữ</option>
 									</select>
 								</div>
 								<div class="form-group">
-									<label>Ngày sinh</label> <input type="date">
+									<label>Ngày sinh</label> <input id="udDate" type="date">
 								</div>
 								<div class="form-group address">
-									<label>Địa chỉ</label> <input type="text"
+									<label>Địa chỉ</label> <input id="udAddress" type="text"
 										placeholder="Thêm địa chỉ">
 								</div>
 								<div class="form-group ">
-									<label>Email</label> <input type="mail"
+									<label>Email</label> <input id="udMAil" type="mail"
 										placeholder="Thêm email">
 								</div>
 
 								<div class="form-group">
-									<label>Số điện thoại</label> <input type="number"
+									<label>Số điện thoại</label> <input id="udPhone" type="number"
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input type="file" accept="image/*">
+									<label>Hình ảnh</label> <input id="udImg" value="hinh" type="file" accept="image/*">
 								</div>
 								<div class="form-group">
-									<label>Trạng thái</label> <select>
-										<option>Đã kích hoạt</option>
-										<option selected>Chưa kích hoạt</option>
+									<label>Trạng thái</label> <select id="udActive">
+										<option value="1">Đã kích hoạt</option>
+										<option value="0">Chưa kích hoạt</option>
 									</select>
 								</div>
 								<div class="form-button">
-									<button class="edit-customer-button">Sửa khách hàng</button>
+									<button id="UpdateKH" class="edit-customer-button">Sửa khách hàng</button>
 									<button class="cancel-customer-button">Hủy</button>
 								</div>
 							</div>
 						</form>
 					</div>
-
-
-
 
 					<div class="manage-customer-heading">
 						<div class="customer-heading-left">Danh sách khách hàng</div>
@@ -216,7 +217,7 @@
 									<div class="customer-address">${item.diachi}</div>
 								</div>
 								<div class="customer-action">
-									<button class="customer-button-edit">
+									<button onclick="editKH(${item.makh})" class="customer-button-edit">
 										<i class="fas fa-pencil-alt"></i>
 									</button>
 									<button class="customer-button-delete"

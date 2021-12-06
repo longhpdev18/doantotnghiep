@@ -1,5 +1,6 @@
 $(window).on('load', getData())
 function loadData() {
+
 	$.ajax({
 		url: '/nhanhieu',
 		type: 'GET',
@@ -8,11 +9,8 @@ function loadData() {
 
 		),
 		dataType: 'json',
-		success: function(mess) {
-
-
-			location.reload()
-
+		success: function() {
+			location.reload();
 		}, error: function(err) {
 			console.log(err)
 		}
@@ -20,6 +18,10 @@ function loadData() {
 	})
 }
 function getData() {
+	$('#idNH').hide();
+	$('#updateNH').hide();
+	$('#labelID').hide();
+
 	$.ajax({
 		url: '/getDataNH',
 		type: 'GET',
@@ -44,8 +46,8 @@ $('#addNH').click(function(e) {
 	e.preventDefault();
 
 	var tennh = $('#nameNH').val();
-	if(tennh == null || tennh == ""){
-		toastr.success('Tên nhãn hiệu không được để trống');
+	if (tennh == null || tennh == "") {
+		toastr.error('Tên nhãn hiệu không được để trống');
 		return false;
 	}
 
@@ -67,20 +69,24 @@ $('#addNH').click(function(e) {
 
 		}, error: function(err) {
 			console.log(err)
-			toastr.success('Thêm thất bại công!');
+			toastr.error('Thêm thất bại công!');
 		}
 
 	})
 })
 
-function editLH(maloai) {
+function editNH(manh) {
+
 	$.ajax({
 		type: "GET",
-		url: "/admin/getOneNH/" + maloai,
+		url: "/admin/getOneNH/" + manh,
 		contentType: 'application/json',
-		success: function() {
-			$("#idLH").val(maloai),
-				$("#nameLH").val(tenloai)
+		success: function(response) {
+			$("#idNH").val(response.manh),
+				$("#nameNH").val(response.tennh)
+			$('#idNH').show();
+			$('#updateNH').show();
+			$('#labelID').show();
 		},
 		error: function(err) {
 			alert("error is" + err)
@@ -93,8 +99,8 @@ $('#updateNH').click(function(e) {
 	e.preventDefault();
 	var manh = parseInt($("#idNH").val());
 	var tennh = $("#nameNH").val();
-	if(tennh == null || tennh == ""){
-		toastr.success('Tên loại không được để trống');
+	if (tennh == null || tennh == "") {
+		toastr.error('Tên loại không được để trống');
 		return false;
 	}
 	$.ajax({
@@ -122,7 +128,7 @@ $('#updateNH').click(function(e) {
 function delectNH(manh) {
 	$.ajax({
 		url: '/admin/nhanhieu/delete/' + manh,
-		success: function(result) {
+		success: function() {
 			toastr.success('Xóa thành công!');
 			setTimeout(function() {
 				loadData();

@@ -63,18 +63,18 @@ $('.cancel-customer-button').mousedown(function() {
     $('.add-customer').removeClass('active');
 })
 
-$('.customer-button-edit').mousedown(function() {
+/*$('.customer-button-edit').mousedown(function() {
      $('.edit-customer').addClass('active');
-})
+})*/
 
 $('.cancel-customer-button').mousedown(function() {
     $('.add-customer').removeClass('active');
 })
 
-$('.customer-button-edit').mousedown(function() {
+/*$('.customer-button-edit').mousedown(function() {
      $('.edit-customer').addClass('active');
 })
-
+*/
 $('.cancel-customer-button').mousedown(function() {
     $('.add-customer').removeClass('active');
 })

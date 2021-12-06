@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.model.KhachHang;
+import com.model.LoaiHang;
 import com.model.Message;
 import com.repository.KhachHangDAO;
 import com.service.SessionService;
@@ -25,23 +26,24 @@ public class khachhangAPI {
 	KhachHangDAO khachhangDAO;
 	@Autowired
 	SessionService sessionService;
-	
+
 	@GetMapping("/getDataKH")
 	public Message getData() {
 		Message mess = new Message();
-		if(sessionService.get("listKH")!=null) {
+		if (sessionService.get("listKH") != null) {
 			mess.setValue("session");
-		}else {
+		} else {
 			mess.setValue("Lỗi");
 		}
 		return mess;
 	}
+
 	@GetMapping("/khachhang")
 	public Message load(Model model) {
 		Message mess = new Message();
-		Pageable pageable = PageRequest.of(0, 8);		
+		Pageable pageable = PageRequest.of(0, 8);
 		Page<KhachHang> listKH = khachhangDAO.findAll(pageable);
-		sessionService.set("listKH",listKH);
+		sessionService.set("listKH", listKH);
 		return mess;
 	}
 
@@ -79,26 +81,30 @@ public class khachhangAPI {
 		khachhangDAO.deleteById(makh);
 		return "ok";
 	}
-	
-//		@PutMapping("KhachHang/edit/{manv}")
-//		public ResponseEntity<KhachHang> edit(@PathVariable(value = "manv") Long manv,
-//				@Validated @RequestParam KhachHang KhachHangDetails) throws ResourceNotFoundException {
-//			KhachHang KhachHang = khachhangDAO.findById(manv)
-//					.orElseThrow(() -> new ResourceNotFoundException("Khách hàng này không tồn tại: " + manv));
-//			KhachHang.setTendangnhap(KhachHangDetails.getTendangnhap());
-//			KhachHang.setMatkhau(KhachHangDetails.getMatkhau());
-//			KhachHang.setFullname(KhachHangDetails.getFullname());
-//			KhachHang.setNgaysinh(KhachHangDetails.getNgaysinh());
-//			KhachHang.setGioitinh(KhachHang.isGioitinh());
-//			KhachHang.setDiachi(KhachHangDetails.getDiachi());
-//			KhachHang.setActive(KhachHangDetails.isActive());
-//			KhachHang.setEmail(KhachHangDetails.getEmail());
-//			KhachHang.setSodienthoai(KhachHangDetails.getSodienthoai());
-//			KhachHang.setHinh(KhachHangDetails.getHinh());
-	//
-//			final KhachHang edit = khachhangDAO.save(KhachHang);
-	//
-//			return ResponseEntity.ok(edit);
-//		}
+
+	@GetMapping("admin/getOneKH/{makh}")
+	@ResponseBody
+	public KhachHang getOneKH(@PathVariable long makh) {
+		KhachHang khachhang = khachhangDAO.findById(makh).get();
+		return khachhang;
+	}
+
+	@PostMapping("admin/updateKH")
+	@ResponseBody
+	public String updateKH(@RequestBody KhachHang kh) {
+		KhachHang KhachHang = khachhangDAO.getById(kh.getMakh());
+		KhachHang.setTendangnhap(kh.getTendangnhap());
+		KhachHang.setMatkhau(kh.getMatkhau());
+		KhachHang.setFullname(kh.getFullname());
+		KhachHang.setNgaysinh(kh.getNgaysinh());
+		KhachHang.setGioitinh(kh.isGioitinh());
+		KhachHang.setDiachi(kh.getDiachi());
+		KhachHang.setActive(kh.isActive());
+		KhachHang.setEmail(kh.getEmail());
+		KhachHang.setSodienthoai(kh.getSodienthoai());
+		KhachHang.setHinh(kh.getHinh());
+		khachhangDAO.save(KhachHang);
+		return "updated";
+	}
 
 }

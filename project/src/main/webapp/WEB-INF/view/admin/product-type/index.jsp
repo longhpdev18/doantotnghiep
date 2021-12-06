@@ -41,11 +41,9 @@
 
 						<form class="fAdd-product">
 							<div class="input_form">
-								<label for="nameproduct" class="name">Mã loại hàng </label> <input
-									type="text" id="idLH" name="nameproduct" placeholder="Mã loại hàng"
+								<label id="labelID" for="nameproduct" class="name">Mã loại hàng </label> <input
+									type="text" id="idLH" name="nameproduct" placeholder="Mã loại hàng" readonly="readonly"
 									required>
-							</div>
-							<div class="input_form">
 								<label for="nameproduct" class="name">Tên loại hàng </label> <input
 									type="text" id="nameLH" name="nameproduct" placeholder="Tên loại hàng"
 									required>

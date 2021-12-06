@@ -59,8 +59,8 @@ public class AdminController {
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
-		List<KhachHang> listkhtop = khachhangDAO.getTopKH(8);
-		model.addAttribute("listkhtop",listkhtop);
+		//List<KhachHang> listkhtop = khachhangDAO.getTopKH(8);
+		//model.addAttribute("listkhtop",listkhtop);
 		return "admin/index";
 	}
 

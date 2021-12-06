@@ -66,10 +66,11 @@ public class nhanhieuAPI {
 
 	@GetMapping("admin/getOneNH/{manh}")
 	@ResponseBody
-	public NhanHieu getOneLH(@PathVariable long manh) {
-		NhanHieu NhanHieu = nhanhieuDAO.getOne(manh);
+	public NhanHieu getOneNH(@PathVariable long manh) {
+		NhanHieu NhanHieu = nhanhieuDAO.findById(manh).get();
 		return NhanHieu;
 	}
+	
 
 	@PostMapping("admin/updateNH")
 	@ResponseBody
