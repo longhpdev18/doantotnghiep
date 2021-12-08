@@ -49,7 +49,13 @@ $('#add-customer').click(function(e) {
 	var birthday = Date.parse($('#birthday').val());
 	var diachi = $('#address').val();
 	var email = $('#emailKH').val();
-	var hinh = $('#fileKH')[0].files[0].name;
+	var hinh = $('#fileKH')[0].files[0];
+	if (hinh == undefined || hinh == null || hinh == "") {
+		hinh = "anh"
+	} else {
+		hinh = hinh.name
+	}
+
 	var sodienthoai = $('#phoneKH').val();
 	var active = parseInt($('#active :selected').val());
 	$.ajax({
@@ -72,8 +78,10 @@ $('#add-customer').click(function(e) {
 		),
 		dataType: 'json',
 		success: function() {
-
-			loadData();
+			toastr.success('Thêm thành công!');
+			setTimeout(function() {
+				loadData();
+			}, 1000);
 
 		}, error: function(err) {
 			console.log(err)
@@ -114,7 +122,7 @@ function editKH(makh) {
 				, $("#udAddress").val(response.diachi)
 				, $("#udMAil").val(response.email)
 				, $("#udPhone").val(response.sodienthoai)
-				, $("#udImg").val(response.hinh)
+				, $("#lblHinh").text(response.hinh)
 			if (response.active == false) {
 				$("#udActive").val("0")
 			} else {
@@ -135,20 +143,44 @@ function editKH(makh) {
 
 $('#UpdateKH').click(function(e) {
 	e.preventDefault();
-
+	var makh = $('#udID').val();
+	var tendangnhap = $('#udUser').val();
+	var matkhau = $('#udPass').val();
+	var fullname = $('#udName').val();
+	var ngaysinh = Date.parse($("#udDate").val());
+	var diachi = $('#udAddress').val();
+	var email = $('#udMAil').val();
+	var sodienthoai = $('#udPhone').val();
+	var hinh = $('#udImg')[0].files[0];	
+	if (hinh == undefined || hinh == null || hinh == "") {
+		hinh = $('#lblHinh').text();
+	} else {
+		hinh = hinh.name;
+	}
+	var active = parseInt($('#udActive :selected').val());
+	var gioitinh = parseInt($('#udGT :selected').val());
 	$.ajax({
-		url: '/admin/updateNH',
+		url: '/admin/updateKH',
 		type: 'POST',
 		contentType: 'application/json',
 		data: JSON.stringify({
-			manh: manh,
-			tennh: tennh
+			makh: makh,
+			tendangnhap: tendangnhap,
+			matkhau: matkhau,
+			fullname: fullname,
+			ngaysinh: ngaysinh,
+			diachi: diachi,
+			email: email,
+			sodienthoai: sodienthoai,
+			active: active,
+			gioitinh: gioitinh,
+			hinh: hinh
 		}),
 		success: function() {
 			toastr.success('Cập nhật thành công!');
 			setTimeout(function() {
 				loadData();
-			}, 2000);
+			}, 1000);
 		},
 		error: function(err) {
 			alert("error is" + err)

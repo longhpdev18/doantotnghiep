@@ -33,8 +33,6 @@
 			<jsp:include page="./../topbar.jsp"></jsp:include>
 			<div class="manage-customer">
 				<div class="manage-customer-wp">
-
-
 					<div class="add-customer blur-dark">
 						<form class="form-add-customer" enctype=multipart/form-data>
 							<div class="form-heading center">Thêm khách hàng</div>
@@ -97,8 +95,8 @@
 							<div class="form-heading center">Sửa khách hàng</div>
 							<div class="form-content">
 								<div class="form-group">
-									<label>Mã khách hàng </label> 
-									<input id="udID" type="text" readonly="readonly">
+									<label>Mã khách hàng </label> <input id="udID" type="text"
+										readonly="readonly">
 								</div>
 								<div class="form-group">
 									<label>Tên tài khoản</label> <input id="udUser" type="text"
@@ -135,7 +133,8 @@
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input id="udImg" value="hinh" type="file" accept="image/*">
+									<label>Hình ảnh</label> <input id="udImg"
+										type="file" accept="image/*"><label id="lblHinh"></label>
 								</div>
 								<div class="form-group">
 									<label>Trạng thái</label> <select id="udActive">
@@ -144,7 +143,8 @@
 									</select>
 								</div>
 								<div class="form-button">
-									<button id="UpdateKH" class="edit-customer-button">Sửa khách hàng</button>
+									<button id="UpdateKH" class="edit-customer-button">Sửa
+										khách hàng</button>
 									<button class="cancel-customer-button">Hủy</button>
 								</div>
 							</div>
@@ -217,7 +217,8 @@
 									<div class="customer-address">${item.diachi}</div>
 								</div>
 								<div class="customer-action">
-									<button onclick="editKH(${item.makh})" class="customer-button-edit">
+									<button onclick="editKH(${item.makh})"
+										class="customer-button-edit">
 										<i class="fas fa-pencil-alt"></i>
 									</button>
 									<button class="customer-button-delete"

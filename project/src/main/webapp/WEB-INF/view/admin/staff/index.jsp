@@ -102,50 +102,56 @@
 							<div class="form-heading center">Sửa nhân viên</div>
 							<div class="form-content">
 								<div class="form-group">
-									<label>Tên tài khoản</label> <input type="text"
+									<label>Mã nhân viên </label> <input id="udID" type="text"
+										readonly="readonly">
+								</div>
+								<div class="form-group">
+									<label>Tên tài khoản</label> <input id="udUser" type="text"
 										placeholder="Nhập tên tài khoản">
 								</div>
 								<div class="form-group">
-									<label>Mật khẩu</label> <input type="password"
+									<label>Mật khẩu</label> <input id="udPass" type="password"
 										placeholder="Mật khẩu">
 								</div>
 								<div class="form-group">
-									<label>Họ và tên</label> <input type="text"
+									<label>Họ và tên</label> <input id="udName" type="text"
 										placeholder="Họ và tên">
 								</div>
 								<div class="form-group">
-									<label>Giới tính</label> <select>
-										<option>Nam</option>
-										<option>Nữ</option>
+									<label>Giới tính</label> <select id="udGT">
+										<option value="0">Nam</option>
+										<option value="1">Nữ</option>
 									</select>
 								</div>
 								<div class="form-group">
-									<label>Ngày sinh</label> <input type="date">
+									<label>Ngày sinh</label> <input id="udDate" type="date">
 								</div>
 								<div class="form-group address">
-									<label>Địa chỉ</label> <input type="text"
+									<label>Địa chỉ</label> <input id="udAddress" type="text"
 										placeholder="Thêm địa chỉ">
 								</div>
 								<div class="form-group ">
-									<label>Email</label> <input type="mail"
+									<label>Email</label> <input id="udMAil" type="mail"
 										placeholder="Thêm email">
 								</div>
 
 								<div class="form-group">
-									<label>Số điện thoại</label> <input type="number"
+									<label>Số điện thoại</label> <input id="udPhone" type="number"
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input type="file" accept="image/*">
+									<label>Hình ảnh</label> <input id="udHinh" type="file"
+										accept="image/*"> <label id="lblHinh"></label>
 								</div>
 								<div class="form-group">
-									<label>Trạng thái</label> <select>
-										<option>Đã kích hoạt</option>
-										<option selected>Chưa kích hoạt</option>
+									<label>Chức vụ </label> <select id="udChucvu">
+										<option value="1">Admin</option>
+										<option value="0">Nhân viên</option>
 									</select>
 								</div>
 								<div class="form-button">
-									<button class="edit-staff-button">Sửa nhân viên</button>
+									<button class="edit-staff-button" id="UpdateNV">Sửa
+										nhân viên</button>
 									<button class="cancel-customer-button">Hủy</button>
 								</div>
 							</div>
@@ -228,10 +234,12 @@
 									</span>
 								</div>
 								<div class="staff-action">
-									<button class="staff-button-edit">
+									<button class="staff-button-edit"
+										onclick="editNV(${item.manv})">
 										<i class="fas fa-pencil-alt"></i>
 									</button>
-									<button class="staff-button-delete" onclick="delectNV(${item.manv})">
+									<button class="staff-button-delete"
+										onclick="delectNV(${item.manv})">
 										<i class="far fa-trash-alt"></i>
 									</button>
 								</div>

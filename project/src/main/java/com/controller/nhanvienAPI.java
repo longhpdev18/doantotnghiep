@@ -13,45 +13,84 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.model.KhachHang;
 import com.model.Message;
 import com.model.NhanVien;
 import com.repository.NhanVienDAO;
 import com.service.SessionService;
+
 @RestController
 public class nhanvienAPI {
 	@Autowired
 	SessionService sessionService;
 	@Autowired
 	NhanVienDAO nhanvienDAO;
-	
+
 	@GetMapping("/getDataNV")
 	public Message getData() {
 		Message mess = new Message();
-		if(sessionService.get("listNV")!=null) {
+		if (sessionService.get("listNV") != null) {
 			mess.setValue("session");
-		}else {
+		} else {
 			mess.setValue("Lỗi");
 		}
 		return mess;
 	}
+
 	@GetMapping("/nhanvien")
 	public Message load(Model model) {
 		Message mess = new Message();
-		Pageable pageable = PageRequest.of(0, 8);		
+		Pageable pageable = PageRequest.of(0, 8);
 		Page<NhanVien> listNV = nhanvienDAO.findAll(pageable);
-		sessionService.set("listNV",listNV);
+		sessionService.set("listNV", listNV);
 		return mess;
 	}
-	
+
 	@PostMapping("admin/nhanvien/add")
-	public NhanVien createnNhanVien(@Validated @RequestBody NhanVien nhanvien) {
+	public NhanVien createnNhanVien(@Validated @RequestBody NhanVien nv) {
+		NhanVien nhanvien = new NhanVien();
+		nhanvien.setTendangnhap(nv.getTendangnhap());
+		nhanvien.setMatkhau(nv.getMatkhau());
+		nhanvien.setChucvu(nv.isChucvu());
+		nhanvien.setFullname(nv.getFullname());
+		nhanvien.setNgaysinh(nv.getNgaysinh());
+		nhanvien.setGioitinh(nv.isGioitinh());
+		nhanvien.setDiachi(nv.getDiachi());
+		nhanvien.setEmail(nv.getEmail());
+		nhanvien.setSodienthoai(nv.getSodienthoai());
+		nhanvien.setHinh(nv.getHinh());
 		return nhanvienDAO.save(nhanvien);
 	}
-	
+
 	@GetMapping("admin/nhanvien/delete/{manv}")
 	@ResponseBody
 	public String deleteNhanVien(@PathVariable long manv) {
 		nhanvienDAO.deleteById(manv);
 		return "ok";
+	}
+
+	@GetMapping("admin/getOneNV/{manv}")
+	@ResponseBody
+	public NhanVien getOneKH(@PathVariable long manv) {
+		NhanVien NhanVien = nhanvienDAO.findById(manv).get();
+		return NhanVien;
+	}
+
+	@PostMapping("admin/updateNV")
+	@ResponseBody
+	public String updateNV(@RequestBody NhanVien nv) {
+		NhanVien nhanvien = nhanvienDAO.getById(nv.getManv());
+		nhanvien.setTendangnhap(nv.getTendangnhap());
+		nhanvien.setMatkhau(nv.getMatkhau());
+		nhanvien.setChucvu(nv.isChucvu());
+		nhanvien.setFullname(nv.getFullname());
+		nhanvien.setNgaysinh(nv.getNgaysinh());
+		nhanvien.setGioitinh(nv.isGioitinh());
+		nhanvien.setDiachi(nv.getDiachi());
+		nhanvien.setEmail(nv.getEmail());
+		nhanvien.setSodienthoai(nv.getSodienthoai());
+		nhanvien.setHinh(nv.getHinh());
+		nhanvienDAO.save(nhanvien);
+		return "updated";
 	}
 }

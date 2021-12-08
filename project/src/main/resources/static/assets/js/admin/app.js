@@ -83,9 +83,9 @@ $('.add-item').mousedown(function() {
     $('.add-staff').addClass('active');
 })
 
-$('.staff-button-edit').mousedown(function() {
+/*$('.staff-button-edit').mousedown(function() {
     $('.edit-staff').addClass('active');
-})
+})*/
 
 
 

@@ -101,3 +101,84 @@ function delectNV(manv) {
 		}
 	})
 }
+
+function editNV(manv) {
+	$('.edit-staff').addClass('active');
+	$.ajax({
+		type: "GET",
+		url: "/admin/getOneNV/" + manv,
+		contentType: 'application/json',
+		success: function(response) {
+			$("#udID").val(response.manv)
+				, $("#udUser").val(response.tendangnhap)
+				, $("#udPass").val(response.matkhau)
+				, $("#udName").val(response.fullname)
+				, $("#udDate").val(response.ngaysinh)
+				, $("#udAddress").val(response.diachi)
+				, $("#udMAil").val(response.email)
+				, $("#udPhone").val(response.sodienthoai)
+				, $("#lblHinh").text(response.hinh)
+			if (response.chucvu == false) {
+				$("#udChucvu").val("0")
+			} else {
+				$("#udChucvu").val("1")
+			}
+			if (response.gioitinh == false) {
+				$("#udGT").val("0")
+			} else {
+				$("#udGT").val("1")
+			}
+		},
+		error: function(err) {
+			alert("error is" + err)
+		}
+	});
+}
+
+
+$('#UpdateNV').click(function(e) {
+	e.preventDefault();
+	var manv = parseInt($('#udID').val());
+	var tendangnhap = $('#udUser').val();
+	var matkhau = $('#udPass').val();
+	var fullname = $('#udName').val();
+	var ngaysinh = Date.parse($("#udDate").val());
+	var diachi = $('#udAddress').val();
+	var email = $('#udMAil').val();
+	var sodienthoai = $('#udPhone').val();
+	var hinh = $('#udHinh')[0].files[0];	
+	if (hinh == undefined || hinh == null || hinh == "") {
+		hinh = $('#lblHinh').text();
+	} else {
+		hinh = hinh.name;
+	}
+	var chucvu = parseInt($('#udChucvu :selected').val());
+	var gioitinh = parseInt($('#udGT :selected').val());
+	$.ajax({
+		url: '/admin/updateNV',
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify({
+			manv: manv,
+			tendangnhap: tendangnhap,
+			matkhau: matkhau,
+			fullname: fullname,
+			ngaysinh: ngaysinh,
+			diachi: diachi,
+			email: email,
+			sodienthoai: sodienthoai,
+			chucvu: chucvu,
+			gioitinh: gioitinh,
+			hinh: hinh
+		}),
+		success: function() {
+			toastr.success('Cập nhật thành công!');
+			setTimeout(function() {
+				loadData();
+			}, 1000);
+		},
+		error: function(err) {
+			alert("error is" + err)
+		}
+	});
+})
