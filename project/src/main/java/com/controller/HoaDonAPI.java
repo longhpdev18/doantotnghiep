@@ -6,10 +6,15 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.model.HoaDon;
 import com.model.HoaDonChiTiet;
+import com.model.KhachHang;
 import com.model.Message;
 import com.repository.HoaDonCTDAO;
 import com.repository.HoaDonDAO;
@@ -69,4 +74,24 @@ public class HoaDonAPI {
 		}
 		return mess;
 	}
+	
+	@GetMapping("admin/getOneHD/{mahd}")
+	@ResponseBody
+	public HoaDon getOneHD(@PathVariable long mahd) {
+		HoaDon hd = hoadonDAO.findById(mahd).get();
+		return hd;
+	}
+
+	@PostMapping("admin/updateHD")
+	@ResponseBody
+	public String updateHD(@RequestBody HoaDon hd) {
+		HoaDon hoadon = hoadonDAO.findById(hd.getMahd()).get();
+		hoadon.setTennguoinhan(hd.getTennguoinhan());
+		hoadon.setSdtnguoinhan(hd.getSdtnguoinhan());
+		hoadon.setDiachinguoinhan(hd.getDiachinguoinhan());
+		hoadon.setTrangthai(hd.getTrangthai());
+		hoadonDAO.save(hoadon);
+		return "updated";
+	}
+	
 }

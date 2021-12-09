@@ -36,10 +36,10 @@
             <input type="password" name="username" id="password" class="txtPassword" placeholder="Mật khẩu">
         </div>
         <button type = "submit" class="btn_Login">Đăng nhập</button>
-        <div class="query">
+        <!-- <div class="query">
             <p>Quên <a href="">Mật khẩu</a>?</p>
             <p>Tạo một <a href="">Tài khoản</a>?</p>
-        </div>
+        </div> -->
     </form>
 </body>
 <!--Link icon-->

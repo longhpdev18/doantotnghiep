@@ -33,7 +33,7 @@
 					class="fas fa-users"></i>
 			</span> <span class="title">Quản lý nhân viên</span>
 		</a></li>
-		<li><a href="#"> <span class="icon"> <ion-icon
+		<!-- <li><a href="#"> <span class="icon"> <ion-icon
 						name="chatbubbles"></ion-icon>
 			</span> <span class="title">Tin nhắn</span>
 		</a></li>
@@ -41,7 +41,7 @@
 		<li><a href="#"> <span class="icon"> <ion-icon
 						name="lock"></ion-icon>
 			</span> <span class="title">Quên mật khẩu</span>
-		</a></li>
+		</a></li> -->
 		<li><a href="/logoutAdmin"> <span class="icon"> <ion-icon
 						name="log-in"></ion-icon>
 			</span> <span class="title">Thoát</span>

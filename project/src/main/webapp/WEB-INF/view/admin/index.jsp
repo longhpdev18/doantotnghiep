@@ -31,6 +31,9 @@
 <!--LINE AWSOME-->
 <link rel="stylesheet"
 	href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
 </head>
 
 <body>
@@ -49,41 +52,42 @@
 								<div class="order-update-heading">
 									<div class="order-update-orderid">
 										<p>Mã ĐH:</p>
-										<span>9999</span>
+										<span id="maHD"></span>
 									</div>
 									<div class="order-update-title">Cập nhật đơn hàng</div>
 
 									<div class="order-update-date">
 										<p>Ngày đặt:</p>
-										<span>08-11-2022</span>
+										<span id="Date">08-11-2022</span>
 									</div>
 								</div>
 								<div class="order-update-content">
 									<div class="order-form-group">
-										<label for="fullname">Họ và tên:</label> <input type="text"
-											name="fullname" id="fullname" placeHolder="Nhập họ và tên" />
+										<label for="fullname">Họ và tên:</label> <input id="Name"
+											type="text" name="fullname" id="fullname"
+											placeHolder="Nhập họ và tên" />
 									</div>
 									<div class="order-form-group">
-										<label for="phone">Số điện thoại:</label> <input type="number"
-											name="" phone"" id=""
-											phone"" placeHolder="Nhập số điện thoại" />
+										<label for="phone">Số điện thoại:</label> <input id="Phone"
+											type="number" placeHolder="Nhập số điện thoại" />
 									</div>
 									<div class="order-form-group">
-										<label for="address">Họ và tên:</label> <input type="text"
-											name="address" id="address" placeHolder="Nhập địa chỉ" />
+										<label for="address">Địa chỉ</label> <input type="text"
+											name="address" id="Address" placeHolder="Nhập địa chỉ" />
 									</div>
 									<div class="order-form-group">
-										<label for="status">Trạng thái:</label> <select>
-											<option>Chọn trạng thái</option>
+										<label for="status">Trạng thái:</label> <select id="Status">
+											<option>Chưa xác nhận</option>
 											<option>Đang chuẩn bị</option>
 											<option>Đang vận chuyển</option>
-											<option>Đang giao hàng</option>
+											<option>Đã giao hàng</option>
 											<option>Đã hủy</option>
 										</select>
 									</div>
 								</div>
 								<div class="order-update-button">
-									<button class="order-update-update">Cập nhật</button>
+									<button id="updateHD" class="order-update-update">Cập
+										nhật</button>
 									<button class="order-update-cancel">Hủy</button>
 								</div>
 
@@ -162,7 +166,7 @@
 													<i class="fas fa-ellipsis-h"></i>
 												</button>
 												<div class="dropdown-content">
-													<button class="btn-showEdit">
+													<button onclick="editHD(${item.mahd})" class="btn-showEdit">
 														<i class="far fa-edit"></i>
 														<p>Sửa</p>
 													</button>
@@ -225,7 +229,7 @@
 										<i class="fas fa-angle-right"></i>
 									</div>
 								</li>
-									<li class="recentCustomer-item">
+								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
 										<img
 											src="https://i.vietgiaitri.com/2018/11/26/cung-ngam-hinh-anh-nhung-nguoi-dep-co-khuon-mat-mang-ti-le-can-d-103d74.jpg" />
@@ -418,11 +422,13 @@
 	</div>
 </body>
 <!--Link icon-->
+
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../assets/js/admin/hoaDon.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 <script type="text/javascript"
 	src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
