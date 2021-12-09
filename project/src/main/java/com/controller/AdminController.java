@@ -7,10 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.model.HoaDon;
 import com.model.KhachHang;
 import com.model.LoaiHang;
 import com.model.NhanHieu;
 import com.model.NhanVien;
+import com.repository.HoaDonDAO;
 import com.repository.KhachHangDAO;
 import com.repository.LoaiHangDAO;
 import com.repository.NhanHieuDAO;
@@ -36,6 +38,8 @@ public class AdminController {
 	@Autowired
 	KhachHangDAO khachhangDAO;
 	@Autowired
+	HoaDonDAO hoadonDAO;
+	@Autowired
 	LoaiHangDAO loaihangDAO;
 	@Autowired
 	ShoppingCartService cart;
@@ -59,8 +63,9 @@ public class AdminController {
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
-		//List<KhachHang> listkhtop = khachhangDAO.getTopKH(8);
-		//model.addAttribute("listkhtop",listkhtop);
+		
+//		HoaDon sumHD = hoadonDAO.sum();
+//		model.addAttribute("sumHD",sumHD);
 		return "admin/index";
 	}
 

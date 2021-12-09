@@ -78,6 +78,7 @@
 									<div class="order-form-group">
 										<label for="status">Trạng thái:</label> <select id="Status">
 											<option>Chưa xác nhận</option>
+											<option>Đã nhận đơn</option>
 											<option>Đang chuẩn bị</option>
 											<option>Đang vận chuyển</option>
 											<option>Đã giao hàng</option>
