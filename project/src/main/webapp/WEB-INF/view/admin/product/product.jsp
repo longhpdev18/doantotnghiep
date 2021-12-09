@@ -40,7 +40,7 @@
 			<jsp:include page="./../topbar.jsp"></jsp:include>
 
 
-			<div class="delete_product_nof">
+			<!-- <div class="delete_product_nof">
 				<div class="delete_product_nof-wp delete-warning ">
 					<div class="nof-icon">
 						<i class="fas fa-exclamation"></i>
@@ -71,9 +71,9 @@
 						Lenovo IdeaPad 5 Pro 16ACH6 82L50095VN </span>
 					<button class="btn-delete-done">Xong</button>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="edit_product blur-dark">
+			<!-- <div class="edit_product blur-dark">
 				<form action="" id="sp" class="edit_product-wp">
 					<div class="form-heading">
 						<div class="form-heading-left"></div>
@@ -154,7 +154,7 @@
 						<button class="btn-edit-done">Xong</button>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="manage-product">
 				<!-- <div class="title-page">Quản lý sản phẩm</div> -->
@@ -165,9 +165,12 @@
 						<div class="add_product-heading">Thêm sản phẩm</div>
 						<form action="" class="fAdd-product">
 							<div class="input_form">
-								<label for="nameproduct" class="name">Tên </label> <input
-									id="tensp" type="text" name="nameproduct"
-									placeholder="Tên sản phẩm" required>
+								<label id="lblID" for="idproduct" class="name">Mã sản
+									phẩm </label> <input id="IDSP" type="text" name="idproduct"
+									placeholder="Tên sản phẩm" required readonly="readonly"> <label
+									for="nameproduct" class="name">Tên </label> <input id="tensp"
+									type="text" name="nameproduct" placeholder="Tên sản phẩm"
+									required>
 							</div>
 							<div class="input_form">
 								<label for="soluong" class="name">giảm giá</label> <input
@@ -182,8 +185,8 @@
 								<label for="status" class="name">Trạng thái</label> <select
 									name="status" id="trangthaisp">
 									<option value="Maths" selected>Chọn...</option>
-									<option value="1">Hết hàng</option>
-									<option value="2">Còn hàng</option>
+									<option value="0">Hết hàng</option>
+									<option value="1">Còn hàng</option>
 								</select>
 							</div>
 							<div class="input_form">
@@ -244,8 +247,10 @@
                 <span class="image_file">Imge File</span>
             </div>
         </div> -->
+								<label for="hinh" class="name">Hình</label>
 								<div class="button_file">
-									<input type="file" id="fileSP" accept="image/*">
+									<input type="file" id="fileSP" accept="image/*"> <label
+										id="lblHinh" class="name"></label>
 									<!-- <label for="file">
                     <i class="far fa-image"></i> &nbsp;
                     Choose a Photo
@@ -253,7 +258,9 @@
 								</div>
 							</div>
 							<div class="group-button-add">
-								<button class="add-product">Thêm</button>
+								<button id="add-product" class="add-product">Thêm</button>
+								<button id="update-product" class="add-product">Cập
+									nhật</button>
 								<button class="add-cancel">Hủy</button>
 							</div>
 						</form>
@@ -333,7 +340,7 @@
 												<i class="fas fa-ellipsis-h"></i>
 											</button>
 											<div class="dropdown-content">
-												<button class="btn-showEdit">
+												<button onclick="editSP(${item.masp})" class="btn-showEdit">
 													<i class="far fa-edit"></i>
 													<p>Sửa</p>
 												</button>

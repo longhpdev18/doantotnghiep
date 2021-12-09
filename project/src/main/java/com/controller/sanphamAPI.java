@@ -175,6 +175,29 @@ public class sanphamAPI {
 		sessionService.set("pageCount", pageCount);
 		return "ok";
 	}
+	
+	@GetMapping("admin/getOneSP/{masp}")
+	@ResponseBody
+	public SanPham getOneSP(@PathVariable Integer masp) {
+		SanPham sp = sanphamDAO.findById(masp).get();
+		return sp;
+	}
+	
+	@PostMapping("admin/updateSP")
+	@ResponseBody
+	public String updateSP(@RequestBody SanPham sp) {
+		SanPham sanpham = sanphamDAO.getById(sp.getMasp());
+		sanpham.setTensp(sp.getTensp());
+		sanpham.setMaloai(sp.getMaloai());
+		sanpham.setManh(sp.getManh());
+		sanpham.setGia(sp.getGia());
+		sanpham.setMota(sp.getMota());
+		sanpham.setTinhtrang(sp.getTinhtrang());
+		sanpham.setHinh(sp.getHinh());
+		sanpham.setDeal(sp.getDeal());
+		sanphamDAO.save(sanpham);
+		return "updated";
+	}
 //	@PutMapping("SanPham/edit/{masp}")
 //	public ResponseEntity<SanPham> edit(@PathVariable(value = "masp") Integer masp,
 //			@Validated @RequestParam SanPham SanPhamDetails) throws ResourceNotFoundException {

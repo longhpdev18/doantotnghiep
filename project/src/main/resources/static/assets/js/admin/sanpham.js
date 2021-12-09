@@ -1,4 +1,4 @@
-$(window).on('load', checkSession())
+$(window).on('load', getData())
 function loadData() {
 	$.ajax({
 		url: '/sanpham',
@@ -21,7 +21,11 @@ function loadData() {
 
 	})
 }
-function checkSession() {
+function getData() {
+	$('#add-product').show()
+	$('#update-product').hide();
+	$('#IDSP').hide();
+	$('#lblID').hide();
 	$.ajax({
 		url: '/checkProductAdmin',
 		type: 'GET',
@@ -91,16 +95,38 @@ $('.btn-next').click(function() {
 	})
 })
 
-$('.add-product').click(function(e) {
+$('#add-product').click(function(e) {
 	e.preventDefault();
 	var tenspName = $('#tensp').val();
+	if (tenspName == null || tenspName == "" || tenspName == undefined) {
+		toastr.error('Tên sản phẩm không được để trống');
+		return false;
+	}
 	var giaspName = parseInt($('#giasp').val());
+	/*if (giaspName == NaN || giaspName == "" || giaspName == undefined) {
+		toastr.error('Giá sản phẩm không được để trống');
+		return false;
+	}*/
 	var maloaiName = parseInt($('#maloai :selected').val());
+	/*if (maloaiName == NaN || maloaiName == "" || maloaiName == undefined) {
+		toastr.error('Mã loại không được để trống');
+		return false;
+	}*/
 	var manhName = parseInt($('#manh :selected').val());
+
 	var tinhtrangName = parseInt($('#trangthaisp :selected').val());
+
 	var motasp = $('textarea#motasp').val();
+
 	var hinhName = $('#fileSP')[0].files[0].name;
+	/*if (hinhName == NaN || hinhName == "" || hinhName == undefined) {
+		toastr.error('Hinh không được để trống');
+		return false;
+	}*/
 	var dealName = parseInt($('#deal').val());
+
+
+
 	$.ajax({
 		url: '/admin/product/add',
 		type: 'POST',
@@ -121,7 +147,7 @@ $('.add-product').click(function(e) {
 		success: function() {
 			toastr.success('Thêm thành công!');
 			setTimeout(function() {
-				location.reload();
+				loadData();
 			}, 2000);
 
 
@@ -131,6 +157,7 @@ $('.add-product').click(function(e) {
 
 	})
 })
+
 
 function delectSP(masp) {
 	$.ajax({
@@ -167,3 +194,80 @@ function Search() {
 
 	})
 }
+
+function editSP(masp) {
+	$.ajax({
+		type: "GET",
+		url: "/admin/getOneSP/" + masp,
+		contentType: 'application/json',
+		success: function(response) {
+			$('#IDSP').val(response.masp),
+				$('#tensp').val(response.tensp),
+				$('#giasp').val(response.gia),
+				$('#maloai').val(response.maloai),
+				$('#manh').val(response.manh),
+				$('textarea#motasp').val(response.mota),
+				$('#deal').val(response.deal),
+				$("#lblHinh").text(response.hinh)
+			if (response.tinhtrang == false) {
+				$("#trangthaisp").val("0")
+			} else {
+				$("#trangthaisp").val("1")
+			}
+			/*	$('#fileSP')[0].files[0].name;*/
+			$('.add-product').hide();
+			$('#update-product').show();
+			$('#IDSP').show();
+			$('#lblID').show();
+		},
+		error: function(err) {
+			alert("error is" + err)
+		}
+	});
+}
+
+
+
+$('#update-product').click(function(e) {
+	e.preventDefault();
+		var masp = parseInt($('#IDSP').val());
+	var tenspName = $('#tensp').val();
+	var giaspName = parseInt($('#giasp').val());
+	var maloaiName = parseInt($('#maloai :selected').val());
+	var manhName = parseInt($('#manh :selected').val());
+	var tinhtrangName = parseInt($('#trangthaisp :selected').val());
+	var motasp = $('textarea#motasp').val();
+	var hinhName = $('#fileSP')[0].files[0];
+	var dealName = parseInt($('#deal').val());
+
+	if (hinhName == undefined || hinhName == null || hinhName == "") {
+		hinhName = $('#lblHinh').text();
+	} else {
+		hinhName = hinhName.name;
+	}
+	$.ajax({
+		url: '/admin/updateSP',
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify({
+			"masp": masp,
+			"tensp": tenspName,
+			"maloai": maloaiName,
+			"manh": manhName,
+			"gia": giaspName,
+			"mota": motasp,
+			"tinhtrang": tinhtrangName,
+			"hinh": hinhName,
+			"deal": dealName
+		}),
+		success: function() {
+			toastr.success('Cập nhật thành công!');
+			setTimeout(function() {
+				loadData();
+			}, 2000);
+		},
+		error: function(err) {
+			alert("error is" + err)
+		}
+	});
+})
