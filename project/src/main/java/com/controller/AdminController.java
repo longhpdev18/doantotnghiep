@@ -106,12 +106,16 @@ public class AdminController {
 	}
 	@GetMapping("/admin/brand")
 	public String brand(Model model) {
-
+		if (sessionService.get("fullnameNV") == null) {
+			return "redirect:/admin";
+		}
 		return "admin/brand/index";
 	}
 	@GetMapping("/admin/product-type")
 	public String typeproduct( ) {
-
+		if (sessionService.get("fullnameNV") == null) {
+			return "redirect:/admin";
+		}
 		return "admin/product-type/index";
 	}
 

@@ -23,6 +23,8 @@
 <!--LINE AWSOME-->
 <link rel="stylesheet"
 	href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
 </head>
 <body>
 	<div class="container">
@@ -44,9 +46,9 @@
 									</div>
 
 								</div>
-								<p class="profile-id">#
-								<label id="MaNV">${maNV}</label>
-								</p> 
+								<p class="profile-id">
+									# <label id="MaNV">${maNV}</label>
+								</p>
 							</div>
 							<div class="profile-right">
 								<h1 class="profile-title">Thông tin cá nhân</h1>
@@ -82,10 +84,18 @@
 												value="${ngaysinh}">
 										</div>
 										<div class="form-group-col2 flex-col ml-m">
-											<label for="phone"> Giới tính: </label>
-											<select class="genders">
-												<option>Nam</option>
-												<option>Nữ</option>
+											<label for="phone"> Giới tính: </label> <select id="genders"
+												class="genders">
+												<c:if test="${gioitinh == true}">
+													<option value="1">Nam</option>
+													<option value="0">Nữ</option>
+												</c:if>
+												<c:if test="${gioitinh == false}">
+													<option value="0">Nữ</option>
+													<option value="1">Nam</option>
+												</c:if>
+
+
 											</select>
 										</div>
 									</div>
@@ -101,7 +111,8 @@
 
 									<!-- PROFILE-BUTTON Khi đã click sửa -->
 									<div class="profile-button">
-										<button  id="btn-save" class="btn btn-primary btn-save mr-10 rounded-8">Chỉnh
+										<button id="btn-save"
+											class="btn btn-primary btn-save mr-10 rounded-8">Chỉnh
 											sửa</button>
 										<button class="btn btn-light rounded-8">Hủy</button>
 									</div>
@@ -123,6 +134,9 @@
 
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="../assets/js/admin/profile.js"></script>
 <script src="../assets/js/admin/app.js"></script>
