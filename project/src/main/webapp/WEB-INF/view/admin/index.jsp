@@ -171,10 +171,12 @@
 														<i class="far fa-edit"></i>
 														<p>Sửa</p>
 													</button>
-													<button class="btn-delete">
-														<i class="far fa-trash-alt"></i>
-														<p>Xóa</p>
-													</button>
+													<form action="./order-detail=${item.mahd}" method="get">
+														<button class="btn-delete">
+															<i class="far fa-trash-alt"></i>
+															<p>Xóa</p>
+														</button>
+													</form>
 												</div>
 											</div>
 										</td>

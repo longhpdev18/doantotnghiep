@@ -120,6 +120,12 @@ public class IndexController {
 		return "redirect:"; 
 	}
 	
+	@RequestMapping("order-detail")
+	public String orderDetail(){
+		
+		return "home/order/order-detail";
+	}
+	
 //	@RequestMapping("/product/page")
 //	public String paginate(Model model) {
 //		Pageable pageable = PageRequest.of(2, 5);

@@ -8,10 +8,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.model.HoaDon;
+import com.model.HoaDonChiTiet;
 import com.model.KhachHang;
 import com.model.LoaiHang;
 import com.model.NhanHieu;
 import com.model.NhanVien;
+import com.repository.HoaDonCTDAO;
 import com.repository.HoaDonDAO;
 import com.repository.KhachHangDAO;
 import com.repository.LoaiHangDAO;
@@ -39,6 +41,8 @@ public class AdminController {
 	KhachHangDAO khachhangDAO;
 	@Autowired
 	HoaDonDAO hoadonDAO;
+	@Autowired
+	HoaDonCTDAO hoadonctDAO;
 	@Autowired
 	LoaiHangDAO loaihangDAO;
 	@Autowired
@@ -69,11 +73,15 @@ public class AdminController {
 		return "admin/index";
 	}
 
-	@GetMapping("/admin/order-detail")
-	public String order_detailAD(Model model) {
+	@GetMapping("/admin/order-detail={mahd}")
+	public String order_detailAD(Model model, String mahd) {
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
+		
+		List<HoaDonChiTiet> listhd = hoadonctDAO.getCTHD(mahd);
+		model.addAttribute("listhd",listhd);
+		
 		return "admin/order/order-detail";
 	}
 
