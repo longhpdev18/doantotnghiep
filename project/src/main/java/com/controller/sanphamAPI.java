@@ -173,9 +173,12 @@ public class sanphamAPI {
 			String fileName = file.getOriginalFilename();
 			System.out.println(fileName);
 			if(!file.isEmpty()) {
-				String path = "src/main/resources/static/assets/img/sanpham/";
+				//String path1 = "src/main/resources/static/assets/img/sanpham/";
+				String path = new String(app.getRealPath("/WEB-INF"));
+				//Path staticPath = Paths.get("src/main/resources/static");
+				System.out.println(path);
 //				String path = "C:\\Users\\Admin\\Documents\\GitHub\\doantotnghiep\\project/src/main/resources/static/assets/img/sanpham/";
-				File fi = new File(path+fileName);
+				File fi = new File(path.substring(0,path.lastIndexOf("webapp/WEB-INF"))+"src/main/resources/static/assets/img/sanpham/"+fileName);
 				System.out.println(fi.getAbsolutePath());
 				file.transferTo(fi);
 			}
