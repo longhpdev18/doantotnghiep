@@ -55,7 +55,7 @@ public class PaidRestAPI {
 		Message mess = new Message();
 		hd.setMakh(Long.parseLong(sessionService.get("maKH").toString()));
 		hd.setTongtien(cart.getAmount());
-		System.out.println(hd.getNgaymua());  
+		System.out.println(hd.getTennguoinhan());  
 		for(Item item: cart.getItems()){
 			
 			hdDAO.save(hd);
@@ -65,6 +65,7 @@ public class PaidRestAPI {
 			hdct.setSoluong(item.getQty());
 			hdct.setDongia(1);
 			hdctDAO.save(hdct);
+			cart.clear();
 			mess.setValue("success");
         }
 		

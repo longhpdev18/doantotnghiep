@@ -29,18 +29,21 @@
 				<div class="order-detail">
 					<h1>Chi tiết đơn hàng</h1>
 					<div class="odd-wp">
+					 <c:forEach var="hd" items="${listHD}">
+                    	<c:if test="${hd.makh==maKH&&hd.mahd==maHD}">
+                    	
 						<div class="odd-heading">
 							<div class="left">
 								<div class="order-detail-date">
-									Ngày đặt hàng: <span>08/11/2021</span>
+									Ngày đặt hàng: <span>${hd.ngaymua}</span>
 								</div>
 							</div>
 							<div class="right">
 								<div class="order-detail-id">
-									ID đơn hàng: <span>20210811ABCDEF</span>
+									ID đơn hàng: <span>${hd.mahd}</span>
 								</div>
 								<div class="order-detail-status">
-									<div class="odd-status">Đơn hàng đang được vận chuyển</div>
+									<div class="odd-status">${hd.trangthai}</div>
 								</div>
 							</div>
 						</div>
@@ -67,6 +70,7 @@
 											<i class="fas fa-box"></i>
 										</div>
 									</div>
+									
 									<div class="sd-point-wp">
 										<div class="status-point">
 											<i class="far fa-star"></i>
@@ -86,6 +90,8 @@
 								<div class="sd-status-text">Đánh giá</div>
 							</div>
 						</div>
+						
+						</c:if></c:forEach>
 						<div class="odd-button">
 							<button class="odd-btn odd-btn-received">Đã nhận hàng</button>
 							<button class="odd-btn odd-btn-contact">Liên hệ</button>

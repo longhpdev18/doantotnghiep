@@ -27,6 +27,10 @@ import java.nio.file.Paths;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.servlet.ServletContext;
+
+import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;
@@ -50,7 +54,8 @@ import com.service.SessionService;
 
 @RestController
 public class sanphamAPI {
-
+	@Autowired
+	ServletContext app;
 	@Autowired
 	NhanVienDAO nhanvienDAO;
 	@Autowired
@@ -80,7 +85,7 @@ public class sanphamAPI {
 
 		return mess;
 	}
-
+	
 	@GetMapping("/checkProductAdmin")
 	public Message checkProductAdmin(Model model) {
 		Message mess = new Message();
@@ -110,7 +115,7 @@ public class sanphamAPI {
 
 		return mess;
 	}
-
+	
 	@PostMapping("/nextPage")
 	public Message nextPage(Model model, @RequestBody PageCount count) {
 		Message mess = new Message();
@@ -158,7 +163,25 @@ public class sanphamAPI {
 
 		return sanphamDAO.save(sp);
 	}
-	
+	@RequestMapping(value = "admin/product/addImage", method = RequestMethod.POST)
+	public Message addImage(@RequestBody MultipartFile file) throws IOException {
+		Message mess = new Message();
+		try {
+			String fileName = file.getOriginalFilename();
+			if(!file.isEmpty()) {
+				System.out.println(app.getRealPath("/resources"));
+				File fi = new File(app.getRealPath(null));
+				file.transferTo(fi);
+			}
+		}catch(Exception e){
+			mess.setValue("error");
+
+			return mess;
+		}
+		mess.setValue("ok");
+
+		return mess;
+	}
 	@GetMapping("admin/sanpham/delete/{masp}")
 	@ResponseBody
 	public String deleteSanPham(@PathVariable Integer masp) {
@@ -236,6 +259,5 @@ public class sanphamAPI {
 //
 //		return ResponseEntity.ok(edit);
 //	}
-//
-
+	
 }
