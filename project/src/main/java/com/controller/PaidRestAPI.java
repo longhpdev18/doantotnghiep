@@ -65,10 +65,10 @@ public class PaidRestAPI {
 			hdct.setSoluong(item.getQty());
 			hdct.setDongia(1);
 			hdctDAO.save(hdct);
-			cart.clear();
+			
 			mess.setValue("success");
         }
-		
+		cart.clear();
 		return mess;
 		
 	}

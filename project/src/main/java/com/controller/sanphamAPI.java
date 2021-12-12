@@ -173,7 +173,8 @@ public class sanphamAPI {
 			String fileName = file.getOriginalFilename();
 			System.out.println(fileName);
 			if(!file.isEmpty()) {
-				String path = "C:\\Users\\Admin\\Documents\\GitHub\\doantotnghiep\\project/src/main/resources/static/assets/img/sanpham/";
+				String path = "src/main/resources/static/assets/img/sanpham/";
+//				String path = "C:\\Users\\Admin\\Documents\\GitHub\\doantotnghiep\\project/src/main/resources/static/assets/img/sanpham/";
 				File fi = new File(path+fileName);
 				System.out.println(fi.getAbsolutePath());
 				file.transferTo(fi);

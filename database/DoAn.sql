@@ -86,6 +86,8 @@ CREATE TABLE hoadonchitiet(
 	FOREIGN KEY (mahd) REFERENCES hoadon(mahd),
 	FOREIGN KEY (masp) REFERENCES sanpham(masp)
 )
+
+/*
 go
 CREATE TABLE danhgia(
 	madg int IDENTITY(1,1) primary key,
@@ -96,7 +98,7 @@ CREATE TABLE danhgia(
 	FOREIGN KEY (masp) REFERENCES sanpham(masp)
 )
 
-/*
+
 create table laptop(
 	masp int primary key,
 	cpu nvarchar(250),

@@ -203,10 +203,3 @@ Nhà sản xuất : Mircosoft,Mã sản phẩm:  6GQ-00083 (Sản phẩm là Key
 Hình thức : FPP(ESD) (Full Packaged Product) - sản phẩm có thể kích hoạt khi thay đổi phần cứng.',1,'WIN HOME 10 32-bit64-bit.jpg',0)
 
 go
-
-DECLARE @cnt INT = 0;
-WHILE @cnt < (select COUNT(*) from sanPham)
-BEGIN
-	update sanpham set deal = RAND()*100 where masp=@cnt;
-	set @cnt = @cnt+1;
-END;

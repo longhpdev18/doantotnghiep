@@ -11,7 +11,6 @@ insert into khachhang values ('khachhang1','0123456789',N'Nguyễn Văn A','2000
 insert into hoadon values ('1','2021-10-14',N'Đã nhận hàng','test','test',346908433,10000)
 --Hóa đơn chi tiết--
 insert into hoadonchitiet values('1','2','3','2300000')
---Đánh giá--
-insert into danhgia values('1','2',N'Sản phẩm tốt, quá tuyệt vời')
+
 
 
