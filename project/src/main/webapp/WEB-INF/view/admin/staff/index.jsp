@@ -230,19 +230,20 @@
 								<div class="staff-position">
 									<span class="staff-seller"> <c:if
 											test="${item.chucvu == false}">Nhân viên</c:if> <c:if
-											test="${item.chucvu == true}">${item.chucvu} Admin</c:if>
+											test="${item.chucvu == true}">Admin</c:if>
 									</span>
-								</div>
-								<div class="staff-action">
-									<button class="staff-button-edit"
-										onclick="editNV(${item.manv})">
-										<i class="fas fa-pencil-alt"></i>
-									</button>
-									<button class="staff-button-delete"
-										onclick="delectNV(${item.manv})">
-										<i class="far fa-trash-alt"></i>
-									</button>
-								</div>
+								</div> <c:if test="${chucVuNV == true}">
+									<div class="staff-action">
+										<button class="staff-button-edit"
+											onclick="editNV(${item.manv})">
+											<i class="fas fa-pencil-alt"></i>
+										</button>
+										<button class="staff-button-delete"
+											onclick="delectNV(${item.manv})">
+											<i class="far fa-trash-alt"></i>
+										</button>
+									</div>
+								</c:if>
 							</li>
 						</c:forEach>
 

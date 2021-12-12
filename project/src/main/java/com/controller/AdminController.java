@@ -102,6 +102,8 @@ public class AdminController {
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
+		
+		sessionService.set("chucVuNV", sessionService.get("chucVuNV"));
 		return "admin/staff/index";
 	}
 
@@ -114,14 +116,14 @@ public class AdminController {
 	}
 	@GetMapping("/admin/brand")
 	public String brand(Model model) {
-		if (sessionService.get("fullnameNV") == null) {
+		if (sessionService.get("fullnameNV") == null || (boolean) sessionService.get("chucVuNV") == false) {
 			return "redirect:/admin";
 		}
 		return "admin/brand/index";
 	}
 	@GetMapping("/admin/product-type")
 	public String typeproduct( ) {
-		if (sessionService.get("fullnameNV") == null) {
+		if (sessionService.get("fullnameNV") == null || (boolean) sessionService.get("chucVuNV") == false ) {
 			return "redirect:/admin";
 		}
 		return "admin/product-type/index";
