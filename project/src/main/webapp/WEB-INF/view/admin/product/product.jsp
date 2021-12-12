@@ -184,7 +184,7 @@
 							<div class="input_form">
 								<label for="status" class="name">Trạng thái</label> <select
 									name="status" id="trangthaisp">
-									<option value="Maths" selected>Chọn...</option>
+									<option value="" selected>Chọn...</option>
 									<option value="0">Hết hàng</option>
 									<option value="1">Còn hàng</option>
 								</select>
@@ -192,7 +192,7 @@
 							<div class="input_form">
 								<label for="dropdown" class="name">Tên nhãn hiệu</label> <select
 									id="manh" name="dropdown">
-									<option value="Maths" selected>Chọn nhãn hiệu...</option>
+									<option value="" selected>Chọn nhãn hiệu...</option>
 									<c:forEach var="item" items="${listNH}">
 										<option value="${item.manh}">${item.tennh}</option>
 									</c:forEach>
@@ -214,7 +214,7 @@
 							<div class="input_form">
 								<label for="dropdown" class="name">Loại</label> <select
 									name="dropdown" id="maloai">
-									<option value="Maths" selected>Chọn thể loại...</option>
+									<option value="" selected>Chọn thể loại...</option>
 									<c:forEach var="item" items="${listLH}">
 										<option value="${item.maloai}">${item.tenloai}</option>
 									</c:forEach>
@@ -228,8 +228,6 @@
 									<option value="8">Loa</option>
 									<option value="9">Màn Hình</option>
 									<option value="10">Thiết bị văn phòng</option> -->
-
-
 								</select>
 							</div>
 							<div class="input_form">

@@ -111,21 +111,22 @@ $('#add-product').click(function(e) {
 	}
 	var maloaiName = $('#maloai :selected').val();
 	if (maloaiName == NaN || maloaiName == "" || maloaiName == undefined) {
-		toastr.error('Mã loại không được để trống');
+		toastr.error('Loại hàng không được để trống');
 		return false;
-	} else {
+	} 
+	else {
 		maloaiName = parseInt(maloaiName);
 	}
 	var manhName = $('#manh :selected').val();
 	if (manhName == NaN || manhName == "" || manhName == undefined) {
-		toastr.error('Mã loại không được để trống');
+		toastr.error('Nhãn hiệu không được để trống');
 		return false;
 	} else {
 		manhName = parseInt(manhName);
 	}
 	var tinhtrangName = $('#trangthaisp :selected').val();
 	if (tinhtrangName == NaN || tinhtrangName == "" || tinhtrangName == undefined) {
-		toastr.error('Mã loại không được để trống');
+		toastr.error('Trạng thái không được để trống');
 		return false;
 	} else {
 		tinhtrangName = parseInt(tinhtrangName);
