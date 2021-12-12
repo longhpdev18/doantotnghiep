@@ -102,29 +102,53 @@ $('#add-product').click(function(e) {
 		toastr.error('Tên sản phẩm không được để trống');
 		return false;
 	}
-	var giaspName = parseInt($('#giasp').val());
-	/*if (giaspName == NaN || giaspName == "" || giaspName == undefined) {
+	var giaspName = $('#giasp').val();
+	if (giaspName == NaN || giaspName == "" || giaspName == undefined) {
 		toastr.error('Giá sản phẩm không được để trống');
 		return false;
-	}*/
-	var maloaiName = parseInt($('#maloai :selected').val());
-	/*if (maloaiName == NaN || maloaiName == "" || maloaiName == undefined) {
+	} else {
+		giaspName = parseInt(giaspName);
+	}
+	var maloaiName = $('#maloai :selected').val();
+	if (maloaiName == NaN || maloaiName == "" || maloaiName == undefined) {
 		toastr.error('Mã loại không được để trống');
 		return false;
-	}*/
-	var manhName = parseInt($('#manh :selected').val());
-
-	var tinhtrangName = parseInt($('#trangthaisp :selected').val());
-
-	var motasp = $('textarea#motasp').val();
-
-	var hinhName = $('#fileSP')[0].files[0].name;
-	/*if (hinhName == NaN || hinhName == "" || hinhName == undefined) {
-		toastr.error('Hinh không được để trống');
+	} else {
+		maloaiName = parseInt(maloaiName);
+	}
+	var manhName = $('#manh :selected').val();
+	if (manhName == NaN || manhName == "" || manhName == undefined) {
+		toastr.error('Mã loại không được để trống');
 		return false;
-	}*/
-	var dealName = parseInt($('#deal').val());
-
+	} else {
+		manhName = parseInt(manhName);
+	}
+	var tinhtrangName = $('#trangthaisp :selected').val();
+	if (tinhtrangName == NaN || tinhtrangName == "" || tinhtrangName == undefined) {
+		toastr.error('Mã loại không được để trống');
+		return false;
+	} else {
+		tinhtrangName = parseInt(tinhtrangName);
+	}
+	var motasp = $('textarea#motasp').val();
+	if (motasp == null || motasp == "" || motasp == undefined) {
+		toastr.error('Mô tả sản phẩm không được để trống');
+		return false;
+	}
+	var hinhName = $('#fileSP')[0].files[0];
+	if (hinhName == NaN || hinhName == "" || hinhName == undefined) {
+		toastr.error('Hình không được để trống');
+		return false;
+	} else {
+		hinhName = hinhName.name;
+	}
+	var dealName = $('#deal').val();
+	if (dealName == NaN) {
+		toastr.error('Giảm giá chỉ viết số');
+		return false;
+	} else {
+		dealName = parseInt(dealName);
+	}
 
 
 	$.ajax({
