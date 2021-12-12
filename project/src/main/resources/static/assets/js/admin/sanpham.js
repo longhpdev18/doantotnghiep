@@ -261,10 +261,25 @@ $('#update-product').click(function(e) {
 			"deal": dealName
 		}),
 		success: function() {
-			toastr.success('Cập nhật thành công!');
-			setTimeout(function() {
-				loadData();
-			}, 2000);
+			var form = new FormData(document.getElementById('fAdd-product'));
+			console.log(form);
+		$.ajax({
+		url: '/admin/product/addImage',
+		type: 'POST',
+            contentType: false,
+            processData: false,
+		data: form,
+		success: function() {
+			toastr.success('Thêm thành công!');
+
+
+		}, error: function(err) {
+			console.log(err)
+		}
+
+		})
+
+
 		},
 		error: function(err) {
 			alert("error is" + err)

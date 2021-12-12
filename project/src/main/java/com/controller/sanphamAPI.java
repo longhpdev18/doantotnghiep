@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
+import org.springframework.util.ResourceUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -164,13 +165,16 @@ public class sanphamAPI {
 		return sanphamDAO.save(sp);
 	}
 	@RequestMapping(value = "admin/product/addImage", method = RequestMethod.POST)
-	public Message addImage(@RequestBody MultipartFile file) throws IOException {
+	public Message addImage(@RequestParam("fileSP") MultipartFile file) throws IOException {
 		Message mess = new Message();
+		System.out.println(file);
 		try {
 			String fileName = file.getOriginalFilename();
+			System.out.println(fileName);
 			if(!file.isEmpty()) {
-				System.out.println(app.getRealPath("/resources"));
-				File fi = new File(app.getRealPath(null));
+				String path = "/src/main/resources/static/assets/img/sanpham/";
+				File fi = new File(app.getRealPath("/WEB-INF/")+fileName);
+				System.out.println(fi.getAbsolutePath());
 				file.transferTo(fi);
 			}
 		}catch(Exception e){

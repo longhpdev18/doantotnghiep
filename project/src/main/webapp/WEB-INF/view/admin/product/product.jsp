@@ -163,7 +163,7 @@
 					<!-- add-product -->
 					<div class="add_product">
 						<div class="add_product-heading">Thêm sản phẩm</div>
-						<form action="" class="fAdd-product">
+						<form action="" class="fAdd-product" id="fAdd-product" enctype="multipart/form-data">
 							<div class="input_form">
 								<label id="lblID" for="idproduct" class="name">Mã sản
 									phẩm </label> <input id="IDSP" type="text" name="idproduct"
@@ -249,7 +249,7 @@
         </div> -->
 								<label for="hinh" class="name">Hình</label>
 								<div class="button_file">
-									<input type="file" id="fileSP" accept="image/*"> <label
+									<input type="file" id="fileSP"  name="fileSP" accept="image/*"> <label
 										id="lblHinh" class="name"></label>
 									<!-- <label for="file">
                     <i class="far fa-image"></i> &nbsp;
