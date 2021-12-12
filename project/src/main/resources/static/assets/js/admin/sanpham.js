@@ -145,10 +145,25 @@ $('#add-product').click(function(e) {
 		),
 		dataType: 'json',
 		success: function() {
-			toastr.success('Thêm thành công!');
-			setTimeout(function() {
-				loadData();
-			}, 2000);
+			var form = new FormData(document.getElementById('fAdd-product'));
+			console.log(form);
+			$.ajax({
+				url: '/admin/product/addImage',
+				type: 'POST',
+				contentType: false,
+				processData: false,
+				data: form,
+				success: function() {
+					toastr.success('Thêm thành công!');
+					setTimeout(function() {
+						loadData();
+					}, 2000);
+
+				}, error: function(err) {
+					console.log(err)
+				}
+
+			})
 
 
 		}, error: function(err) {
@@ -230,7 +245,7 @@ function editSP(masp) {
 
 $('#update-product').click(function(e) {
 	e.preventDefault();
-		var masp = parseInt($('#IDSP').val());
+	var masp = parseInt($('#IDSP').val());
 	var tenspName = $('#tensp').val();
 	var giaspName = parseInt($('#giasp').val());
 	var maloaiName = parseInt($('#maloai :selected').val());
@@ -263,21 +278,23 @@ $('#update-product').click(function(e) {
 		success: function() {
 			var form = new FormData(document.getElementById('fAdd-product'));
 			console.log(form);
-		$.ajax({
-		url: '/admin/product/addImage',
-		type: 'POST',
-            contentType: false,
-            processData: false,
-		data: form,
-		success: function() {
-			toastr.success('Thêm thành công!');
+			$.ajax({
+				url: '/admin/product/addImage',
+				type: 'POST',
+				contentType: false,
+				processData: false,
+				data: form,
+				success: function() {
+					toastr.success('Thêm thành công!');
+					setTimeout(function() {
+						loadData();
+					}, 2000);
 
+				}, error: function(err) {
+					console.log(err)
+				}
 
-		}, error: function(err) {
-			console.log(err)
-		}
-
-		})
+			})
 
 
 		},

@@ -157,7 +157,8 @@ public class sanphamAPI {
 		sp.setGia(sanpham.getGia());
 		sp.setMota(sanpham.getMota());
 		sp.setTinhtrang(sanpham.getTinhtrang());
-	//	sp.setHinh(imagePath.resolve(imageFile.getOriginalFilename()).toString());
+	//	sp.setHinh(imagePath.resolve(imageFile.getOriginalFilename()).toString())
+		
 		sp.setHinh(sanpham.getHinh());
 		sp.setDeal(sanpham.getDeal());
 		mess.setValue("ok");
@@ -172,8 +173,8 @@ public class sanphamAPI {
 			String fileName = file.getOriginalFilename();
 			System.out.println(fileName);
 			if(!file.isEmpty()) {
-				String path = "/src/main/resources/static/assets/img/sanpham/";
-				File fi = new File(app.getRealPath("/WEB-INF/")+fileName);
+				String path = "C:\\Users\\Admin\\Documents\\GitHub\\doantotnghiep\\project/src/main/resources/static/assets/img/sanpham/";
+				File fi = new File(path+fileName);
 				System.out.println(fi.getAbsolutePath());
 				file.transferTo(fi);
 			}
