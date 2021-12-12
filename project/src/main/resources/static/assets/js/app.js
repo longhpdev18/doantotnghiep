@@ -41,7 +41,7 @@ $('.btn-save').click(function () {
         count= ++index;
     })
     count++;
-	$('.paid-address').append('<input type="radio" onclick="rdo_address()" class="rdo-address" id="address-'+count+'" name="rdo-address"> <label class="rdo-address-wp" for="address-'+count+'">'
+	$('.paid-address').append('<input type="radio" onclick="rdo_address(this)" class="rdo-address" id="address-'+count+'" name="rdo-address"> <label class="rdo-address-wp" for="address-'+count+'">'
   +  '<p class="address-nameKH">'+$('#txtFullname').val()+'</p>'
   + ' <p class="address-text">'+$('#txtAddress').val()+'</p>'
    + '<p class="address-phone">'+$('#txtPhone').val()+'</p>'
@@ -51,15 +51,15 @@ $('.btn-save').click(function () {
 $('.btn-cancel-address').click(function () {
     $('.sub-address').removeClass('active');
 })
-$('.rdo-address').click(rdo_address())
-function rdo_address(){
-    this.id;
-    $('label[for='+this.id+']').find('.address-nameKH').html();
-    $('label[for='+this.id+']').find('.address-text').html();
-    $('label[for='+this.id+']').find('.address-phone').html();
-    $('#saveFullname').html($('label[for='+this.id+']').find('.address-nameKH').html());
-    $('#saveAddress').html($('label[for='+this.id+']').find('.address-text').html());
-    $('#savePhone').html($('label[for='+this.id+']').find('.address-phone').html());
+$('.rdo-address').click(rdo_address(this))
+function rdo_address(obj){
+    obj.id;
+    $('label[for='+obj.id+']').find('.address-nameKH').html();
+    $('label[for='+obj.id+']').find('.address-text').html();
+    $('label[for='+obj.id+']').find('.address-phone').html();
+    $('#saveFullname').html($('label[for='+obj.id+']').find('.address-nameKH').html());
+    $('#saveAddress').html($('label[for='+obj.id+']').find('.address-text').html());
+    $('#savePhone').html($('label[for='+obj.id+']').find('.address-phone').html());
 }
 $(document).ready(function () {
     $('.product-slider').slick({

@@ -55,7 +55,7 @@
 							</div>
 						</div>
 						<div class="paid-address">
-							<input type="radio" class="rdo-address" id="address-1" name="rdo-address" value="1"
+							<input type="radio" class="rdo-address" id="address-1" name="rdo-address" value="1" onclick="rdo_address(this)"
 								checked="checked" /> <label class="rdo-address-wp" for="address-1">
 								<p class="address-nameKH">Hoàng Phi Long</p>
 								<p class="address-text">Khu Phố Long Điền 1, Phường Long
