@@ -174,12 +174,12 @@
 							</div>
 							<div class="input_form">
 								<label for="soluong" class="name">giảm giá</label> <input
-									id="deal" type="number" name="soluong" placeholder="Số lượng"
-									min="1" required>
+									id="deal" type="number" name="soluong" placeholder="Giảm giá"
+									min="0" >
 							</div>
 							<div class="input_form">
 								<label for="gia" class="name">Giá</label> <input id="giasp"
-									type="number" name="gia" placeholder="Nhập giá" required>
+									type="number" name="gia" placeholder="Nhập giá" >
 							</div>
 							<div class="input_form">
 								<label for="status" class="name">Trạng thái</label> <select

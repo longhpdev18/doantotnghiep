@@ -211,7 +211,9 @@
 								</div>
 								<div class="staff-account">
 									<div class="staff-account-username">${item.tendangnhap}</div>
-									<div class="staff-account-password">${item.matkhau}</div>
+									<c:if test="${chucVuNV == true}">
+										<div class="staff-account-password">${item.matkhau}</div>
+									</c:if>
 								</div>
 								<div class="staff-information">
 									<div class="staff-information-fullname">${item.fullname}</div>
