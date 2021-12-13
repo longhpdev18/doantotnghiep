@@ -203,12 +203,15 @@
 								</div>
 								<div class="customer-account">
 									<div class="customer-account-username">${item.tendangnhap}</div>
-									<div class="customer-account-password">${item.matkhau}</div>
+									<%-- <div class="customer-account-password">${item.matkhau}</div> --%>
 								</div>
 								<div class="customer-information">
 									<div class="customer-information-fullname">${item.fullname}
 									</div>
-									<div class="customer-information-gender">${item.gioitinh}</div>
+									<div class="customer-information-gender">
+									<c:if test="${item.gioitinh == true}">Nam</c:if>
+										<c:if test="${item.gioitinh == false}">Nữ</c:if>
+									</div>
 									<div class="customer-information-birthday">${item.ngaysinh}</div>
 								</div>
 								<div class="customer-contact">
