@@ -77,7 +77,7 @@ $('#add-staff').click(function(e) {
 			toastr.success('Thêm thành công!');
 			setTimeout(function() {
 				loadData();
-			}, 2000);
+			}, 1000);
 			
 		}, error: function(err) {
 			console.log(err)
@@ -93,7 +93,7 @@ function delectNV(manv) {
 			toastr.success('Xóa thành công!');
 			setTimeout(function() {
 				loadData();
-			}, 2000);
+			}, 1000);
 		},
 		error: function(err) {
 			console.log(err)

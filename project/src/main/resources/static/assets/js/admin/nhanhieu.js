@@ -65,7 +65,7 @@ $('#addNH').click(function(e) {
 			toastr.success('Thêm thành công!');
 			setTimeout(function() {
 				loadData();
-			}, 2000);
+			}, 1000);
 
 		}, error: function(err) {
 			console.log(err)
@@ -115,7 +115,7 @@ $('#updateNH').click(function(e) {
 			toastr.success('Cập nhật thành công!');
 			setTimeout(function() {
 				loadData();
-			}, 2000);
+			}, 1000);
 		},
 		error: function(err) {
 			alert("error is" + err)
@@ -132,7 +132,7 @@ function delectNH(manh) {
 			toastr.success('Xóa thành công!');
 			setTimeout(function() {
 				loadData();
-			}, 2000);
+			}, 1000);
 		},
 		error: function(err) {
 			console.log(err)

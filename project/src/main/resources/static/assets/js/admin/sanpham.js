@@ -109,21 +109,7 @@ $('#add-product').click(function(e) {
 	} else {
 		giaspName = parseInt(giaspName);
 	}
-	var maloaiName = $('#maloai :selected').val();
-	if (maloaiName == NaN || maloaiName == "" || maloaiName == undefined) {
-		toastr.error('Loại hàng không được để trống');
-		return false;
-	} 
-	else {
-		maloaiName = parseInt(maloaiName);
-	}
-	var manhName = $('#manh :selected').val();
-	if (manhName == NaN || manhName == "" || manhName == undefined) {
-		toastr.error('Nhãn hiệu không được để trống');
-		return false;
-	} else {
-		manhName = parseInt(manhName);
-	}
+
 	var tinhtrangName = $('#trangthaisp :selected').val();
 	if (tinhtrangName == NaN || tinhtrangName == "" || tinhtrangName == undefined) {
 		toastr.error('Trạng thái không được để trống');
@@ -131,11 +117,31 @@ $('#add-product').click(function(e) {
 	} else {
 		tinhtrangName = parseInt(tinhtrangName);
 	}
+
+	var manhName = $('#manh :selected').val();
+	if (manhName == NaN || manhName == "" || manhName == undefined) {
+		toastr.error('Nhãn hiệu không được để trống');
+		return false;
+	} else {
+		manhName = parseInt(manhName);
+	}
+
+	var maloaiName = $('#maloai :selected').val();
+	if (maloaiName == NaN || maloaiName == "" || maloaiName == undefined) {
+		toastr.error('Loại hàng không được để trống');
+		return false;
+	}
+	else {
+		maloaiName = parseInt(maloaiName);
+	}
+
+
 	var motasp = $('textarea#motasp').val();
 	if (motasp == null || motasp == "" || motasp == undefined) {
 		toastr.error('Mô tả sản phẩm không được để trống');
 		return false;
 	}
+	
 	var hinhName = $('#fileSP')[0].files[0];
 	if (hinhName == NaN || hinhName == "" || hinhName == undefined) {
 		toastr.error('Hình không được để trống');
@@ -143,6 +149,7 @@ $('#add-product').click(function(e) {
 	} else {
 		hinhName = hinhName.name;
 	}
+	
 	var dealName = $('#deal').val();
 	if (dealName == NaN) {
 		toastr.error('Giảm giá chỉ viết số');

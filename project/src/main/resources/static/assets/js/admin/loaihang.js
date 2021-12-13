@@ -64,7 +64,7 @@ $('#add-ProductType').click(function(e) {
 			toastr.success('Thêm thành công!');
 			setTimeout(function() {
 				loadData();
-			}, 2000);
+			}, 1000);
 
 		}, error: function(err) {
 			console.log(err)
@@ -114,7 +114,7 @@ $('#updateLH').click(function(e) {
 			toastr.success('Cập nhật thành công!');
 			setTimeout(function() {
 				loadData();
-			}, 2000);
+			}, 1000);
 		},
 		error: function(err) {
 			alert("error is" + err)
@@ -130,7 +130,7 @@ function delectLH(maloai) {
 			toastr.success('Xóa thành công!');
 			setTimeout(function() {
 				loadData();
-			}, 2000);
+			}, 1000);
 		},
 		error: function(err) {
 			console.log(err)
