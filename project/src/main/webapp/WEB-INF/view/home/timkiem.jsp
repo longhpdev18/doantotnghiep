@@ -52,7 +52,7 @@
 					</div><%-- 
 					<c:choose>
 					<c:when test="${item.getLh().maloai%2!=0}"> --%>
-						<ul class="products__list product-slider">
+						<ul class="products__list ">
 							<c:forEach var="sp" items="${items}">
 								<li class="product__item">
 								<a href="/product/${sp.masp}"
