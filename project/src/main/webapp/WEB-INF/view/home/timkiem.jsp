@@ -73,7 +73,7 @@
 											<div class="product__content">
 												<h6 class="product-name" >${sp.tensp}</h6>
 												<h6 class="product-priceOld">${sp.gia}đ</h6>
-												<h4 class="product-priceNew">${sp.gia*sp.deal/100}đ</h4>
+												<h4 class="product-priceNew">${sp.gia - (sp.gia*sp.deal/100)}đ</h4>
 											</div>
 	
 											<div class="product__btnGroups">
