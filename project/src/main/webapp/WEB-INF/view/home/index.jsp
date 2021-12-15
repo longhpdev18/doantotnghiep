@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-
+<link rel="shortcut icon" href="../../assets/images/logo.png">
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,55 +45,55 @@
 		<jsp:include page="menu.jsp"></jsp:include>
 
 		<div class="products">
-		
-				<c:forEach var="item" items="${items}">
-			<div class="products-wp">
+
+			<c:forEach var="item" items="${items}">
+				<div class="products-wp">
 					<div class="products__heading">
 						<h2 class="products__title">${item.getLh().tenloai}</h2>
-							<a href="#" class="cta-link cta-pdmore">Xem thêm</a>
-					</div><%-- 
+						<a href="#" class="cta-link cta-pdmore">Xem thêm</a>
+					</div>
+					<%-- 
 					<c:choose>
 					<c:when test="${item.getLh().maloai%2!=0}"> --%>
-						<ul class="products__list product-slider">
-							<c:forEach var="sp" items="${item.getSp().content}">
-								<li class="product__item">
-								<a href="/product/${sp.masp}"
-									name="masp" class="cta-link cta-product">
-										<div class="product__deal">
-											<div class="product__deal--container">
-												<div class="deal-content">
-													Giảm<span>${sp.deal} %</span>
-												</div>
+					<ul class="products__list product-slider">
+						<c:forEach var="sp" items="${item.getSp().content}">
+							<li class="product__item"><a href="/product/${sp.masp}"
+								name="masp" class="cta-link cta-product">
+									<div class="product__deal">
+										<div class="product__deal--container">
+											<div class="deal-content">
+												Giảm<span>${sp.deal} %</span>
 											</div>
 										</div>
-										<div class="product__top">
-											<img src="../../assets/img/sanpham/${sp.hinh}" alt=""
-												class="product-image">
+									</div>
+									<div class="product__top">
+										<img src="../../assets/img/sanpham/${sp.hinh}" alt=""
+											class="product-image">
+									</div>
+
+									<div class="product__bottom">
+										<div class="product__content">
+											<h6 class="product-name">${sp.tensp}</h6>
+											<h6 class="product-priceOld">${sp.gia}đ</h6>
+											<h4 class="product-priceNew">${ sp.gia - (sp.gia*sp.deal/100)}đ</h4>
 										</div>
-	
-										<div class="product__bottom">
-											<div class="product__content">
-												<h6 class="product-name" >${sp.tensp}</h6>
-												<h6 class="product-priceOld">${sp.gia} đ</h6>
-												<h4 class="product-priceNew">${ sp.gia - (sp.gia*sp.deal/100)}đ</h4>
-											</div>
-	
-											<div class="product__btnGroups">
-												<form method="get" action="cart/add/${sp.masp}">
-													
-													<button type="submit"
-														class=" btn-primary rounded-8">Mua ngay</button>
-												</form>
-												<form >
-													<button type="submit"
-														class=" btn-light rounded-8 btn-addToCart" value="${sp.masp}">Thêm
-														vào giỏ</button>
-												</form>
-											</div>
+
+										<div class="product__btnGroups">
+											<form method="get" action="cart/add/${sp.masp}">
+
+												<button type="submit" class=" btn-primary rounded-8">Mua
+													ngay</button>
+											</form>
+											<form>
+												<button type="submit"
+													class=" btn-light rounded-8 btn-addToCart"
+													value="${sp.masp}">Thêm vào giỏ</button>
+											</form>
 										</div>
-								</a></li>
-							</c:forEach>
-						</ul>
+									</div>
+							</a></li>
+						</c:forEach>
+					</ul>
 					<%-- </c:when>					
 					<c:otherwise>
 						<div class="product-multi product-multi-slider">
@@ -145,12 +145,11 @@
 						
 					</c:otherwise>
 					</c:choose> --%>
-		</div>
-		
-				</c:forEach>
-		<jsp:include page="footer.jsp"></jsp:include>
-	</div>
+				</div>
 
+			</c:forEach>
+			<jsp:include page="footer.jsp"></jsp:include>
+		</div>
 </body>
 
 <!-- 

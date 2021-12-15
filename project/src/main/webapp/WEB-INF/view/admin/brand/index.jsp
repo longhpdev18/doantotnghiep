@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Admin</title>
-
+<link rel="shortcut icon" href="../../assets/images/logo.png">
 <link rel="stylesheet" href="./../assets/css/admin/style.css">
 <link rel="stylesheet" href="./../assets/css/admin/unilities.css">
 <link rel="stylesheet" href="./../assets/css/admin/responsive.css">
@@ -40,10 +40,10 @@
 						<div class="add_product-heading">Thêm nhãn hiệu</div>
 						<form action="" class="fAdd-product">
 							<div class="input_form">
-								<label id="labelID" for="nameproduct" class="name">Mã nhãn hiệu </label> <input 
-									id="idNH" type="text" name="nameproduct"
+								<label id="labelID" for="nameproduct" class="name">Mã
+									nhãn hiệu </label> <input id="idNH" type="text" name="nameproduct"
 									placeholder="Mã nhãn hiệu" readonly="readonly" required>
-							
+
 								<label for="nameproduct" class="name">Tên nhãn hiệu</label> <input
 									id="nameNH" type="text" name="nameproduct"
 									placeholder="Tên nhãn hiệu" required>
@@ -86,7 +86,7 @@
 </body>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script
+<script
 	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="../assets/js/admin/nhanhieu.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>

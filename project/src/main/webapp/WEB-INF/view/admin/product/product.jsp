@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-
+<link rel="shortcut icon" href="../../assets/images/logo.png">
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -312,7 +312,7 @@
 								<th>Tên</th>
 								<th>Giá</th>
 								<th>Trạng thái</th>
-								<th>Loại</th>
+								<th>Nhãn hiệu</th>
 								<th>Hình ảnh</th>
 								<th></th>
 							</tr>
@@ -325,7 +325,12 @@
 											<c:when test="${item.tinhtrang == true }">còn hàng</c:when>
 											<c:otherwise>hết hàng</c:otherwise>
 										</c:choose></td>
-									<td><span class="status delivered">${item.maloai}</span></td>
+									<td><span class="status delivered">
+									<c:forEach var="nh" items="${listNH}">
+									<c:if test="${item.manh == nh.manh}">${nh.tennh}</c:if>
+									
+									</c:forEach>
+									</span></td>
 									<td>
 										<div class="images">
 											<img src="./../assets/img/sanpham/${item.hinh}" alt=""
