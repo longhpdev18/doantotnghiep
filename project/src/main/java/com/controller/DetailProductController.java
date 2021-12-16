@@ -30,14 +30,6 @@ public class DetailProductController {
 	@GetMapping("product/{masp}")
 	public String getKhachHangId(Model model, @PathVariable(value = "masp") Integer masp)
 	{
-		SanPham itemsSP = sanphamDAO.getID(masp);
-		model.addAttribute("masp", itemsSP.getMasp());
-		model.addAttribute("giasp", itemsSP.getGia());
-		model.addAttribute("tensp", itemsSP.getTensp());
-		model.addAttribute("tinhtrang", itemsSP.getTinhtrang());
-		model.addAttribute("hinhsp", itemsSP.getHinh());
-		model.addAttribute("mota", itemsSP.getMota());
-		model.addAttribute("manh", itemsSP.getManh());
 		SanPham item = sanphamDAO.getID(masp);
 		model.addAttribute("item", item);
 		System.out.println(item.getDeal());

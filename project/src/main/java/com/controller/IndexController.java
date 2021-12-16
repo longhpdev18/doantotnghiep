@@ -57,8 +57,7 @@ public class IndexController {
 		    List<LH_SP> items = new ArrayList<LH_SP>();
 		    for(LoaiHang lh:listLH) {
 		    	LH_SP item = new LH_SP();
-		    	Pageable pageable = PageRequest.of(0, 8);
-		    	Page<SanPham> tempList =  sanphamDAO.getByLH((int) lh.getMaloai(),pageable);
+		    	List<SanPham> tempList =  sanphamDAO.getByLH((int) lh.getMaloai());
 		    	item.setLh(lh);
 		    	item.setSp(tempList);
 		    	items.add(item);
@@ -73,8 +72,7 @@ public class IndexController {
 		System.out.println(paramService.getInt("maloai", 0));
 		List<LH_SP> items = new ArrayList<LH_SP>();
 		LH_SP item = new LH_SP();
-		Pageable pageable = PageRequest.of(0, 8);
-		Page<SanPham> tempList =  sanphamDAO.getByLH((int) paramService.getInt("maloai", 0),pageable);
+		List<SanPham> tempList =  sanphamDAO.getByLH((int) paramService.getInt("maloai", 0));
     	item.setLh(lhDAO.getById((long) paramService.getInt("maloai", 0)));
     	item.setSp(tempList);
     	items.add(item);
@@ -88,27 +86,7 @@ public class IndexController {
 		model.addAttribute("items", items);
 		return "home/timkiem";
 	}
-	@PostMapping("/register")
-	public String register(Model model , KhachHang item) {
-		item.setTendangnhap(paramService.getString("usernameRegister", ""));
-		if(paramService.getString("passwordRegister", "").equals(paramService.getString("repassword", ""))) {
-			item.setMatkhau(paramService.getString("password", ""));
-		}else {
-			model.addAttribute("message","Mật khẩu không trùng khớp!");
-			return "redirect:/";
-		}
-		item.setEmail(paramService.getString("email", ""));
-		item.setFullname(paramService.getString("fullname", ""));
-		item.setSodienthoai(paramService.getInt("phone", 0));
-		item.setDiachi(paramService.getString("address", ""));
-		if(khDAO.getByUsername(item.getTendangnhap())!=null) {
-			
-			khDAO.save(item);
-			sessionService.set("fullname", item.getFullname());
-			sessionService.set("maKH", item.getMakh());
-		}
-		return "redirect:/";
-	}
+	
 	@RequestMapping("/paid")
 	public String paid(Model model) {
 		

@@ -1,5 +1,6 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +57,7 @@
 					<c:choose>
 					<c:when test="${item.getLh().maloai%2!=0}"> --%>
 					<ul class="products__list product-slider">
-						<c:forEach var="sp" items="${item.getSp().content}">
+						<c:forEach var="sp" items="${item.getSp()}">
 							<li class="product__item"><a href="/product/${sp.masp}"
 								name="masp" class="cta-link cta-product">
 									<div class="product__deal">
@@ -74,8 +75,8 @@
 									<div class="product__bottom">
 										<div class="product__content">
 											<h6 class="product-name">${sp.tensp}</h6>
-											<h6 class="product-priceOld">${sp.gia}đ</h6>
-											<h4 class="product-priceNew">${ sp.gia - (sp.gia*sp.deal/100)}đ</h4>
+											<h6 class="product-priceOld"><fmt:formatNumber value = "${sp.gia}" maxFractionDigits = "0" type = "number"/> VND</h6>
+											<h4 class="product-priceNew"><fmt:formatNumber value = "${ sp.gia - (sp.gia*sp.deal/100)}" maxFractionDigits = "0" type = "number"/> VND</h4>
 										</div>
 
 										<div class="product__btnGroups">

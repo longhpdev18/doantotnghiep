@@ -63,7 +63,7 @@ function getData(){
         data:JSON.stringify(
             {   'makh':'',
                 'ngaymua':today,
-                'trangthai':'Chưa xác nhận',
+                'trangthai':'Đã nhận đơn',
                 'tennguoinhan':fullname,
                 'diachinguoinhan':address,
                 'sdtnguoinhan':phone

@@ -71,6 +71,7 @@ public class SanPham {
 		this.manh = manh;
 	}
 	public Double getGia() {
+		
 		return gia;
 	}
 	public void setGia(Double gia) {

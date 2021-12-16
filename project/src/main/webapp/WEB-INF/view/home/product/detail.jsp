@@ -1,6 +1,8 @@
 
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,14 +47,14 @@
 			<div class="product-detail-wp">
 				<div class="product-detail-top">
 					<div class="product-detail-left">
-						<img src="./../assets/img/sanpham/${hinhsp}" alt=""
+						<img src="./../assets/img/sanpham/${item.hinh}" alt=""
 							class="product-detail-image">
 					</div>
 					<div class="product-detail-right">
 
 						<div class="detail-right-content">
-							<h1 class="product-detail-name">${tensp}</h1>
-							<h2 class="product-detail-id text-gray mb-10">#${masp}</h2>
+							<h1 class="product-detail-name">${item.tensp}</h1>
+							<h2 class="product-detail-id text-gray mb-10">#${item.masp}</h2>
 							<h2 class="product-detail-nof mb-10">
 								<span class="circle mr-10"> <i class="fas fa-bullhorn"></i>
 								</span>
@@ -63,7 +65,7 @@
 								<div class="product-info-content">
 									<li><strong class="mr-10">Nhà sản xuất:</strong> 
 										<c:forEach var="nh" items="${listNH}">
-											<c:if test="${manh == nh.manh}">${nh.tennh}</c:if>
+											<c:if test="${item.manh == nh.manh}">${nh.tennh}</c:if>
 										</c:forEach></li>
 									<li><strong class="mr-10">Xuất xứ:</strong> Chính hãng</li>
 									<li><strong class="mr-10">Bảo hành:</strong> 24 Tháng</li>
@@ -75,19 +77,19 @@
 							</ul>
 							<div class="product-promotion mb-10">
 								<h1>Khuyến mãi</h1>
-								<p class="text-red bg-light">${mota}</p>
+								<p class="text-red bg-light">${item.mota}</p>
 							</div>
 							<div class="product-group-price">
-								<li class="product-price-old text-gray">24.499.000đ</li>
-								<li class="product-price-current">${giasp}</li>
+								<li class="product-price-old text-gray"><fmt:formatNumber value = "${item.gia}" maxFractionDigits = "0" type = "number"/> VND</li>
+								<li class="product-price-current"><fmt:formatNumber value = "${item.gia - (item.gia*item.deal/100)}" maxFractionDigits = "0" type = "number"/> VND</li>
 							</div>
 						</div>
 						<div class="group-button-detail">
 							<div class="group-button-content">
-								<a href="/cart/add/${masp}"
+								<a href="/cart/add/${item.masp}"
 									class="btn btn-buy btn-primary rounded-8">Mua ngay</a>
 								<button class="btn btn-addToCart btn-light rounded-8"
-									value="${masp}">Thêm vào giỏ</button>
+									value="${sp.masp}">Thêm vào giỏ</button>
 							</div>
 						</div>
 					</div>

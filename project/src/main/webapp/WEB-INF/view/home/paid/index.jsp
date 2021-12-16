@@ -1,5 +1,6 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 
@@ -90,8 +91,8 @@
 										</div>
 										<div class="paid-rowdetail-right">
 											<div class="sl-wp">${item.qty}</div>
-											<div class="paid-price">${item.qty * item.getSp().gia*item.getSp().deal/100}
-												đ</div>
+											<div class="paid-price"><fmt:formatNumber value = "${item.qty * item.getSp().gia*item.getSp().deal/100}" maxFractionDigits = "0" type = "number"/> VND
+												</div>
 										</div>
 									</div>
 								</div>
@@ -101,7 +102,8 @@
 								<div class="paid-bottom-row">
 									<div class="paid-bottom-left">Tổng tiền hàng:</div>
 									<div class="paid-bottom-right paid-total-price">
-										${cart.getAmount()} đ</div>
+										<fmt:formatNumber value = "${cart.getAmount()}" maxFractionDigits = "0" type = "number"/> VND
+												</div>
 								</div>
 								<div class="cart-bottom-row">
 									<div class="paid-bottom-left shipping-fee-text">Phí vận
@@ -111,8 +113,9 @@
 								<div class="paid-bottom-row">
 									<div class="paid-bottom-left total-paid-text">Tổng thanh
 										toán:</div>
-									<div class="paid-bottom-right total-paid">${cart.getAmount()}
-										đ</div>
+									<div class="paid-bottom-right total-paid"><fmt:formatNumber value = "${cart.getAmount()}" maxFractionDigits = "0" type = "number"/> VND
+												
+										</div>
 								</div>
 							</div>
 						</c:if>

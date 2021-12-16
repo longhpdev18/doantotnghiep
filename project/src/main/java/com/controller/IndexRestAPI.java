@@ -3,6 +3,7 @@ package com.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -53,6 +54,22 @@ public class IndexRestAPI {
 		
 		return mess;
 		
+	}
+	@PostMapping("/register")
+	public Message register(@RequestBody KhachHang item) {
+		System.out.println(item.getDiachi());
+		System.out.println(item.getEmail());
+		System.out.println(item.getFullname());
+		System.out.println(item.getMatkhau());
+		System.out.println(item.getSodienthoai());
+		System.out.println(item.getTendangnhap());
+		Message mess = new Message();
+		if(khDAO.save(item) != null) {
+			mess.setValue("success");
+			sessionService.set("fullname", item.getFullname());
+			sessionService.set("maKH", item.getMakh());
+		};
+		return mess;
 	}
 	@GetMapping("/logout")
 	public Message logout() {

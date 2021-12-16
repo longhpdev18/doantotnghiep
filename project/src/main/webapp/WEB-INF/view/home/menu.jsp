@@ -15,24 +15,6 @@
 						</div>
 						<p>PC BestGear</p>
 				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/apple.svg" alt="">
-						</div>
-						<p>Apple</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/pc.svg" alt="">
-						</div>
-						<p>PC Văn Phòng</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/pcacessory.svg" alt="">
-						</div>
-						<p>Linh Kiện</p>
-				</a></li>
 				<li class="menu-item"><a href="/search/?maloai=9" class="menu-link">
 						<div class="menu-icon">
 							<img src="../../assets/icons/monitor.svg" alt="">
@@ -68,18 +50,6 @@
 							<img src="../../assets/icons/print.svg" alt="">
 						</div>
 						<p>Thiết bị văn phòng</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/internet.svg" alt="">
-						</div>
-						<p>Thiết bị mạng</p>
-				</a></li>
-				<li class="menu-item"><a href="/search/?maloai=3" class="menu-link">
-						<div class="menu-icon">
-							<img src="../../assets/icons/accessorypc.svg" alt="">
-						</div>
-						<p>Phụ Kiện</p>
 				</a></li>
 			</ul>
 		</div>
