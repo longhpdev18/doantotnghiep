@@ -5,7 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<link rel="shortcut icon" href="../../assets/images/logo.png">s
+<link rel="shortcut icon" href="../../assets/images/logo.png">
+
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <!-- STYLE CSS -->

@@ -16,5 +16,5 @@ public interface HoaDonCTDAO extends JpaRepository<HoaDonChiTiet, Long> {
 	List<SanPham> getByMaHD(String mahd);
 	
 	@Query(value="select * from hoadonchitiet where mahd=:mahd",nativeQuery = true)
-	List<HoaDonChiTiet> getCTHD(String mahd);
+	List<HoaDonChiTiet> getCTHD(Long mahd);
 }

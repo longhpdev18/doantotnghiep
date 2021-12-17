@@ -33,7 +33,7 @@ public class HoaDonAPI {
 		Message mess = new Message();
 		try {
 			Pageable pageable = PageRequest.of(0, 10);
-			Page<HoaDon> listHD = hoadonDAO.findAll(pageable);
+			Page<HoaDon> listHD = hoadonDAO.loadAll(pageable);
 			sessionService.set("listHD",listHD);
 			mess.setValue("success");
 		} catch (Exception e) {

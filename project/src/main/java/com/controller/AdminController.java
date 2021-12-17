@@ -3,9 +3,13 @@ package com.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.model.HoaDon;
 import com.model.HoaDonChiTiet;
@@ -13,6 +17,7 @@ import com.model.KhachHang;
 import com.model.LoaiHang;
 import com.model.NhanHieu;
 import com.model.NhanVien;
+import com.model.SanPham;
 import com.repository.HoaDonCTDAO;
 import com.repository.HoaDonDAO;
 import com.repository.KhachHangDAO;
@@ -70,17 +75,28 @@ public class AdminController {
 		
 //		HoaDon sumHD = hoadonDAO.sum();
 //		model.addAttribute("sumHD",sumHD);
+		Pageable pageable = PageRequest.of(0, 10);
+		Page<HoaDon> listHD = hoadonDAO.loadAll(pageable);
+		model.addAttribute("listHD",listHD);
 		return "admin/index";
 	}
 
 	@GetMapping("/admin/order-detail={mahd}")
-	public String order_detailAD(Model model, String mahd) {
+	public String order_detailAD(Model model,@PathVariable(value = "mahd") Long mahd) {
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
+		HoaDon hd = hoadonDAO.getById(mahd);
+		model.addAttribute("mahd",hd.getMahd());
+		model.addAttribute("ngaydat",hd.getNgaymua());
+		model.addAttribute("trangthai",hd.getTrangthai());
+		model.addAttribute("nguoinhan",hd.getTennguoinhan());
 		
 		List<HoaDonChiTiet> listhd = hoadonctDAO.getCTHD(mahd);
 		model.addAttribute("listhd",listhd);
+		
+		List<SanPham> listsp = sanphamDAO.findAll();
+		model.addAttribute("listsp",listsp);
 		
 		return "admin/order/order-detail";
 	}

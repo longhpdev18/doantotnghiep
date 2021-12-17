@@ -77,10 +77,10 @@
 									</div>
 									<div class="order-form-group">
 										<label for="status">Trạng thái:</label> <select id="Status">
-											<option>Chưa xác nhận</option>
 											<option>Đã nhận đơn</option>
 											<option>Đang chuẩn bị</option>
 											<option>Đang vận chuyển</option>
+											<option>Đang giao hàng</option>
 											<option>Đã giao hàng</option>
 											<option>Đã hủy</option>
 										</select>
@@ -111,9 +111,6 @@
 										<p>Hành động</p>
 										<i class="fas fa-angle-down"></i>
 										<div class="action-content blur-white-md">
-											<button class="add-item">
-												<i class="fas fa-user-plus"></i> Thêm nhân viên
-											</button>
 											<form action="./excelHD" method="get">
 												<button class="export-file">
 													<i class="fas fa-file-export"></i>Xuất file
@@ -174,7 +171,7 @@
 													<form action="./order-detail=${item.mahd}" method="get">
 														<button class="btn-delete">
 															<i class="far fa-trash-alt"></i>
-															<p>Xóa</p>
+															<p>Xem</p>
 														</button>
 													</form>
 												</div>

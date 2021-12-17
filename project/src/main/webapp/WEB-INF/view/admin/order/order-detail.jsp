@@ -43,19 +43,24 @@
 							<div class="odd-heading">
 								<div class="left">
 									<div class="order-detail-date">
-										Ngày đặt hàng: <span>08/11/2021</span>
+										Ngày đặt hàng: <span>${ngaydat}</span>
+									</div>&emsp;
+									<div class="order-detail">	Người nhận:
+										
 									</div>
+									<div class="odd-status">${nguoinhan}</div>
 								</div>
 								<div class="right">
 									<div class="order-detail-id">
-										ID đơn hàng: <span>20210811ABCDEF</span>
+										ID đơn hàng: <span>#${mahd}</span>
 									</div>
 									<div class="order-detail-status">
-										<div class="odd-status">Đơn hàng đang được vận chuyển</div>
+									
+										<div class="odd-status">${trangthai}</div>
 									</div>
 								</div>
 							</div>
-					<!-- 		<div class="odd-ship-detail">
+							<!-- 		<div class="odd-ship-detail">
 								<div class="odd-ship-content">
 									<div class="sd-ship-wp">
 										<div class="sd-point-wp">
@@ -109,98 +114,24 @@
 
 			<!--sản phẩm-->
 			<div class="odd-content">
-				<li class="odd-product"><a href="#" class="odd-pd-content">
-						<div class="odd-pd-image">
-							<img
-								src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"
-								alt="">
-						</div>
-						<div class="odd-pd-detail">
-							<div class="odd-pd-name">Laptop Gaming Asus ROG Zephyrus
-								G14 GA401QE K2097T</div>
-							<div class="odd-pd-qty">x5</div>
-						</div>
-						<div class="odd-pd-price">59.000.000 đ</div>
-				</a></li>
-				<li class="odd-product"><a href="#" class="odd-pd-content">
-						<div class="odd-pd-image">
-							<img
-								src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"
-								alt="">
-						</div>
-						<div class="odd-pd-detail">
-							<div class="odd-pd-name">Laptop Gaming Asus ROG Zephyrus
-								G14 GA401QE K2097T</div>
-							<div class="odd-pd-qty">x5</div>
-						</div>
-						<div class="odd-pd-price">59.000.000 đ</div>
-				</a></li>
-				<li class="odd-product"><a href="#" class="odd-pd-content">
-						<div class="odd-pd-image">
-							<img
-								src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"
-								alt="">
-						</div>
-						<div class="odd-pd-detail">
-							<div class="odd-pd-name">Laptop Gaming Asus ROG Zephyrus
-								G14 GA401QE K2097T</div>
-							<div class="odd-pd-qty">x5</div>
-						</div>
-						<div class="odd-pd-price">59.000.000 đ</div>
-				</a></li>
-				<li class="odd-product"><a href="#" class="odd-pd-content">
-						<div class="odd-pd-image">
-							<img
-								src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"
-								alt="">
-						</div>
-						<div class="odd-pd-detail">
-							<div class="odd-pd-name">Laptop Gaming Asus ROG Zephyrus
-								G14 GA401QE K2097T</div>
-							<div class="odd-pd-qty">x5</div>
-						</div>
-						<div class="odd-pd-price">59.000.000 đ</div>
-				</a></li>
-				<li class="odd-product"><a href="#" class="odd-pd-content">
-						<div class="odd-pd-image">
-							<img
-								src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"
-								alt="">
-						</div>
-						<div class="odd-pd-detail">
-							<div class="odd-pd-name">Laptop Gaming Asus ROG Zephyrus
-								G14 GA401QE K2097T</div>
-							<div class="odd-pd-qty">x5</div>
-						</div>
-						<div class="odd-pd-price">59.000.000 đ</div>
-				</a></li>
-				<li class="odd-product"><a href="#" class="odd-pd-content">
-						<div class="odd-pd-image">
-							<img
-								src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"
-								alt="">
-						</div>
-						<div class="odd-pd-detail">
-							<div class="odd-pd-name">Laptop Gaming Asus ROG Zephyrus
-								G14 GA401QE K2097T</div>
-							<div class="odd-pd-qty">x5</div>
-						</div>
-						<div class="odd-pd-price">59.000.000 đ</div>
-				</a></li>
-				<li class="odd-product"><a href="#" class="odd-pd-content">
-						<div class="odd-pd-image">
-							<img
-								src="https://minhancomputer.com/media/news/2708_may-tinh-do-hoa-gia-re.jpg"
-								alt="">
-						</div>
-						<div class="odd-pd-detail">
-							<div class="odd-pd-name">Laptop Gaming Asus ROG Zephyrus
-								G14 GA401QE K2097T</div>
-							<div class="odd-pd-qty">x5</div>
-						</div>
-						<div class="odd-pd-price">59.000.000 đ</div>
-				</a></li>
-		
+				<c:forEach items="${listhd}" var="cthd">
+
+					<li class="odd-product"><a href="#" class="odd-pd-content">
+							<c:forEach items="${listsp}" var="sp">
+								<c:if test="${cthd.masp == sp.masp }">
+									<div class="odd-pd-image">
+										<img src="../../assets/img/sanpham/${sp.hinh}" alt="">
+									</div>
+									<div class="odd-pd-detail">
+										<div class="odd-pd-name">${sp.tensp}</div>
+										<div class="odd-pd-qty">X${cthd.soluong}</div>
+									</div>
+									<div class="odd-pd-price">${cthd.dongia}VND</div>
+					</a> </c:if>
+				</c:forEach>
+				</li>
+
+				</c:forEach>
 			</div>
 
 
