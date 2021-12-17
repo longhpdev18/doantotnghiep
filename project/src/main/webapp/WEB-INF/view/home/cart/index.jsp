@@ -69,7 +69,7 @@
 														<i class="fas fa-caret-right"></i>
 													</button>
 												</div>
-												<div class="cart-price"><fmt:formatNumber value = "${item.qty * item.getSp().gia*item.getSp().deal/100}" maxFractionDigits = "0" type = "number"/> VND
+												<div class="cart-price"><fmt:formatNumber value = "${(item.qty * item.getSp().gia)-(item.getSp().gia * item.getSp().deal/100 * item.qty)}" maxFractionDigits = "0" type = "number"/> VND
 												</div>
 											</div>
 										</div>

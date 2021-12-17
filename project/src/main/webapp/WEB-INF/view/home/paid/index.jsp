@@ -91,7 +91,7 @@
 										</div>
 										<div class="paid-rowdetail-right">
 											<div class="sl-wp">${item.qty}</div>
-											<div class="paid-price"><fmt:formatNumber value = "${item.qty * item.getSp().gia*item.getSp().deal/100}" maxFractionDigits = "0" type = "number"/> VND
+											<div class="paid-price"><fmt:formatNumber value = "${(item.qty * item.getSp().gia)-(item.getSp().gia * item.getSp().deal/100 * item.qty)}" maxFractionDigits = "0" type = "number"/> VND
 												</div>
 										</div>
 									</div>

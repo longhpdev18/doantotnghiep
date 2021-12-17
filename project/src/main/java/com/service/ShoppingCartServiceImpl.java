@@ -77,7 +77,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService{
 	@Override
 	public double getAmount() {
 		return map.values().stream()
-				.mapToDouble(item -> item.getSp().getGia()*item.getSp().getDeal()/100*item.getQty())
+				.mapToDouble(item ->(item.getSp().getGia()*item.getQty()) - (item.getSp().getGia()*item.getSp().getDeal()/100*item.getQty()))
 				.sum();
 	}
 }

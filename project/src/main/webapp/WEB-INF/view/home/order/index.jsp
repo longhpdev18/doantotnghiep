@@ -66,7 +66,7 @@
 																</div>
 															</div>
 															<div class="order-pd-price">
-																${hdct.soluong*sp.gia*sp.deal/100}</div>
+																${(hdct.soluong*sp.gia)-(sp.gia*sp.deal/100 * hdct.soluong)}</div>
 														</a>
 													</c:if>
 												</c:forEach></li>
