@@ -170,7 +170,7 @@
 													</button>
 													<form action="./order-detail=${item.mahd}" method="get">
 														<button class="btn-delete">
-															<i class="far fa-trash-alt"></i>
+															<i class="fa-solid fa-eye"></i>
 															<p>Xem</p>
 														</button>
 													</form>
