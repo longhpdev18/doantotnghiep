@@ -63,7 +63,7 @@ public class PaidRestAPI {
 			hdct.setMahd((int)hdDAO.getLastID().getMahd());
 			hdct.setMasp(item.getSp().getMasp());
 			hdct.setSoluong(item.getQty());
-			hdct.setDongia(1);
+			hdct.setDongia(item.getSp().getGia());
 			hdctDAO.save(hdct);
 			
 			mess.setValue("success");

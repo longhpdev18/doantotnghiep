@@ -24,7 +24,7 @@ public class HoaDonChiTiet {
 	private int soluong;
 	
 	@Column(name = "dongia", nullable = false)
-	private int dongia;
+	private double dongia;
 
 	public long getMahdct() {
 		return mahdct;
@@ -62,7 +62,7 @@ public class HoaDonChiTiet {
 		return dongia;
 	}
 
-	public void setDongia(int dongia) {
+	public void setDongia(double dongia) {
 		this.dongia = dongia;
 	}
 	

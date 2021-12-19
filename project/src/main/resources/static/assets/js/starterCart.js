@@ -1,4 +1,4 @@
-
+	
 $('.btn-addToCart').click(function(e) {
 	e.preventDefault();
 	var masp = this.value;
