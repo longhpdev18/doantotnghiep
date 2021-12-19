@@ -163,23 +163,24 @@
 					<!-- add-product -->
 					<div class="add_product">
 						<div class="add_product-heading">Thêm sản phẩm</div>
-						<form action="" class="fAdd-product" id="fAdd-product" enctype="multipart/form-data">
+						<form action="" class="fAdd-product" id="fAdd-product"
+							enctype="multipart/form-data">
 							<div class="input_form">
 								<label id="lblID" for="idproduct" class="name">Mã sản
 									phẩm </label> <input id="IDSP" type="text" name="idproduct"
-									placeholder="Tên sản phẩm" required readonly="readonly"> <label
-									for="nameproduct" class="name">Tên </label> <input id="tensp"
-									type="text" name="nameproduct" placeholder="Tên sản phẩm"
-									required>
+									placeholder="Tên sản phẩm" required readonly="readonly">
+								<label for="nameproduct" class="name">Tên </label> <input
+									id="tensp" type="text" name="nameproduct"
+									placeholder="Tên sản phẩm" required>
 							</div>
 							<div class="input_form">
 								<label for="soluong" class="name">giảm giá</label> <input
 									id="deal" type="number" name="soluong" placeholder="Giảm giá"
-									min="0" >
+									min="0">
 							</div>
 							<div class="input_form">
 								<label for="gia" class="name">Giá</label> <input id="giasp"
-									type="number" name="gia" placeholder="Nhập giá" >
+									type="number" name="gia" placeholder="Nhập giá">
 							</div>
 							<div class="input_form">
 								<label for="status" class="name">Trạng thái</label> <select
@@ -196,18 +197,7 @@
 									<c:forEach var="item" items="${listNH}">
 										<option value="${item.manh}">${item.tennh}</option>
 									</c:forEach>
-									<!-- <option value="1">Asus</option>
-									<option value="2">Acer</option>
-									<option value="3">Lenovo</option>
-									<option value="4">MSI</option>
-									<option value="5">Logitech</option>
-									<option value="6">Razer</option>
-									<option value="7">HP</option>
-									<option value="8">GVN</option>
-									<option value="9">Microsoft</option>
-									<option value="10">Stell Series</option> -->
 
-									<!-- <option value="2">Bàn </option> -->
 								</select>
 							</div>
 
@@ -218,16 +208,7 @@
 									<c:forEach var="item" items="${listLH}">
 										<option value="${item.maloai}">${item.tenloai}</option>
 									</c:forEach>
-									<!-- <option value="1">Bàn Phím</option>
-									<option value="2">Máy In</option>
-									<option value="3">Lap Top</option>
-									<option value="4">PC</option>
-									<option value="5">Tai Nghe</option>
-									<option value="6">Chuột</option>
-									<option value="7">Ghế Gaming</option>
-									<option value="8">Loa</option>
-									<option value="9">Màn Hình</option>
-									<option value="10">Thiết bị văn phòng</option> -->
+
 								</select>
 							</div>
 							<div class="input_form">
@@ -247,8 +228,8 @@
         </div> -->
 								<label for="hinh" class="name">Hình</label>
 								<div class="button_file">
-									<input type="file" id="fileSP"  name="fileSP" accept="image/*"> <label
-										id="lblHinh" class="name"></label>
+									<input type="file" id="fileSP" name="fileSP" accept="image/*">
+									<label id="lblHinh" class="name"></label>
 									<!-- <label for="file">
                     <i class="far fa-image"></i> &nbsp;
                     Choose a Photo
@@ -268,13 +249,15 @@
 						<div class="manage-customer-heading">
 							<div class="customer-heading-left">Danh sách sản phẩm</div>
 							<div class="customer-heading-center">
-								<div class="searchbox">
-									<input type="text" class="search-input"
-										placeholder="Nhập tên sản phẩm, hoặc id sản phẩm">
-									<button class="search-button" onclick="Search()">
-										<i class="fas fa-search"></i>
-									</button>
-								</div>
+								<form action="./product?timkiem">
+									<div class="searchbox">
+										<input type="text" class="search-input"
+											placeholder="Nhập tên sản phẩm, hoặc id sản phẩm">
+										<button class="search-button">
+											<i class="fas fa-search"></i>
+										</button>
+									</div>
+								</form>
 							</div>
 							<div class="customer-heading-right">
 								<div class="btn-showAction">
@@ -293,7 +276,7 @@
 								<div class="pagination">
 									<div class="pagination-left">
 										<span id="countPage">${pageCount.getCount()+1}</span> <i
-											class="fas fa-circle"></i> <span>10</span>
+											class="fas fa-circle"></i>
 									</div>
 									<div class="pagination-right">
 										<button class="btn-prev">
@@ -325,11 +308,11 @@
 											<c:when test="${item.tinhtrang == true }">còn hàng</c:when>
 											<c:otherwise>hết hàng</c:otherwise>
 										</c:choose></td>
-									<td><span class="status delivered">
-									<c:forEach var="nh" items="${listNH}">
-									<c:if test="${item.manh == nh.manh}">${nh.tennh}</c:if>
-									
-									</c:forEach>
+									<td><span class="status delivered"> <c:forEach
+												var="nh" items="${listNH}">
+												<c:if test="${item.manh == nh.manh}">${nh.tennh}</c:if>
+
+											</c:forEach>
 									</span></td>
 									<td>
 										<div class="images">

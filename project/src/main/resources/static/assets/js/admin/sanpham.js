@@ -222,7 +222,7 @@ function delectSP(masp) {
 	})
 }
 
-function Search() {
+/*function Search() {
 	var tensp = $('.search-input').val();
 	$.ajax({
 		url: '/admin/sanpham/' + tensp,
@@ -240,7 +240,7 @@ function Search() {
 		}
 
 	})
-}
+}*/
 
 function editSP(masp) {
 	$.ajax({

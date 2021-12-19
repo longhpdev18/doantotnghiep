@@ -171,20 +171,22 @@
 							</div>
 						</div>
 						<div class="staff-heading-right">
-							<div class="btn-showAction">
-								<p>Hành động</p>
-								<i class="fas fa-angle-down"></i>
-								<div class="action-content blur-white-md">
-									<button class="add-item">
-										<i class="fas fa-user-plus"></i> Thêm nhân viên
-									</button>
-									<form action="excelSP" method="get">
+							<c:if test="${chucVuNV == true}">
+								<div class="btn-showAction">
+									<p>Hành động</p>
+									<i class="fas fa-angle-down"></i>
+									<div class="action-content blur-white-md">
+										<button class="add-item">
+											<i class="fas fa-user-plus"></i> Thêm nhân viên
+										</button>
+										<!-- 	<form action="excelSP" method="get">
 										<button class="export-file">
 											<i class="fas fa-file-export"></i>Xuất file
 										</button>
-									</form>
+									</form> -->
+									</div>
 								</div>
-							</div>
+							</c:if>
 							<div class="pagination">
 								<div class="pagination-left">
 									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
@@ -211,9 +213,9 @@
 								</div>
 								<div class="staff-account">
 									<div class="staff-account-username">${item.tendangnhap}</div>
-									<c:if test="${chucVuNV == true}">
+									<%-- <c:if test="${chucVuNV == true}">
 										<div class="staff-account-password">${item.matkhau}</div>
-									</c:if>
+									</c:if> --%>
 								</div>
 								<div class="staff-information">
 									<div class="staff-information-fullname">${item.fullname}</div>
@@ -235,16 +237,18 @@
 											test="${item.chucvu == true}">Admin</c:if>
 									</span>
 								</div> <c:if test="${chucVuNV == true}">
-									<div class="staff-action">
-										<button class="staff-button-edit"
-											onclick="editNV(${item.manv})">
-											<i class="fas fa-pencil-alt"></i>
-										</button>
-										<button class="staff-button-delete"
-											onclick="delectNV(${item.manv})">
-											<i class="far fa-trash-alt"></i>
-										</button>
-									</div>
+									<c:if test="${chucVuNV != item.chucvu}">
+										<div class="staff-action">
+											<button class="staff-button-edit"
+												onclick="editNV(${item.manv})">
+												<i class="fas fa-pencil-alt"></i>
+											</button>
+											<button class="staff-button-delete"
+												onclick="delectNV(${item.manv})">
+												<i class="far fa-trash-alt"></i>
+											</button>
+										</div>
+									</c:if>
 								</c:if>
 							</li>
 						</c:forEach>

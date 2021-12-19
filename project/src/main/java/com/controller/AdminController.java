@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.model.HoaDon;
 import com.model.HoaDonChiTiet;
@@ -75,9 +76,10 @@ public class AdminController {
 		
 //		HoaDon sumHD = hoadonDAO.sum();
 //		model.addAttribute("sumHD",sumHD);
-		Pageable pageable = PageRequest.of(0, 10);
-		Page<HoaDon> listHD = hoadonDAO.loadAll(pageable);
-		model.addAttribute("listHD",listHD);
+//		Pageable pageable = PageRequest.of(0, 9);
+//		Page<HoaDon> listHD = hoadonDAO.loadAll(pageable);
+//		model.addAttribute("listHD",listHD);
+		
 		return "admin/index";
 	}
 
@@ -112,6 +114,15 @@ public class AdminController {
 		model.addAttribute("listNH",listNH);
 		return "admin/product/product";
 	}
+	
+//	@GetMapping("admin/product?timkiem")
+//	public String timkiemSP(Model model,@RequestParam(value = "tensp", required = false) String tensp) {
+//		System.out.println(tensp);
+//		Pageable pageable = PageRequest.of(0, 9);
+//		Page<SanPham> listProductAD =  sanphamDAO.getName(tensp,pageable);
+//		sessionService.set("listProductAD", listProductAD);
+//		return "admin/product/product";
+//	}
 
 	@GetMapping("admin/staff")
 	public String staff() {

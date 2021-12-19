@@ -133,8 +133,8 @@
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input id="udImg"
-										type="file" accept="image/*"><label id="lblHinh"></label>
+									<label>Hình ảnh</label> <input id="udImg" type="file"
+										accept="image/*"><label id="lblHinh"></label>
 								</div>
 								<div class="form-group">
 									<label>Trạng thái</label> <select id="udActive">
@@ -170,11 +170,11 @@
 									<button class="add-item">
 										<i class="fas fa-user-plus"></i> Thêm khách hàng
 									</button>
-									<form action="excelSP" method="get">
+									<!-- <form action="excelSP" method="get">
 										<button class="export-file">
 											<i class="fas fa-file-export"></i>Xuất file
 										</button>
-									</form>
+									</form> -->
 								</div>
 							</div>
 							<div class="pagination">
@@ -209,7 +209,7 @@
 									<div class="customer-information-fullname">${item.fullname}
 									</div>
 									<div class="customer-information-gender">
-									<c:if test="${item.gioitinh == true}">Nam</c:if>
+										<c:if test="${item.gioitinh == true}">Nam</c:if>
 										<c:if test="${item.gioitinh == false}">Nữ</c:if>
 									</div>
 									<div class="customer-information-birthday">${item.ngaysinh}</div>
@@ -220,15 +220,17 @@
 									<div class="customer-address">${item.diachi}</div>
 								</div>
 								<div class="customer-action">
-								
+
 									<button onclick="editKH(${item.makh})"
 										class="customer-button-edit">
 										<i class="fas fa-pencil-alt"></i>
 									</button>
-									<button class="customer-button-delete"
-										onclick="delectKH(${item.makh})">
-										<i class="far fa-trash-alt"></i>
-									</button>
+									<c:if test="${chucVuNV == true}">
+										<button class="customer-button-delete"
+											onclick="delectKH(${item.makh})">
+											<i class="far fa-trash-alt"></i>
+										</button>
+									</c:if>
 								</div>
 							</li>
 						</c:forEach>

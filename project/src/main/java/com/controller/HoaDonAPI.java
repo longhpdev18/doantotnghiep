@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -16,6 +18,8 @@ import com.model.HoaDon;
 import com.model.HoaDonChiTiet;
 import com.model.KhachHang;
 import com.model.Message;
+import com.model.PageCount;
+import com.model.SanPham;
 import com.repository.HoaDonCTDAO;
 import com.repository.HoaDonDAO;
 import com.service.SessionService;
@@ -28,13 +32,17 @@ public class HoaDonAPI {
 	@Autowired
 	SessionService sessionService;
 	
+	Page<HoaDon> listHD;
+	PageCount pageCount = new PageCount();
+	
 	@GetMapping("/HD")
 	public Message HDAdmin(Model model) {
 		Message mess = new Message();
 		try {
-			Pageable pageable = PageRequest.of(0, 10);
+			Pageable pageable = PageRequest.of(0, 8);
 			Page<HoaDon> listHD = hoadonDAO.loadAll(pageable);
 			sessionService.set("listHD",listHD);
+			sessionService.set("pageCount", pageCount);
 			mess.setValue("success");
 		} catch (Exception e) {
 			mess.setValue("error");
@@ -55,8 +63,8 @@ public class HoaDonAPI {
 	public Message HDCTAdmin(Model model) {
 		Message mess = new Message();
 		try {
-			Pageable pageable = PageRequest.of(0, 10);
-			Page<HoaDonChiTiet> listHDCT = hoadonCTDAO.findAll(pageable);
+
+			List<HoaDonChiTiet> listHDCT = hoadonCTDAO.findAll();
 			sessionService.set("listHDCT",listHDCT);
 			mess.setValue("success");
 		} catch (Exception e) {
@@ -94,4 +102,40 @@ public class HoaDonAPI {
 		return "updated";
 	}
 	
+	
+	@PostMapping("/admin/hd/prevPage")
+	public Message prevPage(Model model, @RequestBody PageCount count) {
+		Message mess = new Message();
+		try {
+			if (count.getCount() > 0) {
+
+				Pageable pageable = PageRequest.of(count.getCount() - 1, 8);
+				listHD = hoadonDAO.loadAll(pageable);
+				sessionService.set("listHD", listHD);
+				pageCount.setCount(count.getCount() - 1);
+				mess.setValue("success");
+			}
+		} catch (Exception e) {
+			mess.setValue("error");
+		}
+
+		return mess;
+	}
+	
+	@PostMapping("/admin/hd/nextPage")
+	public Message nextPage(Model model, @RequestBody PageCount count) {
+		Message mess = new Message();
+		try {
+			Pageable pageable = PageRequest.of(count.getCount() + 1, 8);
+			listHD = hoadonDAO.loadAll(pageable);
+			sessionService.set("listHD", listHD);
+			pageCount.setCount(count.getCount() + 1);
+			mess.setValue("success");
+		} catch (Exception e) {
+			mess.setValue("error");
+		}
+
+		return mess;
+	}
+
 }

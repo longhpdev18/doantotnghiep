@@ -1,4 +1,5 @@
 $(window).on('load', getData())
+
 function loadData() {
 	$.ajax({
 		url: '/HD',
@@ -38,6 +39,7 @@ function loadData() {
 		})
 }
 function getData() {
+
 	$.ajax({
 		url: '/checkHD',
 		type: 'GET',
@@ -48,7 +50,7 @@ function getData() {
 		dataType: 'json',
 		success: function(mess) {
 			if (mess.value == "success") {
-
+				
 			} else {
 				loadData();
 			}
@@ -67,7 +69,7 @@ function getData() {
 			dataType: 'json',
 			success: function(mess) {
 				if (mess.value == "success") {
-
+					
 				} else {
 					loadData();
 				}
@@ -77,6 +79,57 @@ function getData() {
 
 		})
 }
+
+$('.btn-prev').click(function() {
+	//lấy ra số page hiện tại VD vào là 1, nhưng trên api mảng tính từ giá trị 0 còn form tính từ giá trị 1 nên phải -1
+	var count = $('#countPage').text() - 1;
+	console.log(count)
+	$.ajax({
+		url: '/admin/hd/prevPage',
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify(
+			{
+
+				'count': count
+			}
+		),
+		dataType: 'json',
+		success: function(result) {
+			if (result.value == 'success') {
+				location.reload();
+			}
+		}, error: function(err) {
+			console.log(err)
+		}
+
+	})
+})
+$('.btn-next').click(function() {
+	var count = $('#countPage').text() - 1;
+	console.log(count)
+	$.ajax({
+		url: '/admin/hd/nextPage',
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify(
+			{
+
+				'count': count
+			}
+		),
+		dataType: 'json',
+		success: function(result) {
+			if (result.value = 'success') {
+				location.reload();
+			}
+		}, error: function(err) {
+			console.log(err)
+		}
+
+	})
+})
+
 
 function editHD(mahd) {
 	$.ajax({
