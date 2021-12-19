@@ -1,6 +1,8 @@
 
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,7 +68,8 @@
 																</div>
 															</div>
 															<div class="order-pd-price">
-																${(hdct.soluong*sp.gia)-(sp.gia*sp.deal/100 * hdct.soluong)}</div>
+															<fmt:formatNumber value = "${(hdct.soluong*sp.gia)-(sp.gia*sp.deal/100 * hdct.soluong)}" maxFractionDigits = "0" type = "number"/> VND
+																</div>
 														</a>
 													</c:if>
 												</c:forEach></li>
@@ -95,7 +98,8 @@
 										</c:forEach>
 									</c:if>
 								</c:forEach>
-								đ
+								<fmt:formatNumber value = "${hd.tongtien}" maxFractionDigits = "0" type = "number"/> VND
+										
 							</div>
 						</div>
 						<div class="order-item-button">

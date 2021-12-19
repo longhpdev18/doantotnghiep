@@ -39,9 +39,8 @@ public class ShoppingCartRestAPI {
 	{	Message message = new Message();
 		
 		cart.add(cs.getMasp());
-		System.out.println(String.valueOf(cs.getMasp()));
 		if(spDAO.getById(cs.getMasp())!=null) {
-
+			
 			message.setValue("success");
 		}else {
 			message.setValue("Lỗi!");

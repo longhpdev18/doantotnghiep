@@ -41,8 +41,10 @@ public class ShoppingCartServiceImpl implements ShoppingCartService{
 			item.setSp(sp);			//item = DB.items.get(id);
 			item.setQty(1); //7. set số lượng là 1
 			map.put(masp, item); //8. thêm vào giỏ hàng
+
 		} else {
 			//9. ngược lại  có trong giỏ hàng thì tăng số lượng lên 1
+
 			item.setQty(item.getQty() + 1);
 		}
 		return item;
