@@ -2728,3 +2728,45 @@ body {
 .voucher-apply.active {
 	display: block;
 }
+/* Hướng dẫn trả góp */
+.payment{
+	width: 80%;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.color-title{
+	background-color: var(--whiteHover) ;
+	width: 10px;
+	height: 40px;
+}
+.title-payment{
+	color: var(--primaryHover);
+	font-size: 30px;
+	border-radius: 5px;
+	height: 45px;
+	display: flex;
+	left: 50px;
+}
+.img-payment{
+	text-align: center;
+}
+.img-payment img {
+	width: 60%;
+}
+.nhungdieukien {
+	margin-top: 10px;
+}
+/* hướng dẫn thanh toán */
+.thanhtoan{
+	width: 80%;
+	margin: auto;
+	margin-top: 10px;
+}
+.thanhtoan .noidung {
+	margin-top: 2px;
+	font-size: 17px;
+}
+.noidung img {
+	text-align: center;
+}
