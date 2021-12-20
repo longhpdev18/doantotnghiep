@@ -21,6 +21,9 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
 <title>Insert title here</title>
 </head>
 <body>
@@ -105,7 +108,7 @@
 						<div class="order-item-button">
 							<a href="/order_detail/?mahd=${hd.mahd}"
 								class="order-btn order-btn-detail"> Chi tiết đơn hàng</a>
-							<button class="order-btn order-btn-cancel">Hủy đơn hàng</button>
+							<button class="order-btn order-btn-cancel" value="${hd.mahd}">Hủy đơn hàng</button>
 						</div>
 					</div>
 				</div>

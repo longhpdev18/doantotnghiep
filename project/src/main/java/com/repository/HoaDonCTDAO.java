@@ -17,4 +17,6 @@ public interface HoaDonCTDAO extends JpaRepository<HoaDonChiTiet, Long> {
 	
 	@Query(value="select * from hoadonchitiet where mahd=:mahd",nativeQuery = true)
 	List<HoaDonChiTiet> getCTHD(Long mahd);
+	@Query(value="Delete from hoadonchitiet where mahd=:mahd",nativeQuery = true)
+	void deteleByHD(Long mahd);
 }

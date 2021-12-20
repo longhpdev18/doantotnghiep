@@ -1,6 +1,7 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <div class="cardBox">
 	<div class="card card-total">
 		<div class="card-heading">
@@ -13,7 +14,8 @@
 		</div>
 		<div class="card-content">
 			<div class="card-count">
-				125
+			
+				${hd.size()}
 			</div>
 		</div>
 		<div class="card-bottom">
@@ -25,29 +27,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="card card-total-week">
-		<div class="card-heading">
-			<div class="card-icon">
-				<i class="fas fa-truck-moving"></i>
-			</div>
-			<div class="card-button">
-				<i class="fas fa-ellipsis-h"></i>
-			</div>
-		</div>
-		<div class="card-content">
-			<div class="card-count">
-				25
-			</div>
-		</div>
-		<div class="card-bottom">
-			<div class="card-text">
-				Đơn trong tuần
-			</div>
-			<div class="card-percent down">
-				<i class="fas fa-caret-down "></i><p>25%</p>
-			</div>
-		</div>
-	</div>
+	
 	<div class="card card-total-customer">
 		<div class="card-heading">
 			<div class="card-icon">
@@ -59,7 +39,7 @@
 		</div>
 		<div class="card-content">
 			<div class="card-count">
-				68
+				${kh.size()}
 			</div>
 		</div>
 		<div class="card-bottom">
@@ -76,18 +56,16 @@
 			<div class="card-icon">
 				<i class="fas fa-dollar-sign"></i>
 			</div>
-			<div class="card-button">
-				<i class="fas fa-ellipsis-h"></i>
-			</div>
 		</div>
 		<div class="card-content">
 			<div class="card-count">
-				25,048 $
+			<fmt:formatNumber value = "	${doanhthu}" maxFractionDigits = "0" type = "number"/> VND</h6>
+								
 			</div>
 		</div>
 		<div class="card-bottom">
 			<div class="card-text">
-				Doanh thu
+				Tổng doanh thu
 			</div>
 			<div class="card-percent up">
 				<i class="fas fa-caret-up"></i><p>25%</p>

@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class HoaDonChiTiet {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int mahdct;
+	private long mahdct;
 	
 	@Column(name = "mahd", nullable = false)
 	private int mahd;

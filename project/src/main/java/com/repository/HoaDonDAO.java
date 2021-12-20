@@ -24,4 +24,6 @@ public interface HoaDonDAO extends JpaRepository<HoaDon, Long> {
 
 	@Query(value = "select * from hoadon  ORDER BY mahd DESC", nativeQuery = true)
 	Page<HoaDon> loadAll(Pageable pageable);
+	@Query(value="Delete from hoadon where mahd=:mahd",nativeQuery = true)
+	void deteleByHD(Long mahd);
 }

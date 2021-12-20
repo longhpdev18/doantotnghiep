@@ -102,10 +102,10 @@ $('.card-total-customer').click(function() {
 	$('.statistic-customer').addClass('active');
 })
 
-$('.card-total-revenue').click(function() {
+/*$('.card-total-revenue').click(function() {
     $('.statistic').addClass('active');
 	$('.statistic-turnover').addClass('active');
-})
+})*/
 
 
 

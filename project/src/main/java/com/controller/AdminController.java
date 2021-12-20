@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -59,7 +60,7 @@ public class AdminController {
 
 	@GetMapping("/admin")
 	public String admin(Model model) {
-
+		
 		return "admin/login";
 	}
 
@@ -72,6 +73,7 @@ public class AdminController {
 
 	@GetMapping("/admin/index")
 	public String indexAdmin(Model model) {
+		
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
@@ -82,7 +84,12 @@ public class AdminController {
 //		model.addAttribute("countHD",countHD);	
 		List<HoaDon> hd = hoadonDAO.findAll();
 		model.addAttribute("hd", hd);
-		List<KhachHang> kh = khachhangDAO.findAll();
+		List<KhachHang> kh = khachhangDAO.findAll(Sort.by(Sort.Direction.DESC, "makh"));
+		double total =0;
+		for (HoaDon hoadon : hd) {
+			total+=hoadon.getTongtien();
+		}
+		model.addAttribute("doanhthu", total);
 		model.addAttribute("kh", kh);
 		return "admin/index";
 	}

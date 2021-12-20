@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.model.KhachHang;
 
-
+import org.springframework.data.domain.Sort;
 @Repository
 public interface KhachHangDAO  extends JpaRepository<KhachHang, Long> {
 	@Query("select kh from khachhang kh where kh.tendangnhap=:username and kh.matkhau =:password")
@@ -19,5 +19,5 @@ public interface KhachHangDAO  extends JpaRepository<KhachHang, Long> {
 	KhachHang getById(@Param("maKH") long maKH);
 	@Query("select kh from khachhang kh where kh.tendangnhap=:tenDangNhap")
 	KhachHang getByUsername(@Param("tenDangNhap") String tenDangNhap);
-	
+
 }

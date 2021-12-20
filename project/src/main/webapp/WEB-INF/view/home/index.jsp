@@ -75,6 +75,14 @@
 									<div class="product__bottom">
 										<div class="product__content">
 											<h6 class="product-name">${sp.tensp}</h6>
+											<c:choose>
+											<c:when test="${sp.tinhtrang==true}">
+											<h6 id="tinhtrang">Còn hàng</h6>
+											</c:when>
+											<c:otherwise>
+											<h6 id="tinhtrang">Hết hàng</h6>
+											</c:otherwise>
+											</c:choose>
 											<h6 class="product-priceOld"><fmt:formatNumber value = "${sp.gia}" maxFractionDigits = "0" type = "number"/> VND</h6>
 											<h4 class="product-priceNew"><fmt:formatNumber value = "${ sp.gia - (sp.gia*sp.deal/100)}" maxFractionDigits = "0" type = "number"/> VND</h4>
 										</div>
@@ -88,7 +96,7 @@
 											<form>
 												<button type="submit"
 													class=" btn-light rounded-8 btn-addToCart"
-													value="${sp.masp}">Thêm vào giỏ</button>
+													value="${sp.masp}" data-tinhtrang="${sp.tinhtrang}" >Thêm vào giỏ</button>
 											</form>
 										</div>
 									</div>

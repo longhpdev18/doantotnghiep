@@ -70,8 +70,8 @@
 									<li><strong class="mr-10">Xuất xứ:</strong> Chính hãng</li>
 									<li><strong class="mr-10">Bảo hành:</strong> 24 Tháng</li>
 									<li><strong class="mr-10">Tình trạng:</strong> <c:choose>
-											<c:when test="${tinhtrang == true }">còn hàng</c:when>
-											<c:otherwise>hết hàng</c:otherwise>
+											<c:when test="${item.tinhtrang == true }">Còn hàng</c:when>
+											<c:otherwise>Hết hàng</c:otherwise>
 										</c:choose></li>
 								</div>
 							</ul>
@@ -89,7 +89,7 @@
 								<a href="/cart/add/${item.masp}"
 									class="btn btn-buy btn-primary rounded-8">Mua ngay</a>
 								<button class="btn btn-addToCart btn-light rounded-8"
-									value="${sp.masp}">Thêm vào giỏ</button>
+									value="${item.masp}" data-tinhtrang="${item.tinhtrang}" >Thêm vào giỏ</button>
 							</div>
 						</div>
 					</div>

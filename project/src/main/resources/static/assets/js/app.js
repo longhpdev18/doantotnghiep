@@ -136,6 +136,35 @@ $('.header__searchbox--button').click(function(){
     }
     
 })
+$('.order-btn-cancel').click(function(e){
+	e.preventDefault();
+	var mahd = this.value;
+	$.ajax({
+			url: '/oder/remove',
+			type: 'POST',
+			contentType: 'application/json',
+			data: JSON.stringify(
+				{
+					'mahd': mahd
+				}
+			),
+			dataType: 'json',
+			success: function(result) {
+				console.log(result.value)
+				if (result.value == 'success') {
+					toastr.success('Đã hủy đơn hàng!');
+					setTimeout(function() {location.reload();}, 3000);
+
+					
+				} else {
+					toastr.error(result.value);
+				}
+			}, error: function(err) {
+				console.log(err)
+			}
+
+		});
+})
 
 
 

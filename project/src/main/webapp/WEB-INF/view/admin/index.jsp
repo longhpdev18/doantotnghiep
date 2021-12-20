@@ -44,7 +44,7 @@
 			<div class="statistic-customer">
 				<div class="statistic-headding">
 					<h1 class="statistic-title">
-						Khách hàng <span class="statistic-customer-count">100</span>
+						Khách hàng <span class="statistic-customer-count">${kh.size()}</span>
 					</h1>
 					<div class="btn-statistic-close">
 						<i class="fas fa-times"></i>
@@ -52,36 +52,41 @@
 
 				</div>
 				<div class="statistic-customer-list">
+				<c:forEach var="item" items="${kh}" varStatus="rowCounter1">
 					<li class="statistic-customer-list__item">
-						<div class="statistic-customer-list__item-col no">
-							<div class="statistic-customer-list__item-title">Số thứ tự</div>
-							<div class="statistic-customer-list__item-value">1</div>
-						</div>
 						<div class="statistic-customer-list__item-col id">
 							<div class="statistic-customer-list__item-title">Mã khách
 								hàng</div>
-							<div class="statistic-customer-list__item-value">111</div>
+							<div class="statistic-customer-list__item-value">${item.makh }</div>
 						</div>
 						<div class="statistic-customer-list__item-col fullname">
 							<div class="statistic-customer-list__item-title">Họ và tên</div>
-							<div class="statistic-customer-list__item-value">Hoàng Phi
-								Long</div>
+							<div class="statistic-customer-list__item-value">${item.fullname }</div>
 						</div>
 						<div class="statistic-customer-list__item-col count-order">
 							<div class="statistic-customer-list__item-title">Tổng đơn
 								đã mua</div>
-							<div class="statistic-customer-list__item-value">15</div>
+								<c:set var="secCount" value="0" scope="page" />
+							<div class="statistic-customer-list__item-value">
+							<c:forEach var="hd" items="${hd}" varStatus="rowCounter1">
+							<c:if test="${hd.makh==item.makh }">
+								<c:set var="secCount" value="${secCount + 1}" scope="page"/>
+								</c:if>
+								</c:forEach>
+								${secCount}
+           					</div>
 						</div> <a href="#" class="statistic-customer-list__item-col detail">
 							Chi tiết <i class="fas fa-chevron-right"></i>
 					</a>
 					</li>
+					</c:forEach>
 				</div>
 			</div>
 
 			<div class="statistic-order">
 				<div class="statistic-headding">
 					<h1 class="statistic-title">
-						Tổng đơn <span class="statistic-order-count">100</span>
+						Tổng đơn <span class="statistic-order-count">${hd.size()}</span>
 					</h1>
 					<div class="btn-statistic-close">
 						<i class="fas fa-times"></i>
@@ -125,6 +130,7 @@
 					</div>
 				</div>
 				<div class="statistic-order-onweek-list">
+				
 					<li class="statistic-order-onweek-list__item">
 						<div class="statistic-order-onweek-list__item-col no">
 							<div class="statistic-order-onweek-list__item-title">Số thứ
@@ -374,144 +380,29 @@
 										</div>
 									</li>
 								</c:forEach>
+								<c:forEach var="item" items="${kh}">
 								<li class="recentCustomer-item">
 									<div class="recentCustomer-image">
 										<img
 											src="https://i.vietgiaitri.com/2018/11/26/cung-ngam-hinh-anh-nhung-nguoi-dep-co-khuon-mat-mang-ti-le-can-d-103d74.jpg" />
 									</div>
 									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
+										<div class="recentCustomer-detail-name">${item.fullname }</div>
 										<div class="recentCustomer-detail-username">
-											@longhpdev18</div>
+											${item.email }</div>
 										<div class="recentCustomer-detail-id">
-											Mã khách hàng <span>7</span>
+											Mã khách hàng <span>${item.makh }</span>
 										</div>
 									</div>
 									<div class="recentCustomer-icon">
 										<i class="fas fa-angle-right"></i>
 									</div>
 								</li>
-								<li class="recentCustomer-item">
-									<div class="recentCustomer-image">
-										<img
-											src="https://i.vietgiaitri.com/2018/11/26/cung-ngam-hinh-anh-nhung-nguoi-dep-co-khuon-mat-mang-ti-le-can-d-103d74.jpg" />
-									</div>
-									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
-										<div class="recentCustomer-detail-username">
-											@longhpdev18</div>
-										<div class="recentCustomer-detail-id">
-											Mã khách hàng <span>7</span>
-										</div>
-									</div>
-									<div class="recentCustomer-icon">
-										<i class="fas fa-angle-right"></i>
-									</div>
-								</li>
-								<li class="recentCustomer-item">
-									<div class="recentCustomer-image">
-										<img
-											src="https://bizweb.dktcdn.net/100/175/849/files/chup-anh-doanh-nhan-trong-studio-chuyen-nghiep-nhat-ha-noi-gia-re-bao-nhieu-tien-media-07.jpg?v=1575710139260" />
-									</div>
-									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
-										<div class="recentCustomer-detail-username">
-											@longhpdev18</div>
-										<div class="recentCustomer-detail-id">
-											Mã khách hàng <span>6</span>
-										</div>
-									</div>
-									<div class="recentCustomer-icon">
-										<i class="fas fa-angle-right"></i>
-									</div>
-								</li>
-								<li class="recentCustomer-item">
-									<div class="recentCustomer-image">
-										<img
-											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
-									</div>
-									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
-										<div class="recentCustomer-detail-username">
-											@longhpdev18</div>
-										<div class="recentCustomer-detail-id">
-											Mã khách hàng <span>5</span>
-										</div>
-									</div>
-									<div class="recentCustomer-icon">
-										<i class="fas fa-angle-right"></i>
-									</div>
-								</li>
+								</c:forEach>
+								
 							</ul>
 							<ul class="recentCustomer-content">
-								<li class="recentCustomer-item">
-									<div class="recentCustomer-image">
-										<img
-											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
-									</div>
-									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">Long Hoàng Nè</div>
-										<div class="recentCustomer-detail-username">
-											@longhpps09046</div>
-										<div class="recentCustomer-detail-id">
-											Mã khách hàng <span>4</span>
-										</div>
-									</div>
-									<div class="recentCustomer-icon">
-										<i class="fas fa-angle-right"></i>
-									</div>
-								</li>
-								<li class="recentCustomer-item">
-									<div class="recentCustomer-image">
-										<img
-											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
-									</div>
-									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
-										<div class="recentCustomer-detail-username">
-											@longhpdev18</div>
-										<div class="recentCustomer-detail-id">
-											Mã khách hàng <span>3</span>
-										</div>
-									</div>
-									<div class="recentCustomer-icon">
-										<i class="fas fa-angle-right"></i>
-									</div>
-								</li>
-								<li class="recentCustomer-item">
-									<div class="recentCustomer-image">
-										<img
-											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
-									</div>
-									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
-										<div class="recentCustomer-detail-username">
-											@longhpdev18</div>
-										<div class="recentCustomer-detail-id">
-											Mã khách hàng <span>2</span>
-										</div>
-									</div>
-									<div class="recentCustomer-icon">
-										<i class="fas fa-angle-right"></i>
-									</div>
-								</li>
-								<li class="recentCustomer-item">
-									<div class="recentCustomer-image">
-										<img
-											src="https://img.lovepik.com/photo/50111/4793.jpg_wh860.jpg" />
-									</div>
-									<div class="recentCustomer-detail">
-										<div class="recentCustomer-detail-name">Hoàng Phi Long</div>
-										<div class="recentCustomer-detail-username">
-											@longhpdev18</div>
-										<div class="recentCustomer-detail-id">
-											Mã khách hàng <span>1</span>
-										</div>
-									</div>
-									<div class="recentCustomer-icon">
-										<i class="fas fa-angle-right"></i>
-									</div>
-								</li>
+							
 							</ul>
 						</div>
 					</div>
@@ -532,11 +423,11 @@
 									<div class="target-content-top">
 										<div class="target-content-title">Đơn hàng (đạt 1000 đơn
 											hàng)</div>
-										<div class="target-content-percent">38%</div>
+										<div class="target-content-percent">${hd.size()/10 }%</div>
 									</div>
-									<div class="target-content-bottom">
-										<div class="target-processbar">
-											<div class="target-processbar-load order"></div>
+									<div class="target-content-bottom" >
+										<div class="target-processbar" >
+											<div class="target-processbar-load order" style="width: ${hd.size()/10 }%;"></div>
 										</div>
 									</div>
 								</div>
@@ -549,11 +440,11 @@
 									<div class="target-content-top">
 										<div class="target-content-title">Khách hàng (đạt 100
 											khách hàng)</div>
-										<div class="target-content-percent">55%</div>
+										<div class="target-content-percent">${kh.size()}%</div>
 									</div>
 									<div class="target-content-bottom">
 										<div class="target-processbar">
-											<div class="target-processbar-load customer"></div>
+											<div class="target-processbar-load customer" style="width: ${kh.size()}%;"></div>
 										</div>
 									</div>
 								</div>
@@ -564,13 +455,13 @@
 								</div>
 								<div class="target-content">
 									<div class="target-content-top">
-										<div class="target-content-title">Doanh thu (đạt 100.000
-											$)</div>
-										<div class="target-content-percent">82%</div>
+										<div class="target-content-title">Doanh thu (đạt 100.000.000
+											VNĐ)</div>
+										<div class="target-content-percent">${doanhthu/1000000 }%</div>
 									</div>
 									<div class="target-content-bottom">
 										<div class="target-processbar">
-											<div class="target-processbar-load revenue"></div>
+											<div class="target-processbar-load revenue"  style="width: ${doanhthu/1000000 }%;"></div>
 										</div>
 									</div>
 								</div>

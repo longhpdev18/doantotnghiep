@@ -2,6 +2,10 @@
 $('.btn-addToCart').click(function(e) {
 	e.preventDefault();
 	var masp = this.value;
+	if(!$(this).data('tinhtrang')){
+		toastr.error('Sản phẩm hết hàng!');
+		return;
+	}
 	if (masp) {
 		$.ajax({
 			url: '/cart/add',

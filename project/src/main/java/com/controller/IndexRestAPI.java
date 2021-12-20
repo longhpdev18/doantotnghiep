@@ -10,9 +10,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.model.HoaDon;
+import com.model.HoaDonChiTiet;
 import com.model.KhachHang;
 import com.model.Login;
 import com.model.Message;
+import com.repository.HoaDonCTDAO;
+import com.repository.HoaDonDAO;
 import com.repository.KhachHangDAO;
 import com.repository.LoaiHangDAO;
 import com.repository.SanPhamDAO;
@@ -25,6 +29,10 @@ import com.service.ShoppingCartService;
 public class IndexRestAPI {
 	@Autowired
 	SanPhamDAO sanphamDAO;
+	@Autowired
+	HoaDonCTDAO hoaDonCTDAO;
+	@Autowired
+	HoaDonDAO hoaDonDAO;
 	@Autowired
 	ParamService paramService;
 	@Autowired
@@ -93,6 +101,20 @@ public class IndexRestAPI {
 		khTest.setTendangnhap(kh.getTendangnhap());
 		khTest.setSodienthoai(kh.getSodienthoai());
 		khDAO.save(khTest);
+		mess.setValue("success");
+		return mess;
+	}
+	@PostMapping("/oder/remove")
+	public Message removeHD(@RequestBody HoaDon hd) {
+		Message mess = new Message();
+		System.out.println(hd.getMahd());
+		
+		for (HoaDonChiTiet item : hoaDonCTDAO.findAll()) {
+			if(item.getMahd()==hd.getMahd()) {
+				hoaDonCTDAO.deleteById(item.getMahdct());
+			}
+		}
+		hoaDonDAO.deleteById(hd.getMahd());
 		mess.setValue("success");
 		return mess;
 	}
