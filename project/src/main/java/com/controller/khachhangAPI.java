@@ -97,6 +97,30 @@ public class khachhangAPI {
 
 		return mess;
 	}
+	@RequestMapping(value = "admin/khachhang/UDImage", method = RequestMethod.POST)
+	public Message updateImage(@RequestParam("udImg") MultipartFile file) throws IOException {
+		Message mess = new Message();
+		System.out.println(file);
+		try {
+			String fileName = file.getOriginalFilename();
+			System.out.println(fileName);
+			if (!file.isEmpty()) {
+				int pathint = app.getRealPath("/WEB-INF").lastIndexOf("webapp");
+				String path = app.getRealPath("/WEB-INF").substring(0, pathint)
+						+ "resources/static/assets/images/profile/";
+				File fi = new File(path + fileName);
+				System.out.println(fi.getAbsolutePath());
+				file.transferTo(fi);
+			}
+		} catch (Exception e) {
+			mess.setValue("error");
+
+			return mess;
+		}
+		mess.setValue("ok");
+
+		return mess;
+	}
 
 	@GetMapping("admin/khachhang/delete/{makh}")
 	@ResponseBody

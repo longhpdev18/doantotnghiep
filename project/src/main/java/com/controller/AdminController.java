@@ -76,9 +76,12 @@ public class AdminController {
 //		HoaDon sumHD = hoadonDAO.sum();
 //		model.addAttribute("sumHD",sumHD);
 //		Pageable pageable = PageRequest.of(0, 9);
-//		Page<HoaDon> listHD = hoadonDAO.loadAll(pageable);
-//		model.addAttribute("listHD",listHD);
-		
+//		HoaDon  countHD = hoadonDAO.CountHD();
+//		model.addAttribute("countHD",countHD);	
+		List<HoaDon> hd = hoadonDAO.findAll();
+		model.addAttribute("hd",hd);	
+		List<KhachHang> kh = khachhangDAO.findAll();
+		model.addAttribute("kh",kh);	
 		return "admin/index";
 	}
 

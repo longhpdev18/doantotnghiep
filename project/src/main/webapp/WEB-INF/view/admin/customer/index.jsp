@@ -91,7 +91,7 @@
 					</div>
 
 					<div class="edit-customer blur-dark">
-						<form class="form-edit-customer">
+						<form class="form-edit-customer" id="fupdate-kh" name="fupdate-kh">
 							<div class="form-heading center">Sửa khách hàng</div>
 							<div class="form-content">
 								<div class="form-group">
@@ -133,7 +133,7 @@
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input id="udImg" type="file"
+									<label>Hình ảnh</label> <input id="udImg" name="udImg" type="file"
 										accept="image/*"><label id="lblHinh"></label>
 								</div>
 								<div class="form-group">

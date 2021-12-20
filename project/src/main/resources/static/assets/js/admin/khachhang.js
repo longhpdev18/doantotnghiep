@@ -190,11 +190,28 @@ $('#UpdateKH').click(function(e) {
 			gioitinh: gioitinh,
 			hinh: hinh
 		}),
-		success: function() {
-			toastr.success('Cập nhật thành công!');
-			setTimeout(function() {
-				loadData();
-			}, 1000);
+	success: function() {
+			var form = new FormData(document.getElementById('fupdate-kh'));
+			console.log(form);
+			$.ajax({
+				url: '/admin/khachhang/UDImage',
+				type: 'POST',
+				contentType: false,
+				processData: false,
+				data: form,
+				success: function() {
+					toastr.success('Cập nhật thành công!');
+					setTimeout(function() {
+						loadData();
+					}, 1000);
+
+				}, error: function(err) {
+					console.log(err)
+				}
+
+			})
+			
+			
 		},
 		error: function(err) {
 			alert("error is" + err)

@@ -76,7 +76,7 @@
 								</div>
 							</ul>
 							<div class="product-promotion mb-10">
-								<h1>Khuyến mãi</h1>
+								<h1>Mô tả</h1>
 								<p class="text-red bg-light">${item.mota}</p>
 							</div>
 							<div class="product-group-price">
@@ -94,7 +94,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="product-specs">
+				<!-- <div class="product-specs">
 					<div class="product-specs-wp">
 						<p class="product-specs-title">Thông số kỹ thuật</p>
 						<div class="product-specs-row">
@@ -144,13 +144,13 @@
 						</div>
 
 					</div>
-				</div>
+				</div> -->
 
 
 			</div>
 
-			<div class="comment">
-				<div class="comment-wp">
+			 <div class="comment">
+			<!--	<div class="comment-wp">
 					<div class="comment-headding">
 						<i class="fas fa-comments"></i>Hỏi đáp & hỗ trợ
 					</div>
@@ -243,8 +243,8 @@
 							</div>
 						</li>
 					</div>
-				</div>
-			</div>
+				</div>-->
+			</div> 
 			<jsp:include page="./../../home/footer.jsp"></jsp:include>
 		</div>
 
