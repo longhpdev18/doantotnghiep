@@ -38,20 +38,18 @@
 
 <body>
 	<div class="container">
-	
-		<jsp:include page="navigation.jsp"></jsp:include>
-		<div class="main">
-			<jsp:include page="topbar.jsp"></jsp:include>
-			
-				<div class="statistic">
+		
+		
+				<div class="statistic blur-dark">
 						<div class="statistic-customer">
 							<div class="statistic-headding">
 								<h1 class="statistic-title">
 									Khách hàng <span class="statistic-customer-count">100</span>
 								</h1>
-								<div class="statistic-filter">
-									Lọc <i class="fas fa-filter"></i>
-								</div>
+									<div class="btn-statistic-close">
+										<i class="fas fa-times"></i>
+									</div>
+	
 							</div>
 							<div class="statistic-customer-list">
 								<li class="statistic-customer-list__item">
@@ -87,9 +85,9 @@
 								<h1 class="statistic-title">
 									Tổng đơn <span class="statistic-order-count">100</span>
 								</h1>
-								<div class="statistic-filter">
-									Lọc <i class="fas fa-filter"></i>
-								</div>
+					<div class="btn-statistic-close">
+										<i class="fas fa-times"></i>
+									</div>
 							</div>
 							<div class="statistic-order-list">
 								<li class="statistic-order-list__item">
@@ -126,9 +124,9 @@
 								<h1 class="statistic-title">
 									Đơn hàng trong tuần <span class="statistic-order-onweek-count">25</span>
 								</h1>
-								<div class="statistic-filter">
-									Lọc <i class="fas fa-filter"></i>
-								</div>
+							<div class="btn-statistic-close">
+										<i class="fas fa-times"></i>
+									</div>
 							</div>
 							<div class="statistic-order-onweek-list">
 								<li class="statistic-order-onweek-list__item">
@@ -177,6 +175,9 @@
 						<div class="statistic-turnover">
 							<div class="statistic-headding">
 								<h1 class="statistic-title">Doanh thu</h1>
+															<div class="btn-statistic-close">
+										<i class="fas fa-times"></i>
+									</div>
 							</div>
 							<div class="statistic-turnover-content">
 								<div class="statistic-turnover-item capital">
@@ -194,9 +195,13 @@
 								</div>
 							</div>
 						</div>
-
-
 					</div>
+	
+	
+		<jsp:include page="navigation.jsp"></jsp:include>
+		<div class="main">
+			<jsp:include page="topbar.jsp"></jsp:include>
+			
 			
 			
 			<div class="main-wp">

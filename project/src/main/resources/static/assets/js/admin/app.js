@@ -87,7 +87,35 @@ $('.add-item').mousedown(function() {
     $('.edit-staff').addClass('active');
 })*/
 
+$('.card-total').click(function() {
+    $('.statistic').addClass('active');
+	$('.statistic-order').addClass('active');
+})
 
+$('.card-total-week').click(function() {
+    $('.statistic').addClass('active');
+	$('.statistic-order-onweek').addClass('active');
+})
+
+$('.card-total-customer').click(function() {
+    $('.statistic').addClass('active');
+	$('.statistic-customer').addClass('active');
+})
+
+$('.card-total-revenue').click(function() {
+    $('.statistic').addClass('active');
+	$('.statistic-turnover').addClass('active');
+})
+
+
+
+$('.btn-statistic-close').click(function() {
+    $('.statistic').removeClass('active');
+	$('.statistic-customer').removeClass('active');
+	$('.statistic-order-onweek').removeClass('active');
+	$('.statistic-order').removeClass('active');
+	$('.statistic-turnover').removeClass('active');
+})
 
 
 
