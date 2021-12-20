@@ -179,13 +179,13 @@
 							</div>
 							<div class="pagination">
 								<div class="pagination-left">
-									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
+									<span class="countPage" id="countPage">${pageCount.getCount()+1}</span> <i class="fas fa-circle"></i>
 								</div>
 								<div class="pagination-right">
-									<button class="btn-prev">
+									<button class="btn-prev" id="btn-prev">
 										<i class="fas fa-angle-left"></i>
 									</button>
-									<button class="btn-next">
+									<button class="btn-next" id="btn-next">
 										<i class="fas fa-angle-right"></i>
 									</button>
 								</div>
