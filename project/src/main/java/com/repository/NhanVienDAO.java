@@ -2,7 +2,8 @@ package com.repository;
 
 import java.util.List;
 
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -24,5 +25,7 @@ public interface NhanVienDAO extends JpaRepository<NhanVien, Long> {
 	
 	@Query("select nv from nhanvien nv where nv.tendangnhap=:username and nv.matkhau =:password")
 	NhanVien loginAdmin(@Param("username") String tendangnhap,@Param("password") String matkhau);
+	@Query("select nv from nhanvien nv where nv.manv=:manv")
+	Page<NhanVien> getID(long manv, Pageable pageable);
 
 }

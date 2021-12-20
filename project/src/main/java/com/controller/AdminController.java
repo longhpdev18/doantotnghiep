@@ -52,8 +52,10 @@ public class AdminController {
 	@Autowired
 	LoaiHangDAO loaihangDAO;
 	@Autowired
-	ShoppingCartService cart;
+	NhanVienDAO nhanvienDAO;
 
+	@Autowired
+	ShoppingCartService cart;
 
 	@GetMapping("/admin")
 	public String admin(Model model) {
@@ -76,29 +78,32 @@ public class AdminController {
 //		HoaDon sumHD = hoadonDAO.sum();
 //		model.addAttribute("sumHD",sumHD);
 //		Pageable pageable = PageRequest.of(0, 9);
-//		Page<HoaDon> listHD = hoadonDAO.loadAll(pageable);
-//		model.addAttribute("listHD",listHD);
-		
+//		HoaDon  countHD = hoadonDAO.CountHD();
+//		model.addAttribute("countHD",countHD);	
+		List<HoaDon> hd = hoadonDAO.findAll();
+		model.addAttribute("hd", hd);
+		List<KhachHang> kh = khachhangDAO.findAll();
+		model.addAttribute("kh", kh);
 		return "admin/index";
 	}
 
 	@GetMapping("/admin/order-detail={mahd}")
-	public String order_detailAD(Model model,@PathVariable(value = "mahd") Long mahd) {
+	public String order_detailAD(Model model, @PathVariable(value = "mahd") Long mahd) {
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
 		HoaDon hd = hoadonDAO.getById(mahd);
-		model.addAttribute("mahd",hd.getMahd());
-		model.addAttribute("ngaydat",hd.getNgaymua());
-		model.addAttribute("trangthai",hd.getTrangthai());
-		model.addAttribute("nguoinhan",hd.getTennguoinhan());
-		
+		model.addAttribute("mahd", hd.getMahd());
+		model.addAttribute("ngaydat", hd.getNgaymua());
+		model.addAttribute("trangthai", hd.getTrangthai());
+		model.addAttribute("nguoinhan", hd.getTennguoinhan());
+
 		List<HoaDonChiTiet> listhd = hoadonctDAO.getCTHD(mahd);
-		model.addAttribute("listhd",listhd);
-		
+		model.addAttribute("listhd", listhd);
+
 		List<SanPham> listsp = sanphamDAO.findAll();
-		model.addAttribute("listsp",listsp);
-		
+		model.addAttribute("listsp", listsp);
+
 		return "admin/order/order-detail";
 	}
 
@@ -108,22 +113,23 @@ public class AdminController {
 			return "redirect:/admin";
 		}
 		List<LoaiHang> listLH = loaihangDAO.findAll();
-		model.addAttribute("listLH",listLH);
-		List<NhanHieu> listNH =nhanhieuDAO.findAll();
-		model.addAttribute("listNH",listNH);
+		model.addAttribute("listLH", listLH);
+		List<NhanHieu> listNH = nhanhieuDAO.findAll();
+		model.addAttribute("listNH", listNH);
 		return "admin/product/product";
 	}
-	
+
 	@GetMapping("admin/productTimkiem")
-	public String timkiemSP(Model model,@RequestParam(value = "tensp", required = false) String tensp) {
+	public String timkiemSP(Model model, @RequestParam(value = "tensp", required = false) String tensp) {
 		System.out.println(tensp);
 		Pageable pageable = PageRequest.of(0, 10);
-		Page<SanPham> listProductAD =  sanphamDAO.getName(tensp,pageable);
-		List<LoaiHang> listLH = loaihangDAO.findAll();
-		model.addAttribute("listLH",listLH);
-		List<NhanHieu> listNH =nhanhieuDAO.findAll();
-		model.addAttribute("listNH",listNH);
+		Page<SanPham> listProductAD = sanphamDAO.getName(tensp, pageable);
 		model.addAttribute("listProductAD", listProductAD);
+		List<LoaiHang> listLH = loaihangDAO.findAll();
+		model.addAttribute("listLH", listLH);
+		List<NhanHieu> listNH = nhanhieuDAO.findAll();
+		model.addAttribute("listNH", listNH);
+
 		return "admin/product/product";
 	}
 
@@ -132,8 +138,17 @@ public class AdminController {
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
-		
+
 		sessionService.set("chucVuNV", sessionService.get("chucVuNV"));
+		return "admin/staff/index";
+	}
+
+	@GetMapping("admin/staffTimkiem")
+	public String timkiemNV(Model model, @RequestParam(value = "manv", required = false) long manv) {
+		System.out.println(manv);
+		Pageable pageable = PageRequest.of(0, 10);
+		Page<NhanVien> listNV = nhanvienDAO.getID(manv, pageable);
+		model.addAttribute("listNV", listNV);
 		return "admin/staff/index";
 	}
 
@@ -144,6 +159,7 @@ public class AdminController {
 		}
 		return "admin/customer/index";
 	}
+
 	@GetMapping("/admin/brand")
 	public String brand(Model model) {
 		if (sessionService.get("fullnameNV") == null || (boolean) sessionService.get("chucVuNV") == false) {
@@ -151,9 +167,10 @@ public class AdminController {
 		}
 		return "admin/brand/index";
 	}
+
 	@GetMapping("/admin/product-type")
-	public String typeproduct( ) {
-		if (sessionService.get("fullnameNV") == null || (boolean) sessionService.get("chucVuNV") == false ) {
+	public String typeproduct() {
+		if (sessionService.get("fullnameNV") == null || (boolean) sessionService.get("chucVuNV") == false) {
 			return "redirect:/admin";
 		}
 		return "admin/product-type/index";

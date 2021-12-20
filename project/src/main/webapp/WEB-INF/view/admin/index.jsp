@@ -38,178 +38,171 @@
 
 <body>
 	<div class="container">
-		
-		
-				<div class="statistic blur-dark">
-						<div class="statistic-customer">
-							<div class="statistic-headding">
-								<h1 class="statistic-title">
-									Khách hàng <span class="statistic-customer-count">100</span>
-								</h1>
-									<div class="btn-statistic-close">
-										<i class="fas fa-times"></i>
-									</div>
-	
-							</div>
-							<div class="statistic-customer-list">
-								<li class="statistic-customer-list__item">
-									<div class="statistic-customer-list__item-col no">
-										<div class="statistic-customer-list__item-title">Số thứ
-											tự</div>
-										<div class="statistic-customer-list__item-value">1</div>
-									</div>
-									<div class="statistic-customer-list__item-col id">
-										<div class="statistic-customer-list__item-title">Mã
-											khách hàng</div>
-										<div class="statistic-customer-list__item-value">111</div>
-									</div>
-									<div class="statistic-customer-list__item-col fullname">
-										<div class="statistic-customer-list__item-title">Họ và
-											tên</div>
-										<div class="statistic-customer-list__item-value">Hoàng
-											Phi Long</div>
-									</div>
-									<div class="statistic-customer-list__item-col count-order">
-										<div class="statistic-customer-list__item-title">Tổng
-											đơn đã mua</div>
-										<div class="statistic-customer-list__item-value">15</div>
-									</div> <a href="#" class="statistic-customer-list__item-col detail">
-										Chi tiết <i class="fas fa-chevron-right"></i>
-								</a>
-								</li>
-							</div>
-						</div>
 
-						<div class="statistic-order">
-							<div class="statistic-headding">
-								<h1 class="statistic-title">
-									Tổng đơn <span class="statistic-order-count">100</span>
-								</h1>
+
+		<div class="statistic blur-dark">
+			<div class="statistic-customer">
+				<div class="statistic-headding">
+					<h1 class="statistic-title">
+						Khách hàng <span class="statistic-customer-count">100</span>
+					</h1>
 					<div class="btn-statistic-close">
-										<i class="fas fa-times"></i>
-									</div>
-							</div>
-							<div class="statistic-order-list">
-								<li class="statistic-order-list__item">
-									<div class="statistic-order-list__item-col no">
-										<div class="statistic-order-list__item-title">Số thứ tự
-										</div>
-										<div class="statistic-order-list__item-value">1</div>
-									</div>
-									<div class="statistic-order-list__item-col id">
-										<div class="statistic-order-list__item-title">Mã đơn
-											hàng</div>
-										<div class="statistic-order-list__item-value">
-											ABCDE1002200</div>
-									</div>
-									<div class="statistic-order-list__item-col date">
-										<div class="statistic-order-list__item-title">Ngày đặt
-											hàng</div>
-										<div class="statistic-order-list__item-value">16:00
-											18-12-2021</div>
-									</div>
-									<div class="statistic-order-list__item-col id">
-										<div class="statistic-order-list__item-title">Doanh thu
-										</div>
-										<div class="statistic-order-list__item-value">100$</div>
-									</div> <a href="#" class="statistic-order-list__item-col detail">
-										Chi tiết <i class="fas fa-chevron-right"></i>
-								</a>
-								</li>
-							</div>
-						</div>
-
-						<div class="statistic-order-onweek">
-							<div class="statistic-headding">
-								<h1 class="statistic-title">
-									Đơn hàng trong tuần <span class="statistic-order-onweek-count">25</span>
-								</h1>
-							<div class="btn-statistic-close">
-										<i class="fas fa-times"></i>
-									</div>
-							</div>
-							<div class="statistic-order-onweek-list">
-								<li class="statistic-order-onweek-list__item">
-									<div class="statistic-order-onweek-list__item-col no">
-										<div class="statistic-order-onweek-list__item-title">Số
-											thứ tự</div>
-										<div class="statistic-order-onweek-list__item-value">1</div>
-									</div>
-									<div class="statistic-order-onweek-list__item-col id">
-										<div class="statistic-order-onweek-list__item-title">Mã
-											đơn hàng</div>
-										<div class="statistic-order-onweek-list__item-value">
-											ABCDE1002200</div>
-									</div>
-									<div class="statistic-order-onweek-list__item-col date">
-										<div class="statistic-order-onweek-list__item-title">
-											Ngày đặt hàng</div>
-										<div class="statistic-order-onweek-list__item-value">
-											16:00 18-12-2021</div>
-									</div>
-									<div class="statistic-order-onweek-list__item-col fullname">
-										<div class="statistic-order-onweek-list__item-title">
-											Tên khách hàng</div>
-										<div class="statistic-order-onweek-list__item-value">
-											Hoàng Phi Long</div>
-									</div>
-									<div class="statistic-order-onweek-list__item-col turnover">
-										<div class="statistic-order-onweek-list__item-title">
-											Doanh thu đơn hàng</div>
-										<div class="statistic-order-onweek-list__item-value">
-											199$</div>
-									</div>
-									<div class="statistic-order-onweek-list__item-col status">
-										<div class="statistic-order-onweek-list__item-title">
-											Trạng thái</div>
-										<div class="statistic-order-onweek-list__item-value">Đã
-											hoàn thành</div>
-									</div> <a href="#"
-									class="statistic-order-onweek-list__item-col detail"> Chi
-										tiết <i class="fas fa-chevron-right"></i>
-								</a>
-								</li>
-							</div>
-						</div>
-
-						<div class="statistic-turnover">
-							<div class="statistic-headding">
-								<h1 class="statistic-title">Doanh thu</h1>
-															<div class="btn-statistic-close">
-										<i class="fas fa-times"></i>
-									</div>
-							</div>
-							<div class="statistic-turnover-content">
-								<div class="statistic-turnover-item capital">
-									<div class="statistic-turnover__item-title">Tổng vốn</div>
-									<div class="statistic-turnover__item-value">15987$</div>
-								</div>
-								<div class="statistic-turnover-item interest">
-									<div class="statistic-turnover__item-title">Tổng lãi</div>
-									<div class="statistic-turnover__item-value">5987$</div>
-								</div>
-								<div class="statistic-turnover-item other">
-									<div class="statistic-turnover__item-title">Chi phí khác
-									</div>
-									<div class="statistic-turnover__item-value">987$</div>
-								</div>
-							</div>
-						</div>
+						<i class="fas fa-times"></i>
 					</div>
-	
-	
+
+				</div>
+				<div class="statistic-customer-list">
+					<li class="statistic-customer-list__item">
+						<div class="statistic-customer-list__item-col no">
+							<div class="statistic-customer-list__item-title">Số thứ tự</div>
+							<div class="statistic-customer-list__item-value">1</div>
+						</div>
+						<div class="statistic-customer-list__item-col id">
+							<div class="statistic-customer-list__item-title">Mã khách
+								hàng</div>
+							<div class="statistic-customer-list__item-value">111</div>
+						</div>
+						<div class="statistic-customer-list__item-col fullname">
+							<div class="statistic-customer-list__item-title">Họ và tên</div>
+							<div class="statistic-customer-list__item-value">Hoàng Phi
+								Long</div>
+						</div>
+						<div class="statistic-customer-list__item-col count-order">
+							<div class="statistic-customer-list__item-title">Tổng đơn
+								đã mua</div>
+							<div class="statistic-customer-list__item-value">15</div>
+						</div> <a href="#" class="statistic-customer-list__item-col detail">
+							Chi tiết <i class="fas fa-chevron-right"></i>
+					</a>
+					</li>
+				</div>
+			</div>
+
+			<div class="statistic-order">
+				<div class="statistic-headding">
+					<h1 class="statistic-title">
+						Tổng đơn <span class="statistic-order-count">100</span>
+					</h1>
+					<div class="btn-statistic-close">
+						<i class="fas fa-times"></i>
+					</div>
+				</div>
+				<div class="statistic-order-list">
+					<c:forEach var="hd" items="${hd}">
+						<li class="statistic-order-list__item">
+							<div class="statistic-order-list__item-col no">
+								<div class="statistic-order-list__item-title">Số thứ tự</div>
+								<div class="statistic-order-list__item-value">1</div>
+							</div>
+							<div class="statistic-order-list__item-col id">
+								<div class="statistic-order-list__item-title">Mã đơn hàng</div>
+								<div class="statistic-order-list__item-value">
+									${hd.mahd}</div>
+							</div>
+							<div class="statistic-order-list__item-col date">
+								<div class="statistic-order-list__item-title">Ngày đặt
+									hàng</div>
+								<div class="statistic-order-list__item-value">${hd.ngaymua}</div>
+							</div>
+							<div class="statistic-order-list__item-col id">
+								<div class="statistic-order-list__item-title">Doanh thu</div>
+								<div class="statistic-order-list__item-value">${hd.tongtien}</div>
+							</div> <a href="#" class="statistic-order-list__item-col detail">
+								Chi tiết <i class="fas fa-chevron-right"></i>
+						</a>
+						</li>
+					</c:forEach>
+				</div>
+			</div>
+
+			<div class="statistic-order-onweek">
+				<div class="statistic-headding">
+					<h1 class="statistic-title">
+						Đơn hàng trong tuần <span class="statistic-order-onweek-count">25</span>
+					</h1>
+					<div class="btn-statistic-close">
+						<i class="fas fa-times"></i>
+					</div>
+				</div>
+				<div class="statistic-order-onweek-list">
+					<li class="statistic-order-onweek-list__item">
+						<div class="statistic-order-onweek-list__item-col no">
+							<div class="statistic-order-onweek-list__item-title">Số thứ
+								tự</div>
+							<div class="statistic-order-onweek-list__item-value">1</div>
+						</div>
+						<div class="statistic-order-onweek-list__item-col id">
+							<div class="statistic-order-onweek-list__item-title">Mã đơn
+								hàng</div>
+							<div class="statistic-order-onweek-list__item-value">
+								ABCDE1002200</div>
+						</div>
+						<div class="statistic-order-onweek-list__item-col date">
+							<div class="statistic-order-onweek-list__item-title">Ngày
+								đặt hàng</div>
+							<div class="statistic-order-onweek-list__item-value">16:00
+								18-12-2021</div>
+						</div>
+						<div class="statistic-order-onweek-list__item-col fullname">
+							<div class="statistic-order-onweek-list__item-title">Tên
+								khách hàng</div>
+							<div class="statistic-order-onweek-list__item-value">Hoàng
+								Phi Long</div>
+						</div>
+						<div class="statistic-order-onweek-list__item-col turnover">
+							<div class="statistic-order-onweek-list__item-title">Doanh
+								thu đơn hàng</div>
+							<div class="statistic-order-onweek-list__item-value">199$</div>
+						</div>
+						<div class="statistic-order-onweek-list__item-col status">
+							<div class="statistic-order-onweek-list__item-title">Trạng
+								thái</div>
+							<div class="statistic-order-onweek-list__item-value">Đã
+								hoàn thành</div>
+						</div> <a href="#" class="statistic-order-onweek-list__item-col detail">
+							Chi tiết <i class="fas fa-chevron-right"></i>
+					</a>
+					</li>
+				</div>
+			</div>
+
+			<div class="statistic-turnover">
+				<div class="statistic-headding">
+					<h1 class="statistic-title">Doanh thu</h1>
+					<div class="btn-statistic-close">
+						<i class="fas fa-times"></i>
+					</div>
+				</div>
+				<div class="statistic-turnover-content">
+					<div class="statistic-turnover-item capital">
+						<div class="statistic-turnover__item-title">Tổng vốn</div>
+						<div class="statistic-turnover__item-value">15987$</div>
+					</div>
+					<div class="statistic-turnover-item interest">
+						<div class="statistic-turnover__item-title">Tổng lãi</div>
+						<div class="statistic-turnover__item-value">5987$</div>
+					</div>
+					<div class="statistic-turnover-item other">
+						<div class="statistic-turnover__item-title">Chi phí khác</div>
+						<div class="statistic-turnover__item-value">987$</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<jsp:include page="navigation.jsp"></jsp:include>
 		<div class="main">
 			<jsp:include page="topbar.jsp"></jsp:include>
-			
-			
-			
+
+
+
 			<div class="main-wp">
 				<div class="main-left">
 
 
 					<!-- thống kê -->
-				
+
 					<!-- thống kê -->
 
 					<!-- CARD BOX -->

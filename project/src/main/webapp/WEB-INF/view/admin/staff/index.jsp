@@ -79,8 +79,8 @@
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input id="fileNV" name="fileNV" type="file"
-										accept="image/*">
+									<label>Hình ảnh</label> <input id="fileNV" name="fileNV"
+										type="file" accept="image/*">
 								</div>
 								<div class="form-group">
 									<label>Chức vụ</label> <select id="chucvu">
@@ -140,8 +140,8 @@
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input id="UDfileNV" name="UDfileNV" type="file"
-										accept="image/*"> <label id="lblHinh"></label>
+									<label>Hình ảnh</label> <input id="UDfileNV" name="UDfileNV"
+										type="file" accept="image/*"> <label id="lblHinh"></label>
 								</div>
 								<div class="form-group">
 									<label>Chức vụ </label> <select id="udChucvu">
@@ -162,13 +162,15 @@
 					<div class="manage-staff-heading">
 						<div class="staff-heading-left">Danh sách nhân viên</div>
 						<div class="staff-heading-center">
-							<div class="searchbox">
-								<input type="text" class="search-input"
-									placeholder="Nhập tên nhân viên, id nhân viên">
-								<button class="search-button">
-									<i class="fas fa-search"></i>
-								</button>
-							</div>
+							<form action="">
+								<div class="searchbox">
+									<input type="number" id="manv"  name="manv" class="search-input"
+										placeholder="Nhập id nhân viên">
+									<button class="search-button">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</form>
 						</div>
 						<div class="staff-heading-right">
 							<c:if test="${chucVuNV == true}">
@@ -207,9 +209,7 @@
 							<li class="staff-item">
 								<div class="staff-id">${item.manv}</div>
 								<div class="staff-image">
-									<img
-										src="./../assets/images/profile/${item.hinh}"
-										alt="">
+									<img src="./../assets/images/profile/${item.hinh}" alt="">
 								</div>
 								<div class="staff-account">
 									<div class="staff-account-username">${item.tendangnhap}</div>

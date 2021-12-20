@@ -91,7 +91,7 @@
 					</div>
 
 					<div class="edit-customer blur-dark">
-						<form class="form-edit-customer">
+						<form class="form-edit-customer" id="fupdate-kh" name="fupdate-kh">
 							<div class="form-heading center">Sửa khách hàng</div>
 							<div class="form-content">
 								<div class="form-group">
@@ -133,7 +133,7 @@
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input id="udImg" type="file"
+									<label>Hình ảnh</label> <input id="udImg" name="udImg" type="file"
 										accept="image/*"><label id="lblHinh"></label>
 								</div>
 								<div class="form-group">
@@ -179,13 +179,13 @@
 							</div>
 							<div class="pagination">
 								<div class="pagination-left">
-									<span>1</span> <i class="fas fa-circle"></i> <span>10</span>
+									<span class="countPage" id="countPage">${pageCount.getCount()+1}</span> <i class="fas fa-circle"></i>
 								</div>
 								<div class="pagination-right">
-									<button class="btn-prev">
+									<button class="btn-prev" id="btn-prev">
 										<i class="fas fa-angle-left"></i>
 									</button>
-									<button class="btn-next">
+									<button class="btn-next" id="btn-next">
 										<i class="fas fa-angle-right"></i>
 									</button>
 								</div>

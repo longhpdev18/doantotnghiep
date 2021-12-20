@@ -39,6 +39,56 @@ function getData() {
 	})
 }
 
+$('.btn-prev').click(function() {
+	var count = $('#countPage').text() - 1;
+	console.log(count)
+	$.ajax({
+		url: '/admin/kh/prevPage',
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify(
+			{
+
+				'count': count
+			}
+		),
+		dataType: 'json',
+		success: function(result) {
+			if (result.value == 'success') {
+				location.reload();
+			}
+		}, error: function(err) {
+			console.log(err)
+		}
+
+	})
+})
+$('.btn-next').click(function() {
+	var count = $('#countPage').text() - 1;
+	console.log(count)
+	$.ajax({
+		url: '/admin/kh/nextPage',
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify(
+			{
+
+				'count': count
+			}
+		),
+		dataType: 'json',
+		success: function(result) {
+			if (result.value = 'success') {
+				location.reload();
+			}
+		}, error: function(err) {
+			console.log(err)
+		}
+
+	})
+})
+
+
 $('#add-customer').click(function(e) {
 	e.preventDefault();
 
@@ -190,11 +240,28 @@ $('#UpdateKH').click(function(e) {
 			gioitinh: gioitinh,
 			hinh: hinh
 		}),
-		success: function() {
-			toastr.success('Cập nhật thành công!');
-			setTimeout(function() {
-				loadData();
-			}, 1000);
+	success: function() {
+			var form = new FormData(document.getElementById('fupdate-kh'));
+			console.log(form);
+			$.ajax({
+				url: '/admin/khachhang/UDImage',
+				type: 'POST',
+				contentType: false,
+				processData: false,
+				data: form,
+				success: function() {
+					toastr.success('Cập nhật thành công!');
+					setTimeout(function() {
+						loadData();
+					}, 1000);
+
+				}, error: function(err) {
+					console.log(err)
+				}
+
+			})
+			
+			
 		},
 		error: function(err) {
 			alert("error is" + err)

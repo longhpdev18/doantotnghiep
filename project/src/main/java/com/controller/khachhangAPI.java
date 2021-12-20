@@ -21,9 +21,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.model.HoaDon;
 import com.model.KhachHang;
 import com.model.LoaiHang;
 import com.model.Message;
+import com.model.PageCount;
+import com.model.SanPham;
 import com.repository.KhachHangDAO;
 import com.service.SessionService;
 
@@ -35,7 +38,8 @@ public class khachhangAPI {
 	KhachHangDAO khachhangDAO;
 	@Autowired
 	SessionService sessionService;
-
+	Page<KhachHang> listKH;
+	PageCount pageCount = new PageCount();
 	@GetMapping("/getDataKH")
 	public Message getData() {
 		Message mess = new Message();
@@ -50,9 +54,50 @@ public class khachhangAPI {
 	@GetMapping("/khachhang")
 	public Message load(Model model) {
 		Message mess = new Message();
+		try {
 		Pageable pageable = PageRequest.of(0, 8);
 		Page<KhachHang> listKH = khachhangDAO.findAll(pageable);
-		sessionService.set("listKH", listKH);
+		sessionService.set("listKH",listKH);
+		sessionService.set("pageCount", pageCount);
+		mess.setValue("success");
+		} catch (Exception e) {
+			mess.setValue("error");
+		}
+		return mess;
+	}
+
+	@PostMapping("/admin/kh/prevPage")
+	public Message prevPage(Model model, @RequestBody PageCount count) {
+		Message mess = new Message();
+		try {
+			if (count.getCount() > 0) {
+
+				Pageable pageable = PageRequest.of(count.getCount() - 1, 8);
+				listKH = khachhangDAO.findAll(pageable);
+				sessionService.set("listKH", listKH);
+				pageCount.setCount(count.getCount() - 1);
+				mess.setValue("success");
+			}
+		} catch (Exception e) {
+			mess.setValue("error");
+		}
+
+		return mess;
+	}
+
+	@PostMapping("/admin/kh/nextPage")
+	public Message nextPage(Model model, @RequestBody PageCount count) {
+		Message mess = new Message();
+		try {
+			Pageable pageable = PageRequest.of(count.getCount() + 1, 8);
+			listKH = khachhangDAO.findAll(pageable);
+			sessionService.set("listProductAD", listKH);
+			pageCount.setCount(count.getCount() + 1);
+			mess.setValue("success");
+		} catch (Exception e) {
+			mess.setValue("error");
+		}
+
 		return mess;
 	}
 
@@ -67,7 +112,6 @@ public class khachhangAPI {
 		kh.setDiachi(KH.getDiachi());
 		kh.setEmail(KH.getEmail());
 		kh.setSodienthoai(KH.getSodienthoai());
-		// kh.setHinh(imagePath.resolve(imageFile.getOriginalFilename()).toString());
 		kh.setHinh(KH.getHinh());
 		kh.setActive(KH.isActive());
 		return khachhangDAO.save(kh);
@@ -75,6 +119,31 @@ public class khachhangAPI {
 
 	@RequestMapping(value = "admin/khachhang/addImage", method = RequestMethod.POST)
 	public Message addImage(@RequestParam("fileKH") MultipartFile file) throws IOException {
+		Message mess = new Message();
+		System.out.println(file);
+		try {
+			String fileName = file.getOriginalFilename();
+			System.out.println(fileName);
+			if (!file.isEmpty()) {
+				int pathint = app.getRealPath("/WEB-INF").lastIndexOf("webapp");
+				String path = app.getRealPath("/WEB-INF").substring(0, pathint)
+						+ "resources/static/assets/images/profile/";
+				File fi = new File(path + fileName);
+				System.out.println(fi.getAbsolutePath());
+				file.transferTo(fi);
+			}
+		} catch (Exception e) {
+			mess.setValue("error");
+
+			return mess;
+		}
+		mess.setValue("ok");
+
+		return mess;
+	}
+
+	@RequestMapping(value = "admin/khachhang/UDImage", method = RequestMethod.POST)
+	public Message updateImage(@RequestParam("udImg") MultipartFile file) throws IOException {
 		Message mess = new Message();
 		System.out.println(file);
 		try {
