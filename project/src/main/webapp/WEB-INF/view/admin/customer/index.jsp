@@ -34,7 +34,7 @@
 			<div class="manage-customer">
 				<div class="manage-customer-wp">
 					<div class="add-customer blur-dark">
-						<form class="form-add-customer" enctype=multipart/form-data>
+						<form class="form-add-customer" name="faddKH" id="faddKH" enctype=multipart/form-data>
 							<div class="form-heading center">Thêm khách hàng</div>
 							<div class="form-content">
 								<div class="form-group">
@@ -72,7 +72,7 @@
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input id="fileKH" type="file"
+									<label>Hình ảnh</label> <input id="fileKH" name = "fileKH" type="file"
 										accept="image/*">
 								</div>
 								<div class="form-group">
@@ -198,7 +198,7 @@
 								<div class="customer-id">${item.makh}</div>
 								<div class="customer-image">
 									<img
-										src="https://upanh123.com/wp-content/uploads/2020/12/hinh-nen-cute05.jpg"
+										src="./../assets/images/profile/${item.hinh}"
 										alt="">
 								</div>
 								<div class="customer-account">

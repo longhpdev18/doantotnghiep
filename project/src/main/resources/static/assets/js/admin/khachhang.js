@@ -76,12 +76,26 @@ $('#add-customer').click(function(e) {
 				"active": active
 			}
 		),
-		dataType: 'json',
 		success: function() {
-			toastr.success('Thêm thành công!');
-			setTimeout(function() {
-				loadData();
-			}, 1000);
+			var form = new FormData(document.getElementById('faddKH'));
+			console.log(form);
+			$.ajax({
+				url: '/admin/khachhang/addImage',
+				type: 'POST',
+				contentType: false,
+				processData: false,
+				data: form,
+				success: function() {
+					toastr.success('Cập nhật thành công!');
+					setTimeout(function() {
+						loadData();
+					}, 1000);
+
+				}, error: function(err) {
+					console.log(err)
+				}
+
+			})
 
 		}, error: function(err) {
 			console.log(err)

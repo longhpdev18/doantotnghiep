@@ -41,7 +41,7 @@
 				<div class="manage-staff-wp">
 
 					<div class="add-customer blur-dark">
-						<form class="form-add-customer">
+						<form class="form-add-customer fAdd-nv" id="fAdd-nv">
 							<div class="form-heading center">Thêm nhân viên</div>
 							<div class="form-content">
 								<div class="form-group">
@@ -79,7 +79,7 @@
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input id="fileNV" type="file"
+									<label>Hình ảnh</label> <input id="fileNV" name="fileNV" type="file"
 										accept="image/*">
 								</div>
 								<div class="form-group">
@@ -98,7 +98,7 @@
 					</div>
 
 					<div class="edit-staff blur-dark">
-						<form class="form-edit-staff">
+						<form class="form-edit-staff" name="fupdate-nv" id="fupdate-nv">
 							<div class="form-heading center">Sửa nhân viên</div>
 							<div class="form-content">
 								<div class="form-group">
@@ -140,7 +140,7 @@
 										placeholder="Số điện thoại">
 								</div>
 								<div class="form-group">
-									<label>Hình ảnh</label> <input id="udHinh" type="file"
+									<label>Hình ảnh</label> <input id="UDfileNV" name="UDfileNV" type="file"
 										accept="image/*"> <label id="lblHinh"></label>
 								</div>
 								<div class="form-group">
@@ -208,7 +208,7 @@
 								<div class="staff-id">${item.manv}</div>
 								<div class="staff-image">
 									<img
-										src="https://upanh123.com/wp-content/uploads/2020/12/hinh-nen-cute05.jpg"
+										src="./../assets/images/profile/${item.hinh}"
 										alt="">
 								</div>
 								<div class="staff-account">

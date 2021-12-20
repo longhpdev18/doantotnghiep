@@ -22,7 +22,7 @@ public interface SanPhamDAO  extends JpaRepository<SanPham, Integer> {
 	SanPham getID(Integer masp); 
 	@Query(value="select sp from sanpham sp where sp.maloai=:maloai")
 	List<SanPham> getByLH(int maloai);
-	@Query(value="select sp from sanpham sp where sp.tensp like %:tensp%")
+	@Query(value="select sp from sanpham sp where sp.tensp like %:tensp% ORDER BY masp DESC")
 	Page<SanPham> getName(String tensp, Pageable pageable);
 	
 	@Query(value="select sp from sanpham sp where sp.tensp like %:tensp%")

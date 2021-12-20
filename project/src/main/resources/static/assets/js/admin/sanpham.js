@@ -317,10 +317,10 @@ $('#update-product').click(function(e) {
 				processData: false,
 				data: form,
 				success: function() {
-					toastr.success('Thêm thành công!');
+					toastr.success('Cập nhật thành công!');
 					setTimeout(function() {
 						loadData();
-					}, 2000);
+					}, 1000);
 
 				}, error: function(err) {
 					console.log(err)

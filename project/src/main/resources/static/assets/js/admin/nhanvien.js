@@ -43,16 +43,85 @@ $('#add-staff').click(function(e) {
 	e.preventDefault();
 
 	var tendangnhap = $('#userNV').val();
+
+	if (tendangnhap == null || tendangnhap == "" || tendangnhap == undefined) {
+		toastr.error('Tên tài khoản không được để trống');
+		return false;
+	}
+
 	var matkhau = $('#passNV').val();
-	var chucvu = parseInt($('#chucvu :selected').val());
+
+	if (matkhau == null || matkhau == "" || matkhau == undefined) {
+		toastr.error('Mật khẩu không được để trống');
+		return false;
+	}
+
+	var chucvu = $('#chucvu :selected').val();
+
+	if (chucvu == NaN || chucvu == "" || chucvu == undefined) {
+		toastr.error('Chức vụ không được để trống');
+		return false;
+	} else {
+		chucvu = parseInt(chucvu);
+	}
+
 	var fullname = $('#nameNV').val();
-	var birthday = Date.parse($('#birthdayNV').val());
-	var gioitinh = parseInt($('#genders :selected').val());
+
+	if (fullname == null || fullname == "" || fullname == undefined) {
+		toastr.error('Tên không được để trống');
+		return false;
+	}
+
+	var birthday = $('#birthdayNV').val();
+
+	if (birthday == null || birthday == "" || birthday == undefined) {
+		toastr.error('Ngày sinh được để trống');
+		return false;
+	}else{
+		birthday = Date.parse(birthday);
+	}
+
+	var gioitinh = $('#genders :selected').val();
+
+
+	if (gioitinh == NaN || gioitinh == "" || gioitinh == undefined) {
+		toastr.error('Giới không được để trống');
+		return false;
+	} else {
+		gioitinh = parseInt(gioitinh);
+	}
+
 	var diachi = $('#addressNV').val();
+
+	if (diachi == null || diachi == "" || diachi == undefined) {
+		toastr.error('Địa chỉ không được để trống');
+		return false;
+	}
+
 	var email = $('#emailNV').val();
-	var hinh = $('#fileNV')[0].files[0].name;
-	var sodienthoai = parseInt($('#phoneNV').val());
-	
+
+	if (email == null || email == "" || email == undefined) {
+		toastr.error('Email không được để trống');
+		return false;
+	}
+
+	var sodienthoai = $('#phoneNV').val();
+
+	if (sodienthoai == null || sodienthoai == "" || sodienthoai == undefined) {
+		toastr.error('Số điện thoại không được để trống');
+		return false;
+	} else {
+		sodienthoai = parseInt(sodienthoai);
+	}
+	var hinh = $('#fileNV')[0].files[0];
+
+	if (hinh == NaN || hinh == "" || hinh == undefined) {
+		toastr.error('Hình không được để trống');
+		return false;
+	} else {
+		hinh = hinh.name;
+	}
+
 	$.ajax({
 		url: '/admin/nhanvien/add',
 		type: 'POST',
@@ -69,16 +138,31 @@ $('#add-staff').click(function(e) {
 				"email": email,
 				"sodienthoai": sodienthoai,
 				"hinh": hinh,
-				
+
 			}
 		),
 		dataType: 'json',
 		success: function() {
-			toastr.success('Thêm thành công!');
-			setTimeout(function() {
-				loadData();
-			}, 1000);
-			
+			var form = new FormData(document.getElementById('fAdd-nv'));
+			console.log(form);
+			$.ajax({
+				url: '/admin/nhanvien/addImage',
+				type: 'POST',
+				contentType: false,
+				processData: false,
+				data: form,
+				success: function() {
+					toastr.success('Thêm thành công!');
+					setTimeout(function() {
+						loadData();
+					}, 2000);
+
+				}, error: function(err) {
+					console.log(err)
+				}
+
+			})
+
 		}, error: function(err) {
 			console.log(err)
 		}
@@ -146,7 +230,7 @@ $('#UpdateNV').click(function(e) {
 	var diachi = $('#udAddress').val();
 	var email = $('#udMAil').val();
 	var sodienthoai = $('#udPhone').val();
-	var hinh = $('#udHinh')[0].files[0];	
+	var hinh = $('#UDfileNV')[0].files[0];
 	if (hinh == undefined || hinh == null || hinh == "") {
 		hinh = $('#lblHinh').text();
 	} else {
@@ -172,10 +256,26 @@ $('#UpdateNV').click(function(e) {
 			hinh: hinh
 		}),
 		success: function() {
-			toastr.success('Cập nhật thành công!');
-			setTimeout(function() {
-				loadData();
-			}, 1000);
+			var form = new FormData(document.getElementById('fupdate-nv'));
+			console.log(form);
+			$.ajax({
+				url: '/admin/nhanvien/UDImage',
+				type: 'POST',
+				contentType: false,
+				processData: false,
+				data: form,
+				success: function() {
+					toastr.success('Cập nhật thành công!');
+					setTimeout(function() {
+						loadData();
+					}, 1000);
+
+				}, error: function(err) {
+					console.log(err)
+				}
+
+			})
+
 		},
 		error: function(err) {
 			alert("error is" + err)

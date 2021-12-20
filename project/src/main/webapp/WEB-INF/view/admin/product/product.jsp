@@ -249,9 +249,9 @@
 						<div class="manage-customer-heading">
 							<div class="customer-heading-left">Danh sách sản phẩm</div>
 							<div class="customer-heading-center">
-								<form action="./product?timkiem">
+								<form action="./productTimkiem">
 									<div class="searchbox">
-										<input type="text" class="search-input"
+										<input type="text" class="search-input" name="tensp"
 											placeholder="Nhập tên sản phẩm, hoặc id sản phẩm">
 										<button class="search-button">
 											<i class="fas fa-search"></i>

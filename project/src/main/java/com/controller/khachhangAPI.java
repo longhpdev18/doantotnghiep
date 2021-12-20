@@ -1,6 +1,9 @@
 package com.controller;
 
+import java.io.File;
 import java.io.IOException;
+
+import javax.servlet.ServletContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,8 +14,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.model.KhachHang;
 import com.model.LoaiHang;
@@ -22,6 +29,8 @@ import com.service.SessionService;
 
 @RestController
 public class khachhangAPI {
+	@Autowired
+	ServletContext app;
 	@Autowired
 	KhachHangDAO khachhangDAO;
 	@Autowired
@@ -47,19 +56,8 @@ public class khachhangAPI {
 		return mess;
 	}
 
-	// @RequestMapping(value = "customer/add", method = RequestMethod.POST)
 	@PostMapping("admin/customer/add")
 	public KhachHang createKhachHang(@RequestBody KhachHang KH) throws IOException {
-//			Path staticPath = Paths.get("src/main/resources/static");
-//			Path imagePath = Paths.get("images");
-//			if (!Files.exists(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath))) {
-//				Files.createDirectories(CURRENT_FOLDER.resolve(staticPath).resolve(imagePath));
-//			}
-		//
-//			Path file = CURRENT_FOLDER.resolve(staticPath).resolve(imagePath).resolve(imageFile.getOriginalFilename());
-//			try (OutputStream os = Files.newOutputStream(file)) {
-//				os.write(imageFile.getBytes());
-//			}
 		KhachHang kh = new KhachHang();
 		kh.setTendangnhap(KH.getTendangnhap());
 		kh.setMatkhau(KH.getMatkhau());
@@ -73,6 +71,31 @@ public class khachhangAPI {
 		kh.setHinh(KH.getHinh());
 		kh.setActive(KH.isActive());
 		return khachhangDAO.save(kh);
+	}
+
+	@RequestMapping(value = "admin/khachhang/addImage", method = RequestMethod.POST)
+	public Message addImage(@RequestParam("fileKH") MultipartFile file) throws IOException {
+		Message mess = new Message();
+		System.out.println(file);
+		try {
+			String fileName = file.getOriginalFilename();
+			System.out.println(fileName);
+			if (!file.isEmpty()) {
+				int pathint = app.getRealPath("/WEB-INF").lastIndexOf("webapp");
+				String path = app.getRealPath("/WEB-INF").substring(0, pathint)
+						+ "resources/static/assets/images/profile/";
+				File fi = new File(path + fileName);
+				System.out.println(fi.getAbsolutePath());
+				file.transferTo(fi);
+			}
+		} catch (Exception e) {
+			mess.setValue("error");
+
+			return mess;
+		}
+		mess.setValue("ok");
+
+		return mess;
 	}
 
 	@GetMapping("admin/khachhang/delete/{makh}")
