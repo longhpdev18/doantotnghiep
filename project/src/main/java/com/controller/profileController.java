@@ -35,9 +35,11 @@ public class profileController {
 
 	@RequestMapping(value = "/profile")
 	public String showProfile(Model model) {
+		if(sessionService.get("maKH") == null) {
+			return "home/index";
+		}
 		KhachHang khachhang = khDAO.getById(sessionService.get("maKH"));
 		model.addAttribute("items", khachhang);
-//		model.addAttribute("makh", khachhang.getMakh());
 		model.addAttribute("tendangnhap", khachhang.getTendangnhap());
 		model.addAttribute("matkhau", khachhang.getMatkhau());
 		model.addAttribute("fullname", khachhang.getFullname());
