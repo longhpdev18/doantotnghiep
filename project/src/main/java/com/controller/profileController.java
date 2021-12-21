@@ -59,6 +59,7 @@ public class profileController {
 		model.addAttribute("ngaysinh", nhanvien.getNgaysinh());
 		model.addAttribute("gioitinh", nhanvien.isGioitinh());
 		model.addAttribute("diachi", nhanvien.getDiachi());
+		model.addAttribute("hinh", nhanvien.getHinh());
 		model.addAttribute("email", nhanvien.getEmail());
 		return "admin/profile/index";
 	}

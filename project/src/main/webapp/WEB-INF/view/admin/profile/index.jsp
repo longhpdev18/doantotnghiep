@@ -39,7 +39,7 @@
 							<div class="profile-left">
 								<div class="profile-image">
 									<img
-										src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png"
+										src="./../assets/images/profile/${hinh}"
 										alt="">
 									<div class="veri-account">
 										<i class="fas fa-check"></i>

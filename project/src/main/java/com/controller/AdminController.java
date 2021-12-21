@@ -67,7 +67,10 @@ public class AdminController {
 	@GetMapping("/logoutAdmin")
 	public String adminOut(Model model) {
 		sessionService.remove("fullnameNV");
+		sessionService.remove("chucVuNV");
+		sessionService.remove("hinhNV");
 		sessionService.remove("maNV");
+		sessionService.remove("listhd");
 		return "redirect:/admin";
 	}
 
@@ -77,11 +80,6 @@ public class AdminController {
 		if (sessionService.get("fullnameNV") == null) {
 			return "redirect:/admin";
 		}
-//		HoaDon sumHD = hoadonDAO.sum();
-//		model.addAttribute("sumHD",sumHD);
-//		Pageable pageable = PageRequest.of(0, 9);
-//		HoaDon  countHD = hoadonDAO.CountHD();
-//		model.addAttribute("countHD",countHD);	
 		List<HoaDon> hd = hoadonDAO.findAll();
 		model.addAttribute("hd", hd);
 		List<KhachHang> kh = khachhangDAO.findAll(Sort.by(Sort.Direction.DESC, "makh"));

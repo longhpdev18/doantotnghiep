@@ -58,8 +58,25 @@ $('#btn-register').click(function(e){
 });
 function register(){
 	var username = document.getElementById("usernameRegister").value;
+	
+	if(username == null || username == ""){
+		toastr.error('Tên tài khoản không được để trống');
+		return false;
+	}
+	
 	var email = document.getElementById("email").value;
+	
+	if(email == null || email == ""){
+		toastr.error('Email tài khoản không được để trống');
+		return false;
+	}
+	
 	var password = document.getElementById("passwordRegister").value;
+	
+	if(password == null || password == ""){
+		toastr.error('Mật khẩu tài khoản không được để trống');
+		return false;
+	}
 	
 	var repassword = document.getElementById("repassword").value;
 	if(password!=repassword){
@@ -67,8 +84,26 @@ function register(){
 		return false;
 	}
 	var fullname = document.getElementById("fullname").value;
+	
+	if(fullname == null || fullname == ""){
+		toastr.error('Tên không được để trống');
+		return false;
+	}
+	
 	var phone = document.getElementById("phone").value;
+	
+	if(phone == null || phone == ""){
+		toastr.error('Số điện thoại không được để trống');
+		return false;
+	}
+	
 	var address = document.getElementById("address").value;
+	
+	if(address == null || address == ""){
+		toastr.error('Địa chỉ không được để trống');
+		return false;
+	}
+	
 	if (username && password) {
 		$.ajax({
 			url:'/register',

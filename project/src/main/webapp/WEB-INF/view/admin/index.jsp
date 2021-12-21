@@ -95,10 +95,10 @@
 				<div class="statistic-order-list">
 					<c:forEach var="hd" items="${hd}">
 						<li class="statistic-order-list__item">
-							<div class="statistic-order-list__item-col no">
+							<!-- <div class="statistic-order-list__item-col no">
 								<div class="statistic-order-list__item-title">Số thứ tự</div>
 								<div class="statistic-order-list__item-value">1</div>
-							</div>
+							</div> -->
 							<div class="statistic-order-list__item-col id">
 								<div class="statistic-order-list__item-title">Mã đơn hàng</div>
 								<div class="statistic-order-list__item-value">

@@ -60,6 +60,7 @@ public class adminRestAPI {
 			sessionService.set("fullnameNV", nv.getFullname());
 			sessionService.set("chucVuNV", nv.isChucvu());
 			sessionService.set("maNV", nv.getManv());
+			sessionService.set("hinhNV", nv.getHinh());
 		} else {
 			mess.setValue("Sai tài khoản hoặc mật khẩu!");
 		}

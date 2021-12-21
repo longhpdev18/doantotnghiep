@@ -162,7 +162,7 @@
 					<div class="manage-staff-heading">
 						<div class="staff-heading-left">Danh sách nhân viên</div>
 						<div class="staff-heading-center">
-							<form action="">
+							<form action="./staffTimkiem">
 								<div class="searchbox">
 									<input type="number" id="manv"  name="manv" class="search-input"
 										placeholder="Nhập id nhân viên">
@@ -236,8 +236,18 @@
 											test="${item.chucvu == false}">Nhân viên</c:if> <c:if
 											test="${item.chucvu == true}">Admin</c:if>
 									</span>
-								</div> <c:if test="${chucVuNV == true}">
+								</div> 
+								<c:if test="${maNV == item.manv}">
+										<div class="staff-action">
+											<button class="staff-button-edit"
+												onclick="editNV(${item.manv})">
+												<i class="fas fa-pencil-alt"></i>
+											</button>
+										</div>
+									</c:if>
+								<c:if test="${chucVuNV == true}">
 									<c:if test="${chucVuNV != item.chucvu}">
+									
 										<div class="staff-action">
 											<button class="staff-button-edit"
 												onclick="editNV(${item.manv})">
@@ -248,6 +258,7 @@
 												<i class="far fa-trash-alt"></i>
 											</button>
 										</div>
+									
 									</c:if>
 								</c:if>
 							</li>
