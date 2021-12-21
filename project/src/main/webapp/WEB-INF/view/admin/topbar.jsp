@@ -18,8 +18,7 @@
 	<div class="action">
 		<div class="user" onclick="menuToggle();">
 			<!--profile-->
-			<img
-				src="https://i.pinimg.com/564x/92/26/5c/92265c40c8e428122e0b32adc1994594.jpg"
+				<img src="./../assets/images/profile/${hinhNV}"
 				alt="" width="50px">
 		</div>
 		<div class="menu">

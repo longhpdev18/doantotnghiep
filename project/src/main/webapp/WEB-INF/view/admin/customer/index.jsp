@@ -209,8 +209,8 @@
 									<div class="customer-information-fullname">${item.fullname}
 									</div>
 									<div class="customer-information-gender">
-										<c:if test="${item.gioitinh == true}">Nam</c:if>
-										<c:if test="${item.gioitinh == false}">Nữ</c:if>
+										<c:if test="${item.gioitinh == false}">Nam</c:if>
+										<c:if test="${item.gioitinh == true}">Nữ</c:if>
 									</div>
 									<div class="customer-information-birthday">${item.ngaysinh}</div>
 								</div>
