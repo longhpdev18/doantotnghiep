@@ -56,8 +56,9 @@ public class HoaDonAPI {
 			Pageable pageable = PageRequest.of(0, 8);
 			Page<HoaDon> temp = hoadonDAO.loadAll(pageable);
 			if(temp.getContent().size()!=listHD.getContent().size()) {
-
-				listHD = hoadonDAO.loadAll(pageable);
+				System.out.println(pageCount.getCount());
+				Pageable pageable2 = PageRequest.of(pageCount.getCount(), 8);
+				listHD = hoadonDAO.loadAll(pageable2);
 				sessionService.set("listHD", listHD);
 				mess.setValue("error");
 			}else {

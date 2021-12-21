@@ -184,6 +184,7 @@ public class khachhangAPI {
 	@PostMapping("admin/updateKH")
 	@ResponseBody
 	public String updateKH(@RequestBody KhachHang kh) {
+		System.out.println(kh);
 		KhachHang KhachHang = khachhangDAO.getById(kh.getMakh());
 		KhachHang.setTendangnhap(kh.getTendangnhap());
 		KhachHang.setMatkhau(kh.getMatkhau());

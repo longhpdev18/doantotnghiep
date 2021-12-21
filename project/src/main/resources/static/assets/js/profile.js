@@ -12,7 +12,8 @@ $('.gender-option').click(function(){
 })
 $('.btn-save').click(function(e){
     e.preventDefault();
-    var makh= $('.profile-id').val()
+    console.log($('#profile-id').html())
+    var makh= $('#profile-id').html()
     var username = $('#usernameProfile').val();
     var password = $('#passwordProfile').val();
     var fullname = $('#fullnameProfile').val();
@@ -28,30 +29,48 @@ $('.btn-save').click(function(e){
     var sodienthoai = $('#phoneProfile').val();
     var address = $('#addressProfile').val();
     var email = $('#emailProfile').val();
+    var hinh = $('#upload-photo')[0].files[0].name;
     $.ajax({
-        url:'/updateProfile',
+        url:'/admin/updateKH',
         type:'POST',
         contentType:'application/json',
         data:JSON.stringify(
             {
-                'tendangnhap':username,
-                'matkhau':password,
-                'fullname':fullname,
-                'ngaysinh':birthday,
-                'gioitinh':genders,
-                'diachi':address,
-                'email':email,
-                'sodienthoai':sodienthoai
+				makh: makh,
+                tendangnhap:username,
+                matkhau:password,
+                fullname:fullname,
+                ngaysinh:birthday,
+                gioitinh:genders,
+                diachi:address,
+                email:email,
+                sodienthoai:sodienthoai,
+                active:true,
+                hinh:hinh
             }
         ),
-        dataType:'json',
         success:function(result){
-            if(result.value=='success'){
+            if(result=='updated'){
+                var form = new FormData(document.getElementById('fprofile'));
+			console.log(form);
+			$.ajax({
+				url: '/admin/khachhang/addImage',
+				type: 'POST',
+				contentType: false,
+				processData: false,
+				data: form,
+				success: function() {
+					toastr.success('Cập nhật thành công!');
+					setTimeout(function() {
+						loadData();
+					}, 1000);
+
+				}, error: function(err) {
+					console.log(err)
+				}
+
+			})
                 
-                toastr.success('Đổi thông tin thành công!');
-                setTimeout(function() {
-                    location.reload()
-                  }, 2000);
             }else{
                 toastr.error('Lỗi!');
             }

@@ -46,13 +46,17 @@
 
 			<div class="profile-left">
 				<div class="profile-image">
-					<img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png"
+					<img src="./../assets/images/profile/${hinh}"
 						alt="">
 					<div class="veri-account">
-						<i class="fas fa-check"></i>
+					<form action="" class="fprofile" id="fprofile"
+							enctype="multipart/form-data">
+						<label for="upload-photo">Chọn ảnh</label>
+						<input type="file" name="fileKH" id="upload-photo" accept="image/*"/>
+						</form>
 					</div>
 				</div>
-				<p class="profile-id" value="${maKH}">#${maKH}</p>
+				<p class="profile-id" id="profile-id" value="${maKH}">${maKH}</p>
 			</div>
 			<div class="profile-right">
 				<h1 class="profile-title">Thông tin cá nhân</h1>

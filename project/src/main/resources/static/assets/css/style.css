@@ -3016,34 +3016,48 @@ margin-right: var(--spaceS)
 
 .profile-image {
 	width: 20rem;
+	height: 20rem;
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 1rem;
+	border-radius: 100%;
 }
 
 .profile-image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	border-radius: 100%;
 }
 
 .veri-account {
-	width: 3rem;
+	max-width: 100px;
 	height: 3rem;
-	border-radius: 100%;
+	padding: 5px;
+	border-radius: 5px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--whiteColor);
+	color: var(--darkColor);
 	position: absolute;
 	bottom: 0;
 	right: 15px;
 	font-size: 1.6rem;
-	background-color: var(--greenColor);
+	background-color: var(--lightColor);
+
+}
+.veri-account label {
+	font-size: 1.4rem;
+	cursor:pointer;
 }
 
+#upload-photo {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
+}
 .wait-account {
 	width: 3rem;
 	height: 3rem;

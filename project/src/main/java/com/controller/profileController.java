@@ -48,6 +48,7 @@ public class profileController {
 		model.addAttribute("gioitinh", khachhang.isGioitinh());
 		model.addAttribute("diachi", khachhang.getDiachi());
 		model.addAttribute("email", khachhang.getEmail());
+		model.addAttribute("hinh", khachhang.getHinh());
 		return "home/profile/index";
 	}
 	
