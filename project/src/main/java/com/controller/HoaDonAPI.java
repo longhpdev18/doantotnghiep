@@ -40,7 +40,7 @@ public class HoaDonAPI {
 		Message mess = new Message();
 		try {
 			Pageable pageable = PageRequest.of(0, 8);
-			Page<HoaDon> listHD = hoadonDAO.loadAll(pageable);
+			listHD = hoadonDAO.loadAll(pageable);
 			sessionService.set("listHD",listHD);
 			sessionService.set("pageCount", pageCount);
 			mess.setValue("success");
@@ -54,9 +54,16 @@ public class HoaDonAPI {
 		Message mess = new Message();
 		if(sessionService.get("listHD")!=null) {
 			Pageable pageable = PageRequest.of(0, 8);
-			listHD = hoadonDAO.loadAll(pageable);
-			sessionService.set("listHD", listHD);
-			mess.setValue("success");
+			Page<HoaDon> temp = hoadonDAO.loadAll(pageable);
+			if(temp.getContent().size()!=listHD.getContent().size()) {
+
+				listHD = hoadonDAO.loadAll(pageable);
+				sessionService.set("listHD", listHD);
+				mess.setValue("error");
+			}else {
+				mess.setValue("success");
+			}
+			
 		}else {
 			mess.setValue("error");
 		}
