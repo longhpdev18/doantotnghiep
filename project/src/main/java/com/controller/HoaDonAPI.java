@@ -53,6 +53,9 @@ public class HoaDonAPI {
 	public Message checkHDAdmin(Model model) {
 		Message mess = new Message();
 		if(sessionService.get("listHD")!=null) {
+			Pageable pageable = PageRequest.of(0, 8);
+			listHD = hoadonDAO.loadAll(pageable);
+			sessionService.set("listHD", listHD);
 			mess.setValue("success");
 		}else {
 			mess.setValue("error");
